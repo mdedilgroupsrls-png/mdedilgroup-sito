@@ -45,3 +45,17 @@ Design scelto e approvato da Eugenio (proposta A, 13/10/2026). Il resto si compl
 
 ## Didascalie render
 - Ogni render di interior design ha l'etichetta in oro "RENDER DI PROGETTO BY ARCHITETTO ADRIANA SCLIFOS" (deciso da Eugenio il 14/10/2026).
+
+
+## Nuova Home "Cinema" (approvata come direzione il 14/10/2026, da pubblicare)
+Sorgente: `progetto/sorgenti-design/home-cinema.html`. Stesso stile Nero & Oro, stessi caratteri.
+- Header uguale al sito attuale: logo, MD EDIL GROUP sulla linea d'oro, menu centrato sotto (visibile anche da telefono, su più righe).
+- Apertura: il logo si **disegna da zero** a linee d'oro (più grande), poi diventa il logo vero, compare MD EDIL GROUP e la schermata svanisce. Nessuna linea che "taglia" il logo.
+- Hero: la frase "I dettagli fanno la differenza" si **scrive lettera per lettera** appena appare la pagina (parte quando la schermata del logo inizia a svanire, non con un timer); poi compaiono zone e pulsanti.
+- Filo d'oro lungo il margine sinistro che si disegna scorrendo, con rombi alle sezioni; linea d'oro sotto ogni titolo che si traccia.
+- Render interior design: nastro continuo di foto **grandi** che scorre **da destra a sinistra**; dito fermo = si ferma, trascinare = accelera, nessun pulsante. Sta subito dopo i Servizi, sopra i simulatori.
+- Simulatori: fascia compatta (titolo piccolo + 3 pulsanti).
+- Catalogo case in legno: tutti i 18 modelli, **2 alla volta**, stesso nastro continuo dei render.
+- Cantieri ed esterni: gallerie con effetto 3D (coverflow). Esterni con descrizione sopra le foto e la zona di Roma sotto ogni foto.
+- Reel Instagram: tra "Come lavoriamo" e "News e guide"; 2 alla volta, si scorrono col dito; visualizzazioni, mi piace e commenti sopra il video in basso, con numeri che contano da 1 al valore vero.
+- Ordine sezioni: Servizi, Render, Simulatori, Cantieri, Case in legno, Esterni, Chi siamo + garanzie, Come lavoriamo, Reel, News, Contatti.
