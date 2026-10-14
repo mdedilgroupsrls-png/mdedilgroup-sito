@@ -41,3 +41,7 @@ Design scelto e approvato da Eugenio (proposta A, 13/10/2026). Il resto si compl
 - Layout fluido, contenitore max 1320px, margini laterali `clamp(20px, 5vw, 72px)`.
 - Deve funzionare a larghezza telefono (390px) senza scorrimento orizzontale.
 - Niente emoji, niente gradienti decorativi.
+
+
+## Didascalie render
+- Ogni render di interior design ha l'etichetta in oro "RENDER DI PROGETTO BY ADRIANA SCLIFOS" (deciso da Eugenio il 14/10/2026).
