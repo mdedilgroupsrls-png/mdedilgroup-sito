@@ -12,6 +12,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [ ] Decidere quale sede indicare come ufficio
 
 ## Fatto
+- [x] 14/10/2026 – Pagina Ristrutturazioni esterni: galleria "Lavori realizzati" spostata sopra la sezione del metodo; titolo "Il nostro studio tecnico segue tutto" rimpicciolito
 - [x] 14/10/2026 – Aggiunte 14 foto di facciate condominiali (cantieri e lavori finiti, `img/facciata-01…14.webp`) nella galleria "Esterni e facciate" della Home, al posto del segnaposto, e nella galleria "Lavori realizzati" della pagina Ristrutturazioni esterni, al posto dei 3 `[FOTO CANTIERE]`
 - [x] 14/10/2026 – Aggiunti 12 render nella pagina Interior design (galleria scorrevole) e 4 nella galleria della Home, al posto del segnaposto
 - [x] 14/10/2026 – Tolti dalla galleria della Home i 2 render precedenti (soggiorno con camino, camera con anello luminoso); nella sezione metodo della Home la camera è sostituita da `id-camera-noce`

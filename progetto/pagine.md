@@ -6,7 +6,7 @@
 | `/studio-tecnico` | `studio-tecnico.html` | Studio tecnico: rilievi, progetti, pratiche, direzione lavori |
 | `/interior-design` | `interior-design.html` | Interior design: galleria scorrevole "Render di interior design" (12 render, immagini `img/id-*.webp`), le 14 tavole del progetto esecutivo, metodo in 4 fasi |
 | `/ristrutturazioni-interni` | `ristrutturazioni-interni.html` | Ristrutturazioni interni + **simulatore costi** (prezzi in `progetto/listino-prezzi.md`) |
-| `/ristrutturazioni-esterni` | `ristrutturazioni-esterni.html` | Esterni: per amministratori di condominio e per privati, lavori, metodo, galleria "Lavori realizzati" con 14 foto di facciate |
+| `/ristrutturazioni-esterni` | `ristrutturazioni-esterni.html` | Esterni: per amministratori di condominio e per privati, lavori, galleria "Lavori realizzati" con 14 foto di facciate, poi metodo ("Il nostro studio tecnico segue tutto", titolo ridotto) |
 | `/privacy.html` | `privacy.html` | Informativa privacy (versione precedente del sito, da riallineare allo stile Nero & Oro) |
 | `/grazie` | `grazie.html` | Pagina dopo l'invio del modulo |
 | — | `404.html` | Pagina non trovata |
