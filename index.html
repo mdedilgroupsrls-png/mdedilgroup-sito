@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ristrutturazioni di pregio a Roma e Milano | MD Edil Group</title>
 <meta name="description" content="MD Edil Group: ristrutturazioni chiavi in mano di pregio a Roma e Milano. Studio tecnico interno, interior design, ristrutturazioni di interni ed esterni.">
 <link rel="canonical" href="https://mdedilgroup.it/">
@@ -14,304 +14,792 @@
 <meta property="og:image" content="https://mdedilgroup.it/favicon.png">
 <meta name="theme-color" content="#0E0D0B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&amp;family=Sora:wght@300;400;600;700&amp;family=Unbounded:wght@300;400;600;700&amp;family=Josefin+Sans:wght@300;400;600;700&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet">
-<style>
-body{margin:0;background:#0E0D0B}
-a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
-</style>
-<style>html{scroll-behavior:smooth}img{max-width:100%}</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"GeneralContractor","name":"MD Edil Group S.R.L.S.","url":"https://mdedilgroup.it","logo":"https://mdedilgroup.it/favicon.png","telephone":"+39 328 214 5266","email":"mdedilgroupsrls@gmail.com","vatID":"IT17112431006","slogan":"I dettagli fanno la differenza","areaServed":["Roma","Lazio","Milano","Italia"],"address":[{"@type":"PostalAddress","streetAddress":"Via Monti Lepini 9","postalCode":"00015","addressLocality":"Monterotondo","addressRegion":"RM","addressCountry":"IT"},{"@type":"PostalAddress","streetAddress":"Via Po 22","addressLocality":"Roma","addressRegion":"RM","addressCountry":"IT"}],"sameAs":["https://www.instagram.com/md_edil_group/"]}
 </script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&amp;family=Manrope:wght@400;500;600&amp;display=swap">
+<style>
+/* Layout: cinema scuro. Header come il sito attuale (logo, nome sulla linea d'oro, menu centrato).
+   Un filo d'oro si disegna lungo il margine sinistro mentre si scorre e collega le sezioni;
+   ogni titolo ha la sua linea che si traccia. Render in un anello 3D, cantieri in coverflow, reel Instagram. */
+:root{
+  --bg:#0E0D0B; --bg2:#171512; --line:#2A2722; --dash:#3A362F; --gold:#C9A24A; --gold2:#E2C373;
+  --ink:#F3EFE7; --ink2:#D8D2C6; --mute:#8A8478; --wa:#25D366;
+  --f-disp:"Urbanist",system-ui,sans-serif; --f-body:"Manrope",system-ui,sans-serif;
+  --gut:max(20px,env(safe-area-inset-left,0px)); --gutR:max(20px,env(safe-area-inset-right,0px));
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-disp);font-weight:400;margin:0;line-height:1.05;text-wrap:balance}
+.wrap{max-width:1320px;margin:0 auto;padding-left:var(--gut);padding-right:var(--gutR)}
+.eyebrow{font-size:12px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);font-weight:600}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+main{position:relative}
+
+/* apertura: il logo si disegna da zero a linee d'oro, poi diventa il logo vero e la schermata svanisce */
+.curtain{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;pointer-events:none;animation:curOut .9s 3s ease forwards}
+.curtain .mk{position:relative;width:min(340px,62vw);aspect-ratio:858/648}
+.curtain svg,.curtain img{position:absolute;inset:0;width:100%;height:100%}
+.curtain path{fill:none;stroke:var(--gold);stroke-width:20;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:var(--l);stroke-dashoffset:var(--l);animation:draw 1.5s cubic-bezier(.65,0,.25,1) forwards}
+.curtain rect{fill:var(--gold);transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .45s cubic-bezier(.3,1.6,.5,1) forwards}
+.curtain img{opacity:0;animation:fadeIn .6s 2.1s ease forwards}
+.curtain svg{animation:fadeOut .6s 2.2s ease forwards}
+.curtain .nm{position:absolute;left:50%;top:calc(100% + 28px);transform:translateX(-50%);white-space:nowrap;font:700 clamp(16px,2.4vw,24px) var(--f-disp);letter-spacing:.34em;color:var(--ink);opacity:0;animation:fadeup .8s 2.2s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{to{transform:scale(1)}}
+@keyframes fadeIn{to{opacity:1}}
+@keyframes fadeOut{to{opacity:0}}
+@keyframes curOut{to{opacity:0;visibility:hidden}}
+@keyframes line{to{transform:scaleX(1)}}
+@keyframes fadeup{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* header come sul sito attuale */
+header{position:absolute;top:0;left:0;right:0;z-index:20;padding-top:calc(26px + env(safe-area-inset-top,0px))}
+.brand{display:flex;align-items:flex-end;text-decoration:none;color:var(--ink)}
+.brand img{height:64px;width:auto;flex:0 0 auto}
+.brand span{flex:1;min-width:0;border-bottom:2px solid var(--gold);padding:0 24px 6px;position:relative}
+.brand span::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:100%;background:var(--gold2);transform:scaleX(0);transform-origin:left;animation:line 1.2s 3.5s cubic-bezier(.7,0,.2,1) forwards;opacity:.9}
+.brand b{font:700 clamp(20px,3vw,42px)/1 var(--f-disp);letter-spacing:.16em;white-space:nowrap}
+nav.menu{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 32px;padding:18px 0;font-size:13px;letter-spacing:.08em;font-weight:500}
+nav.menu a{text-decoration:none;position:relative;padding-block:4px;transition:color .3s}
+nav.menu a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .35s}
+nav.menu a:hover{color:var(--gold2)}nav.menu a:hover::after{transform:scaleX(1)}
+
+/* hero */
+.hero{position:relative;min-height:min(900px,100svh);display:grid;align-items:center;overflow:hidden;isolation:isolate;text-align:center}
+.hero .ph{position:absolute;inset:0;z-index:-2}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:center 55%;animation:kb 22s ease-out both}
+@keyframes kb{from{transform:scale(1.18)}to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(14,13,11,.88) 0%,rgba(14,13,11,.45) 40%,rgba(14,13,11,.6) 75%,var(--bg) 100%)}
+.hero .wrap{width:100%;padding-block:230px 96px}
+.hero h1{font:700 clamp(30px,4.6vw,64px)/1.2 var(--f-disp);letter-spacing:.12em;text-transform:uppercase;color:var(--gold2)}
+/* la frase si scrive lettera per lettera; le lettere non ancora scritte occupano già il loro spazio, così nulla si sposta */
+.hero h1 .c{visibility:hidden}
+.hero h1 .c.on{visibility:visible}
+.hero h1 .caret{display:inline-block;width:.07em;height:.95em;margin-left:.06em;vertical-align:-.08em;background:var(--gold2);animation:blink .8s steps(1) infinite}
+.hero h1 .caret.out{animation:blink .8s steps(1) 3,fadeOut .6s 2.4s forwards}
+@keyframes blink{50%{opacity:0}}
+.hero .rule{width:120px;height:1px;background:var(--gold);margin:34px auto 0;transform:scaleX(0);animation:line 1s 6s cubic-bezier(.7,0,.2,1) forwards}
+.hero .zones{margin-top:26px;color:var(--ink);letter-spacing:.36em;animation:fadeup 1s 6.1s both}
+.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px;animation:fadeup 1s 6.25s both}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 30px;font:600 13px var(--f-body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);color:var(--gold);transition:background .3s,color .3s,transform .3s;cursor:pointer;background:none}
+.btn.solid{background:var(--gold);color:#0E0D0B}
+.btn:hover{transform:translateY(-2px);background:var(--gold2);color:#0E0D0B;border-color:var(--gold2)}
+.scroll-cue{position:absolute;left:50%;bottom:18px;width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2.4s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.claim{padding-block:72px;border-bottom:1px solid var(--line);text-align:center}
+.claim p{margin:0;font:300 clamp(26px,3.2vw,44px)/1.25 var(--f-disp);letter-spacing:.06em;color:var(--gold2)}
+
+/* il filo d'oro lungo la pagina */
+.thread{position:absolute;left:0;top:0;width:80px;height:100%;pointer-events:none;z-index:3}
+.thread path{fill:none;stroke:var(--gold);stroke-width:1.2}
+.thread .ghost{stroke:var(--line);stroke-width:1}
+.thread rect{fill:var(--bg);stroke:var(--gold);stroke-width:1.2;transition:fill .4s}
+.thread rect.hit{fill:var(--gold)}
+
+/* nastro servizi */
+.ribbon{border-block:1px solid var(--line);overflow:hidden;padding-block:18px;background:var(--bg2)}
+.ribbon .track{display:flex;gap:48px;width:max-content;animation:marq 38s linear infinite;font:300 clamp(26px,3.6vw,44px) var(--f-disp);white-space:nowrap}
+.ribbon .track span{display:flex;align-items:center;gap:48px}
+.ribbon .track span::after{content:"";width:9px;height:9px;transform:rotate(45deg);border:1px solid var(--gold)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+section{padding-block:clamp(70px,10vw,130px);position:relative;z-index:2}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:42px}
+.head h2{font-size:clamp(34px,5vw,64px);margin-top:12px}
+.head p{max-width:42ch;color:var(--mute);margin:0}
+/* la linea sotto ogni titolo si traccia quando la sezione entra */
+.head .tl{display:block;height:1px;width:min(260px,60%);background:var(--gold);margin-top:18px;transform-origin:left;transform:scaleX(var(--p,1))}
+.hint{font-size:12px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+
+/* servizi con anteprima che segue il cursore */
+.svc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.svc li{border-bottom:1px solid var(--line);position:relative}
+.svc li::after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.7,0,.2,1)}
+.svc li:hover::after{transform:scaleX(1)}
+.svc a{display:grid;grid-template-columns:70px minmax(0,1fr) minmax(0,1.1fr) 40px;gap:20px;align-items:center;padding:28px 0;text-decoration:none}
+.svc .n{font:600 13px var(--f-disp);color:var(--gold);letter-spacing:.2em}
+.svc h3{font-size:clamp(26px,3.4vw,44px);font-weight:300;transition:color .3s,transform .4s}
+.svc p{margin:0;color:var(--mute);font-size:15px}
+.svc .arr{color:var(--gold);font-size:22px;transition:transform .4s}
+.svc a:hover h3{color:var(--gold2);transform:translateX(12px)}
+.svc a:hover .arr{transform:translateX(6px) rotate(-45deg)}
+.peek{position:fixed;left:0;top:0;width:300px;aspect-ratio:4/5;pointer-events:none;z-index:30;overflow:hidden;opacity:0;transform:translate(-50%,-50%) scale(.85);transition:opacity .3s,transform .3s}
+.peek.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.peek img{width:100%;height:100%;object-fit:cover}
+
+/* simulatori: fascia compatta */
+.simbar{padding-block:clamp(40px,5vw,64px)}
+.sb{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(20px,4vw,60px);align-items:center;border-block:1px solid var(--line);padding-block:clamp(22px,3vw,34px)}
+.sbt h2{font-size:clamp(24px,2.6vw,34px);margin-top:8px}
+.sbt p{margin:8px 0 0;color:var(--mute);font-size:14px;max-width:46ch}
+.sim{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.sim a{border:1px solid var(--line);padding:16px 18px;text-decoration:none;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;transition:border-color .3s}
+.sim a::before{content:"";position:absolute;inset:0;background:var(--gold);transform:translateY(101%);transition:transform .45s cubic-bezier(.7,0,.2,1)}
+.sim a>*{position:relative;transition:color .4s}
+.sim a:hover{border-color:var(--gold)}
+.sim a:hover::before{transform:none}
+.sim a:hover *{color:#14110a}
+.sim .k{font:400 18px/1.2 var(--f-disp)}
+.sim .s{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+@media (max-width:900px){.sb{grid-template-columns:1fr}}
+@media (max-width:600px){.sim{grid-template-columns:1fr}.sim a{flex-direction:row;justify-content:space-between;align-items:center;padding:14px 16px}}
+
+/* render: nastro continuo di foto grandi che scorre da destra a sinistra; col dito, il mouse o le frecce si va più veloce */
+.belt{position:relative;overflow:hidden;touch-action:pan-y;cursor:grab;user-select:none;padding-block:10px 4px}
+.belt:active{cursor:grabbing}
+.belt:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.belt .tr{display:flex;gap:clamp(14px,2vw,26px);width:max-content;will-change:transform}
+.belt figure{margin:0;flex:0 0 auto;position:relative}
+.belt img{height:clamp(420px,74vh,780px);width:auto;max-width:none;display:block;pointer-events:none;transition:transform 1.2s cubic-bezier(.2,.8,.2,1),filter .6s}
+.belt figure:hover img{transform:scale(1.02)}
+.belt figcaption{position:absolute;left:0;right:0;bottom:0;padding:60px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.72));font:300 clamp(18px,1.8vw,24px)/1.2 var(--f-disp)}
+.belt figcaption small{display:block;font:600 10px var(--f-body);letter-spacing:.22em;color:var(--gold2);text-transform:uppercase;margin-bottom:6px}
+.belt::before,.belt::after{content:"";position:absolute;top:0;bottom:0;width:clamp(20px,6vw,90px);z-index:2;pointer-events:none}
+.belt::before{left:0;background:linear-gradient(90deg,var(--bg2),transparent)}
+.belt::after{right:0;background:linear-gradient(-90deg,var(--bg2),transparent)}
+@media (max-width:600px){.belt img{height:62svh}}
+/* coverflow per cantieri ed esterni */
+.flow{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:20px 0 26px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent;perspective:1200px}
+.flow::before,.flow::after{content:"";flex:0 0 calc(50% - min(39vw,230px) - 22px)}
+.flow figure{flex:0 0 min(78vw,460px);margin:0;scroll-snap-align:center;transform-style:preserve-3d;will-change:transform}
+.flow .frame{overflow:hidden;aspect-ratio:4/5;background:var(--bg2);border:1px solid var(--line)}
+.flow.wide figure{flex-basis:min(84vw,580px)}
+.flow.wide::before,.flow.wide::after{flex-basis:calc(50% - min(42vw,290px) - 22px)}
+.flow.wide .frame{aspect-ratio:3/2}
+.flow img{width:100%;height:100%;object-fit:cover}
+.flow figcaption{padding-top:12px;font-size:15px}
+
+/* esterni: descrizione e zona dei lavori */
+.est-intro{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(20px,4vw,60px);align-items:start;margin:-12px 0 10px}
+.est-intro .lead{margin:0;color:var(--ink2);font-size:16px;max-width:62ch}
+.est-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.est-list li{border:1px solid var(--line);padding:6px 12px;font-size:13px;color:var(--ink2)}
+.flow figcaption .zona{display:flex;align-items:center;gap:6px;margin-top:4px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+@media (max-width:900px){.est-intro{grid-template-columns:1fr}}
+
+/* reel instagram */
+.reels{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.reels{cursor:grab;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.reels.drag{cursor:grabbing;scroll-snap-type:none}
+.reels.drag .reel{pointer-events:none}
+.reels .reel{flex:0 0 calc((100% - 36px)/2.2);max-width:420px;scroll-snap-align:start}
+.reels .reel img{-webkit-user-drag:none;user-select:none}
+.reels-wrap .ctrl{display:flex;gap:12px;margin-top:14px}
+.ctrl button{width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);background:none;color:var(--gold);font-size:18px;cursor:pointer;transition:background .3s,color .3s}
+.ctrl button:hover{background:var(--gold);color:#0E0D0B}
+.reel{display:flex;flex-direction:column;gap:12px;text-decoration:none}
+.reel .v{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(circle at 50% 38%,#2b2416 0%,var(--bg2) 55%,var(--bg) 100%);transition:border-color .3s,transform .5s}
+.reel:hover .v{border-color:var(--gold);transform:translateY(-6px)}
+.reel .v img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.reel:hover .v img{transform:scale(1.06)}
+.reel .play{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;border:1px solid var(--gold2);display:grid;place-items:center;color:var(--gold2);background:rgba(14,13,11,.45);backdrop-filter:blur(4px)}
+.reel .note{font-size:12px;color:var(--mute)}
+.reel .ig{position:absolute;left:10px;top:10px;display:flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.08em;background:rgba(14,13,11,.7);padding:5px 9px;border-radius:999px;color:var(--ink)}
+.reel .empty{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;color:var(--mute);font-size:13px;border:1px dashed var(--dash);border-radius:14px}
+.reel .cap{font-size:14px;color:var(--ink2);line-height:1.5}
+.reel .cap b{display:block;color:var(--ink);font-weight:600;margin-bottom:2px}
+.reel .cap em{font-style:normal;color:var(--mute)}
+.reel .tags{font-size:12.5px;color:var(--gold)}
+/* numeri del reel appoggiati sul video, in basso */
+.reel .stats{position:absolute;left:0;right:0;bottom:0;display:flex;flex-wrap:wrap;gap:6px 14px;padding:46px 12px 12px;background:linear-gradient(transparent,rgba(0,0,0,.78));font-size:13px;font-weight:600;color:#fff;font-variant-numeric:tabular-nums}
+.reel .stats span{display:inline-flex;align-items:center;gap:5px}
+.reel .stats svg{color:var(--gold2)}
+.reel .stats b{font-weight:600;min-width:2ch}
+@media (max-width:600px){.reel .stats{gap:4px 10px;font-size:11.5px;padding:36px 9px 9px}.reel .stats svg{width:12px;height:12px}}
+
+/* case in legno */
+.models{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.model{background:var(--bg2);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s,transform .4s}
+.model:hover{border-color:var(--gold);transform:translateY(-4px)}
+.model img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.model .b{padding:18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.model h3{font-size:24px}
+.model .d{font-size:13px;color:var(--mute)}
+.model .p{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font:600 24px var(--f-disp);color:var(--gold2);font-variant-numeric:tabular-nums}
+.model .p small{display:block;font:400 11px var(--f-body);color:var(--mute)}
+
+/* catalogo nel nastro: due modelli alla volta */
+.cbelt{margin-top:6px}
+.cbelt::before{background:linear-gradient(90deg,var(--bg),transparent)}
+.cbelt::after{background:linear-gradient(-90deg,var(--bg),transparent)}
+.cbelt .model{flex:0 0 auto;width:calc((min(100vw,1320px) - 2*max(20px,env(safe-area-inset-left,0px)) - clamp(14px,2vw,26px))/2);text-decoration:none;color:inherit}
+.cbelt .model img{aspect-ratio:16/10;height:auto;width:100%;pointer-events:none}
+.cbelt .model:hover{transform:none}
+.model .lb{display:block;font:600 10.5px var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.model .go{margin-top:12px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+@media (max-width:600px){.cbelt .model .b{padding:12px}.cbelt .model h3{font-size:18px}.cbelt .model .d{font-size:11.5px}.cbelt .model .p{font-size:18px}.cbelt .model .p small{font-size:10px}.model .go{font-size:10.5px;letter-spacing:.14em}}
+
+/* chi siamo, garanzie, metodo */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,90px);align-items:start}
+.about blockquote{margin:16px 0 0;font:300 clamp(30px,4vw,52px)/1.15 var(--f-disp)}
+.about blockquote em{font-style:normal;color:var(--gold2)}
+.ph-text{border:1px dashed var(--dash);padding:18px;color:var(--mute);font-size:14px;margin-top:22px}
+.gar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line)}
+.gar div{padding:20px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px}
+.gar div:nth-child(odd){padding-right:20px}
+.gar svg{color:var(--gold);margin-top:3px}
+.gar b{display:block;font-weight:600}
+.gar span{color:var(--mute);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;position:relative;padding-top:34px}
+.steps::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:var(--line)}
+.steps .fill{position:absolute;left:0;top:9px;height:1px;width:100%;background:var(--gold);transform-origin:left;transform:scaleX(var(--p,1))}
+.steps div{position:relative}
+.steps div::before{content:"";position:absolute;top:-30px;left:0;width:11px;height:11px;border-radius:50%;background:var(--bg);border:1px solid var(--gold);transition:background .4s}
+.steps div.hit::before{background:var(--gold)}
+.steps b{display:block;font:600 12px var(--f-disp);color:var(--gold);letter-spacing:.2em;margin-bottom:8px}
+.steps h3{font-size:22px;margin-bottom:6px}
+.steps p{margin:0;color:var(--mute);font-size:14px}
+.news{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.news article{border:1px dashed var(--dash);padding:24px;min-height:170px;display:flex;flex-direction:column;gap:10px}
+.news h3{font-size:22px;color:var(--mute)}
+
+/* contatti */
+.contact{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,6vw,90px)}
+.contact h2{font-size:clamp(38px,5.4vw,72px)}
+.tel{font:300 clamp(30px,4vw,46px) var(--f-disp);color:var(--gold2);margin-top:26px;user-select:all}
+.contact address{font-style:normal;color:var(--ink2);margin-top:16px;display:grid;gap:4px;font-size:15px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.f{display:flex;flex-direction:column;gap:6px}.f.full{grid-column:1/-1}
+label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+input,select,textarea{font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);padding:10px 0;border-radius:0;transition:border-color .3s}
+select option{background:var(--bg2)}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--gold)}
+textarea{min-height:90px;resize:vertical}
+.ok{grid-column:1/-1;color:var(--gold2);font-size:14px;margin:0}
+
+footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(--bg2);position:relative;z-index:2}
+.fgrid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center}
+.fgrid img{width:70px}
+.soc{display:flex;gap:10px}
+.soc a{width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);transition:background .3s,color .3s}
+.soc a:hover{background:var(--gold);color:#14110a}
+.legal{margin-top:26px;font-size:13px;color:var(--mute);display:grid;gap:4px}
+
+.wa{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.4);animation:pulse 2.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.mbar{display:none}
+
+@media (max-width:980px){
+  .svc a{grid-template-columns:44px minmax(0,1fr) 30px}
+  .svc p{grid-column:2/3}
+  .svc .arr{grid-row:1;grid-column:3}
+  .news{grid-template-columns:1fr}
+  .models{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .about,.contact{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;padding-top:0;padding-left:30px}
+  .steps::before,.steps .fill{left:5px;top:0;bottom:0;width:1px;height:auto;right:auto}
+  .steps .fill{transform-origin:top;transform:scaleY(var(--p,1))}
+  .steps div::before{top:6px;left:-30px}
+  .peek{display:none}
+  .mbar{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:0;right:0;bottom:0;z-index:45;background:rgba(23,21,18,.96);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+  .mbar a{text-align:center;padding:14px 4px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+  .mbar a:nth-child(2){color:var(--wa)}
+  .mbar a:last-child{background:var(--gold);color:#14110a;font-weight:600}
+  .wa{display:none}
+}
+@media (max-width:600px){
+  .brand img{height:48px}
+  .brand span{padding:0 12px 5px}
+  .brand b{letter-spacing:.1em}
+  nav.menu{gap:6px 18px;font-size:12px;padding:14px 0}
+  .hero .wrap{padding-block:250px 70px}
+  .hero .zones{letter-spacing:.2em;font-size:11px}
+  .models,form,.gar{grid-template-columns:1fr}
+  .reels{gap:12px}.reels .reel{flex-basis:calc((100% - 24px)/2.2)}
+  .gar div:nth-child(odd){padding-right:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .curtain{display:none}
+  .brand span::after{display:none}.hero .rule{transform:none}
+}
+</style>
 </head>
 <body>
+<div class="curtain" aria-hidden="true"><div class="mk">
+  <svg viewBox="0 0 858 648">
+    <path style="--l:830;animation-delay:.2s" d="M20 632 H838"/>
+    <path style="--l:1130;animation-delay:.35s" d="M232 632 V180 L430 15 L628 180 V322"/>
+    <path style="--l:800;animation-delay:.6s" d="M268 332 L430 192 L745 448 V625"/>
+    <path style="--l:620;animation-delay:.8s" d="M268 488 L430 342 L735 608"/>
+    <path style="--l:90;animation-delay:1.1s" d="M628 390 V470"/>
+    <path style="--l:90;animation-delay:1.15s" d="M628 542 V625"/>
+    <path style="--l:330;animation-delay:.95s" d="M118 625 V452 L232 362"/>
+    <path style="--l:150;animation-delay:1.05s" d="M118 582 L232 502"/>
+    <rect x="375" y="468" width="42" height="42" style="animation-delay:1.45s"/><rect x="440" y="468" width="42" height="42" style="animation-delay:1.55s"/>
+    <rect x="375" y="530" width="42" height="42" style="animation-delay:1.65s"/><rect x="440" y="530" width="42" height="42" style="animation-delay:1.75s"/>
+  </svg>
+  <img src="/img/cc07e2f1120eb45d8438fc5d59d4b3e8.png" alt="">
+  <span class="nm">MD EDIL GROUP</span>
+</div></div>
 
-
-<div style="background: #0E0D0B; color: #F3EFE7; font-family: 'Manrope', sans-serif; font-size: 16px; line-height: 1.6">
-
-<header style="position: absolute; top: 0; left: 0; right: 0; z-index: 2; padding: 26px clamp(20px, 5vw, 72px) 0">
-<a href="/" aria-label="MD Edil Group, torna alla Home" style="display: flex; align-items: flex-end; color: #F3EFE7">
-<img src="/img/cc07e2f1120eb45d8438fc5d59d4b3e8.png" alt="" style="display: block; height: 64px; width: auto; flex: 0 0 auto">
-<span style="flex: 1 1 auto; min-width: 0; display: flex; justify-content: flex-start; border-bottom: 2px solid #C9A24A; padding: 0 24px 6px">
-<span style="font-family: 'Urbanist', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 42px); line-height: 1; letter-spacing: 0.16em; white-space: nowrap">MD EDIL GROUP</span>
-</span>
-</a>
-<nav aria-label="Menu principale" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 32px; padding: 18px 0; font-size: 13px; letter-spacing: 0.08em; font-weight: 500">
-<a href="/studio-tecnico" style="color: #F3EFE7">Studio tecnico</a>
-<a href="/interior-design" style="color: #F3EFE7">Interior design</a>
-<a href="/ristrutturazioni-interni" style="color: #F3EFE7">Ristrutturazioni interni</a>
-<a href="/ristrutturazioni-esterni" style="color: #F3EFE7">Ristrutturazioni esterni</a>
-<a href="#" style="color: #F3EFE7">Infissi e serramenti</a>
-<a href="#" style="color: #F3EFE7">Case in legno</a>
-<a href="#" style="color: #F3EFE7">Chi siamo</a>
-</nav>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="MD Edil Group, torna alla Home"><img src="/img/cc07e2f1120eb45d8438fc5d59d4b3e8.png" alt=""><span><b>MD EDIL GROUP</b></span></a>
+    <nav class="menu" aria-label="Menu principale">
+      <a href="/studio-tecnico">Studio tecnico</a><a href="/interior-design">Interior design</a><a href="/ristrutturazioni-interni">Ristrutturazioni interni</a><a href="/ristrutturazioni-esterni">Ristrutturazioni esterni</a><a href="#contatti">Infissi e serramenti</a><a href="#legno">Case in legno</a><a href="#chi">Chi siamo</a>
+    </nav>
+  </div>
 </header>
 
-<section style="position: relative; min-height: 900px; display: flex; align-items: center; justify-content: center; overflow: hidden; text-align: center">
-<img src="/img/cb44cf0c81db6ed4f5d593db94d0c3e6.webp" alt="Villa realizzata da MD Edil Group con viale d’ingresso in autobloccanti a spina di pesce" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 52%">
-<div style="position: absolute; inset: 0; background: rgba(14,13,11,0.58)"></div>
-<div style="position: relative; padding: 200px clamp(20px, 5vw, 72px) 96px; max-width: 980px">
-<h1 style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 700; font-size: clamp(30px, 4vw, 58px); line-height: 1.2; letter-spacing: 0.12em; text-transform: uppercase; color: #E2C373"><span style="display: block">I dettagli</span><span style="display: block">fanno la differenza</span></h1>
-<p style="margin: 44px 0 0; font-size: 12px; letter-spacing: 0.36em; color: #F3EFE7; font-weight: 600">RISTRUTTURAZIONI ROMA · MILANO · CASE IN LEGNO IN TUTTA ITALIA</p>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 26px">
-<a href="#contatti" style="background: #C9A24A; color: #0E0D0B; padding: 17px 30px; font-weight: 600; font-size: 13px; letter-spacing: 0.14em">RICHIEDI UN SOPRALLUOGO</a>
-<a href="#preventivo" style="border: 1px solid #C9A24A; color: #C9A24A; padding: 17px 30px; font-weight: 600; font-size: 13px; letter-spacing: 0.14em">RICHIEDI PREVENTIVO</a>
-</div>
-</div>
+<main id="main">
+<svg class="thread" id="thread" aria-hidden="true"></svg>
+
+<section class="hero" style="padding:0">
+  <div class="ph"><img src="/img/cb44cf0c81db6ed4f5d593db94d0c3e6.webp" alt="Villa realizzata da MD Edil Group con viale d'ingresso in autobloccanti a spina di pesce"></div>
+  <div class="wrap">
+    <h1 id="ttl" aria-label="I dettagli fanno la differenza"><span style="display:block">I dettagli</span><span style="display:block">fanno la differenza</span></h1>
+    <div class="rule" aria-hidden="true"></div>
+    <div class="eyebrow zones">Ristrutturazioni Roma · Milano · Case in legno in tutta Italia</div>
+    <div class="cta"><a class="btn solid" href="#contatti">Richiedi un sopralluogo</a><a class="btn" href="#contatti">Richiedi preventivo</a></div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
 </section>
 
-<section style="padding: 72px clamp(20px, 5vw, 72px); border-bottom: 1px solid #2A2722; text-align: center">
-<p style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 300; font-size: clamp(28px, 3.2vw, 44px); letter-spacing: 0.06em; color: #E2C373">Ristrutturazioni di pregio, curate in ogni dettaglio.</p>
+<div class="claim wrap" data-node><p>Ristrutturazioni di pregio, curate in ogni dettaglio.</p></div>
+
+<div class="ribbon" aria-hidden="true"><div class="track" id="track">
+  <span>Studio tecnico</span><span>Interior design</span><span>Ristrutturazioni interni</span><span>Ristrutturazioni esterni</span><span>Infissi e serramenti</span><span>Case in legno</span>
+</div></div>
+
+<section id="servizi" data-node>
+  <div class="wrap">
+    <div class="head"><div><div class="eyebrow">I nostri servizi</div><h2>Dal progetto alla consegna</h2><i class="tl"></i></div><p>Le attività professionali riservate sono svolte da tecnici abilitati.</p></div>
+    <ul class="svc">
+      <li><a href="/studio-tecnico" data-img="/img/camera-progetto.webp"><span class="n">01</span><h3>Studio tecnico</h3><p>Progettazione, pratiche edilizie, direzione lavori, rendering 3D.</p><span class="arr">→</span></a></li>
+      <li><a href="/interior-design" data-img="/img/id-soggiorno-boiserie.webp"><span class="n">02</span><h3>Interior design</h3><p>Spazi, luce, materiali e finiture progettati su misura.</p><span class="arr">→</span></a></li>
+      <li><a href="/ristrutturazioni-interni" data-img="/img/9419b5a7175f12a79d6468286ff2d8a0.webp"><span class="n">03</span><h3>Ristrutturazioni interni</h3><p>Appartamenti, ville, locali commerciali e strutture ricettive, chiavi in mano.</p><span class="arr">→</span></a></li>
+      <li><a href="/ristrutturazioni-esterni" data-img="/img/facciata-05.webp"><span class="n">04</span><h3>Ristrutturazioni esterni</h3><p>Facciate, coperture, terrazzi, cappotti e pavimentazioni esterne.</p><span class="arr">→</span></a></li>
+      <li><a href="#contatti" data-img="/img/efb0abcafdec2b548a95f682cf7197a9.webp"><span class="n">05</span><h3>Infissi e serramenti</h3><p>PVC, alluminio, scorrevoli e vetri termoisolanti, con posa.</p><span class="arr">→</span></a></li>
+      <li><a href="#legno" data-img="/img/m-a-frame.webp"><span class="n">06</span><h3>Case in legno</h3><p>Catalogo modelli, prezzo della struttura e configuratore degli optional.</p><span class="arr">→</span></a></li>
+    </ul>
+  </div>
+</section>
+<div class="peek" id="peek" aria-hidden="true"><img alt=""></div>
+
+<section id="interior" style="background:var(--bg2);padding-bottom:clamp(50px,7vw,90px)" data-node>
+  <div class="wrap">
+    <div class="head"><div><div class="eyebrow">Interior design</div><h2>Render di progetto</h2><i class="tl"></i></div><span class="hint">Tieni fermo il dito per fermare · trascina per accelerare</span></div>
+  </div>
+  <div class="belt" id="belt" tabindex="0" aria-label="Render di interior design: usa le frecce della tastiera per scorrere">
+    <div class="tr" id="beltTr">
+      <figure><img src="/img/id-soggiorno-boiserie.webp" alt="Soggiorno con boiserie, cannettati e gola luminosa"><figcaption><small>Render di progetto by Architetto Adriana Sclifos</small>Soggiorno con boiserie e LED</figcaption></figure>
+      <figure><img src="/img/id-cucina-isola-marmo.webp" alt="Cucina bianca con isola e paraschizzi in marmo"><figcaption><small>Render di progetto by Architetto Adriana Sclifos</small>Cucina con isola in marmo</figcaption></figure>
+      <figure><img src="/img/id-camera-testiera.webp" alt="Camera da letto con testiera imbottita a tutta parete"><figcaption><small>Render di progetto by Architetto Adriana Sclifos</small>Camera con testiera imbottita</figcaption></figure>
+      <figure><img src="/img/id-bagno-terrazzo.webp" alt="Bagno con rivestimento effetto terrazzo"><figcaption><small>Render di progetto by Architetto Adriana Sclifos</small>Bagno in effetto terrazzo</figcaption></figure>
+      <figure><img src="/img/id-salone-armonia.webp" alt="Salone"><figcaption><small>Render di progetto by Architetto Adriana Sclifos</small>Salone</figcaption></figure>
+      <figure><img src="/img/id-camera-noce.webp" alt="Camera con pannello in legno scuro"><figcaption><small>Render di progetto by Architetto Adriana Sclifos</small>Camera con pannello in noce</figcaption></figure>
+      <figure><img src="/img/id-cucina-sala-pranzo.webp" alt="Cucina con sala da pranzo"><figcaption><small>Render di progetto by Architetto Adriana Sclifos</small>Cucina e sala da pranzo</figcaption></figure>
+      <figure><img src="/img/id-soggiorno-legno.webp" alt="Soggiorno con pareti in legno"><figcaption><small>Render di progetto by Architetto Adriana Sclifos</small>Soggiorno in legno</figcaption></figure>
+      <figure><img src="/img/id-camera-specchio.webp" alt="Camera con specchio"><figcaption><small>Render di progetto by Architetto Adriana Sclifos</small>Camera con specchio</figcaption></figure>
+      <figure><img src="/img/id-sala-pranzo.webp" alt="Sala da pranzo"><figcaption><small>Render di progetto by Architetto Adriana Sclifos</small>Sala da pranzo</figcaption></figure>
+    </div>
+  </div>
 </section>
 
-<section style="padding: 120px clamp(20px, 5vw, 72px); max-width: 1320px; margin: 0 auto">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 56px">
-<div>
-<p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.38em; color: #C9A24A; font-weight: 600">I NOSTRI SERVIZI</p>
-<h2 style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: clamp(34px, 3.6vw, 54px); line-height: 1.08">Dal progetto alla consegna</h2>
-</div>
-<p style="margin: 0; max-width: 420px; color: #8A8478">Le attività professionali riservate sono svolte da tecnici abilitati.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); border-top: 1px solid #2A2722; border-left: 1px solid #2A2722">
-<a href="/studio-tecnico" style="display: block; padding: 44px 36px; border-right: 1px solid #2A2722; border-bottom: 1px solid #2A2722; color: #F3EFE7"><span style="font-size: 12px; color: #C9A24A; letter-spacing: 0.2em">01</span><h3 style="margin: 18px 0 10px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Studio tecnico</h3><p style="margin: 0; color: #8A8478; font-size: 15px">Progettazione, pratiche edilizie, direzione lavori, rendering 3D.</p></a>
-<a href="/interior-design" style="display: block; padding: 44px 36px; border-right: 1px solid #2A2722; border-bottom: 1px solid #2A2722; color: #F3EFE7"><span style="font-size: 12px; color: #C9A24A; letter-spacing: 0.2em">02</span><h3 style="margin: 18px 0 10px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Interior design</h3><p style="margin: 0; color: #8A8478; font-size: 15px">Spazi, luce, materiali e finiture progettati su misura.</p></a>
-<a href="/ristrutturazioni-interni" style="display: block; padding: 44px 36px; border-right: 1px solid #2A2722; border-bottom: 1px solid #2A2722; color: #F3EFE7"><span style="font-size: 12px; color: #C9A24A; letter-spacing: 0.2em">03</span><h3 style="margin: 18px 0 10px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Ristrutturazioni interni</h3><p style="margin: 0; color: #8A8478; font-size: 15px">Appartamenti, ville, locali commerciali e strutture ricettive, chiavi in mano.</p></a>
-<a href="/ristrutturazioni-esterni" style="display: block; padding: 44px 36px; border-right: 1px solid #2A2722; border-bottom: 1px solid #2A2722; color: #F3EFE7"><span style="font-size: 12px; color: #C9A24A; letter-spacing: 0.2em">04</span><h3 style="margin: 18px 0 10px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Ristrutturazioni esterni</h3><p style="margin: 0; color: #8A8478; font-size: 15px">Facciate, coperture, terrazzi, cappotti e pavimentazioni esterne.</p></a>
-<a href="#" style="display: block; padding: 44px 36px; border-right: 1px solid #2A2722; border-bottom: 1px solid #2A2722; color: #F3EFE7"><span style="font-size: 12px; color: #C9A24A; letter-spacing: 0.2em">05</span><h3 style="margin: 18px 0 10px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Infissi e serramenti</h3><p style="margin: 0; color: #8A8478; font-size: 15px">PVC, alluminio, scorrevoli e vetri termoisolanti, con posa.</p></a>
-<a href="#" style="display: block; padding: 44px 36px; border-right: 1px solid #2A2722; border-bottom: 1px solid #2A2722; color: #F3EFE7; background: #171512"><span style="font-size: 12px; color: #C9A24A; letter-spacing: 0.2em">06</span><h3 style="margin: 18px 0 10px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Case in legno</h3><p style="margin: 0; color: #8A8478; font-size: 15px">Catalogo modelli, prezzo della struttura e configuratore degli optional.</p></a>
-</div>
+<section class="simbar" data-node>
+  <div class="wrap">
+    <div class="sb">
+      <div class="sbt"><div class="eyebrow">Simulatori di costo</div><h2>Quanto costa il tuo progetto?</h2><p>Una stima indicativa in pochi passaggi. Il preventivo definitivo arriva dopo il sopralluogo.</p></div>
+      <div class="sim">
+        <a href="/ristrutturazioni-interni"><span class="k">Ristrutturazione interni</span><span class="s">Simula →</span></a>
+        <a href="#contatti"><span class="k">Infissi</span><span class="s">Simula →</span></a>
+        <a href="#legno"><span class="k">Casa in legno</span><span class="s">Simula →</span></a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="preventivo" style="background: #171512; padding: 110px clamp(20px, 5vw, 72px)">
-<div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px; align-items: center; justify-content: space-between">
-<div style="flex: 1 1 480px">
-<p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.38em; color: #C9A24A; font-weight: 600">SIMULATORI DI COSTO</p>
-<h2 style="margin: 0 0 18px; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: clamp(34px, 3.6vw, 54px); line-height: 1.08">Quanto costa il tuo progetto?</h2>
-<p style="margin: 0 0 28px; color: #D8D2C6; max-width: 520px">Prima di richiedere il preventivo, scegli il tuo progetto e fai una simulazione: in pochi passaggi ottieni una stima indicativa. Il preventivo definitivo arriva dopo il sopralluogo.</p>
-<a href="#contatti" style="display: inline-block; border-bottom: 1px solid #C9A24A; padding-bottom: 6px; font-size: 13px; letter-spacing: 0.14em; font-weight: 600">PREFERISCI PARLARNE SUBITO? CONTATTACI →</a>
-</div>
-<div style="flex: 1 1 520px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
-<a href="/ristrutturazioni-interni" style="border: 1px solid #C9A24A; padding: 26px; color: #F3EFE7"><span style="display: block; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 20px">Ristrutturazione interni</span><span style="font-size: 13px; color: #C9A24A">Simula il preventivo →</span></a>
-<a href="#" style="border: 1px solid #C9A24A; padding: 26px; color: #F3EFE7"><span style="display: block; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 20px">Infissi</span><span style="font-size: 13px; color: #C9A24A">Simula il preventivo →</span></a>
-<a href="#" style="border: 1px solid #C9A24A; padding: 26px; color: #F3EFE7; background: #23201B"><span style="display: block; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 20px">Casa in legno</span><span style="font-size: 13px; color: #C9A24A">Simula il preventivo →</span></a>
-</div>
-</div>
+<section id="cantieri" data-node>
+  <div class="wrap">
+    <div class="head"><div><div class="eyebrow">I nostri cantieri</div><h2>Realizziamo lavori chiavi in mano.</h2><i class="tl"></i></div><span class="hint">Scorri →</span></div>
+  </div>
+  <div class="flow" data-flow>
+    <figure><div class="frame"><img src="/img/9419b5a7175f12a79d6468286ff2d8a0.webp" alt="Bagno in lastre effetto marmo" loading="lazy"></div><figcaption>Bagno in lastre XXL effetto marmo</figcaption></figure>
+    <figure><div class="frame"><img src="/img/d688ba8e4ada7c45b7a21610b4fb515d.webp" alt="Profilo LED a scomparsa" loading="lazy"></div><figcaption>Profili LED a scomparsa</figcaption></figure>
+    <figure><div class="frame"><img src="/img/15a3a60a160b2529c0b65bd4f39598aa.webp" alt="Villa in costruzione" loading="lazy"></div><figcaption>Villa</figcaption></figure>
+    <figure><div class="frame"><img src="/img/8db7489bcecdc4c69e1b71c9d10082ce.webp" alt="Impianti posati in cantiere" loading="lazy"></div><figcaption>Impianti a regola d'arte</figcaption></figure>
+    <figure><div class="frame"><img src="/img/efb0abcafdec2b548a95f682cf7197a9.webp" alt="Infissi protetti in cantiere" loading="lazy"></div><figcaption>Infissi protetti fino alla consegna</figcaption></figure>
+  </div>
 </section>
 
-<section style="padding: 110px 0">
-<div style="padding: 0 clamp(20px, 5vw, 72px); max-width: 1320px; margin: 0 auto 36px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
-<div>
-<p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.38em; color: #C9A24A; font-weight: 600">INTERIOR DESIGN</p>
-<h2 style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: clamp(34px, 3.6vw, 54px); line-height: 1.08">Render di progetto</h2>
-</div>
-<span style="font-size: 12px; letter-spacing: 0.2em; color: #8A8478">SCORRI →</span>
-</div>
-<div style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 clamp(20px, 5vw, 72px) 14px; scrollbar-width: thin; scrollbar-color: #C9A24A #171512">
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/id-soggiorno-boiserie.webp" alt="Soggiorno con boiserie, cannettati e gola luminosa" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px"><span style="display: block; font-size: 11px; letter-spacing: 0.2em; color: #C9A24A">RENDER DI PROGETTO BY ARCHITETTO ADRIANA SCLIFOS</span>Soggiorno con boiserie e LED</figcaption></figure>
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/id-cucina-isola-marmo.webp" alt="Cucina bianca con isola e paraschizzi in marmo" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px"><span style="display: block; font-size: 11px; letter-spacing: 0.2em; color: #C9A24A">RENDER DI PROGETTO BY ARCHITETTO ADRIANA SCLIFOS</span>Cucina con isola in marmo</figcaption></figure>
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/id-camera-testiera.webp" alt="Camera da letto con testiera imbottita a tutta parete" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px"><span style="display: block; font-size: 11px; letter-spacing: 0.2em; color: #C9A24A">RENDER DI PROGETTO BY ARCHITETTO ADRIANA SCLIFOS</span>Camera con testiera imbottita</figcaption></figure>
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/id-bagno-terrazzo.webp" alt="Bagno con rivestimento effetto terrazzo e rubinetteria nera" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px"><span style="display: block; font-size: 11px; letter-spacing: 0.2em; color: #C9A24A">RENDER DI PROGETTO BY ARCHITETTO ADRIANA SCLIFOS</span>Bagno in effetto terrazzo</figcaption></figure>
-<a href="/interior-design" style="flex: 0 0 min(320px, 70vw); scroll-snap-align: start; height: clamp(420px, 40vw, 560px); background: #171512; border: 1px solid #2A2722; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #C9A24A; font-size: 13px; letter-spacing: 0.16em; font-weight: 600">VEDI TUTTI I PROGETTI →</a>
-</div>
+<section id="legno" data-node>
+  <div class="wrap">
+    <div class="head"><div><div class="eyebrow">Case in legno · 18 modelli</div><h2>Scegli il modello, configura gli optional</h2><i class="tl"></i></div><a class="btn" href="#contatti">Tutto il catalogo</a></div>
+  </div>
+  <div class="belt cbelt" id="cbelt" tabindex="0" aria-label="Catalogo case in legno: tieni fermo il dito per fermare, trascina per scorrere">
+    <div class="tr" id="cbeltTr">
+      <a class="model" href="#contatti"><img src="/img/m-mini-barn-boutique.webp" alt="Render del modello Mini Barn Boutique"><div class="b"><h3>Mini Barn Boutique</h3><div class="d">21 m² coperti · 18 m² utili · terrazza 3 m² · 1 camera · 1 bagno</div><div class="p"><span class="lb">Prezzo chiavi in mano</span>29.900 €<small>IVA inclusa. Struttura in legno lamellare, impianti, bagno completo e terrazza</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-barn-mini.webp" alt="Render del modello Barn Mini"><div class="b"><h3>Barn Mini</h3><div class="d">27,7 m² coperti · 21,3 m² utili · terrazza 2,6 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>19.950 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-barn-light.webp" alt="Render del modello Barn Light"><div class="b"><h3>Barn Light</h3><div class="d">31 m² coperti · 23 m² utili · terrazza 6,5 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>20.500 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-barn-house.webp" alt="Render del modello Barn House"><div class="b"><h3>Barn House</h3><div class="d">36,8 m² coperti · 27,5 m² utili + 12 m² soppalco · terrazza 6,5 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>21.600 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-freya-smart.webp" alt="Render del modello Freya Smart"><div class="b"><h3>Freya Smart</h3><div class="d">37 m² coperti · 26 m² utili + 14 m² soppalco · terrazza 7,5 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>22.900 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-a-frame.webp" alt="Render del modello A-frame"><div class="b"><h3>A-frame</h3><div class="d">48 m² coperti · 38 m² utili + 14 m² soppalco · terrazza 9 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>23.400 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-barn-max-height.webp" alt="Render del modello Barn Max Height"><div class="b"><h3>Barn Max Height</h3><div class="d">36,8 m² coperti · 27,5 m² utili + 12 m² soppalco · terrazza 6,5 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>27.300 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-flat-house.webp" alt="Render del modello Flat House"><div class="b"><h3>Flat House</h3><div class="d">72 m² coperti · 52 m² utili · terrazza 20 m²</div><div class="p"><span class="lb">Prezzo della struttura da</span>28.600 €<small>Soffitto 2,2 m; con soffitto 2,7 m: 32.600 €. Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-a-frame-l.webp" alt="Render del modello A-Frame L"><div class="b"><h3>A-Frame L</h3><div class="d">58 m² coperti · 58 m² utili · terrazza 9,5 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>29.000 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-barn-double.webp" alt="Render del modello Barn Double"><div class="b"><h3>Barn Double</h3><div class="d">72 m² coperti · 55 m² utili + 12 m² soppalco · terrazza 13 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>38.000 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-flat-house-1-5.webp" alt="Render del modello Flat House 1.5"><div class="b"><h3>Flat House 1.5</h3><div class="d">108 m² coperti · 78 m² utili · terrazza 30 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>45.950 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-nord-house.webp" alt="Render del modello Nord House"><div class="b"><h3>Nord House</h3><div class="d">92,5 m² coperti · 82 m² utili · terrazza 8 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>51.000 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-fjord.webp" alt="Render del modello Fjord"><div class="b"><h3>Fjord</h3><div class="d">111 m² coperti · 130 m² utili su due piani · terrazza 18 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>61.000 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-flat-double.webp" alt="Render del modello Flat Double"><div class="b"><h3>Flat Double</h3><div class="d">108 m² coperti · 78 m² utili · terrazza 30 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>61.700 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-sherwood.webp" alt="Render del modello Sherwood"><div class="b"><h3>Sherwood</h3><div class="d">119 m² coperti · 98 m² utili · terrazza 15 m² · 3 camere · 2 bagni</div><div class="p"><span class="lb">Prezzo della struttura</span>64.800 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-norway.webp" alt="Render del modello Norway"><div class="b"><h3>Norway</h3><div class="d">85 m² coperti · 160 m² utili su due piani · terrazza 14 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>65.600 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-siver.webp" alt="Render del modello Siver"><div class="b"><h3>Siver</h3><div class="d">98 m² coperti · 160 m² utili su due piani · terrazza 8 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>71.400 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+      <a class="model" href="#contatti"><img src="/img/m-montblanc.webp" alt="Render del modello Montblanc"><div class="b"><h3>Montblanc</h3><div class="d">115 m² coperti · 166 m² utili con piano soppalco · terrazza 35 m²</div><div class="p"><span class="lb">Prezzo della struttura</span>77.400 €<small>Prezzo della sola struttura, IVA inclusa, non chiavi in mano</small></div><span class="go">Configura →</span></div></a>
+    </div>
+  </div>
 </section>
 
-<section style="padding: 0 0 110px">
-<div style="padding: 0 clamp(20px, 5vw, 72px); max-width: 1320px; margin: 0 auto 36px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
-<div>
-<p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.38em; color: #C9A24A; font-weight: 600">I NOSTRI CANTIERI</p>
-<h2 style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: clamp(34px, 3.6vw, 54px); line-height: 1.08">Ristrutturazioni interni</h2>
-</div>
-<span style="font-size: 12px; letter-spacing: 0.2em; color: #8A8478">SCORRI →</span>
-</div>
-<div style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 clamp(20px, 5vw, 72px) 14px; scrollbar-width: thin; scrollbar-color: #C9A24A #171512">
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/9419b5a7175f12a79d6468286ff2d8a0.webp" alt="Bagno in lastre effetto marmo" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Bagno in lastre XXL effetto marmo</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/d688ba8e4ada7c45b7a21610b4fb515d.webp" alt="Profilo LED a scomparsa nel controsoffitto" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Profili LED a scomparsa</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/15a3a60a160b2529c0b65bd4f39598aa.webp" alt="Villa in costruzione" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Villa</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/8db7489bcecdc4c69e1b71c9d10082ce.webp" alt="Impianti posati in cantiere" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Impianti a regola d’arte</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/efb0abcafdec2b548a95f682cf7197a9.webp" alt="Infissi protetti in cantiere" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Infissi protetti fino alla consegna</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/d32c7e2957a55f6e5c9c6ef5fe9e8e1e.webp" alt="Soggiorno in fase di cantiere" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Soggiorno</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/1df91ade824cbd4bda213e1f70a89ab5.webp" alt="Camera da letto in fase di cantiere" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Camera da letto</figcaption></figure>
-
-</div>
-<p style="margin: 36px auto 0; padding: 0 clamp(20px, 5vw, 72px); max-width: 1320px; font-family: 'Urbanist', sans-serif; font-weight: 300; font-size: clamp(24px, 2.4vw, 34px); color: #E2C373">Realizziamo lavori chiavi in mano.</p>
+<section id="esterni" style="background:var(--bg2)" data-node>
+  <div class="wrap">
+    <div class="head"><div><div class="eyebrow">I nostri lavori</div><h2>Esterni e facciate</h2><i class="tl"></i></div><span class="hint">Scorri →</span></div>
+    <div class="est-intro">
+      <p class="lead">Facciate, cappotti e coperture, dal rilievo al collaudo. Per condomini, ville e palazzine gestiamo l'intervento esterno in ogni sua parte: il nostro studio tecnico esegue il rilievo, prepara il computo e avvia le pratiche; le nostre squadre realizzano i lavori.</p>
+      <ul class="est-list"><li>Facciate</li><li>Cappotto termico</li><li>Coperture e tetti</li><li>Terrazzi e lastrici solari</li><li>Balconi</li><li>Aree esterne</li></ul>
+    </div>
+  </div>
+  <div class="flow wide" data-flow>
+    <figure><div class="frame"><img src="/img/7c75377523327d60e416919f891ac580.webp" alt="Pavimentazione esterna a spina di pesce" loading="lazy"></div><figcaption>Pavimentazione esterna a spina di pesce</figcaption></figure>
+    <figure><div class="frame"><img src="/img/facciata-01.webp" alt="Facciata condominiale, cantiere in corso" loading="lazy"></div><figcaption>Facciata condominiale – cantiere in corso</figcaption></figure>
+    <figure><div class="frame"><img src="/img/facciata-03.webp" alt="Facciata condominiale, lavoro finito" loading="lazy"></div><figcaption>Facciata condominiale – lavoro finito</figcaption></figure>
+    <figure><div class="frame"><img src="/img/facciata-08.webp" alt="Edificio condominiale con ponteggio" loading="lazy"></div><figcaption>Edificio condominiale – ponteggio su tutto il fronte</figcaption></figure>
+    <figure><div class="frame"><img src="/img/facciata-09.webp" alt="Facciata laterale rifinita" loading="lazy"></div><figcaption>Facciata laterale rifinita</figcaption></figure>
+    <figure><div class="frame"><img src="/img/facciata-12.webp" alt="Facciata condominiale, lavoro finito" loading="lazy"></div><figcaption>Facciata condominiale – lavoro finito</figcaption></figure>
+    <figure><div class="frame"><img src="/img/facciata-13.webp" alt="Edificio a torre con ponteggio" loading="lazy"></div><figcaption>Edificio a torre – ponteggio in opera</figcaption></figure>
+  </div>
 </section>
 
-<section style="padding: 120px 0">
-<div style="padding: 0 clamp(20px, 5vw, 72px); max-width: 1320px; margin: 0 auto 48px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
-<div>
-<p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.38em; color: #C9A24A; font-weight: 600">CASE IN LEGNO</p>
-<h2 style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: clamp(34px, 3.6vw, 54px); line-height: 1.08">Scegli il modello, configura gli optional</h2>
-</div>
-<a href="#" style="border-bottom: 1px solid #C9A24A; padding-bottom: 6px; font-size: 13px; letter-spacing: 0.14em; font-weight: 600">TUTTO IL CATALOGO</a>
-</div>
-<div style="display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 clamp(20px, 5vw, 72px) 14px; scrollbar-width: thin; scrollbar-color: #C9A24A #171512">
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/ee96c6e25d292b9f8f1e2e1f48cedf62.jpg" alt="Mini Barn Boutique: render, dati, pianta, sezione e vista 3D interna" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Mini Barn Boutique</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">21 m² coperti · 18 m² utili · terrazza 3 m² · 1 camera · 1 bagno</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo chiavi in mano</p><p style="margin: 0; font-size: 26px; color: #E2C373">29.900 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">IVA inclusa. Struttura in legno lamellare, impianti, bagno completo e terrazza</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/39c93c5710e15d2b09a627ae2eaab2eb.jpg" alt="Barn Mini: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Barn Mini</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">27,7 m² coperti · 21,3 m² utili · terrazza 2,6 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">19.950 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/cfe8986d31f74a3f227bf94d5b2fa4a7.jpg" alt="Barn Light: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Barn Light</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">31 m² coperti · 23 m² utili · terrazza 6,5 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">20.500 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/717d5aeae277f878791cac7445939150.jpg" alt="Barn House: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Barn House</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">36,8 m² coperti · 27,5 m² utili + 12 m² soppalco · terrazza 6,5 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">21.600 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/6d1b502902c9390025ece10267a2cde0.jpg" alt="Freya Smart: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Freya Smart</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">37 m² coperti · 26 m² utili + 14 m² soppalco · terrazza 7,5 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">22.900 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/f92aa050a8ec78444a221bfa0d9cd821.jpg" alt="A-frame: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">A-frame</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">48 m² coperti · 38 m² utili + 14 m² soppalco · terrazza 9 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">23.400 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/7da44f0c6c8c4b8248f2eec3cdf83021.jpg" alt="Barn Max Height: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Barn Max Height</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">36,8 m² coperti · 27,5 m² utili + 12 m² soppalco · terrazza 6,5 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">27.300 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/3dbbdb058ef0b5e9c869335ce51aada0.jpg" alt="Flat House: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Flat House</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">72 m² coperti · 52 m² utili · terrazza 20 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura da</p><p style="margin: 0; font-size: 26px; color: #E2C373">28.600 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Soffitto 2,2 m; con soffitto 2,7 m: 32.600 €. Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/c14e1678a7da4ab2506b21069fe87e78.jpg" alt="A-Frame L: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">A-Frame L</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">58 m² coperti · 58 m² utili · terrazza 9,5 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">29.000 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/b4bc9ef9a8e39c28b74bb3188676efc6.jpg" alt="Barn Double: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Barn Double</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">72 m² coperti · 55 m² utili + 12 m² soppalco · terrazza 13 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">38.000 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/91ae74e747903a304d447e45c889aaff.jpg" alt="Flat House 1.5: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Flat House 1.5</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">108 m² coperti · 78 m² utili · terrazza 30 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">45.950 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/027161d26e81999008073b6ef4a324d9.jpg" alt="Nord House: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Nord House</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">92,5 m² coperti · 82 m² utili · terrazza 8 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">51.000 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/caf98a2dfd8d6c25f75eed9b3f78c84e.jpg" alt="Fjord: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Fjord</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">111 m² coperti · 130 m² utili su due piani · terrazza 18 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">61.000 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/7b998d7081c903075938cf450c11d62d.jpg" alt="Flat Double: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Flat Double</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">108 m² coperti · 78 m² utili · terrazza 30 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">61.700 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/724223715a86a5481d6b94177fdff8e9.jpg" alt="Sherwood: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Sherwood</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">119 m² coperti · 98 m² utili · terrazza 15 m² · 3 camere · 2 bagni</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">64.800 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/4f11ecaf282226dd0153f2b9134af04f.jpg" alt="Norway: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Norway</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">85 m² coperti · 160 m² utili su due piani · terrazza 14 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">65.600 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/f459eede3015c9bc51d9a529186ea712.jpg" alt="Siver: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Siver</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">98 m² coperti · 160 m² utili su due piani · terrazza 8 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">71.400 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-<article style="flex: 0 0 min(420px, 86vw); scroll-snap-align: start; background: #171512"><img src="/img/7745b07521ea70a28c0d5d7ce7bbff5d.jpg" alt="Montblanc: render, dati, pianta e sezione" style="display: block; width: 100%; height: auto"><div style="padding: 28px"><h3 style="margin: 0 0 6px; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: 26px">Montblanc</h3><p style="margin: 0 0 22px; color: #8A8478; font-size: 14px">115 m² coperti · 166 m² utili con piano soppalco · terrazza 35 m²</p><p style="margin: 0; font-size: 13px; color: #8A8478">Prezzo della struttura</p><p style="margin: 0; font-size: 26px; color: #E2C373">77.400 €</p><p style="margin: 6px 0 24px; font-size: 12px; color: #8A8478">Prezzo della sola struttura, IVA inclusa, non chiavi in mano</p><a href="#" style="font-size: 12px; letter-spacing: 0.16em; font-weight: 600">CONFIGURA →</a></div></article>
-</div>
+<section id="chi" data-node>
+  <div class="wrap about">
+    <div>
+      <div class="eyebrow">Chi siamo</div>
+      <blockquote>Un unico referente, <em>dal primo sopralluogo alla consegna delle chiavi.</em></blockquote>
+      <div class="ph-text">[Testo Chi siamo da fornire: storia dell'azienda, organizzazione, metodo di lavoro e valori.]</div>
+    </div>
+    <div>
+      <div class="eyebrow" style="margin-bottom:16px">Le nostre garanzie · Lavori sicuri e certificati</div>
+      <div class="gar">
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><p style="margin:0"><b>Materiali di qualità</b><span>Prodotti certificati, con garanzia del produttore</span></p></div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><p style="margin:0"><b>Impianti certificati</b><span>Tecnici abilitati e dichiarazione di conformità (DM 37/08)</span></p></div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><p style="margin:0"><b>Certificazioni</b><span>Certificati e schede tecniche consegnati a fine lavori</span></p></div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><p style="margin:0"><b>Tempi da contratto</b><span>Date di inizio e consegna scritte nel contratto</span></p></div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><p style="margin:0"><b>Cantieri assicurati</b><span>Polizza assicurativa a tutela del cliente</span></p></div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><p style="margin:0"><b>Preventivo trasparente</b><span>Ogni voce di costo dettagliata, nessuna sorpresa</span></p></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section style="padding: 0 0 120px">
-<div style="padding: 0 clamp(20px, 5vw, 72px); max-width: 1320px; margin: 0 auto 36px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
-<div>
-<p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.38em; color: #C9A24A; font-weight: 600">I NOSTRI LAVORI</p>
-<h2 style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: clamp(34px, 3.6vw, 54px); line-height: 1.08">Esterni e facciate</h2>
-</div>
-<span style="font-size: 12px; letter-spacing: 0.2em; color: #8A8478">SCORRI →</span>
-</div>
-<div style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 clamp(20px, 5vw, 72px) 14px; scrollbar-width: thin; scrollbar-color: #C9A24A #171512">
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/7c75377523327d60e416919f891ac580.webp" alt="Pavimentazione esterna a spina di pesce" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Pavimentazione esterna a spina di pesce</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/67c6f2a1f0496f5d23e6b0bcd22c3bb9.webp" alt="Scavi e drenaggi per sistemazione esterna" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Scavi, drenaggi e irrigazione</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-01.webp" alt="Facciata condominiale – cantiere in corso" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Facciata condominiale – cantiere in corso</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-02.webp" alt="Facciata condominiale – ponteggio in opera" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Facciata condominiale – ponteggio in opera</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-03.webp" alt="Facciata condominiale – lavoro finito" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Facciata condominiale – lavoro finito</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-04.webp" alt="Facciata condominiale – cantiere in corso" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Facciata condominiale – cantiere in corso</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-05.webp" alt="Facciata condominiale – lavoro finito" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Facciata condominiale – lavoro finito</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-06.webp" alt="Facciata condominiale – ponteggio in opera" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Facciata condominiale – ponteggio in opera</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-07.webp" alt="Facciata condominiale – lavoro finito" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Facciata condominiale – lavoro finito</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-08.webp" alt="Edificio condominiale – ponteggio su tutto il fronte" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Edificio condominiale – ponteggio su tutto il fronte</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-09.webp" alt="Facciata laterale rifinita" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Facciata laterale rifinita</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-10.webp" alt="Facciata condominiale – lavoro finito" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Facciata condominiale – lavoro finito</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-11.webp" alt="Facciata condominiale – cantiere in corso" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Facciata condominiale – cantiere in corso</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-12.webp" alt="Facciata condominiale – lavoro finito" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Facciata condominiale – lavoro finito</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-13.webp" alt="Edificio a torre – ponteggio in opera" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Edificio a torre – ponteggio in opera</figcaption></figure>
-
-<figure style="margin: 0; flex: 0 0 min(420px, 80vw); scroll-snap-align: start; position: relative; height: clamp(420px, 40vw, 560px)"><img src="/img/facciata-14.webp" alt="Edificio a torre – facciata in fase di completamento" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px; background: rgba(14,13,11,0.72); font-size: 14px">Edificio a torre – facciata in fase di completamento</figcaption></figure>
-</div>
+<section style="padding-top:0" data-node>
+  <div class="wrap">
+    <div class="head"><div><div class="eyebrow">Come lavoriamo</div><h2>Cinque passaggi, nessuna sorpresa</h2><i class="tl"></i></div></div>
+    <div class="steps" id="steps"><span class="fill" aria-hidden="true"></span>
+      <div><b>01</b><h3>Primo contatto</h3><p>Ci racconti l'immobile e cosa desideri.</p></div>
+      <div><b>02</b><h3>Sopralluogo</h3><p>Rilievo e verifica dello stato di fatto.</p></div>
+      <div><b>03</b><h3>Progetto e preventivo</h3><p>Render, materiali e voci di costo dettagliate.</p></div>
+      <div><b>04</b><h3>Lavori</h3><p>Un unico referente segue il cantiere.</p></div>
+      <div><b>05</b><h3>Consegna</h3><p>Chiavi in mano, con le finiture concordate.</p></div>
+    </div>
+  </div>
 </section>
 
-<section style="display: flex; flex-wrap: wrap; align-items: stretch; background: #171512">
-<div style="flex: 1 1 520px; min-height: 620px; position: relative">
-<img src="/img/id-camera-noce.webp" alt="Camera da letto con pannello in legno scuro e applique" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
-<span style="position: absolute; left: 24px; bottom: 20px; font-size: 11px; letter-spacing: 0.2em; color: #F3EFE7; background: rgba(14,13,11,0.6); padding: 6px 10px">RENDER DI PROGETTO BY ARCHITETTO ADRIANA SCLIFOS</span>
-</div>
-<div style="flex: 1 1 520px; padding: clamp(48px, 7vw, 110px) clamp(24px, 6vw, 96px); display: flex; flex-direction: column; justify-content: center">
-<p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.38em; color: #C9A24A; font-weight: 600">CHI SIAMO</p>
-<h2 style="margin: 0 0 28px; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: clamp(32px, 3.2vw, 48px); line-height: 1.12">Un unico referente, dal primo sopralluogo alla consegna delle chiavi.</h2>
-<p style="margin: 0 0 36px; color: #D8D2C6">[Testo Chi siamo da fornire: storia dell'azienda, organizzazione, metodo di lavoro e valori.]</p>
-<a href="#" style="align-self: flex-start; border-bottom: 1px solid #C9A24A; padding-bottom: 6px; font-size: 13px; letter-spacing: 0.14em; font-weight: 600">CONOSCI MD EDIL GROUP</a>
-</div>
+<section id="reel" style="background:var(--bg2)" data-node>
+  <div class="wrap">
+    <div class="head"><div><div class="eyebrow">Dal nostro Instagram · @md_edil_group</div><h2>Gli ultimi reel</h2><i class="tl"></i></div><p>Gli ultimi reel pubblicati: scorri verso sinistra per vedere quelli precedenti.</p></div>
+    <div class="reels-wrap">
+    <div class="reels" id="reels">
+      <a class="reel" href="https://www.instagram.com/reel/DebjwzYk_gW/">
+        <div class="v"><span class="ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Reel · 13 ottobre 2026</span><span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="stats"><span title="Visualizzazioni"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><b class="cnt" data-n="167">167</b></span><span title="Mi piace"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4 2.3h3.2C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"/></svg><b class="cnt" data-n="0">0</b></span><span title="Commenti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><b class="cnt" data-n="0">0</b></span></span></div>
+        <p class="cap"><b>Oggi è così… domani sarà così</b><em>Soggiorno su misura nel cuore di Roma: controsoffitto acustico, LED a scomparsa, camino e parete TV integrati. Dalla demolizione alla consegna chiavi in mano. Roma Centro e tutta la Regione Lazio</em></p>
+        <span class="tags">#ristrutturazioneroma #romacentro #primaedopo #interiordesign #mdedilgroup</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/reel/DeYztC3uWNI/">
+        <div class="v"><span class="ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Reel · 12 ottobre 2026</span><span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="stats"><span title="Visualizzazioni"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><b class="cnt" data-n="270">270</b></span><span title="Mi piace"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4 2.3h3.2C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"/></svg><b class="cnt" data-n="1">1</b></span><span title="Commenti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><b class="cnt" data-n="0">0</b></span></span></div>
+        <p class="cap"><b>Stai pensando di ristrutturare?</b><em></em></p>
+        <span class="tags">#ristrutturazione #primaedopo #edilizia #interiordesign #MDEdilGroup</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/reel/DeYv-yeOuNq/">
+        <div class="v"><span class="ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Reel · 12 ottobre 2026</span><span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="stats"><span title="Visualizzazioni"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><b class="cnt" data-n="166">166</b></span><span title="Mi piace"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4 2.3h3.2C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"/></svg><b class="cnt" data-n="0">0</b></span><span title="Commenti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><b class="cnt" data-n="0">0</b></span></span></div>
+        <p class="cap"><b>Dietro ogni grande trasformazione c’è un grande lavoro!</b><em>Dalla demolizione alla realizzazione, ogni dettaglio conta. MD EDIL GROUP – Ristrutturazioni professionali, qualità e attenzione ai dettagli. HomeRenovation</em></p>
+        <span class="tags">#MDEdilGroup #RistrutturazioniRoma #RistrutturazioneCasa #Edilizia #LavoriInCorso</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/reel/DeUnLgSOUbN/">
+        <div class="v"><span class="ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Reel · 10 ottobre 2026</span><span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="stats"><span title="Visualizzazioni"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><b class="cnt" data-n="154">154</b></span><span title="Mi piace"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4 2.3h3.2C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"/></svg><b class="cnt" data-n="0">0</b></span><span title="Commenti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><b class="cnt" data-n="0">0</b></span></span></div>
+        <p class="cap"><b>Bastano pochi millimetri per compromettere la posa del rivestimento?</b><em>LEZIONE 14 – La sottofascia nelle costruzioni in legno Un dettaglio apparentemente piccolo può fare la differenza durante il montaggio! In questo video vediamo il posizionamento della sottofascia…</em></p>
+        <span class="tags">#CaseInLegno #CasePrefabbricate #CostruzioniInLegno #WoodFrame #CarpenteriaInLegno</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/reel/DeUP_GzOgM_/">
+        <div class="v"><span class="ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Reel · 10 ottobre 2026</span><span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="stats"><span title="Visualizzazioni"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><b class="cnt" data-n="155">155</b></span><span title="Mi piace"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4 2.3h3.2C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"/></svg><b class="cnt" data-n="0">0</b></span><span title="Commenti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><b class="cnt" data-n="0">0</b></span></span></div>
+        <p class="cap"><b>Sai come si costruisce davvero una parete di una casa in legno?</b><em>LEZIONE 2 – Dalla struttura al montaggio! Non basta assemblare qualche trave per costruire una casa sicura! In questo video scoprirai come vengono fissati i pannelli OSB al telaio in legno e come…</em></p>
+        <span class="tags">#CaseInLegno #CasePrefabbricate #CostruzioniInLegno #WoodFrame #Edilizia</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/reel/DeRaQrbuQBg/">
+        <div class="v"><span class="ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Reel · 9 ottobre 2026</span><span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="stats"><span title="Visualizzazioni"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><b class="cnt" data-n="181">181</b></span><span title="Mi piace"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4 2.3h3.2C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"/></svg><b class="cnt" data-n="1">1</b></span><span title="Commenti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><b class="cnt" data-n="1">1</b></span></span></div>
+        <p class="cap"><b>Sai davvero come si costruisce una casa in legno?</b><em>Basta un piccolo errore durante il montaggio per compromettere la precisione dell’intera struttura! LEZIONE – Come si costruisce una parete in legno. In questo video ti mostriamo una delle fasi…</em></p>
+        <span class="tags">#CaseInLegno #CostruzioniInLegno #CasePrefabbricate #WoodFrame #Edilizia</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/reel/DeOo-j4OC6u/">
+        <div class="v"><span class="ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Reel · 8 ottobre 2026</span><span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="stats"><span title="Visualizzazioni"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><b class="cnt" data-n="332">332</b></span><span title="Mi piace"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4 2.3h3.2C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"/></svg><b class="cnt" data-n="2">2</b></span><span title="Commenti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><b class="cnt" data-n="0">0</b></span></span></div>
+        <p class="cap"><b>Costruiresti una casa così, sollevata da terra?</b><em>Guardate questa spettacolare struttura in legno immersa nella natura! Una soluzione architettonica che unisce design, tecnica costruttiva e valorizzazione degli spazi esterni. Struttura portante…</em></p>
+        <span class="tags">#CaseInLegno #CasePrefabbricate #GlampingItalia #TinyHouse #TurismoSostenibile</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/reel/DeMHSBLO1U_/">
+        <div class="v"><span class="ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Reel · 7 ottobre 2026</span><span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="stats"><span title="Visualizzazioni"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><b class="cnt" data-n="4540">4.540</b></span><span title="Mi piace"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4 2.3h3.2C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"/></svg><b class="cnt" data-n="84">84</b></span><span title="Commenti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><b class="cnt" data-n="106">106</b></span></span></div>
+        <p class="cap"><b>La casa in legno in bioedilizia FJORD.</b><em>Con 130 metri quadri progettati per garantire comfort, efficienza energetica e qualità abitativa. Struttura portante in legno lamellare essiccato Isolamento in lana minerale fino a 250 mm</em></p>
+        <span class="tags">#CasaInLegno #Bioedilizia #mdedilgroup #Casa</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/reel/DeKtMJmKuMZ/">
+        <div class="v"><span class="ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Reel · 6 ottobre 2026</span><span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="stats"><span title="Visualizzazioni"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><b class="cnt" data-n="247">247</b></span><span title="Mi piace"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4 2.3h3.2C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"/></svg><b class="cnt" data-n="0">0</b></span><span title="Commenti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><b class="cnt" data-n="0">0</b></span></span></div>
+        <p class="cap"><b>Come si assembla una casa in legno? Guardiamolo da vicino, passo dopo passo.</b><em>PARTE 1 • Dalla struttura alle pareti: iniziamo una serie dedicata alle fasi di assemblaggio, per scoprire cosa c’è dietro una casa in legno e quali dettagli fanno la differenza. Segui il profilo…</em></p>
+        <span class="tags">#CaseInLegno #CasePrefabbricate #CostruzioniInLegno #CasaPrefabbricata</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/reel/DeHH20tONGV/">
+        <div class="v"><span class="ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>Reel · 5 ottobre 2026</span><span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="stats"><span title="Visualizzazioni"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><b class="cnt" data-n="7701">7.701</b></span><span title="Mi piace"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4 2.3h3.2C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"/></svg><b class="cnt" data-n="118">118</b></span><span title="Commenti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><b class="cnt" data-n="89">89</b></span></span></div>
+        <p class="cap"><b>Immagina di trasformare un terreno in una vera area turistico-ricettiva.</b><em>Casette in legno immerse nel verde, un laghetto centrale, percorsi pedonali, aree relax e strutture Mini Boutique pensate per creare un piccolo resort accogliente e moderno. Soluzioni ideali per…</em></p>
+        <span class="tags">#caseinlegno #casetteinlegno #glamping #glampingitalia #villaggioturistico</span>
+      </a>
+    </div>
+    <p class="hint" style="margin-top:6px">Scorri col dito ←</p>
+    </div>
+    <p class="note" style="margin-top:18px;font-size:12.5px;color:var(--mute)">Numeri aggiornati al 14 ottobre 2026. Tocca un reel per guardarlo su Instagram.</p>
+    <div class="cta" style="justify-content:flex-start;animation:none;margin-top:24px"><a class="btn" href="https://www.instagram.com/md_edil_group/">Seguici su Instagram</a></div>
+  </div>
 </section>
 
-<section style="background: #171512; padding: 80px clamp(20px, 5vw, 72px)">
-<div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px 80px; align-items: flex-start">
-<div aria-label="Le nostre garanzie" style="flex: 1 1 520px; min-width: 0">
-<p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.38em; color: #C9A24A; font-weight: 600">LE NOSTRE GARANZIE</p>
-<h2 style="margin: 0 0 28px; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.1">Lavori sicuri e certificati</h2>
-<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 28px 20px; text-align: center">
-<li style="display: flex; flex-direction: column; align-items: center; gap: 12px"><svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" style="fill: none; stroke: #C9A24A; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"><path d="M6 3h12l3 5-9 13L3 8z"></path><path d="M3 8h18M9 3l3 18 3-18"></path></svg><h3 style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.04em">Materiali di qualità</h3><p style="margin: 0; color: #8A8478; font-size: 13px; line-height: 1.5">Prodotti certificati, con garanzia del produttore</p></li>
-<li style="display: flex; flex-direction: column; align-items: center; gap: 12px"><svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" style="fill: none; stroke: #C9A24A; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg><h3 style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.04em">Impianti certificati</h3><p style="margin: 0; color: #8A8478; font-size: 13px; line-height: 1.5">Tecnici abilitati e dichiarazione di conformità (DM 37/08)</p></li>
-<li style="display: flex; flex-direction: column; align-items: center; gap: 12px"><svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" style="fill: none; stroke: #C9A24A; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"><circle cx="12" cy="9" r="6"></circle><path d="m9.5 9 1.8 1.8L15 7.2"></path><path d="M8.5 14 7 22l5-3 5 3-1.5-8"></path></svg><h3 style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.04em">Certificazioni</h3><p style="margin: 0; color: #8A8478; font-size: 13px; line-height: 1.5">Certificati e schede tecniche consegnati a fine lavori</p></li>
-<li style="display: flex; flex-direction: column; align-items: center; gap: 12px"><svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" style="fill: none; stroke: #C9A24A; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"><rect x="3" y="4.5" width="18" height="16.5" rx="1.5"></rect><path d="M3 9.5h18M8 2.5v4M16 2.5v4"></path><path d="m9 15 2 2 4-4"></path></svg><h3 style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.04em">Tempi da contratto</h3><p style="margin: 0; color: #8A8478; font-size: 13px; line-height: 1.5">Date di inizio e consegna scritte nel contratto</p></li>
-<li style="display: flex; flex-direction: column; align-items: center; gap: 12px"><svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" style="fill: none; stroke: #C9A24A; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10v-6z"></path><path d="m8.8 12 2.2 2.2 4.2-4.4"></path></svg><h3 style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.04em">Cantieri assicurati</h3><p style="margin: 0; color: #8A8478; font-size: 13px; line-height: 1.5">Polizza assicurativa a tutela del cliente</p></li>
-<li style="display: flex; flex-direction: column; align-items: center; gap: 12px"><svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" style="fill: none; stroke: #C9A24A; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"><path d="M14.5 3.5h-8A1.5 1.5 0 0 0 5 5v14a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 19V8z"></path><path d="M14.5 3.5V8H19M8.5 12.5h7M8.5 16h5"></path></svg><h3 style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.04em">Preventivo trasparente</h3><p style="margin: 0; color: #8A8478; font-size: 13px; line-height: 1.5">Ogni voce di costo dettagliata, nessuna sorpresa</p></li>
-</ul>
-</div>
-<div style="flex: 1 1 420px; min-width: 0">
-<p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.38em; color: #C9A24A; font-weight: 600">COME LAVORIAMO</p>
-<h2 style="margin: 0 0 28px; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: clamp(26px, 2.4vw, 34px); line-height: 1.1">Cinque passaggi, nessuna sorpresa</h2>
-<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0">
-<li style="display: flex; gap: 18px; align-items: baseline; border-top: 1px solid #2A2722; padding: 14px 0"><span style="flex: 0 0 auto; font-family: 'Urbanist', sans-serif; font-weight: 300; font-size: 24px; color: #C9A24A">01</span><span><h3 style="margin: 0 0 2px; font-size: 15px; font-weight: 600">Primo contatto</h3><p style="margin: 0; color: #8A8478; font-size: 13px; line-height: 1.5">Ci racconti l'immobile e cosa desideri.</p></span></li>
-<li style="display: flex; gap: 18px; align-items: baseline; border-top: 1px solid #2A2722; padding: 14px 0"><span style="flex: 0 0 auto; font-family: 'Urbanist', sans-serif; font-weight: 300; font-size: 24px; color: #C9A24A">02</span><span><h3 style="margin: 0 0 2px; font-size: 15px; font-weight: 600">Sopralluogo</h3><p style="margin: 0; color: #8A8478; font-size: 13px; line-height: 1.5">Rilievo e verifica dello stato di fatto.</p></span></li>
-<li style="display: flex; gap: 18px; align-items: baseline; border-top: 1px solid #2A2722; padding: 14px 0"><span style="flex: 0 0 auto; font-family: 'Urbanist', sans-serif; font-weight: 300; font-size: 24px; color: #C9A24A">03</span><span><h3 style="margin: 0 0 2px; font-size: 15px; font-weight: 600">Progetto e preventivo</h3><p style="margin: 0; color: #8A8478; font-size: 13px; line-height: 1.5">Render, materiali e voci di costo dettagliate.</p></span></li>
-<li style="display: flex; gap: 18px; align-items: baseline; border-top: 1px solid #2A2722; padding: 14px 0"><span style="flex: 0 0 auto; font-family: 'Urbanist', sans-serif; font-weight: 300; font-size: 24px; color: #C9A24A">04</span><span><h3 style="margin: 0 0 2px; font-size: 15px; font-weight: 600">Lavori</h3><p style="margin: 0; color: #8A8478; font-size: 13px; line-height: 1.5">Un unico referente segue il cantiere.</p></span></li>
-<li style="display: flex; gap: 18px; align-items: baseline; border-top: 1px solid #2A2722; padding: 14px 0"><span style="flex: 0 0 auto; font-family: 'Urbanist', sans-serif; font-weight: 300; font-size: 24px; color: #C9A24A">05</span><span><h3 style="margin: 0 0 2px; font-size: 15px; font-weight: 600">Consegna</h3><p style="margin: 0; color: #8A8478; font-size: 13px; line-height: 1.5">Chiavi in mano, con le finiture concordate.</p></span></li>
-</ol>
-</div>
-</div>
+<section data-node>
+  <div class="wrap">
+    <div class="head"><div><div class="eyebrow">News e guide</div><h2>Dal nostro taccuino</h2><i class="tl"></i></div><a class="btn" href="#">Tutti gli articoli</a></div>
+    <div class="news">
+      <article><span class="eyebrow">Ristrutturazioni</span><h3>[Titolo articolo]</h3></article>
+      <article><span class="eyebrow">Case in legno</span><h3>[Titolo articolo]</h3></article>
+      <article><span class="eyebrow">Detrazioni e normative</span><h3>[Titolo articolo]</h3></article>
+    </div>
+  </div>
 </section>
 
-<section style="padding: 96px clamp(20px, 5vw, 72px) 110px; max-width: 1320px; margin: 0 auto">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 48px">
-<div>
-<p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.38em; color: #C9A24A; font-weight: 600">NEWS E GUIDE</p>
-<h2 style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: clamp(34px, 3.6vw, 54px); line-height: 1.08">Dal nostro taccuino</h2>
-</div>
-<a href="#" style="border-bottom: 1px solid #C9A24A; padding-bottom: 6px; font-size: 13px; letter-spacing: 0.14em; font-weight: 600">TUTTI GLI ARTICOLI</a>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px">
-<a href="#" style="display: block; color: #F3EFE7; border-top: 1px solid #2A2722; padding-top: 24px"><p style="margin: 0 0 12px; font-size: 12px; letter-spacing: 0.2em; color: #C9A24A">RISTRUTTURAZIONI</p><h3 style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: 24px; line-height: 1.25">[Titolo articolo]</h3></a>
-<a href="#" style="display: block; color: #F3EFE7; border-top: 1px solid #2A2722; padding-top: 24px"><p style="margin: 0 0 12px; font-size: 12px; letter-spacing: 0.2em; color: #C9A24A">CASE IN LEGNO</p><h3 style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: 24px; line-height: 1.25">[Titolo articolo]</h3></a>
-<a href="#" style="display: block; color: #F3EFE7; border-top: 1px solid #2A2722; padding-top: 24px"><p style="margin: 0 0 12px; font-size: 12px; letter-spacing: 0.2em; color: #C9A24A">DETRAZIONI E NORMATIVE</p><h3 style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: 24px; line-height: 1.25">[Titolo articolo]</h3></a>
-</div>
+<section id="contatti" style="background:var(--bg2)" data-node>
+  <div class="wrap contact">
+    <div>
+      <div class="eyebrow">Contatti e preventivi</div>
+      <h2 style="margin-top:12px">Parliamo del tuo progetto</h2>
+      <div class="tel">+39 328 214 5266</div>
+      <address>
+        <span>Tel. e WhatsApp · mdedilgroupsrls@gmail.com</span>
+        <span>Sede legale: Via Monti Lepini 9, 00015 Monterotondo (RM)</span>
+        <span>Sede legale: Via Po 22, Roma</span>
+      </address>
+    </div>
+    <form name="preventivo" method="POST" action="/grazie" data-netlify="true" netlify-honeypot="indirizzo-web">
+      <input type="hidden" name="form-name" value="preventivo">
+      <p hidden><label>Non compilare<input name="indirizzo-web"></label></p>
+      <div class="f"><label for="nome">Nome</label><input id="nome" name="nome" autocomplete="name" required></div>
+      <div class="f"><label for="telefono">Telefono</label><input id="telefono" name="telefono" type="tel" autocomplete="tel" required></div>
+      <div class="f"><label for="comune">Comune del cantiere</label><input id="comune" name="comune" autocomplete="address-level2"></div>
+      <div class="f"><label for="tipo">Tipo di intervento</label><select id="tipo" name="intervento"><option>Ristrutturazione interni</option><option>Ristrutturazione esterni</option><option>Infissi e serramenti</option><option>Case in legno</option><option>Progettazione</option></select></div>
+      <div class="f full"><label for="descr">Descrizione del progetto</label><textarea id="descr" name="descrizione"></textarea></div>
+      <div class="f full"><button class="btn solid" type="submit" style="justify-self:start">Invia la richiesta</button></div>
+    </form>
+  </div>
 </section>
+</main>
 
-<section id="contatti" style="background: #F3EFE7; color: #0E0D0B; padding: 110px clamp(20px, 5vw, 72px)">
-<div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 64px">
-<div style="flex: 1 1 380px">
-<p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.38em; color: #7A5F1E; font-weight: 600">CONTATTI E PREVENTIVI</p>
-<h2 style="margin: 0 0 28px; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: clamp(34px, 3.6vw, 54px); line-height: 1.08">Parliamo del tuo progetto</h2>
-<p style="margin: 0 0 6px; font-size: 15px">Tel. e WhatsApp <a href="https://wa.me/393282145266" target="_blank" rel="noopener" style="color: #0E0D0B; font-weight: 600">+39 328 214 5266</a></p>
-<p style="margin: 0 0 6px; font-size: 15px">mdedilgroupsrls@gmail.com</p>
-<p style="margin: 22px 0 0; font-size: 14px; color: #4A453D">Sede legale: Via Monti Lepini 9, 00015 Monterotondo (RM)<br>Sede legale: Via Po 22, Roma</p>
-</div>
-<form name="preventivo" method="POST" action="/grazie" data-netlify="true" netlify-honeypot="indirizzo-web" style="flex: 1.4 1 480px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px 22px"><input type="hidden" name="form-name" value="preventivo"><p hidden><label>Non compilare<input name="indirizzo-web"></label></p>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; letter-spacing: 0.14em; font-weight: 600">NOME<input name="nome" autocomplete="name" required type="text" style="border: 0; border-bottom: 1px solid #0E0D0B; background: transparent; padding: 10px 0; font: inherit; font-size: 16px; letter-spacing: 0"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; letter-spacing: 0.14em; font-weight: 600">TELEFONO<input name="telefono" autocomplete="tel" required type="tel" style="border: 0; border-bottom: 1px solid #0E0D0B; background: transparent; padding: 10px 0; font: inherit; font-size: 16px; letter-spacing: 0"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; letter-spacing: 0.14em; font-weight: 600">COMUNE DEL CANTIERE<input name="comune" autocomplete="address-level2" type="text" style="border: 0; border-bottom: 1px solid #0E0D0B; background: transparent; padding: 10px 0; font: inherit; font-size: 16px; letter-spacing: 0"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; letter-spacing: 0.14em; font-weight: 600">TIPO DI INTERVENTO<select name="intervento" style="border: 0; border-bottom: 1px solid #0E0D0B; background: transparent; padding: 10px 0; font: inherit; font-size: 16px; letter-spacing: 0"><option>Ristrutturazione interni</option><option>Ristrutturazione esterni</option><option>Infissi e serramenti</option><option>Case in legno</option><option>Progettazione</option></select></label>
-<label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 12px; letter-spacing: 0.14em; font-weight: 600">DESCRIZIONE DEL PROGETTO<textarea name="descrizione" rows="3" style="border: 0; border-bottom: 1px solid #0E0D0B; background: transparent; padding: 10px 0; font: inherit; font-size: 16px; letter-spacing: 0; resize: vertical"></textarea></label>
-<button type="submit" style="grid-column: 1 / -1; justify-self: start; background: #0E0D0B; color: #F3EFE7; border: 0; padding: 18px 34px; font: inherit; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; cursor: pointer">INVIA LA RICHIESTA</button>
-</form>
-</div>
-</section>
-
-<footer style="padding: 56px clamp(20px, 5vw, 72px) 40px; border-top: 1px solid #2A2722">
-<div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 28px">
-<img src="/img/cc07e2f1120eb45d8438fc5d59d4b3e8.png" alt="MD Edil Group" style="display: block; height: 52px; width: auto">
-<div style="display: flex; gap: 14px">
-<a href="https://www.facebook.com/" aria-label="Facebook" style="width: 48px; height: 48px; border: 1px solid #C9A24A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #C9A24A"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="fill: currentColor"><path d="M14 8.5V6.8c0-.8.5-1 1-1h2.4V2.2L14.2 2C10.8 2 10 4.4 10 6.2v2.3H7.5V12H10v10h4V12h3.2l.5-3.5H14z"></path></svg></a>
-<a href="https://www.instagram.com/md_edil_group/" aria-label="Instagram" style="width: 48px; height: 48px; border: 1px solid #C9A24A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #C9A24A"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" style="fill: currentColor; stroke: none"></circle></svg></a>
-<a href="https://www.tiktok.com/" aria-label="TikTok" style="width: 48px; height: 48px; border: 1px solid #C9A24A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #C9A24A"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="fill: currentColor"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.4 6.4 0 1 0 5.4 6.3V8.6a8 8 0 0 0 4.4 1.3V6.5c-2.5 0-4.4-2-4.4-4.5z"></path></svg></a>
-<a href="https://www.google.com/maps" aria-label="Google Business Profile" style="width: 48px; height: 48px; border: 1px solid #C9A24A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #C9A24A"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="fill: currentColor"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.4z"></path><path d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"></path><path d="M6.4 14a6 6 0 0 1 0-3.9V7.5H3.1a10 10 0 0 0 0 9z"></path><path d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.9-2.9A9.7 9.7 0 0 0 12 2a10 10 0 0 0-8.9 5.5l3.3 2.6C7.2 7.7 9.4 5.9 12 5.9z"></path></svg></a>
-</div>
-</div>
-<div style="max-width: 1320px; margin: 28px auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: #8A8478">
-<span>MD EDIL GROUP S.R.L.S. · P.IVA 17112431006</span>
-<span>Sede legale: Via Monti Lepini 9, 00015 Monterotondo (RM) · Sede legale: Via Po 22, Roma</span>
-<a href="/privacy.html" style="color: #8A8478">Privacy · Cookie</a>
-</div>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <img src="/img/cc07e2f1120eb45d8438fc5d59d4b3e8.png" alt="MD Edil Group">
+      <div class="soc">
+        <a href="https://www.facebook.com/" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a>
+        <a href="https://www.instagram.com/md_edil_group/" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="https://www.tiktok.com/" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 3c.4 2.4 1.9 4 4 4.3v3.4c-1.5 0-2.9-.4-4-1.1V16a6 6 0 1 1-6-6v3.5a2.5 2.5 0 1 0 2.5 2.5V3z"/></svg></a>
+        <a href="https://www.google.com/maps" aria-label="Google Business"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 12.2h-8M20 12.2A8 8 0 1 1 17.7 6.3"/></svg></a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>MD EDIL GROUP S.R.L.S. · P.IVA 17112431006</span>
+      <span>Sede legale: Via Monti Lepini 9, 00015 Monterotondo (RM) · Sede legale: Via Po 22, Roma</span>
+      <span><a href="/privacy.html">Privacy · Cookie</a></span>
+    </div>
+  </div>
 </footer>
-<a href="https://wa.me/393282145266?text=Buongiorno%2C%20vorrei%20informazioni%20per%20un%20progetto" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp" style="position: fixed; right: 22px; bottom: 22px; z-index: 50; width: 62px; height: 62px; border-radius: 50%; background: #25D366; color: #FFFFFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,0.45)"><svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true" style="fill: currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"></path></svg></a>
-</div>
 
+<a class="wa" href="https://wa.me/393282145266?text=Buongiorno%2C%20vorrei%20informazioni%20per%20un%20progetto" aria-label="Scrivici su WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1z"/></svg></a>
+<nav class="mbar" aria-label="Contatti rapidi"><a href="tel:+393282145266">Chiama</a><a href="https://wa.me/393282145266">WhatsApp</a><a href="#contatti">Preventivo</a></nav>
+
+<script>
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// titolo: dopo il disegno del logo la frase si scrive dall'inizio alla fine
+(function(){
+  const h=document.getElementById('ttl'),chars=[];
+  h.querySelectorAll(':scope > span').forEach(line=>{
+    const t=line.textContent;line.textContent='';line.setAttribute('aria-hidden','true');
+    [...t].forEach(ch=>{const c=document.createElement('span');c.className='c';c.textContent=ch;line.append(c);chars.push(c)});
+  });
+  const caret=document.createElement('span');caret.className='caret';caret.setAttribute('aria-hidden','true');
+  const STEP=65;
+  function type(i=0){
+    if(i>=chars.length){caret.classList.add('out');setTimeout(()=>caret.remove(),3200);return}
+    const c=chars[i];c.classList.add('on');c.after(caret);
+    setTimeout(()=>type(i+1),c.textContent===' '?STEP*1.6:STEP+Math.random()*40);
+  }
+  // la scritta parte nel momento in cui la schermata del logo inizia a dissolversi e la pagina principale appare,
+  // non dopo un tempo fisso: così parte anche se il telefono ha impiegato di più a mostrare la pagina
+  let started=false;
+  const go=()=>{if(started)return;started=true;h.querySelector('span').prepend(caret);type()};
+  const cur=document.querySelector('.curtain');
+  const curShown=cur&&getComputedStyle(cur).display!=='none';
+  if(curShown){
+    cur.addEventListener('animationstart',e=>{if(e.animationName==='curOut')setTimeout(go,150)});
+    cur.addEventListener('animationend',e=>{if(e.animationName==='curOut')go()});
+  }else{
+    // nessuna schermata del logo: si scrive appena la pagina è visibile
+    const start=()=>{if(document.visibilityState==='visible')setTimeout(go,300)};
+    if(document.readyState==='complete')start();else addEventListener('load',start);
+    document.addEventListener('visibilitychange',start);
+  }
+})();
+
+// filo d'oro: un tracciato ad angoli retti lungo il margine sinistro, disegnato in base allo scorrimento
+const main=document.getElementById('main'),svg=document.getElementById('thread');
+let path,len=0,nodes=[];
+function buildThread(){
+  const H=main.offsetHeight,w=main.querySelector('section .wrap'),cl=w.getBoundingClientRect().left+parseFloat(getComputedStyle(w).paddingLeft),narrow=cl<76,xa=narrow?7:Math.min(28,cl-48),xb=narrow?14:Math.min(52,cl-24);
+  const secs=[...main.querySelectorAll('[data-node]')];
+  svg.style.width=(narrow?24:80)+'px';svg.setAttribute('viewBox',`0 0 ${narrow?24:80} ${H}`);svg.setAttribute('height',H);
+  let d=`M${xa} ${innerHeight*0.9}`,x=xa;nodes=[];
+  secs.forEach((s,k)=>{
+    const hd=s.querySelector('.head'),y=s.offsetTop+(hd?hd.offsetTop:0)+40;
+    d+=` V${y-30}`; const nx=k%2?xa:xb; d+=` H${nx} V${y}`; x=nx; nodes.push({x,y,el:s});
+  });
+  d+=` V${H}`;
+  svg.innerHTML=`<path class="ghost" d="${d}"/><path id="tp" d="${d}"/>`+nodes.map(n=>`<rect x="${n.x-4}" y="${n.y-4}" width="8" height="8" transform="rotate(45 ${n.x} ${n.y})"/>`).join('');
+  path=document.getElementById('tp');len=path.getTotalLength();
+  path.style.strokeDasharray=len;onScroll();
+}
+function onScroll(){
+  if(!path) return;
+  const top=main.getBoundingClientRect().top,reach=-top+innerHeight*0.72;
+  // lunghezza percorsa fino al punto più basso raggiunto
+  let lo=0,hi=len;for(let k=0;k<22;k++){const mid=(lo+hi)/2;path.getPointAtLength(mid).y<reach?lo=mid:hi=mid}
+  path.style.strokeDashoffset=RM?0:len-lo;
+  svg.querySelectorAll('rect').forEach((r,k)=>r.classList.toggle('hit',nodes[k].y<reach));
+  // linee dei titoli e del metodo
+  document.querySelectorAll('.head .tl').forEach(l=>{const b=l.getBoundingClientRect();const p=Math.min(1,Math.max(0,(innerHeight*0.92-b.top)/(innerHeight*0.35)));l.style.setProperty('--p',RM?1:p)});
+  const st=document.getElementById('steps'),sb=st.getBoundingClientRect();
+  const sp=Math.min(1,Math.max(0,(innerHeight*0.85-sb.top)/(sb.height+innerHeight*0.3)));
+  st.style.setProperty('--p',RM?1:sp);
+  st.querySelectorAll('div').forEach((d,k)=>d.classList.toggle('hit',RM||sp>=k/4.2));
+}
+addEventListener('scroll',onScroll,{passive:true});
+addEventListener('resize',buildThread);
+addEventListener('load',buildThread);setTimeout(buildThread,300);
+
+// nastri continui (render e catalogo): avanzano da soli da destra a sinistra.
+// Dito (o mouse) appoggiato e fermo = si ferma; trascinando segue il dito; lasciando con uno slancio accelera e poi rallenta da solo.
+function makeBelt(belt,tr,speed){
+  tr.innerHTML+=tr.innerHTML; // seconda copia per il giro continuo
+  [...tr.children].forEach((f,k)=>{if(k>=tr.children.length/2){f.setAttribute('aria-hidden','true');f.setAttribute('tabindex','-1')}});
+  let half=0,x=0,boost=0,hold=false,lx=0,lt=0,vel=0,moved=0,last=performance.now();
+  const BASE=RM?0:-speed; // pixel al secondo, verso sinistra
+  const measure=()=>{half=tr.scrollWidth/2;if(!x)x=-half/2};
+  addEventListener('load',measure);addEventListener('resize',measure);measure();
+  function tick(t){
+    const dt=Math.min(.05,(t-last)/1000);last=t;
+    if(!hold){x+=(BASE+boost)*dt;boost*=Math.pow(.08,dt)}
+    if(half){while(x>0)x-=half;while(x<-half)x+=half}
+    tr.style.transform=`translate3d(${x}px,0,0)`;
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+  belt.addEventListener('pointerdown',e=>{hold=true;boost=0;vel=0;moved=0;lx=e.clientX;lt=e.timeStamp;belt.setPointerCapture(e.pointerId)});
+  belt.addEventListener('pointermove',e=>{
+    if(!hold)return;
+    const dx=e.clientX-lx,dtm=Math.max(1,e.timeStamp-lt);
+    x+=dx;moved+=Math.abs(dx);vel=vel*.6+(dx/dtm*1000)*.4;lx=e.clientX;lt=e.timeStamp;
+  });
+  const release=e=>{
+    if(!hold)return;hold=false;
+    const still=e&&e.timeStamp-lt>120; // dito fermo prima di staccarsi: nessuno slancio
+    boost=still?0:Math.max(-4000,Math.min(4000,vel-BASE));
+  };
+  belt.addEventListener('pointerup',release);belt.addEventListener('pointercancel',release);
+  belt.addEventListener('click',e=>{if(moved>6)e.preventDefault()},true); // un trascinamento non apre la scheda
+  belt.addEventListener('dragstart',e=>e.preventDefault());
+  belt.addEventListener('wheel',e=>{if(Math.abs(e.deltaX)>Math.abs(e.deltaY)){x-=e.deltaX;e.preventDefault()}},{passive:false});
+  belt.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){boost-=1400;e.preventDefault()}if(e.key==='ArrowLeft'){boost+=1400;e.preventDefault()}});
+}
+makeBelt(document.getElementById('belt'),document.getElementById('beltTr'),42);
+makeBelt(document.getElementById('cbelt'),document.getElementById('cbeltTr'),36);
+// reel: i numeri contano da 1 fino al valore vero quando il reel è visibile sullo schermo
+(function(){
+  const fmt=n=>n.toLocaleString('it-IT');
+  const reels=[...document.querySelectorAll('.reel')],box=document.getElementById('reels');
+  reels.forEach(r=>r.querySelectorAll('.cnt').forEach(c=>{c.textContent=+c.dataset.n>0?'1':'0'}));
+  const run=c=>{
+    const n=+c.dataset.n;if(n<=1)return;
+    const dur=Math.min(3000,1500+Math.log10(n)*350),t0=performance.now();
+    (function step(t){const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);c.textContent=fmt(Math.max(1,Math.round(1+(n-1)*e)));if(p<1)requestAnimationFrame(step)})(t0);
+  };
+  function check(){
+    const vb=box.getBoundingClientRect();
+    reels.forEach(r=>{
+      if(r.dataset.done)return;
+      const b=r.getBoundingClientRect();
+      const inY=b.top<innerHeight*.85&&b.bottom>innerHeight*.15;
+      const inX=b.left<Math.min(vb.right,innerWidth)-b.width*.4&&b.right>Math.max(vb.left,0)+b.width*.4;
+      if(inY&&inX){r.dataset.done=1;setTimeout(()=>r.querySelectorAll('.cnt').forEach(run),250)}
+    });
+  }
+  addEventListener('scroll',check,{passive:true});box.addEventListener('scroll',check,{passive:true});addEventListener('resize',check);check();
+})();
+// reel: sul telefono si scorrono col dito; al computer si possono trascinare col mouse
+(function(){
+  const r=document.getElementById('reels');let down=false,moved=false,sx=0,sl=0;
+  r.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;sl=r.scrollLeft});
+  addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-sx;if(Math.abs(dx)>5){moved=true;r.classList.add('drag')}r.scrollLeft=sl-dx});
+  addEventListener('pointerup',()=>{if(!down)return;down=false;r.classList.remove('drag')});
+  r.addEventListener('click',e=>{if(moved){e.preventDefault();moved=false}},true);
+  r.addEventListener('dragstart',e=>e.preventDefault());
+})();
+
+// coverflow: le foto ai lati ruotano in profondità
+document.querySelectorAll('[data-flow]').forEach(f=>{
+  const figs=[...f.querySelectorAll('figure')];
+  const upd=()=>{const c=f.getBoundingClientRect(),mid=c.left+c.width/2;
+    figs.forEach(g=>{const b=g.getBoundingClientRect(),o=(b.left+b.width/2-mid)/c.width;const k=Math.max(-1,Math.min(1,o*1.6));
+      g.style.transform=RM?'':`rotateY(${-k*32}deg) translateZ(${-Math.abs(k)*140}px) scale(${1-Math.abs(k)*.08})`;g.style.opacity=1-Math.abs(k)*.35})};
+  f.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
+  // trascinamento col mouse
+  let down=false,sx=0,sl=0;
+  f.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;sx=e.clientX;sl=f.scrollLeft;f.style.scrollSnapType='none'});
+  addEventListener('pointerup',()=>{if(down){down=false;f.style.scrollSnapType=''}});
+  f.addEventListener('pointermove',e=>{if(down)f.scrollLeft=sl-(e.clientX-sx)});
+  // parte dalla seconda foto, così si vede subito l'effetto
+  requestAnimationFrame(()=>{const g=figs[1];if(g)f.scrollLeft=g.offsetLeft-(f.clientWidth-g.offsetWidth)/2;upd()});
+});
+
+// anteprima foto che segue il cursore sui servizi
+(function(){
+  const peek=document.getElementById('peek'),img=peek.querySelector('img');
+  if(!matchMedia('(hover:hover)').matches) return;
+  let x=0,y=0,cx=0,cy=0;
+  document.querySelectorAll('.svc a').forEach(a=>{
+    a.addEventListener('mouseenter',()=>{img.src=a.dataset.img;peek.classList.add('on')});
+    a.addEventListener('mouseleave',()=>peek.classList.remove('on'));
+  });
+  addEventListener('mousemove',e=>{x=e.clientX+170;y=e.clientY});
+  (function loop(){cx+=(x-cx)*.14;cy+=(y-cy)*.14;peek.style.left=cx+'px';peek.style.top=cy+'px';requestAnimationFrame(loop)})();
+})();
+
+const tr=document.getElementById('track');tr.innerHTML+=tr.innerHTML;
+</script>
 </body>
 </html>

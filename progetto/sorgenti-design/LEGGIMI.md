@@ -5,9 +5,9 @@ Il sito online si modifica direttamente negli HTML della radice del repository, 
 
 `converti.py` è lo script usato per trasformarli nelle pagine statiche (richiede anche le immagini scaricate dal canvas).
 
-## Nuova Home "Cinema" (proposta del 14/10/2026, non ancora pubblicata)
+## Nuova Home "Cinema" (pubblicata il 14/10/2026)
 
 `home-cinema.html` è la nuova Home scelta da Eugenio tra 3 proposte (Cinema, Prima e dopo, Progetto).
 Anteprima: https://claude.ai/artifact/EcyCVKjFK5QdaxiYE9PFKx (privata, visibile solo a Eugenio).
 È una pagina di prova: le immagini sono in `img/` con nomi brevi (le copie ottimizzate stanno solo nell'anteprima) e i link del menu puntano alle sezioni della pagina.
-Per pubblicarla va adattata: menu verso le pagine vere, modulo Netlify `preventivo`, immagini dalla cartella `img/` del sito, `title`, `meta description` e `canonical`.
+La versione online è `index.html` nella radice: rispetto a questa ha il menu verso le pagine vere, il modulo Netlify `preventivo`, le immagini della cartella `img/` del sito, i dati SEO e le zone delle facciate nascoste. Le modifiche future vanno fatte direttamente su `index.html`.

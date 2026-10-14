@@ -2,7 +2,7 @@
 
 | Indirizzo | File | Contenuto |
 |---|---|---|
-| `/` | `index.html` | Home: hero "I dettagli fanno la differenza", servizi, gallerie Interior design (4 render + link "Vedi tutti i progetti") / Cantieri / Esterni e facciate (2 foto esterni + 14 foto facciate), metodo, modulo contatti `preventivo`, dati strutturati azienda (JSON-LD) |
+| `/` | `index.html` | Home "Cinema" (dal 14/10/2026): apertura con logo che si disegna, frase "I dettagli fanno la differenza" scritta lettera per lettera, servizi, nastro continuo dei render di interior design, simulatori (fascia compatta), cantieri (galleria 3D), catalogo dei 18 modelli di case in legno (nastro continuo, 2 alla volta), esterni e facciate (descrizione + galleria 3D), chi siamo e garanzie, come lavoriamo, ultimi reel Instagram (testi e numeri inseriti a mano, aggiornati al 14/10/2026), news, modulo contatti `preventivo`, dati strutturati azienda (JSON-LD) |
 | `/studio-tecnico` | `studio-tecnico.html` | Studio tecnico: rilievi, progetti, pratiche, direzione lavori |
 | `/interior-design` | `interior-design.html` | Interior design: galleria scorrevole "Render di interior design" (12 render, immagini `img/id-*.webp`), le 14 tavole del progetto esecutivo, metodo in 4 fasi |
 | `/ristrutturazioni-interni` | `ristrutturazioni-interni.html` | Ristrutturazioni interni + **simulatore costi** (prezzi in `progetto/listino-prezzi.md`) |
@@ -17,3 +17,5 @@
 - I render dell'interior design (forniti da Eugenio il 14/10/2026) sono in `img/id-*.webp`; alcuni portano la firma "Adriana Sclifos Architetto" e uno il logo "Di Porto" sulla TV: Eugenio ha scelto di pubblicarli così.
 - Immagini in `img/` (quelle con nome lungo sono le foto del nuovo design; quelle con nome descrittivo vengono dal sito precedente).
 - Video del tour villa in `video/` (dal sito precedente, non ancora usato nel nuovo design).
+- Render dei modelli di case in legno ritagliati dalle schede: `img/m-*.webp` (Home).
+- Home: i reel (titolo, testo, hashtag, link, visualizzazioni, mi piace, commenti) sono scritti a mano in `index.html`, sezione `id="reel"`; i dati vengono da Metricool. Le zone di Roma sotto le foto delle facciate sono pronte nel sorgente `progetto/sorgenti-design/home-cinema.html` (`<span class="zona">`) ma tolte dal sito finché mancano i quartieri veri.
