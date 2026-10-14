@@ -44,4 +44,4 @@ Design scelto e approvato da Eugenio (proposta A, 13/10/2026). Il resto si compl
 
 
 ## Didascalie render
-- Ogni render di interior design ha l'etichetta in oro "RENDER DI PROGETTO BY ADRIANA SCLIFOS" (deciso da Eugenio il 14/10/2026).
+- Ogni render di interior design ha l'etichetta in oro "RENDER DI PROGETTO BY ARCHITETTO ADRIANA SCLIFOS" (deciso da Eugenio il 14/10/2026).
