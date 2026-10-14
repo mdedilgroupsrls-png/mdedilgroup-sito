@@ -12,6 +12,9 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [ ] Riallineare `privacy.html` e aggiungere la cookie policy nello stile Nero & Oro
 - [ ] Decidere quale sede indicare come ufficio
 
+## Fatto
+- [x] 14/10/2026 – Aggiunti 12 render nella pagina Interior design (galleria scorrevole) e 4 nella galleria della Home, al posto del segnaposto
+
 ## Gestione continua
 - Aggiornamenti settimanali del sito con nuove informazioni e foto dei lavori
 - Articoli per il blog e lavoro SEO, obiettivo: primi risultati su Google per ristrutturazioni di pregio a Roma e Milano
