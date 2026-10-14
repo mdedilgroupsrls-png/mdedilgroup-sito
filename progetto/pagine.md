@@ -2,11 +2,11 @@
 
 | Indirizzo | File | Contenuto |
 |---|---|---|
-| `/` | `index.html` | Home: hero "I dettagli fanno la differenza", servizi, gallerie Interior design (4 render + link "Vedi tutti i progetti") / Cantieri / Esterni, metodo, modulo contatti `preventivo`, dati strutturati azienda (JSON-LD) |
+| `/` | `index.html` | Home: hero "I dettagli fanno la differenza", servizi, gallerie Interior design (4 render + link "Vedi tutti i progetti") / Cantieri / Esterni e facciate (2 foto esterni + 14 foto facciate), metodo, modulo contatti `preventivo`, dati strutturati azienda (JSON-LD) |
 | `/studio-tecnico` | `studio-tecnico.html` | Studio tecnico: rilievi, progetti, pratiche, direzione lavori |
 | `/interior-design` | `interior-design.html` | Interior design: galleria scorrevole "Render di interior design" (12 render, immagini `img/id-*.webp`), le 14 tavole del progetto esecutivo, metodo in 4 fasi |
 | `/ristrutturazioni-interni` | `ristrutturazioni-interni.html` | Ristrutturazioni interni + **simulatore costi** (prezzi in `progetto/listino-prezzi.md`) |
-| `/ristrutturazioni-esterni` | `ristrutturazioni-esterni.html` | Esterni: per amministratori di condominio e per privati, lavori, metodo |
+| `/ristrutturazioni-esterni` | `ristrutturazioni-esterni.html` | Esterni: per amministratori di condominio e per privati, lavori, metodo, galleria "Lavori realizzati" con 14 foto di facciate |
 | `/privacy.html` | `privacy.html` | Informativa privacy (versione precedente del sito, da riallineare allo stile Nero & Oro) |
 | `/grazie` | `grazie.html` | Pagina dopo l'invio del modulo |
 | — | `404.html` | Pagina non trovata |
