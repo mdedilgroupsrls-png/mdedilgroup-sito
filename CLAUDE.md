@@ -24,4 +24,10 @@ Prima di lavorare leggi la cartella `progetto/`:
 - Ogni pagina deve avere `<title>`, `meta description` e `link rel="canonical"` propri, e funzionare bene da telefono.
 - Il modulo contatti si chiama `preventivo` (Netlify Forms). Non rinominarlo, altrimenti le richieste finiscono in un modulo nuovo.
 - La cartella `progetto/` e questo file non sono visibili sul sito (bloccati in `netlify.toml`). Il repository GitHub però è **pubblico**: non salvare qui password, dati di clienti o documenti riservati.
-- Dopo ogni modifica aggiorna `progetto/da-fare.md` e scrivi un messaggio di commit chiaro in italiano.
+- **La cartella `progetto/` deve restare sempre aggiornata.** Ogni volta che si lavora sul sito, nello stesso commit aggiorna i file che riguardano la modifica:
+  - nuove informazioni sull'azienda (contatti, sedi, servizi, link social) → `azienda.md`
+  - cambi di stile, header, footer o frasi approvate → `design.md`
+  - pagine nuove, rinominate o con contenuti cambiati → `pagine.md`
+  - prezzi nuovi o modificati (anche nel simulatore) → `listino-prezzi.md`
+  - lavori fatti, nuovi lavori da fare, decisioni prese → `da-fare.md` (spunta ciò che è completato, con la data)
+- Scrivi un messaggio di commit chiaro in italiano.
