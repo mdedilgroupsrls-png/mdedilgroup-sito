@@ -15,7 +15,7 @@
 <meta name="theme-color" content="#0E0D0B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"GeneralContractor","name":"MD Edil Group S.R.L.S.","url":"https://mdedilgroup.it","logo":"https://mdedilgroup.it/favicon.png","telephone":"+39 328 214 5266","email":"mdedilgroupsrls@gmail.com","vatID":"IT17112431006","slogan":"I dettagli fanno la differenza","areaServed":["Roma","Lazio","Milano","Italia"],"address":[{"@type":"PostalAddress","streetAddress":"Via Monti Lepini 9","postalCode":"00015","addressLocality":"Monterotondo","addressRegion":"RM","addressCountry":"IT"},{"@type":"PostalAddress","streetAddress":"Via Po 22","addressLocality":"Roma","addressRegion":"RM","addressCountry":"IT"}],"sameAs":["https://www.instagram.com/md_edil_group/"]}
+{"@context":"https://schema.org","@type":"GeneralContractor","name":"MD Edil Group S.R.L.S.","url":"https://mdedilgroup.it","logo":"https://mdedilgroup.it/favicon.png","telephone":"+39 328 214 5266","email":"mdedilgroupsrls@gmail.com","vatID":"IT17112431006","slogan":"I dettagli fanno la differenza","areaServed":["Roma","Lazio","Milano","Italia"],"address":[{"@type":"PostalAddress","streetAddress":"Via Monti Lepini 9","postalCode":"00015","addressLocality":"Monterotondo","addressRegion":"RM","addressCountry":"IT"},{"@type":"PostalAddress","streetAddress":"Via Po 22","addressLocality":"Roma","addressRegion":"RM","addressCountry":"IT"}],"hasMap":"https://www.google.com/maps/search/?api=1&query=MD+Edil+Group+Via+Po+22+Roma","sameAs":["https://www.instagram.com/md_edil_group/"]}
 </script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&amp;family=Manrope:wght@400;500;600&amp;display=swap">
@@ -259,6 +259,17 @@ section{padding-block:clamp(70px,10vw,130px);position:relative;z-index:2}
 .news{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .news article{border:1px dashed var(--dash);padding:24px;min-height:170px;display:flex;flex-direction:column;gap:10px}
 .news h3{font-size:22px;color:var(--mute)}
+
+/* scheda Google Maps nei contatti */
+.gmap{margin-top:30px;border:1px solid var(--line);padding:20px;display:grid;gap:16px}
+.gmap-h{display:flex;gap:12px;align-items:flex-start;color:var(--gold)}
+.gmap-h b{display:block;color:var(--ink);font-weight:600}
+.gmap-h span{color:var(--ink2);font-size:14px}
+.gmap-btns{display:flex;flex-wrap:wrap;gap:10px}
+.gmap-btns .btn{min-height:46px;padding:0 20px;font-size:12px}
+.gmap-frame{aspect-ratio:4/3;border:1px solid var(--line);background:var(--bg)}
+.gmap-frame iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.3) contrast(1.05)}
+.gmap-note{margin:0;font-size:12px;color:var(--mute)}
 
 /* contatti */
 .contact{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,6vw,90px)}
@@ -596,6 +607,15 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
         <span>Sede legale: Via Monti Lepini 9, 00015 Monterotondo (RM)</span>
         <span>Sede legale: Via Po 22, Roma</span>
       </address>
+      <div class="gmap">
+        <div class="gmap-h"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><b>MD Edil Group su Google Maps</b><span>Via Po 22, Roma</span></div></div>
+        <div class="gmap-frame" id="gmapFrame" hidden></div>
+        <div class="gmap-btns">
+          <a class="btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=MD+Edil+Group+Via+Po+22+Roma" target="_blank" rel="noopener">Apri su Google Maps</a>
+          <button class="btn" type="button" id="gmapShow">Mostra la mappa</button>
+        </div>
+        <p class="gmap-note">La mappa è di Google e si carica solo se la apri.</p>
+      </div>
     </div>
     <form name="preventivo" method="POST" action="/grazie" data-netlify="true" netlify-honeypot="indirizzo-web">
       <input type="hidden" name="form-name" value="preventivo">
@@ -619,7 +639,7 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
         <a href="https://www.facebook.com/" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a>
         <a href="https://www.instagram.com/md_edil_group/" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
         <a href="https://www.tiktok.com/" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 3c.4 2.4 1.9 4 4 4.3v3.4c-1.5 0-2.9-.4-4-1.1V16a6 6 0 1 1-6-6v3.5a2.5 2.5 0 1 0 2.5 2.5V3z"/></svg></a>
-        <a href="https://www.google.com/maps" aria-label="Google Business"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 12.2h-8M20 12.2A8 8 0 1 1 17.7 6.3"/></svg></a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=MD+Edil+Group+Via+Po+22+Roma" aria-label="Google Business"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 12.2h-8M20 12.2A8 8 0 1 1 17.7 6.3"/></svg></a>
       </div>
     </div>
     <div class="legal">
@@ -799,6 +819,12 @@ document.querySelectorAll('[data-flow]').forEach(f=>{
   (function loop(){cx+=(x-cx)*.14;cy+=(y-cy)*.14;peek.style.left=cx+'px';peek.style.top=cy+'px';requestAnimationFrame(loop)})();
 })();
 
+// mappa di Google: si carica solo quando la persona la chiede
+document.getElementById('gmapShow').addEventListener('click',function(){
+  const f=document.getElementById('gmapFrame');
+  if(!f.firstChild){const i=document.createElement('iframe');i.src='https://www.google.com/maps?q=MD%20Edil%20Group%2C%20Via%20Po%2022%2C%20Roma&output=embed';i.title='Mappa: MD Edil Group, Via Po 22, Roma';i.loading='lazy';i.referrerPolicy='no-referrer-when-downgrade';f.append(i)}
+  f.hidden=!f.hidden;this.textContent=f.hidden?'Mostra la mappa':'Nascondi la mappa';
+});
 const tr=document.getElementById('track');tr.innerHTML+=tr.innerHTML;
 </script>
 </body>

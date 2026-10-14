@@ -11,7 +11,8 @@
 - **Telefono / WhatsApp clienti:** +39 328 214 5266
 - **Email:** mdedilgroupsrls@gmail.com
 - **Instagram:** https://www.instagram.com/md_edil_group/
-- **Facebook, TikTok, Google Business:** link ancora da ricevere
+- **Google Business (Google Maps, Via Po 22):** https://www.google.com/maps/search/?api=1&query=MD+Edil+Group+Via+Po+22+Roma (link di ricerca; se Eugenio manda il link esatto della scheda, sostituirlo in tutte le pagine)
+- **Facebook, TikTok:** link ancora da ricevere
 
 ## Sedi
 Per ora vanno indicate entrambe come sede legale:

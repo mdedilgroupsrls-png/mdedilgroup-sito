@@ -11,12 +11,13 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [ ] Pagina **Infissi e serramenti** con simulatore costi (prezzi e catalogo da Eugenio)
 - [ ] Pagina **Case in legno** collegata al configuratore esistente
 - [ ] Pagina **Chi siamo**
-- [ ] Link reali dei profili **Facebook, TikTok e Google Business** nel footer (ora puntano alle pagine generiche)
+- [ ] Link reali dei profili **Facebook e TikTok** nel footer (ora puntano alle pagine generiche)
 - [ ] Prezzo del **tiro in alto / in basso** dei materiali, poi aggiornare il simulatore
 - [ ] Riallineare `privacy.html` e aggiungere la cookie policy nello stile Nero & Oro
 - [ ] Decidere quale sede indicare come ufficio
 
 ## Fatto
+- [x] 14/10/2026 – Collegata la scheda Google Business di Via Po 22: icona nel footer di tutte le pagine e riquadro "MD Edil Group su Google Maps" nei contatti della Home (mappa caricata solo su richiesta)
 - [x] 14/10/2026 – **Pubblicata la nuova Home "Cinema"** al posto della precedente (menu verso le pagine vere, modulo `preventivo` invariato, zone delle facciate nascoste)
 - [x] 14/10/2026 – Preparate 3 proposte animate della Home (Cinema, Prima e dopo, Progetto); Eugenio ha scelto **Cinema** e l'ha rifinita (vedi `design.md`)
 - [x] 14/10/2026 – Pagina Ristrutturazioni esterni: galleria "Lavori realizzati" spostata sopra la sezione del metodo; titolo "Il nostro studio tecnico segue tutto" rimpicciolito
