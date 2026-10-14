@@ -2,7 +2,7 @@
 
 | Indirizzo | File | Contenuto |
 |---|---|---|
-| `/` | `index.html` | Home: hero "I dettagli fanno la differenza", servizi, gallerie Interior design (6 render + link "Vedi tutti i progetti") / Cantieri / Esterni, metodo, modulo contatti `preventivo`, dati strutturati azienda (JSON-LD) |
+| `/` | `index.html` | Home: hero "I dettagli fanno la differenza", servizi, gallerie Interior design (4 render + link "Vedi tutti i progetti") / Cantieri / Esterni, metodo, modulo contatti `preventivo`, dati strutturati azienda (JSON-LD) |
 | `/studio-tecnico` | `studio-tecnico.html` | Studio tecnico: rilievi, progetti, pratiche, direzione lavori |
 | `/interior-design` | `interior-design.html` | Interior design: galleria scorrevole "Render di interior design" (12 render, immagini `img/id-*.webp`), le 14 tavole del progetto esecutivo, metodo in 4 fasi |
 | `/ristrutturazioni-interni` | `ristrutturazioni-interni.html` | Ristrutturazioni interni + **simulatore costi** (prezzi in `progetto/listino-prezzi.md`) |

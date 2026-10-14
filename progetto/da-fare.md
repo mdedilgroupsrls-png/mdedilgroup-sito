@@ -14,6 +14,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Fatto
 - [x] 14/10/2026 – Aggiunti 12 render nella pagina Interior design (galleria scorrevole) e 4 nella galleria della Home, al posto del segnaposto
+- [x] 14/10/2026 – Tolti dalla galleria della Home i 2 render precedenti (soggiorno con camino, camera con anello luminoso)
 
 ## Gestione continua
 - Aggiornamenti settimanali del sito con nuove informazioni e foto dei lavori
