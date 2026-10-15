@@ -50,7 +50,7 @@ Design scelto e approvato da Eugenio (proposta A, 13/10/2026). Il resto si compl
 ## Nuova Home "Cinema" (approvata come direzione il 14/10/2026, da pubblicare)
 Sorgente: `progetto/sorgenti-design/home-cinema.html`. Stesso stile Nero & Oro, stessi caratteri.
 - Header uguale al sito attuale: logo, MD EDIL GROUP sulla linea d'oro, menu centrato sotto (visibile anche da telefono, su più righe).
-- Apertura: il logo si **disegna da zero** a linee d'oro (più grande), poi diventa il logo vero, compare MD EDIL GROUP e la schermata svanisce. Nessuna linea che "taglia" il logo.
+- Apertura: il logo si **disegna da zero** a linee d'oro (più grande), poi diventa il logo vero, compare MD EDIL GROUP e la schermata svanisce. Nessuna linea che "taglia" il logo. **Solo alla prima apertura del sito** (per visita): tornando alla Home nella stessa visita il logo non si ridisegna e la frase si scrive subito (15/10/2026).
 - Hero: la frase "I dettagli fanno la differenza" si **scrive lettera per lettera** appena appare la pagina (parte quando la schermata del logo inizia a svanire, non con un timer); poi compaiono zone e pulsanti.
 - Filo d'oro lungo il margine sinistro che si disegna scorrendo, con rombi alle sezioni; linea d'oro sotto ogni titolo che si traccia.
 - Render interior design: nastro continuo di foto **grandi** che scorre **da destra a sinistra**; dito fermo = si ferma, trascinare = accelera, nessun pulsante. Sta subito dopo i Servizi, sopra i simulatori.

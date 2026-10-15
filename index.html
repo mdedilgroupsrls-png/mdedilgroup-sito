@@ -335,7 +335,11 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
   .curtain{display:none}
   .brand span::after{display:none}.hero .rule{transform:none}
 }
+/* il logo si disegna solo alla prima apertura del sito; tornando alla Home nella stessa visita non si ripete */
+.no-intro .curtain{display:none}
+.no-intro .brand span::after{animation-delay:.3s}
 </style>
+<script>try{if(sessionStorage.getItem('mdIntro'))document.documentElement.classList.add('no-intro');else sessionStorage.setItem('mdIntro','1')}catch(e){}</script>
 </head>
 <body>
 <div class="curtain" aria-hidden="true"><div class="mk">
