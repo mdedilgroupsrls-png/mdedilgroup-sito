@@ -151,8 +151,32 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 <p class="eyebrow">Simulatore case in legno</p>
 <h1>Componi la tua casa in legno, voce per voce</h1>
 </div>
-<p>Scegli il modello, poi aggiungi o togli gli optional. Tocca il nome di ogni voce per leggere cosa comprende. Il totale si aggiorna subito; il preventivo definitivo arriva dopo il sopralluogo. <a href="#la-casa">Scopri come sono fatte le nostre case ↓</a></p>
+<p>Scegli il modello e guarda la sua planimetria, poi aggiungi o togli gli optional. Tocca il nome di ogni voce per leggere cosa comprende. Il totale si aggiorna subito; il preventivo definitivo arriva dopo il sopralluogo. <a href="#la-casa">Scopri come sono fatte le nostre case ↓</a></p>
 </section>
+
+<div class="m3d" style="margin-top: 8px; margin-bottom: 56px">
+<div class="m3d-head">
+<div>
+<p class="eyebrow" style="margin-bottom: 8px">Barn House in 3D</p>
+<h3 style="font-size: clamp(22px, 2.2vw, 30px)">I materiali, strato per strato</h3>
+</div>
+<p class="tag" id="m3dHint">Trascina con il dito o con il mouse per girare la casa</p>
+</div>
+<div class="m3d-stage" id="m3d" role="img" aria-label="Modello 3D della Barn House con la struttura e i materiali in vista">
+<canvas id="m3dCanvas"></canvas>
+<div class="m3d-pins" id="m3dPins"></div>
+<p class="m3d-fallback" id="m3dFallback" hidden>Il modello 3D non si apre su questo dispositivo. Qui sotto trovi l’elenco dei materiali.</p>
+</div>
+<ol class="m3d-legend" id="m3dLegend">
+<li data-i="0"><b>Copertura in lamiera aggraffata</b> da 0,45 mm</li>
+<li data-i="1"><b>Membrana superdiffusiva</b> Strotex 1300, su tetto e pareti</li>
+<li data-i="2"><b>Isolante in lana minerale di basalto (lana di roccia)</b>: pareti e pavimento 15 cm, soffitto 20 cm. Pannelli non combustibili, termoisolanti, idrorepellenti e fonoassorbenti, densità non inferiore a 30 kg/m³.</li>
+<li data-i="3"><b>Barriera al vapore</b> Strotex AL 90 con foglio di alluminio</li>
+<li data-i="4"><b>Triplo vetro a risparmio energetico</b> con rivestimento Solar</li>
+<li data-i="5"><b>Pannelli OSB 3</b> da 22 mm per il sottofondo del pavimento</li>
+<li data-i="6"><b>Travi piallate ed essiccate in forno</b> per tutta la struttura</li>
+</ol>
+</div>
 
 <h2 style="font-size: 22px; margin-bottom: 14px">1. Scegli il modello</h2>
 <div class="models" id="models" role="group" aria-label="Modelli di casa in legno"></div>
@@ -201,29 +225,7 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 </div>
 <p class="info-note">I materiali di rivestimento possono variare e vengono quotati a parte. Anche all’interno possiamo realizzare diversi tipi di finiture e di impianti, quotati separatamente.</p>
 
-<div class="m3d">
-<div class="m3d-head">
-<div>
-<p class="eyebrow" style="margin-bottom: 8px">Barn House in 3D</p>
-<h3 style="font-size: clamp(22px, 2.2vw, 30px)">I materiali, strato per strato</h3>
-</div>
-<p class="tag" id="m3dHint">Trascina con il dito o con il mouse per girare la casa</p>
-</div>
-<div class="m3d-stage" id="m3d" role="img" aria-label="Modello 3D della Barn House con la struttura e i materiali in vista">
-<canvas id="m3dCanvas"></canvas>
-<div class="m3d-pins" id="m3dPins"></div>
-<p class="m3d-fallback" id="m3dFallback" hidden>Il modello 3D non si apre su questo dispositivo. Qui sotto trovi l’elenco dei materiali.</p>
-</div>
-<ol class="m3d-legend" id="m3dLegend">
-<li data-i="0"><b>Copertura in lamiera aggraffata</b> da 0,45 mm</li>
-<li data-i="1"><b>Membrana superdiffusiva</b> Strotex 1300, su tetto e pareti</li>
-<li data-i="2"><b>Isolante in lana minerale di basalto (lana di roccia)</b>: pareti e pavimento 15 cm, soffitto 20 cm. Pannelli non combustibili, termoisolanti, idrorepellenti e fonoassorbenti, densità non inferiore a 30 kg/m³.</li>
-<li data-i="3"><b>Barriera al vapore</b> Strotex AL 90 con foglio di alluminio</li>
-<li data-i="4"><b>Triplo vetro a risparmio energetico</b> con rivestimento Solar</li>
-<li data-i="5"><b>Pannelli OSB 3</b> da 22 mm per il sottofondo del pavimento</li>
-<li data-i="6"><b>Travi piallate ed essiccate in forno</b> per tutta la struttura</li>
-</ol>
-</div>
+
 </section>
 </main>
 <a class="mtot" href="#riepilogo"><span>Totale indicativo<br><span style="color:var(--mute)">Vedi il riepilogo</span></span><b id="mTot">–</b></a>
@@ -360,7 +362,9 @@ const V=[
 const models=document.getElementById('models'),lines=document.getElementById('lines');
 M.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.className='mdl';b.setAttribute('aria-pressed',i===st.m);
  b.innerHTML=`<img src="/img/${m.img}.webp" alt="" loading="lazy"><span><b>${m.n}</b><small>${m.d}</small><small style="color:var(--gold2)">${m.chiavi?'Chiavi in mano '+eur(m.chiavi):'Struttura '+eur(m.p[0])}</small></span>`;
- b.onclick=()=>{st.m=i;st.area=0;st.aum=0;models.querySelectorAll('.mdl').forEach((x,j)=>x.setAttribute('aria-pressed',j===i));draw()};models.append(b)});
+ b.onclick=()=>{st.m=i;st.area=0;st.aum=0;models.querySelectorAll('.mdl').forEach((x,j)=>x.setAttribute('aria-pressed',j===i));draw();
+  // scheda grande con foto e planimetria; "Simula il prezzo" porta alle voci
+  if(window.MDScheda)MDScheda.open(m.img.replace(/^m-/,''),{simula:()=>document.querySelector('.sim').scrollIntoView({behavior:'smooth'})})};models.append(b)});
 
 const btn=(k,label)=>`<button type="button" class="nm" aria-expanded="false" aria-controls="d-${k}" data-k="${k}"><span>${label}</span><span class="i" aria-hidden="true">+</span></button>`;
 function draw(){
@@ -584,5 +588,6 @@ draw();
  }
 })();
 </script>
+<script src="/js/schede.js"></script>
 </body>
 </html>

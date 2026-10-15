@@ -788,6 +788,13 @@ function makeBelt(belt,tr,speed){
 }
 makeBelt(document.getElementById('belt'),document.getElementById('beltTr'),42);
 makeBelt(document.getElementById('cbelt'),document.getElementById('cbeltTr'),36);
+// catalogo: toccando un modello si apre la scheda grande con foto e planimetria
+document.getElementById('cbelt').addEventListener('click',e=>{
+  if(e.defaultPrevented||!window.MDScheda)return;
+  let m=e.target.closest('a.model');if(!m){const el=document.elementFromPoint(e.clientX,e.clientY);m=el&&el.closest('a.model')}
+  if(!m)return;const slug=(new URL(m.href,location.href)).searchParams.get('modello');
+  if(slug&&MDScheda.open(slug,{simula:m.getAttribute('href')}))e.preventDefault();
+});
 // reel: i numeri contano da 1 fino al valore vero quando il reel è visibile sullo schermo
 (function(){
   const fmt=n=>n.toLocaleString('it-IT');
@@ -857,5 +864,6 @@ document.getElementById('gmapShow').addEventListener('click',function(){
 });
 const tr=document.getElementById('track');tr.innerHTML+=tr.innerHTML;
 </script>
+<script src="/js/schede.js"></script>
 </body>
 </html>
