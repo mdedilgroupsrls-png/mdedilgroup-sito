@@ -53,9 +53,12 @@ Regole decise da Eugenio:
 - **Kit di montaggio = prezzo della struttura del catalogo** (non si somma due volte).
 - **Fondazione:** platea in cemento armato alta 30 cm, **230 €/m² × m² coperti** del catalogo (non si usa la fondazione del listino).
 - **Piastrelle:** posa 39 €/m² (piastrelle del cliente) + **massetto 40 €/m²**, solo se si scelgono le piastrelle; m² proposti = m² utili del catalogo, modificabili. Laminato = prezzo del listino (fornitura e posa).
-- Descrizioni modificate: posa piastrelle 39 €/m² (non 25), tinteggiatura 5 €/m²; elettrico con interruttori e prese tipo BTicino inclusi, corpi illuminanti esclusi; porte: installazione da 90 € (non 60); clima: solo predisposizione per 1 motore con 2 split.
+- Descrizioni modificate: posa piastrelle 39 €/m² (non 25), tinteggiatura 10 €/m²; elettrico con interruttori e prese tipo BTicino inclusi, corpi illuminanti esclusi; porte: installazione da 90 € (non 60); clima: "per riscaldamento e raffrescamento: motore con due split, solo predisposizione".
 - **Esclusi dal sito:** finestra da tetto, finestre laterali (vasistas e fisse), pergola, porte d'ingresso in metallo e PVC, cucina, dotazione bagno. Esclusi anche i modelli del listino che non sono nel catalogo (Mobile 8x3, Double Barn Plus, Flat Small, Freya 68 m²).
-- **Mini Barn Boutique:** non è nel simulatore (prezzo già chiavi in mano 29.900 €), in attesa di decisione di Eugenio.
+- **Mini Barn Boutique:** nessuna simulazione, solo il prezzo chiavi in mano 29.900 € con la descrizione: inclusi impianto elettrico (prese, interruttori, corpi illuminanti), impianto idrico, tramezzi e rivestimenti interni; **terrazza esclusa** (decisione del 15/10/2026).
+- **A-Frame L** (non nel listino): kit 29.000 € del catalogo + optional dell'Aframe 49 m² aumentati in proporzione (×1,1514) in modo che kit e tutti gli optional, **esclusi** fondazione, aumento lunghezza e isolamento aggiuntivo, facciano **1.300 €/m² = 75.400 €** su 58 m². Aumento lunghezza e isolamento aggiuntivo sono aumentati con lo stesso coefficiente.
+- **Trasporto:** il cliente sceglie la provincia del cantiere. **2 €/km** per le case fino a 80 m² del listino (un viaggio), **4 €/km** oltre 80 m² fino a 170 m² (due viaggi). I km partono da Kiev, ma **sul sito non va scritto**: la pagina mostra solo il prezzo, senza km né partenza. Km stimati: circa 1.700 km di strada fino al confine di Tarvisio + distanza in linea d'aria dal confine al capoluogo × 1,35 (Sardegna: via Civitavecchia, traghetto escluso). Esempi: Udine 1.780, Milano 2.180, Roma 2.400, Napoli 2.550, Bari 2.580, Palermo 2.960 km. Da far verificare a Eugenio con i viaggi reali.
+- **Aumento della lunghezza** a moduli da 130 cm: solo il prezzo del modulo, le altre voci non si ricalcolano (va bene per Eugenio).
 
 | Modello sul sito | Colonna del listino | Kit (struttura) | Lavori di montaggio | Laminazione finestre | Vetro Solar | Pareti divisorie e finiture | Impianto elettrico | Impianto idrico | Pavimenti laminato | Porte interne | Aumento lunghezza 130 cm | Isolamento +50 mm | Isolamento +100 mm | Predisp. clima |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -67,7 +70,7 @@ Regole decise da Eugenio:
 | Barn Max Height | Barn House Max Height 42 m² | 27.300 | 8.190 | 984 | 492 | 9.120 | 7.650 | 3.528 | 1.764 | 600 | 4.680 | 2.040 | 4.080 | 2.000 |
 | Flat House 2,2 m | Flat House 2,2 m 52 m² | 28.600 | 9.360 | 1.860 | 816 | 13.680 | 11.700 | 4.140 | 2.448 | 900 | 7.920 | 3.000 | 6.000 | 4.000 |
 | Flat House 2,7 m | Flat House 2,7 m 52 m² | 32.600 | 10.080 | 1.860 | 816 | 14.760 | 11.700 | 4.140 | 2.448 | 900 | 8.220 | 3.540 | 7.080 | 4.000 |
-| A-Frame L (kit 29.000) | **provvisorio: optional dell'Aframe 49 m²** | 29.000 | 10.497,20 | 1.239,25 | 612,34 | 9.622,42 | 8.383,18 | 4.286,36 | 2.500,37 | 728,97 | 5.280 | 1.920 | 3.840 | 2.429,91 |
+| A-Frame L | Aframe 49 m² × 1,1514 (1.300 €/m²) | 29.000 | 12.086,11 | 1.426,83 | 705,03 | 11.078,92 | 9.652,10 | 4.935,16 | 2.878,84 | 839,31 | 6.079,21 | 2.210,62 | 4.421,24 | 2.797,71 |
 | Barn Double | Double Barn 72 m² | 38.000 | 12.043,32 | 1.838,19 | 887,40 | 15.592,93 | 12.360,25 | 4.373,63 | 3.327,76 | 950,79 | 7.920 | 3.240 | 6.480 | 4.225,73 |
 | Flat House 1.5 | Flat 1.5 75 m² | 45.950 | 16.542 | 2.880 | 1.008 | 22.860 | 15.600 | 7.560 | 3.792 | 1.200 | 12.330 | 5.280 | 10.560 | 4.000 |
 | Nord House | Nord House 95 m² | 51.000 | 18.780 | 3.720 | 1.656 | 30.840 | 22.500 | 8.568 | 5.052 | 1.200 | 7.740 | 6.120 | 12.240 | 4.000 |
