@@ -478,7 +478,7 @@ draw();
   const back=new THREE.DirectionalLight(0xC9A24A,0.35);back.position.set(-8,4,-6);scene.add(back);
   const house=new THREE.Group();scene.add(house);
   const M=(c,o)=>new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:.75,metalness:0},o||{}));
-  const wood=M(0xD6A766),woodDark=M(0xB8874A),osb=M(0xC99A5B,{roughness:.9}),roof=M(0x2B2D30,{metalness:.55,roughness:.45}),
+  const wood=M(0xD6A766),woodDark=M(0xB8874A),osb=M(0xB07E45,{roughness:.95}),roof=M(0x2B2D30,{metalness:.55,roughness:.45}),
    ins=M(0x9A9C93,{roughness:1}),memb=M(0xF1F1EE,{transparent:true,opacity:.82,side:THREE.DoubleSide}),
    vap=M(0xC8CDD2,{metalness:.7,roughness:.3,side:THREE.DoubleSide}),frame=M(0x161616,{metalness:.3,roughness:.5}),
    glass=M(0x9FC3D1,{transparent:true,opacity:.28,metalness:.2,roughness:.05,side:THREE.DoubleSide});
@@ -486,43 +486,58 @@ draw();
   const beam=(a,b,w,h,mat)=>{const A=new THREE.Vector3(...a),B=new THREE.Vector3(...b),len=A.distanceTo(B);
    const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,len),mat);m.position.copy(A).add(B).multiplyScalar(.5);m.lookAt(B);house.add(m);return m};
   const box=(x,y,z,sx,sy,sz,mat)=>{const m=new THREE.Mesh(new THREE.BoxGeometry(sx,sy,sz),mat);m.position.set(x,y,z);house.add(m);return m};
-  const W=2,L=3,H=2.5,R=4.3,F=.25; // mezza larghezza, mezza lunghezza, altezza pareti, colmo, quota del pavimento
-  // telaio del pavimento e OSB
-  for(let x=-W;x<=W+.01;x+=.5)beam([x,F-.12,-L],[x,F-.12,L],.08,.18,woodDark);
-  beam([-W,F-.12,-L],[W,F-.12,-L],.1,.2,woodDark);beam([-W,F-.12,L],[W,F-.12,L],.1,.2,woodDark);
-  box(-.55,F+.0,-.6,2.9,.03,4.8,osb);
-  box(1.2,F-.06,1.6,1.4,.1,2.6,ins);
-  // pareti laterali: montanti
-  for(let z=-L;z<=L+.01;z+=.6){[-W,W].forEach(x=>beam([x,F,z],[x,F+H,z],.08,.14,wood))}
-  [-W,W].forEach(x=>{beam([x,F,-L],[x,F,L],.14,.08,wood);beam([x,F+H,-L],[x,F+H,L],.14,.1,wood)});
-  // parete di fondo con montanti fino al tetto
-  for(let x=-W;x<=W+.01;x+=.5){const top=F+H+(R-H)*(1-Math.abs(x)/W);beam([x,F,-L],[x,top,-L],.08,.14,wood)}
-  // capriate e colmo
-  for(let z=-L;z<=L+.01;z+=.6){beam([-W-.15,F+H-.08,z],[0,F+R,z],.08,.16,wood);beam([W+.15,F+H-.08,z],[0,F+R,z],.08,.16,wood);beam([-W*.55,F+H+(R-H)*.45,z],[W*.55,F+H+(R-H)*.45,z],.06,.1,woodDark)}
-  beam([0,F+R,-L-.1],[0,F+R,L+.1],.1,.18,wood);
-  // falda: lamiera a destra (in parte), membrana sotto
-  const slope=(side,z0,z1,off,mat,th)=>{const a=new THREE.Vector3(side*(W+.25),F+H-.12+off,0),b=new THREE.Vector3(0,F+R+off,0),len=a.distanceTo(b);
+  // Vista esplosa come nel disegno del catalogo: telaio di base, lastre OSB, casa in legno, tetto in lamiera sollevato,
+  // vetrata nera staccata davanti, membrana e pannelli staccati sul fianco destro
+  const W=2,L=3,H=2.4,R=4.5,F=0; // mezza larghezza, mezza lunghezza, altezza pareti, colmo, quota del pavimento
+  const roofY=x=>F+H+(R-H)*(1-Math.abs(x)/W); // altezza della falda alla quota x
+  // telaio di base a terra
+  const G=-1.35;
+  [-W-.4,-W+1,W-1,W+.4].forEach(x=>beam([x,G,-L-.5],[x,G,L+.9],.14,.12,wood));
+  [-L-.5,-L+1.2,0,L-1.2,L+.9].forEach(z=>beam([-W-.4,G,z],[W+.4,G,z],.14,.12,wood));
+  // lastre OSB staccate tra base e casa
+  [[-1,-.72,-1.6,.15],[1,-.68,-1.5,-.08],[-1.05,-.62,.7,-.1],[1.05,-.66,.9,.12],[0,-.58,2.3,.05]].forEach(([x,y,z,r])=>{const m=box(x,y,z,1.9,.03,2.2,osb);m.rotation.y=r});
+  // solaio della casa: travetti, isolante tra i travetti, tavolato sul davanti
+  for(let x=-W;x<=W+.01;x+=.5)beam([x,F-.1,-L],[x,F-.1,L],.08,.2,woodDark);
+  beam([-W,F-.1,-L],[W,F-.1,-L],.1,.2,woodDark);beam([-W,F-.1,L],[W,F-.1,L],.1,.2,woodDark);
+  for(let x=-W+.25;x<W;x+=.5)box(x,F-.12,-.6,.42,.14,4.4,ins);
+  for(let x=-W+.1;x<-.2;x+=.16)box(x,F+.02,2.1,.14,.03,1.8,woodDark);
+  // pareti: montanti, due file di traversi, correnti
+  [-W,W].forEach(x=>{for(let z=-L;z<=L+.01;z+=.6)beam([x,F,z],[x,F+H,z],.08,.14,wood);
+   beam([x,F,-L],[x,F,L],.14,.08,wood);beam([x,F+H,-L],[x,F+H,L],.16,.12,wood);
+   [.8,1.6].forEach(y=>beam([x,F+y,-L],[x,F+y,L],.07,.07,wood))});
+  // timpano di fondo e telaio del timpano anteriore
+  for(let x=-W;x<=W+.01;x+=.5){beam([x,F,-L],[x,roofY(x),-L],.08,.14,wood);if(Math.abs(x)<W-.1)beam([x,F+H,L],[x,roofY(x),L],.07,.12,wood)}
+  [.8,1.6].forEach(y=>beam([-W,F+y,-L],[W,F+y,-L],.07,.07,wood));
+  beam([-W,F+H,L],[W,F+H,L],.1,.12,wood);
+  // isolante grigio nei vani della parete destra e del timpano di fondo
+  for(let z=-L+.3;z<0;z+=.6)box(W,F+H*.68,z,.1,H*.62,.5,ins);
+  box(0,F+H+.45,-L,2.6,.8,.1,ins);
+  // barriera al vapore all'interno della parete sinistra
+  const vb=new THREE.Mesh(new THREE.PlaneGeometry(2.4,H-.1),vap);vb.position.set(-W+.09,F+H/2,-1.4);vb.rotation.y=Math.PI/2;house.add(vb);
+  // capriate fitte, catene e colmo
+  for(let z=-L-.2;z<=L+.21;z+=.45){beam([-W-.3,F+H-.12,z],[0,F+R,z],.07,.16,wood);beam([W+.3,F+H-.12,z],[0,F+R,z],.07,.16,wood);beam([-W*.5,F+H+(R-H)*.5,z],[W*.5,F+H+(R-H)*.5,z],.05,.1,woodDark)}
+  beam([0,F+R,-L-.3],[0,F+R,L+.3],.1,.18,wood);
+  // falde: membrana bianca e listelli orizzontali sopra i puntoni
+  const slope=(side,z0,z1,off,mat,th)=>{const a=new THREE.Vector3(side*(W+.3),F+H-.12+off,0),b=new THREE.Vector3(0,F+R+off,0),len=a.distanceTo(b);
    const m=new THREE.Mesh(new THREE.BoxGeometry(len,th,z1-z0),mat);m.position.set((a.x+b.x)/2,(a.y+b.y)/2,(z0+z1)/2);m.rotation.z=Math.atan2(b.y-a.y,b.x-a.x);house.add(m);return m};
-  slope(1,-L-.15,.4,.16,roof,.05);slope(1,.4,1.6,.1,memb,.01);
-  slope(-1,-L-.15,-1.2,.16,roof,.05);slope(-1,-1.2,-.2,.1,memb,.01);
-  // nervature della lamiera
-  const roofGroup=[];for(let z=-L-.1;z<.4;z+=.3){const a=[W+.22,F+H-.02,z],b=[0,F+R+.2,z];roofGroup.push(beam(a,b,.03,.04,roof))}
-  // parete destra: isolante tra i montanti e membrana esterna
-  box(W,F+H/2,-1.5,.1,H-.1,1.75,ins);
-  const mb=new THREE.Mesh(new THREE.PlaneGeometry(1.9,H),memb);mb.position.set(W+.07,F+H/2,-.3);mb.rotation.y=Math.PI/2;house.add(mb);
-  // parete sinistra: barriera al vapore all'interno
-  const vb=new THREE.Mesh(new THREE.PlaneGeometry(2.3,H-.1),vap);vb.position.set(-W+.08,F+H/2,-1.2);vb.rotation.y=Math.PI/2;house.add(vb);
-  // facciata vetrata nera sul fronte
-  const fz=L+.02,col=x=>F+H+(R-H)*(1-Math.abs(x)/W);
-  for(let x=-W;x<=W+.01;x+=1)beam([x,F,fz],[x,col(x),fz],.1,.1,frame);
-  beam([-W,F,fz],[W,F,fz],.1,.1,frame);beam([-W,F+H,fz],[W,F+H,fz],.08,.08,frame);
-  beam([-W-.05,F+H,fz],[0,F+R,fz],.1,.1,frame);beam([W+.05,F+H,fz],[0,F+R,fz],.1,.1,frame);
+  slope(-1,-.6,L+.2,.1,memb,.01);
+  [-1,1].forEach(side=>{for(let t=.08;t<.98;t+=.11){const x=side*(W+.3)*(1-t),y=F+H-.12+(R-H+.12)*t+.15;beam([x,y,-.4],[x,y,L+.3],.07,.04,wood)}});
+  // copertura in lamiera aggraffata, sollevata sopra la parte posteriore
+  const lift=.75;slope(1,-L-.35,-.2,.2+lift,roof,.05);slope(-1,-L-.35,-.2,.2+lift,roof,.05);
+  [-1,1].forEach(side=>{for(let z=-L-.3;z<-.2;z+=.28){const a=[side*(W+.3),F+H-.02+lift,z],b=[0,F+R+.24+lift,z];beam(a,b,.03,.05,roof)}});
+  // vetrata frontale nera, staccata davanti e un po' a sinistra
+  const gx=-.9,gz=L+1.7,fr=(a,b)=>beam([a[0]+gx,a[1],gz],[b[0]+gx,b[1],gz],.16,.16,frame);
+  fr([-W,F],[W,F]);fr([-W,F],[-W,F+H]);fr([W,F],[W,F+H]);fr([-W-.05,F+H],[0,F+R]);fr([W+.05,F+H],[0,F+R]);
+  [-1,0,1].forEach(x=>fr([x,F],[x,roofY(x)]));fr([-W,F+H],[W,F+H]);fr([-W,F+2.05],[-1,F+2.05]);
   const gs=new THREE.Shape();gs.moveTo(-W,0);gs.lineTo(W,0);gs.lineTo(W,H);gs.lineTo(0,R);gs.lineTo(-W,H);gs.lineTo(-W,0);
-  const gm=new THREE.Mesh(new THREE.ShapeGeometry(gs),glass);gm.position.set(0,F,fz);house.add(gm);
-  house.position.y=-2.1;
+  const gm=new THREE.Mesh(new THREE.ShapeGeometry(gs),glass);gm.position.set(gx,F,gz-.02);house.add(gm);
+  // fianco destro: membrana bianca e pannelli scuri staccati dalla parete
+  const mb=new THREE.Mesh(new THREE.PlaneGeometry(2.2,H*.9),memb);mb.position.set(W+.9,F+H*.48,.6);mb.rotation.y=Math.PI/2;house.add(mb);
+  for(let z=-.45;z<1.7;z+=.27)box(W+1.6,F+H*.5,z,.04,H*.95,.24,M(0x2E2B27,{roughness:.6}));
+  house.position.y=-1.4;
 
   // punti dei materiali (stesso ordine della legenda)
-  const P=[[1.2,F+3.55,-1.6],[W+.08,F+1.1,.3],[W+.06,F+1.5,-1.9],[-W+.1,F+1.2,-1.4],[-.5,F+1.4,L],[-1.2,F+.03,-.4],[-W*.5,F+H+.95,1.5]].map(p=>new THREE.Vector3(...p));
+  const P=[[1.1,F+4.35,-1.8],[W+.9,F+1.1,.6],[W+.06,F+1.65,-1.5],[-W+.12,F+1.2,-1.4],[gx-.5,F+1.2,gz],[1,-.66,-1.5],[W-1,G,2]].map(p=>new THREE.Vector3(...p));
   const short=['Lamiera 0,45 mm','Membrana Strotex 1300','Lana di basalto 15/20 cm','Barriera al vapore AL 90','Triplo vetro Solar','OSB 3 – 22 mm','Travi essiccate in forno'];
   const pins=P.map((p,i)=>{const d=document.createElement('button');d.type='button';d.className='pin';d.innerHTML=`<i>${i+1}</i><span>${short[i]}</span>`;d.onclick=()=>sel(i);pinsEl.append(d);return d});
   const items=[...legend.children];
@@ -530,7 +545,7 @@ draw();
   items.forEach((li,i)=>{li.tabIndex=0;li.onclick=()=>sel(i);li.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();sel(i)}}});
 
   // rotazione col dito o col mouse
-  let rotY=-.65,rotX=.12,vel=0,drag=false,lx=0,ly=0,idle=0;
+  let rotY=-.75,rotX=.2,vel=0,drag=false,lx=0,ly=0,idle=0;
   const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
   stage.style.touchAction='pan-y';
   stage.addEventListener('pointerdown',e=>{if(e.target.closest('.pin'))return;drag=true;lx=e.clientX;ly=e.clientY;vel=0;stage.setPointerCapture(e.pointerId);stage.classList.add('drag')});
@@ -538,7 +553,7 @@ draw();
   const up=()=>{drag=false;stage.classList.remove('drag')};stage.addEventListener('pointerup',up);stage.addEventListener('pointercancel',up);
 
   const v=new THREE.Vector3();
-  function size(){const w=stage.clientWidth,h=stage.clientHeight;ren.setSize(w,h,false);cam.aspect=w/h;cam.position.set(0,1.2,w<600?17:14.5);cam.lookAt(0,0,0);cam.updateProjectionMatrix()}
+  function size(){const w=stage.clientWidth,h=stage.clientHeight;ren.setSize(w,h,false);cam.aspect=w/h;cam.position.set(0,1.6,w<600?21:17.5);cam.lookAt(0,0,0);cam.updateProjectionMatrix()}
   addEventListener('resize',size);size();
   let vis=true;new IntersectionObserver(e=>{vis=e[0].isIntersecting}).observe(stage);
   (function loop(){requestAnimationFrame(loop);if(!vis)return;
