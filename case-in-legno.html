@@ -170,7 +170,7 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 // A-Frame L non è nel listino: optional dell'A-frame aumentati in proporzione (x1,1514) perché kit + optional facciano 1.300 €/m² (75.400 € su 58 m²), come deciso da Eugenio.
 // Mini Barn Boutique: prezzo chiavi in mano, nessuna simulazione.
 const M=[
- {n:"Mini Barn Boutique",img:"m-mini-barn-boutique",cop:21,ut:18,d:"21 m² coperti · 18 m² utili",chiavi:29900},
+ {n:"Mini Barn Boutique",lm:21,img:"m-mini-barn-boutique",cop:21,ut:18,d:"21 m² coperti · 18 m² utili",chiavi:29900},
  {n:"Barn Mini",lm:24.5,img:"m-barn-mini",cop:27.7,ut:21.3,d:"27,7 m² coperti · 21,3 m² utili",p:[19950,5988,900,408,6390,6900,3528,1056,300,null,1440,2880,2000]},
  {n:"Barn Light",lm:36,img:"m-barn-light",cop:31,ut:23,d:"31 m² coperti · 23 m² utili",p:[20500,6150,948,450,6840,6900,3528,1512,300,null,1560,3120,2000]},
  {n:"Barn House",lm:42,img:"m-barn-house",cop:36.8,ut:27.5,d:"36,8 m² coperti · 27,5 m² utili + soppalco",p:[21600,7116.14,1041.06,494.18,8104.50,7577.37,3874.34,1937.17,658.90,3960,1680,3360,2196.34]},
@@ -273,10 +273,10 @@ const btn=(k,label)=>`<button type="button" class="nm" aria-expanded="false" ari
 function draw(){
  const m=M[st.m];if(!st.area)st.area=m.ut;let h='';
  if(m.chiavi){
-  lines.innerHTML=`<div class="ln fixed"><div class="row"><input type="checkbox" checked disabled aria-label="Incluso"><span class="nm" style="cursor:default">Casa chiavi in mano</span><span class="pr">${eur(m.chiavi)}</span></div>
-  <div class="desc on"><p>Il Mini Barn Boutique si vende solo chiavi in mano: per questo modello non serve scegliere gli optional.</p><p>Sono inclusi:</p><ul><li>impianto elettrico con prese, interruttori e corpi illuminanti</li><li>impianto idrico</li><li>tramezzi e rivestimenti interni</li></ul><p>La terrazza è esclusa.</p><p>Per fondazione e trasporto chiedici il preventivo: lo prepariamo sul tuo terreno.</p></div></div>`;
-  summary();return}
+  h=`<div class="ln fixed"><div class="row"><input type="checkbox" checked disabled aria-label="Incluso"><span class="nm" style="cursor:default">Casa chiavi in mano</span><span class="pr">${eur(m.chiavi)}</span></div>
+  <div class="desc on"><p>Il Mini Barn Boutique si vende solo chiavi in mano: per questo modello non serve scegliere gli optional.</p><p>Sono inclusi:</p><ul><li>impianto elettrico con prese, interruttori e corpi illuminanti</li><li>impianto idrico</li><li>tramezzi e rivestimenti interni</li></ul><p>La terrazza è esclusa.</p><p>Per la fondazione chiedici il preventivo: lo prepariamo sul tuo terreno.</p></div></div>`}
  V.forEach(([k,lab,ix])=>{
+  if(m.chiavi&&!['qta','tra'].includes(k)&&lab!=='Trasporto')return;
   if(k==='grp'){h+=`<div class="group">${lab}</div>`;return}
   const d=typeof D[k]==='function'?D[k](m):D[k];
   if(k==='kit'){h+=`<div class="ln fixed"><div class="row"><input type="checkbox" checked disabled aria-label="Incluso">${btn(k,lab)}<span class="pr">${eur(m.p[0])}</span></div><div class="desc" id="d-${k}">${d}</div></div>`;return}
@@ -318,8 +318,9 @@ const PROV='<option value="">Scegli la provincia…</option><optgroup label="Abr
 function traCost(m){if(!st.prov)return 0;const k=kmRate(m);if(k==null)return null;for(const r in KM)if(KM[r][st.prov]!=null)return KM[r][st.prov]*k;return 0}
 function pavCost(m){return st.pav==='lam'?m.p[7]:st.pav==='pia'?st.area*(POSA_PIASTRELLE+(st.mas?MASSETTO:0)):0}
 function items(){
- const m=M[st.m];if(m.chiavi)return [['Casa chiavi in mano',m.chiavi]];
- const r=[['Kit di montaggio (struttura)',m.p[0]]];
+ const m=M[st.m];
+ const r=m.chiavi?[['Casa chiavi in mano',m.chiavi]]:[['Kit di montaggio (struttura)',m.p[0]]];
+ if(!m.chiavi){
  if(st.on.mont)r.push(['Lavori di montaggio',m.p[1]]);
  if(st.on.fond)r.push(['Fondazione in platea',m.cop*FOND]);
  [['lam','Laminazione finestre',2],['sol','Vetro “Solar”',3],['par','Pareti divisorie e finiture',4],['ele','Impianto elettrico',5],['idr','Impianto idrico e fognario',6]].forEach(([k,l,i])=>{if(st.on[k])r.push([l,m.p[i]])});
@@ -329,17 +330,18 @@ function items(){
  if(st.on.cli)r.push(['Predisposizione clima',m.p[12]]);
  if(st.iso)r.push([`Isolamento aggiuntivo ${st.iso} mm`,m.p[st.iso===50?10:11]]);
  if(st.aum&&m.p[9]!=null)r.push([`Aumento lunghezza × ${st.aum}`,st.aum*m.p[9]]);
+ }
  const n=st.n,out=n>1?r.map(([l,v])=>[l+' × '+n,v*n]):r;
  if(st.prov){const t=traCost(m);out.push([`Trasporto fino a ${st.prov}`,t])}
  return out;
 }
 function summary(){
  const m=M[st.m],r=items(),t=r.reduce((s,x)=>s+(x[1]||0),0),ev=v=>v==null?'da concordare':eur(v);
- document.getElementById('sName').textContent=(st.n>1&&!m.chiavi?st.n+' × ':'')+m.n;
+ document.getElementById('sName').textContent=(st.n>1?st.n+' × ':'')+m.n;
  document.getElementById('sMq').textContent=m.d;
  document.getElementById('sList').innerHTML=r.map(([l,v])=>`<li><span>${l}</span><span>${ev(v)}</span></li>`).join('');
  document.getElementById('sTot').textContent=eur(t);document.getElementById('mTot').textContent=eur(t);
- const txt=`Buongiorno, ho fatto una simulazione sul sito per ${st.n>1&&!m.chiavi?st.n+' case in legno':'la casa in legno'} ${m.n}:\n`+r.map(([l,v])=>`- ${l}: ${ev(v)}`).join('\n')+`\nTotale indicativo: ${eur(t)} (IVA inclusa).\nVorrei ricevere un preventivo.`;
+ const txt=`Buongiorno, ho fatto una simulazione sul sito per ${st.n>1?st.n+' case in legno':'la casa in legno'} ${m.n}:\n`+r.map(([l,v])=>`- ${l}: ${ev(v)}`).join('\n')+`\nTotale indicativo: ${eur(t)} (IVA inclusa).\nVorrei ricevere un preventivo.`;
  document.getElementById('sWa').href='https://wa.me/393282145266?text='+encodeURIComponent(txt);
 }
 lines.addEventListener('click',e=>{
