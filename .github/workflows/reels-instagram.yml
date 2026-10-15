@@ -1,0 +1,59 @@
+# Ogni mattina aggiorna i reel di Instagram nella Home (script in progetto/strumenti/aggiorna_reels.py).
+# Se qualcosa è cambiato salva la Home su main e Netlify la pubblica da solo.
+name: Aggiorna reel Instagram
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # tutti i giorni alle 5:17 UTC (7:17 ora italiana d'estate)
+  workflow_dispatch:        # si può avviare anche a mano da GitHub > Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reels-instagram
+  cancel-in-progress: false
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Leggi i reel e aggiorna la Home
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python progetto/strumenti/aggiorna_reels.py
+
+      - name: Salva le modifiche
+        run: |
+          git config user.name "Aggiornamento reel"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html img/reels
+          if git diff --cached --quiet; then
+            echo "Nessun cambiamento"
+          else
+            git commit -m "Aggiornati i reel di Instagram nella Home"
+            git push
+          fi
+
+      # La chiave di Instagram dura 60 giorni: ogni lunedì la rinnova.
+      # Per salvarla serve il segreto GH_PAT (token GitHub con permesso di scrittura sui segreti);
+      # senza GH_PAT questo passaggio viene saltato e la chiave va rigenerata a mano ogni 60 giorni.
+      - name: Rinnova la chiave di Instagram
+        if: github.event_name == 'schedule'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -z "$GH_PAT" ] || [ "$(date -u +%u)" != "1" ]; then echo "Rinnovo saltato"; exit 0; fi
+          NUOVA=$(curl -s "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$IG_TOKEN" | python -c "import sys,json; print(json.load(sys.stdin).get('access_token',''))")
+          if [ -n "$NUOVA" ]; then
+            echo "::add-mask::$NUOVA"
+            GH_TOKEN="$GH_PAT" gh secret set IG_TOKEN --repo "$GITHUB_REPOSITORY" --body "$NUOVA"
+            echo "Chiave rinnovata"
+          fi
