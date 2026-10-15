@@ -86,5 +86,5 @@ Regole decise da Eugenio:
 
 ## Infissi in PVC Rehau Synego / Synego Slide (in preparazione)
 - Colori: **Weiss bianco = standard** (prezzo da Eugenio). **Mooreiche 2, Rovere dorato, Noce, Grigio antracite, Braun = +25%** sul prezzo standard (15/10/2026). Campioni in `img/colore-*.webp`.
-- Gamma completa Synego: **oltre 50 colori** (tinte legno, tinte unite, SFTN Matt, Metbrush…), anche colore diverso tra lato interno ed esterno; colori inalterati nel tempo. Immagine della gamma in `img/synego-gamma-colori.webp`. **Prezzo dei colori della gamma completa: da chiedere a Eugenio** (i 5 colori della cartella base sono +25%).
+- Gamma completa Synego: **oltre 50 colori** (tinte legno, tinte unite, SFTN Matt, Metbrush…), anche colore diverso tra lato interno ed esterno; colori inalterati nel tempo. Immagine della gamma in `img/synego-gamma-colori.webp`. **Colori particolari** (tutti quelli della gamma completa fuori dai 6 della cartella base) = **+30%** sul prezzo standard (15/10/2026).
 - Prezzi base, smontaggio e posa: da ricevere.
