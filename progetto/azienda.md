@@ -43,3 +43,4 @@ MD Edil Group vende ristrutturazioni di classe **premium / lusso** e cerca clien
 - Nei punti luce e prese è incluso il frutto tipo **BTicino**.
 - I preventivi sono sempre stimati e vanno confermati dopo il sopralluogo.
 - **Case in legno su misura** (15/10/2026): oltre ai modelli del catalogo si realizzano strutture personalizzate (modifiche a dimensioni, spazi, altezze, aperture, finiture, o progetto nuovo) con preventivo dedicato.
+- **Infissi e serramenti** (15/10/2026): prodotti standard infissi in PVC Rehau Synego (battente; telaio a 7 camere, anta a 6, profondità 80 mm, triplo vetro fino a 51 mm, superficie HDF) e Rehau Synego Slide (scorrevole); tapparelle in alluminio coibentato; zanzariere in alluminio. Ampia gamma di altri prodotti su richiesta; in futuro anche infissi in alluminio. Servizio per Roma e Regione Lazio.
