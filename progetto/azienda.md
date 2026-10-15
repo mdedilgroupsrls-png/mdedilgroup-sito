@@ -30,7 +30,7 @@ MD Edil Group vende ristrutturazioni di classe **premium / lusso** e cerca clien
 
 ## Servizi
 - **Ristrutturazioni chiavi in mano** di appartamenti, ville, locali commerciali e strutture ricettive: demolizioni, opere murarie, impianti elettrici e idraulici, climatizzazione, rivestimenti, finiture.
-- **Ristrutturazioni esterne:** facciate, cappotto termico, coperture, balconi, lavori condominiali. Rivolte soprattutto ad **amministratori di condominio** e privati.
+- **Ristrutturazioni esterne:** facciate, cappotto termico, coperture, balconi, lavori condominiali. Rivolte a **condomini** e **privati** (sul sito non si citano gli amministratori di condominio).
 - **Studio tecnico interno:** architetta abilitata per ogni tipo di pratica (rilievi, progetti, CILA/SCIA, direzione lavori); su richiesta anche un ingegnere esterno.
 - **Interior design** con progetto esecutivo completo e render 3D.
 - **Infissi e serramenti** (pagina da creare).
