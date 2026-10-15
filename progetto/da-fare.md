@@ -18,6 +18,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [ ] Decidere quale sede indicare come ufficio
 
 ## Fatto
+- [x] 15/10/2026 – Tolta dalla galleria "Esterni e facciate" della Home la foto della posa del pavimento esterno a spina di pesce con la squadra (file cancellato): la galleria ora parte dalle facciate
 - [x] 15/10/2026 – Tolte dalla galleria "Realizziamo lavori chiavi in mano" le 5 foto di cantiere precedenti (bagno marmo, LED, villa, impianti, infissi): ora restano solo le 16 foto dei lavori finiti. Cancellati i file di LED, villa e impianti; bagno marmo e infissi restano come anteprime nella lista dei servizi
 - [x] 15/10/2026 – Aggiunte 16 foto di lavori finiti (bagni, camere, soggiorno, cucina, corridoio; `img/lavoro-01…16.webp`, senza dati GPS) nella galleria "Realizziamo lavori chiavi in mano" della Home, prima delle 5 foto di cantiere. Zone indicate da Eugenio il 15/10/2026 e scritte sotto ogni foto (Olgiata, Corso Francia, San Giovanni, Piazza Fiume, Manzoni, Prati)
 - [x] 15/10/2026 – **Reel Instagram automatici**: app Meta "Sito Md Edil Group" (API Instagram con login di Instagram, md_edil_group tester), chiave salvata nel segreto GitHub `IG_TOKEN`; ogni mattina GitHub aggiorna copertine, testi e numeri dei reel nella Home
