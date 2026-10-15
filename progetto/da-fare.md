@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
+- [ ] **Trovare dove è registrato il dominio mdedilgroup.it**: non è nell'account Aruba personale di Eugenio (lì solo PEC e Firma Digitale, 16/10/2026). Serve per rinnovarlo ogni anno e per la gestione DNS.
 - [x] Collegati Google Business, recensioni Google, Facebook, TikTok, YouTube e LinkedIn su tutte le pagine (15/10/2026). Da fare: verifica Google Search Console (serve la riga `google-site-verification` da Eugenio).
 - [x] Logo disegnato solo alla prima apertura del sito, non a ogni ritorno sulla Home (15/10/2026).
 - [x] Testo **Chi siamo** nella Home (15/10/2026). Associazione: Associazione Edile AICOLE (aicole.it). Nel testo c'è il link a https://aicole.it (15/10/2026).
