@@ -18,7 +18,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [ ] Decidere quale sede indicare come ufficio
 
 ## Fatto
-- [x] 15/10/2026 – Interior design, "Le tavole che ricevi": da 14 a 10 tavole come deciso da Eugenio: rilievo; pianta di progetto e demolizioni; costruzioni; controsoffitti; elettrico + illuminotecnica; idrico + termico + clima; pavimenti e rivestimenti; bagni e cucina; porte + arredi + finiture; render 3D
+- [x] 15/10/2026 – Interior design, "Le tavole che ricevi": da 14 a 11 tavole come deciso da Eugenio: rilievo; pianta di progetto e arredo; demolizioni; nuove costruzioni (queste tre sempre separate); controsoffitti; elettrico + illuminotecnica; idrico + termico + clima; pavimenti e rivestimenti; bagni e cucina; porte + arredi + finiture; render 3D
 - [x] 15/10/2026 – Pagina Ristrutturazioni esterni: "Per gli amministratori di condominio" diventa "Per i condomini" e l'invito finale "Condominio o casa privata?"; la galleria "Esterni e facciate" della Home ora ha tutte le 14 foto dei lavori realizzati, come la pagina esterni
 - [x] 15/10/2026 – Tolta dalla galleria "Esterni e facciate" della Home la foto della posa del pavimento esterno a spina di pesce con la squadra (file cancellato): la galleria ora parte dalle facciate
 - [x] 15/10/2026 – Tolte dalla galleria "Realizziamo lavori chiavi in mano" le 5 foto di cantiere precedenti (bagno marmo, LED, villa, impianti, infissi): ora restano solo le 16 foto dei lavori finiti. Cancellati i file di LED, villa e impianti; bagno marmo e infissi restano come anteprime nella lista dei servizi
