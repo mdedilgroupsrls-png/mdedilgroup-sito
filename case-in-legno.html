@@ -89,6 +89,37 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
  .mtot b{font:600 20px 'Urbanist',sans-serif;color:var(--gold2);font-variant-numeric:tabular-nums}
  body{padding-bottom:70px}}
 @media (max-width:600px){.desc,.sub{margin-left:0}.pr{font-size:15px}}
+.info{padding:24px 0 96px;border-top:1px solid var(--line)}
+.info>.eyebrow{margin-top:72px}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px 48px}
+.info-grid article{min-width:0;display:flex;flex-direction:column;gap:12px}
+.info-grid h3{font-size:clamp(20px,1.8vw,24px);line-height:1.2;text-wrap:balance}
+.info-grid p{margin:0;color:var(--ink2);font-size:15px;line-height:1.65}
+.info-grid b{color:var(--ink);font-weight:600}
+.ic{fill:none;stroke:var(--gold);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.m3d{margin-top:72px}
+.m3d-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 32px;margin-bottom:18px}
+#m3dHint{transition:opacity .6s}
+.m3d-stage{position:relative;aspect-ratio:16/10;max-height:72vh;width:100%;background:radial-gradient(ellipse at 50% 60%,#211d16 0%,var(--bg2) 55%,var(--bg) 100%);border:1px solid var(--line);overflow:hidden;cursor:grab;user-select:none}
+.m3d-stage.drag{cursor:grabbing}
+.m3d-stage canvas{width:100%;height:100%;display:block}
+.m3d-pins{position:absolute;inset:0;pointer-events:none}
+.pin{position:absolute;left:0;top:0;pointer-events:auto;display:flex;align-items:center;gap:8px;margin:-13px 0 0 -13px;padding:0;background:none;border:0;color:var(--ink);font:500 12px 'Manrope',sans-serif;cursor:pointer;transition:opacity .3s}
+.pin i{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--bg);border:1.5px solid var(--gold);color:var(--gold2);font:600 12px/23px 'Manrope',sans-serif;font-style:normal;text-align:center;box-shadow:0 0 0 4px rgba(201,162,74,.15)}
+.pin span{white-space:nowrap;background:rgba(14,13,11,.82);border:1px solid var(--line);padding:4px 8px}
+.pin.back{opacity:.25}
+.pin.on i{background:var(--gold);color:var(--bg)}
+.pin.on{opacity:1;z-index:2}
+.pin:focus-visible i{outline:2px solid var(--gold2);outline-offset:3px}
+.m3d-fallback{position:absolute;inset:auto 16px 16px;margin:0;color:var(--mute);font-size:14px}
+.m3d-legend{margin:18px 0 0;padding:0;list-style:none;counter-reset:m;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:4px 32px}
+.m3d-legend li{counter-increment:m;position:relative;padding:10px 0 10px 34px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.5;color:var(--ink2);cursor:pointer}
+.m3d-legend li b{color:var(--ink);font-weight:600}
+.m3d-legend li::before{content:counter(m);position:absolute;left:0;top:9px;width:22px;height:22px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-size:11px;font-weight:600;display:grid;place-items:center}
+.m3d-legend li.on{color:var(--ink)}
+.m3d-legend li.on::before{background:var(--gold);color:var(--bg)}
+.m3d-legend li:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (max-width:700px){.pin span{display:none}.m3d-stage{aspect-ratio:4/5}}
 </style>
 </head>
 <body>
@@ -119,7 +150,7 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 <p class="eyebrow">Simulatore case in legno</p>
 <h1>Componi la tua casa in legno, voce per voce</h1>
 </div>
-<p>Scegli il modello, poi aggiungi o togli gli optional. Tocca il nome di ogni voce per leggere cosa comprende. Il totale si aggiorna subito; il preventivo definitivo arriva dopo il sopralluogo.</p>
+<p>Scegli il modello, poi aggiungi o togli gli optional. Tocca il nome di ogni voce per leggere cosa comprende. Il totale si aggiorna subito; il preventivo definitivo arriva dopo il sopralluogo. <a href="#la-casa">Scopri come sono fatte le nostre case ↓</a></p>
 </section>
 
 <h2 style="font-size: 22px; margin-bottom: 14px">1. Scegli il modello</h2>
@@ -141,6 +172,57 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 <a class="cta" id="sWa" href="https://wa.me/393282145266" target="_blank" rel="noopener">INVIA LA STIMA SU WHATSAPP</a>
 <a class="cta alt" href="/#contatti">RICHIEDI IL PREVENTIVO</a>
 </aside>
+</section>
+<section class="info" id="la-casa" aria-labelledby="la-casa-t">
+<p class="eyebrow">Le nostre case in legno</p>
+<h2 id="la-casa-t" style="margin-bottom: 34px">Come sono fatte e come le realizziamo</h2>
+<div class="info-grid">
+<article>
+<svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true" class="ic"><path d="M3 11.5 12 4l9 7.5M5.5 9.5V20h4.5v-6h4v6h4.5V9.5"/></svg>
+<h3>La filosofia dell’abitare leggero</h3>
+<p>Crediamo che il vero comfort nasca là dove la forma perfetta incontra la funzionalità assoluta. Nei nostri progetti non esistono dettagli casuali: solo purezza delle linee, calore dei materiali naturali e un flusso infinito di luce. Le nostre case uniscono l’intimità della casa di campagna con l’estetica del loft moderno e creano uno spazio in cui la libertà diventa tangibile.</p>
+</article>
+<article>
+<svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true" class="ic"><path d="M20 4C9 4 4 9.5 4 16c0 1.5.3 2.8.8 4M20 4c0 11-5.5 16-12 16-1.2 0-2.3-.2-3.2-.5M20 4 4.8 20"/></svg>
+<h3>Standard di comfort ed efficienza energetica</h3>
+<p>Ogni progetto della nostra offerta è un sistema flessibile che si adatta ai vostri obiettivi e al contesto climatico:</p>
+<p><b>Formati piccoli:</b> nella versione base rappresentano soluzioni ideali per uso ricreativo o attività di affitto. Grazie alla struttura studiata, possono essere facilmente trasformati in abitazioni a pieno titolo per uso durante tutto l’anno.</p>
+<p><b>Case grandi:</b> progetti di punta, originariamente progettati come residenze di prestigio per vivere 365 giorni all’anno. Con piccoli adeguamenti tecnici possono ottenere la massima certificazione energetica.</p>
+</article>
+<article>
+<svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true" class="ic"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+<h3>Condizioni di realizzazione</h3>
+<p>Apprezziamo il vostro tempo e la trasparenza nei rapporti, per questo rispettiamo rigorosamente i tempi stabiliti:</p>
+<p><b>Produzione e consegna:</b> da 5 a 8 settimane dal pagamento dell’acconto.</p>
+<p><b>Coibentazione</b> delle strutture presentate nel catalogo: pareti e pavimento 15 cm, soffitto 20 cm.</p>
+<p><b>Montaggio in loco:</b> da 2 a 10 settimane. Il termine finale dipende dalla complessità del progetto e dalle specificità del sito.</p>
+<p><b>Fondazioni:</b> investimento indicativo da 1.800 € a 15.000 €. Il prezzo finale viene determinato dopo l’analisi del terreno, del tipo di suolo e della scelta delle dimensioni della casa.</p>
+</article>
+</div>
+
+<div class="m3d">
+<div class="m3d-head">
+<div>
+<p class="eyebrow" style="margin-bottom: 8px">Barn House in 3D</p>
+<h3 style="font-size: clamp(22px, 2.2vw, 30px)">I materiali, strato per strato</h3>
+</div>
+<p class="tag" id="m3dHint">Trascina con il dito o con il mouse per girare la casa</p>
+</div>
+<div class="m3d-stage" id="m3d" role="img" aria-label="Modello 3D della Barn House con la struttura e i materiali in vista">
+<canvas id="m3dCanvas"></canvas>
+<div class="m3d-pins" id="m3dPins"></div>
+<p class="m3d-fallback" id="m3dFallback" hidden>Il modello 3D non si apre su questo dispositivo. Qui sotto trovi l’elenco dei materiali.</p>
+</div>
+<ol class="m3d-legend" id="m3dLegend">
+<li data-i="0"><b>Copertura in lamiera aggraffata</b> da 0,45 mm</li>
+<li data-i="1"><b>Membrana superdiffusiva</b> Strotex 1300, su tetto e pareti</li>
+<li data-i="2"><b>Isolante in lana minerale di basalto</b>, densità 30 kg/m³: pareti e pavimento 15 cm, soffitto 20 cm</li>
+<li data-i="3"><b>Barriera al vapore</b> Strotex AL 90 con foglio di alluminio</li>
+<li data-i="4"><b>Triplo vetro a risparmio energetico</b> con rivestimento Solar</li>
+<li data-i="5"><b>Pannelli OSB 3</b> da 22 mm per il sottofondo del pavimento</li>
+<li data-i="6"><b>Travi piallate ed essiccate in forno</b> per tutta la struttura</li>
+</ol>
+</div>
 </section>
 </main>
 <a class="mtot" href="#riepilogo"><span>Totale indicativo<br><span style="color:var(--mute)">Vedi il riepilogo</span></span><b id="mTot">–</b></a>
@@ -374,6 +456,101 @@ lines.addEventListener('change',e=>{
 const q=new URLSearchParams(location.search).get('modello');
 if(q){const i=M.findIndex(m=>m.img==='m-'+q);if(i>=0){st.m=i;models.querySelectorAll('.mdl').forEach((x,j)=>x.setAttribute('aria-pressed',j===i));requestAnimationFrame(()=>{const b=models.children[i];models.scrollLeft=b.offsetLeft-20})}}
 draw();
+</script>
+<script>
+// Modello 3D della Barn House: struttura in legno con i materiali in vista. Si gira trascinando.
+(function(){
+ const stage=document.getElementById('m3d'),cv=document.getElementById('m3dCanvas'),pinsEl=document.getElementById('m3dPins'),legend=document.getElementById('m3dLegend');
+ if(!stage)return;
+ const fail=()=>{document.getElementById('m3dFallback').hidden=false;cv.style.display='none'};
+ let started=false;
+ const start=()=>{if(started)return;started=true;
+  const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';s.onload=build;s.onerror=fail;document.head.append(s)};
+ // il modello si carica solo quando la sezione arriva sullo schermo
+ if('IntersectionObserver' in window){const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){io.disconnect();start()}},{rootMargin:'300px'});io.observe(stage)}else start();
+
+ function build(){
+  let ren;try{ren=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true})}catch(e){fail();return}
+  ren.setPixelRatio(Math.min(2,devicePixelRatio||1));
+  const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(32,1,0.1,100);
+  scene.add(new THREE.HemisphereLight(0xfff4e0,0x2a2722,0.9));
+  const sun=new THREE.DirectionalLight(0xffffff,0.9);sun.position.set(6,10,8);scene.add(sun);
+  const back=new THREE.DirectionalLight(0xC9A24A,0.35);back.position.set(-8,4,-6);scene.add(back);
+  const house=new THREE.Group();scene.add(house);
+  const M=(c,o)=>new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:.75,metalness:0},o||{}));
+  const wood=M(0xD6A766),woodDark=M(0xB8874A),osb=M(0xC99A5B,{roughness:.9}),roof=M(0x2B2D30,{metalness:.55,roughness:.45}),
+   ins=M(0x9A9C93,{roughness:1}),memb=M(0xF1F1EE,{transparent:true,opacity:.82,side:THREE.DoubleSide}),
+   vap=M(0xC8CDD2,{metalness:.7,roughness:.3,side:THREE.DoubleSide}),frame=M(0x161616,{metalness:.3,roughness:.5}),
+   glass=M(0x9FC3D1,{transparent:true,opacity:.28,metalness:.2,roughness:.05,side:THREE.DoubleSide});
+  // trave tra due punti
+  const beam=(a,b,w,h,mat)=>{const A=new THREE.Vector3(...a),B=new THREE.Vector3(...b),len=A.distanceTo(B);
+   const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,len),mat);m.position.copy(A).add(B).multiplyScalar(.5);m.lookAt(B);house.add(m);return m};
+  const box=(x,y,z,sx,sy,sz,mat)=>{const m=new THREE.Mesh(new THREE.BoxGeometry(sx,sy,sz),mat);m.position.set(x,y,z);house.add(m);return m};
+  const W=2,L=3,H=2.5,R=4.3,F=.25; // mezza larghezza, mezza lunghezza, altezza pareti, colmo, quota del pavimento
+  // telaio del pavimento e OSB
+  for(let x=-W;x<=W+.01;x+=.5)beam([x,F-.12,-L],[x,F-.12,L],.08,.18,woodDark);
+  beam([-W,F-.12,-L],[W,F-.12,-L],.1,.2,woodDark);beam([-W,F-.12,L],[W,F-.12,L],.1,.2,woodDark);
+  box(-.55,F+.0,-.6,2.9,.03,4.8,osb);
+  box(1.2,F-.06,1.6,1.4,.1,2.6,ins);
+  // pareti laterali: montanti
+  for(let z=-L;z<=L+.01;z+=.6){[-W,W].forEach(x=>beam([x,F,z],[x,F+H,z],.08,.14,wood))}
+  [-W,W].forEach(x=>{beam([x,F,-L],[x,F,L],.14,.08,wood);beam([x,F+H,-L],[x,F+H,L],.14,.1,wood)});
+  // parete di fondo con montanti fino al tetto
+  for(let x=-W;x<=W+.01;x+=.5){const top=F+H+(R-H)*(1-Math.abs(x)/W);beam([x,F,-L],[x,top,-L],.08,.14,wood)}
+  // capriate e colmo
+  for(let z=-L;z<=L+.01;z+=.6){beam([-W-.15,F+H-.08,z],[0,F+R,z],.08,.16,wood);beam([W+.15,F+H-.08,z],[0,F+R,z],.08,.16,wood);beam([-W*.55,F+H+(R-H)*.45,z],[W*.55,F+H+(R-H)*.45,z],.06,.1,woodDark)}
+  beam([0,F+R,-L-.1],[0,F+R,L+.1],.1,.18,wood);
+  // falda: lamiera a destra (in parte), membrana sotto
+  const slope=(side,z0,z1,off,mat,th)=>{const a=new THREE.Vector3(side*(W+.25),F+H-.12+off,0),b=new THREE.Vector3(0,F+R+off,0),len=a.distanceTo(b);
+   const m=new THREE.Mesh(new THREE.BoxGeometry(len,th,z1-z0),mat);m.position.set((a.x+b.x)/2,(a.y+b.y)/2,(z0+z1)/2);m.rotation.z=Math.atan2(b.y-a.y,b.x-a.x);house.add(m);return m};
+  slope(1,-L-.15,.4,.16,roof,.05);slope(1,.4,1.6,.1,memb,.01);
+  slope(-1,-L-.15,-1.2,.16,roof,.05);slope(-1,-1.2,-.2,.1,memb,.01);
+  // nervature della lamiera
+  const roofGroup=[];for(let z=-L-.1;z<.4;z+=.3){const a=[W+.22,F+H-.02,z],b=[0,F+R+.2,z];roofGroup.push(beam(a,b,.03,.04,roof))}
+  // parete destra: isolante tra i montanti e membrana esterna
+  box(W,F+H/2,-1.5,.1,H-.1,1.75,ins);
+  const mb=new THREE.Mesh(new THREE.PlaneGeometry(1.9,H),memb);mb.position.set(W+.07,F+H/2,-.3);mb.rotation.y=Math.PI/2;house.add(mb);
+  // parete sinistra: barriera al vapore all'interno
+  const vb=new THREE.Mesh(new THREE.PlaneGeometry(2.3,H-.1),vap);vb.position.set(-W+.08,F+H/2,-1.2);vb.rotation.y=Math.PI/2;house.add(vb);
+  // facciata vetrata nera sul fronte
+  const fz=L+.02,col=x=>F+H+(R-H)*(1-Math.abs(x)/W);
+  for(let x=-W;x<=W+.01;x+=1)beam([x,F,fz],[x,col(x),fz],.1,.1,frame);
+  beam([-W,F,fz],[W,F,fz],.1,.1,frame);beam([-W,F+H,fz],[W,F+H,fz],.08,.08,frame);
+  beam([-W-.05,F+H,fz],[0,F+R,fz],.1,.1,frame);beam([W+.05,F+H,fz],[0,F+R,fz],.1,.1,frame);
+  const gs=new THREE.Shape();gs.moveTo(-W,0);gs.lineTo(W,0);gs.lineTo(W,H);gs.lineTo(0,R);gs.lineTo(-W,H);gs.lineTo(-W,0);
+  const gm=new THREE.Mesh(new THREE.ShapeGeometry(gs),glass);gm.position.set(0,F,fz);house.add(gm);
+  house.position.y=-2.1;
+
+  // punti dei materiali (stesso ordine della legenda)
+  const P=[[1.2,F+3.55,-1.6],[W+.08,F+1.1,.3],[W+.06,F+1.5,-1.9],[-W+.1,F+1.2,-1.4],[-.5,F+1.4,L],[-1.2,F+.03,-.4],[-W*.5,F+H+.95,1.5]].map(p=>new THREE.Vector3(...p));
+  const short=['Lamiera 0,45 mm','Membrana Strotex 1300','Lana di basalto 15/20 cm','Barriera al vapore AL 90','Triplo vetro Solar','OSB 3 – 22 mm','Travi essiccate in forno'];
+  const pins=P.map((p,i)=>{const d=document.createElement('button');d.type='button';d.className='pin';d.innerHTML=`<i>${i+1}</i><span>${short[i]}</span>`;d.onclick=()=>sel(i);pinsEl.append(d);return d});
+  const items=[...legend.children];
+  let cur=-1;const sel=i=>{cur=cur===i?-1:i;pins.forEach((d,j)=>d.classList.toggle('on',j===cur));items.forEach((li,j)=>li.classList.toggle('on',j===cur))};
+  items.forEach((li,i)=>{li.tabIndex=0;li.onclick=()=>sel(i);li.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();sel(i)}}});
+
+  // rotazione col dito o col mouse
+  let rotY=-.65,rotX=.12,vel=0,drag=false,lx=0,ly=0,idle=0;
+  const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  stage.style.touchAction='pan-y';
+  stage.addEventListener('pointerdown',e=>{if(e.target.closest('.pin'))return;drag=true;lx=e.clientX;ly=e.clientY;vel=0;stage.setPointerCapture(e.pointerId);stage.classList.add('drag')});
+  stage.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-lx,dy=e.clientY-ly;lx=e.clientX;ly=e.clientY;vel=dx*.008;rotY+=vel;rotX=Math.max(-.15,Math.min(.55,rotX+dy*.004));idle=0;document.getElementById('m3dHint').style.opacity=.4});
+  const up=()=>{drag=false;stage.classList.remove('drag')};stage.addEventListener('pointerup',up);stage.addEventListener('pointercancel',up);
+
+  const v=new THREE.Vector3();
+  function size(){const w=stage.clientWidth,h=stage.clientHeight;ren.setSize(w,h,false);cam.aspect=w/h;cam.position.set(0,1.2,w<600?17:14.5);cam.lookAt(0,0,0);cam.updateProjectionMatrix()}
+  addEventListener('resize',size);size();
+  let vis=true;new IntersectionObserver(e=>{vis=e[0].isIntersecting}).observe(stage);
+  (function loop(){requestAnimationFrame(loop);if(!vis)return;
+   if(!drag){rotY+=vel;vel*=.94;idle++;if(!RM&&idle>180)rotY+=.0025}
+   house.rotation.set(rotX,rotY,0);ren.render(scene,cam);
+   const w=stage.clientWidth,h=stage.clientHeight;
+   P.forEach((p,i)=>{v.copy(p);house.localToWorld(v);
+    // il punto si attenua quando sta dietro la casa
+    const n=v.clone().sub(cam.position).normalize(),c=new THREE.Vector3(0,v.y,0).sub(v).normalize(),behind=n.dot(c)<-.15;
+    v.project(cam);pins[i].style.transform=`translate(${(v.x*.5+.5)*w}px,${(-v.y*.5+.5)*h}px)`;pins[i].classList.toggle('back',behind)})})();
+ }
+})();
 </script>
 </body>
 </html>

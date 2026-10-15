@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
+- [ ] Pagina case in legno (15/10/2026): da confermare con Eugenio 1) nei testi "Prosto House" è stato sostituito con "Le nostre case"; 2) i testi dicono fondazioni da 1.800 a 15.000 €, mentre il simulatore calcola 230 €/m² (per le case grandi supera 15.000 €); 3) il listino dice isolamento 150 (250) mm pareti e tetto e 200 (250) mm pavimento, Eugenio ha indicato pareti e pavimento 15 cm, soffitto 20 cm
 - [ ] Simulatore case in legno (15/10/2026, sul branch `lavori-in-corso`): decisioni di Eugenio applicate (A-Frame L a 1.300 €/m², Mini Barn Boutique senza simulazione, trasporto per provincia, tinteggiatura 10 €/m²). Da verificare con Eugenio: km del trasporto per alcune province; la scheda del Mini Barn Boutique nel catalogo della Home dice ancora "terrazza" inclusa
 - [ ] Dal 15/10/2026 le modifiche si salvano sul branch `lavori-in-corso` (Netlify non lo pubblica, nessun credito usato). Si uniscono a `main`, e quindi vanno online, **solo quando Eugenio dice di aggiornare il sito**
 - [ ] **Netlify: tornare al piano Free entro il 12/11/2026.** Eugenio fa l'upgrade il 15/10/2026 solo per un mese. Promemoria programmati in chat per il 9/11 e il 12/11. Da spuntare solo quando Eugenio conferma con una foto che il piano è "Free" (https://app.netlify.com/teams/mdedilgroupsrls/billing)
