@@ -102,6 +102,6 @@ Regole decise da Eugenio:
 
 ## Zanzariere in alluminio Primed (in preparazione)
 - Marca **Primed** (zanzariere dal 1983). Due tipi, **stesso prezzo**: **verticale avvolgente** (scorre dall'alto in basso, per le finestre, es. Giada) e **laterale plissettata** (apertura da sinistra a destra o viceversa, per le porte-finestre, es. Voilà, Smart). Foto in `img/primed-verticale.webp`, `img/primed-laterale.webp`, colori in `img/primed-colori.webp`.
-- **Prezzo 40 €/m²** per ogni pezzo fino a 3,22 m² (15/10/2026). Calcolo a righe larghezza × altezza; il cliente indica il tipo per ogni zanzariera.
+- **Prezzo 53 €/m²** per ogni pezzo fino a 3,22 m² (corretto da 40 a 53 il 15/10/2026). Calcolo a righe larghezza × altezza; il cliente indica il tipo per ogni zanzariera.
 - **Posa 50 € a pezzo** fino a 3,22 m².
 - Sempre in alluminio; **colore a scelta** dalla striscia colori Primed, **stesso prezzo** per tutti i colori (15/10/2026).
