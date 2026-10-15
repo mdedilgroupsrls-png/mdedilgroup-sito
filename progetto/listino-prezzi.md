@@ -85,6 +85,17 @@ Regole decise da Eugenio:
 | Montblanc | Mont Blanc 166 m² | 77.400 | 31.065,30 | 4.740,89 | 2.220,73 | 35.431,92 | 24.640,15 | 14.035,53 | 7.984,66 | 3.742,81 | 17.040 | 7.560 | 15.120 | 6.238,01 |
 
 ## Infissi in PVC Rehau Synego / Synego Slide (in preparazione)
-- Colori: **Weiss bianco = standard** (prezzo da Eugenio). **Mooreiche 2, Rovere dorato, Noce, Grigio antracite, Braun = +25%** sul prezzo standard (15/10/2026). Campioni in `img/colore-*.webp`.
+- Colori: **Weiss bianco = standard** . **Mooreiche 2, Rovere dorato, Noce, Grigio antracite, Braun = +25%** sul prezzo standard (15/10/2026). Campioni in `img/colore-*.webp`.
 - Gamma completa Synego: **oltre 50 colori** (tinte legno, tinte unite, SFTN Matt, Metbrush…), anche colore diverso tra lato interno ed esterno; colori inalterati nel tempo. Immagine della gamma in `img/synego-gamma-colori.webp`. **Colori particolari** (tutti quelli della gamma completa fuori dai 6 della cartella base) = **+30%** sul prezzo standard (15/10/2026).
-- Prezzi base, smontaggio e posa: da ricevere.
+- Prezzo al m² di ogni pezzo (larghezza × altezza), dettato da Eugenio il 15/10/2026:
+  - **Battente Synego, bianco:** fino a 1 m² **250 €/m²**; da 1 a 3,22 m² **280 €/m²**; oltre 3,22 m² **300 €/m²**. Colori: +25% (5 base) o +30% (particolari) su questi prezzi.
+  - **Scorrevole Synego Slide:** bianco **320 €/m²**, colore **400 €/m²** (da chiarire: fasce di misura e colori particolari).
+- **Demolizione** vecchi infissi **30 € a pezzo** e **posa 140 € a pezzo** (insieme 170 €), per ogni pezzo fino a 3,22 m². Oltre 3,22 m²: da chiarire.
+- Se l'appartamento è **sopra il terzo piano**: demolizione e posa **+10%** (da chiarire se dal 3° o dal 4° piano).
+- Simulatore: righe larghezza/altezza (5 all'inizio, pulsante "+ Aggiungi altro infisso"); sotto, Demolizione e Posa con le loro righe e il pulsante "Riprendi le misure degli infissi indicati sopra".
+
+## Tapparelle in alluminio coibentato Pracal (in preparazione)
+- Marca **Pracal** (profili per tapparelle). Profili a catalogo: L08, L09, L12, stecche a media o alta densità. Foto in `img/pracal-l08.webp`, `img/pracal-l12.webp`, tabella colori in `img/pracal-colori.webp` (tinta unita, finto legno, particolari, Raffaello).
+- **Prezzo 49,50 €/m²**, uguale per tutti i colori (15/10/2026). Calcolo a righe larghezza × altezza, con il pulsante per riprendere le misure degli infissi.
+- **Demolizione** vecchie tapparelle **25 € a pezzo** fino a 3,22 m².
+- **Posa 60 € a pezzo** fino a 3,22 m² (anche se il pezzo è più piccolo); da 3,22 a 6,44 m² il prezzo **raddoppia** (120 €).
