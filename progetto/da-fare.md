@@ -18,7 +18,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [ ] Decidere quale sede indicare come ufficio
 
 ## Fatto
-- [x] 15/10/2026 – Reel automatici: aggiornamento portato da ogni giorno a **due volte al mese** (1° e 15), per non consumare i crediti/pubblicazioni di Netlify; il rinnovo della chiave (se c'è GH_PAT) avviene a ogni aggiornamento
+- [x] 15/10/2026 – Reel automatici: aggiornamento portato da ogni giorno a **ogni 3 giorni** (giorni 1, 4, 7… del mese), per non consumare i crediti/pubblicazioni di Netlify; il rinnovo della chiave (se c'è GH_PAT) avviene a ogni aggiornamento
 - [x] 15/10/2026 – Interior design, "Le tavole che ricevi": da 14 a 11 tavole come deciso da Eugenio: rilievo; pianta di progetto e arredo; demolizioni; nuove costruzioni (queste tre sempre separate); controsoffitti; elettrico + illuminotecnica; idrico + termico + clima; pavimenti e rivestimenti; bagni e cucina; porte + arredi + finiture; render 3D
 - [x] 15/10/2026 – Pagina Ristrutturazioni esterni: "Per gli amministratori di condominio" diventa "Per i condomini" e l'invito finale "Condominio o casa privata?"; la galleria "Esterni e facciate" della Home ora ha tutte le 14 foto dei lavori realizzati, come la pagina esterni
 - [x] 15/10/2026 – Tolta dalla galleria "Esterni e facciate" della Home la foto della posa del pavimento esterno a spina di pesce con la squadra (file cancellato): la galleria ora parte dalle facciate
