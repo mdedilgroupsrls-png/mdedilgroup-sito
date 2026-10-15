@@ -252,25 +252,26 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 // cop = m² coperti (fondazione), ut = m² di pavimento proposti per le piastrelle (dal catalogo nella Home); lm = m² del listino (numero di viaggi del trasporto).
 // A-Frame L non è nel listino: optional dell'A-frame aumentati in proporzione (x1,1514) perché kit + optional facciano 1.300 €/m² (75.400 € su 58 m²), come deciso da Eugenio.
 // Mini Barn Boutique: prezzo chiavi in mano, nessuna simulazione.
+// Sconto deciso da Eugenio (15/10/2026): se kit + optional (esclusi fondazione, aumento lunghezza, isolamento aggiuntivo e trasporto) superano 1.300 € per m² utile, impianto elettrico e idrico sono già ridotti del 20% nei prezzi qui sotto.
 // Olivia (90 m², non nel listino): kit 54.000 € del catalogo + optional della Nord House (95 m² nel listino), la struttura più simile per metri quadri.
 const M=[
  {n:"Mini Barn Boutique",lm:21,img:"m-mini-barn-boutique",cop:21,ut:18,d:"21 m² coperti · 18 m² utili",chiavi:29900},
- {n:"Barn Mini",lm:24.5,img:"m-barn-mini",cop:27.7,ut:21.3,d:"27,7 m² coperti · 21,3 m² utili",p:[19950,5988,900,408,6390,6900,3528,1056,300,null,1440,2880,2000]},
- {n:"Barn Light",lm:36,img:"m-barn-light",cop:31,ut:23,d:"31 m² coperti · 23 m² utili",p:[20500,6150,948,450,6840,6900,3528,1512,300,null,1560,3120,2000]},
- {n:"Barn House",lm:42,img:"m-barn-house",cop:36.8,ut:27.5,d:"36,8 m² coperti · 27,5 m² utili + soppalco",p:[21600,7116.14,1041.06,494.18,8104.50,7577.37,3874.34,1937.17,658.90,3960,1680,3360,2196.34]},
- {n:"Freya Smart",lm:42,img:"m-freya-smart",cop:37,ut:26,d:"37 m² coperti · 26 m² utili + soppalco",p:[22900,7080,1032,552,9960,7650,3528,1836,600,4320,2040,4080,2000]},
- {n:"A-frame",lm:49,img:"m-a-frame",cop:48,ut:38,d:"48 m² coperti · 38 m² utili + soppalco",p:[23400,10497.20,1239.25,612.34,9622.42,8383.18,4286.36,2500.37,728.97,5280,1920,3840,2429.91]},
- {n:"Barn Max Height",lm:42,img:"m-barn-max-height",cop:36.8,ut:27.5,d:"36,8 m² coperti · 27,5 m² utili + soppalco",p:[27300,8190,984,492,9120,7650,3528,1764,600,4680,2040,4080,2000]},
- {n:"Flat House (soffitto 2,2 m)",lm:52,img:"m-flat-house",cop:72,ut:52,d:"72 m² coperti · 52 m² utili",p:[28600,9360,1860,816,13680,11700,4140,2448,900,7920,3000,6000,4000]},
- {n:"Flat House (soffitto 2,7 m)",lm:52,img:"m-flat-house",cop:72,ut:52,d:"72 m² coperti · 52 m² utili",p:[32600,10080,1860,816,14760,11700,4140,2448,900,8220,3540,7080,4000]},
+ {n:"Barn Mini",lm:24.5,img:"m-barn-mini",cop:27.7,ut:21.3,d:"27,7 m² coperti · 21,3 m² utili",p:[19950,5988,900,408,6390,5520,2822.4,1056,300,null,1440,2880,2000]},
+ {n:"Barn Light",lm:36,img:"m-barn-light",cop:31,ut:23,d:"31 m² coperti · 23 m² utili",p:[20500,6150,948,450,6840,5520,2822.4,1512,300,null,1560,3120,2000]},
+ {n:"Barn House",lm:42,img:"m-barn-house",cop:36.8,ut:27.5,d:"36,8 m² coperti · 27,5 m² utili + soppalco",p:[21600,7116.14,1041.06,494.18,8104.50,6061.9,3099.47,1937.17,658.90,3960,1680,3360,2196.34]},
+ {n:"Freya Smart",lm:42,img:"m-freya-smart",cop:37,ut:26,d:"37 m² coperti · 26 m² utili + soppalco",p:[22900,7080,1032,552,9960,6120,2822.4,1836,600,4320,2040,4080,2000]},
+ {n:"A-frame",lm:49,img:"m-a-frame",cop:48,ut:38,d:"48 m² coperti · 38 m² utili + soppalco",p:[23400,10497.20,1239.25,612.34,9622.42,6706.54,3429.09,2500.37,728.97,5280,1920,3840,2429.91]},
+ {n:"Barn Max Height",lm:42,img:"m-barn-max-height",cop:36.8,ut:27.5,d:"36,8 m² coperti · 27,5 m² utili + soppalco",p:[27300,8190,984,492,9120,6120,2822.4,1764,600,4680,2040,4080,2000]},
+ {n:"Flat House (soffitto 2,2 m)",lm:52,img:"m-flat-house",cop:72,ut:52,d:"72 m² coperti · 52 m² utili",p:[28600,9360,1860,816,13680,9360,3312,2448,900,7920,3000,6000,4000]},
+ {n:"Flat House (soffitto 2,7 m)",lm:52,img:"m-flat-house",cop:72,ut:52,d:"72 m² coperti · 52 m² utili",p:[32600,10080,1860,816,14760,9360,3312,2448,900,8220,3540,7080,4000]},
  {n:"A-Frame L",lm:58,img:"m-a-frame-l",cop:58,ut:58,d:"58 m² coperti · 58 m² utili",p:[29000,12086.11,1426.83,705.03,11078.92,9652.10,4935.16,2878.84,839.31,6079.21,2210.62,4421.24,2797.71]},
- {n:"Barn Double",lm:72,img:"m-barn-double",cop:72,ut:55,d:"72 m² coperti · 55 m² utili + soppalco",p:[38000,12043.32,1838.19,887.40,15592.93,12360.25,4373.63,3327.76,950.79,7920,3240,6480,4225.73]},
- {n:"Flat House 1.5",lm:75,img:"m-flat-house-1-5",cop:108,ut:78,d:"108 m² coperti · 78 m² utili",p:[45950,16542,2880,1008,22860,15600,7560,3792,1200,12330,5280,10560,4000]},
- {n:"Nord House",lm:95,img:"m-nord-house",cop:92.5,ut:82,d:"92,5 m² coperti · 82 m² utili",p:[51000,18780,3720,1656,30840,22500,8568,5052,1200,7740,6120,12240,4000]},
- {n:"Olivia",lm:90,img:"m-olivia",cop:90,ut:76.4,d:"90 m² coperti · 76,4 m² utili su due piani",p:[54000,18780,3720,1656,30840,22500,8568,5052,1200,7740,6120,12240,4000]},
- {n:"Fjord",lm:130,img:"m-fjord",cop:111,ut:130,d:"111 m² coperti · 130 m² utili su due piani",p:[61000,23400,4080,1860,32400,23400,13140,5844,2400,15360,6720,13440,6000]},
- {n:"Flat Double",lm:99,img:"m-flat-double",cop:108,ut:78,d:"108 m² coperti · 78 m² utili",p:[61700,18480,3720,1560,29520,22200,8568,5196,1500,16440,6960,13920,4000]},
- {n:"Sherwood",lm:118,img:"m-sherwood",cop:119,ut:98,d:"119 m² coperti · 98 m² utili",p:[64800,21240,4320,1896,33840,23550,13440,5916,2700,15360,6720,13440,6000]},
+ {n:"Barn Double",lm:72,img:"m-barn-double",cop:72,ut:55,d:"72 m² coperti · 55 m² utili + soppalco",p:[38000,12043.32,1838.19,887.40,15592.93,9888.2,3498.9,3327.76,950.79,7920,3240,6480,4225.73]},
+ {n:"Flat House 1.5",lm:75,img:"m-flat-house-1-5",cop:108,ut:78,d:"108 m² coperti · 78 m² utili",p:[45950,16542,2880,1008,22860,12480,6048,3792,1200,12330,5280,10560,4000]},
+ {n:"Nord House",lm:95,img:"m-nord-house",cop:92.5,ut:82,d:"92,5 m² coperti · 82 m² utili",p:[51000,18780,3720,1656,30840,18000,6854.4,5052,1200,7740,6120,12240,4000]},
+ {n:"Olivia",lm:90,img:"m-olivia",cop:90,ut:76.4,d:"90 m² coperti · 76,4 m² utili su due piani",p:[54000,18780,3720,1656,30840,18000,6854.4,5052,1200,7740,6120,12240,4000]},
+ {n:"Fjord",lm:130,img:"m-fjord",cop:111,ut:130,d:"111 m² coperti · 130 m² utili su due piani",p:[61000,23400,4080,1860,32400,18720,10512,5844,2400,15360,6720,13440,6000]},
+ {n:"Flat Double",lm:99,img:"m-flat-double",cop:108,ut:78,d:"108 m² coperti · 78 m² utili",p:[61700,18480,3720,1560,29520,17760,6854.4,5196,1500,16440,6960,13920,4000]},
+ {n:"Sherwood",lm:118,img:"m-sherwood",cop:119,ut:98,d:"119 m² coperti · 98 m² utili",p:[64800,21240,4320,1896,33840,18840,10752,5916,2700,15360,6720,13440,6000]},
  {n:"Norway",lm:160,img:"m-norway",cop:85,ut:160,d:"85 m² coperti · 160 m² utili su due piani",p:[65600,31162.21,4804.17,2194.34,38757.99,25319.29,14217.76,8206.05,3246.06,16440,7200,14400,6492.13]},
  {n:"Siver",lm:160,img:"m-siver",cop:98,ut:160,d:"98 m² coperti · 160 m² utili su due piani",p:[71400,31042.65,4539.83,2073.60,36625.42,23926.15,13435.45,7754.53,3067.46,16440,7200,14400,6134.91]},
  {n:"Montblanc",lm:166,img:"m-montblanc",cop:115,ut:166,d:"115 m² coperti · 166 m² utili con soppalco",p:[77400,31065.30,4740.89,2220.73,35431.92,24640.15,14035.53,7984.66,3742.81,17040,7560,15120,6238.01]}
