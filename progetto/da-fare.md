@@ -23,6 +23,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [ ] Decidere quale sede indicare come ufficio
 
 ## Fatto
+- [x] 15/10/2026 – Nuovo modello **Olivia** (54.000 €, 90 m²) nel catalogo della Home (`img/m-olivia.webp`, ritagliato dalla scheda) e nel simulatore con gli optional della Nord House. Sul branch `lavori-in-corso`
 - [x] 15/10/2026 – Simulatore ristrutturazioni interni: prezzo visibile accanto a ogni voce, con il calcolo, e riepilogo voce per voce (richiesta di Eugenio: trasparenza con il cliente). Tolta la scelta "Livello di finiture" (standard/pregio/lusso): si usano i prezzi del listino senza moltiplicatori (prima era preimpostato "pregio" ×1,3 su controsoffitti, porte e pitture). Sul branch `lavori-in-corso`
 - [x] 15/10/2026 – Aggiunte altre 9 foto (`img/lavoro-17…25.webp`) in fondo alla galleria "Realizziamo lavori chiavi in mano" della Home, dopo le 16 già caricate. Zone indicate da Eugenio (Via Cassia, Porta Pia, Corso Francia, San Giovanni, Manzoni); foto 17 (top bagno in montaggio): Olgiata
 - [x] 15/10/2026 – Reel della Home aggiornati a mano da Metricool (nessun reel nuovo dopo il 13/10; aggiornati visualizzazioni, like e commenti). Su richiesta di Eugenio aggiunto il reel della villa in bioedilizia da 350 m² dell'8/10 (`DeOk-6hOedn`); uscito il più vecchio (area turistico-ricettiva del 5/10)

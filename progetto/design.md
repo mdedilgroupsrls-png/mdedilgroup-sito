@@ -55,7 +55,7 @@ Sorgente: `progetto/sorgenti-design/home-cinema.html`. Stesso stile Nero & Oro, 
 - Filo d'oro lungo il margine sinistro che si disegna scorrendo, con rombi alle sezioni; linea d'oro sotto ogni titolo che si traccia.
 - Render interior design: nastro continuo di foto **grandi** che scorre **da destra a sinistra**; dito fermo = si ferma, trascinare = accelera, nessun pulsante. Sta subito dopo i Servizi, sopra i simulatori.
 - Simulatori: fascia compatta (titolo piccolo + 3 pulsanti).
-- Catalogo case in legno: tutti i 18 modelli, **2 alla volta**, stesso nastro continuo dei render.
+- Catalogo case in legno: tutti i 19 modelli (Olivia aggiunta il 15/10/2026), **2 alla volta**, stesso nastro continuo dei render.
 - Cantieri ed esterni: gallerie con effetto 3D (coverflow). Esterni con descrizione sopra le foto e la zona di Roma sotto ogni foto.
 - Reel Instagram: tra "Come lavoriamo" e "News e guide"; 2 alla volta, si scorrono col dito; visualizzazioni, mi piace e commenti sopra il video in basso, con numeri che contano da 1 al valore vero.
 - Ordine sezioni: Servizi, Render, Simulatori, Cantieri, Case in legno, Esterni, Chi siamo + garanzie, Come lavoriamo, Reel, News, Contatti.
