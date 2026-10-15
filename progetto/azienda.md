@@ -37,6 +37,7 @@ MD Edil Group vende ristrutturazioni di classe **premium / lusso** e cerca clien
 - **Case in legno** (pagina da creare; esiste un configuratore separato, artifact "Case in Legno MD Edil Group").
 
 ## Come lavorano
+- **Chi siamo** (testo approvato in bozza il 15/10/2026, nella Home): impresa giovane, regolarmente costituita e operativa; professionisti e maestranze qualificate; una squadra o un tecnico specializzato per ogni lavorazione, con un unico referente; socia di un'associazione di imprese (**nome da confermare**) e collabora con le altre imprese associate; contratto regolare per ogni lavoro, onestà, serietà, rispetto di parola e tempi.
 - Tutti i lavori sono eseguiti da **tecnici abilitati** con **certificazione di conformità**.
 - I tramezzi oggi si realizzano in **lastre / pannelli** (tipo Aquapanel o Siniat), non in muratura intonacata.
 - Nelle opere edili la **fornitura** di pavimenti, rivestimenti, sanitari e accessori è **esclusa**: sono incluse posa e lavorazioni.
