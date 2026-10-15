@@ -99,3 +99,8 @@ Regole decise da Eugenio:
 - **Prezzo 49,50 €/m²**, uguale per tutti i colori (15/10/2026). Calcolo a righe larghezza × altezza, con il pulsante per riprendere le misure degli infissi.
 - **Demolizione** vecchie tapparelle **25 € a pezzo** fino a 3,22 m².
 - **Posa 60 € a pezzo** fino a 3,22 m² (anche se il pezzo è più piccolo); da 3,22 a 6,44 m² il prezzo **raddoppia** (120 €).
+
+## Zanzariere in alluminio Primed (in preparazione)
+- Marca **Primed** (zanzariere dal 1983). Due tipi, **stesso prezzo**: **verticale avvolgente** (scorre dall'alto in basso, per le finestre, es. Giada) e **laterale plissettata** (apertura da sinistra a destra o viceversa, per le porte-finestre, es. Voilà, Smart). Foto in `img/primed-verticale.webp`, `img/primed-laterale.webp`, colori in `img/primed-colori.webp`.
+- **Prezzo 40 €/m²** per ogni pezzo fino a 3,22 m² (15/10/2026). Calcolo a righe larghezza × altezza; il cliente indica il tipo per ogni zanzariera.
+- **Posa 50 € a pezzo** fino a 3,22 m².
