@@ -1,10 +1,10 @@
-# Ogni 3 giorni aggiorna i reel di Instagram nella Home (script in progetto/strumenti/aggiorna_reels.py).
+# Una volta a settimana (lunedì) aggiorna i reel di Instagram nella Home (script in progetto/strumenti/aggiorna_reels.py).
 # Se qualcosa è cambiato salva la Home su main e Netlify la pubblica da solo.
 name: Aggiorna reel Instagram
 
 on:
   schedule:
-    - cron: "17 5 */3 * *"   # ogni 3 giorni (1, 4, 7… del mese) alle 5:17 UTC: circa 10 pubblicazioni Netlify al mese
+    - cron: "17 5 * * 1"   # ogni lunedì alle 5:17 UTC: circa 4 pubblicazioni Netlify al mese, per non consumare crediti
   workflow_dispatch:        # si può avviare anche a mano da GitHub > Actions
 
 permissions:
@@ -41,7 +41,7 @@ jobs:
             git push
           fi
 
-      # La chiave di Instagram dura 60 giorni: a ogni aggiornamento programmato (ogni 3 giorni) la rinnova.
+      # La chiave di Instagram dura 60 giorni: a ogni aggiornamento programmato (ogni settimana) la rinnova.
       # Per salvarla serve il segreto GH_PAT (token GitHub con permesso di scrittura sui segreti);
       # senza GH_PAT questo passaggio viene saltato e la chiave va rigenerata a mano ogni 60 giorni.
       - name: Rinnova la chiave di Instagram
