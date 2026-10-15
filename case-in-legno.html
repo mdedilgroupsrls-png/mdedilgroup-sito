@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case in legno: simulatore del preventivo chiavi in mano | MD Edil Group</title>
+<meta name="description" content="Scegli il modello di casa in legno e gli optional: montaggio, fondazione, impianti, pavimenti e finiture. Stima subito il costo indicativo, voce per voce.">
+<link rel="canonical" href="https://mdedilgroup.it/case-in-legno">
+<link rel="icon" type="image/png" href="/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Case in legno: simulatore del preventivo chiavi in mano | MD Edil Group">
+<meta property="og:description" content="Scegli il modello di casa in legno e gli optional: montaggio, fondazione, impianti, pavimenti e finiture. Stima subito il costo indicativo, voce per voce.">
+<meta property="og:url" content="https://mdedilgroup.it/case-in-legno">
+<meta property="og:image" content="https://mdedilgroup.it/img/m-a-frame.webp">
+<meta name="theme-color" content="#0E0D0B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+/* Simulatore case in legno: modello a sinistra/sopra, voci con descrizione apribile, totale sempre visibile */
+:root{--bg:#0E0D0B;--bg2:#171512;--line:#2A2722;--gold:#C9A24A;--gold2:#E2C373;--ink:#F3EFE7;--ink2:#D8D2C6;--mute:#8A8478;--pad:clamp(20px,5vw,72px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 'Manrope',sans-serif}
+a{color:var(--gold);text-decoration:none}a:hover{color:var(--gold2)}
+img{max-width:100%;display:block}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.eyebrow{margin:0 0 14px;font-size:12px;letter-spacing:.38em;color:var(--gold);font-weight:600;text-transform:uppercase}
+h1,h2,h3{font-family:'Urbanist',sans-serif;font-weight:400;margin:0}
+h1{font-size:clamp(34px,3.6vw,54px);line-height:1.08}
+h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
+.intro{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 64px;padding:56px 0 40px}
+.intro p{flex:1 1 380px;max-width:520px;margin:0;color:var(--ink2)}
+
+/* passo 1: scelta del modello */
+.models{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;padding:4px 0 18px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.mdl{flex:0 0 min(62vw,230px);scroll-snap-align:start;background:var(--bg2);border:1px solid var(--line);color:var(--ink);text-align:left;padding:0;cursor:pointer;font:inherit;transition:border-color .25s,transform .3s}
+.mdl:hover{border-color:var(--gold)}
+.mdl[aria-pressed="true"]{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.mdl img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.mdl span{display:block;padding:10px 12px 12px}
+.mdl b{display:block;font:600 17px 'Urbanist',sans-serif}
+.mdl small{display:block;color:var(--mute);font-size:12px}
+.mdl:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* passo 2: voci + riepilogo */
+.sim{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:40px;align-items:start;padding:40px 0 96px}
+.lines{border-top:1px solid var(--line)}
+.ln{border-bottom:1px solid var(--line);padding:16px 0}
+.row{display:flex;align-items:center;gap:14px}
+.row input[type=checkbox],.row input[type=radio]{width:20px;height:20px;accent-color:var(--gold);flex:0 0 auto;margin:0}
+.nm{flex:1 1 auto;min-width:0;background:none;border:0;color:var(--ink);font:500 16px 'Manrope',sans-serif;text-align:left;padding:0;cursor:pointer;display:flex;align-items:center;gap:8px}
+.nm .i{flex:0 0 auto;width:20px;height:20px;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font:600 12px/18px 'Manrope',sans-serif;text-align:center;transition:transform .25s}
+.nm[aria-expanded="true"] .i{transform:rotate(45deg)}
+.nm:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.pr{flex:0 0 auto;font:600 17px 'Urbanist',sans-serif;color:var(--gold2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ln.off .pr{color:var(--mute);text-decoration:line-through}
+.ln.fixed .pr{color:var(--ink)}
+.tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.desc{display:none;margin:12px 0 0 34px;padding:14px 16px;background:var(--bg2);border-left:2px solid var(--gold);color:var(--ink2);font-size:14px;line-height:1.6}
+.desc.on{display:block}
+.desc ul{margin:6px 0;padding-left:18px}
+.desc p{margin:6px 0}
+.sub{margin:10px 0 0 34px;display:flex;flex-direction:column;gap:10px}
+.sub label{display:flex;align-items:center;gap:12px;cursor:pointer}
+.sub .row{gap:12px}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{width:34px;height:34px;border:1px solid var(--gold);background:none;color:var(--gold);font-size:18px;cursor:pointer}
+.qty output{min-width:22px;text-align:center;font-weight:600}
+.area{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink2)}
+.area input{width:90px;padding:8px 10px;background:var(--bg);border:1px solid var(--line);color:var(--ink);font:inherit}
+.group{margin:34px 0 8px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+
+.sum{position:sticky;top:20px;background:var(--bg2);border:1px solid var(--gold);padding:26px}
+.sum h3{font-size:22px;margin-bottom:4px}
+.sum .mm{color:var(--mute);font-size:13px;margin-bottom:16px}
+.sum ul{list-style:none;margin:0 0 16px;padding:0;font-size:14px;max-height:46vh;overflow:auto}
+.sum li{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px solid var(--line)}
+.sum li span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.tot{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:6px}
+.tot b{font:600 clamp(26px,3vw,34px) 'Urbanist',sans-serif;color:var(--gold2);font-variant-numeric:tabular-nums}
+.note{font-size:12.5px;color:var(--mute);margin:12px 0 18px}
+.cta{display:block;text-align:center;background:var(--gold);color:var(--bg);padding:15px 18px;font-weight:600;font-size:13px;letter-spacing:.14em;margin-top:10px}
+.cta:hover{background:var(--gold2);color:var(--bg)}
+.cta.alt{background:none;border:1px solid var(--gold);color:var(--gold)}
+.mtot{display:none}
+@media (max-width:980px){.sim{grid-template-columns:1fr}.sum{position:static;scroll-margin-top:20px}
+ .mtot{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;align-items:center;justify-content:space-between;gap:12px;padding:12px 96px 12px var(--pad);background:rgba(14,13,11,.94);border-top:1px solid var(--gold);color:var(--ink);font-size:13px;backdrop-filter:blur(6px)}
+ .mtot b{font:600 20px 'Urbanist',sans-serif;color:var(--gold2);font-variant-numeric:tabular-nums}
+ body{padding-bottom:70px}}
+@media (max-width:600px){.desc,.sub{margin-left:0}.pr{font-size:15px}}
+</style>
+</head>
+<body>
+
+<header style="padding: 26px var(--pad) 0">
+<a href="/" aria-label="MD Edil Group, torna alla Home" style="display: flex; align-items: flex-end; color: #F3EFE7">
+<img src="/img/cc07e2f1120eb45d8438fc5d59d4b3e8.png" alt="" style="display: block; height: 64px; width: auto; flex: 0 0 auto">
+<span style="flex: 1 1 auto; min-width: 0; display: flex; justify-content: flex-start; border-bottom: 2px solid #C9A24A; padding: 0 24px 6px">
+<span style="font-family: 'Urbanist', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 42px); line-height: 1; letter-spacing: 0.16em; white-space: nowrap">MD EDIL GROUP</span>
+</span>
+</a>
+<nav aria-label="Menu principale" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 32px; padding: 18px 0; font-size: 13px; letter-spacing: 0.08em; font-weight: 500">
+<a href="/studio-tecnico" style="color: #F3EFE7">Studio tecnico</a>
+<a href="/interior-design" style="color: #F3EFE7">Interior design</a>
+<a href="/ristrutturazioni-interni" style="color: #F3EFE7">Ristrutturazioni interni</a>
+<a href="/ristrutturazioni-esterni" style="color: #F3EFE7">Ristrutturazioni esterni</a>
+<a href="#" style="color: #F3EFE7">Infissi e serramenti</a>
+<a href="/case-in-legno" style="color: #C9A24A" aria-current="page">Case in legno</a>
+<a href="#" style="color: #F3EFE7">Chi siamo</a>
+</nav>
+</header>
+
+<main class="wrap">
+<p style="margin: 40px 0 0; font-size: 12px; letter-spacing: 0.2em; color: #8A8478"><a href="/" style="color: #8A8478">HOME</a> / CASE IN LEGNO</p>
+
+<section class="intro">
+<div style="flex: 1 1 420px">
+<p class="eyebrow">Simulatore case in legno</p>
+<h1>Componi la tua casa in legno, voce per voce</h1>
+</div>
+<p>Scegli il modello, poi aggiungi o togli gli optional. Tocca il nome di ogni voce per leggere cosa comprende. Il totale si aggiorna subito; il preventivo definitivo arriva dopo il sopralluogo.</p>
+</section>
+
+<h2 style="font-size: 22px; margin-bottom: 14px">1. Scegli il modello</h2>
+<div class="models" id="models" role="group" aria-label="Modelli di casa in legno"></div>
+
+<section class="sim">
+<div>
+<h2 style="font-size: 22px; margin-bottom: 6px">2. Scegli gli optional</h2>
+<p style="margin: 0 0 18px; color: var(--mute); font-size: 14px">I prezzi cambiano per ogni modello. Tocca <span style="color: var(--gold)">+</span> accanto a una voce per vedere cosa è incluso.</p>
+<div class="lines" id="lines"></div>
+</div>
+<aside class="sum" id="riepilogo" aria-live="polite">
+<p class="eyebrow" style="margin-bottom: 8px">La tua stima</p>
+<h3 id="sName">–</h3>
+<div class="mm" id="sMq"></div>
+<ul id="sList"></ul>
+<div class="tot"><span>Totale indicativo</span><b id="sTot">–</b></div>
+<p class="note">Prezzi IVA inclusa. Stima indicativa: il preventivo definitivo viene confermato dopo il sopralluogo, la verifica del terreno e il progetto.</p>
+<a class="cta" id="sWa" href="https://wa.me/393282145266" target="_blank" rel="noopener">INVIA LA STIMA SU WHATSAPP</a>
+<a class="cta alt" href="/#contatti">RICHIEDI IL PREVENTIVO</a>
+</aside>
+</section>
+</main>
+<a class="mtot" href="#riepilogo"><span>Totale indicativo<br><span style="color:var(--mute)">Vedi il riepilogo</span></span><b id="mTot">–</b></a>
+
+<footer style="padding: 56px clamp(20px, 5vw, 72px) 40px; border-top: 1px solid #2A2722">
+<div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 28px">
+<img src="/img/cc07e2f1120eb45d8438fc5d59d4b3e8.png" alt="MD Edil Group" style="display: block; height: 52px; width: auto">
+<div style="display: flex; gap: 14px">
+<a href="https://www.facebook.com/" aria-label="Facebook" style="width: 48px; height: 48px; border: 1px solid #C9A24A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #C9A24A"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="fill: currentColor"><path d="M14 8.5V6.8c0-.8.5-1 1-1h2.4V2.2L14.2 2C10.8 2 10 4.4 10 6.2v2.3H7.5V12H10v10h4V12h3.2l.5-3.5H14z"></path></svg></a>
+<a href="https://www.instagram.com/md_edil_group/" aria-label="Instagram" style="width: 48px; height: 48px; border: 1px solid #C9A24A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #C9A24A"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" style="fill: currentColor; stroke: none"></circle></svg></a>
+<a href="https://www.tiktok.com/" aria-label="TikTok" style="width: 48px; height: 48px; border: 1px solid #C9A24A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #C9A24A"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="fill: currentColor"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.4 6.4 0 1 0 5.4 6.3V8.6a8 8 0 0 0 4.4 1.3V6.5c-2.5 0-4.4-2-4.4-4.5z"></path></svg></a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=MD+Edil+Group+Via+Po+22+Roma" aria-label="Google Business Profile" style="width: 48px; height: 48px; border: 1px solid #C9A24A; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #C9A24A"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="fill: currentColor"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.4z"></path><path d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"></path><path d="M6.4 14a6 6 0 0 1 0-3.9V7.5H3.1a10 10 0 0 0 0 9z"></path><path d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.9-2.9A9.7 9.7 0 0 0 12 2a10 10 0 0 0-8.9 5.5l3.3 2.6C7.2 7.7 9.4 5.9 12 5.9z"></path></svg></a>
+</div>
+</div>
+<div style="max-width: 1320px; margin: 28px auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: #8A8478">
+<span>MD EDIL GROUP S.R.L.S. · P.IVA 17112431006</span>
+<span>Sede legale: Via Monti Lepini 9, 00015 Monterotondo (RM) · Sede legale: Via Po 22, Roma</span>
+<a href="/privacy.html" style="color: #8A8478">Privacy · Cookie</a>
+</div>
+</footer>
+<a href="https://wa.me/393282145266?text=Buongiorno%2C%20vorrei%20informazioni%20per%20un%20progetto" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp" style="position: fixed; right: 22px; bottom: 22px; z-index: 50; width: 62px; height: 62px; border-radius: 50%; background: #25D366; color: #FFFFFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,0.45)"><svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true" style="fill: currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"></path></svg></a>
+
+<script>
+// Prezzi dal listino "Md Listino case legno chiavi in mano" (Prosto House Europe, 01.02.2026), IVA inclusa.
+// Ordine: kit, montaggio, laminazione, solar, pareti, elettrico, idrico, laminato, porte, aumento lunghezza (null = non disponibile), isol. 50, isol. 100, clima
+// cop = m² coperti (fondazione), utili = m² di pavimento proposti per le piastrelle. Dati del catalogo nella Home.
+const M=[
+ {n:"Barn Mini",img:"m-barn-mini",cop:27.7,ut:21.3,d:"27,7 m² coperti · 21,3 m² utili",p:[19950,5988,900,408,6390,6900,3528,1056,300,null,1440,2880,2000]},
+ {n:"Barn Light",img:"m-barn-light",cop:31,ut:23,d:"31 m² coperti · 23 m² utili",p:[20500,6150,948,450,6840,6900,3528,1512,300,null,1560,3120,2000]},
+ {n:"Barn House",img:"m-barn-house",cop:36.8,ut:27.5,d:"36,8 m² coperti · 27,5 m² utili + soppalco",p:[21600,7116.14,1041.06,494.18,8104.50,7577.37,3874.34,1937.17,658.90,3960,1680,3360,2196.34]},
+ {n:"Freya Smart",img:"m-freya-smart",cop:37,ut:26,d:"37 m² coperti · 26 m² utili + soppalco",p:[22900,7080,1032,552,9960,7650,3528,1836,600,4320,2040,4080,2000]},
+ {n:"A-frame",img:"m-a-frame",cop:48,ut:38,d:"48 m² coperti · 38 m² utili + soppalco",p:[23400,10497.20,1239.25,612.34,9622.42,8383.18,4286.36,2500.37,728.97,5280,1920,3840,2429.91]},
+ {n:"Barn Max Height",img:"m-barn-max-height",cop:36.8,ut:27.5,d:"36,8 m² coperti · 27,5 m² utili + soppalco",p:[27300,8190,984,492,9120,7650,3528,1764,600,4680,2040,4080,2000]},
+ {n:"Flat House (soffitto 2,2 m)",img:"m-flat-house",cop:72,ut:52,d:"72 m² coperti · 52 m² utili",p:[28600,9360,1860,816,13680,11700,4140,2448,900,7920,3000,6000,4000]},
+ {n:"Flat House (soffitto 2,7 m)",img:"m-flat-house",cop:72,ut:52,d:"72 m² coperti · 52 m² utili",p:[32600,10080,1860,816,14760,11700,4140,2448,900,8220,3540,7080,4000]},
+ {n:"A-Frame L",img:"m-a-frame-l",cop:58,ut:58,d:"58 m² coperti · 58 m² utili",p:[29000,10497.20,1239.25,612.34,9622.42,8383.18,4286.36,2500.37,728.97,5280,1920,3840,2429.91]},
+ {n:"Barn Double",img:"m-barn-double",cop:72,ut:55,d:"72 m² coperti · 55 m² utili + soppalco",p:[38000,12043.32,1838.19,887.40,15592.93,12360.25,4373.63,3327.76,950.79,7920,3240,6480,4225.73]},
+ {n:"Flat House 1.5",img:"m-flat-house-1-5",cop:108,ut:78,d:"108 m² coperti · 78 m² utili",p:[45950,16542,2880,1008,22860,15600,7560,3792,1200,12330,5280,10560,4000]},
+ {n:"Nord House",img:"m-nord-house",cop:92.5,ut:82,d:"92,5 m² coperti · 82 m² utili",p:[51000,18780,3720,1656,30840,22500,8568,5052,1200,7740,6120,12240,4000]},
+ {n:"Fjord",img:"m-fjord",cop:111,ut:130,d:"111 m² coperti · 130 m² utili su due piani",p:[61000,23400,4080,1860,32400,23400,13140,5844,2400,15360,6720,13440,6000]},
+ {n:"Flat Double",img:"m-flat-double",cop:108,ut:78,d:"108 m² coperti · 78 m² utili",p:[61700,18480,3720,1560,29520,22200,8568,5196,1500,16440,6960,13920,4000]},
+ {n:"Sherwood",img:"m-sherwood",cop:119,ut:98,d:"119 m² coperti · 98 m² utili",p:[64800,21240,4320,1896,33840,23550,13440,5916,2700,15360,6720,13440,6000]},
+ {n:"Norway",img:"m-norway",cop:85,ut:160,d:"85 m² coperti · 160 m² utili su due piani",p:[65600,31162.21,4804.17,2194.34,38757.99,25319.29,14217.76,8206.05,3246.06,16440,7200,14400,6492.13]},
+ {n:"Siver",img:"m-siver",cop:98,ut:160,d:"98 m² coperti · 160 m² utili su due piani",p:[71400,31042.65,4539.83,2073.60,36625.42,23926.15,13435.45,7754.53,3067.46,16440,7200,14400,6134.91]},
+ {n:"Montblanc",img:"m-montblanc",cop:115,ut:166,d:"115 m² coperti · 166 m² utili con soppalco",p:[77400,31065.30,4740.89,2220.73,35431.92,24640.15,14035.53,7984.66,3742.81,17040,7560,15120,6238.01]}
+];
+const FOND=230, POSA_PIASTRELLE=39, MASSETTO=40;
+
+// Descrizioni delle voci (testo del listino, con le modifiche indicate da Eugenio il 15/10/2026)
+const D={
+kit:`<p>Struttura della casa scelta nel catalogo, comprende:</p><ul>
+<li>struttura in legno della casa, travi piallate essiccate in camera, di varie sezioni</li>
+<li>pareti esterne: lamiera aggraffata 0,45 mm (produzione Slovacchia, Corea, Polonia) e tavole di conifere spessore 20 mm. Su richiesta è possibile modificare il tipo di finitura della facciata</li>
+<li>tetto: lamiera aggraffata 0,45 mm (produzione Slovacchia, Corea, Polonia)</li>
+<li>finestre con vetrocamera a due camere (tre vetri), profilo PVC a cinque camere da 70 mm (bianco)</li>
+<li>porte con vetrocamera a due camere (tre vetri), profilo PVC a cinque camere da 70 mm (bianco)</li>
+<li>membrana impermeabilizzante Strotex 1300 (o equivalente)</li>
+<li>isolamento termico (150 (250) mm – pareti e tetto; 200 (250) mm – pavimento), pannelli o rotoli di basalto IZOVAT non combustibili, termoisolanti, idrofobizzati, fonoassorbenti, con densità non inferiore a 30 kg/m³ (o equivalente)</li>
+<li>pellicola freno vapore Strotex AL90 (o equivalente)</li>
+<li>sottofondo del pavimento in pannelli OSB da 22 mm</li></ul>
+<p>I materiali delle pareti interne e delle finiture interne non sono inclusi nel kit della casa. La scala non è inclusa nell’offerta base. La vernice per la facciata esterna è fornita dal committente. Il costo della verniciatura della facciata non è incluso nell’offerta base: viene pagata separatamente in base alla superficie effettivamente verniciata, al prezzo di 4,5 € al metro quadrato.</p>`,
+mont:`<p>Si paga inoltre l’alloggio della squadra di montatori composta da 3–4 persone.</p><p>Incluso: montaggio del telaio portante, montaggio dell’impermeabilizzazione, montaggio della facciata esterna (metallo + legno), montaggio delle finestre, montaggio delle porte, montaggio dell’isolamento termico e della barriera al vapore, montaggio della rete di protezione contro i roditori.</p><p>Il montaggio delle pareti interne si paga separatamente in base alla superficie; il costo per il montaggio di 1 m² di pareti è di 35 € al metro quadrato.</p>`,
+fond:m=>`<p>Platea di fondazione in cemento armato, altezza 30 cm, calcolata sulla superficie coperta della casa: ${fmtN(m.cop)} m² × ${FOND} €/m².</p><p>Costo stimato: la cifra finale si conferma dopo il sopralluogo e la verifica del terreno.</p>`,
+lam:`<p>Laminazione delle finestre color antracite (è possibile la laminazione in altri colori).</p>`,
+sol:`<p>Tonalizzazione del vetro “Solar”.</p>`,
+par:`<p>Montaggio delle pareti divisorie secondo il progetto di base, posa dell’isolante e rivestimento di tutte le pareti in legno o cartongesso. Il prezzo include la manodopera e tutti i materiali necessari: travi in legno, isolante spessore 100 mm, membrana barriera al vapore, perline in legno (profilo tatranský) o cartongesso. Nel bagno viene effettuata la preparazione delle pareti e del pavimento per la posa di piastrelle e rivestimenti.</p><p>Esclusioni dal prezzo: il costo delle piastrelle e dei lavori di posa non è incluso. Le piastrelle sono fornite dal cliente. La posa delle piastrelle può essere effettuata previo accordo supplementare, a 39 €/m². La tinteggiatura delle pareti e i materiali per la pittura non sono inclusi. La vernice è fornita dal cliente. La tinteggiatura viene pagata separatamente in base alla superficie effettivamente verniciata, alla tariffa di 5 €/m². Qualsiasi modifica al tipo di finitura sarà concordata separatamente.</p>`,
+ele:`<p>L’impianto elettrico di base, secondo il progetto, include tutti i materiali necessari e l’esecuzione dei seguenti lavori:</p><ul>
+<li>installazione dei cavi elettrici</li>
+<li>installazione del quadro di distribuzione con interruttori automatici</li>
+<li>posa della tubazione per il cavo esterno di alimentazione</li>
+<li>installazione delle scatole per interruttori e prese (nel caso in cui le finiture interne vengano eseguite da noi)</li></ul>
+<p>Interruttori e prese elettriche (tipo BTicino) sono inclusi; i corpi illuminanti sono esclusi.</p><p>L’installazione del sistema di protezione contro i fulmini e il rilascio dei relativi certificati di verifica non sono inclusi nell’offerta base; il costo di tali lavori viene calcolato a parte. Il collegamento esterno viene effettuato sulla base di un accordo separato.</p>`,
+idr:`<p>L’installazione dell’impianto idrico e fognario include tutti i materiali necessari e l’esecuzione dei seguenti lavori:</p><ul>
+<li>installazione delle tubazioni dell’acqua secondo il progetto base</li>
+<li>installazione di rubinetti, tappi, ecc.</li>
+<li>installazione delle tubazioni fognarie secondo il progetto base</li>
+<li>verifica della tenuta del sistema sotto pressione</li></ul>
+<p>I protocolli per la messa in servizio dell’edificio vengono forniti con un costo aggiuntivo. L’installazione degli apparecchi sanitari ed elettrici può essere eseguita con un costo aggiuntivo, mentre tutti i componenti necessari sono forniti dal cliente. Il collegamento esterno viene effettuato sulla base di un accordo separato.</p>`,
+pav:`<p>Pavimenti interni in laminato: fornitura e posa in tutta la superficie della casa.</p><p>In alternativa puoi scegliere le piastrelle: posa a 39 €/m² (piastrelle fornite dal cliente) con la realizzazione del massetto a 40 €/m².</p>`,
+pia:`<p>Posa delle piastrelle a 39 €/m². Le piastrelle sono fornite dal cliente. Puoi correggere i metri quadri da piastrellare.</p>`,
+mas:`<p>Realizzazione del massetto sotto le piastrelle, 40 €/m², sugli stessi metri quadri della posa.</p>`,
+por:`<p>Porte interne, prezzo per un set fino a 190 €.</p><ul><li>le porte possono essere fornite dal cliente</li><li>costo di installazione per una porta a partire da 90 €</li></ul>`,
+cli:`<p>Predisposizione dell’impianto di climatizzazione caldo/freddo per un motore con 2 split.</p><p>Solo predisposizione: esclusa la fornitura e l’installazione del motore e degli split.</p>`,
+aum:`<p>Aumento della lunghezza della casa con passo di 130 centimetri. Il prezzo è per ogni modulo da 130 cm.</p>`,
+iso:`<p>Isolamento aggiuntivo di pareti e tetto, oltre a quello già compreso nel kit: 50 mm oppure 100 mm.</p>`
+};
+
+const fmtN=n=>n.toLocaleString('it-IT',{maximumFractionDigits:1});
+const eur=n=>Math.round(n).toLocaleString('it-IT')+' €';
+const st={m:0,on:{mont:1,fond:1,lam:0,sol:0,par:0,ele:0,idr:0,por:0,cli:0},pav:'no',mas:1,area:0,aum:0,iso:0};
+
+// voci: chiave, nome, indice prezzo nel listino
+const V=[
+ ['grp','Struttura e montaggio'],
+ ['kit','Kit di montaggio (struttura della casa)',0],
+ ['mont','Lavori di montaggio',1],
+ ['fond','Fondazione: platea in cemento armato',-1],
+ ['grp','Finestre'],
+ ['lam','Laminazione delle finestre – antracite',2],
+ ['sol','Tonalizzazione del vetro “Solar”',3],
+ ['grp','Interni e impianti'],
+ ['par','Montaggio delle pareti divisorie e finiture interne',4],
+ ['ele','Impianto elettrico di base',5],
+ ['idr','Impianto idrico e fognario',6],
+ ['pav','Pavimenti interni',7],
+ ['por','Porte interne',8],
+ ['cli','Predisposizione impianto di climatizzazione caldo/freddo',12],
+ ['grp','Altri optional'],
+ ['iso','Isolamento aggiuntivo di pareti e tetto',-1],
+ ['aum','Aumento della lunghezza (moduli da 130 cm)',9]
+];
+
+const models=document.getElementById('models'),lines=document.getElementById('lines');
+M.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.className='mdl';b.setAttribute('aria-pressed',i===st.m);
+ b.innerHTML=`<img src="/img/${m.img}.webp" alt="" loading="lazy"><span><b>${m.n}</b><small>${m.d}</small><small style="color:var(--gold2)">Struttura ${eur(m.p[0])}</small></span>`;
+ b.onclick=()=>{st.m=i;st.area=0;st.aum=0;models.querySelectorAll('.mdl').forEach((x,j)=>x.setAttribute('aria-pressed',j===i));draw()};models.append(b)});
+
+const btn=(k,label)=>`<button type="button" class="nm" aria-expanded="false" aria-controls="d-${k}" data-k="${k}"><span>${label}</span><span class="i" aria-hidden="true">+</span></button>`;
+function draw(){
+ const m=M[st.m];if(!st.area)st.area=m.ut;let h='';
+ V.forEach(([k,lab,ix])=>{
+  if(k==='grp'){h+=`<div class="group">${lab}</div>`;return}
+  const d=typeof D[k]==='function'?D[k](m):D[k];
+  if(k==='kit'){h+=`<div class="ln fixed"><div class="row"><input type="checkbox" checked disabled aria-label="Incluso">${btn(k,lab)}<span class="pr">${eur(m.p[0])}</span></div><div class="desc" id="d-${k}">${d}</div></div>`;return}
+  if(k==='fond'){const on=st.on.fond;h+=`<div class="ln ${on?'':'off'}"><div class="row"><input type="checkbox" data-t="fond" ${on?'checked':''} aria-label="${lab}">${btn(k,lab)}<span class="pr">${eur(m.cop*FOND)}</span></div><div class="desc" id="d-${k}">${d}</div></div>`;return}
+  if(k==='pav'){
+   h+=`<div class="ln"><div class="row"><span style="width:20px"></span>${btn(k,lab)}<span class="pr">${eur(pavCost(m))}</span></div><div class="desc" id="d-${k}">${d}</div>
+   <div class="sub" role="radiogroup" aria-label="Tipo di pavimento">
+    <label><input type="radio" name="pav" value="no" ${st.pav==='no'?'checked':''}> Non inclusi</label>
+    <label><input type="radio" name="pav" value="lam" ${st.pav==='lam'?'checked':''}> Laminato, fornitura e posa <span class="tag">${eur(m.p[7])}</span></label>
+    <label><input type="radio" name="pav" value="pia" ${st.pav==='pia'?'checked':''}> Piastrelle, solo posa <span class="tag">39 €/m²</span></label>`;
+   if(st.pav==='pia'){
+    h+=`<div class="area"><label for="area">m² da piastrellare</label><input id="area" type="number" min="1" step="0.5" value="${st.area}"></div>
+    <div class="row">${btn('pia','Posa delle piastrelle')}<span class="pr">${eur(st.area*POSA_PIASTRELLE)}</span></div><div class="desc" id="d-pia">${D.pia}</div>
+    <div class="row"><input type="checkbox" data-t="mas" ${st.mas?'checked':''} aria-label="Massetto">${btn('mas','Realizzazione del massetto')}<span class="pr">${eur(st.area*MASSETTO)}</span></div><div class="desc" id="d-mas">${D.mas}</div>`}
+   h+=`</div></div>`;return}
+  if(k==='iso'){
+   h+=`<div class="ln"><div class="row"><span style="width:20px"></span>${btn(k,lab)}<span class="pr">${eur(st.iso?m.p[st.iso===50?10:11]:0)}</span></div><div class="desc" id="d-${k}">${d}</div>
+   <div class="sub" role="radiogroup" aria-label="Isolamento aggiuntivo">
+    <label><input type="radio" name="iso" value="0" ${!st.iso?'checked':''}> Nessuno</label>
+    <label><input type="radio" name="iso" value="50" ${st.iso===50?'checked':''}> 50 mm <span class="tag">${eur(m.p[10])}</span></label>
+    <label><input type="radio" name="iso" value="100" ${st.iso===100?'checked':''}> 100 mm <span class="tag">${eur(m.p[11])}</span></label></div></div>`;return}
+  if(k==='aum'){
+   if(m.p[9]==null)return;
+   h+=`<div class="ln ${st.aum?'':'off'}"><div class="row"><span style="width:20px"></span>${btn(k,lab)}<span class="pr">${eur(st.aum*m.p[9])}</span></div><div class="desc" id="d-${k}">${d}<p>Per questo modello: ${eur(m.p[9])} a modulo.</p></div>
+   <div class="sub"><div class="qty"><button type="button" data-q="-1" aria-label="Togli un modulo">−</button><output>${st.aum}</output><button type="button" data-q="1" aria-label="Aggiungi un modulo">+</button><span class="tag">moduli</span></div></div></div>`;return}
+  const on=st.on[k];
+  h+=`<div class="ln ${on?'':'off'}"><div class="row"><input type="checkbox" data-t="${k}" ${on?'checked':''} aria-label="${lab}">${btn(k,lab)}<span class="pr">${eur(m.p[ix])}</span></div><div class="desc" id="d-${k}">${d}</div></div>`;
+ });
+ const open=[...lines.querySelectorAll('.desc.on')].map(x=>x.id);
+ lines.innerHTML=h;open.forEach(id=>{const d=document.getElementById(id);if(d){d.classList.add('on');const b=lines.querySelector(`[aria-controls="${id}"]`);if(b)b.setAttribute('aria-expanded','true')}});
+ summary();
+}
+function pavCost(m){return st.pav==='lam'?m.p[7]:st.pav==='pia'?st.area*(POSA_PIASTRELLE+(st.mas?MASSETTO:0)):0}
+function items(){
+ const m=M[st.m],r=[['Kit di montaggio (struttura)',m.p[0]]];
+ if(st.on.mont)r.push(['Lavori di montaggio',m.p[1]]);
+ if(st.on.fond)r.push(['Fondazione in platea',m.cop*FOND]);
+ [['lam','Laminazione finestre',2],['sol','Vetro “Solar”',3],['par','Pareti divisorie e finiture',4],['ele','Impianto elettrico',5],['idr','Impianto idrico e fognario',6]].forEach(([k,l,i])=>{if(st.on[k])r.push([l,m.p[i]])});
+ if(st.pav==='lam')r.push(['Pavimenti in laminato',m.p[7]]);
+ if(st.pav==='pia'){r.push([`Posa piastrelle (${fmtN(st.area)} m²)`,st.area*POSA_PIASTRELLE]);if(st.mas)r.push([`Massetto (${fmtN(st.area)} m²)`,st.area*MASSETTO])}
+ if(st.on.por)r.push(['Porte interne',m.p[8]]);
+ if(st.on.cli)r.push(['Predisposizione clima',m.p[12]]);
+ if(st.iso)r.push([`Isolamento aggiuntivo ${st.iso} mm`,m.p[st.iso===50?10:11]]);
+ if(st.aum&&m.p[9]!=null)r.push([`Aumento lunghezza × ${st.aum}`,st.aum*m.p[9]]);
+ return r;
+}
+function summary(){
+ const m=M[st.m],r=items(),t=r.reduce((s,x)=>s+x[1],0);
+ document.getElementById('sName').textContent=m.n;
+ document.getElementById('sMq').textContent=m.d;
+ document.getElementById('sList').innerHTML=r.map(([l,v])=>`<li><span>${l}</span><span>${eur(v)}</span></li>`).join('');
+ document.getElementById('sTot').textContent=eur(t);document.getElementById('mTot').textContent=eur(t);
+ const txt=`Buongiorno, ho fatto una simulazione sul sito per la casa in legno ${m.n}:\n`+r.map(([l,v])=>`- ${l}: ${eur(v)}`).join('\n')+`\nTotale indicativo: ${eur(t)} (IVA inclusa).\nVorrei ricevere un preventivo.`;
+ document.getElementById('sWa').href='https://wa.me/393282145266?text='+encodeURIComponent(txt);
+}
+lines.addEventListener('click',e=>{
+ const b=e.target.closest('.nm');if(b){const d=document.getElementById(b.getAttribute('aria-controls'));
+  // se si era aperta passandoci sopra col mouse, il clic la lascia aperta
+  if(b.dataset.auto){delete b.dataset.auto;return}
+  const on=!d.classList.contains('on');d.classList.toggle('on',on);b.setAttribute('aria-expanded',on);return}
+ const q=e.target.closest('[data-q]');if(q){st.aum=Math.max(0,Math.min(5,st.aum+ +q.dataset.q));draw()}
+});
+// col mouse la descrizione si apre passandoci sopra
+if(matchMedia('(hover:hover)').matches){
+ lines.addEventListener('mouseover',e=>{const b=e.target.closest('.nm');if(!b||b.dataset.h)return;b.dataset.h=1;const d=document.getElementById(b.getAttribute('aria-controls'));if(!d.classList.contains('on')){d.classList.add('on');b.setAttribute('aria-expanded','true');b.dataset.auto=1}});
+ lines.addEventListener('mouseout',e=>{const b=e.target.closest('.nm');if(!b||b.contains(e.relatedTarget))return;delete b.dataset.h;if(b.dataset.auto){delete b.dataset.auto;const d=document.getElementById(b.getAttribute('aria-controls'));d.classList.remove('on');b.setAttribute('aria-expanded','false')}});
+}
+lines.addEventListener('change',e=>{
+ const t=e.target;
+ if(t.dataset.t==='mas')st.mas=t.checked?1:0;
+ else if(t.dataset.t)st.on[t.dataset.t]=t.checked?1:0;
+ else if(t.name==='pav')st.pav=t.value;
+ else if(t.name==='iso')st.iso=+t.value;
+ else if(t.id==='area'){st.area=Math.max(1,+t.value||1)}
+ draw();
+});
+// modello passato dal catalogo della Home: /case-in-legno?modello=barn-mini
+const q=new URLSearchParams(location.search).get('modello');
+if(q){const i=M.findIndex(m=>m.img==='m-'+q);if(i>=0){st.m=i;models.querySelectorAll('.mdl').forEach((x,j)=>x.setAttribute('aria-pressed',j===i));requestAnimationFrame(()=>{const b=models.children[i];models.scrollLeft=b.offsetLeft-20})}}
+draw();
+</script>
+</body>
+</html>

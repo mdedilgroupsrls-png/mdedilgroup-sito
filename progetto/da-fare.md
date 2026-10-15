@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
+- [ ] Simulatore case in legno (15/10/2026, sul branch `lavori-in-corso`): da confermare con Eugenio 1) A-Frame L usa per ora gli optional dell'Aframe 49 m²; 2) Mini Barn Boutique (prezzo già chiavi in mano) escluso dal simulatore; 3) aumento della lunghezza: per ora solo il prezzo del modulo, senza ricalcolare le altre voci
 - [ ] Dal 15/10/2026 le modifiche si salvano sul branch `lavori-in-corso` (Netlify non lo pubblica, nessun credito usato). Si uniscono a `main`, e quindi vanno online, **solo quando Eugenio dice di aggiornare il sito**
 - [ ] **Netlify: tornare al piano Free entro il 12/11/2026.** Eugenio fa l'upgrade il 15/10/2026 solo per un mese. Promemoria programmati in chat per il 9/11 e il 12/11. Da spuntare solo quando Eugenio conferma con una foto che il piano è "Free" (https://app.netlify.com/teams/mdedilgroupsrls/billing)
 - [ ] **Netlify fermo (15/10/2026):** il piano gratuito ha finito i crediti per le pubblicazioni (troppe pubblicazioni il 14-15/10, una per ogni piccola modifica). Online è rimasta la versione `c80a8f9`; tutte le modifiche successive sono su GitHub ma non pubblicate. Si riparte con il nuovo ciclo (verso il 12/11) o passando a un piano a pagamento; dopo, se non parte da solo, Netlify → Deploys → "Trigger deploy". **Regola da ora: raccogliere le modifiche e pubblicare su `main` una sola volta a fine sessione.**
