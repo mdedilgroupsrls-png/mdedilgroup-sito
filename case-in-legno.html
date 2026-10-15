@@ -193,7 +193,8 @@ const M=[
 const FOND=230, POSA_PIASTRELLE=39, MASSETTO=40;
 // Trasporto: km stradali stimati fino al capoluogo di provincia; 1,50 €/km fino a 80 m², 3 €/km oltre (fino a 170 m²)
 const KM={"Abruzzo": {"L'Aquila": 2320, "Chieti": 2330, "Pescara": 2310, "Teramo": 2280}, "Basilicata": {"Matera": 2640, "Potenza": 2610}, "Calabria": {"Catanzaro": 2890, "Cosenza": 2820, "Crotone": 2880, "Reggio Calabria": 2980, "Vibo Valentia": 2910}, "Campania": {"Avellino": 2550, "Benevento": 2520, "Caserta": 2520, "Napoli": 2550, "Salerno": 2580}, "Emilia-Romagna": {"Bologna": 2080, "Ferrara": 2020, "Forlì-Cesena": 2080, "Modena": 2090, "Parma": 2130, "Piacenza": 2160, "Ravenna": 2050, "Reggio Emilia": 2110, "Rimini": 2080}, "Friuli-Venezia Giulia": {"Gorizia": 1780, "Pordenone": 1830, "Trieste": 1830, "Udine": 1780}, "Lazio": {"Frosinone": 2430, "Latina": 2460, "Rieti": 2320, "Roma": 2400, "Viterbo": 2330}, "Liguria": {"Genova": 2280, "Imperia": 2410, "La Spezia": 2240, "Savona": 2330}, "Lombardia": {"Bergamo": 2120, "Brescia": 2080, "Como": 2180, "Cremona": 2130, "Lecco": 2150, "Lodi": 2160, "Mantova": 2060, "Milano": 2180, "Monza e Brianza": 2170, "Pavia": 2200, "Sondrio": 2090, "Varese": 2200}, "Marche": {"Ancona": 2130, "Ascoli Piceno": 2250, "Fermo": 2200, "Macerata": 2180, "Pesaro e Urbino": 2100}, "Molise": {"Campobasso": 2450, "Isernia": 2440}, "Piemonte": {"Alessandria": 2270, "Asti": 2310, "Biella": 2290, "Cuneo": 2410, "Novara": 2240, "Torino": 2350, "Verbano-Cusio-Ossola": 2230, "Vercelli": 2270}, "Puglia": {"Bari": 2580, "Barletta-Andria-Trani": 2540, "Brindisi": 2700, "Foggia": 2490, "Lecce": 2750, "Taranto": 2690}, "Sardegna": {"Cagliari": 2640, "Nuoro": 2480, "Oristano": 2570, "Sassari": 2500, "Sud Sardegna": 2640}, "Sicilia": {"Agrigento": 3080, "Caltanissetta": 3050, "Catania": 3060, "Enna": 3040, "Messina": 2970, "Palermo": 2960, "Ragusa": 3140, "Siracusa": 3130, "Trapani": 2980}, "Toscana": {"Arezzo": 2190, "Firenze": 2180, "Grosseto": 2320, "Livorno": 2260, "Lucca": 2220, "Massa-Carrara": 2220, "Pisa": 2240, "Pistoia": 2180, "Prato": 2170, "Siena": 2230}, "Trentino-Alto Adige": {"Bolzano": 1930, "Trento": 1960}, "Umbria": {"Perugia": 2230, "Terni": 2300}, "Valle d'Aosta": {"Aosta": 2360}, "Veneto": {"Belluno": 1850, "Padova": 1940, "Rovigo": 1990, "Treviso": 1890, "Venezia": 1910, "Verona": 2010, "Vicenza": 1960}};
-const kmRate=m=>m.lm>80?3:1.5;
+// la tariffa dipende dai m² totali caricati: anche due case piccole fino a 80 m² in tutto viaggiano insieme
+const kmRate=m=>{const q=m.lm*st.n;return q<=80?1.5:q<=170?3:null};
 
 // Descrizioni delle voci (testo del listino, con le modifiche indicate da Eugenio il 15/10/2026)
 const D={
@@ -231,17 +232,18 @@ mas:`<p>Realizzazione del massetto sotto le piastrelle, 40 €/m², sugli stessi
 por:`<p>Porte interne, prezzo per un set fino a 190 €.</p><ul><li>le porte possono essere fornite dal cliente</li><li>costo di installazione per una porta a partire da 90 €</li></ul>`,
 cli:`<p>Predisposizione dell’impianto di climatizzazione per riscaldamento e raffrescamento: motore con due split, solo predisposizione.</p><p>Esclusa la fornitura e l’installazione del motore e degli split.</p>`,
 aum:`<p>Aumento della lunghezza della casa con passo di 130 centimetri. Il prezzo è per ogni modulo da 130 cm.</p>`,
-tra:m=>`<p>Trasporto della casa fino al cantiere, calcolato in base alla provincia scelta.</p><p>${m.lm>80?'Per questo modello servono due viaggi.':'Per questo modello basta un viaggio.'} Le case fino a 80 m² viaggiano con un solo trasporto, quelle più grandi (fino a 170 m²) con due.</p>`,
+tra:m=>`<p>Trasporto fino al cantiere, calcolato in base alla provincia scelta e ai metri quadri totali da trasportare.</p><p>Fino a 80 m² in tutto basta un viaggio, anche con due case piccole; da 80 a 170 m² servono due viaggi. Oltre i 170 m² il trasporto si concorda nel preventivo.</p>`,
 iso:`<p>Isolamento aggiuntivo di pareti e tetto, oltre a quello già compreso nel kit: 50 mm oppure 100 mm.</p>`
 };
 
 const fmtN=n=>n.toLocaleString('it-IT',{maximumFractionDigits:1});
 const eur=n=>Math.round(n).toLocaleString('it-IT')+' €';
-const st={prov:'',m:1,on:{mont:1,fond:1,lam:0,sol:0,par:0,ele:0,idr:0,por:0,cli:0},pav:'no',mas:1,area:0,aum:0,iso:0};
+const st={n:1,prov:'',m:1,on:{mont:1,fond:1,lam:0,sol:0,par:0,ele:0,idr:0,por:0,cli:0},pav:'no',mas:1,area:0,aum:0,iso:0};
 
 // voci: chiave, nome, indice prezzo nel listino
 const V=[
  ['grp','Struttura e montaggio'],
+ ['qta','Numero di case',-1],
  ['kit','Kit di montaggio (struttura della casa)',0],
  ['mont','Lavori di montaggio',1],
  ['fond','Fondazione: platea in cemento armato',-1],
@@ -296,8 +298,10 @@ function draw(){
     <label><input type="radio" name="iso" value="0" ${!st.iso?'checked':''}> Nessuno</label>
     <label><input type="radio" name="iso" value="50" ${st.iso===50?'checked':''}> 50 mm <span class="tag">${eur(m.p[10])}</span></label>
     <label><input type="radio" name="iso" value="100" ${st.iso===100?'checked':''}> 100 mm <span class="tag">${eur(m.p[11])}</span></label></div></div>`;return}
+  if(k==='qta'){
+   h+=`<div class="ln"><div class="row"><span style="width:20px"></span><span class="nm" style="cursor:default">${lab} di questo modello</span><div class="qty"><button type="button" data-n="-1" aria-label="Una casa in meno">−</button><output>${st.n}</output><button type="button" data-n="1" aria-label="Una casa in più">+</button></div></div>${st.n>1?'<p class="tag" style="margin:8px 0 0 34px">I prezzi delle voci sono per una casa; nel riepilogo sono moltiplicati per '+st.n+'.</p>':''}</div>`;return}
   if(k==='tra'){
-   h+=`<div class="ln ${st.prov?'':'off'}"><div class="row"><span style="width:20px"></span>${btn(k,lab)}<span class="pr">${st.prov?eur(traCost(m)):'–'}</span></div><div class="desc" id="d-${k}">${d}</div>
+   h+=`<div class="ln ${st.prov?'':'off'}"><div class="row"><span style="width:20px"></span>${btn(k,lab)}<span class="pr">${!st.prov?'–':traCost(m)==null?'Da concordare':eur(traCost(m))}</span></div><div class="desc" id="d-${k}">${d}</div>
    <div class="sub"><label class="area" for="prov">Provincia del cantiere</label><select id="prov" class="sel">${PROV}</select></div></div>`;return}
   if(k==='aum'){
    if(m.p[9]==null)return;
@@ -311,7 +315,7 @@ function draw(){
  summary();
 }
 const PROV='<option value="">Scegli la provincia…</option><optgroup label="Abruzzo"><option>L\'Aquila</option><option>Chieti</option><option>Pescara</option><option>Teramo</option></optgroup><optgroup label="Basilicata"><option>Matera</option><option>Potenza</option></optgroup><optgroup label="Calabria"><option>Catanzaro</option><option>Cosenza</option><option>Crotone</option><option>Reggio Calabria</option><option>Vibo Valentia</option></optgroup><optgroup label="Campania"><option>Avellino</option><option>Benevento</option><option>Caserta</option><option>Napoli</option><option>Salerno</option></optgroup><optgroup label="Emilia-Romagna"><option>Bologna</option><option>Ferrara</option><option>Forlì-Cesena</option><option>Modena</option><option>Parma</option><option>Piacenza</option><option>Ravenna</option><option>Reggio Emilia</option><option>Rimini</option></optgroup><optgroup label="Friuli-Venezia Giulia"><option>Gorizia</option><option>Pordenone</option><option>Trieste</option><option>Udine</option></optgroup><optgroup label="Lazio"><option>Frosinone</option><option>Latina</option><option>Rieti</option><option>Roma</option><option>Viterbo</option></optgroup><optgroup label="Liguria"><option>Genova</option><option>Imperia</option><option>La Spezia</option><option>Savona</option></optgroup><optgroup label="Lombardia"><option>Bergamo</option><option>Brescia</option><option>Como</option><option>Cremona</option><option>Lecco</option><option>Lodi</option><option>Mantova</option><option>Milano</option><option>Monza e Brianza</option><option>Pavia</option><option>Sondrio</option><option>Varese</option></optgroup><optgroup label="Marche"><option>Ancona</option><option>Ascoli Piceno</option><option>Fermo</option><option>Macerata</option><option>Pesaro e Urbino</option></optgroup><optgroup label="Molise"><option>Campobasso</option><option>Isernia</option></optgroup><optgroup label="Piemonte"><option>Alessandria</option><option>Asti</option><option>Biella</option><option>Cuneo</option><option>Novara</option><option>Torino</option><option>Verbano-Cusio-Ossola</option><option>Vercelli</option></optgroup><optgroup label="Puglia"><option>Bari</option><option>Barletta-Andria-Trani</option><option>Brindisi</option><option>Foggia</option><option>Lecce</option><option>Taranto</option></optgroup><optgroup label="Sardegna"><option>Cagliari</option><option>Nuoro</option><option>Oristano</option><option>Sassari</option><option>Sud Sardegna</option></optgroup><optgroup label="Sicilia"><option>Agrigento</option><option>Caltanissetta</option><option>Catania</option><option>Enna</option><option>Messina</option><option>Palermo</option><option>Ragusa</option><option>Siracusa</option><option>Trapani</option></optgroup><optgroup label="Toscana"><option>Arezzo</option><option>Firenze</option><option>Grosseto</option><option>Livorno</option><option>Lucca</option><option>Massa-Carrara</option><option>Pisa</option><option>Pistoia</option><option>Prato</option><option>Siena</option></optgroup><optgroup label="Trentino-Alto Adige"><option>Bolzano</option><option>Trento</option></optgroup><optgroup label="Umbria"><option>Perugia</option><option>Terni</option></optgroup><optgroup label="Valle d\'Aosta"><option>Aosta</option></optgroup><optgroup label="Veneto"><option>Belluno</option><option>Padova</option><option>Rovigo</option><option>Treviso</option><option>Venezia</option><option>Verona</option><option>Vicenza</option></optgroup>';
-function traCost(m){if(!st.prov)return 0;for(const r in KM)if(KM[r][st.prov]!=null)return KM[r][st.prov]*kmRate(m);return 0}
+function traCost(m){if(!st.prov)return 0;const k=kmRate(m);if(k==null)return null;for(const r in KM)if(KM[r][st.prov]!=null)return KM[r][st.prov]*k;return 0}
 function pavCost(m){return st.pav==='lam'?m.p[7]:st.pav==='pia'?st.area*(POSA_PIASTRELLE+(st.mas?MASSETTO:0)):0}
 function items(){
  const m=M[st.m];if(m.chiavi)return [['Casa chiavi in mano',m.chiavi]];
@@ -325,16 +329,17 @@ function items(){
  if(st.on.cli)r.push(['Predisposizione clima',m.p[12]]);
  if(st.iso)r.push([`Isolamento aggiuntivo ${st.iso} mm`,m.p[st.iso===50?10:11]]);
  if(st.aum&&m.p[9]!=null)r.push([`Aumento lunghezza × ${st.aum}`,st.aum*m.p[9]]);
- if(st.prov)r.push([`Trasporto fino a ${st.prov}`,traCost(m)]);
- return r;
+ const n=st.n,out=n>1?r.map(([l,v])=>[l+' × '+n,v*n]):r;
+ if(st.prov){const t=traCost(m);out.push([`Trasporto fino a ${st.prov}`,t])}
+ return out;
 }
 function summary(){
- const m=M[st.m],r=items(),t=r.reduce((s,x)=>s+x[1],0);
- document.getElementById('sName').textContent=m.n;
+ const m=M[st.m],r=items(),t=r.reduce((s,x)=>s+(x[1]||0),0),ev=v=>v==null?'da concordare':eur(v);
+ document.getElementById('sName').textContent=(st.n>1&&!m.chiavi?st.n+' × ':'')+m.n;
  document.getElementById('sMq').textContent=m.d;
- document.getElementById('sList').innerHTML=r.map(([l,v])=>`<li><span>${l}</span><span>${eur(v)}</span></li>`).join('');
+ document.getElementById('sList').innerHTML=r.map(([l,v])=>`<li><span>${l}</span><span>${ev(v)}</span></li>`).join('');
  document.getElementById('sTot').textContent=eur(t);document.getElementById('mTot').textContent=eur(t);
- const txt=`Buongiorno, ho fatto una simulazione sul sito per la casa in legno ${m.n}:\n`+r.map(([l,v])=>`- ${l}: ${eur(v)}`).join('\n')+`\nTotale indicativo: ${eur(t)} (IVA inclusa).\nVorrei ricevere un preventivo.`;
+ const txt=`Buongiorno, ho fatto una simulazione sul sito per ${st.n>1&&!m.chiavi?st.n+' case in legno':'la casa in legno'} ${m.n}:\n`+r.map(([l,v])=>`- ${l}: ${ev(v)}`).join('\n')+`\nTotale indicativo: ${eur(t)} (IVA inclusa).\nVorrei ricevere un preventivo.`;
  document.getElementById('sWa').href='https://wa.me/393282145266?text='+encodeURIComponent(txt);
 }
 lines.addEventListener('click',e=>{
@@ -342,6 +347,7 @@ lines.addEventListener('click',e=>{
   // se si era aperta passandoci sopra col mouse, il clic la lascia aperta
   if(b.dataset.auto){delete b.dataset.auto;return}
   const on=!d.classList.contains('on');d.classList.toggle('on',on);b.setAttribute('aria-expanded',on);return}
+ const nb=e.target.closest('[data-n]');if(nb){st.n=Math.max(1,Math.min(10,st.n+ +nb.dataset.n));draw();return}
  const q=e.target.closest('[data-q]');if(q){st.aum=Math.max(0,Math.min(5,st.aum+ +q.dataset.q));draw()}
 });
 // col mouse la descrizione si apre passandoci sopra
