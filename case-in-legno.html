@@ -216,7 +216,7 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 <ol class="m3d-legend" id="m3dLegend">
 <li data-i="0"><b>Copertura in lamiera aggraffata</b> da 0,45 mm</li>
 <li data-i="1"><b>Membrana superdiffusiva</b> Strotex 1300, su tetto e pareti</li>
-<li data-i="2"><b>Isolante in lana minerale di basalto</b>, densità 30 kg/m³: pareti e pavimento 15 cm, soffitto 20 cm</li>
+<li data-i="2"><b>Isolante in lana minerale di basalto (lana di roccia)</b>: pareti e pavimento 15 cm, soffitto 20 cm. Pannelli non combustibili, termoisolanti, idrorepellenti e fonoassorbenti, densità non inferiore a 30 kg/m³.</li>
 <li data-i="3"><b>Barriera al vapore</b> Strotex AL 90 con foglio di alluminio</li>
 <li data-i="4"><b>Triplo vetro a risparmio energetico</b> con rivestimento Solar</li>
 <li data-i="5"><b>Pannelli OSB 3</b> da 22 mm per il sottofondo del pavimento</li>
@@ -479,7 +479,10 @@ draw();
   const house=new THREE.Group();scene.add(house);
   const M=(c,o)=>new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:.75,metalness:0},o||{}));
   const wood=M(0xD6A766),woodDark=M(0xB8874A),osb=M(0xB07E45,{roughness:.95}),roof=M(0x2B2D30,{metalness:.55,roughness:.45}),
-   ins=M(0x9A9C93,{roughness:1}),memb=M(0xF1F1EE,{transparent:true,opacity:.82,side:THREE.DoubleSide}),
+   ins=M(0xffffff,{roughness:1,map:(()=>{ // texture fibrosa della lana di roccia
+     const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d');x.fillStyle='#8C8D74';x.fillRect(0,0,128,128);
+     for(let i=0;i<900;i++){x.strokeStyle=`rgba(${Math.random()<.5?'214,212,190':'78,80,64'},${.15+Math.random()*.35})`;x.lineWidth=.6+Math.random();x.beginPath();const a=Math.random()*128,b=Math.random()*128;x.moveTo(a,b);x.lineTo(a+(Math.random()-.5)*26,b+(Math.random()-.5)*6);x.stroke()}
+     const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(2,2);return t})()}),memb=M(0xF1F1EE,{transparent:true,opacity:.82,side:THREE.DoubleSide}),
    vap=M(0xC8CDD2,{metalness:.7,roughness:.3,side:THREE.DoubleSide}),frame=M(0x161616,{metalness:.3,roughness:.5}),
    glass=M(0x9FC3D1,{transparent:true,opacity:.28,metalness:.2,roughness:.05,side:THREE.DoubleSide});
   // trave tra due punti
@@ -510,8 +513,14 @@ draw();
   [.8,1.6].forEach(y=>beam([-W,F+y,-L],[W,F+y,-L],.07,.07,wood));
   beam([-W,F+H,L],[W,F+H,L],.1,.12,wood);
   // isolante grigio nei vani della parete destra e del timpano di fondo
-  for(let z=-L+.3;z<0;z+=.6)box(W,F+H*.68,z,.1,H*.62,.5,ins);
-  box(0,F+H+.45,-L,2.6,.8,.1,ins);
+  for(let z=-L+.3;z<0;z+=.6)box(W,F+H*.5,z,.14,H-.1,.5,ins); // parete destra: 15 cm
+  for(let z=.3;z<L;z+=.6)box(-W,F+H*.32,z,.14,H*.6,.5,ins); // parete sinistra, in parte
+  // tetto: pannelli da 20 cm tra i puntoni della falda destra, davanti alla lamiera
+  for(let z=-.2+.22;z<1.8;z+=.45){const a=new THREE.Vector3(W+.1,F+H-.05,0),b=new THREE.Vector3(.25,F+R-.2,0),len=a.distanceTo(b);
+   const m=new THREE.Mesh(new THREE.BoxGeometry(len,.2,.38),ins);m.position.set((a.x+b.x)/2,(a.y+b.y)/2-.04,z);m.rotation.z=Math.atan2(b.y-a.y,b.x-a.x);house.add(m)}
+  // pacco di pannelli di lana di roccia appoggiato accanto alla casa
+  for(let i=0;i<4;i++){const m=box(-W-1.3,G+.12+i*.16,-1.6+i*.03,1.2,.15,.62,ins);m.rotation.y=i*.06}
+  box(0,F+H+.45,-L,2.6,.8,.14,ins);
   // barriera al vapore all'interno della parete sinistra
   const vb=new THREE.Mesh(new THREE.PlaneGeometry(2.4,H-.1),vap);vb.position.set(-W+.09,F+H/2,-1.4);vb.rotation.y=Math.PI/2;house.add(vb);
   // capriate fitte, catene e colmo
