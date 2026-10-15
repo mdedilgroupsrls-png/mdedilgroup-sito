@@ -42,3 +42,4 @@ MD Edil Group vende ristrutturazioni di classe **premium / lusso** e cerca clien
 - Nelle opere edili la **fornitura** di pavimenti, rivestimenti, sanitari e accessori è **esclusa**: sono incluse posa e lavorazioni.
 - Nei punti luce e prese è incluso il frutto tipo **BTicino**.
 - I preventivi sono sempre stimati e vanno confermati dopo il sopralluogo.
+- **Case in legno su misura** (15/10/2026): oltre ai modelli del catalogo si realizzano strutture personalizzate (modifiche a dimensioni, spazi, altezze, aperture, finiture, o progetto nuovo) con preventivo dedicato.
