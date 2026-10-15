@@ -66,7 +66,7 @@
         // conserva campo attivo e cursore durante il ridisegno
         var act = document.activeElement, key = null, sel = null;
         if (act && host.contains(act) && act.closest('label')) {
-          key = act.closest('label').textContent.trim().slice(0, 40);
+          key = act.closest('label').firstChild.textContent.trim().slice(0, 40);
           try { sel = act.selectionStart; } catch (e) {}
         }
         var frag = tpl.content.cloneNode(true);
@@ -75,7 +75,7 @@
         if (key) {
           var labels = host.querySelectorAll('label');
           for (var i = 0; i < labels.length; i++) {
-            if (labels[i].textContent.trim().slice(0, 40) === key) {
+            if (labels[i].firstChild && labels[i].firstChild.textContent.trim().slice(0, 40) === key) {
               var inp = labels[i].querySelector('input');
               if (inp) { inp.focus(); try { if (sel != null) inp.setSelectionRange(sel, sel); } catch (e) {} }
               break;

@@ -27,6 +27,8 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 .inp:focus{outline:2px solid #C9A24A;outline-offset:1px}
 .hint{font-size:12px;font-weight:400;color:#8A8478}
 .pills{display:flex;flex-wrap:wrap;gap:10px}
+.pz{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding-top:8px;border-top:1px dashed #2A2722;font-size:12.5px;font-weight:400;color:#8A8478;max-width:560px}
+.pz b{font-family:'Urbanist',sans-serif;font-size:17px;font-weight:600;color:#E2C373;white-space:nowrap;font-variant-numeric:tabular-nums}
 .pill{min-height:44px;padding:10px 18px;background:transparent;border:1px solid #3A362F;color:#D8D2C6;font:inherit;font-size:14px;font-weight:500;cursor:pointer}
 .pill:hover{border-color:#C9A24A}
 .pill[aria-pressed="true"]{background:#C9A24A;border-color:#C9A24A;color:#0E0D0B;font-weight:600}
@@ -102,59 +104,60 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 <fieldset class="grp">
 <legend class="lg"><span class="nr">01</span>L’immobile</legend>
 <label class="fld">Superficie interna (m²)<input class="inp" type="number" min="20" max="1000" value="{{mq}}" onChange="{{setMq}}"></label>
-<div class="fld">A che piano si trova?<div class="pills"><sc-for list="{{pianoOpts}}" as="o" hint-placeholder-count="4"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div></div>
-<div class="fld">È in centro storico o in ZTL?<div class="pills"><sc-for list="{{centroOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div></div>
-<div class="fld">Livello di finiture<div class="pills"><sc-for list="{{finOpts}}" as="o" hint-placeholder-count="3"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div></div>
+<div class="fld">A che piano si trova?<div class="pills"><sc-for list="{{pianoOpts}}" as="o" hint-placeholder-count="4"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.tiro}}</span><b>{{v.tiro}}</b></span></div>
+<div class="fld">È in centro storico o in ZTL?<div class="pills"><sc-for list="{{centroOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.centro}}</span><b>{{v.centro}}</b></span></div>
+<div class="fld">Livello di finiture<div class="pills"><sc-for list="{{finOpts}}" as="o" hint-placeholder-count="3"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.fin}}</span><b>{{v.fin}}</b></span></div>
 </fieldset>
 
 <fieldset class="grp">
 <legend class="lg"><span class="nr">02</span>Demolizioni e opere murarie</legend>
-<div class="fld">Rimozione dei pavimenti esistenti<div class="pills"><sc-for list="{{pavRimOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div></div>
-<div class="fld">Demolizione e rifacimento del massetto<div class="pills"><sc-for list="{{massOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div></div>
+<div class="fld">Rimozione dei pavimenti esistenti<div class="pills"><sc-for list="{{pavRimOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.pavRim}}</span><b>{{v.pavRim}}</b></span></div>
+<div class="fld">Demolizione e rifacimento del massetto<div class="pills"><sc-for list="{{massOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.mass}}</span><b>{{v.mass}}</b></span></div>
 <div class="row2">
-<label class="fld">Tramezzi da demolire (m² di parete)<input class="inp" type="number" min="0" value="{{demTram}}" onChange="{{setDemTram}}"><span class="hint">Lunghezza × altezza: 4 m × 2,7 m ≈ 11 m²</span></label>
-<label class="fld">Nuovi tramezzi (m² di parete)<input class="inp" type="number" min="0" value="{{nuoviTram}}" onChange="{{setNuoviTram}}"><span class="hint">In lastre tipo Aquapanel o Siniat, sp. 8 cm, finiti</span></label>
+<label class="fld">Tramezzi da demolire (m² di parete)<input class="inp" type="number" min="0" value="{{demTram}}" onChange="{{setDemTram}}"><span class="pz"><span>{{u.demTram}}</span><b>{{v.demTram}}</b></span><span class="hint">Lunghezza × altezza: 4 m × 2,7 m ≈ 11 m²</span></label>
+<label class="fld">Nuovi tramezzi (m² di parete)<input class="inp" type="number" min="0" value="{{nuoviTram}}" onChange="{{setNuoviTram}}"><span class="pz"><span>{{u.nuoviTram}}</span><b>{{v.nuoviTram}}</b></span><span class="hint">In lastre tipo Aquapanel o Siniat, sp. 8 cm, finiti</span></label>
 </div>
-<label class="fld">Controsoffitti in cartongesso (m²)<input class="inp" type="number" min="0" value="{{controsoffitti}}" onChange="{{setControsoffitti}}"></label>
+<label class="fld">Controsoffitti in cartongesso (m²)<input class="inp" type="number" min="0" value="{{controsoffitti}}" onChange="{{setControsoffitti}}"><span class="pz"><span>{{u.controsoffitti}}</span><b>{{v.controsoffitti}}</b></span></label>
 </fieldset>
 
 <fieldset class="grp">
 <legend class="lg"><span class="nr">03</span>Impianti</legend>
 <p class="hint" style="margin: 0; font-size: 13px; color: #C9A24A">Tutti i nostri impianti sono realizzati da tecnici abilitati e consegnati con dichiarazione di conformità (DM 37/08).</p>
-<div class="fld">Impianto elettrico<div class="pills"><sc-for list="{{elOpts}}" as="o" hint-placeholder-count="3"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="hint">Rifacimento completo: circa {{punti}} punti luce e prese con frutti tipo BTicino inclusi, assistenza muraria e quadro elettrico</span></div>
-<div class="fld">Rifacimento della rete idrica<div class="pills"><sc-for list="{{idrOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div></div>
-<div class="fld">Impianto della cucina<div class="pills"><sc-for list="{{cucOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div></div>
-<label class="fld">Nuovi punti acqua (n°)<input class="inp" type="number" min="0" value="{{puntiAcqua}}" onChange="{{setPuntiAcqua}}"><span class="hint">Lavatrice, boiler, lavabo aggiuntivo…</span></label>
+<div class="fld">Impianto elettrico<div class="pills"><sc-for list="{{elOpts}}" as="o" hint-placeholder-count="3"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.el}}</span><b>{{v.el}}</b></span><span class="hint">Rifacimento completo: circa {{punti}} punti luce e prese con frutti tipo BTicino inclusi, assistenza muraria e quadro elettrico</span></div>
+<div class="fld">Rifacimento della rete idrica<div class="pills"><sc-for list="{{idrOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.idr}}</span><b>{{v.idr}}</b></span></div>
+<div class="fld">Impianto della cucina<div class="pills"><sc-for list="{{cucOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.cuc}}</span><b>{{v.cuc}}</b></span></div>
+<label class="fld">Nuovi punti acqua (n°)<input class="inp" type="number" min="0" value="{{puntiAcqua}}" onChange="{{setPuntiAcqua}}"><span class="pz"><span>{{u.puntiAcqua}}</span><b>{{v.puntiAcqua}}</b></span><span class="hint">Lavatrice, boiler, lavabo aggiuntivo…</span></label>
 <div class="row2">
-<label class="fld">Termosifoni da sostituire (n°)<input class="inp" type="number" min="0" value="{{radiatori}}" onChange="{{setRadiatori}}"></label>
-<label class="fld">Condizionatori, unità interne (n°)<input class="inp" type="number" min="0" value="{{split}}" onChange="{{setSplit}}"></label>
+<label class="fld">Termosifoni da sostituire (n°)<input class="inp" type="number" min="0" value="{{radiatori}}" onChange="{{setRadiatori}}"><span class="pz"><span>{{u.radiatori}}</span><b>{{v.radiatori}}</b></span></label>
+<label class="fld">Condizionatori, unità interne (n°)<input class="inp" type="number" min="0" value="{{split}}" onChange="{{setSplit}}"><span class="pz"><span>{{u.split}}</span><b>{{v.split}}</b></span></label>
 </div>
-<div class="fld">Nuova caldaia a condensazione<div class="pills"><sc-for list="{{calOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div></div>
-<div class="fld">Riscaldamento a pavimento (radiante)<div class="pills"><sc-for list="{{radOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div></div>
+<div class="fld">Nuova caldaia a condensazione<div class="pills"><sc-for list="{{calOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.cal}}</span><b>{{v.cal}}</b></span></div>
+<div class="fld">Riscaldamento a pavimento (radiante)<div class="pills"><sc-for list="{{radOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.rad}}</span><b>{{v.rad}}</b></span></div>
 </fieldset>
 
 <fieldset class="grp">
 <legend class="lg"><span class="nr">04</span>Bagni</legend>
 <div class="row2">
 <label class="fld">Bagni da rifare (n°)<input class="inp" type="number" min="0" max="10" value="{{bagni}}" onChange="{{setBagni}}"></label>
-<label class="fld">Superficie media di un bagno (m²)<input class="inp" type="number" min="2" max="30" value="{{mqBagno}}" onChange="{{setMqBagno}}"></label>
+<label class="fld">Superficie media di un bagno (m²)<input class="inp" type="number" min="2" max="30" value="{{mqBagno}}" onChange="{{setMqBagno}}"><span class="pz"><span>{{u.bagni}}</span><b>{{v.bagni}}</b></span></label>
 </div>
 <p class="hint" style="margin: 0">Bagno fino a 5 m²: demolizioni, impianti, massetto, posa di pavimento e rivestimento, montaggio di sanitari e accessori. Fornitura di rivestimenti, sanitari e accessori esclusa.</p>
 </fieldset>
 
 <fieldset class="grp">
 <legend class="lg"><span class="nr">05</span>Finiture</legend>
-<div class="fld">Posa dei nuovi pavimenti in tutta la casa<div class="pills"><sc-for list="{{pavOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div></div>
-<label class="fld">Porte interne da sostituire (n°)<input class="inp" type="number" min="0" value="{{porte}}" onChange="{{setPorte}}"></label>
-<div class="fld">Rasatura e tinteggiatura di pareti e soffitti<div class="pills"><sc-for list="{{tinOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div></div>
-<div class="fld">Progetto di interior design, tavole esecutive e pratiche (CILA/SCIA)<div class="pills"><sc-for list="{{praOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div></div>
+<div class="fld">Posa dei nuovi pavimenti in tutta la casa<div class="pills"><sc-for list="{{pavOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.pav}}</span><b>{{v.pav}}</b></span></div>
+<label class="fld">Porte interne da sostituire (n°)<input class="inp" type="number" min="0" value="{{porte}}" onChange="{{setPorte}}"><span class="pz"><span>{{u.porte}}</span><b>{{v.porte}}</b></span></label>
+<div class="fld">Rasatura e tinteggiatura di pareti e soffitti<div class="pills"><sc-for list="{{tinOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.tin}}</span><b>{{v.tin}}</b></span></div>
+<div class="fld">Progetto di interior design, tavole esecutive e pratiche (CILA/SCIA)<div class="pills"><sc-for list="{{praOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.pra}}</span><b>{{v.pra}}</b></span></div>
 </fieldset>
 </form>
 
 <aside aria-label="Stima del preventivo" style="flex: 1 1 340px; position: sticky; top: 24px; background: #171512; border: 1px solid #C9A24A; padding: 36px 32px">
 <p style="margin: 0 0 10px; font-size: 12px; letter-spacing: 0.3em; color: #C9A24A; font-weight: 600">LA TUA STIMA</p>
 <p style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: clamp(28px, 2.6vw, 38px); line-height: 1.15; color: #E2C373">€ {{min}} – € {{max}}</p>
-<p style="margin: 6px 0 26px; font-size: 13px; color: #8A8478">IVA esclusa · {{perMq}} €/m² circa</p>
+<p style="margin: 6px 0 4px; font-size: 13px; color: #8A8478">IVA esclusa · {{perMq}} €/m² circa</p>
+<p style="margin: 0 0 26px; font-size: 13px; color: #D8D2C6">Somma delle voci qui sotto: <b style="color: #E2C373">€ {{tot}}</b>. La forbice tiene conto delle scelte che faremo insieme in sopralluogo.</p>
 <ul style="list-style: none; margin: 0 0 26px; padding: 0; border-top: 1px solid #2A2722; font-size: 14px">
 <sc-for list="{{rows}}" as="r" hint-placeholder-count="6"><li style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid #2A2722"><span style="color: #D8D2C6">{{r.label}}</span><span style="white-space: nowrap">€ {{r.val}}</span></li></sc-for>
 </ul>
@@ -239,22 +242,46 @@ const bagniTot = bagni * (P.bagnoFino5 + Math.max(0, mqB - 5) * P.bagnoExtraMq);
 const mqPav = Math.max(0, mq - bagni * mqB);
 const pavimenti = yes('pav') ? mqPav * P.posaPav : 0;
 const finiture = pavimenti + (n(s.porte) * P.porta + (yes('tin') ? mq * 3 * P.tinteggiatura : 0)) * f;
-const coef = yes('centro') ? 1.05 : 1;
 const prog = yes('pra') ? mq * P.progetto : 0;
-const lavori = (demol + murarie + impianti + bagniTot + finiture) * coef;
+const lavoriBase = demol + murarie + impianti + bagniTot + finiture;
+const centro = yes('centro') ? lavoriBase * 0.05 : 0; // maggiorazione centro storico / ZTL 5%
+const lavori = lavoriBase + centro;
 const sicurezza = lavori * 0.05; // oneri per la sicurezza 5% dei lavori
 const tot = lavori + sicurezza + prog;
 const fmt = (v) => String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+const e2 = (v) => v.toLocaleString('it-IT', { minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2 });
 const r500 = (v) => Math.round(v / 500) * 500;
-const rows = [
-{ label: 'Demolizioni e smaltimento', v: demol * coef },
-{ label: 'Massetti, tramezzi e controsoffitti', v: murarie * coef },
-{ label: 'Impianti', v: impianti * coef },
-{ label: 'Bagni', v: bagniTot * coef },
-{ label: 'Pavimenti, porte e pitture', v: finiture * coef },
-{ label: 'Oneri per la sicurezza (5%)', v: sicurezza },
-{ label: 'Progetto e pratiche', v: prog }
-].filter((r) => r.v > 0).map((r) => ({ label: r.label, val: fmt(r.v) }));
+const FNAME = { std: 'standard', pregio: 'pregio ×1,3', lusso: 'lusso ×1,7' }[s.fin];
+const fx = f !== 1 ? ' · finiture ' + FNAME : '';
+// prezzo di ogni voce: valore (v) e come si calcola (u)
+const V = {}, U = {};
+const put = (k, val, how) => { V[k] = val; U[k] = how; };
+put('tiro', tiro, P.tiro[s.piano] ? e2(Math.round((volGiu + volSu) * 10) / 10) + ' m³ di materiale × ' + P.tiro[s.piano] + ' €/m³ (tiro al piano)' : 'Nessun costo per il tiro dei materiali');
+put('pavRim', yes('pavRim') ? mq * P.rimPav : 0, e2(P.rimPav) + ' €/m² × ' + e2(mq) + ' m², smaltimento incluso');
+put('mass', yes('mass') ? mq * (P.demMass + P.nuovoMass) : 0, 'Demolizione ' + e2(P.demMass) + ' + nuovo ' + e2(P.nuovoMass) + ' €/m² × ' + e2(mq) + ' m²');
+put('demTram', n(s.demTram) * P.demTram, P.demTram + ' €/m² × ' + e2(n(s.demTram)) + ' m²');
+put('nuoviTram', n(s.nuoviTram) * P.nuovoTram, P.nuovoTram + ' €/m² × ' + e2(n(s.nuoviTram)) + ' m²');
+put('controsoffitti', n(s.controsoffitti) * P.controsoffitto * f, e2(P.controsoffitto) + ' €/m² × ' + e2(n(s.controsoffitti)) + ' m²' + fx);
+put('el', el, s.el === 'rif' ? punti + ' punti × ' + P.puntoEl + ' € + quadro ' + fmt(quadro) + ' €' : s.el === 'adeg' ? Math.round(punti * 0.3) + ' punti × ' + P.puntoEl + ' € + quadro ' + fmt(quadro) + ' €' : 'Non incluso');
+put('idr', yes('idr') ? P.idrico : 0, 'A corpo');
+put('cuc', yes('cuc') ? P.cucina : 0, 'A corpo');
+put('puntiAcqua', n(s.puntiAcqua) * P.puntoAcqua, P.puntoAcqua + ' € × ' + e2(n(s.puntiAcqua)));
+put('radiatori', n(s.radiatori) * P.radiatore, P.radiatore + ' € × ' + e2(n(s.radiatori)));
+put('split', nSplit > 0 ? P.split + (nSplit - 1) * P.splitExtra : 0, nSplit > 0 ? 'Primo split ' + e2(P.split) + ' €' + (nSplit > 1 ? ' + ' + (nSplit - 1) + ' × ' + P.splitExtra + ' €' : '') : 'Nessuno');
+put('cal', yes('cal') ? P.caldaia : 0, 'Caldaia a condensazione 23 kW, installata');
+put('rad', yes('rad') ? P.radianteFisso + mq * P.radiante : 0, 'Quota fissa ' + e2(P.radianteFisso) + ' € + ' + e2(P.radiante) + ' €/m² × ' + e2(mq) + ' m²');
+put('bagni', bagniTot, bagni + ' × ' + fmt(P.bagnoFino5) + ' € (fino a 5 m²)' + (mqB > 5 ? ' + ' + e2(mqB - 5) + ' m² × ' + P.bagnoExtraMq + ' €' : ''));
+put('pav', pavimenti, P.posaPav + ' €/m² × ' + e2(mqPav) + ' m² (esclusi i bagni), solo posa');
+put('porte', n(s.porte) * P.porta * f, e2(P.porta) + ' € × ' + e2(n(s.porte)) + fx);
+put('tin', yes('tin') ? mq * 3 * P.tinteggiatura * f : 0, P.tinteggiatura + ' €/m² × ' + e2(mq * 3) + ' m² di pareti e soffitti (circa 3 × la superficie)' + fx);
+put('pra', prog, P.progetto + ' €/m² × ' + e2(mq) + ' m²');
+put('centro', centro, '+5% sul costo dei lavori');
+put('fin', 0, 'Moltiplica controsoffitti, porte e pitture: standard ×1, pregio ×1,3, lusso ×1,7');
+const v = {}; Object.keys(V).forEach((k) => { v[k] = V[k] > 0 ? '€ ' + fmt(V[k]) : (k === 'fin' ? '' : '–'); });
+const NAMES = [['tiro', 'Tiro dei materiali al piano'], ['pavRim', 'Rimozione pavimenti'], ['mass', 'Rifacimento massetto'], ['demTram', 'Demolizione tramezzi'], ['nuoviTram', 'Nuovi tramezzi'], ['controsoffitti', 'Controsoffitti'], ['el', 'Impianto elettrico'], ['idr', 'Rete idrica'], ['cuc', 'Impianto cucina'], ['puntiAcqua', 'Nuovi punti acqua'], ['radiatori', 'Termosifoni'], ['split', 'Condizionatori'], ['cal', 'Caldaia'], ['rad', 'Riscaldamento a pavimento'], ['bagni', 'Bagni'], ['pav', 'Posa pavimenti'], ['porte', 'Porte interne'], ['tin', 'Rasatura e tinteggiatura'], ['centro', 'Centro storico / ZTL (+5%)']];
+const rows = NAMES.map(([k, label]) => ({ label, v: V[k] }))
+.concat([{ label: 'Oneri per la sicurezza (5%)', v: sicurezza }, { label: 'Progetto e pratiche', v: prog }])
+.filter((r) => r.v > 0).map((r) => ({ label: r.label, val: fmt(r.v) }));
 const set = (k) => (e) => this.setState({ [k]: e.target.value });
 const opts = (k, list) => list.map(([v, label]) => ({ label, pressed: s[k] === v ? 'true' : 'false', pick: () => this.setState({ [k]: v }) }));
 const sn = (k) => opts(k, [['si', 'Sì'], ['no', 'No']]);
@@ -272,7 +299,7 @@ elOpts: opts('el', [['no', 'Non serve'], ['adeg', 'Adeguamento'], ['rif', 'Rifac
 idrOpts: sn('idr'), cucOpts: sn('cuc'), calOpts: sn('cal'), radOpts: sn('rad'),
 pavOpts: sn('pav'), tinOpts: sn('tin'), praOpts: sn('pra'),
 min: fmt(r500(tot * 0.9)), max: fmt(r500(tot * 1.15)), perMq: mq > 0 ? fmt(tot / mq) : '0',
-rows: rows
+rows: rows, v: v, u: U, tot: fmt(tot)
 };
 }
 }
