@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
+- [ ] **Chiave Instagram da sistemare (15/10/2026):** il segreto GitHub `IG_TOKEN` contiene per errore l'ID dell'account (17841408230956715), non la chiave. "Genera token" nell'app Meta dà "HTTP ERROR 500" sulla pagina di autorizzazione di Instagram (provato con Edge, Chrome e telefono). Riprovare; se continua, passare all'API Instagram con login di Facebook (Pagina Facebook collegata, permette anche le visualizzazioni) e adattare `progetto/strumenti/aggiorna_reels.py`. Finché la chiave è sbagliata l'aggiornamento automatico fallisce senza toccare la Home
 - [ ] Zone di Roma delle foto delle facciate (es. "Garbatella · Roma"): servono le foto originali dal telefono (con posizione GPS) o l'elenco delle zone. Per ora la riga della zona è nascosta sul sito
 - [ ] Visualizzazioni dei reel: serve il permesso `instagram_business_manage_insights` nell'app Meta "Sito Md Edil Group" e una nuova chiave in `IG_TOKEN`; senza, il sito mostra solo mi piace e commenti
 - [ ] Rinnovo della chiave Instagram (dura 60 giorni): aggiungere il segreto `GH_PAT` per il rinnovo automatico, oppure rigenerarla a mano entro metà dicembre 2026
