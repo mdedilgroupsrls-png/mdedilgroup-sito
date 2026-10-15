@@ -1,10 +1,10 @@
-# Ogni mattina aggiorna i reel di Instagram nella Home (script in progetto/strumenti/aggiorna_reels.py).
+# Due volte al mese (il 1° e il 15) aggiorna i reel di Instagram nella Home (script in progetto/strumenti/aggiorna_reels.py).
 # Se qualcosa è cambiato salva la Home su main e Netlify la pubblica da solo.
 name: Aggiorna reel Instagram
 
 on:
   schedule:
-    - cron: "17 5 * * *"   # tutti i giorni alle 5:17 UTC (7:17 ora italiana d'estate)
+    - cron: "17 5 1,15 * *"   # il 1° e il 15 del mese alle 5:17 UTC: pochi aggiornamenti, così Netlify pubblica poco
   workflow_dispatch:        # si può avviare anche a mano da GitHub > Actions
 
 permissions:
@@ -41,7 +41,7 @@ jobs:
             git push
           fi
 
-      # La chiave di Instagram dura 60 giorni: ogni lunedì la rinnova.
+      # La chiave di Instagram dura 60 giorni: a ogni aggiornamento programmato (ogni ~15 giorni) la rinnova.
       # Per salvarla serve il segreto GH_PAT (token GitHub con permesso di scrittura sui segreti);
       # senza GH_PAT questo passaggio viene saltato e la chiave va rigenerata a mano ogni 60 giorni.
       - name: Rinnova la chiave di Instagram
@@ -50,7 +50,7 @@ jobs:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          if [ -z "$GH_PAT" ] || [ "$(date -u +%u)" != "1" ]; then echo "Rinnovo saltato"; exit 0; fi
+          if [ -z "$GH_PAT" ]; then echo "Rinnovo saltato"; exit 0; fi
           NUOVA=$(curl -s "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$IG_TOKEN" | python -c "import sys,json; print(json.load(sys.stdin).get('access_token',''))")
           if [ -n "$NUOVA" ]; then
             echo "::add-mask::$NUOVA"
