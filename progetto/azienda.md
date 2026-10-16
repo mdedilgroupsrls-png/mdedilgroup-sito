@@ -4,7 +4,7 @@
 - **Ragione sociale:** MD EDIL GROUP S.R.L.S.
 - **P.IVA:** 17112431006
 - **Codice univoco (fatturazione elettronica SDI):** M5UXCR1 (dato da Eugenio il 16/10/2026)
-- **Dati per la fatturazione** (come li scrive Eugenio): MD Edil Group S.R.L.S., Via Monti Lepini 9, 00015 Monterotondo (RM), P.IVA 17112431006, cod. univoco M5UXCR1, mdedilgroupsrls@gmail.com, 328 214 5266
+- **Dati per la fatturazione** (come li ha scritti Eugenio il 16/10/2026, prima di indicare Via Po 22 come sede legale): MD Edil Group S.R.L.S., Via Monti Lepini 9, 00015 Monterotondo (RM), P.IVA 17112431006, cod. univoco M5UXCR1, mdedilgroupsrls@gmail.com, 328 214 5266
 - **Titolare / referente:** Eugenio
 - **Slogan:** "I dettagli fanno la differenza"
 - **Logo:** casa/edifici stilizzati dorati su fondo nero (file: `img/cc07e2f1120eb45d8438fc5d59d4b3e8.png`, anche `favicon.png`)
@@ -25,11 +25,11 @@
 - **Richieste dal modulo `preventivo`:** salvate su Netlify (progetto mdedilgroup → Forms) e inviate per email a mdedilgroupsrls@gmail.com, oggetto "Nuova richiesta di preventivo dal sito – MD Edil Group" (impostato da Eugenio il 16/10/2026 in Forms → Submission notifications).
 
 ## Sedi
-Per ora vanno indicate entrambe come sede legale:
-- Via Monti Lepini 9, 00015 Monterotondo (RM)
-- Via Po 22, Roma (indirizzo del profilo Google Business)
+Decisione di Eugenio del 16/10/2026 (sera), per non confondere i clienti:
+- **Sede legale:** Via Po 22, Roma (anche indirizzo del profilo Google Business)
+- **Sede operativa:** Via Monti Lepini 9, 00015 Monterotondo (RM)
 
-In futuro Eugenio dirà quale sarà l'ufficio.
+Scritte così nel fondo di tutte le pagine, nei contatti della Home, nell'informativa privacy e nell'intestazione del preventivo PDF. Nei dati strutturati (JSON-LD) restano tutti e due gli indirizzi, prima Via Po.
 
 ## Zone di lavoro
 - Ristrutturazioni: **Roma e Milano** (sul sito vanno citate entrambe), con Roma e Lazio come zona principale
