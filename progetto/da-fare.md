@@ -44,7 +44,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 16/10/2026 – Preventivo in PDF intestato MD Edil Group con i dati del cliente, nei simulatori interni e infissi (richiesta di Eugenio); modalità di pagamento non inserite per ora
 - [x] 16/10/2026 – Ristrutturazioni interni: prezzi IVA inclusa sul sito, nel messaggio WhatsApp e nel PDF (Eugenio)
 - [x] 16/10/2026 – Modalità di pagamento **solo nel PDF delle ristrutturazioni interni** (mai sulle pagine del sito, Eugenio): rate 30% / 30% / 35% / saldo 5% calcolate sul totale, bonifico Intesa Sanpaolo, intestatario MD EDIL GROUP S.R.L.S. L'IBAN è in `js/ristrutturazione.js` scritto al contrario e codificato (come l'email): **non scriverlo in chiaro nei file, il repository è pubblico**
-- [ ] Chiedere a Eugenio a quale fase dei lavori corrisponde ogni rata (ora nel PDF: "1ª rata, 2ª rata, 3ª rata, Saldo")
+- [x] 16/10/2026 – Nomi delle rate nel PDF decisi da Eugenio: "Primo saldo 30%", "Secondo saldo 30%", "Terzo saldo 35%", "Alla fine dei lavori 5%"
 - [ ] Preventivo in PDF anche per le case in legno? (non chiesto: proporre a Eugenio)
 - [x] 16/10/2026 – Sopralluogo e preventivo gratuiti: scritto nei tre simulatori
 - [x] 16/10/2026 – Stessi campi (nome e cognome, telefono, indirizzo / luogo del terreno) e stesso invio su WhatsApp anche nei simulatori infissi e case in legno (`js/invio-wa.js`, `MDInvio`); la domanda sul piano resta nel simulatore interni anche se non cambia il prezzo (Eugenio)
