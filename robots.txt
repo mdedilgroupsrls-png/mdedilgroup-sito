@@ -3,6 +3,9 @@ User-agent: *
 Allow: /
 Disallow: /progetto/
 Disallow: /grazie
+Disallow: /s$
+Disallow: /s?
+Disallow: /s.txt
 
 # Programmi che copiano i siti per addestrare l'intelligenza artificiale: non autorizzati
 User-agent: GPTBot

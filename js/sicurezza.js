@@ -1,4 +1,4 @@
-/* Email protetta dai programmi che raccolgono indirizzi e avviso cookie, su tutte le pagine.
+/* Email protetta dai programmi che raccolgono indirizzi, avviso cookie e contatori anonimi, su tutte le pagine.
    L'email non è scritta nel codice della pagina: la ricompone qui il browser, solo per chi visita il sito. */
 (function () {
   // indirizzo scritto al contrario e codificato: i programmi automatici che leggono il testo della pagina non lo trovano
@@ -33,6 +33,42 @@
     d.querySelector('.no').onclick = function () { salva('no'); d.remove(); };
   }
 
-  function avvia() { scrivi(); banner(); }
+
+  // contatori anonimi: si conta solo cosa succede (pagina vista, simulazione, tocco su WhatsApp…), mai chi lo fa
+  var fatti = {};
+  function stat(e, sempre) {
+    if (!sempre && fatti[e]) return; fatti[e] = 1;
+    try { fetch('/s?e=' + encodeURIComponent(e), { cache: 'no-store', credentials: 'omit', keepalive: true }).catch(function () {}); } catch (x) {}
+  }
+  window.MDStat = stat;
+  function pagina() { var p = location.pathname.replace(/^\/|\.html$|\/$/g, ''); return p || 'home'; }
+  function provenienza() {
+    var r = ''; try { r = new URL(document.referrer).hostname; } catch (x) {}
+    if (!r) return 'diretto';
+    if (r === location.hostname || /mdedilgroup\.it$/.test(r)) return '';
+    var noti = ['google', 'bing', 'instagram', 'facebook', 'tiktok', 'youtube', 'linkedin', 'threads', 'whatsapp', 'aicole'];
+    for (var i = 0; i < noti.length; i++) if (r.indexOf(noti[i]) >= 0) return noti[i];
+    return 'altro';
+  }
+  function contatori() {
+    stat('vista-' + pagina(), true);
+    var giaQui = false; try { giaQui = sessionStorage.getItem('mdVisita'); sessionStorage.setItem('mdVisita', '1'); } catch (x) {}
+    var p = provenienza(); if (!giaQui && p) stat('arrivo-' + p);
+    document.addEventListener('click', function (ev) {
+      var a = ev.target.closest && ev.target.closest('a'); if (!a) return;
+      var h = a.getAttribute('href') || '';
+      if (a.id === 'waSim') stat('whatsapp-stima-infissi', true);
+      else if (/wa\.me/.test(h)) stat('whatsapp-' + pagina(), true);
+      else if (/^tel:/.test(h)) stat('chiama-' + pagina(), true);
+      else if (/^mailto:/.test(h)) stat('email', true);
+      else if (/g\.page\/r\//.test(h)) stat('recensione-google', true);
+      else if (a.getAttribute('aria-label') && a.closest('footer')) stat('social-' + a.getAttribute('aria-label').toLowerCase().split(' ')[0], true);
+    }, true);
+    var sim = function (ev) { if (ev.target.closest && ev.target.closest('#simulatore, .sim, .models')) stat('simulazione-' + pagina()); };
+    document.addEventListener('input', sim, true); document.addEventListener('change', sim, true);
+    var f = document.querySelector('form[name="preventivo"]'); if (f) f.addEventListener('submit', function () { stat('modulo-preventivo-inviato', true); });
+  }
+
+  function avvia() { scrivi(); banner(); contatori(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', avvia); else avvia();
 })();

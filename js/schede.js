@@ -43,6 +43,7 @@
     opt = opt || {};
     last = document.activeElement;
     title.textContent = NOMI[slug];
+    if (window.MDStat) MDStat('scheda-casa-' + slug, true);
     img.src = '/img/scheda-' + slug + '.webp';
     img.alt = 'Scheda del modello ' + NOMI[slug] + ': foto della casa e planimetria';
     go.onclick = null;

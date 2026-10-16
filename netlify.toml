@@ -43,3 +43,10 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     Cross-Origin-Opener-Policy = "same-origin"
+
+# Contatore anonimo: mai in cache, così ogni evento arriva a Netlify
+[[headers]]
+  for = "/s.txt"
+  [headers.values]
+    Cache-Control = "no-store"
+    X-Robots-Tag = "noindex"
