@@ -1,10 +1,9 @@
-# Una volta a settimana (lunedì) aggiorna i reel di Instagram nella Home (script in progetto/strumenti/aggiorna_reels.py).
-# Se qualcosa è cambiato salva la Home su main e Netlify la pubblica da solo.
+# Aggiorna i reel di Instagram nella Home con la chiave IG_TOKEN (script in progetto/strumenti/aggiorna_reels.py).
+# Da ottobre 2026 la chiave non si riesce a creare (errore 500 di Instagram): i reel li aggiorna Claude
+# ogni lunedì con i dati di Metricool. Questo flusso resta solo da avviare a mano, se un giorno la chiave ci sarà.
 name: Aggiorna reel Instagram
 
 on:
-  schedule:
-    - cron: "17 5 * * 1"   # ogni lunedì alle 5:17 UTC: circa 4 pubblicazioni Netlify al mese, per non consumare crediti
   workflow_dispatch:        # si può avviare anche a mano da GitHub > Actions
 
 permissions:

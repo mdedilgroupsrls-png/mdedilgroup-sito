@@ -1,9 +1,12 @@
 """Aggiorna la sezione "Gli ultimi reel" della Home con i reel di @md_edil_group.
 
-Gira ogni giorno su GitHub (.github/workflows/reels-instagram.yml).
-Legge la chiave di Instagram dalla variabile d'ambiente IG_TOKEN (segreto del repository),
-scarica copertine, testi e numeri dei reel e riscrive in index.html il blocco tra
-<!-- REELS:INIZIO --> e <!-- REELS:FINE -->. I reel da non mostrare stanno in progetto/reels.json.
+Due modi per avere i dati dei reel:
+- con Metricool (in uso da ottobre 2026): Claude scarica ogni lunedì i reel da Metricool in un file JSON
+  e lancia  python progetto/strumenti/aggiorna_reels.py --metricool file.json
+  (colonne: data e ora, testo, copertina, link, visualizzazioni, mi piace, commenti);
+- con la chiave di Instagram IG_TOKEN (segreto del repository), da GitHub (.github/workflows/reels-instagram.yml).
+Riscrive in index.html il blocco tra <!-- REELS:INIZIO --> e <!-- REELS:FINE -->.
+I reel da non mostrare stanno in progetto/reels.json.
 """
 import html
 import json
@@ -19,6 +22,7 @@ RADICE = Path(__file__).resolve().parents[2]
 INDEX = RADICE / "index.html"
 CARTELLA_IMG = RADICE / "img" / "reels"
 CONFIG = json.loads((RADICE / "progetto" / "reels.json").read_text(encoding="utf-8"))
+VISTE = {}
 API = "https://graph.instagram.com/v22.0"
 MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
         "agosto", "settembre", "ottobre", "novembre", "dicembre"]
@@ -40,6 +44,8 @@ def chiedi(percorso, **parametri):
 
 
 def visualizzazioni(media_id):
+    if media_id in VISTE:
+        return VISTE[media_id]
     # Le visualizzazioni richiedono il permesso degli insight: se manca, il numero non viene mostrato
     try:
         dati = chiedi(f"{media_id}/insights", metric="views")
@@ -72,8 +78,11 @@ def scarica_copertina(media):
         return None
     file = CARTELLA_IMG / f"{media['id']}.jpg"
     if not file.exists():
-        with urllib.request.urlopen(url, timeout=60) as r:
-            file.write_bytes(r.read())
+        try:
+            with urllib.request.urlopen(url, timeout=60) as r:
+                file.write_bytes(r.read())
+        except Exception:
+            return None  # copertina non raggiungibile: il reel si mostra senza
     return f"/img/reels/{file.name}"
 
 
@@ -98,12 +107,27 @@ def scheda(media):
             f'      </a>')
 
 
+def da_metricool(file):
+    """Righe di Metricool -> stesso formato dei dati di Instagram."""
+    media = []
+    for data, testo, copertina, link, viste, like, commenti in json.loads(Path(file).read_text(encoding="utf-8"))["rows"]:
+        codice = link.rstrip("/").rsplit("/", 1)[-1]
+        VISTE[codice] = int(float(viste or 0))
+        media.append({"id": codice, "caption": testo, "media_product_type": "REELS", "permalink": link,
+                      "thumbnail_url": copertina, "like_count": like, "comments_count": commenti,
+                      "timestamp": f"{data[:4]}-{data[4:6]}-{data[6:8]}T{data[8:10]}:{data[10:12]}"})
+    return media
+
+
 def main():
-    if not os.environ.get("IG_TOKEN"):
-        sys.exit("Manca il segreto IG_TOKEN")
     CARTELLA_IMG.mkdir(parents=True, exist_ok=True)
-    campi = "id,caption,media_type,media_product_type,permalink,thumbnail_url,media_url,timestamp,like_count,comments_count"
-    media = chiedi("me/media", fields=campi, limit=50).get("data", [])
+    if len(sys.argv) == 3 and sys.argv[1] == "--metricool":
+        media = da_metricool(sys.argv[2])
+    else:
+        if not os.environ.get("IG_TOKEN"):
+            sys.exit("Manca il segreto IG_TOKEN")
+        campi = "id,caption,media_type,media_product_type,permalink,thumbnail_url,media_url,timestamp,like_count,comments_count"
+        media = chiedi("me/media", fields=campi, limit=50).get("data", [])
     esclusi = set(CONFIG["esclusi"])
     reel = [m for m in media
             if (m.get("media_product_type") == "REELS" or m.get("media_type") == "VIDEO")
