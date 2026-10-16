@@ -213,11 +213,34 @@
     var testo = 'Buongiorno, ho fatto la simulazione della ristrutturazione sul vostro sito.\n' +
       'Superficie: ' + (mq ? String(mq).replace('.', ',') + ' m²' : '-') + ' · ' + (stato.piano === 'alto' ? '2° piano o superiore' : 'villa, casa indipendente o fino al 1° piano') + (stato.centro === 'si' ? ' · centro storico / ZTL' : '') + '\n' +
       msg.join('\n') + (centro ? '\n- Centro storico / ZTL = ' + eur(centro) : '') +
-      '\nTotale stimato: ' + eur(tot) + ' + IVA\nVorrei fissare un sopralluogo.';
-    document.getElementById('rWa').href = 'https://wa.me/393282145266?text=' + encodeURIComponent(testo);
+      '\nTotale stimato: ' + eur(tot) + ' + IVA';
+    ultimoTesto = testo;
   }
 
+  var ultimoTesto = '';
   var segnato = false;
+  // invio su WhatsApp: servono nome, telefono e indirizzo; il messaggio lo manda il cliente dal suo telefono
+  document.getElementById('rWa').addEventListener('click', function (e) {
+    var campi = [['rNome', 'nome e cognome'], ['rTel', 'telefono'], ['rInd', 'indirizzo dell’immobile']];
+    var mancano = [], val = {};
+    campi.forEach(function (c) {
+      var el = document.getElementById(c[0]); val[c[0]] = el.value.trim();
+      var ok = c[0] === 'rTel' ? /\d{6,}/.test(val[c[0]].replace(/\D/g, '')) : val[c[0]].length > 1;
+      el.classList.toggle('no', !ok); if (!ok) mancano.push(c[1]);
+    });
+    var err = document.getElementById('rErr');
+    if (num(stato.mq) <= 0 || !/€ [1-9]/.test(document.getElementById('rTot').textContent)) mancano.unshift('la superficie e almeno una lavorazione');
+    if (mancano.length) {
+      e.preventDefault(); e.stopImmediatePropagation();
+      err.textContent = 'Per inviare la simulazione indica: ' + mancano.join(', ') + '.'; err.hidden = false;
+      var primo = document.querySelector('.dati .inp.no'); if (primo) primo.focus();
+      return;
+    }
+    err.hidden = true;
+    this.href = 'https://wa.me/393282145266?text=' + encodeURIComponent(ultimoTesto +
+      '\n\nNome e cognome: ' + val.rNome + '\nTelefono: ' + val.rTel + '\nIndirizzo dell’immobile: ' + val.rInd + '\nVi chiedo di ricontattarmi.');
+  }, true);
+
   function usato() { if (!segnato && window.MDStat) { segnato = true; window.MDStat('simulazione-ristrutturazioni-interni'); } }
 
   root.addEventListener('input', function (e) {
