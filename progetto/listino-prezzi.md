@@ -88,7 +88,7 @@ Regole decise da Eugenio:
 - Colori: **Weiss bianco = standard** . **Mooreiche 2, Rovere dorato, Noce, Grigio antracite, Braun = +25%** sul prezzo standard (15/10/2026). Campioni in `img/colore-*.webp`.
 - Gamma completa Synego: **oltre 50 colori** (tinte legno, tinte unite, SFTN Matt, Metbrush…), anche colore diverso tra lato interno ed esterno; colori inalterati nel tempo. Immagine della gamma in `img/synego-gamma-colori.webp`. **Colori particolari** (tutti quelli della gamma completa fuori dai 6 della cartella base) = **+30%** sul prezzo standard (15/10/2026).
 - Prezzo al m² di ogni pezzo (larghezza × altezza), dettato da Eugenio il 15/10/2026:
-  - **Battente Synego, bianco:** fino a 1 m² **250 €/m²**; da 1 a 3,22 m² **280 €/m²**; oltre 3,22 m² **300 €/m²**. Colori: +25% (5 base) o +30% (particolari) su questi prezzi.
+  - **Battente Synego, bianco:** fino a 1 m² **200 € fissi a pezzo** (corretto il 16/10/2026, prima 250 €/m²); da 1 a 3,22 m² **280 €/m²**; oltre 3,22 m² **300 €/m²**. Colori: +25% (5 base) o +30% (particolari) su questi prezzi.
   - **Scorrevole Synego Slide** (foto in `img/synego-slide-1.webp`, `img/synego-slide-2.webp`, soglia ribassata `img/synego-slide-soglia.webp`; dettaglio ferramenta battente `img/synego-ferramenta.webp`; sezione battente effetto legno in `img/synego-sezione-legno.webp`): bianco **320 €/m²**, colore **400 €/m²** (da chiarire: fasce di misura e colori particolari).
 - **Demolizione** vecchi infissi **30 € a pezzo** e **posa 140 € a pezzo** (insieme 170 €), per ogni pezzo fino a 3,22 m². Oltre 3,22 m²: da chiarire.
 - Se l'appartamento è **sopra il terzo piano**: demolizione e posa **+10%** (da chiarire se dal 3° o dal 4° piano).
@@ -109,7 +109,7 @@ Regole decise da Eugenio:
 ### Regole provvisorie del simulatore infissi (scelte da Claude il 16/10/2026, da confermare con Eugenio)
 - Pezzi oltre 3,22 m²: demolizione e posa **raddoppiano** fino a 6,44 m² (infissi, tapparelle, zanzariere). Oltre 6,44 m²: demolizione/posa "al sopralluogo" (escluse dal totale), il prodotto si calcola lo stesso.
 - +10% su demolizioni e pose **dal 4° piano** in su.
-- Finestrini sotto 1 m²: pagati a metro quadro (es. 0,48 m² = 120 €).
+- Finestre fino a 1 m²: 200 € fissi a pezzo in bianco (deciso da Eugenio il 16/10/2026); con i colori si applica la stessa maggiorazione (+25% / +30%) — da confermare.
 - Scorrevoli: sempre 320 €/m² in bianco e 400 €/m² per qualunque altro colore (anche particolari), senza fasce di misura.
 - Smontaggio tapparelle oltre 3,22 m²: raddoppia (50 €). Zanzariere: 52 €/m² a qualunque misura; nessuno smontaggio delle vecchie.
 - I colori di tapparelle e zanzariere nelle strisce sono indicativi (ricostruiti dalle tabelle dei cataloghi).

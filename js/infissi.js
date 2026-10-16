@@ -1,7 +1,8 @@
 /* Simulatore della pagina Infissi e serramenti. Prezzi da progetto/listino-prezzi.md */
 (function () {
   var P = {
-    bat: [[1, 250], [3.22, 280], [Infinity, 300]], // battente bianco, €/m² per fascia di misura del pezzo
+    piccola: 200, // battente fino a 1 m²: prezzo fisso a pezzo (bianco)
+    bat: [[3.22, 280], [Infinity, 300]], // battente bianco oltre 1 m², €/m² per fascia di misura del pezzo
     slideBianco: 320, slideColore: 400,
     demInf: 30, posInf: 140, tap: 49.5, demTap: 25, posTap: 60, zan: 52, posZan: 50,
     piano: 0.10, pianoDa: 4 // +10% su demolizioni e pose dal 4° piano
@@ -115,6 +116,7 @@
   function prezzoInfisso(r, a) {
     var k = COL_INF[st.colInf].k;
     if (r.t === 1) return a * (k === 'std' ? P.slideBianco : P.slideColore);
+    if (a <= 1) return P.piccola * MULT[k];
     for (var i = 0; i < P.bat.length; i++) if (a <= P.bat[i][0]) return a * P.bat[i][1] * MULT[k];
   }
 
