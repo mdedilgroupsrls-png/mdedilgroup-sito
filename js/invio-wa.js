@@ -10,8 +10,7 @@
     '.mdi .err{margin:0;font-size:13px;color:#F0A58F}' +
     '.mdi-ok{margin:12px 0 0;padding:12px 14px;border:1px solid #3d6b4a;background:#13221a;font-size:13px;line-height:1.5;color:#D8EAD9;text-align:left}' +
     '.mdi-alt{margin:14px 0 0;font-size:13px;line-height:1.5;color:#D8D2C6;text-align:left}.mdi-alt a{color:#E2C373;text-decoration:underline}' +
-    '.mdi-pdf.uno{background:#C9A24A;color:#0E0D0B}.mdi-pdf.uno.fatto{background:none;color:#C9A24A}' +
-    '.mdi-pdf{display:block;width:100%;margin-top:4px;padding:15px 20px;background:none;border:1px solid #C9A24A;color:#C9A24A;font:600 12.5px Manrope,sans-serif;letter-spacing:.12em;cursor:pointer;flex:1 1 100%}.mdi-pdf:disabled{opacity:.6;cursor:wait}' +
+    '.mdi-pdf{display:block;width:100%;margin-top:10px;padding:15px 20px;background:none;border:1px solid #C9A24A;color:#C9A24A;font:600 12.5px Manrope,sans-serif;letter-spacing:.12em;cursor:pointer;flex:1 1 100%}.mdi-pdf:disabled{opacity:.6;cursor:wait}' +
     '.mdi-pr{margin:10px 0 0;font-size:12px;line-height:1.5;color:#8A8478;text-align:left}.mdi-pr a{color:#8A8478;text-decoration:underline}';
 
   window.MDInvio = function (o) {
@@ -26,8 +25,7 @@
       '<p class="err" role="alert" hidden></p>';
     btn.parentNode.insertBefore(box, btn);
     var conPdf = !!(o.pdf && window.MDPdf);
-    var bp = document.createElement('button'); bp.type = 'button'; bp.className = 'mdi-pdf uno'; bp.textContent = '1 · SCARICA IL PREVENTIVO PDF';
-    btn.textContent = conPdf ? '2 · ' + o.pulsante : o.pulsante;
+    btn.textContent = conPdf ? '1 · INVIA LA RICHIESTA SU WHATSAPP' : o.pulsante;
     var ok = document.createElement('div'); ok.className = 'mdi-ok'; ok.setAttribute('role', 'status'); ok.hidden = true;
     ok.innerHTML = '<b>Ci siamo quasi!</b> Si è aperto WhatsApp con il messaggio pronto: premi <b>Invia</b>. ' + o.dopo;
     var alt = document.createElement('p'); alt.className = 'mdi-alt';
@@ -62,15 +60,9 @@
       return v;
     }
 
-    var pdfFatto = '', pdfFirma = '';
     btn.addEventListener('click', function (e) {
       var v = controlla('inviare la simulazione');
       if (!v) { e.preventDefault(); e.stopImmediatePropagation(); return; }
-      if (conPdf && (!pdfFatto || pdfFirma !== JSON.stringify(o.pdf()))) { // prima si scarica il preventivo (pulsante 1), aggiornato
-        e.preventDefault(); e.stopImmediatePropagation();
-        var er = box.querySelector('.err'); er.textContent = pdfFatto ? 'Hai cambiato la simulazione: scarica di nuovo il preventivo con il pulsante 1.' : 'Prima scarica il preventivo in PDF con il pulsante 1: poi lo alleghi nella chat.'; er.hidden = false;
-        pdfFatto = ''; bp.classList.remove('fatto'); bp.textContent = '1 · SCARICA IL PREVENTIVO PDF'; bp.focus(); return;
-      }
       var testo = ''; try { testo = new URL(btn.href).searchParams.get('text') || ''; } catch (x) {}
       testo = testo.split('\n\nNome e cognome:')[0];
       if (conPdf && o.breve) testo = o.breve(); // messaggio corto: il dettaglio è nel preventivo PDF (pulsante 2)
@@ -80,20 +72,17 @@
 
     // preventivo in PDF intestato MD Edil Group (js/preventivo-pdf.js)
     if (o.pdf && window.MDPdf) {
-      var hp = document.createElement('p'); hp.className = 'mdi-pr'; hp.style.margin = '6px 0 12px';
-      hp.textContent = 'Il preventivo si salva sul tuo telefono o computer: al passo 2 lo alleghi nella chat di WhatsApp.';
-      btn.parentNode.insertBefore(bp, btn);
-      btn.parentNode.insertBefore(hp, btn);
+      var bp = document.createElement('button'); bp.type = 'button'; bp.className = 'mdi-pdf'; bp.textContent = '2 · ALLEGA IL PREVENTIVO PDF';
+      var hp = document.createElement('p'); hp.className = 'mdi-pr';
+      hp.textContent = window.MDPdf.condivide() ? 'Si apre la condivisione: scegli WhatsApp e la chat di MD Edil Group.' : 'Il PDF si scarica sul computer: trascinalo nella chat di WhatsApp con MD Edil Group.';
+      ok.innerHTML = '<b>Ci siamo quasi!</b> Si è aperto WhatsApp con il messaggio pronto: premi <b>Invia</b>. Poi torna qui e tocca il pulsante <b>2</b> per mandarci il preventivo in PDF.';
+      ok.parentNode.insertBefore(bp, ok.nextSibling);
+      bp.parentNode.insertBefore(hp, bp.nextSibling);
       bp.addEventListener('click', function () {
         var v = controlla('creare il preventivo in PDF'); if (!v) return;
         var d = o.pdf(); d.cliente = { nome: v.nome, tel: v.tel, ind: v.ind, indLabel: o.indirizzo }; d.file = v.nome;
         var t = bp.textContent; bp.disabled = true; bp.textContent = 'PREPARAZIONE DEL PDF…';
-        var firma = JSON.stringify(o.pdf());
-        window.MDPdf.crea(d).then(function (p) {
-          window.MDPdf.scarica(p); pdfFatto = p.nome; pdfFirma = firma; box.querySelector('.err').hidden = true;
-          ok.innerHTML = '<b>Ci siamo quasi!</b> Si è aperta la chat di WhatsApp con il messaggio pronto. Tocca la <b>graffetta 📎</b> → <b>Documento</b>, scegli il preventivo che hai scaricato (' + p.nome + ') e premi <b>Invia</b>. ' + o.dopo;
-          bp.classList.add('fatto'); t = '✓ PREVENTIVO SCARICATO · SCARICA DI NUOVO';
-        })
+        window.MDPdf.crea(d).then(function (p) { return window.MDPdf.consegna(p); })
           .catch(function () { var err = box.querySelector('.err'); err.textContent = 'Non è stato possibile creare il PDF: riprova o inviaci la simulazione su WhatsApp.'; err.hidden = false; })
           .then(function () { bp.disabled = false; bp.textContent = t; });
       });
