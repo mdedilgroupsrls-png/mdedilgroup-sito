@@ -14,7 +14,7 @@
     { n: 'Noce', img: 'colore-noce', k: 'base' },
     { n: 'Grigio antracite', img: 'colore-grigio-antracite', k: 'base' },
     { n: 'Braun', img: 'colore-braun', k: 'base' },
-    { n: 'Colore particolare della gamma', img: 'synego-gamma-colori', k: 'part' }
+    { n: 'Colore speciale', img: 'synego-gamma-colori', k: 'part' }
   ];
   var MULT = { std: 1, base: 1.25, part: 1.30 };
   var W = 'w'; // tinte legno: striatura
