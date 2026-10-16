@@ -5,7 +5,6 @@
 (function () {
   // tipo: 'q' = quantità (m², m, n°); 'si' = a corpo (sì / no); mq: true = pulsante "usa la superficie"
   // p30: prezzo a corpo fino a 70 m², poi + p30 € ogni 30 m² (o frazione) in più (Eugenio, 16/10/2026)
-  // a70: prezzo a corpo per immobili fino a 70 m²; ogni 70 m² in più si aggiunge un altro importo (71–140 m² = doppio, 141–210 m² = triplo…)
   // d = titolo della voce, x = descrizione che si apre passando sopra il titolo o toccandolo (testi originali MD Edil Group)
   var SEZ = [
     { t: 'Demolizioni e rimozioni', s: 'Smontiamo e portiamo via ciò che va rifatto. Dove indicato, carico, trasporto e smaltimento in discarica autorizzata sono compresi.', v: [
@@ -107,9 +106,9 @@
         x: 'Pittura lavabile in tinte forti o scure, che richiedono più colore e una stesura più accurata.' }
     ] },
     { t: 'Oneri di cantiere e pulizia', s: 'Voci da scegliere in base al tuo cantiere.', v: [
-      { id: 'sicur', d: 'Sicurezza e allestimento del cantiere', um: 'a corpo', p: 1100, tipo: 'si', a70: true,
+      { id: 'sicur', d: 'Sicurezza e allestimento del cantiere', um: 'a corpo', p: 1100, tipo: 'si', p30: 250,
         x: 'Montaggio e smontaggio del cantiere e misure di sicurezza previste dalla legge, per chi lavora e per chi abita.' },
-      { id: 'tiro', d: 'Carico e scarico dei materiali (tiro in alto e calo in basso)', um: 'a corpo', p: 1400, tipo: 'si', a70: true,
+      { id: 'tiro', d: 'Carico e scarico dei materiali (tiro in alto e calo in basso)', um: 'a corpo', p: 1400, tipo: 'si', p30: 250,
         x: 'Movimentazione di tutti i materiali del cantiere, a qualsiasi piano, anche al piano terra: salita e consegna dei materiali nuovi, discesa e carico delle macerie.' },
       { id: 'pulizia', d: 'Pulizia finale del cantiere', um: 'm²', p: 6, mq: true,
         x: 'Pulizia completa della casa a fine lavori, pronta da abitare. Si calcola sui m² della casa.' }
@@ -130,8 +129,6 @@
   var num = function (v) { var x = parseFloat(String(v == null ? '' : v).replace(',', '.')); return isNaN(x) || x < 0 ? 0 : x; };
   var eur = function (v) { return '€ ' + Math.round(v).toLocaleString('it-IT'); };
   var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
-  // voci a corpo "fino a 70 m²": oltre i 70 m² il prezzo cresce in proporzione alla superficie
-  var x70 = function (mq) { return Math.max(1, Math.ceil(mq / 70)); };
   // quadro elettrico: 750 € fino a 70 m², 1.000 € fino a 100 m², poi +250 € ogni 20 m²
   var quadro = function (mq) { return mq <= 70 ? 750 : mq <= 100 ? 1000 : 1000 + Math.ceil((mq - 100) / 20) * 250; };
 
@@ -142,7 +139,7 @@
       if (it.quadro) return quadro(mq);
       if (it.perMq) return it.p * mq;
       if (it.p30) return it.p + (mq > 70 ? Math.ceil((mq - 70) / 30) * it.p30 : 0);
-      return it.a70 ? it.p * x70(mq) : it.p;
+      return it.p;
     }
     if (it.bagno) return num(val) * (it.p + Math.max(0, (num(q.bagnoMq) || 5) - 5) * it.extraMq);
     return num(val) * it.p;
