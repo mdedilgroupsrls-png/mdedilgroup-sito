@@ -96,7 +96,7 @@
       calc();
     }
     for (var i = 0; i < start; i++) add();
-    return { rows: rows, add: function () { if (rows.length < 30) add(); }, set: set };
+    return { rows: rows, label: label, types: types, add: function () { if (rows.length < 30) add(); }, set: set };
   }
 
   lists.inf = List('rowsInf', 'Infisso', ['Battente', 'Scorrevole'], 5);
@@ -121,14 +121,15 @@
   }
 
   function calc() {
-    var plus = +$('piano').value >= P.pianoDa ? 1 + P.piano : 1, fuori = 0, tot = {};
+    var plus = +$('piano').value >= P.pianoDa ? 1 + P.piano : 1, fuori = 0, tot = {}, det = {};
     function sum(key, f) {
-      var s = 0;
-      lists[key].rows.forEach(function (r) {
+      var s = 0, L = lists[key]; det[key] = [];
+      L.rows.forEach(function (r, i) {
         var a = area(r); if (!a) { r.out.textContent = ''; return; }
         var v = f(r, a), fm = v === null || Array.isArray(v);
         if (Array.isArray(v)) v = v[0]; // prodotto calcolato, posa o smontaggio da valutare
         if (fm) fuori++;
+        det[key].push([L.label + ' ' + (i + 1) + (L.types ? ' – ' + L.types[r.t].toLowerCase() : '') + ', ' + r.w + ' × ' + r.h + ' cm' + (v !== null && fm ? ' (posa al sopralluogo)' : ''), mq(a), v === null ? 'al sopralluogo' : v]);
         if (v === null) { r.out.innerHTML = mq(a) + ' · <em>fuori misura: al sopralluogo</em>'; return; }
         s += v; r.out.innerHTML = mq(a) + ' · ' + eur(v) + (fm ? ' <em>+ posa al sopralluogo</em>' : '');
       });
@@ -161,6 +162,16 @@
     voci.forEach(function (v) { if (v[1] > 0) msg += '- ' + v[0] + ': ' + eur(v[1]) + '\n'; });
     msg += 'Totale stimato: ' + eur(T) + ' + IVA' + '\nPiano: ' + $('piano').selectedOptions[0].text;
     $('waSim').href = 'https://wa.me/393282145266?text=' + encodeURIComponent(msg);
+
+    // dati per il preventivo in PDF (js/preventivo-pdf.js)
+    var tit = [['inf', 'Infissi in PVC Rehau Synego · colore ' + COL_INF[st.colInf].n.toLowerCase()], ['dem', 'Demolizione dei vecchi infissi'], ['pos', 'Posa dei nuovi infissi'],
+      ['tap', 'Tapparelle in alluminio coibentato · colore ' + COL_TAP[st.colTap][0] + (td && tp ? ' · smontaggio e posa compresi' : td ? ' · smontaggio delle vecchie compreso' : tp ? ' · posa compresa' : '')],
+      ['zan', 'Zanzariere in alluminio · colore ' + COL_ZAN[st.colZan][0] + (zp ? ' · posa compresa' : '')]];
+    window.MDInfissiPdf = {
+      totale: T,
+      info: [['Piano', $('piano').selectedOptions[0].text], ['Vetro', 'Doppio vetro']].concat(plus > 1 ? [['Nota', 'Demolizioni e pose calcolate per il piano indicato']] : []),
+      sezioni: tit.filter(function (x) { return det[x[0]] && det[x[0]].length; }).map(function (x) { return { t: x[1], righe: det[x[0]] }; })
+    };
   }
   calc();
 })();

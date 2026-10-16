@@ -41,6 +41,8 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 15/10/2026 – Aggiunte altre 9 foto (`img/lavoro-17…25.webp`) in fondo alla galleria "Realizziamo lavori chiavi in mano" della Home, dopo le 16 già caricate. Zone indicate da Eugenio (Via Cassia, Porta Pia, Corso Francia, San Giovanni, Manzoni); foto 17 (top bagno in montaggio): Olgiata
 - [x] 16/10/2026 – Simulatore interni: invio su WhatsApp con nome e cognome, telefono e indirizzo obbligatori (richiesta di Eugenio); informativa privacy aggiornata
 - [x] 16/10/2026 – Simulatore interni: un solo pulsante "Invia la simulazione e richiedi il sopralluogo" (scelta lasciata a Claude da Eugenio), conferma dopo l'invio, alternativa telefono/modulo
+- [x] 16/10/2026 – Preventivo in PDF intestato MD Edil Group con i dati del cliente, nei simulatori interni e infissi (richiesta di Eugenio); modalità di pagamento non inserite per ora
+- [ ] Preventivo in PDF anche per le case in legno? (non chiesto: proporre a Eugenio)
 - [x] 16/10/2026 – Sopralluogo e preventivo gratuiti: scritto nei tre simulatori
 - [x] 16/10/2026 – Stessi campi (nome e cognome, telefono, indirizzo / luogo del terreno) e stesso invio su WhatsApp anche nei simulatori infissi e case in legno (`js/invio-wa.js`, `MDInvio`); la domanda sul piano resta nel simulatore interni anche se non cambia il prezzo (Eugenio)
 - [x] 16/10/2026 – Simulatore interni: oneri di cantiere, tiro dei materiali e pulizia non più automatici, li sceglie il cliente; tiro valido a qualsiasi piano (Eugenio)

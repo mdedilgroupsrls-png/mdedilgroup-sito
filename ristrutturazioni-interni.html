@@ -47,6 +47,7 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 .dati{display:flex;flex-direction:column;gap:12px;margin:0 0 16px;padding-top:20px;border-top:1px solid #2A2722}.dati .dt{margin:0;font-family:'Urbanist',sans-serif;font-size:18px;font-weight:600;color:#F3EFE7}
 .dati label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#D8D2C6}.dati .inp{max-width:none;width:100%;box-sizing:border-box}.dati .inp.no{border-color:#E07A5F}
 .err{margin:0;font-size:13px;color:#F0A58F}
+.bPdf{display:block;width:100%;margin-top:10px;padding:15px 20px;background:none;border:1px solid #C9A24A;color:#C9A24A;font:600 13px Manrope,sans-serif;letter-spacing:.14em;cursor:pointer}.bPdf:hover{background:rgba(201,162,74,.1)}.bPdf:disabled{opacity:.6;cursor:wait}
 .ok{margin:12px 0 0;padding:12px 14px;border:1px solid #3d6b4a;background:#13221a;font-size:13px;line-height:1.5;color:#D8EAD9}
 .alt{margin:14px 0 0;font-size:13px;line-height:1.5;color:#D8D2C6}.alt a{color:#E2C373;text-decoration:underline}
 .riep{list-style:none;margin:0 0 26px;padding:0;border-top:1px solid #2A2722;font-size:14px}.riep li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #2A2722;color:#D8D2C6}.riep li .e{white-space:nowrap;color:#F3EFE7}
@@ -141,7 +142,8 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 <p id="rErr" class="err" role="alert" hidden></p>
 </div>
 <a id="rWa" href="https://wa.me/393282145266" target="_blank" rel="noopener" style="display: block; text-align: center; background: #C9A24A; color: #0E0D0B; padding: 17px 20px; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; margin-bottom: 10px">INVIA LA SIMULAZIONE E RICHIEDI IL SOPRALLUOGO</a>
-<div id="rOk" class="ok" role="status" hidden><b>Ci siamo quasi!</b> Si è aperto WhatsApp con il messaggio pronto: premi <b>Invia</b>. Ti richiamiamo noi per fissare il sopralluogo.</div>
+<div id="rOk" class="ok" role="status" hidden><b>Ci siamo quasi!</b> Si è aperto WhatsApp con il messaggio pronto: premi <b>Invia</b>. Ti richiamiamo noi per fissare il sopralluogo. Se vuoi, inviaci anche il preventivo in PDF con il pulsante qui sotto.</div>
+<button type="button" id="rPdf" class="bPdf">SCARICA IL PREVENTIVO IN PDF</button>
 <p class="alt">Non usi WhatsApp? Chiamaci al <a href="tel:+393282145266">328 214 5266</a> oppure scrivici dal <a href="/#contatti">modulo contatti</a>.</p>
 <p style="margin: 12px 0 0; font-size: 12px; line-height: 1.55; color: #8A8478">I tuoi dati arrivano solo a noi, nel messaggio WhatsApp che invii tu, e servono per ricontattarti (<a href="/privacy.html" style="color: #8A8478; text-decoration: underline">informativa privacy</a>).</p>
 <p style="margin: 12px 0 0; font-size: 12px; line-height: 1.55; color: #8A8478">Stima indicativa basata sul listino MD Edil Group, prezzi IVA esclusa. Non costituisce offerta: il prezzo definitivo viene confermato dopo il sopralluogo e con la firma del contratto. Esclusa la fornitura di pavimenti, rivestimenti, sanitari, porte, termosifoni, caldaie, condizionatori e accessori, che sceglierai con noi. Infissi esclusi: usa il simulatore dedicato.</p>
@@ -180,6 +182,7 @@ renderVals() { return { headFont: this.props.headFont ?? 'Urbanist', nameJustify
 }
 DCLite.mount(Component, document.getElementById("tpl"), document.getElementById("app"));
 </script>
+<script src="/js/preventivo-pdf.js"></script>
 <script src="/js/ristrutturazione.js"></script>
 <script>if(location.hash==="#simulatore"){addEventListener("load",function(){var e=document.getElementById("simulatore");if(e)e.scrollIntoView()})}</script>
 <script src="/js/sicurezza.js" defer></script>

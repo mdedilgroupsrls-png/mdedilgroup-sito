@@ -10,6 +10,7 @@
     '.mdi .err{margin:0;font-size:13px;color:#F0A58F}' +
     '.mdi-ok{margin:12px 0 0;padding:12px 14px;border:1px solid #3d6b4a;background:#13221a;font-size:13px;line-height:1.5;color:#D8EAD9;text-align:left}' +
     '.mdi-alt{margin:14px 0 0;font-size:13px;line-height:1.5;color:#D8D2C6;text-align:left}.mdi-alt a{color:#E2C373;text-decoration:underline}' +
+    '.mdi-pdf{display:block;width:100%;margin-top:10px;padding:15px 20px;background:none;border:1px solid #C9A24A;color:#C9A24A;font:600 12.5px Manrope,sans-serif;letter-spacing:.12em;cursor:pointer;flex:1 1 100%}.mdi-pdf:disabled{opacity:.6;cursor:wait}' +
     '.mdi-pr{margin:10px 0 0;font-size:12px;line-height:1.5;color:#8A8478;text-align:left}.mdi-pr a{color:#8A8478;text-decoration:underline}';
 
   window.MDInvio = function (o) {
@@ -38,7 +39,8 @@
     btn.parentNode.insertBefore(ok, btn.nextSibling);
     if (vecchio) vecchio.remove();
 
-    btn.addEventListener('click', function (e) {
+    // controlla i dati del cliente; restituisce i valori oppure null
+    function controlla(azione) {
       var v = {}, manca = [];
       [['nome', 'nome e cognome'], ['tel', 'telefono'], ['ind', o.indirizzo.toLowerCase()]].forEach(function (c) {
         var el = box.querySelector('[data-c="' + c[0] + '"]'); v[c[0]] = el.value.trim();
@@ -49,16 +51,36 @@
       if (prima) manca.unshift(prima);
       var err = box.querySelector('.err');
       if (manca.length) {
-        e.preventDefault(); e.stopImmediatePropagation();
-        err.textContent = 'Per inviare la simulazione indica: ' + manca.join(', ') + '.'; err.hidden = false;
+        err.textContent = 'Per ' + azione + ' indica: ' + manca.join(', ') + '.'; err.hidden = false;
         var f = box.querySelector('input.no'); if (f) f.focus();
-        return;
+        return null;
       }
       err.hidden = true;
+      return v;
+    }
+
+    btn.addEventListener('click', function (e) {
+      var v = controlla('inviare la simulazione');
+      if (!v) { e.preventDefault(); e.stopImmediatePropagation(); return; }
       var testo = ''; try { testo = new URL(btn.href).searchParams.get('text') || ''; } catch (x) {}
       testo = testo.split('\n\nNome e cognome:')[0];
       btn.href = 'https://wa.me/393282145266?text=' + encodeURIComponent(testo + '\n\nNome e cognome: ' + v.nome + '\nTelefono: ' + v.tel + '\n' + o.indirizzo + ': ' + v.ind + '\n\n' + o.richiesta);
       ok.hidden = false;
     }, true);
+
+    // preventivo in PDF intestato MD Edil Group (js/preventivo-pdf.js)
+    if (o.pdf && window.MDPdf) {
+      var bp = document.createElement('button'); bp.type = 'button'; bp.className = 'mdi-pdf'; bp.textContent = 'SCARICA IL PREVENTIVO IN PDF';
+      ok.innerHTML += ' Se vuoi, inviaci anche il preventivo in PDF con il pulsante qui sotto.';
+      ok.parentNode.insertBefore(bp, ok.nextSibling);
+      bp.addEventListener('click', function () {
+        var v = controlla('creare il preventivo in PDF'); if (!v) return;
+        var d = o.pdf(); d.cliente = { nome: v.nome, tel: v.tel, ind: v.ind, indLabel: o.indirizzo }; d.file = v.nome;
+        var t = bp.textContent; bp.disabled = true; bp.textContent = 'PREPARAZIONE DEL PDF…';
+        window.MDPdf.crea(d).then(function (p) { return window.MDPdf.consegna(p); })
+          .catch(function () { var err = box.querySelector('.err'); err.textContent = 'Non è stato possibile creare il PDF: riprova o inviaci la simulazione su WhatsApp.'; err.hidden = false; })
+          .then(function () { bp.disabled = false; bp.textContent = t; });
+      });
+    }
   };
 })();

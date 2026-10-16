@@ -186,18 +186,21 @@
   }
 
   function calcola() {
-    var mq = num(stato.mq), righe = [], lavori = 0, msg = [];
+    var mq = num(stato.mq), righe = [], lavori = 0, msg = [], pdf = [];
     var setImp = function (id, v) { var el = root.querySelector('[data-imp="' + id + '"]'); if (el) el.textContent = v > 0 ? eur(v) : ''; };
     SEZ.forEach(function (s) {
-      var sub = 0;
+      var sub = 0, pr = [];
       s.v.forEach(function (it) {
         var v = importo(it, mq); setImp(it.id, v);
         if (v > 0) {
           sub += v;
           var qq = String(q[it.id]).replace('.', ',');
+          var dsc = it.d + (it.bagno ? ' (' + String(num(q.bagnoMq) > 5 ? q.bagnoMq : 5).replace('.', ',') + ' m² per bagno)' : '');
+          pr.push([dsc, it.tipo === 'si' ? (it.perMq ? String(mq).replace('.', ',') + ' m²' : 'a corpo') : (it.um === 'n°' ? qq : qq + ' ' + it.um.replace(/^n° /, '')), v]);
           msg.push('- ' + it.d + (it.bagno && num(q.bagnoMq) > 5 ? ' (' + String(q.bagnoMq).replace('.', ',') + ' m²)' : '') + (it.tipo === 'si' ? '' : /^n°/.test(it.um) ? ' × ' + qq : ': ' + qq + ' ' + it.um) + ' = ' + eur(v));
         }
       });
+      if (pr.length) pdf.push({ t: s.t, righe: pr });
       if (sub > 0 && s.t !== 'Progetto e pratiche') righe.push([s.t, sub]);
       if (s.t !== 'Progetto e pratiche') lavori += sub;
     });
@@ -217,12 +220,14 @@
       msg.join('\n') + (centro ? '\n- Centro storico / ZTL = ' + eur(centro) : '') +
       '\nTotale stimato: ' + eur(tot) + ' + IVA';
     ultimoTesto = testo;
+    if (centro > 0) pdf.splice(pdf.length - (prog > 0 ? 1 : 0), 0, { t: 'Maggiorazioni', righe: [['Lavori in centro storico o ZTL (+5% sui lavori)', '', centro]] });
+    ultimoPdf = { sez: pdf, tot: tot, mq: mq };
   }
 
-  var ultimoTesto = '';
+  var ultimoTesto = '', ultimoPdf = null;
   var segnato = false;
-  // invio su WhatsApp: servono nome, telefono e indirizzo; il messaggio lo manda il cliente dal suo telefono
-  document.getElementById('rWa').addEventListener('click', function (e) {
+  // dati del cliente: servono nome, telefono e indirizzo, più superficie e almeno una lavorazione
+  function controlla(azione) {
     var campi = [['rNome', 'nome e cognome'], ['rTel', 'telefono'], ['rInd', 'indirizzo dell’immobile']];
     var mancano = [], val = {};
     campi.forEach(function (c) {
@@ -233,16 +238,43 @@
     var err = document.getElementById('rErr');
     if (num(stato.mq) <= 0 || !/€ [1-9]/.test(document.getElementById('rTot').textContent)) mancano.unshift('la superficie e almeno una lavorazione');
     if (mancano.length) {
-      e.preventDefault(); e.stopImmediatePropagation();
-      err.textContent = 'Per inviare la simulazione indica: ' + mancano.join(', ') + '.'; err.hidden = false;
+      err.textContent = 'Per ' + azione + ' indica: ' + mancano.join(', ') + '.'; err.hidden = false;
       var primo = document.querySelector('.dati .inp.no'); if (primo) primo.focus();
-      return;
+      return null;
     }
     err.hidden = true;
+    return val;
+  }
+  // invio su WhatsApp: il messaggio lo manda il cliente dal suo telefono
+  document.getElementById('rWa').addEventListener('click', function (e) {
+    var val = controlla('inviare la simulazione');
+    if (!val) { e.preventDefault(); e.stopImmediatePropagation(); return; }
     this.href = 'https://wa.me/393282145266?text=' + encodeURIComponent(ultimoTesto +
       '\n\nNome e cognome: ' + val.rNome + '\nTelefono: ' + val.rTel + '\nIndirizzo dell’immobile: ' + val.rInd + '\n\nVorrei richiedere un sopralluogo: potete ricontattarmi?');
     document.getElementById('rOk').hidden = false;
   }, true);
+  // preventivo in PDF intestato MD Edil Group (js/preventivo-pdf.js)
+  var bPdf = document.getElementById('rPdf');
+  if (bPdf) bPdf.addEventListener('click', function () {
+    var val = controlla('creare il preventivo in PDF');
+    if (!val || !window.MDPdf || !ultimoPdf) return;
+    var testo = bPdf.textContent; bPdf.disabled = true; bPdf.textContent = 'PREPARAZIONE DEL PDF…';
+    window.MDPdf.crea({
+      tipo: 'Ristrutturazione di interni',
+      cliente: { nome: val.rNome, tel: val.rTel, ind: val.rInd },
+      info: [['Superficie interna', String(ultimoPdf.mq).replace('.', ',') + ' m²'],
+        ['Piano', stato.piano === 'alto' ? '2° piano o superiore' : 'Villa, casa indipendente o fino al 1° piano'],
+        ['Centro storico o ZTL', stato.centro === 'si' ? 'Sì' : 'No']],
+      sezioni: ultimoPdf.sez, totale: ultimoPdf.tot,
+      note: ['Preventivo indicativo calcolato con il listino MD Edil Group in base alle quantità indicate dal cliente. Prezzi IVA esclusa: l’IVA si applica con l’aliquota di legge.',
+        'Il prezzo definitivo viene confermato dopo il sopralluogo, con le misure prese dai nostri tecnici, e con la firma del contratto. Sopralluogo e preventivo sono gratuiti.',
+        'Esclusa la fornitura di pavimenti, rivestimenti, sanitari, rubinetteria, porte, termosifoni, caldaie, condizionatori e accessori, che sceglierai con noi. Infissi esclusi.',
+        'Tutti i lavori sono eseguiti dai nostri tecnici abilitati e gli impianti sono consegnati con dichiarazione di conformità.'],
+      file: val.rNome
+    }).then(function (p) { return window.MDPdf.consegna(p); })
+      .catch(function () { document.getElementById('rErr').textContent = 'Non è stato possibile creare il PDF: riprova o inviaci la simulazione su WhatsApp.'; document.getElementById('rErr').hidden = false; })
+      .then(function () { bPdf.disabled = false; bPdf.textContent = testo; });
+  });
 
   function usato() { if (!segnato && window.MDStat) { segnato = true; window.MDStat('simulazione-ristrutturazioni-interni'); } }
 
