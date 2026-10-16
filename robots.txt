@@ -6,6 +6,7 @@ Disallow: /grazie
 Disallow: /s$
 Disallow: /s?
 Disallow: /s.txt
+Disallow: /n$
 
 # Programmi che copiano i siti per addestrare l'intelligenza artificiale: non autorizzati
 User-agent: GPTBot

@@ -27,11 +27,24 @@
   /* d = { tipo: 'Ristrutturazione di interni', cliente: {nome, tel, ind, indLabel}, info: [[etichetta, valore]],
           sezioni: [{ t: 'titolo', righe: [[descrizione, quantità, importo o testo]] }],
           totale: numero, note: ['…'], file: 'nome-file' } */
+  // numero progressivo del preventivo (100, 101, 102…) dal contatore del sito; se non risponde, numero con data e ora
+  function prossimoNumero() {
+    var ctl = window.AbortController ? new AbortController() : null;
+    if (ctl) setTimeout(function () { ctl.abort(); }, 5000);
+    return fetch('/n', { method: 'POST', cache: 'no-store', credentials: 'omit', signal: ctl ? ctl.signal : undefined })
+      .then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { return j && j.n ? String(j.n) : null; })
+      .catch(function () { return null; });
+  }
+
   function crea(d) {
-    return carica('/js/vendor/jspdf-2.5.1.min.js').then(function () { return immagine('/img/cc07e2f1120eb45d8438fc5d59d4b3e8.png'); }).then(function (logo) {
+    var numeroSito = null, logo = null;
+    return carica('/js/vendor/jspdf-2.5.1.min.js')
+      .then(function () { return Promise.all([immagine('/img/cc07e2f1120eb45d8438fc5d59d4b3e8.png'), prossimoNumero()]); })
+      .then(function (r) { logo = r[0]; numeroSito = r[1]; })
+      .then(function () {
       var doc = new window.jspdf.jsPDF({ unit: 'mm', format: 'a4' });
       var W = 210, M = 16, y = 0, ora = new Date();
-      var numero = ora.getFullYear() + due(ora.getMonth() + 1) + due(ora.getDate()) + '-' + due(ora.getHours()) + due(ora.getMinutes());
+      var numero = numeroSito || (ora.getFullYear() + due(ora.getMonth() + 1) + due(ora.getDate()) + '-' + due(ora.getHours()) + due(ora.getMinutes()));
       var data = due(ora.getDate()) + '/' + due(ora.getMonth() + 1) + '/' + ora.getFullYear();
       var col = function (c) { doc.setTextColor(c[0], c[1], c[2]); };
       var font = function (st, sz) { doc.setFont('helvetica', st); doc.setFontSize(sz); };
