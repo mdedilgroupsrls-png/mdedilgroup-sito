@@ -61,3 +61,5 @@ Sorgente: `progetto/sorgenti-design/home-cinema.html`. Stesso stile Nero & Oro, 
 - Ordine sezioni: Servizi, Render, Simulatori, Cantieri, Case in legno, Esterni, Chi siamo + garanzie, Come lavoriamo, Reel, News, Contatti.
 
 - **Scheda grande delle case in legno** (`js/schede.js`, Home e /case-in-legno): si apre a misura dell'immagine, con foto della casa e planimetria **intere e visibili subito, senza scorrere**, anche sul telefono (16/10/2026).
+- **Avviso cookie** (`js/sicurezza.js`, tutte le pagine): fascia in basso nero e oro, testo "solo cookie tecnici", pulsanti RIFIUTO e ACCETTO; la scelta resta salvata nel browser (16/10/2026).
+- **Email nel piè di pagina** di tutte le pagine: "Email: …", ricomposta da `js/sicurezza.js` per non farla leggere ai programmi automatici.

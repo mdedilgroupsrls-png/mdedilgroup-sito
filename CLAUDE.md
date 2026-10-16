@@ -32,4 +32,5 @@ Prima di lavorare leggi la cartella `progetto/`:
   - prezzi nuovi o modificati (anche nel simulatore) → `listino-prezzi.md`
   - lavori fatti, nuovi lavori da fare, decisioni prese → `da-fare.md` (spunta ciò che è completato, con la data)
   - titoli, descrizioni per Google, parole chiave, lavori SEO → `seo.md`
+- **Sicurezza** (16/10/2026): l'email non va mai scritta in chiaro nelle pagine; si usa `<span class="js-mail">scrivici dal modulo contatti</span>` e la ricompone `js/sicurezza.js` (incluso in tutte le pagine, insieme all'avviso cookie). Se una pagina usa un nuovo servizio esterno (script, caratteri, mappe, video), va aggiunto alla `Content-Security-Policy` in `netlify.toml`, altrimenti il browser lo blocca.
 - Scrivi un messaggio di commit chiaro in italiano.
