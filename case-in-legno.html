@@ -387,7 +387,7 @@ M.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.cla
  b.innerHTML=`<img src="/img/${m.img}.webp" alt="" loading="lazy"><span><b>${m.n}</b><small>${m.d}</small><small style="color:var(--gold2)">${m.chiavi?'Chiavi in mano '+eur(m.chiavi):'Struttura '+eur(m.p[0])}</small></span>`;
  b.onclick=()=>{st.m=i;st.area=0;st.aum=0;models.querySelectorAll('.mdl').forEach((x,j)=>x.setAttribute('aria-pressed',j===i));draw();
   // scheda grande con foto e planimetria; "Simula il prezzo" porta alle voci
-  if(window.MDScheda)MDScheda.open(m.img.replace(/^m-/,''),{simula:()=>document.querySelector('.sim').scrollIntoView({behavior:'smooth'})})};models.append(b)});
+  if(window.MDScheda)MDScheda.open(m.img.replace(/^m-/,''),{simula:()=>setTimeout(()=>document.querySelector('.sim').scrollIntoView({block:'start'}),60)})};models.append(b)});
 
 const btn=(k,label)=>`<button type="button" class="nm" aria-expanded="false" aria-controls="d-${k}" data-k="${k}"><span>${label}</span><span class="i" aria-hidden="true">+</span></button>`;
 function draw(){
