@@ -12,6 +12,7 @@ Prima di lavorare leggi la cartella `progetto/`:
 | `progetto/pagine.md` | Mappa del sito: cosa c'è in ogni pagina |
 | `progetto/listino-prezzi.md` | Prezzi usati dal simulatore costi e per le stime |
 | `progetto/da-fare.md` | Lavori aperti e idee per i prossimi aggiornamenti |
+| `progetto/seo.md` | Parole chiave per pagina, lavori SEO fatti e da fare |
 | `progetto/sorgenti-design/` | File originali del design (canvas Claude Design) e script di conversione, solo come riferimento |
 
 ## Regole di lavoro
@@ -30,4 +31,5 @@ Prima di lavorare leggi la cartella `progetto/`:
   - pagine nuove, rinominate o con contenuti cambiati → `pagine.md`
   - prezzi nuovi o modificati (anche nel simulatore) → `listino-prezzi.md`
   - lavori fatti, nuovi lavori da fare, decisioni prese → `da-fare.md` (spunta ciò che è completato, con la data)
+  - titoli, descrizioni per Google, parole chiave, lavori SEO → `seo.md`
 - Scrivi un messaggio di commit chiaro in italiano.

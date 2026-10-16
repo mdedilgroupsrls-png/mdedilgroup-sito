@@ -1,0 +1,38 @@
+# SEO – piano per portare mdedilgroup.it nelle prime posizioni
+
+Obiettivo (Eugenio, 16/10/2026): prime posizioni su Google per ristrutturazioni, facciate, infissi/serramenti/finestre e case in legno, a **Roma e Lazio** (case in legno: **tutta Italia**). Testi sempre originali, mai copiati da altri siti.
+
+## Parole chiave per pagina
+Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorrenza tra loro.
+
+| Pagina | Ricerche principali | Ricerche secondarie |
+|---|---|---|
+| `/` Home | impresa edile Roma, ristrutturazioni Roma | ristrutturazione chiavi in mano Roma, impresa ristrutturazioni Lazio |
+| `/ristrutturazioni-interni` | ristrutturazione appartamento Roma | costo ristrutturazione casa Roma, ristrutturazione bagno/cucina Roma, ristrutturazione villa Roma |
+| `/ristrutturazioni-esterni` | rifacimento facciata Roma, ristrutturazione facciate condominio | cappotto termico Roma, impresa facciate Lazio |
+| `/infissi-serramenti` | infissi PVC Roma, sostituzione infissi Roma | finestre PVC prezzi, Rehau Synego prezzo, tapparelle alluminio coibentato, zanzariere Roma |
+| `/case-in-legno` | case in legno prefabbricate prezzi | casa in legno chiavi in mano, casa in legno Lazio/Italia, A-frame, Barn House |
+| `/interior-design` | interior designer Roma | progetto interior design, render 3D casa |
+| `/studio-tecnico` | pratiche edilizie Roma, CILA Roma, SCIA Roma | studio tecnico ristrutturazioni Roma |
+
+## Fatto
+- 16/10/2026: Search Console verificata (file `googlebe237534b9cfb8ff.html`), sitemap inviata e letta.
+- 16/10/2026: titoli, descrizioni per Google e titoli principali (H1) riscritti con le parole chiave di ogni pagina; Home: sezione servizi "Ristrutturazioni chiavi in mano a Roma, dal progetto alla consegna".
+- 16/10/2026: dati strutturati "Service" su ogni pagina di servizio (zona servita: Roma/Lazio, case in legno Italia); "FAQPage" sulla pagina infissi.
+- 16/10/2026: pagina infissi con 7 domande frequenti sui prezzi (solo prezzi confermati da Eugenio).
+- Già presenti: canonical, sitemap, robots, testo alternativo su tutte le foto, dati aziendali (GeneralContractor) con social e scheda Google.
+
+## Da fare (in ordine di importanza)
+1. **Recensioni Google**: chiederle a ogni cliente con il link `https://g.page/r/CSlUfVvDiZqIEBM/review`. È il fattore più forte per "ristrutturazioni Roma" su Maps.
+2. **Scheda Google Business** (la fa Eugenio): categoria principale "Impresa edile", categorie secondarie (ristrutturazioni, installazione finestre, facciate…), elenco servizi con descrizione, foto dei cantieri ogni settimana, un post al mese, sito `https://mdedilgroup.it`.
+3. **Domande frequenti** con prezzi reali anche su ristrutturazioni interni, esterni e case in legno (+ dati strutturati FAQPage).
+4. **Guide / news** (la Home ha già la sezione "Dal nostro taccuino", oggi vuota): un articolo al mese, scritto con dati veri. Idee: "Quanto costa ristrutturare un appartamento a Roma", "Infissi in PVC: come scegliere", "Rifacimento della facciata in condominio: passaggi e tempi", "Case in legno: quanto costano davvero chiavi in mano".
+5. **Link da altri siti**: pagina soci di AICOLE con link al sito, elenchi seri (PagineGialle, Houzz, Instapro/ProntoPro, Habitissimo), fornitori (Rehau, Pracal, Primed) se hanno un elenco installatori.
+6. **Lavori realizzati con la zona** (es. "Ristrutturazione appartamento a Prati"): una scheda per ogni cantiere importante, con foto prima/dopo e testo vero. Niente pagine "fotocopia" città per città.
+7. **Velocità del sito**: misure delle immagini (larghezza/altezza) per evitare salti durante il caricamento; controllare "Core Web Vitals" in Search Console.
+8. **Controllo mensile**: Eugenio manda le foto di Search Console (Rendimento, Pagine, Core Web Vitals); si correggono gli errori e si rafforzano le ricerche che stanno salendo.
+
+## Regole
+- Niente testi copiati da altri siti né parole chiave ripetute a forza: una frase deve suonare naturale a chi la legge.
+- Niente prezzi, numeri o recensioni inventati.
+- Una pagina = un argomento principale. Le pagine nuove vanno anche in `sitemap.xml`.
