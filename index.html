@@ -342,7 +342,7 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
 .no-intro .brand span::after{animation-delay:.3s}
 @media (max-width:440px){.soc{gap:6px}.soc a{width:42px;height:42px}}
 </style>
-<script>try{if(sessionStorage.getItem('mdIntro'))document.documentElement.classList.add('no-intro');else sessionStorage.setItem('mdIntro','1')}catch(e){}</script>
+<script>try{if(sessionStorage.getItem('mdIntro')||location.hash)document.documentElement.classList.add('no-intro');else sessionStorage.setItem('mdIntro','1')}catch(e){}</script>
 </head>
 <body>
 <div class="curtain" aria-hidden="true"><div class="mk">
@@ -474,7 +474,7 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
 
 <section id="legno" data-node>
   <div class="wrap">
-    <div class="head"><div><div class="eyebrow">Case in legno · 19 modelli</div><h2>Scegli il modello, configura gli optional</h2><i class="tl"></i><p class="legno-mis" style="margin:14px 0 0;max-width:62ch;color:var(--ink2);font-size:15px">Realizziamo anche <b style="color:var(--gold2);font-weight:600">case in legno su misura</b>: modifichiamo un modello del catalogo o progettiamo con te una casa nuova, con preventivo dedicato.</p></div><a class="btn" href="#contatti">Tutto il catalogo</a></div>
+    <div class="head"><div><div class="eyebrow">Case in legno · 19 modelli</div><h2>Scegli il modello, configura gli optional</h2><i class="tl"></i><p class="legno-mis" style="margin:14px 0 0;max-width:62ch;color:var(--ink2);font-size:15px">Realizziamo anche <b style="color:var(--gold2);font-weight:600">case in legno su misura</b>: modifichiamo un modello del catalogo o progettiamo con te una casa nuova, con preventivo dedicato.</p></div><a class="btn" href="/case-in-legno">Tutto il catalogo</a></div>
   </div>
   <div class="belt cbelt" id="cbelt" tabindex="0" aria-label="Catalogo case in legno: tieni fermo il dito per fermare, trascina per scorrere">
     <div class="tr" id="cbeltTr">
@@ -608,7 +608,7 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
 
 <section data-node>
   <div class="wrap">
-    <div class="head"><div><div class="eyebrow">News e guide</div><h2>Dal nostro taccuino</h2><i class="tl"></i></div><a class="btn" href="#">Tutti gli articoli</a></div>
+    <div class="head"><div><div class="eyebrow">News e guide</div><h2>Dal nostro taccuino</h2><i class="tl"></i></div></div>
     <div class="news">
       <article><span class="eyebrow">Ristrutturazioni</span><h3>[Titolo articolo]</h3></article>
       <article><span class="eyebrow">Case in legno</span><h3>[Titolo articolo]</h3></article>
