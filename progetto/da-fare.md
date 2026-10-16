@@ -40,6 +40,8 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 15/10/2026 – Simulatore ristrutturazioni interni: prezzo visibile accanto a ogni voce, con il calcolo, e riepilogo voce per voce (richiesta di Eugenio: trasparenza con il cliente). Tolta la scelta "Livello di finiture" (standard/pregio/lusso): si usano i prezzi del listino senza moltiplicatori (prima era preimpostato "pregio" ×1,3 su controsoffitti, porte e pitture). Sul branch `lavori-in-corso`
 - [x] 15/10/2026 – Aggiunte altre 9 foto (`img/lavoro-17…25.webp`) in fondo alla galleria "Realizziamo lavori chiavi in mano" della Home, dopo le 16 già caricate. Zone indicate da Eugenio (Via Cassia, Porta Pia, Corso Francia, San Giovanni, Manzoni); foto 17 (top bagno in montaggio): Olgiata
 - [x] 16/10/2026 – Simulatore interni: invio su WhatsApp con nome e cognome, telefono e indirizzo obbligatori (richiesta di Eugenio); informativa privacy aggiornata
+- [x] 16/10/2026 – Simulatore interni: un solo pulsante "Invia la simulazione e richiedi il sopralluogo" (scelta lasciata a Claude da Eugenio), conferma dopo l'invio, alternativa telefono/modulo
+- [ ] Chiedere a Eugenio se il sopralluogo è gratuito (se sì, scriverlo vicino al pulsante)
 - [ ] Chiedere a Eugenio se vuole gli stessi campi (nome, telefono, indirizzo) anche nei simulatori infissi e case in legno
 - [x] 16/10/2026 – Simulatore interni: oneri di cantiere, tiro dei materiali e pulizia non più automatici, li sceglie il cliente; tiro valido a qualsiasi piano (Eugenio)
 - [x] 16/10/2026 – Corretto il riquadro "La tua stima" della pagina interni che sul telefono usciva dallo schermo di 7 px

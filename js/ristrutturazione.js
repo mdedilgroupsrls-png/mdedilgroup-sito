@@ -238,7 +238,8 @@
     }
     err.hidden = true;
     this.href = 'https://wa.me/393282145266?text=' + encodeURIComponent(ultimoTesto +
-      '\n\nNome e cognome: ' + val.rNome + '\nTelefono: ' + val.rTel + '\nIndirizzo dell’immobile: ' + val.rInd + '\nVi chiedo di ricontattarmi.');
+      '\n\nNome e cognome: ' + val.rNome + '\nTelefono: ' + val.rTel + '\nIndirizzo dell’immobile: ' + val.rInd + '\n\nVorrei richiedere un sopralluogo: potete ricontattarmi?');
+    document.getElementById('rOk').hidden = false;
   }, true);
 
   function usato() { if (!segnato && window.MDStat) { segnato = true; window.MDStat('simulazione-ristrutturazioni-interni'); } }

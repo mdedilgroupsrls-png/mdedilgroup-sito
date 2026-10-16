@@ -47,6 +47,8 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 .dati{display:flex;flex-direction:column;gap:12px;margin:0 0 16px;padding-top:20px;border-top:1px solid #2A2722}.dati .dt{margin:0;font-family:'Urbanist',sans-serif;font-size:18px;font-weight:600;color:#F3EFE7}
 .dati label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#D8D2C6}.dati .inp{max-width:none;width:100%;box-sizing:border-box}.dati .inp.no{border-color:#E07A5F}
 .err{margin:0;font-size:13px;color:#F0A58F}
+.ok{margin:12px 0 0;padding:12px 14px;border:1px solid #3d6b4a;background:#13221a;font-size:13px;line-height:1.5;color:#D8EAD9}
+.alt{margin:14px 0 0;font-size:13px;line-height:1.5;color:#D8D2C6}.alt a{color:#E2C373;text-decoration:underline}
 .riep{list-style:none;margin:0 0 26px;padding:0;border-top:1px solid #2A2722;font-size:14px}.riep li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #2A2722;color:#D8D2C6}.riep li .e{white-space:nowrap;color:#F3EFE7}
 @media (min-width:901px){.rBar{display:none!important}}
 #rRiepTop{box-sizing:border-box;min-width:0;max-width:100%}@media (min-width:901px){#rRiepTop{max-height:calc(100vh - 48px);overflow:auto}}@media (max-width:640px){#rRiepTop{flex-basis:100%!important;padding:28px 20px!important}}
@@ -131,14 +133,16 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 <ul id="rRiep" class="riep"></ul>
 <p style="margin: 0 0 22px; display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.5; color: #D8D2C6"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 auto; fill: none; stroke: #C9A24A; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10v-6z"></path><path d="m8.8 12 2.2 2.2 4.2-4.4"></path></svg>Tutti i lavori sono eseguiti dai nostri tecnici abilitati, con certificazione di conformità.</p>
 <div class="dati">
-<p class="dt">Invia la simulazione e ti ricontattiamo</p>
+<p class="dt">Richiedi il sopralluogo</p>
+<p class="hint" style="margin:0;font-size:13px">Inviaci la simulazione su WhatsApp: ti richiamiamo noi per fissare il sopralluogo e prepararti il preventivo definitivo.</p>
 <label>Nome e cognome<input id="rNome" class="inp" type="text" autocomplete="name" maxlength="80"></label>
 <label>Telefono<input id="rTel" class="inp" type="tel" autocomplete="tel" inputmode="tel" maxlength="30"></label>
 <label>Indirizzo dell’immobile<input id="rInd" class="inp" type="text" autocomplete="street-address" maxlength="160" placeholder="Via, numero civico, città"></label>
 <p id="rErr" class="err" role="alert" hidden></p>
 </div>
-<a id="rWa" href="https://wa.me/393282145266" target="_blank" rel="noopener" style="display: block; text-align: center; background: #C9A24A; color: #0E0D0B; padding: 17px 20px; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; margin-bottom: 10px">INVIA LA SIMULAZIONE SU WHATSAPP</a>
-<a href="/#contatti" style="display: block; text-align: center; border: 1px solid #C9A24A; color: #C9A24A; padding: 16px 20px; font-weight: 600; font-size: 13px; letter-spacing: 0.14em">PRENOTA IL SOPRALLUOGO</a>
+<a id="rWa" href="https://wa.me/393282145266" target="_blank" rel="noopener" style="display: block; text-align: center; background: #C9A24A; color: #0E0D0B; padding: 17px 20px; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; margin-bottom: 10px">INVIA LA SIMULAZIONE E RICHIEDI IL SOPRALLUOGO</a>
+<div id="rOk" class="ok" role="status" hidden><b>Ci siamo quasi!</b> Si è aperto WhatsApp con il messaggio pronto: premi <b>Invia</b>. Ti richiamiamo noi per fissare il sopralluogo.</div>
+<p class="alt">Non usi WhatsApp? Chiamaci al <a href="tel:+393282145266">328 214 5266</a> oppure scrivici dal <a href="/#contatti">modulo contatti</a>.</p>
 <p style="margin: 12px 0 0; font-size: 12px; line-height: 1.55; color: #8A8478">I tuoi dati arrivano solo a noi, nel messaggio WhatsApp che invii tu, e servono per ricontattarti (<a href="/privacy.html" style="color: #8A8478; text-decoration: underline">informativa privacy</a>).</p>
 <p style="margin: 12px 0 0; font-size: 12px; line-height: 1.55; color: #8A8478">Stima indicativa basata sul listino MD Edil Group, prezzi IVA esclusa. Non costituisce offerta: il prezzo definitivo viene confermato dopo il sopralluogo e con la firma del contratto. Esclusa la fornitura di pavimenti, rivestimenti, sanitari, porte, termosifoni, caldaie, condizionatori e accessori, che sceglierai con noi. Infissi esclusi: usa il simulatore dedicato.</p>
 </aside>
