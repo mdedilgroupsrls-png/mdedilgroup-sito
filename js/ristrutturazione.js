@@ -4,6 +4,7 @@
    Sul sito non si mostrano i prezzi unitari, solo l'importo di ogni voce. */
 (function () {
   // tipo: 'q' = quantità (m², m, n°); 'si' = a corpo (sì / no); mq: true = pulsante "usa la superficie"
+  // p30: prezzo a corpo fino a 70 m², poi + p30 € ogni 30 m² (o frazione) in più (Eugenio, 16/10/2026)
   // a70: prezzo a corpo per immobili fino a 70 m²; ogni 70 m² in più si aggiunge un altro importo (71–140 m² = doppio, 141–210 m² = triplo…)
   // d = titolo della voce, x = descrizione che si apre passando sopra il titolo o toccandolo (testi originali MD Edil Group)
   var SEZ = [
@@ -26,9 +27,9 @@
         x: 'Rimozione del parquet esistente, con trasporto e smaltimento in discarica autorizzata.' },
       { id: 'protez', d: 'Protezione dei pavimenti da conservare', um: 'm²', p: 5.25, mq: true,
         x: 'Copriamo con cartone ondulato i pavimenti che restano, per proteggerli da urti, polvere e sporco per tutta la durata dei lavori.' },
-      { id: 'disEl', d: 'Smontaggio dell’impianto elettrico esistente', um: 'a corpo', p: 750, tipo: 'si', a70: true,
+      { id: 'disEl', d: 'Smontaggio dell’impianto elettrico esistente', um: 'a corpo', p: 750, tipo: 'si', p30: 250,
         x: 'Rimozione di cavi, scatole, frutti e quadro del vecchio impianto in tutta la casa, per fare spazio al nuovo impianto a norma.' },
-      { id: 'disId', d: 'Smontaggio dell’impianto idrico esistente', um: 'a corpo', p: 750, tipo: 'si', a70: true,
+      { id: 'disId', d: 'Smontaggio dell’impianto idrico esistente', um: 'a corpo', p: 750, tipo: 'si', p30: 250,
         x: 'Rimozione delle vecchie tubazioni di carico e scarico in tutta la casa, prima di realizzare l’impianto nuovo.' }
     ] },
     { t: 'Bagno chiavi in mano', s: 'Un solo importo per tutte le lavorazioni del bagno. Non indicare di nuovo queste lavorazioni nelle altre voci.', v: [
@@ -140,6 +141,7 @@
       if (val !== 'si') return 0;
       if (it.quadro) return quadro(mq);
       if (it.perMq) return it.p * mq;
+      if (it.p30) return it.p + (mq > 70 ? Math.ceil((mq - 70) / 30) * it.p30 : 0);
       return it.a70 ? it.p * x70(mq) : it.p;
     }
     if (it.bagno) return num(val) * (it.p + Math.max(0, (num(q.bagnoMq) || 5) - 5) * it.extraMq);
