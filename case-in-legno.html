@@ -83,12 +83,9 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 .cta{display:block;text-align:center;background:var(--gold);color:var(--bg);padding:15px 18px;font-weight:600;font-size:13px;letter-spacing:.14em;margin-top:10px}
 .cta:hover{background:var(--gold2);color:var(--bg)}
 .cta.alt{background:none;border:1px solid var(--gold);color:var(--gold)}
-.misura{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between;margin:22px 0 0;padding:clamp(20px,3vw,32px);border:1px solid var(--gold);background:var(--bg2)}
-.misura>div:first-child{flex:1 1 420px;min-width:0}
-.misura h3{font-size:clamp(20px,2vw,26px);margin-bottom:10px;text-wrap:balance}
-.misura p{margin:0;color:var(--ink2);font-size:15px;max-width:68ch}
-.misura-cta{flex:0 1 280px;display:flex;flex-direction:column;gap:2px}
-.misura-cta .cta{margin-top:8px}
+.misura{margin:16px 0 0;padding:2px 0 2px 14px;border-left:2px solid var(--gold);font-size:14px;line-height:1.55;color:var(--mute);max-width:80ch}
+.misura b{color:var(--ink2);font-weight:600}
+.misura a{color:var(--gold);white-space:nowrap}
 .mtot{display:none}
 @media (max-width:980px){.sim{grid-template-columns:1fr}.sum{position:static;scroll-margin-top:20px}
  .mtot{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;align-items:center;justify-content:space-between;gap:12px;padding:12px 96px 12px var(--pad);background:rgba(14,13,11,.94);border-top:1px solid var(--gold);color:var(--ink);font-size:13px;backdrop-filter:blur(6px)}
@@ -188,17 +185,7 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 
 <h2 id="simulatore" style="font-size: 22px; margin-bottom: 14px; scroll-margin-top: 16px">1. Scegli il modello</h2>
 <div class="models" id="models" role="group" aria-label="Modelli di casa in legno"></div>
-<div class="misura">
-<div>
-<p class="eyebrow" style="margin-bottom: 8px">Case in legno su misura</p>
-<h3>Non trovi il modello giusto? Lo progettiamo con te.</h3>
-<p>Oltre ai modelli del catalogo realizziamo strutture in legno personalizzate. Possiamo modificare un modello esistente, cambiando dimensioni, distribuzione degli spazi, altezze, aperture e finiture, oppure progettare una casa nuova partendo dalle tue idee e dal tuo terreno. Il nostro studio tecnico prepara il progetto e ti diamo un preventivo dedicato.</p>
-</div>
-<div class="misura-cta">
-<a class="cta" href="https://wa.me/393282145266?text=Buongiorno%2C%20vorrei%20una%20casa%20in%20legno%20su%20misura" target="_blank" rel="noopener">PARLACI DEL TUO PROGETTO</a>
-<a class="cta alt" href="/#contatti">RICHIEDI UN PREVENTIVO</a>
-</div>
-</div>
+<p class="misura"><b>Non trovi il modello giusto?</b> Realizziamo anche case in legno su misura: modifichiamo un modello del catalogo o ne progettiamo uno nuovo. <a href="https://wa.me/393282145266?text=Buongiorno%2C%20vorrei%20una%20casa%20in%20legno%20su%20misura" target="_blank" rel="noopener">Parlaci del tuo progetto →</a></p>
 
 <section class="sim">
 <div>
