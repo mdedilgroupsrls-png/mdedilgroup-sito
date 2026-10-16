@@ -68,7 +68,7 @@
     { t: 'Impianto gas', s: 'Linee del gas realizzate secondo le norme di sicurezza.', v: [
       { id: 'gasCuc', d: 'Linea del gas dal contatore alla cucina', um: 'n°', p: 750,
         x: 'Nuova tubazione dal contatore al piano cottura, con la valvola di chiusura prevista dalla normativa.' },
-      { id: 'gasCal', d: 'Linea del gas per la caldaia', um: 'a corpo', p: 550, tipo: 'si',
+      { id: 'gasCal', d: 'Linea del gas per la caldaia', um: 'n°', p: 550,
         x: 'Tubazione che porta il gas fino alla caldaia, con il collegamento.' }
     ] },
     { t: 'Pavimenti, rivestimenti e porte', s: 'Posa dei materiali che scegli con noi: la fornitura è esclusa.', v: [
