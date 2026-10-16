@@ -166,5 +166,8 @@
     document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 4000);
   }
 
-  window.MDPdf = { crea: crea, consegna: consegna, scarica: scarica };
+  function condivide() {
+    try { return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) && !!navigator.canShare && navigator.canShare({ files: [new File(['x'], 'p.pdf', { type: 'application/pdf' })] }); } catch (e) { return false; }
+  }
+  window.MDPdf = { crea: crea, consegna: consegna, scarica: scarica, condivide: condivide };
 })();

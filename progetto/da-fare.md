@@ -44,6 +44,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 16/10/2026 – Preventivo in PDF intestato MD Edil Group con i dati del cliente, nei simulatori interni e infissi (richiesta di Eugenio); modalità di pagamento non inserite per ora
 - [x] 16/10/2026 – Ristrutturazioni interni: prezzi IVA inclusa sul sito, nel messaggio WhatsApp e nel PDF (Eugenio)
 - [x] 16/10/2026 – Modalità di pagamento **solo nel PDF delle ristrutturazioni interni** (mai sulle pagine del sito, Eugenio): rate 30% / 30% / 35% / saldo 5% calcolate sul totale, bonifico Intesa Sanpaolo, intestatario MD EDIL GROUP S.R.L.S. L'IBAN è in `js/ristrutturazione.js` scritto al contrario e codificato (come l'email): **non scriverlo in chiaro nei file, il repository è pubblico**
+- [x] 16/10/2026 – Invio in due passi (1 richiesta WhatsApp con messaggio corto, 2 preventivo PDF) per interni e infissi
 - [x] 16/10/2026 – Sicurezza e carico/scarico dei materiali: anche loro +250 € ogni 30 m² oltre i 70 m² (Eugenio)
 - [x] 16/10/2026 – Rasature e tinteggiature: pareti e soffitti "circa 4 volte la superficie del pavimento" (prima 3, Eugenio)
 - [x] 16/10/2026 – Voce "Allaccio e posa di termosifoni" senza scaldasalviette: lo scaldasalviette è compreso nel bagno chiavi in mano (Eugenio)

@@ -24,7 +24,8 @@
       '<label>' + o.indirizzo + '<input data-c="ind" type="text" autocomplete="street-address" maxlength="160" placeholder="' + (o.esempio || 'Via, numero civico, città') + '"></label>' +
       '<p class="err" role="alert" hidden></p>';
     btn.parentNode.insertBefore(box, btn);
-    btn.textContent = o.pulsante;
+    var conPdf = !!(o.pdf && window.MDPdf);
+    btn.textContent = conPdf ? '1 · INVIA LA RICHIESTA SU WHATSAPP' : o.pulsante;
     var ok = document.createElement('div'); ok.className = 'mdi-ok'; ok.setAttribute('role', 'status'); ok.hidden = true;
     ok.innerHTML = '<b>Ci siamo quasi!</b> Si è aperto WhatsApp con il messaggio pronto: premi <b>Invia</b>. ' + o.dopo;
     var alt = document.createElement('p'); alt.className = 'mdi-alt';
@@ -64,15 +65,19 @@
       if (!v) { e.preventDefault(); e.stopImmediatePropagation(); return; }
       var testo = ''; try { testo = new URL(btn.href).searchParams.get('text') || ''; } catch (x) {}
       testo = testo.split('\n\nNome e cognome:')[0];
+      if (conPdf && o.breve) testo = o.breve(); // messaggio corto: il dettaglio è nel preventivo PDF (pulsante 2)
       btn.href = 'https://wa.me/393282145266?text=' + encodeURIComponent(testo + '\n\nNome e cognome: ' + v.nome + '\nTelefono: ' + v.tel + '\n' + o.indirizzo + ': ' + v.ind + '\n\n' + o.richiesta);
       ok.hidden = false;
     }, true);
 
     // preventivo in PDF intestato MD Edil Group (js/preventivo-pdf.js)
     if (o.pdf && window.MDPdf) {
-      var bp = document.createElement('button'); bp.type = 'button'; bp.className = 'mdi-pdf'; bp.textContent = 'SCARICA IL PREVENTIVO IN PDF';
-      ok.innerHTML += ' Se vuoi, inviaci anche il preventivo in PDF con il pulsante qui sotto.';
+      var bp = document.createElement('button'); bp.type = 'button'; bp.className = 'mdi-pdf'; bp.textContent = '2 · ALLEGA IL PREVENTIVO PDF';
+      var hp = document.createElement('p'); hp.className = 'mdi-pr';
+      hp.textContent = window.MDPdf.condivide() ? 'Si apre la condivisione: scegli WhatsApp e la chat di MD Edil Group.' : 'Il PDF si scarica sul computer: trascinalo nella chat di WhatsApp con MD Edil Group.';
+      ok.innerHTML = '<b>Ci siamo quasi!</b> Si è aperto WhatsApp con il messaggio pronto: premi <b>Invia</b>. Poi torna qui e tocca il pulsante <b>2</b> per mandarci il preventivo in PDF.';
       ok.parentNode.insertBefore(bp, ok.nextSibling);
+      bp.parentNode.insertBefore(hp, bp.nextSibling);
       bp.addEventListener('click', function () {
         var v = controlla('creare il preventivo in PDF'); if (!v) return;
         var d = o.pdf(); d.cliente = { nome: v.nome, tel: v.tel, ind: v.ind, indLabel: o.indirizzo }; d.file = v.nome;

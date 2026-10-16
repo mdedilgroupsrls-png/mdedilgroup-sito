@@ -248,12 +248,18 @@
   document.getElementById('rWa').addEventListener('click', function (e) {
     var val = controlla('inviare la simulazione');
     if (!val) { e.preventDefault(); e.stopImmediatePropagation(); return; }
-    this.href = 'https://wa.me/393282145266?text=' + encodeURIComponent(ultimoTesto +
+    // messaggio corto: il dettaglio delle voci è nel preventivo PDF (pulsante 2)
+    this.href = 'https://wa.me/393282145266?text=' + encodeURIComponent('Buongiorno, ho fatto la simulazione della ristrutturazione sul vostro sito.' +
+      '\nTotale stimato: ' + document.getElementById('rTot').textContent + ' IVA inclusa (' + String(num(stato.mq)).replace('.', ',') + ' m²). Vi invio qui il preventivo in PDF.' +
       '\n\nNome e cognome: ' + val.rNome + '\nTelefono: ' + val.rTel + '\nIndirizzo dell’immobile: ' + val.rInd + '\n\nVorrei richiedere un sopralluogo: potete ricontattarmi?');
     document.getElementById('rOk').hidden = false;
   }, true);
   // preventivo in PDF intestato MD Edil Group (js/preventivo-pdf.js)
   var bPdf = document.getElementById('rPdf');
+  var hPdf = document.getElementById('rPdfH');
+  if (hPdf) hPdf.textContent = window.MDPdf && window.MDPdf.condivide()
+    ? 'Si apre la condivisione: scegli WhatsApp e la chat di MD Edil Group.'
+    : 'Il PDF si scarica sul computer: trascinalo nella chat di WhatsApp con MD Edil Group.';
   if (bPdf) bPdf.addEventListener('click', function () {
     var val = controlla('creare il preventivo in PDF');
     if (!val || !window.MDPdf || !ultimoPdf) return;
