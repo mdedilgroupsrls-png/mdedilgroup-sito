@@ -318,7 +318,7 @@ mont:`<p>Si paga inoltre l’alloggio della squadra di montatori composta da 3�
 fond:m=>`<p>Platea di fondazione in cemento armato, altezza 30 cm, calcolata sulla superficie coperta della casa: ${fmtN(copTot(m))} m² × ${FOND} €/m².</p><p>Costo stimato: la cifra finale si conferma dopo il sopralluogo e la verifica del terreno.</p>`,
 lam:`<p>Laminazione delle finestre color antracite (è possibile la laminazione in altri colori).</p>`,
 sol:`<p>Tonalizzazione del vetro “Solar”.</p>`,
-par:`<p>Montaggio delle pareti divisorie secondo il progetto di base, posa dell’isolante e rivestimento di tutte le pareti in legno o cartongesso. Il prezzo include la manodopera e tutti i materiali necessari: travi in legno, isolante spessore 100 mm, membrana barriera al vapore, perline in legno (profilo tatranský) o cartongesso. Nel bagno viene effettuata la preparazione delle pareti e del pavimento ed è <b>inclusa la posa delle piastrelle</b> a pavimento e a parete.</p><p>Esclusioni dal prezzo: il costo delle piastrelle non è incluso; le piastrelle sono fornite dal cliente. La posa di piastrelle negli altri ambienti può essere effettuata previo accordo supplementare, a 39 €/m². La tinteggiatura delle pareti e i materiali per la pittura non sono inclusi. La vernice è fornita dal cliente. La tinteggiatura viene pagata separatamente in base alla superficie effettivamente verniciata, alla tariffa di 10 €/m². Qualsiasi modifica al tipo di finitura sarà concordata separatamente.</p>`,
+par:`<p>Montaggio delle pareti divisorie secondo il progetto di base, posa dell’isolante e rivestimento interno di tutte le pareti. Il rivestimento può essere in <b>legno di abete</b> (perline, profilo tatranský), in <b>cartongesso</b> oppure in altri materiali, in base alle tue esigenze. Il prezzo include la manodopera e tutti i materiali necessari: travi in legno, isolante spessore 100 mm, membrana barriera al vapore e il rivestimento scelto tra abete e cartongesso; per altri tipi di rivestimento ti prepariamo un preventivo dedicato. Nel bagno viene effettuata la preparazione delle pareti e del pavimento ed è <b>inclusa la posa delle piastrelle</b> a pavimento e a parete.</p><p>Esclusioni dal prezzo: il costo delle piastrelle non è incluso; le piastrelle sono fornite dal cliente. La posa di piastrelle negli altri ambienti può essere effettuata previo accordo supplementare, a 39 €/m². La tinteggiatura delle pareti e i materiali per la pittura non sono inclusi. La vernice è fornita dal cliente. La tinteggiatura viene pagata separatamente in base alla superficie effettivamente verniciata, alla tariffa di 10 €/m². Qualsiasi modifica al tipo di finitura sarà concordata separatamente.</p>`,
 ele:`<p>L’impianto elettrico di base, secondo il progetto, include tutti i materiali necessari e l’esecuzione dei seguenti lavori:</p><ul>
 <li>installazione dei cavi elettrici</li>
 <li>installazione del quadro di distribuzione con interruttori automatici</li>
@@ -356,7 +356,7 @@ const V=[
  ['lam','Laminazione delle finestre – antracite',2],
  ['sol','Tonalizzazione del vetro “Solar”',3],
  ['grp','Interni e impianti'],
- ['par','Montaggio delle pareti divisorie e finiture interne',4],
+ ['par','Montaggio delle pareti divisorie e rivestimento interno',4],
  ['ele','Impianto elettrico di base',5],
  ['idr','Impianto idrico e fognario',6],
  ['pav','Pavimenti interni',7],
@@ -430,7 +430,7 @@ function items(){
  if(!m.chiavi){
  if(st.on.mont)r.push(['Lavori di montaggio',m.p[1]]);
  if(st.on.fond)r.push([`Fondazione in platea (${fmtN(copTot(m))} m²)`,copTot(m)*FOND]);
- [['lam','Laminazione finestre',2],['sol','Vetro “Solar”',3],['par','Pareti divisorie e finiture',4],['ele','Impianto elettrico',5],['idr','Impianto idrico e fognario',6]].forEach(([k,l,i])=>{if(st.on[k])r.push([l,m.p[i]])});
+ [['lam','Laminazione finestre',2],['sol','Vetro “Solar”',3],['par','Pareti divisorie e rivestimento interno',4],['ele','Impianto elettrico',5],['idr','Impianto idrico e fognario',6]].forEach(([k,l,i])=>{if(st.on[k])r.push([l,m.p[i]])});
  if(st.pav==='lam')r.push(['Pavimenti in laminato',m.p[7]]);
  if(st.pav==='pia'){r.push([`Posa piastrelle (${fmtN(st.area)} m²)`,st.area*POSA_PIASTRELLE]);if(st.mas)r.push([`Massetto (${fmtN(st.area)} m²)`,st.area*MASSETTO])}
  if(st.on.por)r.push(['Porte interne',m.p[8]]);

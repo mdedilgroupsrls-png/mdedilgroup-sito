@@ -117,3 +117,5 @@ Regole decise da Eugenio:
 - Scorrevoli: sempre 320 €/m² in bianco e 400 €/m² per qualunque altro colore (anche particolari), senza fasce di misura. **Scorrevoli oltre 6,44 m²: prezzo al sopralluogo** (deciso da Eugenio il 16/10/2026).
 - Smontaggio tapparelle oltre 3,22 m²: raddoppia (50 €). Zanzariere: 52 €/m² **fino a 6,44 m²; oltre, prezzo al sopralluogo** (deciso da Eugenio il 16/10/2026); nessuno smontaggio delle vecchie.
 - I colori di tapparelle e zanzariere nelle strisce sono indicativi (ricostruiti dalle tabelle dei cataloghi).
+
+- Case in legno, voce "pareti" (16/10/2026): si chiama **"Montaggio delle pareti divisorie e rivestimento interno"**; rivestimento in legno di abete o cartongesso compreso nel prezzo, altri rivestimenti su preventivo. Prezzi invariati.
