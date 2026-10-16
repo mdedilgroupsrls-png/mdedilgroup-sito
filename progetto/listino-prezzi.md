@@ -84,6 +84,8 @@ Regole decise da Eugenio:
 | Siver | Siver 160 m² | 71.400 | 31.042,65 | 4.539,83 | 2.073,60 | 36.625,42 | 23.926,15 | 13.435,45 | 7.754,53 | 3.067,46 | 16.440 | 7.200 | 14.400 | 6.134,91 |
 | Montblanc | Mont Blanc 166 m² | 77.400 | 31.065,30 | 4.740,89 | 2.220,73 | 35.431,92 | 24.640,15 | 14.035,53 | 7.984,66 | 3.742,81 | 17.040 | 7.560 | 15.120 | 6.238,01 |
 
+> **Infissi, tapparelle e zanzariere: tutti i prezzi sono IVA inclusa** (confermato da Eugenio il 16/10/2026).
+
 ## Infissi in PVC Rehau Synego / Synego Slide (nel simulatore dal 16/10/2026)
 - Colori: **Weiss bianco = standard** . **Mooreiche 2, Rovere dorato, Noce, Grigio antracite, Braun = +25%** sul prezzo standard (15/10/2026). Campioni in `img/colore-*.webp`.
 - Gamma completa Synego: **oltre 50 colori** (tinte legno, tinte unite, SFTN Matt, Metbrush…), anche colore diverso tra lato interno ed esterno; colori inalterati nel tempo. Immagine della gamma in `img/synego-gamma-colori.webp`. **Colori particolari** (tutti quelli della gamma completa fuori dai 6 della cartella base) = **+30%** sul prezzo standard (15/10/2026).
