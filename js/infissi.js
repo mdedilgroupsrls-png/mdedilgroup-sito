@@ -159,7 +159,7 @@
 
     var msg = 'Buongiorno, ho fatto la stima sul sito per infissi e serramenti:\n';
     voci.forEach(function (v) { if (v[1] > 0) msg += '- ' + v[0] + ': ' + eur(v[1]) + '\n'; });
-    msg += 'Totale stimato (IVA inclusa): ' + eur(T) + '\nPiano: ' + $('piano').selectedOptions[0].text + '\nVorrei un sopralluogo.';
+    msg += 'Totale stimato (IVA esclusa): ' + eur(T) + '\nPiano: ' + $('piano').selectedOptions[0].text + '\nVorrei un sopralluogo.';
     $('waSim').href = 'https://wa.me/393282145266?text=' + encodeURIComponent(msg);
   }
   calc();
