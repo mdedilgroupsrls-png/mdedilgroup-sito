@@ -72,7 +72,7 @@
 
     // preventivo in PDF intestato MD Edil Group (js/preventivo-pdf.js)
     if (o.pdf && window.MDPdf) {
-      var bp = document.createElement('button'); bp.type = 'button'; bp.className = 'mdi-pdf'; bp.textContent = '2 · ALLEGA IL PREVENTIVO PDF';
+      var bp = document.createElement('button'); bp.type = 'button'; bp.className = 'mdi-pdf'; bp.textContent = '2 · SCARICA E CONDIVIDI IL PREVENTIVO PDF';
       var hp = document.createElement('p'); hp.className = 'mdi-pr';
       hp.textContent = window.MDPdf.condivide() ? 'Si apre la condivisione: scegli WhatsApp e la chat di MD Edil Group.' : 'Il PDF si scarica sul computer: trascinalo nella chat di WhatsApp con MD Edil Group.';
       ok.innerHTML = '<b>Ci siamo quasi!</b> Si è aperto WhatsApp con il messaggio pronto: premi <b>Invia</b>. Poi torna qui e tocca il pulsante <b>2</b> per mandarci il preventivo in PDF.';
