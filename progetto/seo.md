@@ -13,6 +13,7 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 | `/infissi-serramenti` | infissi PVC Roma, sostituzione infissi Roma | finestre PVC prezzi, Rehau Synego prezzo, tapparelle alluminio coibentato, zanzariere Roma |
 | `/case-in-legno` | case in legno prefabbricate prezzi | casa in legno chiavi in mano, casa in legno Lazio/Italia, A-frame, Barn House |
 | `/interior-design` | interior designer Roma | progetto interior design, render 3D casa |
+| `/chi-siamo` | impresa edile Roma (rafforza la Home) | impresa ristrutturazioni affidabile Roma |
 | `/studio-tecnico` | pratiche edilizie Roma, CILA Roma, SCIA Roma | studio tecnico ristrutturazioni Roma |
 
 ## Fatto

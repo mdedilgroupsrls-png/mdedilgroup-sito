@@ -17,6 +17,7 @@
 - **TikTok:** https://www.tiktok.com/@md_edil_group
 - **YouTube:** https://www.youtube.com/@md_edil_group
 - **LinkedIn:** https://www.linkedin.com/in/md-edil-group-345b263b6
+- **Threads:** https://www.threads.com/@md_edil_group (aggiunto il 16/10/2026)
 - Tutti i link social sono nelle icone in fondo a ogni pagina e nei dati strutturati della Home (`sameAs`), aggiornati il 15/10/2026.
 
 ## Sedi
@@ -42,7 +43,7 @@ MD Edil Group vende ristrutturazioni di classe **premium / lusso** e cerca clien
 - **Case in legno** (pagina da creare; esiste un configuratore separato, artifact "Case in Legno MD Edil Group").
 
 ## Come lavorano
-- **Chi siamo** (Home, riscritto il 16/10/2026 in tono professionale): introduzione (impresa edile di Roma, ristrutturazioni chiavi in mano, facciate, infissi, case in legno; un solo interlocutore e un solo contratto) + 5 punti: sopralluogo e preventivo trasparente; squadre specializzate per ogni lavorazione; lavori a regola d'arte e a norma di legge; contratto, tempi e garanzia (impresa regolarmente costituita e operativa, garantisce il lavoro svolto); rete di imprese (socia dell'**Associazione Edile AICOLE**, https://aicole.it). Non scrivere "giovane".
+- **Chi siamo** (pagina `/chi-siamo` dal 16/10/2026; riscritto il 16/10/2026 in tono professionale): introduzione (impresa edile di Roma, ristrutturazioni chiavi in mano, facciate, infissi, case in legno; un solo interlocutore e un solo contratto) + 5 punti: sopralluogo e preventivo trasparente; squadre specializzate per ogni lavorazione; lavori a regola d'arte e a norma di legge; contratto, tempi e garanzia (impresa regolarmente costituita e operativa, garantisce il lavoro svolto); rete di imprese (socia dell'**Associazione Edile AICOLE**, https://aicole.it). Non scrivere "giovane".
 - Tutti i lavori sono eseguiti da **tecnici abilitati** con **certificazione di conformità**.
 - I tramezzi oggi si realizzano in **lastre / pannelli** (tipo Aquapanel o Siniat), non in muratura intonacata.
 - Nelle opere edili la **fornitura** di pavimenti, rivestimenti, sanitari e accessori è **esclusa**: sono incluse posa e lavorazioni.
