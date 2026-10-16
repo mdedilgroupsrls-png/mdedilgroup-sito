@@ -1,0 +1,17 @@
+{
+  "data": "2026-10-16",
+  "periodo": "ultime 24 ore fino al 16/10/2026 23:50 (Roma)",
+  "nota": "Contatori attivi da circa le 22:30 del 16/10/2026 (prima pubblicazione del contatore): dati parziali. Elenco eventi raccolto dalle prime 400 righe dei registri Netlify. Le visite comprendono quelle di Eugenio e le prove. Nessun dato personale.",
+  "eventi": [
+    {"e": "vista-ristrutturazioni-interni", "c": "Monterotondo", "r": "Lazio", "n": "IT", "count": 3},
+    {"e": "whatsapp-ristrutturazioni-interni", "c": "Monterotondo", "r": "Lazio", "n": "IT", "count": 3},
+    {"e": "vista-home", "c": "Monterotondo", "r": "Lazio", "n": "IT", "count": 1},
+    {"e": "simulazione-ristrutturazioni-interni", "c": "?", "r": "?", "n": "?", "count": 1}
+  ],
+  "pagine_viste_browser": {
+    "/": 24, "/ristrutturazioni-interni": 8, "/case-in-legno": 8, "/infissi-serramenti": 6,
+    "/ristrutturazioni-esterni": 5, "/studio-tecnico": 4, "/interior-design": 2, "/chi-siamo": 1, "/grazie": 1
+  },
+  "paesi_browser": {"IT": 51, "US": 5, "HR": 3, "CA": 2, "FR": 1, "BE": 1},
+  "sicurezza": "Molti tentativi automatici di leggere file riservati (.env, .git, credenziali, wp-login): tutti senza risultato, il sito non ha questi file."
+}
