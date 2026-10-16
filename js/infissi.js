@@ -144,7 +144,7 @@
       return d === null || p === null ? [v] : v;
     });
     var zp = $('zanPos').checked;
-    tot.zan = sum('zan', function (r, a) { var p = zp ? perPezzo(a, P.posZan) : 0; return p === null ? [a * P.zan] : a * P.zan + p * plus; });
+    tot.zan = sum('zan', function (r, a) { if (a > 6.44) return null; var p = zp ? perPezzo(a, P.posZan) : 0; return a * P.zan + p * plus; }); // oltre 6,44 m²: al sopralluogo
 
     $('subInf').textContent = eur(tot.inf); $('subDem').textContent = eur(tot.dem); $('subPos').textContent = eur(tot.pos);
     $('subTap').textContent = eur(tot.tap); $('subZan').textContent = eur(tot.zan);
@@ -155,7 +155,7 @@
     $('riep').innerHTML = html || '<p class="sm"><span>Scrivi le misure dei tuoi infissi per vedere la stima.</span></p>';
     $('totale').textContent = eur(T);
     $('fuori').hidden = !fuori;
-    $('fuori').textContent = fuori ? 'Alcuni pezzi superano 6,44 m²: per quelli il prezzo si calcola al sopralluogo (scorrevoli, demolizione e posa).' : '';
+    $('fuori').textContent = fuori ? 'Alcuni pezzi superano 6,44 m²: per quelli il prezzo si calcola al sopralluogo (scorrevoli, zanzariere, demolizione e posa).' : '';
 
     var msg = 'Buongiorno, ho fatto la stima sul sito per infissi e serramenti:\n';
     voci.forEach(function (v) { if (v[1] > 0) msg += '- ' + v[0] + ': ' + eur(v[1]) + '\n'; });

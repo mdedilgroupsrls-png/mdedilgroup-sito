@@ -111,5 +111,5 @@ Regole decise da Eugenio:
 - +10% su demolizioni e pose **dal 4° piano** in su.
 - Finestre fino a 1 m²: 200 € fissi a pezzo in bianco (deciso da Eugenio il 16/10/2026); con i colori si applica la stessa maggiorazione (+25% / +30%) — da confermare.
 - Scorrevoli: sempre 320 €/m² in bianco e 400 €/m² per qualunque altro colore (anche particolari), senza fasce di misura. **Scorrevoli oltre 6,44 m²: prezzo al sopralluogo** (deciso da Eugenio il 16/10/2026).
-- Smontaggio tapparelle oltre 3,22 m²: raddoppia (50 €). Zanzariere: 52 €/m² a qualunque misura; nessuno smontaggio delle vecchie.
+- Smontaggio tapparelle oltre 3,22 m²: raddoppia (50 €). Zanzariere: 52 €/m² **fino a 6,44 m²; oltre, prezzo al sopralluogo** (deciso da Eugenio il 16/10/2026); nessuno smontaggio delle vecchie.
 - I colori di tapparelle e zanzariere nelle strisce sono indicativi (ricostruiti dalle tabelle dei cataloghi).
