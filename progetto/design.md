@@ -59,3 +59,5 @@ Sorgente: `progetto/sorgenti-design/home-cinema.html`. Stesso stile Nero & Oro, 
 - Cantieri ed esterni: gallerie con effetto 3D (coverflow). Esterni con descrizione sopra le foto e la zona di Roma sotto ogni foto.
 - Reel Instagram: tra "Come lavoriamo" e "News e guide"; 2 alla volta, si scorrono col dito; visualizzazioni, mi piace e commenti sopra il video in basso, con numeri che contano da 1 al valore vero.
 - Ordine sezioni: Servizi, Render, Simulatori, Cantieri, Case in legno, Esterni, Chi siamo + garanzie, Come lavoriamo, Reel, News, Contatti.
+
+- **Scheda grande delle case in legno** (`js/schede.js`, Home e /case-in-legno): si apre a misura dell'immagine, con foto della casa e planimetria **intere e visibili subito, senza scorrere**, anche sul telefono (16/10/2026).
