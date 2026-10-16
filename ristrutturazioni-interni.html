@@ -32,6 +32,17 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 .pill{min-height:44px;padding:10px 18px;background:transparent;border:1px solid #3A362F;color:#D8D2C6;font:inherit;font-size:14px;font-weight:500;cursor:pointer}
 .pill:hover{border-color:#C9A24A}
 .pill[aria-pressed="true"]{background:#C9A24A;border-color:#C9A24A;color:#0E0D0B;font-weight:600}
+.voce{display:grid;grid-template-columns:minmax(0,1fr) auto 96px;gap:8px 16px;align-items:center;padding:14px 0;border-bottom:1px dashed #2A2722;font-size:14.5px;color:#D8D2C6}
+.voce .vd{display:flex;flex-direction:column;gap:4px}.voce .vq{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:flex-end}
+.voce .vi{text-align:right;font-family:'Urbanist',sans-serif;font-size:16px;font-weight:600;color:#E2C373;white-space:nowrap;font-variant-numeric:tabular-nums}
+.qt{display:flex;align-items:center;gap:8px;font-size:13px;color:#8A8478;white-space:nowrap}.qt .inp{width:96px;padding:10px 12px}
+.usaMq{background:none;border:0;color:#C9A24A;font:inherit;font-size:12px;text-decoration:underline;cursor:pointer;padding:4px}
+.voce .pill{min-height:40px;padding:8px 16px}
+.riep{list-style:none;margin:0 0 26px;padding:0;border-top:1px solid #2A2722;font-size:14px}.riep li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #2A2722;color:#D8D2C6}.riep li span:last-child{white-space:nowrap;color:#F3EFE7}
+@media (min-width:901px){.rBar{display:none!important}}
+.rBar{position:sticky;bottom:0;z-index:5;display:flex;gap:8px;align-items:baseline;justify-content:center;margin:0 -4px;padding:14px 84px calc(14px + env(safe-area-inset-bottom,0px)) 16px;background:#0E0D0B;border:1px solid #C9A24A;color:#D8D2C6;font-size:14px;text-decoration:none}.rBar b{font-family:'Urbanist',sans-serif;font-size:20px;color:#E2C373}
+@media (max-width:640px){.voce{grid-template-columns:1fr auto}.voce .vd{grid-column:1/-1}.voce .vq{justify-content:flex-start}}
+
 </style>
 <style>html{scroll-behavior:smooth}img{max-width:100%}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Ristrutturazione di interni chiavi in mano","serviceType":"Ristrutturazione di appartamenti, ville e locali commerciali","description":"Ristrutturazione di appartamenti, ville e locali a Roma, nel Lazio e a Milano: demolizioni, impianti certificati, bagni e cucine. Calcola subito il costo con il simulatore.","url":"https://mdedilgroup.it/ristrutturazioni-interni","provider":{"@type":"GeneralContractor","name":"MD Edil Group S.R.L.S.","url":"https://mdedilgroup.it","telephone":"+39 328 214 5266"},"areaServed":[{"@type":"Place","name":"Roma"},{"@type":"Place","name":"Lazio"},{"@type":"Place","name":"Milano"}]}</script>
@@ -94,77 +105,24 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 <p style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.38em; color: #C9A24A; font-weight: 600">SIMULATORE DI COSTO</p>
 <h2 style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: clamp(32px, 3.2vw, 48px); line-height: 1.08">Quanto costa la tua ristrutturazione?</h2>
 </div>
-<p style="flex: 1 1 400px; margin: 0; max-width: 520px; color: #D8D2C6">Rispondi alle domande: la stima si aggiorna mentre compili. Prezzi dal nostro listino e dalla Tariffa della Regione Lazio, IVA esclusa.</p>
+<p style="flex: 1 1 400px; margin: 0; max-width: 520px; color: #D8D2C6">Indica la superficie e, voce per voce, solo le lavorazioni che ti servono: metri quadri, metri o numero di pezzi. Le voci lasciate vuote non vengono calcolate. La stima si aggiorna mentre scrivi.</p>
 </div>
 </section>
 
 <section style="background: #171512; padding: 24px clamp(20px, 5vw, 72px) 110px">
 <div style="max-width: 1320px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 48px">
 
-<form style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 44px">
+<form id="simForm" onsubmit="return false" style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 44px"></form>
 
-<fieldset class="grp">
-<legend class="lg"><span class="nr">01</span>L’immobile</legend>
-<label class="fld">Superficie interna (m²)<input class="inp" type="number" min="20" max="1000" value="{{mq}}" onChange="{{setMq}}"></label>
-<div class="fld">A che piano si trova?<div class="pills"><sc-for list="{{pianoOpts}}" as="o" hint-placeholder-count="4"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.tiro}}</span><b>{{v.tiro}}</b></span></div>
-<div class="fld">È in centro storico o in ZTL?<div class="pills"><sc-for list="{{centroOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.centro}}</span><b>{{v.centro}}</b></span></div>
-</fieldset>
-
-<fieldset class="grp">
-<legend class="lg"><span class="nr">02</span>Demolizioni e opere murarie</legend>
-<div class="fld">Rimozione dei pavimenti esistenti<div class="pills"><sc-for list="{{pavRimOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.pavRim}}</span><b>{{v.pavRim}}</b></span></div>
-<div class="fld">Demolizione e rifacimento del massetto<div class="pills"><sc-for list="{{massOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.mass}}</span><b>{{v.mass}}</b></span></div>
-<div class="row2">
-<label class="fld">Tramezzi da demolire (m² di parete)<input class="inp" type="number" min="0" value="{{demTram}}" onChange="{{setDemTram}}"><span class="pz"><span>{{u.demTram}}</span><b>{{v.demTram}}</b></span><span class="hint">Lunghezza × altezza: 4 m × 2,7 m ≈ 11 m²</span></label>
-<label class="fld">Nuovi tramezzi (m² di parete)<input class="inp" type="number" min="0" value="{{nuoviTram}}" onChange="{{setNuoviTram}}"><span class="pz"><span>{{u.nuoviTram}}</span><b>{{v.nuoviTram}}</b></span><span class="hint">In lastre tipo Aquapanel o Siniat, sp. 8 cm, finiti</span></label>
-</div>
-<label class="fld">Controsoffitti in cartongesso (m²)<input class="inp" type="number" min="0" value="{{controsoffitti}}" onChange="{{setControsoffitti}}"><span class="pz"><span>{{u.controsoffitti}}</span><b>{{v.controsoffitti}}</b></span></label>
-</fieldset>
-
-<fieldset class="grp">
-<legend class="lg"><span class="nr">03</span>Impianti</legend>
-<p class="hint" style="margin: 0; font-size: 13px; color: #C9A24A">Tutti i nostri impianti sono realizzati da tecnici abilitati e consegnati con dichiarazione di conformità (DM 37/08).</p>
-<div class="fld">Impianto elettrico<div class="pills"><sc-for list="{{elOpts}}" as="o" hint-placeholder-count="3"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.el}}</span><b>{{v.el}}</b></span><span class="hint">Rifacimento completo: circa {{punti}} punti luce e prese con frutti tipo BTicino inclusi, assistenza muraria e quadro elettrico</span></div>
-<div class="fld">Rifacimento della rete idrica<div class="pills"><sc-for list="{{idrOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.idr}}</span><b>{{v.idr}}</b></span></div>
-<div class="fld">Impianto della cucina<div class="pills"><sc-for list="{{cucOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.cuc}}</span><b>{{v.cuc}}</b></span></div>
-<label class="fld">Nuovi punti acqua (n°)<input class="inp" type="number" min="0" value="{{puntiAcqua}}" onChange="{{setPuntiAcqua}}"><span class="pz"><span>{{u.puntiAcqua}}</span><b>{{v.puntiAcqua}}</b></span><span class="hint">Lavatrice, boiler, lavabo aggiuntivo…</span></label>
-<div class="row2">
-<label class="fld">Termosifoni da sostituire (n°)<input class="inp" type="number" min="0" value="{{radiatori}}" onChange="{{setRadiatori}}"><span class="pz"><span>{{u.radiatori}}</span><b>{{v.radiatori}}</b></span></label>
-<label class="fld">Condizionatori, unità interne (n°)<input class="inp" type="number" min="0" value="{{split}}" onChange="{{setSplit}}"><span class="pz"><span>{{u.split}}</span><b>{{v.split}}</b></span></label>
-</div>
-<div class="fld">Nuova caldaia a condensazione<div class="pills"><sc-for list="{{calOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.cal}}</span><b>{{v.cal}}</b></span></div>
-<div class="fld">Riscaldamento a pavimento (radiante)<div class="pills"><sc-for list="{{radOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.rad}}</span><b>{{v.rad}}</b></span></div>
-</fieldset>
-
-<fieldset class="grp">
-<legend class="lg"><span class="nr">04</span>Bagni</legend>
-<div class="row2">
-<label class="fld">Bagni da rifare (n°)<input class="inp" type="number" min="0" max="10" value="{{bagni}}" onChange="{{setBagni}}"></label>
-<label class="fld">Superficie media di un bagno (m²)<input class="inp" type="number" min="2" max="30" value="{{mqBagno}}" onChange="{{setMqBagno}}"><span class="pz"><span>{{u.bagni}}</span><b>{{v.bagni}}</b></span></label>
-</div>
-<p class="hint" style="margin: 0">Bagno fino a 5 m²: demolizioni, impianti, massetto, posa di pavimento e rivestimento, montaggio di sanitari e accessori. Fornitura di rivestimenti, sanitari e accessori esclusa.</p>
-</fieldset>
-
-<fieldset class="grp">
-<legend class="lg"><span class="nr">05</span>Finiture</legend>
-<div class="fld">Posa dei nuovi pavimenti in tutta la casa<div class="pills"><sc-for list="{{pavOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.pav}}</span><b>{{v.pav}}</b></span></div>
-<label class="fld">Porte interne da sostituire (n°)<input class="inp" type="number" min="0" value="{{porte}}" onChange="{{setPorte}}"><span class="pz"><span>{{u.porte}}</span><b>{{v.porte}}</b></span></label>
-<div class="fld">Rasatura e tinteggiatura di pareti e soffitti<div class="pills"><sc-for list="{{tinOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.tin}}</span><b>{{v.tin}}</b></span></div>
-<div class="fld">Progetto di interior design, tavole esecutive e pratiche (CILA/SCIA)<div class="pills"><sc-for list="{{praOpts}}" as="o" hint-placeholder-count="2"><button type="button" class="pill" aria-pressed="{{o.pressed}}" onClick="{{o.pick}}">{{o.label}}</button></sc-for></div><span class="pz"><span>{{u.pra}}</span><b>{{v.pra}}</b></span></div>
-</fieldset>
-</form>
-
-<aside aria-label="Stima del preventivo" style="flex: 1 1 340px; position: sticky; top: 24px; background: #171512; border: 1px solid #C9A24A; padding: 36px 32px">
+<aside id="rRiepTop" aria-label="Stima del preventivo" style="flex: 1 1 340px; position: sticky; top: 24px; background: #171512; border: 1px solid #C9A24A; padding: 36px 32px">
 <p style="margin: 0 0 10px; font-size: 12px; letter-spacing: 0.3em; color: #C9A24A; font-weight: 600">LA TUA STIMA</p>
-<p style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: clamp(28px, 2.6vw, 38px); line-height: 1.15; color: #E2C373">€ {{min}} – € {{max}}</p>
-<p style="margin: 6px 0 4px; font-size: 13px; color: #8A8478">IVA esclusa · {{perMq}} €/m² circa</p>
-<p style="margin: 0 0 26px; font-size: 13px; color: #D8D2C6">Somma delle voci qui sotto: <b style="color: #E2C373">€ {{tot}}</b>. La forbice tiene conto delle scelte che faremo insieme in sopralluogo.</p>
-<ul style="list-style: none; margin: 0 0 26px; padding: 0; border-top: 1px solid #2A2722; font-size: 14px">
-<sc-for list="{{rows}}" as="r" hint-placeholder-count="6"><li style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid #2A2722"><span style="color: #D8D2C6">{{r.label}}</span><span style="white-space: nowrap">€ {{r.val}}</span></li></sc-for>
-</ul>
+<p style="margin: 0; font-family: 'Urbanist', sans-serif; font-weight: 600; font-size: clamp(28px, 2.6vw, 38px); line-height: 1.15; color: #E2C373"><span id="rTot">€ 0</span> <span style="font-size: 0.55em; color: #D8D2C6; font-weight: 500">+ IVA</span></p>
+<p id="rMqTot" style="margin: 6px 0 22px; font-size: 13px; color: #8A8478"></p>
+<ul id="rRiep" class="riep"></ul>
 <p style="margin: 0 0 22px; display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.5; color: #D8D2C6"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="flex: 0 0 auto; fill: none; stroke: #C9A24A; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10v-6z"></path><path d="m8.8 12 2.2 2.2 4.2-4.4"></path></svg>Tutti i lavori sono eseguiti dai nostri tecnici abilitati, con certificazione di conformità.</p>
-<a href="/#contatti" style="display: block; text-align: center; background: #C9A24A; color: #0E0D0B; padding: 17px 20px; font-weight: 600; font-size: 13px; letter-spacing: 0.14em">PRENOTA IL SOPRALLUOGO</a>
-<p style="margin: 18px 0 0; font-size: 12px; line-height: 1.55; color: #8A8478">Stima indicativa basata sul listino MD Edil Group e sulla Tariffa dei prezzi della Regione Lazio (ed. 2023). Non costituisce offerta: il prezzo definitivo viene confermato dopo il sopralluogo e con la firma del contratto. Esclusa la fornitura di pavimenti, rivestimenti, sanitari e accessori, che sceglierai con noi. Infissi esclusi: usa il simulatore dedicato.</p>
+<a id="rWa" href="https://wa.me/393282145266" target="_blank" rel="noopener" style="display: block; text-align: center; background: #C9A24A; color: #0E0D0B; padding: 17px 20px; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; margin-bottom: 10px">INVIA LA STIMA SU WHATSAPP</a>
+<a href="/#contatti" style="display: block; text-align: center; border: 1px solid #C9A24A; color: #C9A24A; padding: 16px 20px; font-weight: 600; font-size: 13px; letter-spacing: 0.14em">PRENOTA IL SOPRALLUOGO</a>
+<p style="margin: 18px 0 0; font-size: 12px; line-height: 1.55; color: #8A8478">Stima indicativa basata sul listino MD Edil Group, prezzi IVA esclusa. Non costituisce offerta: il prezzo definitivo viene confermato dopo il sopralluogo e con la firma del contratto. Esclusa la fornitura di pavimenti, rivestimenti, sanitari, porte, termosifoni, caldaie, condizionatori e accessori, che sceglierai con noi. Infissi esclusi: usa il simulatore dedicato.</p>
 </aside>
 
 </div>
@@ -196,118 +154,11 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 <script src="/js/dc-lite.js"></script>
 <script>
 class Component extends DCLogic {
-constructor(props) {
-super(props);
-this.state = { mq: '90', piano: 'p1', centro: 'no', fin: 'std', pavRim: 'si', mass: 'no', demTram: '0', nuoviTram: '0', controsoffitti: '0', el: 'rif', idr: 'si', cuc: 'si', puntiAcqua: '0', radiatori: '0', split: '0', cal: 'no', rad: 'no', bagni: '1', mqBagno: '5', pav: 'si', porte: '0', tin: 'si', pra: 'si' };
-}
-renderVals() {
-// PREZZI UNITARI (€, IVA esclusa) - listino MD Edil Group, con voci di riferimento della Tariffa Regione Lazio 2023 (DGR 101/2023)
-const P = {
-rimPav: 15.21,        // rimozione pavimento e piastrelle, compreso trasporto e discarica (m²) - rif. A 3.01.15.c
-demMass: 16.72,       // demolizione massetto, compreso trasporto e discarica (m²)
-demTram: 27,          // demolizione tramezzi, compreso trasporto e discarica (m²)
-nuovoMass: 32.19,     // nuovo massetto fino a 5 cm (m²)
-nuovoTram: 95,        // nuovo tramezzo in lastre (tipo Aquapanel / Siniat) sp. 8 cm, finito (m²)
-controsoffitto: 59.80,// controsoffitto in cartongesso (m²)
-puntoEl: 90, puntiPerMq: 1, // punto luce o presa con frutto tipo BTicino, assistenza muraria inclusa (cad); 1 punto per m²
-idrico: 1200,         // rete idrica dell'appartamento (a corpo)
-cucina: 1200,         // impianto della cucina (a corpo)
-puntoAcqua: 300,      // nuovo punto idrico: linea + posa apparecchio (lavatrice, boiler...) (cad)
-radiatore: 300,       // linea + posa e collegamento nuovo termosifone (cad)
-split: 1598.01, splitExtra: 500, // E03055b climatizzatore 2,5 kW con un'unità interna; ogni split in più, assistenza muraria inclusa
-caldaia: 3339.49,     // E02202b - caldaia a condensazione 23 kW (cad)
-radianteFisso: 3467.66, radiante: 85.68, // E02004a quota fissa + E02004b pannello radiante a pavimento (m²)
-bagnoFino5: 6500, bagnoExtraMq: 900,     // bagno fino a 5 m² (fornitura rivestimenti, sanitari e accessori esclusa); ogni m² oltre i 5
-posaPav: 37,          // posa pavimento in gres porcellanato, fornitura esclusa (m²)
-porta: 866.68,        // A 16.01.4.a - porta tamburata 515,88 €/m² x 1,68 m² (cad)
-tinteggiatura: 32,    // rasatura + pittura (m² di parete/soffitto)
-progetto: 50,         // interior design: progetto esecutivo completo, tavole impianti, CILA/SCIA (m²)
-tiro: { villa: 0, p1: 0, asc: 25, noasc: 40, alto: 55 } // tiro in alto/in basso dei materiali (€/m³) - PROVVISORIO, da confermare
-};
-const s = this.state;
-const n = (v) => { const x = parseFloat(String(v).replace(',', '.')); return isNaN(x) || x < 0 ? 0 : x; };
-const mq = n(s.mq), bagni = Math.round(n(s.bagni)), mqB = n(s.mqBagno) || 5;
-const FIN = { std: 1, pregio: 1.3, lusso: 1.7 };
-const f = FIN[s.fin];
-const yes = (k) => s[k] === 'si';
-const punti = Math.round(mq * P.puntiPerMq);
-const nSplit = Math.round(n(s.split));
-// volumi movimentati (m³): macerie in discesa, massetto nuovo in salita
-const volGiu = (yes('pavRim') ? mq * 0.05 : 0) + (yes('mass') ? mq * 0.06 : 0) + n(s.demTram) * 0.1;
-const volSu = yes('mass') ? mq * 0.05 : 0;
-const tiro = (volGiu + volSu) * P.tiro[s.piano];
-const demol = (yes('pavRim') ? mq * P.rimPav : 0) + (yes('mass') ? mq * P.demMass : 0) + n(s.demTram) * P.demTram + tiro;
-const murarie = (yes('mass') ? mq * P.nuovoMass : 0) + n(s.nuoviTram) * P.nuovoTram + n(s.controsoffitti) * P.controsoffitto * f;
-// quadro elettrico: 750 € fino a 70 m², 1.000 € fino a 100 m², poi +250 € ogni 20 m² in più
-const quadro = mq <= 70 ? 750 : mq <= 100 ? 1000 : 1000 + Math.ceil((mq - 100) / 20) * 250;
-const el = s.el === 'rif' ? punti * P.puntoEl + quadro : s.el === 'adeg' ? Math.round(punti * 0.3) * P.puntoEl + quadro : 0;
-const impianti = el + (yes('idr') ? P.idrico : 0) + (yes('cuc') ? P.cucina : 0) + n(s.puntiAcqua) * P.puntoAcqua
-+ n(s.radiatori) * P.radiatore + (nSplit > 0 ? P.split + (nSplit - 1) * P.splitExtra : 0) + (yes('cal') ? P.caldaia : 0) + (yes('rad') ? P.radianteFisso + mq * P.radiante : 0);
-const bagniTot = bagni * (P.bagnoFino5 + Math.max(0, mqB - 5) * P.bagnoExtraMq);
-const mqPav = Math.max(0, mq - bagni * mqB);
-const pavimenti = yes('pav') ? mqPav * P.posaPav : 0;
-const finiture = pavimenti + (n(s.porte) * P.porta + (yes('tin') ? mq * 3 * P.tinteggiatura : 0)) * f;
-const prog = yes('pra') ? mq * P.progetto : 0;
-const lavoriBase = demol + murarie + impianti + bagniTot + finiture;
-const centro = yes('centro') ? lavoriBase * 0.05 : 0; // maggiorazione centro storico / ZTL 5%
-const lavori = lavoriBase + centro;
-const sicurezza = lavori * 0.05; // oneri per la sicurezza 5% dei lavori
-const tot = lavori + sicurezza + prog;
-const fmt = (v) => String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-const e2 = (v) => v.toLocaleString('it-IT', { minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2 });
-const r500 = (v) => Math.round(v / 500) * 500;
-const FNAME = { std: 'standard', pregio: 'pregio ×1,3', lusso: 'lusso ×1,7' }[s.fin];
-const fx = f !== 1 ? ' · finiture ' + FNAME : '';
-// prezzo di ogni voce: valore (v) e come si calcola (u)
-const V = {}, U = {};
-const put = (k, val, how) => { V[k] = val; U[k] = how; };
-put('tiro', tiro, P.tiro[s.piano] ? e2(Math.round((volGiu + volSu) * 10) / 10) + ' m³ di materiale × ' + P.tiro[s.piano] + ' €/m³ (tiro al piano)' : 'Nessun costo per il tiro dei materiali');
-put('pavRim', yes('pavRim') ? mq * P.rimPav : 0, e2(P.rimPav) + ' €/m² × ' + e2(mq) + ' m², smaltimento incluso');
-put('mass', yes('mass') ? mq * (P.demMass + P.nuovoMass) : 0, 'Demolizione ' + e2(P.demMass) + ' + nuovo ' + e2(P.nuovoMass) + ' €/m² × ' + e2(mq) + ' m²');
-put('demTram', n(s.demTram) * P.demTram, P.demTram + ' €/m² × ' + e2(n(s.demTram)) + ' m²');
-put('nuoviTram', n(s.nuoviTram) * P.nuovoTram, P.nuovoTram + ' €/m² × ' + e2(n(s.nuoviTram)) + ' m²');
-put('controsoffitti', n(s.controsoffitti) * P.controsoffitto * f, e2(P.controsoffitto) + ' €/m² × ' + e2(n(s.controsoffitti)) + ' m²' + fx);
-put('el', el, s.el === 'rif' ? punti + ' punti × ' + P.puntoEl + ' € + quadro ' + fmt(quadro) + ' €' : s.el === 'adeg' ? Math.round(punti * 0.3) + ' punti × ' + P.puntoEl + ' € + quadro ' + fmt(quadro) + ' €' : 'Non incluso');
-put('idr', yes('idr') ? P.idrico : 0, 'A corpo');
-put('cuc', yes('cuc') ? P.cucina : 0, 'A corpo');
-put('puntiAcqua', n(s.puntiAcqua) * P.puntoAcqua, P.puntoAcqua + ' € × ' + e2(n(s.puntiAcqua)));
-put('radiatori', n(s.radiatori) * P.radiatore, P.radiatore + ' € × ' + e2(n(s.radiatori)));
-put('split', nSplit > 0 ? P.split + (nSplit - 1) * P.splitExtra : 0, nSplit > 0 ? 'Primo split ' + e2(P.split) + ' €' + (nSplit > 1 ? ' + ' + (nSplit - 1) + ' × ' + P.splitExtra + ' €' : '') : 'Nessuno');
-put('cal', yes('cal') ? P.caldaia : 0, 'Caldaia a condensazione 23 kW, installata');
-put('rad', yes('rad') ? P.radianteFisso + mq * P.radiante : 0, 'Quota fissa ' + e2(P.radianteFisso) + ' € + ' + e2(P.radiante) + ' €/m² × ' + e2(mq) + ' m²');
-put('bagni', bagniTot, bagni + ' × ' + fmt(P.bagnoFino5) + ' € (fino a 5 m²)' + (mqB > 5 ? ' + ' + e2(mqB - 5) + ' m² × ' + P.bagnoExtraMq + ' €' : ''));
-put('pav', pavimenti, P.posaPav + ' €/m² × ' + e2(mqPav) + ' m² (esclusi i bagni), solo posa');
-put('porte', n(s.porte) * P.porta * f, e2(P.porta) + ' € × ' + e2(n(s.porte)) + fx);
-put('tin', yes('tin') ? mq * 3 * P.tinteggiatura * f : 0, P.tinteggiatura + ' €/m² × ' + e2(mq * 3) + ' m² di pareti e soffitti (circa 3 × la superficie)' + fx);
-put('pra', prog, P.progetto + ' €/m² × ' + e2(mq) + ' m²');
-put('centro', centro, '+5% sul costo dei lavori');
-const v = {}; Object.keys(V).forEach((k) => { v[k] = V[k] > 0 ? '€ ' + fmt(V[k]) : '–'; });
-const NAMES = [['tiro', 'Tiro dei materiali al piano'], ['pavRim', 'Rimozione pavimenti'], ['mass', 'Rifacimento massetto'], ['demTram', 'Demolizione tramezzi'], ['nuoviTram', 'Nuovi tramezzi'], ['controsoffitti', 'Controsoffitti'], ['el', 'Impianto elettrico'], ['idr', 'Rete idrica'], ['cuc', 'Impianto cucina'], ['puntiAcqua', 'Nuovi punti acqua'], ['radiatori', 'Termosifoni'], ['split', 'Condizionatori'], ['cal', 'Caldaia'], ['rad', 'Riscaldamento a pavimento'], ['bagni', 'Bagni'], ['pav', 'Posa pavimenti'], ['porte', 'Porte interne'], ['tin', 'Rasatura e tinteggiatura'], ['centro', 'Centro storico / ZTL (+5%)']];
-const rows = NAMES.map(([k, label]) => ({ label, v: V[k] }))
-.concat([{ label: 'Oneri per la sicurezza (5%)', v: sicurezza }, { label: 'Progetto e pratiche', v: prog }])
-.filter((r) => r.v > 0).map((r) => ({ label: r.label, val: fmt(r.v) }));
-const set = (k) => (e) => this.setState({ [k]: e.target.value });
-const opts = (k, list) => list.map(([v, label]) => ({ label, pressed: s[k] === v ? 'true' : 'false', pick: () => this.setState({ [k]: v }) }));
-const sn = (k) => opts(k, [['si', 'Sì'], ['no', 'No']]);
-return {
-headFont: this.props.headFont ?? 'Urbanist',
-nameJustify: this.props.nameJustify ?? 'flex-start',
-mq: s.mq, demTram: s.demTram, nuoviTram: s.nuoviTram, controsoffitti: s.controsoffitti, puntiAcqua: s.puntiAcqua, radiatori: s.radiatori, split: s.split, bagni: s.bagni, mqBagno: s.mqBagno, porte: s.porte,
-setMq: set('mq'), setDemTram: set('demTram'), setNuoviTram: set('nuoviTram'), setControsoffitti: set('controsoffitti'), setPuntiAcqua: set('puntiAcqua'), setRadiatori: set('radiatori'), setSplit: set('split'), setBagni: set('bagni'), setMqBagno: set('mqBagno'), setPorte: set('porte'),
-punti: String(punti),
-pianoOpts: opts('piano', [['villa', 'Villa o casa indipendente'], ['p1', 'Piano terra o 1°'], ['asc', '2° o oltre con ascensore'], ['noasc', '2°–4° senza ascensore'], ['alto', '5° o oltre senza ascensore']]),
-centroOpts: sn('centro'),
-pavRimOpts: sn('pavRim'), massOpts: sn('mass'),
-elOpts: opts('el', [['no', 'Non serve'], ['adeg', 'Adeguamento'], ['rif', 'Rifacimento completo']]),
-idrOpts: sn('idr'), cucOpts: sn('cuc'), calOpts: sn('cal'), radOpts: sn('rad'),
-pavOpts: sn('pav'), tinOpts: sn('tin'), praOpts: sn('pra'),
-min: fmt(r500(tot * 0.9)), max: fmt(r500(tot * 1.15)), perMq: mq > 0 ? fmt(tot / mq) : '0',
-rows: rows, v: v, u: U, tot: fmt(tot)
-};
-}
+renderVals() { return { headFont: this.props.headFont ?? 'Urbanist', nameJustify: this.props.nameJustify ?? 'flex-start' }; }
 }
 DCLite.mount(Component, document.getElementById("tpl"), document.getElementById("app"));
 </script>
+<script src="/js/ristrutturazione.js"></script>
 <script>if(location.hash==="#simulatore"){addEventListener("load",function(){var e=document.getElementById("simulatore");if(e)e.scrollIntoView()})}</script>
 <script src="/js/sicurezza.js" defer></script>
 </body>

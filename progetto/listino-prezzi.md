@@ -1,47 +1,64 @@
 # Listino prezzi MD Edil Group (ristrutturazioni interni)
 
-Prezzi **IVA esclusa**, gli stessi del simulatore sul sito. Per le voci non elencate la base è la **Tariffa dei prezzi Regione Lazio 2023 (DGR 101/2023)**.
+**Listino del 16/10/2026** (PDF di Eugenio "Listino prezzi ristrutturazione MD Edil Group", formato computo metrico). Tutti i prezzi **IVA esclusa**. È lo stesso del simulatore della pagina `/ristrutturazioni-interni` (`js/ristrutturazione.js`), che **sostituisce il listino precedente** (15,21 €/m² rimozione pavimenti, 90 € punto luce, Tariffa Regione Lazio ecc.: non più usato).
 
-Fornitura di pavimenti, rivestimenti, sanitari e accessori **sempre esclusa**: incluse solo posa e lavorazioni. Il preventivo è sempre stimato e va confermato dopo il sopralluogo e con il contratto firmato.
+Il PDF nasce dalla revisione, fatta da Eugenio, di un prospetto di un'altra impresa: **sul sito non vanno mai i codici delle voci (01.03, 02.06…) né il nome di altre imprese**; le descrizioni sul sito sono riscritte in parole nostre.
 
-## Demolizioni (trasporto e discarica inclusi)
-| Voce | Prezzo |
-|---|---|
-| Rimozione pavimento e piastrelle | 15,21 €/m² |
-| Demolizione massetto | 16,72 €/m² |
-| Demolizione tramezzi | 27 €/m² |
-| Tiro in alto / in basso dei materiali (dal 2° piano, non per ville) | €/m³ – **prezzo da definire** (nel simulatore valori provvisori 25 / 40 / 55 €/m³) |
+Regole del documento: la posa della ceramica è in due sezioni (02.13 e 08.01) ma **si conta una volta sola** (nel simulatore solo in "Pavimenti"); le lavorazioni del **bagno completo** non si sommano di nuovo alle voci singole. Fornitura di materiali (gres, sanitari, porte, termosifoni, caldaia, condizionatori…) **sempre esclusa**.
 
-## Opere murarie
-| Voce | Prezzo |
-|---|---|
-| Nuovo massetto fino a 5 cm | 32,19 €/m² |
-| Nuovo tramezzo 8 cm in lastre (Aquapanel / Siniat), senza intonaco | 95 €/m² |
-| Controsoffitto in cartongesso | 59,80 €/m² |
+| Sezione | Voce | U.M. | Prezzo € |
+|---|---|---|---|
+| Demolizioni | Pavimento ceramico: rimozione e discarica, massetto escluso | m² | 17,50 |
+| Demolizioni | Pavimento ceramico: rimozione con massetto fino a 5 cm e discarica | m² | 33,50 |
+| Demolizioni | Controsoffitto in cartongesso: demolizione e discarica | m² | 25,50 |
+| Demolizioni | Tramezzi da 4,5 a 10 cm: demolizione | m² | 25,15 |
+| Demolizioni | Porte interne: smontaggio, demolizione e discarica | cad. | 93,00 |
+| Demolizioni | Radiatore: rimozione | cad. | 55,70 |
+| Demolizioni | Zoccolino in legno o ceramica: rimozione | m | 5,50 |
+| Demolizioni | Parquet: demolizione e discarica | m² | 26,70 |
+| Demolizioni | Protezione pavimenti con cartone ondulato | m² | 5,25 |
+| Demolizioni | Dismissione impianto elettrico, fino a 70 m² | a corpo | 750,00 |
+| Demolizioni | Dismissione impianto idrico, fino a 70 m² | a corpo | 750,00 |
+| Bagni | Bagno completo fino a 5 m² (tutto incluso tranne la fornitura) | a corpo | 6.500,00 |
+| Muratura | Nuovi divisori in tramezzi | m² | 87,70 |
+| Muratura | Controtelaio porta scorrevole a scomparsa, fornitura e posa | cad. | 370,00 |
+| Muratura | Intonacatura grezza | m² | 26,50 |
+| Muratura | Massetto tradizionale sabbia-cemento | m² | 34,50 |
+| Muratura | (Posa ceramica fino a 60×60: uguale a "Pavimenti", non si conta due volte) | m² | 44,50 |
+| Aria condizionata | Predisposizione e installazione 1 motore + 2 split, fornitura esclusa | a corpo | 1.170,00 |
+| Elettrico | Punto elettrico (luce o presa), frutti tipo BTicino e assistenza muraria | punto | 95,00 |
+| Elettrico | Centralino elettrico fino a 70 m² | cad. | 750,00 |
+| Idrico | Centralina distributiva con raccordo alla caldaia | cad. | 679,00 |
+| Idrico | Tubazioni multistrato per radiatore/scaldasalviette + posa radiatore, fornitura esclusa | cad. | 475,00 |
+| Idrico | Caldaia a gas: installazione | cad. | 770,00 |
+| Idrico | Punto acqua completo di adduzione e scarico | cad. | 435,00 |
+| Gas | Tubazione gas dal contatore alla cucina, con intercettazione a norma | cad. | 750,00 |
+| Gas | Tubazione gas della caldaia | a corpo | 550,00 |
+| Pavimenti | Posa pavimento ceramico fino a 60×60 | m² | 44,50 |
+| Pavimenti | Posa rivestimento ceramico a parete fino a 60×60 | m² | 47,50 |
+| Pavimenti | Zoccolino in legno o ceramica: posa | m | 8,00 |
+| Pavimenti | Posa parquet | m² | 55,00 |
+| Pavimenti | Porta battente: posa | cad. | 130,00 |
+| Pavimenti | Porta scorrevole: posa | cad. | 230,00 |
+| Cartongesso | Controsoffitto (orditura metallica, lastre 13 mm, giunti in due mani) | m² | 55,00 |
+| Cartongesso | Divisorio piano, spessore 10 cm | m² | 75,00 |
+| Cartongesso | Velette e ripiani per LED | m | 85,00 |
+| Tinteggiature | Raschiatura pitture esistenti | m² | 3,00 |
+| Tinteggiature | Rasatura pareti e soffitti con stucco in pasta (nel PDF "con ZTL e stucco": da chiarire) | m² | 27,00 |
+| Tinteggiature | Levigatura e isolante acrilico | m² | 5,00 |
+| Tinteggiature | Pittura lavabile tinte chiare | m² | 13,50 |
+| Tinteggiature | Pittura lavabile tinte intense | m² | 17,50 |
+| Oneri | Tiro in alto e calo in basso, appartamento fino a 70 m² | a corpo | 1.400,00 |
+| Oneri | Oneri di sicurezza con allestimento/disallestimento, fino a 70 m² | a corpo | 1.100,00 |
+| Oneri | Pulizia finale di cantiere | m² | 6,00 |
+| Progetto | Progetto e pratiche (deciso da Eugenio il 16/10/2026) | m² | 40,00 |
 
-## Impianti
-| Voce | Prezzo |
-|---|---|
-| Punto luce o presa (assistenza muraria e frutto tipo BTicino inclusi) | 90 € cad |
-| Stima punti elettrici | 1 punto per m² (70 m² = 70 punti) |
-| Quadro elettrico | 750 € fino a 70 m²; 1.000 € da 70 a 100 m²; oltre +250 € ogni 20 m² |
-| Rete idrica | 1.200 € |
-| Impianto cucina | 1.200 € |
-| Nuovo punto idrico (lavatrice, boiler, termosifone nuovo…) | 300 € cad |
-| Condizionatore con uno split | 1.598 €; ogni split in più +500 € |
-
-## Bagni e finiture
-| Voce | Prezzo |
-|---|---|
-| Bagno fino a 5 m² (fornitura esclusa) | 6.500 € |
-| Posa pavimento in gres porcellanato | 37 €/m² |
-| Rasatura + pittura | 32 €/m² |
-
-## Progetto e sicurezza
-| Voce | Prezzo |
-|---|---|
-| Interior design (tutte le tavole esecutive e impianti) + pratica CILA/SCIA | 50 €/m² |
-| Oneri per la sicurezza | circa 5% dei lavori |
+### Come lo usa il simulatore (deciso con Eugenio il 16/10/2026)
+- Il cliente indica: superficie, piano (**"Villa, casa indipendente o fino al 1° piano"** oppure **"2° piano o superiore"**), centro storico/ZTL (+5% su lavori e oneri, regola di prima, mantenuta). Poi, **voce per voce nell'ordine del listino**, la quantità (m², m, n°) o Sì/No per le voci a corpo. **Voce vuota = non calcolata.**
+- **Oneri automatici**: sicurezza sempre, pulizia finale = 6 €/m² × superficie, tiro in alto/basso solo dal 2° piano; partono solo se c'è almeno una lavorazione.
+- Sul sito **non si mostrano i prezzi unitari**, solo l'importo di ogni voce e il totale "+ IVA" (come per gli infissi).
+- Pulsanti: **"Invia la stima su WhatsApp"** (messaggio con tutte le voci) e **"Prenota il sopralluogo"**.
+- **Regole provvisorie scelte da Claude, da confermare con Eugenio:** voci a corpo "fino a 70 m²" (dismissione elettrico e idrico, tiro, oneri di sicurezza) oltre i 70 m² crescono **in proporzione ai m²** (es. 100 m² = 750 × 100/70 = 1.071 €); centralino elettrico oltre 70 m² con la regola vecchia (1.000 € fino a 100 m², poi +250 € ogni 20 m²); "= superficie" è solo un aiuto per riempire le voci in m².
 
 ## Case in legno
 I prezzi delle case in legno sono **IVA inclusa**.
