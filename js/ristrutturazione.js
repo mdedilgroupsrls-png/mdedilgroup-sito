@@ -4,7 +4,7 @@
    Sul sito non si mostrano i prezzi unitari, solo l'importo di ogni voce. */
 (function () {
   // tipo: 'q' = quantità (m², m, n°); 'si' = a corpo (sì / no); mq: true = pulsante "usa la superficie"
-  // a70: prezzo a corpo per immobili fino a 70 m² (oltre si aumenta in proporzione ai m²)
+  // a70: prezzo a corpo per immobili fino a 70 m²; ogni 70 m² in più si aggiunge un altro importo (71–140 m² = doppio, 141–210 m² = triplo…)
   // d = titolo della voce, x = descrizione che si apre passando sopra il titolo o toccandolo (testi originali MD Edil Group)
   var SEZ = [
     { t: 'Demolizioni e rimozioni', s: 'Smontiamo e portiamo via ciò che va rifatto. Dove indicato, carico, trasporto e smaltimento in discarica autorizzata sono compresi.', v: [
@@ -32,8 +32,8 @@
         x: 'Rimozione delle vecchie tubazioni di carico e scarico in tutta la casa, prima di realizzare l’impianto nuovo.' }
     ] },
     { t: 'Bagno chiavi in mano', s: 'Un solo importo per tutte le lavorazioni del bagno. Non indicare di nuovo queste lavorazioni nelle altre voci.', v: [
-      { id: 'bagno', d: 'Rifacimento completo del bagno (fino a 5 m²)', um: 'n° bagni', p: 6500,
-        x: 'Dal vecchio bagno al nuovo, senza pensieri: smontaggio dei sanitari, demolizione di pavimenti, rivestimenti e sottofondi con smaltimento, nuovo massetto, nuovi impianti idrico ed elettrico con le opere murarie, impermeabilizzazione della doccia, posa di pavimento e rivestimenti in gres, rasatura e pittura, montaggio di sanitari, rubinetteria, piatto e box doccia e accessori, collaudo con dichiarazioni di conformità e pulizia finale. Restano esclusi gres, sanitari, rubinetteria, doccia e accessori, che sceglierai con noi.' }
+      { id: 'bagno', d: 'Rifacimento completo del bagno', um: 'n° bagni', p: 6500, extraMq: 350, bagno: true,
+        x: 'Dal vecchio bagno al nuovo, senza pensieri: smontaggio dei sanitari, demolizione di pavimenti, rivestimenti e sottofondi con smaltimento, nuovo massetto, nuovi impianti idrico ed elettrico con le opere murarie, impermeabilizzazione della doccia, posa di pavimento e rivestimenti in gres, rasatura e pittura, montaggio di sanitari, rubinetteria, piatto e box doccia e accessori, collaudo con dichiarazioni di conformità e pulizia finale. Il prezzo vale per un bagno fino a 5 m²: per un bagno più grande indica la sua superficie. Restano esclusi gres, sanitari, rubinetteria, doccia e accessori, che sceglierai con noi.' }
     ] },
     { t: 'Opere murarie', s: 'Nuove pareti, sottofondi e intonaci per ridisegnare gli spazi.', v: [
       { id: 'tramez', d: 'Costruzione di nuovi tramezzi', um: 'm²', p: 87.7,
@@ -97,7 +97,7 @@
       { id: 'raschi', d: 'Raschiatura delle vecchie pitture', um: 'm²', p: 3,
         x: 'Rimozione delle pitture che si staccano o sono rovinate, per partire da una base sana.' },
       { id: 'rasat', d: 'Rasatura di pareti e soffitti', um: 'm²', p: 27,
-        x: 'Stesura di stucco in pasta per rendere le superfici lisce e uniformi, pronte per la pittura.' },
+        x: 'Stesura di rasante e stucco in pasta per rendere le superfici lisce e uniformi, pronte per la pittura.' },
       { id: 'levig', d: 'Carteggiatura e fondo isolante', um: 'm²', p: 5,
         x: 'Levigatura con carta abrasiva e fondo acrilico isolante, che uniforma la superficie e fa aderire meglio la pittura.' },
       { id: 'pitChi', d: 'Pittura lavabile in colori chiari', um: 'm²', p: 13.5,
@@ -130,7 +130,7 @@
   var eur = function (v) { return '€ ' + Math.round(v).toLocaleString('it-IT'); };
   var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   // voci a corpo "fino a 70 m²": oltre i 70 m² il prezzo cresce in proporzione alla superficie
-  var x70 = function (mq) { return mq > 70 ? mq / 70 : 1; };
+  var x70 = function (mq) { return Math.max(1, Math.ceil(mq / 70)); };
   // quadro elettrico: 750 € fino a 70 m², 1.000 € fino a 100 m², poi +250 € ogni 20 m²
   var quadro = function (mq) { return mq <= 70 ? 750 : mq <= 100 ? 1000 : 1000 + Math.ceil((mq - 100) / 20) * 250; };
 
@@ -142,6 +142,7 @@
       if (it.perMq) return it.p * mq;
       return it.a70 ? it.p * x70(mq) : it.p;
     }
+    if (it.bagno) return num(val) * (it.p + Math.max(0, (num(q.bagnoMq) || 5) - 5) * it.extraMq);
     return num(val) * it.p;
   }
 
@@ -173,6 +174,7 @@
         } else {
           h += '<label class="qt"><input class="inp" type="number" inputmode="decimal" min="0" placeholder="0" data-q="' + it.id + '" value="' + esc(q[it.id] || '') + '" aria-label="' + esc(it.d) + ' (' + it.um + ')"><span>' + it.um + '</span></label>';
           if (it.mq) h += '<button type="button" class="usaMq" data-usa="' + it.id + '">= superficie</button>';
+          if (it.bagno) h += '<label class="qt"><input class="inp" type="number" inputmode="decimal" min="1" placeholder="5" data-q="bagnoMq" value="' + esc(q.bagnoMq || '') + '" aria-label="Superficie di ogni bagno (m²)"><span>m² per bagno</span></label>';
         }
         h += '</div><b class="vi" data-imp="' + it.id + '"></b></div>';
       });
@@ -193,7 +195,7 @@
         if (v > 0) {
           sub += v;
           var qq = String(q[it.id]).replace('.', ',');
-          msg.push('- ' + it.d + (it.tipo === 'si' ? '' : /^n°/.test(it.um) ? ' × ' + qq : ': ' + qq + ' ' + it.um) + ' = ' + eur(v));
+          msg.push('- ' + it.d + (it.bagno && num(q.bagnoMq) > 5 ? ' (' + String(q.bagnoMq).replace('.', ',') + ' m²)' : '') + (it.tipo === 'si' ? '' : /^n°/.test(it.um) ? ' × ' + qq : ': ' + qq + ' ' + it.um) + ' = ' + eur(v));
         }
       });
       if (sub > 0 && s.t !== 'Progetto e pratiche') righe.push([s.t, sub]);

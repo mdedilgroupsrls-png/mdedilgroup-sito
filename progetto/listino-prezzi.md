@@ -20,6 +20,7 @@ Regole del documento: la posa della ceramica è in due sezioni (02.13 e 08.01) m
 | Demolizioni | Dismissione impianto elettrico, fino a 70 m² | a corpo | 750,00 |
 | Demolizioni | Dismissione impianto idrico, fino a 70 m² | a corpo | 750,00 |
 | Bagni | Bagno completo fino a 5 m² (tutto incluso tranne la fornitura) | a corpo | 6.500,00 |
+| Bagni | Ogni m² oltre i 5 m² (Eugenio, 16/10/2026) | m² | 350,00 |
 | Muratura | Nuovi divisori in tramezzi | m² | 87,70 |
 | Muratura | Controtelaio porta scorrevole a scomparsa, fornitura e posa | cad. | 370,00 |
 | Muratura | Intonacatura grezza | m² | 26,50 |
@@ -44,7 +45,7 @@ Regole del documento: la posa della ceramica è in due sezioni (02.13 e 08.01) m
 | Cartongesso | Divisorio piano, spessore 10 cm | m² | 75,00 |
 | Cartongesso | Velette e ripiani per LED | m | 85,00 |
 | Tinteggiature | Raschiatura pitture esistenti | m² | 3,00 |
-| Tinteggiature | Rasatura pareti e soffitti con stucco in pasta (nel PDF "con ZTL e stucco": da chiarire) | m² | 27,00 |
+| Tinteggiature | Rasatura pareti e soffitti con stucco in pasta (nel PDF "con ZTL": è un materiale rasante, spiegato da Eugenio il 16/10/2026; sul sito "rasante e stucco in pasta") | m² | 27,00 |
 | Tinteggiature | Levigatura e isolante acrilico | m² | 5,00 |
 | Tinteggiature | Pittura lavabile tinte chiare | m² | 13,50 |
 | Tinteggiature | Pittura lavabile tinte intense | m² | 17,50 |
@@ -58,7 +59,7 @@ Regole del documento: la posa della ceramica è in due sezioni (02.13 e 08.01) m
 - **Oneri di cantiere e pulizia: li sceglie il cliente** come le altre voci (correzione di Eugenio del 16/10/2026): sicurezza e allestimento (Sì/No), **tiro in alto e calo in basso (Sì/No) a qualsiasi piano**, anche piano terra e 1° piano, pulizia finale in m². La domanda sul piano resta, ma **non cambia più il prezzo** (serve per il sopralluogo e compare nel messaggio WhatsApp).
 - Sul sito **non si mostrano i prezzi unitari**, solo l'importo di ogni voce e il totale "+ IVA" (come per gli infissi).
 - Pulsanti: **"Invia la stima su WhatsApp"** (messaggio con tutte le voci) e **"Prenota il sopralluogo"**.
-- **Regole provvisorie scelte da Claude, da confermare con Eugenio:** voci a corpo "fino a 70 m²" (dismissione elettrico e idrico, tiro, oneri di sicurezza) oltre i 70 m² crescono **in proporzione ai m²** (es. 100 m² = 750 × 100/70 = 1.071 €); centralino elettrico oltre 70 m² con la regola vecchia (1.000 € fino a 100 m², poi +250 € ogni 20 m²); "= superficie" è solo un aiuto per riempire le voci in m².
+- **Regole confermate da Eugenio (16/10/2026):** voci a corpo "fino a 70 m²" (smontaggio impianti elettrico e idrico, tiro dei materiali, sicurezza) a scaglioni: fino a 70 m² prezzo pieno, **71–140 m² il doppio**, 141–210 m² il triplo e così via; centralino elettrico oltre 70 m²: 1.000 € fino a 100 m², poi +250 € ogni 20 m²; centro storico/ZTL **+5%** sui lavori; bagno oltre 5 m²: **+350 € per ogni m² in più** (il cliente indica i m² di ogni bagno). "= superficie" è solo un aiuto per riempire le voci in m².
 
 ## Case in legno
 I prezzi delle case in legno sono **IVA inclusa**.
