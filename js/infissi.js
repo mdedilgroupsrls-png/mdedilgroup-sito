@@ -105,7 +105,7 @@
   lists.tap = List('rowsTap', 'Tapparella', null, 1);
   lists.zan = List('rowsZan', 'Zanzariera', ['Finestra', 'Porta-finestra'], 1);
 
-  strip('colInf', COL_INF, 'colInf', 'colInfName', function (c) { return c.k === 'base' ? ' (+25%)' : c.k === 'part' ? ' (+30%)' : ' (standard)'; });
+  strip('colInf', COL_INF, 'colInf', 'colInfName', function (c) { return c.k === 'std' ? ' (standard)' : ''; });
   strip('colTap', COL_TAP, 'colTap', 'colTapName');
   strip('colZan', COL_ZAN, 'colZan', 'colZanName');
 
@@ -151,7 +151,7 @@
     var voci = [['Infissi (' + COL_INF[st.colInf].n.toLowerCase() + ')', tot.inf], ['Demolizione vecchi infissi', tot.dem], ['Posa nuovi infissi', tot.pos], ['Tapparelle', tot.tap], ['Zanzariere', tot.zan]];
     var T = 0, html = '';
     voci.forEach(function (v) { if (v[1] > 0) { T += v[1]; html += '<p><span>' + v[0] + '</span><b>' + eur(v[1]) + '</b></p>'; } });
-    if (plus > 1 && T > 0) html += '<p class="sm"><span>Demolizioni e pose con +10% (sopra il terzo piano)</span></p>';
+    if (plus > 1 && T > 0) html += '<p class="sm"><span>Demolizioni e pose calcolate per il piano indicato</span></p>';
     $('riep').innerHTML = html || '<p class="sm"><span>Scrivi le misure dei tuoi infissi per vedere la stima.</span></p>';
     $('totale').textContent = eur(T);
     $('fuori').hidden = !fuori;
