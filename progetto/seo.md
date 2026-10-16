@@ -23,6 +23,8 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 - 16/10/2026: pagina infissi con 7 domande frequenti sui prezzi (solo prezzi confermati da Eugenio).
 - Già presenti: canonical, sitemap, robots, testo alternativo su tutte le foto, dati aziendali (GeneralContractor) con social e scheda Google.
 
+- 16/10/2026: pubblicate le pagine /infissi-serramenti e /chi-siamo; Eugenio ha chiesto a Google l'indicizzazione (Controllo URL → Richiedi indicizzazione). Search Console: dati di Rendimento ancora in elaborazione.
+
 ## Da fare (in ordine di importanza)
 1. **Recensioni Google**: chiederle a ogni cliente con il link `https://g.page/r/CSlUfVvDiZqIEBM/review`. È il fattore più forte per "ristrutturazioni Roma" su Maps.
 2. **Scheda Google Business** (la fa Eugenio): categoria principale "Impresa edile", categorie secondarie (ristrutturazioni, installazione finestre, facciate…), elenco servizi con descrizione, foto dei cantieri ogni settimana, un post al mese, sito `https://mdedilgroup.it`.
