@@ -454,7 +454,7 @@ function summary(){
  document.getElementById('sMq').textContent=m.d;
  document.getElementById('sList').innerHTML=r.map(([l,v])=>`<li><span>${l}</span><span>${ev(v)}</span></li>`).join('');
  document.getElementById('sTot').textContent=eur(t);document.getElementById('mTot').textContent=eur(t);
- const txt=`Buongiorno, ho fatto una simulazione sul sito per ${st.n>1?st.n+' case in legno':'la casa in legno'} ${m.n}:\n`+r.map(([l,v])=>`- ${l}: ${ev(v)}`).join('\n')+`\nTotale indicativo: ${eur(t)} (IVA inclusa).\nVorrei ricevere un preventivo.`;
+ const txt=`Buongiorno, ho fatto una simulazione sul sito per ${st.n>1?st.n+' case in legno':'la casa in legno'} ${m.n}:\n`+r.map(([l,v])=>`- ${l}: ${ev(v)}`).join('\n')+`\nTotale indicativo: ${eur(t)} (IVA inclusa).`;
  document.getElementById('sWa').href='https://wa.me/393282145266?text='+encodeURIComponent(txt);
 }
 lines.addEventListener('click',e=>{
@@ -606,6 +606,8 @@ draw();
 })();
 </script>
 <script src="/js/schede.js"></script>
+<script src="/js/invio-wa.js"></script>
+<script>MDInvio({ btn: 'sWa', togli: '#riepilogo .cta.alt', titolo: 'Richiedi il preventivo', sotto: 'Inviaci la simulazione su WhatsApp: ti richiamiamo noi per verificare il terreno e prepararti il preventivo definitivo.', indirizzo: 'Luogo del terreno', esempio: 'Comune e indirizzo, se lo hai già', pulsante: 'INVIA LA SIMULAZIONE E RICHIEDI IL PREVENTIVO', dopo: 'Ti richiamiamo noi per il preventivo.', richiesta: 'Vorrei ricevere un preventivo: potete ricontattarmi?', pronta: function () { return /[1-9]/.test(document.getElementById('sTot').textContent) ? '' : 'il modello della casa'; } });</script>
 <script>if(location.hash==="#simulatore"){addEventListener("load",function(){var e=document.getElementById("simulatore");if(e)e.scrollIntoView()})}</script>
 <script src="/js/sicurezza.js" defer></script>
 </body>

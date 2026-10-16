@@ -42,7 +42,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 16/10/2026 – Simulatore interni: invio su WhatsApp con nome e cognome, telefono e indirizzo obbligatori (richiesta di Eugenio); informativa privacy aggiornata
 - [x] 16/10/2026 – Simulatore interni: un solo pulsante "Invia la simulazione e richiedi il sopralluogo" (scelta lasciata a Claude da Eugenio), conferma dopo l'invio, alternativa telefono/modulo
 - [ ] Chiedere a Eugenio se il sopralluogo è gratuito (se sì, scriverlo vicino al pulsante)
-- [ ] Chiedere a Eugenio se vuole gli stessi campi (nome, telefono, indirizzo) anche nei simulatori infissi e case in legno
+- [x] 16/10/2026 – Stessi campi (nome e cognome, telefono, indirizzo / luogo del terreno) e stesso invio su WhatsApp anche nei simulatori infissi e case in legno (`js/invio-wa.js`, `MDInvio`); la domanda sul piano resta nel simulatore interni anche se non cambia il prezzo (Eugenio)
 - [x] 16/10/2026 – Simulatore interni: oneri di cantiere, tiro dei materiali e pulizia non più automatici, li sceglie il cliente; tiro valido a qualsiasi piano (Eugenio)
 - [x] 16/10/2026 – Corretto il riquadro "La tua stima" della pagina interni che sul telefono usciva dallo schermo di 7 px
 - [x] 16/10/2026 – **Nuovo simulatore ristrutturazioni interni** con il listino MD Edil Group del 16/10/2026 (PDF di Eugenio), voce per voce; titoli delle voci riscritti in modo professionale e descrizione a comparsa per ogni voce (testi originali); progetto e pratiche 40 €/m²; piano solo "villa/fino al 1°" o "2° e oltre"; centro storico/ZTL mantenuto
