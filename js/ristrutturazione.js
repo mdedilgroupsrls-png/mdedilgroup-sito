@@ -34,7 +34,7 @@
     ] },
     { t: 'Bagno chiavi in mano', s: 'Un solo importo per tutte le lavorazioni del bagno. Non indicare di nuovo queste lavorazioni nelle altre voci.', v: [
       { id: 'bagno', d: 'Rifacimento completo del bagno', um: 'n° bagni', p: 6500, extraMq: 350, bagno: true,
-        x: 'Dal vecchio bagno al nuovo, senza pensieri: smontaggio dei sanitari, demolizione di pavimenti, rivestimenti e sottofondi con smaltimento, nuovo massetto, nuovi impianti idrico ed elettrico con le opere murarie, impermeabilizzazione della doccia, posa di pavimento e rivestimenti in gres, rasatura e pittura, montaggio di sanitari, rubinetteria, piatto e box doccia e accessori, collaudo con dichiarazioni di conformità e pulizia finale. Il prezzo vale per un bagno fino a 5 m²: per un bagno più grande indica la sua superficie. Restano esclusi gres, sanitari, rubinetteria, doccia e accessori, che sceglierai con noi.' }
+        x: 'Dal vecchio bagno al nuovo, senza pensieri: smontaggio dei sanitari, demolizione di pavimenti, rivestimenti e sottofondi con smaltimento, nuovo massetto, nuovi impianti idrico ed elettrico con le opere murarie, impermeabilizzazione della doccia, posa di pavimento e rivestimenti in gres, rasatura e pittura, montaggio di sanitari, rubinetteria, piatto e box doccia, scaldasalviette e accessori, collaudo con dichiarazioni di conformità e pulizia finale. Il prezzo vale per un bagno fino a 5 m²: per un bagno più grande indica la sua superficie. Restano esclusi gres, sanitari, rubinetteria, doccia e accessori, che sceglierai con noi.' }
     ] },
     { t: 'Opere murarie', s: 'Nuove pareti, sottofondi e intonaci per ridisegnare gli spazi.', v: [
       { id: 'tramez', d: 'Costruzione di nuovi tramezzi', um: 'm²', p: 87.7,
@@ -59,8 +59,8 @@
     { t: 'Impianto idrico e riscaldamento', s: 'Acqua, scarichi e termosifoni, con dichiarazione di conformità.', v: [
       { id: 'centr', d: 'Collettore di distribuzione collegato alla caldaia', um: 'n°', p: 679,
         x: 'Predisposizione e montaggio della centralina da cui partono le tubazioni verso i termosifoni, con il collegamento alla caldaia.' },
-      { id: 'radiat', d: 'Allaccio e posa di termosifoni e scaldasalviette', um: 'n°', p: 475,
-        x: 'Tubazioni in multistrato fino a ogni termosifone, scaldasalviette o termoarredo, opere murarie e montaggio del nuovo elemento. Fornitura dei termosifoni esclusa.' },
+      { id: 'radiat', d: 'Allaccio e posa di termosifoni', um: 'n°', p: 475,
+        x: 'Tubazioni in multistrato fino a ogni termosifone, opere murarie e montaggio del nuovo termosifone. Fornitura dei termosifoni esclusa. Lo scaldasalviette del bagno è già compreso nel bagno chiavi in mano.' },
       { id: 'caldaia', d: 'Installazione della caldaia a gas', um: 'n°', p: 770,
         x: 'Montaggio e collegamento della nuova caldaia. La caldaia la scegli tu o la scegliamo insieme: fornitura esclusa.' },
       { id: 'pAcqua', d: 'Nuovo punto acqua con scarico', um: 'n°', p: 435,
