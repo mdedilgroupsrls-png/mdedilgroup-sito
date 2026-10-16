@@ -1,5 +1,5 @@
 /* Simulatore della ristrutturazione di interni (pagina /ristrutturazioni-interni).
-   Prezzi dal listino MD Edil Group del 16/10/2026, IVA esclusa (vedi progetto/listino-prezzi.md).
+   Prezzi dal listino MD Edil Group del 16/10/2026, IVA inclusa (decisione di Eugenio del 16/10/2026; vedi progetto/listino-prezzi.md).
    Il cliente indica la quantità di ogni voce che gli serve: le voci lasciate vuote non si calcolano.
    Sul sito non si mostrano i prezzi unitari, solo l'importo di ogni voce. */
 (function () {
@@ -180,7 +180,7 @@
       });
       h += '</fieldset>';
     });
-    h += '<a class="rBar" href="#rRiepTop">La tua stima <b id="rBarTot">€ 0</b> + IVA <span aria-hidden="true">↓</span></a>';
+    h += '<a class="rBar" href="#rRiepTop">La tua stima <b id="rBarTot">€ 0</b> IVA inclusa <span aria-hidden="true">↓</span></a>';
     document.getElementById('simForm').innerHTML = h;
     calcola();
   }
@@ -218,7 +218,7 @@
     var testo = 'Buongiorno, ho fatto la simulazione della ristrutturazione sul vostro sito.\n' +
       'Superficie: ' + (mq ? String(mq).replace('.', ',') + ' m²' : '-') + ' · ' + (stato.piano === 'alto' ? '2° piano o superiore' : 'villa, casa indipendente o fino al 1° piano') + (stato.centro === 'si' ? ' · centro storico / ZTL' : '') + '\n' +
       msg.join('\n') + (centro ? '\n- Centro storico / ZTL = ' + eur(centro) : '') +
-      '\nTotale stimato: ' + eur(tot) + ' + IVA';
+      '\nTotale stimato: ' + eur(tot) + ' IVA inclusa';
     ultimoTesto = testo;
     if (centro > 0) pdf.splice(pdf.length - (prog > 0 ? 1 : 0), 0, { t: 'Maggiorazioni', righe: [['Lavori in centro storico o ZTL (+5% sui lavori)', '', centro]] });
     ultimoPdf = { sez: pdf, tot: tot, mq: mq };
@@ -265,8 +265,8 @@
       info: [['Superficie interna', String(ultimoPdf.mq).replace('.', ',') + ' m²'],
         ['Piano', stato.piano === 'alto' ? '2° piano o superiore' : 'Villa, casa indipendente o fino al 1° piano'],
         ['Centro storico o ZTL', stato.centro === 'si' ? 'Sì' : 'No']],
-      sezioni: ultimoPdf.sez, totale: ultimoPdf.tot,
-      note: ['Preventivo indicativo calcolato con il listino MD Edil Group in base alle quantità indicate dal cliente. Prezzi IVA esclusa: l’IVA si applica con l’aliquota di legge.',
+      sezioni: ultimoPdf.sez, totale: ultimoPdf.tot, iva: 'IVA inclusa',
+      note: ['Preventivo indicativo calcolato con il listino MD Edil Group in base alle quantità indicate dal cliente. Prezzi IVA inclusa.',
         'Il prezzo definitivo viene confermato dopo il sopralluogo, con le misure prese dai nostri tecnici, e con la firma del contratto. Sopralluogo e preventivo sono gratuiti.',
         'Esclusa la fornitura di pavimenti, rivestimenti, sanitari, rubinetteria, porte, termosifoni, caldaie, condizionatori e accessori, che sceglierai con noi. Infissi esclusi.',
         'Tutti i lavori sono eseguiti dai nostri tecnici abilitati e gli impianti sono consegnati con dichiarazione di conformità.'],

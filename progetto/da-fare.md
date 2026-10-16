@@ -42,6 +42,8 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 16/10/2026 – Simulatore interni: invio su WhatsApp con nome e cognome, telefono e indirizzo obbligatori (richiesta di Eugenio); informativa privacy aggiornata
 - [x] 16/10/2026 – Simulatore interni: un solo pulsante "Invia la simulazione e richiedi il sopralluogo" (scelta lasciata a Claude da Eugenio), conferma dopo l'invio, alternativa telefono/modulo
 - [x] 16/10/2026 – Preventivo in PDF intestato MD Edil Group con i dati del cliente, nei simulatori interni e infissi (richiesta di Eugenio); modalità di pagamento non inserite per ora
+- [x] 16/10/2026 – Ristrutturazioni interni: prezzi IVA inclusa sul sito, nel messaggio WhatsApp e nel PDF (Eugenio)
+- [ ] Modalità di pagamento nel PDF delle sole ristrutturazioni interni: 30% / 30% / 35% / 5% + IBAN. Mancano: a quale fase corrisponde ogni rata e l'IBAN (Eugenio li manda)
 - [ ] Preventivo in PDF anche per le case in legno? (non chiesto: proporre a Eugenio)
 - [x] 16/10/2026 – Sopralluogo e preventivo gratuiti: scritto nei tre simulatori
 - [x] 16/10/2026 – Stessi campi (nome e cognome, telefono, indirizzo / luogo del terreno) e stesso invio su WhatsApp anche nei simulatori infissi e case in legno (`js/invio-wa.js`, `MDInvio`); la domanda sul piano resta nel simulatore interni anche se non cambia il prezzo (Eugenio)

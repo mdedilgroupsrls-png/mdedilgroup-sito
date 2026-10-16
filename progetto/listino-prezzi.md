@@ -1,6 +1,6 @@
 # Listino prezzi MD Edil Group (ristrutturazioni interni)
 
-**Listino del 16/10/2026** (PDF di Eugenio "Listino prezzi ristrutturazione MD Edil Group", formato computo metrico). Tutti i prezzi **IVA esclusa**. È lo stesso del simulatore della pagina `/ristrutturazioni-interni` (`js/ristrutturazione.js`), che **sostituisce il listino precedente** (15,21 €/m² rimozione pavimenti, 90 € punto luce, Tariffa Regione Lazio ecc.: non più usato).
+**Listino del 16/10/2026** (PDF di Eugenio "Listino prezzi ristrutturazione MD Edil Group", formato computo metrico). Nel PDF c'è scritto IVA esclusa, ma **Eugenio ha deciso (16/10/2026, sera) che per la simulazione e il preventivo delle ristrutturazioni interne i prezzi sono IVA INCLUSA**: stessi importi, sul sito e nel PDF si scrive "IVA inclusa" (non vale per gli infissi, che restano "+ IVA"). È lo stesso del simulatore della pagina `/ristrutturazioni-interni` (`js/ristrutturazione.js`), che **sostituisce il listino precedente** (15,21 €/m² rimozione pavimenti, 90 € punto luce, Tariffa Regione Lazio ecc.: non più usato).
 
 Il PDF nasce dalla revisione, fatta da Eugenio, di un prospetto di un'altra impresa: **sul sito non vanno mai i codici delle voci (01.03, 02.06…) né il nome di altre imprese**; le descrizioni sul sito sono riscritte in parole nostre.
 
