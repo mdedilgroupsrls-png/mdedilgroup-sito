@@ -21,16 +21,34 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 </style>
 <style>html{scroll-behavior:smooth}img{max-width:100%}</style>
 <style>
-.inf-prod{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
-@media (max-width:1100px){.inf-prod{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.inf-prod{max-width:1320px;margin:24px auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:1000px){.inf-prod{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.inf-syn{max-width:1320px;margin:0 auto;background:#171512;border:1px solid #C9A24A}
+.inf-syn .cover img{display:block;width:100%;height:clamp(180px,26vw,340px);object-fit:cover}
+.inf-syn .body{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(20px,4vw,56px);padding:clamp(22px,4vw,48px);align-items:start}
+.inf-syn .draw{background:#fff;padding:18px;display:flex;justify-content:center}
+.inf-syn .draw img{display:block;max-height:560px;width:auto;max-width:100%}
+.inf-syn .txt{min-width:0}
+.inf-syn h2{margin:0 0 6px;font-family:'Urbanist',sans-serif;font-weight:400;font-size:clamp(26px,2.6vw,38px);line-height:1.1}
+.inf-syn .sub2{margin:0 0 22px;color:#D8D2C6}
+.inf-syn h3{margin:0 0 8px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#C9A24A;font-weight:600}
+.inf-syn .spec{width:100%;border-collapse:collapse;font-size:14.5px;margin-bottom:22px}
+.inf-syn .spec th,.inf-syn .spec td{text-align:left;padding:9px 0;border-bottom:1px solid #2A2722;vertical-align:top}
+.inf-syn .spec th{font-weight:400;color:#8A8478;padding-right:16px;width:46%}
+.inf-syn .num{margin:0 0 18px;padding:0;list-style:none;counter-reset:n;display:grid;gap:9px;font-size:14.5px;color:#D8D2C6}
+.inf-syn .num li{counter-increment:n;position:relative;padding-left:36px;min-height:22px}
+.inf-syn .num li::before{content:counter(n);position:absolute;left:0;top:1px;width:22px;height:22px;border:1px solid #C9A24A;color:#C9A24A;font-size:12px;display:grid;place-items:center;box-sizing:border-box}
+.inf-syn .num b{color:#F3EFE7;font-weight:600}
+.inf-syn .more{margin:0;color:#8A8478;font-size:14px}
+@media (max-width:760px){.inf-syn .body{grid-template-columns:1fr}.inf-syn .draw img{max-height:380px}}
 @media (max-width:640px){.inf-prod{grid-template-columns:1fr}}
 .inf-prod article{background:#171512;border:1px solid #2A2722;display:flex;flex-direction:column}
 .inf-prod .ph{aspect-ratio:4/3;overflow:hidden;background:#F3F3F3}
 .inf-prod .ph img{width:100%;height:100%;object-fit:cover;display:block}
 .inf-prod .ph.duo{display:flex;justify-content:center;align-items:center;gap:6%;padding:14px;box-sizing:border-box}
-.inf-prod .ph.duo img{width:auto;height:100%;object-fit:contain}
+.inf-prod .ph.duo img{width:auto;height:100%;max-width:46%;object-fit:contain}
 .inf-prod .tx{padding:26px 26px 30px}
-.inf-prod .ey,.inf-sim .ey{margin:0 0 10px;font-size:11.5px;letter-spacing:.3em;color:#C9A24A;font-weight:600}
+.inf-prod .ey,.inf-sim .ey,.inf-syn .ey{margin:0 0 10px;font-size:11.5px;letter-spacing:.3em;color:#C9A24A;font-weight:600}
 .inf-prod h2{margin:0 0 12px;font-family:'Urbanist',sans-serif;font-weight:400;font-size:clamp(24px,2.2vw,30px);line-height:1.15}
 .inf-prod p{margin:0 0 10px;color:#D8D2C6;font-size:15px}
 .inf-gal{max-width:1320px;margin:24px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
@@ -137,16 +155,37 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 </section>
 
 <section style="padding: 0 clamp(20px, 5vw, 72px) 96px">
-<div class="inf-prod">
-<article>
-<div class="ph"><img src="/img/synego-sezione-legno.webp" alt="Sezione dell'infisso Rehau Synego effetto legno con triplo vetro" loading="lazy" width="1320" height="933"></div>
-<div class="tx">
+<div class="inf-syn">
+<div class="cover"><img src="/img/synego-cucina.webp" alt="Cucina con finestre Rehau Synego bianche" loading="lazy" width="1280" height="590"></div>
+<div class="body">
+<div class="draw"><img src="/img/synego-profilo-sezione.webp" alt="Sezione del profilo Rehau Synego con i punti numerati" loading="lazy" width="525" height="770"></div>
+<div class="txt">
 <p class="ey">FINESTRE E PORTE-FINESTRE A BATTENTE</p>
-<h2>Rehau Synego</h2>
-<p>Infisso in PVC di alta gamma: telaio a 7 camere e anta a 6 camere, profondità 80 mm, triplo vetro fino a 51 mm. Pensato per isolare bene dal freddo e dal rumore.</p>
-<p>Disponibile in bianco, in tinte legno e in decine di altri colori, anche diversi tra interno ed esterno.</p>
+<h2>Profili per finestre Rehau Synego</h2>
+<p class="sub2">Ideale per le nuove costruzioni</p>
+<h3>Caratteristiche tecniche</h3>
+<table class="spec"><tbody>
+<tr><th>Trasmittanza termica</th><td>Valore U<sub>f</sub>: fino a 0,94 W/m²K</td></tr>
+<tr><th>Profondità profilo</th><td>80 mm</td></tr>
+<tr><th>Sicurezza contro le effrazioni</th><td>fino alla classe di resistenza 3</td></tr>
+<tr><th>Isolamento acustico</th><td>R<sub>w,P</sub> fino a 47 dB</td></tr>
+<tr><th>Tecnica</th><td>a 7/6 camere</td></tr>
+<tr><th>Ingombro centrale</th><td>fino a 114 mm</td></tr>
+</tbody></table>
+<ol class="num">
+<li><b>Triplo vetro isolante con protezione termica</b>, vetro fino a 51 mm</li>
+<li><b>Superficie HDF</b>, per finestre pulite più a lungo</li>
+<li><b>Guarnizioni per una protezione affidabile</b> contro correnti d'aria e umidità</li>
+<li><b>Possibilità di un terzo livello di guarnizione</b></li>
+<li><b>Telaio a 7 camere, anta a 6 camere</b>, per un isolamento elevato</li>
+<li><b>Ingombro ridotto</b>, per ambienti luminosi</li>
+<li><b>Profondità profilo 80 mm</b>, per proporzioni slanciate</li>
+</ol>
+<p class="more">Disponibile in bianco, in tinte legno e in decine di altri colori, anche diversi tra interno ed esterno.</p>
 </div>
-</article>
+</div>
+</div>
+<div class="inf-prod">
 <article>
 <div class="ph"><img src="/img/synego-slide-1.webp" alt="Grande scorrevole Rehau Synego Slide grigio antracite con vista sul lago" loading="lazy" width="1320" height="1302"></div>
 <div class="tx">
