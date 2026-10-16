@@ -105,17 +105,20 @@
       { id: 'pitInt', d: 'Pittura lavabile in colori intensi', um: 'm²', p: 17.5,
         x: 'Pittura lavabile in tinte forti o scure, che richiedono più colore e una stesura più accurata.' }
     ] },
+    { t: 'Oneri di cantiere e pulizia', s: 'Voci da scegliere in base al tuo cantiere.', v: [
+      { id: 'sicur', d: 'Sicurezza e allestimento del cantiere', um: 'a corpo', p: 1100, tipo: 'si', a70: true,
+        x: 'Montaggio e smontaggio del cantiere e misure di sicurezza previste dalla legge, per chi lavora e per chi abita.' },
+      { id: 'tiro', d: 'Carico e scarico dei materiali (tiro in alto e calo in basso)', um: 'a corpo', p: 1400, tipo: 'si', a70: true,
+        x: 'Movimentazione di tutti i materiali del cantiere, a qualsiasi piano, anche al piano terra: salita e consegna dei materiali nuovi, discesa e carico delle macerie.' },
+      { id: 'pulizia', d: 'Pulizia finale del cantiere', um: 'm²', p: 6, mq: true,
+        x: 'Pulizia completa della casa a fine lavori, pronta da abitare. Si calcola sui m² della casa.' }
+    ] },
     { t: 'Progetto e pratiche', s: 'Il progetto e i permessi, seguiti dal nostro studio tecnico.', v: [
       { id: 'proget', d: 'Progetto e pratiche edilizie (CILA / SCIA)', um: 'a corpo', p: 40, tipo: 'si', perMq: true,
         x: 'Rilievo della casa, progetto con le tavole esecutive e degli impianti e presentazione della pratica al Comune. L’importo si calcola sulla superficie.' }
     ] }
   ];
-  var AUTO = [
-    { id: '_sic', d: 'Sicurezza e allestimento del cantiere', x: 'Montaggio e smontaggio del cantiere e misure di sicurezza previste dalla legge, per chi lavora e per chi abita.' },
-    { id: '_tiro', d: 'Trasporto dei materiali ai piani', x: 'Salita dei materiali nuovi e discesa delle macerie, per gli appartamenti dal 2° piano in su.' },
-    { id: '_pul', d: 'Pulizia finale', x: 'Pulizia completa della casa a fine lavori, pronta da abitare.' }
-  ];
-  var ONERI = { tiro: 1400, sicurezza: 1100, pulizia: 6, centro: 0.05 };
+  var CENTRO = 0.05; // centro storico / ZTL: +5% sui lavori
 
   var form = document.getElementById('simForm');
   if (!form) return;
@@ -175,10 +178,6 @@
       });
       h += '</fieldset>';
     });
-    h += '<fieldset class="grp"><legend class="lg"><span class="nr">' + String(SEZ.length + 2).padStart(2, '0') + '</span>Oneri di cantiere e pulizia</legend>' +
-      '<p class="hint" style="margin:0">Calcolati in automatico dalla superficie e dal piano.</p>' +
-      AUTO.map(function (it) { return '<div class="voce">' + titolo(it) + '<div class="vq"></div><b class="vi" data-imp="' + it.id + '"></b></div>'; }).join('') +
-      '</fieldset>';
     h += '<a class="rBar" href="#rRiepTop">La tua stima <b id="rBarTot">€ 0</b> + IVA <span aria-hidden="true">↓</span></a>';
     document.getElementById('simForm').innerHTML = h;
     calcola();
@@ -201,17 +200,10 @@
       if (s.t !== 'Progetto e pratiche') lavori += sub;
     });
     var prog = importo(SEZ[SEZ.length - 1].v[0], mq);
-    var avvio = mq > 0 && lavori > 0;
-    var sic = avvio ? ONERI.sicurezza * x70(mq) : 0;
-    var tiro = avvio && stato.piano === 'alto' ? ONERI.tiro * x70(mq) : 0;
-    var pul = avvio ? ONERI.pulizia * mq : 0;
-    setImp('_sic', sic); setImp('_tiro', tiro); setImp('_pul', pul);
-    var oneri = sic + tiro + pul;
-    var centro = stato.centro === 'si' ? (lavori + oneri) * ONERI.centro : 0;
-    if (oneri > 0) righe.push(['Oneri di cantiere e pulizia', oneri]);
+    var centro = stato.centro === 'si' ? lavori * CENTRO : 0;
     if (centro > 0) righe.push(['Centro storico / ZTL', centro]);
     if (prog > 0) righe.push(['Progetto e pratiche', prog]);
-    var tot = lavori + oneri + centro + prog;
+    var tot = lavori + centro + prog;
     document.getElementById('rRiep').innerHTML = righe.length ? righe.map(function (r) {
       return '<li><span>' + esc(r[0]) + '</span><span class="e">' + eur(r[1]) + '</span></li>';
     }).join('') : '<li><span>Indica la superficie e le lavorazioni che ti servono</span></li>';
@@ -220,7 +212,7 @@
     document.getElementById('rMqTot').textContent = mq > 0 && tot > 0 ? 'circa ' + eur(tot / mq) + ' al m²' : '';
     var testo = 'Buongiorno, ho fatto la simulazione della ristrutturazione sul vostro sito.\n' +
       'Superficie: ' + (mq ? String(mq).replace('.', ',') + ' m²' : '-') + ' · ' + (stato.piano === 'alto' ? '2° piano o superiore' : 'villa, casa indipendente o fino al 1° piano') + (stato.centro === 'si' ? ' · centro storico / ZTL' : '') + '\n' +
-      msg.join('\n') + (oneri ? '\n- Oneri di cantiere e pulizia = ' + eur(oneri) : '') + (centro ? '\n- Centro storico / ZTL = ' + eur(centro) : '') +
+      msg.join('\n') + (centro ? '\n- Centro storico / ZTL = ' + eur(centro) : '') +
       '\nTotale stimato: ' + eur(tot) + ' + IVA\nVorrei fissare un sopralluogo.';
     document.getElementById('rWa').href = 'https://wa.me/393282145266?text=' + encodeURIComponent(testo);
   }

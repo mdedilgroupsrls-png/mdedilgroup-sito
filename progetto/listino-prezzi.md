@@ -55,7 +55,7 @@ Regole del documento: la posa della ceramica è in due sezioni (02.13 e 08.01) m
 
 ### Come lo usa il simulatore (deciso con Eugenio il 16/10/2026)
 - Il cliente indica: superficie, piano (**"Villa, casa indipendente o fino al 1° piano"** oppure **"2° piano o superiore"**), centro storico/ZTL (+5% su lavori e oneri, regola di prima, mantenuta). Poi, **voce per voce nell'ordine del listino**, la quantità (m², m, n°) o Sì/No per le voci a corpo. **Voce vuota = non calcolata.**
-- **Oneri automatici**: sicurezza sempre, pulizia finale = 6 €/m² × superficie, tiro in alto/basso solo dal 2° piano; partono solo se c'è almeno una lavorazione.
+- **Oneri di cantiere e pulizia: li sceglie il cliente** come le altre voci (correzione di Eugenio del 16/10/2026): sicurezza e allestimento (Sì/No), **tiro in alto e calo in basso (Sì/No) a qualsiasi piano**, anche piano terra e 1° piano, pulizia finale in m². La domanda sul piano resta, ma **non cambia più il prezzo** (serve per il sopralluogo e compare nel messaggio WhatsApp).
 - Sul sito **non si mostrano i prezzi unitari**, solo l'importo di ogni voce e il totale "+ IVA" (come per gli infissi).
 - Pulsanti: **"Invia la stima su WhatsApp"** (messaggio con tutte le voci) e **"Prenota il sopralluogo"**.
 - **Regole provvisorie scelte da Claude, da confermare con Eugenio:** voci a corpo "fino a 70 m²" (dismissione elettrico e idrico, tiro, oneri di sicurezza) oltre i 70 m² crescono **in proporzione ai m²** (es. 100 m² = 750 × 100/70 = 1.071 €); centralino elettrico oltre 70 m² con la regola vecchia (1.000 € fino a 100 m², poi +250 € ogni 20 m²); "= superficie" è solo un aiuto per riempire le voci in m².
