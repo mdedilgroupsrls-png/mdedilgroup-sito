@@ -20,6 +20,8 @@
 - **Threads:** https://www.threads.com/@md_edil_group (aggiunto il 16/10/2026)
 - Tutti i link social sono nelle icone in fondo a ogni pagina e nei dati strutturati della Home (`sameAs`), aggiornati il 15/10/2026.
 
+- **Richieste dal modulo `preventivo`:** salvate su Netlify (progetto mdedilgroup → Forms) e inviate per email a mdedilgroupsrls@gmail.com, oggetto "Nuova richiesta di preventivo dal sito – MD Edil Group" (impostato da Eugenio il 16/10/2026 in Forms → Submission notifications).
+
 ## Sedi
 Per ora vanno indicate entrambe come sede legale:
 - Via Monti Lepini 9, 00015 Monterotondo (RM)
