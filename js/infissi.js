@@ -102,7 +102,7 @@
   lists.dem = List('rowsDem', 'Pezzo', null, 1);
   lists.pos = List('rowsPos', 'Pezzo', null, 1);
   lists.tap = List('rowsTap', 'Tapparella', null, 1);
-  lists.zan = List('rowsZan', 'Zanzariera', ['Finestra (verticale)', 'Porta-finestra (laterale)'], 1);
+  lists.zan = List('rowsZan', 'Zanzariera', ['Finestra', 'Porta-finestra'], 1);
 
   strip('colInf', COL_INF, 'colInf', 'colInfName', function (c) { return c.k === 'base' ? ' (+25%)' : c.k === 'part' ? ' (+30%)' : ' (standard)'; });
   strip('colTap', COL_TAP, 'colTap', 'colTapName');
