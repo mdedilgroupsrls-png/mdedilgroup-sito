@@ -84,7 +84,7 @@ Regole decise da Eugenio:
 | Siver | Siver 160 m² | 71.400 | 31.042,65 | 4.539,83 | 2.073,60 | 36.625,42 | 23.926,15 | 13.435,45 | 7.754,53 | 3.067,46 | 16.440 | 7.200 | 14.400 | 6.134,91 |
 | Montblanc | Mont Blanc 166 m² | 77.400 | 31.065,30 | 4.740,89 | 2.220,73 | 35.431,92 | 24.640,15 | 14.035,53 | 7.984,66 | 3.742,81 | 17.040 | 7.560 | 15.120 | 6.238,01 |
 
-## Infissi in PVC Rehau Synego / Synego Slide (in preparazione)
+## Infissi in PVC Rehau Synego / Synego Slide (nel simulatore dal 16/10/2026)
 - Colori: **Weiss bianco = standard** . **Mooreiche 2, Rovere dorato, Noce, Grigio antracite, Braun = +25%** sul prezzo standard (15/10/2026). Campioni in `img/colore-*.webp`.
 - Gamma completa Synego: **oltre 50 colori** (tinte legno, tinte unite, SFTN Matt, Metbrush…), anche colore diverso tra lato interno ed esterno; colori inalterati nel tempo. Immagine della gamma in `img/synego-gamma-colori.webp`. **Colori particolari** (tutti quelli della gamma completa fuori dai 6 della cartella base) = **+30%** sul prezzo standard (15/10/2026).
 - Prezzo al m² di ogni pezzo (larghezza × altezza), dettato da Eugenio il 15/10/2026:
@@ -94,14 +94,22 @@ Regole decise da Eugenio:
 - Se l'appartamento è **sopra il terzo piano**: demolizione e posa **+10%** (da chiarire se dal 3° o dal 4° piano).
 - Simulatore: righe larghezza/altezza (5 all'inizio, pulsante "+ Aggiungi altro infisso"); sotto, Demolizione e Posa con le loro righe e il pulsante "Riprendi le misure degli infissi indicati sopra".
 
-## Tapparelle in alluminio coibentato Pracal (in preparazione)
+## Tapparelle in alluminio coibentato Pracal (nel simulatore dal 16/10/2026)
 - Marca **Pracal** (profili per tapparelle). Profili a catalogo: L08, L09, L12, stecche a media o alta densità. Foto in `img/pracal-l08.webp`, `img/pracal-l12.webp`, tabella colori in `img/pracal-colori.webp` (tinta unita, finto legno, particolari, Raffaello).
 - **Prezzo 49,50 €/m²**, uguale per tutti i colori (15/10/2026). Calcolo a righe larghezza × altezza, con il pulsante per riprendere le misure degli infissi.
 - **Demolizione** vecchie tapparelle **25 € a pezzo** fino a 3,22 m².
 - **Posa 60 € a pezzo** fino a 3,22 m² (anche se il pezzo è più piccolo); da 3,22 a 6,44 m² il prezzo **raddoppia** (120 €).
 
-## Zanzariere in alluminio Primed (in preparazione)
+## Zanzariere in alluminio Primed (nel simulatore dal 16/10/2026)
 - Marca **Primed** (zanzariere dal 1983). Due tipi, **stesso prezzo**: **verticale avvolgente** (scorre dall'alto in basso, per le finestre, es. Giada) e **laterale plissettata** (apertura da sinistra a destra o viceversa, per le porte-finestre, es. Voilà, Smart). Foto in `img/primed-verticale.webp`, `img/primed-laterale.webp`, colori in `img/primed-colori.webp`.
 - **Prezzo 52 €/m²** per ogni pezzo fino a 3,22 m² (prezzo definitivo del 15/10/2026). Calcolo a righe larghezza × altezza, con il pulsante "Riprendi le misure degli infissi indicati sopra"; il cliente indica il tipo per ogni zanzariera.
 - **Posa 50 € a pezzo** fino a 3,22 m².
 - Sempre in alluminio; **colore a scelta** dalla striscia colori Primed, **stesso prezzo** per tutti i colori (15/10/2026).
+
+### Regole provvisorie del simulatore infissi (scelte da Claude il 16/10/2026, da confermare con Eugenio)
+- Pezzi oltre 3,22 m²: demolizione e posa **raddoppiano** fino a 6,44 m² (infissi, tapparelle, zanzariere). Oltre 6,44 m²: demolizione/posa "al sopralluogo" (escluse dal totale), il prodotto si calcola lo stesso.
+- +10% su demolizioni e pose **dal 4° piano** in su.
+- Finestrini sotto 1 m²: pagati a metro quadro (es. 0,48 m² = 120 €).
+- Scorrevoli: sempre 320 €/m² in bianco e 400 €/m² per qualunque altro colore (anche particolari), senza fasce di misura.
+- Smontaggio tapparelle oltre 3,22 m²: raddoppia (50 €). Zanzariere: 52 €/m² a qualunque misura; nessuno smontaggio delle vecchie.
+- I colori di tapparelle e zanzariere nelle strisce sono indicativi (ricostruiti dalle tabelle dei cataloghi).

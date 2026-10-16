@@ -38,7 +38,7 @@ MD Edil Group vende ristrutturazioni di classe **premium / lusso** e cerca clien
 - **Ristrutturazioni esterne:** facciate, cappotto termico, coperture, balconi, lavori condominiali. Rivolte a **condomini** e **privati** (sul sito non si citano gli amministratori di condominio).
 - **Studio tecnico interno:** architetta abilitata per ogni tipo di pratica (rilievi, progetti, CILA/SCIA, direzione lavori); su richiesta anche un ingegnere esterno.
 - **Interior design** con progetto esecutivo completo e render 3D.
-- **Infissi e serramenti** (pagina da creare).
+- **Infissi e serramenti:** pagina `/infissi-serramenti` con simulatore (16/10/2026).
 - **Case in legno** (pagina da creare; esiste un configuratore separato, artifact "Case in Legno MD Edil Group").
 
 ## Come lavorano
