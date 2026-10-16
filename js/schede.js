@@ -47,7 +47,7 @@
     img.alt = 'Scheda del modello ' + NOMI[slug] + ': foto della casa e planimetria';
     go.onclick = null;
     if (typeof opt.simula === 'function') { go.href = '#'; go.onclick = function (e) { e.preventDefault(); close(); opt.simula(); }; }
-    else go.href = opt.simula || '/case-in-legno?modello=' + slug;
+    else go.href = opt.simula || '/case-in-legno?modello=' + slug + '#simulatore';
     el.hidden = false; document.documentElement.style.overflow = 'hidden';
     requestAnimationFrame(function () { el.classList.add('on'); el.querySelector('.sk-x').focus(); });
     return true;

@@ -42,7 +42,7 @@ MD Edil Group vende ristrutturazioni di classe **premium / lusso** e cerca clien
 - **Case in legno** (pagina da creare; esiste un configuratore separato, artifact "Case in Legno MD Edil Group").
 
 ## Come lavorano
-- **Chi siamo** (testo approvato in bozza il 15/10/2026, nella Home): impresa edile competente e professionale (non scrivere "giovane"), regolarmente costituita e operativa; professionisti e maestranze qualificate; una squadra o un tecnico specializzato per ogni lavorazione, con un unico referente; socia dell'**Associazione Edile AICOLE** — sito https://aicole.it (link nel Chi siamo) e collabora con le altre imprese associate; contratto regolare per ogni lavoro, MD Edil Group garantisce il lavoro svolto, onestà, serietà, rispetto di parola e tempi.
+- **Chi siamo** (Home, riscritto il 16/10/2026 in tono professionale): introduzione (impresa edile di Roma, ristrutturazioni chiavi in mano, facciate, infissi, case in legno; un solo interlocutore e un solo contratto) + 5 punti: sopralluogo e preventivo trasparente; squadre specializzate per ogni lavorazione; lavori a regola d'arte e a norma di legge; contratto, tempi e garanzia (impresa regolarmente costituita e operativa, garantisce il lavoro svolto); rete di imprese (socia dell'**Associazione Edile AICOLE**, https://aicole.it). Non scrivere "giovane".
 - Tutti i lavori sono eseguiti da **tecnici abilitati** con **certificazione di conformità**.
 - I tramezzi oggi si realizzano in **lastre / pannelli** (tipo Aquapanel o Siniat), non in muratura intonacata.
 - Nelle opere edili la **fornitura** di pavimenti, rivestimenti, sanitari e accessori è **esclusa**: sono incluse posa e lavorazioni.

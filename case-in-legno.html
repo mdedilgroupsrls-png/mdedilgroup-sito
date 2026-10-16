@@ -185,7 +185,7 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 </ol>
 </div>
 
-<h2 style="font-size: 22px; margin-bottom: 14px">1. Scegli il modello</h2>
+<h2 id="simulatore" style="font-size: 22px; margin-bottom: 14px; scroll-margin-top: 16px">1. Scegli il modello</h2>
 <div class="models" id="models" role="group" aria-label="Modelli di casa in legno"></div>
 <div class="misura">
 <div>
@@ -609,5 +609,6 @@ draw();
 })();
 </script>
 <script src="/js/schede.js"></script>
+<script>if(location.hash==="#simulatore"){addEventListener("load",function(){var e=document.getElementById("simulatore");if(e)e.scrollIntoView()})}</script>
 </body>
 </html>

@@ -5,6 +5,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 ## Da completare
 - [ ] **Trovare dove è registrato il dominio mdedilgroup.it**: non è nell'account Aruba personale di Eugenio (lì solo PEC e Firma Digitale, 16/10/2026). Serve per rinnovarlo ogni anno e per la gestione DNS.
 - [x] Collegati Google Business, recensioni Google, Facebook, TikTok, YouTube e LinkedIn su tutte le pagine (15/10/2026). Google Search Console: proprietà "Prefisso URL" https://mdedilgroup.it, verifica con il file `googlebe237534b9cfb8ff.html` nella radice del sito (NON cancellarlo). **Proprietà verificata il 16/10/2026.** Sitemap `sitemap.xml` inviata e letta da Google ("Riuscita", 16/10/2026).
+- [x] 16/10/2026 – Tutti i pulsanti "Simula" (Home, catalogo case, schede) portano direttamente al simulatore della pagina (`#simulatore`); voce 06 Case in legno della Home apre la pagina; Chi siamo riscritto in tono professionale.
 - [x] Logo disegnato solo alla prima apertura del sito, non a ogni ritorno sulla Home (15/10/2026).
 - [x] Testo **Chi siamo** nella Home (15/10/2026). Associazione: Associazione Edile AICOLE (aicole.it). Nel testo c'è il link a https://aicole.it (15/10/2026).
 - [x] **Pagina Infissi e serramenti** creata il 16/10/2026 (in attesa di "aggiorna il sito"); regole provvisorie da confermare in `listino-prezzi.md`. Prezzi IVA esclusa (confermato 16/10/2026). Resta da confermare il profilo tapparelle da presentare (L08/L09/L12).
