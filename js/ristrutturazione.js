@@ -94,7 +94,7 @@
       { id: 'velette', d: 'Velette e mensole per luci LED', um: 'm', p: 85,
         x: 'Elementi in cartongesso sagomati che nascondono le strisce LED e creano luce indiretta su soffitti e pareti. Si misurano in metri lineari.' }
     ] },
-    { t: 'Rasature e tinteggiature', s: 'Si contano i m² di pareti e soffitti: in una stanza sono circa 3 volte la superficie del pavimento.', v: [
+    { t: 'Rasature e tinteggiature', s: 'Si contano i m² di pareti e soffitti: in una stanza sono circa 4 volte la superficie del pavimento.', v: [
       { id: 'raschi', d: 'Raschiatura delle vecchie pitture', um: 'm²', p: 3,
         x: 'Rimozione delle pitture che si staccano o sono rovinate, per partire da una base sana.' },
       { id: 'rasat', d: 'Rasatura di pareti e soffitti', um: 'm²', p: 27,
