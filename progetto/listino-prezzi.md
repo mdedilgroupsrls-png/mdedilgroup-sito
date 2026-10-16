@@ -119,3 +119,4 @@ Regole decise da Eugenio:
 - I colori di tapparelle e zanzariere nelle strisce sono indicativi (ricostruiti dalle tabelle dei cataloghi).
 
 - Case in legno, voce "pareti" (16/10/2026): si chiama **"Montaggio delle pareti divisorie e rivestimento interno"**; rivestimento in legno di abete o cartongesso compreso nel prezzo, altri rivestimenti su preventivo. Prezzi invariati.
+- Case in legno, **predisposizione climatizzazione** (16/10/2026): **1.950 € per unità** (1 motore + 2 split), uguale per tutti i modelli; il cliente sceglie il numero di unità (2 unità = 3.900 €). Sostituisce i vecchi prezzi per modello (colonna "clima" in `case-in-legno.html`, non più usata).
