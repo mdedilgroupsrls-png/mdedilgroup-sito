@@ -3,6 +3,8 @@
 ## Identità
 - **Ragione sociale:** MD EDIL GROUP S.R.L.S.
 - **P.IVA:** 17112431006
+- **Codice univoco (fatturazione elettronica SDI):** M5UXCR1 (dato da Eugenio il 16/10/2026)
+- **Dati per la fatturazione** (come li scrive Eugenio): MD Edil Group S.R.L.S., Via Monti Lepini 9, 00015 Monterotondo (RM), P.IVA 17112431006, cod. univoco M5UXCR1, mdedilgroupsrls@gmail.com, 328 214 5266
 - **Titolare / referente:** Eugenio
 - **Slogan:** "I dettagli fanno la differenza"
 - **Logo:** casa/edifici stilizzati dorati su fondo nero (file: `img/cc07e2f1120eb45d8438fc5d59d4b3e8.png`, anche `favicon.png`)
