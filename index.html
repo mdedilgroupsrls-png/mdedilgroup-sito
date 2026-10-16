@@ -201,6 +201,7 @@ section{padding-block:clamp(70px,10vw,130px);position:relative;z-index:2}
 .reel:hover .v img{transform:scale(1.06)}
 .reel .play{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;border:1px solid var(--gold2);display:grid;place-items:center;color:var(--gold2);background:rgba(14,13,11,.45);backdrop-filter:blur(4px)}
 .reel .note{font-size:12px;color:var(--mute)}
+.igf{margin:0;align-self:center;font-size:14px;color:var(--ink2)}.igf b{font-family:'Urbanist',sans-serif;font-size:30px;font-weight:500;color:var(--gold2);margin-right:6px;vertical-align:-3px}
 .reel .ig{position:absolute;left:10px;top:10px;display:flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.08em;background:rgba(14,13,11,.7);padding:5px 9px;border-radius:999px;color:var(--ink)}
 .reel .empty{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;color:var(--mute);font-size:13px;border:1px dashed var(--dash);border-radius:14px}
 .reel .cap{font-size:14px;color:var(--ink2);line-height:1.5}
@@ -558,7 +559,7 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
     <p class="hint" style="margin-top:6px">Scorri col dito ←</p>
     </div>
     <p class="note" id="reelNota" style="margin-top:18px;font-size:12.5px;color:var(--mute)">Reel e numeri presi dal nostro profilo Instagram. Tocca un reel per guardarlo.</p>
-    <div class="cta" style="justify-content:flex-start;animation:none;margin-top:24px"><a class="btn" href="https://www.instagram.com/md_edil_group/">Seguici su Instagram</a></div>
+    <div class="cta" style="justify-content:flex-start;animation:none;margin-top:24px"><a class="btn" href="https://www.instagram.com/md_edil_group/">Seguici su Instagram</a><p class="igf"><b id="igFollower">47.824</b> persone ci seguono su Instagram</p></div>
   </div>
 </section>
 
@@ -783,6 +784,7 @@ function reelDaInstagram(){
         '<span class="stats">'+n(p.likeCount,'Mi piace',ico.like)+n(p.commentsCount,'Commenti',ico.com)+'</span></div>'+
         '<p class="cap"><b>'+esc(tit)+'</b><em>'+esc(resto)+'</em></p><span class="tags">'+esc(tag)+'</span></a>';
     }).join('');
+    const fol=document.getElementById('igFollower');if(fol&&+d.followersCount>0)fol.textContent=(+d.followersCount).toLocaleString('it-IT');
     const nota=document.getElementById('reelNota');if(nota)nota.textContent='Reel e numeri presi in diretta dal nostro profilo Instagram. Tocca un reel per guardarlo.';
   }).catch(()=>{});
 }
