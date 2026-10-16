@@ -221,6 +221,8 @@
     ultimoTesto = testo;
     if (centro > 0) pdf.splice(pdf.length - (prog > 0 ? 1 : 0), 0, { t: 'Maggiorazioni', righe: [['Lavori in centro storico o ZTL (+5% sui lavori)', '', centro]] });
     ultimoPdf = { sez: pdf, tot: tot, mq: mq };
+    // la simulazione è cambiata: il PDF scaricato non è più valido
+    if (pdfFatto) { pdfFatto = ''; bPdf.classList.remove('fatto'); bPdf.textContent = '1 · SCARICA IL PREVENTIVO PDF'; document.getElementById('rOk').hidden = true; }
   }
 
   var ultimoTesto = '', ultimoPdf = null;
@@ -245,21 +247,27 @@
     return val;
   }
   // invio su WhatsApp: il messaggio lo manda il cliente dal suo telefono
+  var pdfFatto = '';
   document.getElementById('rWa').addEventListener('click', function (e) {
     var val = controlla('inviare la simulazione');
     if (!val) { e.preventDefault(); e.stopImmediatePropagation(); return; }
+    var prima = document.getElementById('rPrima');
+    if (!pdfFatto) { // prima si scarica il preventivo (pulsante 1)
+      e.preventDefault(); e.stopImmediatePropagation();
+      prima.textContent = 'Prima scarica il preventivo in PDF con il pulsante 1: poi lo alleghi nella chat.'; prima.hidden = false;
+      bPdf.focus(); return;
+    }
+    prima.hidden = true;
     // messaggio corto: il dettaglio delle voci è nel preventivo PDF (pulsante 2)
     this.href = 'https://wa.me/393282145266?text=' + encodeURIComponent('Buongiorno, ho fatto la simulazione della ristrutturazione sul vostro sito.' +
-      '\nTotale stimato: ' + document.getElementById('rTot').textContent + ' IVA inclusa (' + String(num(stato.mq)).replace('.', ',') + ' m²). Vi invio qui il preventivo in PDF.' +
+      '\nTotale stimato: ' + document.getElementById('rTot').textContent + ' IVA inclusa (' + String(num(stato.mq)).replace('.', ',') + ' m²). Vi allego il preventivo in PDF.' +
       '\n\nNome e cognome: ' + val.rNome + '\nTelefono: ' + val.rTel + '\nIndirizzo dell’immobile: ' + val.rInd + '\n\nVorrei richiedere un sopralluogo: potete ricontattarmi?');
     document.getElementById('rOk').hidden = false;
   }, true);
   // preventivo in PDF intestato MD Edil Group (js/preventivo-pdf.js)
   var bPdf = document.getElementById('rPdf');
   var hPdf = document.getElementById('rPdfH');
-  if (hPdf) hPdf.textContent = window.MDPdf && window.MDPdf.condivide()
-    ? 'Si apre la condivisione: scegli WhatsApp e la chat di MD Edil Group.'
-    : 'Il PDF si scarica sul computer: trascinalo nella chat di WhatsApp con MD Edil Group.';
+  if (hPdf) hPdf.textContent = 'Il preventivo si salva sul tuo telefono o computer: al passo 2 lo alleghi nella chat di WhatsApp.';
   if (bPdf) bPdf.addEventListener('click', function () {
     var val = controlla('creare il preventivo in PDF');
     if (!val || !window.MDPdf || !ultimoPdf) return;
@@ -279,7 +287,11 @@
         'Esclusa la fornitura di pavimenti, rivestimenti, sanitari, rubinetteria, porte, termosifoni, caldaie, condizionatori e accessori, che sceglierai con noi. Infissi esclusi.',
         'Tutti i lavori sono eseguiti dai nostri tecnici abilitati e gli impianti sono consegnati con dichiarazione di conformità.'],
       file: val.rNome
-    }).then(function (p) { return window.MDPdf.consegna(p); })
+    }).then(function (p) {
+        window.MDPdf.scarica(p); pdfFatto = p.nome;
+        document.getElementById('rFile').textContent = p.nome; document.getElementById('rPrima').hidden = true;
+        bPdf.classList.add('fatto'); testo = '✓ PREVENTIVO SCARICATO · SCARICA DI NUOVO';
+      })
       .catch(function () { document.getElementById('rErr').textContent = 'Non è stato possibile creare il PDF: riprova o inviaci la simulazione su WhatsApp.'; document.getElementById('rErr').hidden = false; })
       .then(function () { bPdf.disabled = false; bPdf.textContent = testo; });
   });
