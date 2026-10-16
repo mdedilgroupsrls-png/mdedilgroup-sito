@@ -117,6 +117,28 @@
       font('bold', 15); col(ORO); doc.text(eur(d.totale), W - M - 4, y + 10.5, { align: 'right' });
       y += 26;
 
+      // modalità di pagamento (solo se indicate dal simulatore)
+      if (d.pagamento) {
+        var pg = d.pagamento;
+        spazio(30 + pg.rate.length * 6);
+        font('bold', 8.5); col(NERO); doc.text('MODALITÀ DI PAGAMENTO', M, y); y += 2;
+        doc.setDrawColor(ORO[0], ORO[1], ORO[2]); doc.setLineWidth(0.3); doc.line(M, y, M + 40, y); y += 5;
+        pg.rate.forEach(function (r) {
+          font('normal', 9); col(TESTO); doc.text(r[0], M + 3, y);
+          doc.text(r[1] + '%', cQ, y, { align: 'right' });
+          font('bold', 9); doc.text(eur(d.totale * r[1] / 100), cI - 3, y, { align: 'right' });
+          doc.setDrawColor(RIGA[0], RIGA[1], RIGA[2]); doc.setLineWidth(0.15); doc.line(M + 3, y + 2, W - M - 3, y + 2);
+          y += 6;
+        });
+        y += 3;
+        doc.setFillColor(246, 242, 232); doc.rect(M, y, W - 2 * M, 19, 'F');
+        font('bold', 8); col(GRIGIO); doc.text('BONIFICO BANCARIO', M + 4, y + 5.5);
+        font('normal', 9); col(TESTO);
+        doc.text('Banca: ' + pg.banca, M + 4, y + 10.5); doc.text('Intestatario: ' + pg.intestatario, M + 95, y + 10.5);
+        font('bold', 10); col(NERO); doc.text('IBAN: ' + pg.iban, M + 4, y + 15.8);
+        y += 27;
+      }
+
       // note
       spazio(20);
       font('bold', 8.5); col(NERO); doc.text('NOTE', M, y); y += 5;

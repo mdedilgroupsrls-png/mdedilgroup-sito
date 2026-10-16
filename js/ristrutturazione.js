@@ -266,6 +266,9 @@
         ['Piano', stato.piano === 'alto' ? '2° piano o superiore' : 'Villa, casa indipendente o fino al 1° piano'],
         ['Centro storico o ZTL', stato.centro === 'si' ? 'Sì' : 'No']],
       sezioni: ultimoPdf.sez, totale: ultimoPdf.tot, iva: 'IVA inclusa',
+      // modalità di pagamento: solo nel PDF, mai sulle pagine del sito; IBAN scritto al contrario e codificato, come l'email
+      pagamento: { rate: [['1ª rata', 30], ['2ª rata', 30], ['3ª rata', 35], ['Saldo', 5]], banca: 'Intesa Sanpaolo S.p.A.', intestatario: 'MD EDIL GROUP S.R.L.S.',
+        iban: atob('Mzc2NjEwMDAwMDAxMDQyOTM5NjAzMEk0M1RJ').split('').reverse().join('') },
       note: ['Preventivo indicativo calcolato con il listino MD Edil Group in base alle quantità indicate dal cliente. Prezzi IVA inclusa.',
         'Il prezzo definitivo viene confermato dopo il sopralluogo, con le misure prese dai nostri tecnici, e con la firma del contratto. Sopralluogo e preventivo sono gratuiti.',
         'Esclusa la fornitura di pavimenti, rivestimenti, sanitari, rubinetteria, porte, termosifoni, caldaie, condizionatori e accessori, che sceglierai con noi. Infissi esclusi.',
