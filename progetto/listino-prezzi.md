@@ -86,11 +86,11 @@ Listino di Eugenio "MD Edil Group Esterni 2026 – Cappotto 75/85" del 17/10/202
 | Ripristini | Ripristino copriferro malta R4 circa 3 cm | m² | 68 |
 | Ripristini | Spicconatura intradossi balconi e tettoie | m² | 8 |
 | Ripristini | Demolizione frontalini e intradossi ammalorati | m² | 30 |
-| Isolamento (scelta) | Cappotto EPS grafitato 12 cm, rasatura armata e finitura standard incluse | m² | 75 |
+| Isolamento (scelta) | Cappotto EPS grafitato 12 cm, rasatura armata inclusa, **finitura esclusa** (si sceglie a parte, Eugenio 17/10/2026) | m² | 75 |
 | Isolamento (scelta) | Cappotto EPS grafitato 14 cm, idem | m² | 85 |
 | Isolamento (scelta) | Rasante termoisolante Econanosil Eco 2 circa 10 mm con rete, finitura esclusa (prezzo aziendale, da confermare col produttore) | m² | 95 |
 | Rasatura (scelta, solo senza isolamento) | Rasatura fine pronta alla pittura / rasatura armata con rete | m² | 26 / 32 |
-| Finitura (scelta, non con cappotto EPS) | Minerale a calce / intonachino colorato con fondo / pittura silossanica (non con Econanosil) | m² | 19 / 25 / 13 |
+| Finitura (scelta, anche con cappotto EPS) | Minerale a calce / intonachino colorato con fondo / pittura silossanica (non con Econanosil) | m² | 19 / 25 / 13 |
 | Lattonerie | Soglie travertino: pulizia e carteggiatura (m²) oppure rimozione e sostituzione (ml) – scelta | m² / ml | 18 / 115 |
 | Lattonerie | Scossalina 33, gronda 45, pluviale 32, ringhiera in ferro (antiruggine + 2 mani smalto) 65 | ml | |
 | Terrazzi (metodo "rifacimento completo") | Demolizione pavimento e sottofondo fino a 5 cm (trasporto incluso) | m² | 33,50 |
@@ -105,7 +105,7 @@ Listino di Eugenio "MD Edil Group Esterni 2026 – Cappotto 75/85" del 17/10/202
 | Rifiuti | Carico, trasporto e conferimento inerti non pericolosi | t | 60 |
 | Automatico | **Oneri della sicurezza: 8% dei lavori scelti** (stima commerciale, non percentuale di legge) | % | 8 |
 
-Regole del simulatore (17/10/2026): ogni paragrafo si apre con Sì; le alternative sono scelte uniche (isolamento, rasatura, finitura, soglie, mezzo di sollevamento, metodo terrazzi, impermeabilizzazione). Con cappotto EPS spariscono rasatura e finitura; con Econanosil la finitura è solo calce o intonachino. Impermeabilizzazione: primo strato di guaina con primer (23) e, a scelta, secondo strato aggiuntivo (16), confermato da Eugenio il 17/10/2026. La superficie delle facciate non è obbligatoria: si può simulare anche solo il terrazzo (Eugenio, 17/10/2026). Modalità di pagamento nel PDF esterni come per gli interni (30/30/35/5%, calcolate sul totale IVA esclusa). Superficie delle facciate in alto, usata da "= superficie" e dal paragrafo isolamento/finitura se non si indica un'altra superficie.
+Regole del simulatore (17/10/2026): ogni paragrafo si apre con Sì; le alternative sono scelte uniche (isolamento, rasatura, finitura, soglie, mezzo di sollevamento, metodo terrazzi, impermeabilizzazione). Con cappotto EPS sparisce la rasatura (compresa) e resta da scegliere la finitura; con Econanosil la finitura è solo calce o intonachino. Impermeabilizzazione: primo strato di guaina con primer (23) e, a scelta, secondo strato aggiuntivo (16), confermato da Eugenio il 17/10/2026. La superficie delle facciate non è obbligatoria: si può simulare anche solo il terrazzo (Eugenio, 17/10/2026). Modalità di pagamento nel PDF esterni come per gli interni (30/30/35/5%, calcolate sul totale IVA esclusa). Superficie delle facciate in alto, usata da "= superficie" e dal paragrafo isolamento/finitura se non si indica un'altra superficie.
 
 ## Case in legno
 I prezzi delle case in legno sono **IVA inclusa**.

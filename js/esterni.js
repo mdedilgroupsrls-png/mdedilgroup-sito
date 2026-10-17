@@ -2,7 +2,7 @@
    Prezzi dal listino "MD Edil Group Esterni 2026" del 17/10/2026, IVA esclusa (vedi progetto/listino-prezzi.md).
    Ogni paragrafo si apre con Sì. Le lavorazioni che si escludono (tipo di cappotto, rasatura, finitura,
    metodo per i terrazzi, impermeabilizzazione) sono scelte alternative: se ne può scegliere una sola.
-   Regole del listino: il cappotto EPS comprende già rasatura armata e finitura standard; il rasante termoisolante
+   Regole del listino: il cappotto EPS comprende già la rasatura armata ma non la finitura, che si sceglie a parte (Eugenio, 17/10/2026); il rasante termoisolante
    va completato con finitura a calce o intonachino; l'intonachino è già colorato e non va pitturato.
    Oneri della sicurezza: 8% dei lavori scelti, calcolati da soli. Testi delle voci originali MD Edil Group. */
 (function () {
@@ -48,14 +48,14 @@
     { id: 'finiture', t: 'Cappotto termico, rasatura e finitura', s: 'Scegli una sola soluzione per ogni passaggio: il simulatore ti mostra solo le combinazioni corrette, senza lavorazioni doppie.',
       area: { label: 'Superficie delle facciate da trattare (m²)', default: 'mq', hint: 'Se la lasci vuota vale la superficie delle facciate indicata in alto.' }, v: [
       { id: 'sistema', tipo: 'scelta', q: 'area', um: 'm²', nessuno: 'Nessun isolamento termico', d: 'Isolamento termico della facciata (cappotto)',
-        x: 'Il cappotto termico isola le pareti dall’esterno: meno dispersioni di calore, case più calde d’inverno e più fresche d’estate, bollette più leggere. Scegli una sola soluzione: il cappotto in EPS comprende già rasatura e finitura.',
+        x: 'Il cappotto termico isola le pareti dall’esterno: meno dispersioni di calore, case più calde d’inverno e più fresche d’estate, bollette più leggere. Scegli una sola soluzione: il cappotto in EPS comprende già la rasatura armata, la finitura si sceglie qui sotto.',
         opz: [
-          { v: 'cap12', d: 'Cappotto in EPS grafitato da 12 cm', x: 'Rasatura armata e finitura standard già comprese', p: 75 },
-          { v: 'cap14', d: 'Cappotto in EPS grafitato da 14 cm', x: 'Rasatura armata e finitura standard già comprese', p: 85 },
+          { v: 'cap12', d: 'Cappotto in EPS grafitato da 12 cm', x: 'Rasatura armata compresa; la finitura si sceglie qui sotto', p: 75 },
+          { v: 'cap14', d: 'Cappotto in EPS grafitato da 14 cm', x: 'Rasatura armata compresa; la finitura si sceglie qui sotto', p: 85 },
           { v: 'eco', d: 'Rasante termoisolante Econanosil Eco 2 (circa 1 cm)', x: 'Con rete in fibra di vetro; la finitura si sceglie qui sotto', p: 95 }
         ] },
       { id: 'notaCap', tipo: 'nota', se: function (c) { return /^cap/.test(sistema(c)); },
-        d: 'Il cappotto comprende già la rasatura armata e la finitura standard: non serve aggiungere altro.' },
+        d: 'Il cappotto comprende già la rasatura armata. La finitura non è compresa: scegli qui sotto quella che preferisci.' },
       { id: 'rasatura', tipo: 'scelta', q: 'area', um: 'm²', nessuno: 'Nessuna rasatura', d: 'Rasatura delle facciate',
         se: function (c) { return !sistema(c); },
         x: 'Strato sottile che rende la facciata liscia e uniforme prima della finitura. Con la rete in fibra di vetro è più resistente alle microfessure.',
@@ -64,7 +64,6 @@
           { v: 'armata', d: 'Rasatura armata in due mani con rete in fibra di vetro', x: 'Più resistente: consigliata con microfessure diffuse', p: 32 }
         ] },
       { id: 'finitura', tipo: 'scelta', q: 'area', um: 'm²', nessuno: 'Nessuna finitura', d: 'Finitura e colore della facciata',
-        se: function (c) { return !/^cap/.test(sistema(c)); },
         x: 'L’ultimo strato, quello che si vede: protegge la facciata e le dà il colore.',
         opz: [
           { v: 'calce', d: 'Finitura minerale a calce', x: 'Molto traspirante, indicata per edifici storici e muri che devono respirare', p: 19 },
