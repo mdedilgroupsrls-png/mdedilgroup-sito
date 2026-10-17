@@ -25,6 +25,8 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 
 - 16/10/2026: pubblicate le pagine /infissi-serramenti e /chi-siamo; Eugenio ha chiesto a Google l'indicizzazione (Controllo URL → Richiedi indicizzazione). Search Console: dati di Rendimento ancora in elaborazione.
 
+- 17/10/2026: pagina facciate con simulatore di costo; descrizione per Google aggiornata ("Calcola subito il costo con il simulatore").
+
 ## Da fare (in ordine di importanza)
 1. **Recensioni Google**: chiederle a ogni cliente con il link `https://g.page/r/CSlUfVvDiZqIEBM/review`. È il fattore più forte per "ristrutturazioni Roma" su Maps.
 2. **Scheda Google Business** (la fa Eugenio): categoria principale "Impresa edile", categorie secondarie (ristrutturazioni, installazione finestre, facciate…), elenco servizi con descrizione, foto dei cantieri ogni settimana, un post al mese, sito `https://mdedilgroup.it`.

@@ -61,6 +61,49 @@ Regole del documento: la posa della ceramica è in due sezioni (02.13 e 08.01) m
 - Pulsanti: **"Invia la stima su WhatsApp"** (messaggio con tutte le voci) e **"Prenota il sopralluogo"**.
 - **Regole confermate da Eugenio (16/10/2026):** **voci a corpo "fino a 70 m²" (smontaggio impianti elettrico e idrico, sicurezza e allestimento del cantiere, carico e scarico dei materiali): prezzo del listino fino a 70 m², poi +250 € ogni 30 m² in più o frazione** (es. smontaggio elettrico: 80 e 100 m² = 1.000 €, 101–130 m² = 1.250 €; sicurezza 80 m² = 1.350 €; tiro 80 m² = 1.650 €; regola di Eugenio del 16/10/2026 sera, sostituisce gli scaglioni da 70 m²); centralino elettrico oltre 70 m²: 1.000 € fino a 100 m², poi +250 € ogni 20 m²; centro storico/ZTL **+5%** sui lavori; bagno oltre 5 m²: **+350 € per ogni m² in più** (il cliente indica i m² di ogni bagno). "= superficie" è solo un aiuto per riempire le voci in m².
 
+## Ristrutturazioni esterne e facciate (simulatore dal 17/10/2026)
+Listino di Eugenio "MD Edil Group Esterni 2026 – Cappotto 75/85" del 17/10/2026, **IVA esclusa** (sul sito "+ IVA", nel PDF "IVA di legge esclusa"). Simulatore in `js/esterni.js`. I codici (CAN-01, FAC-05…) non vanno sul sito.
+
+| Sezione del simulatore | Voce | U.M. | € |
+|---|---|---|---|
+| Cantiere | Allestimento e smobilizzo cantiere (bagno chimico, spogliatoio, segnaletica) | corpo | 1.800 |
+| Cantiere | Ponteggio: montaggio, smontaggio e primo noleggio 30 gg | m² | 18 |
+| Cantiere | Noleggio ponteggio per ogni 30 gg in più | m²/30gg | 2 |
+| Cantiere | Progetto ponteggio, quando richiesto | cad. | 550 |
+| Cantiere | Distribuzione provvisoria acqua e luce ai piani | corpo | 650 |
+| Cantiere | Argano 200 kg: montaggio/smontaggio 350 + noleggio 615 al mese | cad./mese | 350 / 615 |
+| Cantiere | Montacarichi 500 kg: montaggio/smontaggio 900 + noleggio 1.300 al mese | cad./mese | 900 / 1.300 |
+| Cantiere | Tiro in alto / calo in basso con elevatore | m³ | 32,02 / 32,02 |
+| Ripristini | Spicconatura localizzata | m² | 3,50 |
+| Ripristini | Rimozione pitture deteriorate | m² | 7,20 |
+| Ripristini | Demolizione localizzata parti ammalorate | m² | 18,50 |
+| Ripristini | Ripristino intonaco premiscelato fino a 20 mm per strato | m² | 23,50 |
+| Ripristini | Riparazione crepe con armatura localizzata | ml | 24 |
+| Ripristini | Trattamento anticorrosivo armature | m² | 18 |
+| Ripristini | Ripristino copriferro malta R4 circa 3 cm | m² | 68 |
+| Ripristini | Spicconatura intradossi balconi e tettoie | m² | 8 |
+| Ripristini | Demolizione frontalini e intradossi ammalorati | m² | 30 |
+| Isolamento (scelta) | Cappotto EPS grafitato 12 cm, rasatura armata e finitura standard incluse | m² | 75 |
+| Isolamento (scelta) | Cappotto EPS grafitato 14 cm, idem | m² | 85 |
+| Isolamento (scelta) | Rasante termoisolante Econanosil Eco 2 circa 10 mm con rete, finitura esclusa (prezzo aziendale, da confermare col produttore) | m² | 95 |
+| Rasatura (scelta, solo senza isolamento) | Rasatura fine pronta alla pittura / rasatura armata con rete | m² | 26 / 32 |
+| Finitura (scelta, non con cappotto EPS) | Minerale a calce / intonachino colorato con fondo / pittura silossanica (non con Econanosil) | m² | 19 / 25 / 13 |
+| Lattonerie | Soglie travertino: pulizia e carteggiatura (m²) oppure rimozione e sostituzione (ml) – scelta | m² / ml | 18 / 115 |
+| Lattonerie | Scossalina 33, gronda 45, pluviale 32, ringhiera in ferro (antiruggine + 2 mani smalto) 65 | ml | |
+| Terrazzi (metodo "rifacimento completo") | Demolizione pavimento e sottofondo fino a 5 cm (trasporto incluso) | m² | 33,50 |
+| Terrazzi | Maggiorazione per ogni cm oltre 5 cm (sui m² demoliti) | m²/cm | 7 |
+| Terrazzi | Rimozione guaina doppio strato (smaltimento escluso) | m² | 6 |
+| Terrazzi | Trasporto e conferimento guaina | kg | 1,49 |
+| Terrazzi | Massetto fino a 6 cm | m² | 29,19 |
+| Terrazzi | Impermeabilizzazione (scelta): primer 4 + 1ª guaina 19 = **23**; primer + 2 guaine (19+16) = **39**; cementizia tipo Mapelastic **30** | m² | |
+| Terrazzi | Posa gres esterno (piastrelle escluse) 32 €/m²; battiscopa 11 €/ml; bocchettone 175 €/cad | | |
+| Terrazzi (metodo "senza demolizione") | Impermeabilizzazione armata su pavimento esistente, garanzia Unipol 10 anni | m² | 59 |
+| Terrazzi | Raccordi, angoli e risvolti 16 €/ml; pulizia e ripristino fughe 12 €/m² | | |
+| Rifiuti | Carico, trasporto e conferimento inerti non pericolosi | t | 60 |
+| Automatico | **Oneri della sicurezza: 8% dei lavori scelti** (stima commerciale, non percentuale di legge) | % | 8 |
+
+Regole del simulatore (17/10/2026): ogni paragrafo si apre con Sì; le alternative sono scelte uniche (isolamento, rasatura, finitura, soglie, mezzo di sollevamento, metodo terrazzi, impermeabilizzazione). Con cappotto EPS spariscono rasatura e finitura; con Econanosil la finitura è solo calce o intonachino. Le opzioni "una guaina con primer" (23) e "doppia guaina con primer" (39) sono somme di voci del listino fatte da Claude: da confermare con Eugenio. Superficie delle facciate in alto, usata da "= superficie" e dal paragrafo isolamento/finitura se non si indica un'altra superficie.
+
 ## Case in legno
 I prezzi delle case in legno sono **IVA inclusa**.
 

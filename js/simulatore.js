@@ -27,11 +27,14 @@
       for (var i = 0; i < it.opz.length; i++) if (it.opz[i].v === v && visibile(it.opz[i], c)) return it.opz[i];
       return null;
     }
-    function qtaScelta(it, s) { return it.q === 'area' ? num(st.area[s.id]) : num(st.q[it.id]); }
+    // superficie del paragrafo; se è vuota e il paragrafo lo prevede, vale la superficie indicata in alto
+    function areaSez(s) { return num(st.area[s.id]) || (s.area && s.area.default === 'mq' ? num(st.mq) : 0); }
+    function qtaScelta(it, s) { return it.q === 'area' ? areaSez(s) : num(st.q[it.id]); }
 
     // importo di una voce (0 se il paragrafo è chiuso, la voce non c'entra o non è compilata)
     function importo(it, s, c) {
       if (!st.open[s.id] || !visibile(it, c)) return 0;
+      if (it.tipo === 'nota') return 0;
       if (it.tipo === 'si') return st.q[it.id] === 'si' ? (it.f ? it.f(c) : it.p) : 0;
       if (it.tipo === 'scelta') {
         var o = opzioneScelta(it, c); if (!o) return 0;
@@ -39,7 +42,7 @@
         return o.f ? o.f(n, c) : o.p * n;
       }
       var n2 = num(st.q[it.id]); if (!n2) return 0;
-      return it.f ? it.f(n2, c) : n2 * it.p;
+      return it.f ? it.f(n2, c, areaSez(s)) : n2 * it.p;
     }
     function rigaPdf(it, s, c, v) {
       if (it.tipo === 'si') return [it.d, it.qPdf ? it.qPdf(c) : 'a corpo', v];
@@ -77,9 +80,10 @@
           '<div class="sez-q"><span>' + esc(s.domanda || 'Ti serve questa lavorazione?') + '</span>' + pills('data-apri="' + s.id + '"', [['si', 'Sì'], ['no', 'No']], aperto ? 'si' : 'no') + '</div>' +
           '<div class="sez-c"' + (aperto ? '' : ' hidden') + '>';
         if (s.s) h += '<p class="hint" style="margin:0">' + esc(s.s) + '</p>';
-        if (s.area) h += '<label class="area">' + esc(s.area.label) + '<input class="inp" type="number" inputmode="decimal" min="0" placeholder="0" data-area="' + s.id + '" value="' + esc(st.area[s.id] || '') + '"></label>';
+        if (s.area) h += '<label class="area">' + esc(s.area.label) + '<input class="inp" type="number" inputmode="decimal" min="0" placeholder="' + esc(s.area.default === 'mq' && st.mq ? st.mq : '0') + '" data-area="' + s.id + '" value="' + esc(st.area[s.id] || '') + '"></label>' + (s.area.hint ? '<p class="hint" style="margin:-12px 0 0">' + esc(s.area.hint) + '</p>' : '');
         s.v.forEach(function (it) {
           if (!visibile(it, c)) return;
+          if (it.tipo === 'nota') { h += '<p class="nota">' + esc(it.d) + '</p>'; return; }
           if (it.tipo === 'scelta') {
             var o = opzioneScelta(it, c);
             h += '<div class="scelta" data-id="' + it.id + '">' + titolo(it) + '<div class="opz" role="radiogroup" aria-label="' + esc(it.d) + '">';
@@ -190,7 +194,7 @@
 
     root.addEventListener('input', function (e) {
       var t = e.target;
-      if (t.id === 'rMq') st.mq = t.value;
+      if (t.id === 'rMq') { st.mq = t.value; root.querySelectorAll('[data-area]').forEach(function (a) { var s0 = cfg.sezioni.filter(function (x) { return x.id === a.dataset.area; })[0]; if (s0 && s0.area.default === 'mq') a.placeholder = t.value || '0'; }); }
       else if (t.dataset.q) st.q[t.dataset.q] = t.value;
       else if (t.dataset.area) st.area[t.dataset.area] = t.value;
       else return;
@@ -210,7 +214,7 @@
       else if (d.usa) {
         var it = trova(d.usa), s = null;
         cfg.sezioni.forEach(function (x) { if (x.id === d.sez) s = x; });
-        var val = s && s.area ? st.area[s.id] : st.mq;
+        var val = s && s.area ? (st.area[s.id] || (s.area.default === 'mq' ? st.mq : '')) : st.mq;
         if (num(val) > 0) { st.q[d.usa] = val; var inp = root.querySelector('[data-q="' + d.usa + '"]'); if (inp) inp.value = val; }
         else { var m = s && s.area ? root.querySelector('[data-area="' + s.id + '"]') : $('rMq'); if (m) m.focus(); return; }
         if (!it) return;

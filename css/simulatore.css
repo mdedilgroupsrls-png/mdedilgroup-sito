@@ -49,3 +49,4 @@
 .opz .op small{display:block;color:#8A8478;font-size:12.5px;margin-top:2px}
 .scelta .riga{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between}
 .area{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:14px;color:#D8D2C6}
+.nota{margin:0;padding:12px 14px;border-left:2px solid #C9A24A;background:rgba(201,162,74,.06);font-size:13.5px;line-height:1.5;color:#D8D2C6}
