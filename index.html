@@ -88,6 +88,13 @@ nav.menu a:hover{color:var(--gold2)}nav.menu a:hover::after{transform:scaleX(1)}
 .hero .rule{width:120px;height:1px;background:var(--gold);margin:34px auto 0;transform:scaleX(0);animation:line 1s 6s cubic-bezier(.7,0,.2,1) forwards}
 .hero .zones{margin-top:26px;color:var(--ink);letter-spacing:.36em;animation:fadeup 1s 6.1s both}
 .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px;animation:fadeup 1s 6.25s both}
+/* appena la frase inizia a scriversi compaiono anche linea, zone e pulsanti (classe .go dallo script del titolo);
+   i tempi da 6 s sopra restano solo come riserva se lo script non parte */
+@keyframes line2{to{transform:scaleX(1)}}
+@keyframes fadeup2{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero.go .rule{animation:line2 1s .5s cubic-bezier(.7,0,.2,1) forwards}
+.hero.go .zones{animation:fadeup2 1s .7s both}
+.hero.go .cta{animation:fadeup2 1s .9s both}
 .btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 30px;font:600 13px var(--f-body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);color:var(--gold);transition:background .3s,color .3s,transform .3s;cursor:pointer;background:none}
 .btn.solid{background:var(--gold);color:#0E0D0B}
 .btn:hover{transform:translateY(-2px);background:var(--gold2);color:#0E0D0B;border-color:var(--gold2)}
@@ -657,7 +664,7 @@ const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
   // la scritta parte nel momento in cui la schermata del logo inizia a dissolversi e la pagina principale appare,
   // non dopo un tempo fisso: così parte anche se il telefono ha impiegato di più a mostrare la pagina
   let started=false;
-  const go=()=>{if(started)return;started=true;h.querySelector('span').prepend(caret);type()};
+  const go=()=>{if(started)return;started=true;h.closest('.hero').classList.add('go');h.querySelector('span').prepend(caret);type()};
   const cur=document.querySelector('.curtain');
   const curShown=cur&&getComputedStyle(cur).display!=='none';
   if(curShown){
