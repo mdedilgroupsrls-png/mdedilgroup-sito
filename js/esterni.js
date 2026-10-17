@@ -42,6 +42,7 @@
       { id: 'crepe', um: 'm', p: 24, d: 'Riparazione delle crepe in facciata', x: 'Le crepe vengono aperte, armate con rete localizzata e richiuse, così non si riaprono sotto le nuove finiture. Si misura in metri lineari di crepa.' },
       { id: 'ferri', um: 'm²', p: 18, d: 'Trattamento anticorrosivo dei ferri d’armatura', x: 'Pulizia dei ferri del cemento armato rimasti scoperti e protezione con prodotto anticorrosivo, per fermare la ruggine che gonfia e spacca il calcestruzzo.' },
       { id: 'copriferro', um: 'm²', p: 68, d: 'Ripristino del calcestruzzo e del copriferro', x: 'Ricostruzione del calcestruzzo intorno ai ferri con malta strutturale tissotropica di classe R4, spessore di circa 3 cm. Si usa su pilastri, travi, frontalini e cornicioni.' },
+      { id: 'balSpicc', um: 'm²', p: 8, d: 'Spicconatura sotto balconi e tettoie', x: 'Rimozione dell’intonaco staccato nella parte inferiore di balconi e tettoie, il punto dove più spesso cadono frammenti.' },
       { id: 'balDem', um: 'm²', p: 30, d: 'Demolizione di frontalini e sottobalconi ammalorati', x: 'Demolizione delle parti rovinate del bordo frontale e della parte inferiore dei balconi, prima del ripristino del calcestruzzo.' }
     ] },
     { id: 'finiture', t: 'Cappotto termico, rasatura e finitura', s: 'Scegli una sola soluzione per ogni passaggio: il simulatore ti mostra solo le combinazioni corrette, senza lavorazioni doppie.',

@@ -84,7 +84,7 @@ Listino di Eugenio "MD Edil Group Esterni 2026 – Cappotto 75/85" del 17/10/202
 | Ripristini | Riparazione crepe con armatura localizzata | ml | 24 |
 | Ripristini | Trattamento anticorrosivo armature | m² | 18 |
 | Ripristini | Ripristino copriferro malta R4 circa 3 cm | m² | 68 |
-| ~~Ripristini~~ | ~~Spicconatura intradossi balconi e tettoie~~ – tolta dal simulatore il 17/10/2026 (Eugenio: non serve) | m² | ~~8~~ |
+| Ripristini | Spicconatura intradossi balconi e tettoie | m² | 8 |
 | Ripristini | Demolizione frontalini e intradossi ammalorati | m² | 30 |
 | Isolamento (scelta) | Cappotto EPS grafitato 12 cm, rasatura armata e finitura standard incluse | m² | 75 |
 | Isolamento (scelta) | Cappotto EPS grafitato 14 cm, idem | m² | 85 |
