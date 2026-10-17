@@ -33,7 +33,7 @@ Prima di lavorare leggi la cartella `progetto/`:
   - lavori fatti, nuovi lavori da fare, decisioni prese → `da-fare.md` (spunta ciò che è completato, con la data)
   - titoli, descrizioni per Google, parole chiave, lavori SEO → `seo.md`
 - **Sicurezza** (16/10/2026): l'email non va mai scritta in chiaro nelle pagine; si usa `<span class="js-mail">scrivici dal modulo contatti</span>` e la ricompone `js/sicurezza.js` (incluso in tutte le pagine, insieme all'avviso cookie). Se una pagina usa un nuovo servizio esterno (script, caratteri, mappe, video), va aggiunto alla `Content-Security-Policy` in `netlify.toml`, altrimenti il browser lo blocca.
-- **Simulatori interni ed esterni**: voci in `js/ristrutturazione.js` e `js/esterni.js` (motore `js/simulatore.js`). Dopo ogni modifica a titoli o descrizioni delle voci lancia `node progetto/strumenti/guida_lavorazioni.js`, che aggiorna la guida per Google nelle pagine.
+- **Simulatori interni ed esterni**: ogni simulatore usa solo il proprio listino, mai prezzi presi dall'altro anche per lavorazioni simili; interni IVA inclusa, esterni e facciate + IVA. Voci in `js/ristrutturazione.js` e `js/esterni.js` (motore `js/simulatore.js`). Dopo ogni modifica a titoli o descrizioni delle voci lancia `node progetto/strumenti/guida_lavorazioni.js`, che aggiorna la guida per Google nelle pagine.
 - **Numero dei preventivi PDF**: contatore in `netlify/edge-functions/numero.js` (Netlify Blobs). Non salvare lì dati dei clienti.
 - **Statistiche**: i contatori anonimi sono in `js/sicurezza.js` (`MDStat('evento')`) e `netlify/edge-functions/stat.js`; i dati giornalieri stanno nel branch `statistiche`, non in main. Mai raccogliere nomi, IP o altri dati personali.
 - Scrivi un messaggio di commit chiaro in italiano.

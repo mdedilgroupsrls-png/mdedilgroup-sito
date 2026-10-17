@@ -1,5 +1,8 @@
 # Listino prezzi MD Edil Group (ristrutturazioni interni)
 
+> **Regola di Eugenio (17/10/2026): ogni simulatore usa SOLO il suo listino.** Le stesse lavorazioni (es. demolizione pavimento, massetto, posa gres, smaltimenti) hanno prezzi diversi tra interni ed esterni: non copiare mai un prezzo da un listino all'altro. Interni = `js/ristrutturazione.js` (IVA inclusa); esterni e facciate = `js/esterni.js` (**+ IVA**, IVA esclusa); infissi = `js/infissi.js` (+ IVA); case in legno (IVA inclusa).
+
+
 **Listino del 16/10/2026** (PDF di Eugenio "Listino prezzi ristrutturazione MD Edil Group", formato computo metrico). Nel PDF c'è scritto IVA esclusa, ma **Eugenio ha deciso (16/10/2026, sera) che per la simulazione e il preventivo delle ristrutturazioni interne i prezzi sono IVA INCLUSA**: stessi importi, sul sito e nel PDF si scrive "IVA inclusa" (non vale per gli infissi, che restano "+ IVA"). È lo stesso del simulatore della pagina `/ristrutturazioni-interni` (`js/ristrutturazione.js`), che **sostituisce il listino precedente** (15,21 €/m² rimozione pavimenti, 90 € punto luce, Tariffa Regione Lazio ecc.: non più usato).
 
 Il PDF nasce dalla revisione, fatta da Eugenio, di un prospetto di un'altra impresa: **sul sito non vanno mai i codici delle voci (01.03, 02.06…) né il nome di altre imprese**; le descrizioni sul sito sono riscritte in parole nostre.
