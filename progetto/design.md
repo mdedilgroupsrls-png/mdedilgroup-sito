@@ -65,4 +65,4 @@ Sorgente: `progetto/sorgenti-design/home-cinema.html`. Stesso stile Nero & Oro, 
 - **Email nel piè di pagina** di tutte le pagine: "Email: …", ricomposta da `js/sicurezza.js` per non farla leggere ai programmi automatici.
 
 ## Frase approvata per i simulatori (17/10/2026)
-"**Stima indicativa, non vincolante.** Il preventivo definitivo si ottiene solo dopo il sopralluogo. Le lavorazioni non presenti nel simulatore saranno quotate a parte." – Nei simulatori interni ed esterni: riquadro `.avviso` sotto il totale e riquadro in evidenza sotto il titolo del preventivo PDF.
+"**Stima indicativa, non vincolante.** Il preventivo definitivo si ottiene solo dopo il sopralluogo. Le lavorazioni non presenti nel simulatore saranno quotate a parte." – Nei simulatori interni, esterni e infissi e serramenti (per gli infissi con in più "con le misure prese dai nostri tecnici"): riquadro `.avviso` sotto il totale e riquadro in evidenza sotto il titolo del preventivo PDF.

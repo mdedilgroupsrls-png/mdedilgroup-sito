@@ -81,6 +81,7 @@
       bp.addEventListener('click', function () {
         var v = controlla('creare il preventivo in PDF'); if (!v) return;
         var d = o.pdf(); d.cliente = { nome: v.nome, tel: v.tel, ind: v.ind, indLabel: o.indirizzo }; d.file = v.nome;
+        d.avviso = d.avviso || 'Stima indicativa, non vincolante. Il preventivo definitivo si ottiene solo dopo il sopralluogo. Le lavorazioni non presenti nel simulatore saranno quotate a parte.';
         var t = bp.textContent; bp.disabled = true; bp.textContent = 'PREPARAZIONE DEL PDF…';
         window.MDPdf.crea(d).then(function (p) { return window.MDPdf.consegna(p); })
           .catch(function () { var err = box.querySelector('.err'); err.textContent = 'Non è stato possibile creare il PDF: riprova o inviaci la simulazione su WhatsApp.'; err.hidden = false; })

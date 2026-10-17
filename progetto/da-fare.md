@@ -44,7 +44,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 16/10/2026 – Preventivo in PDF intestato MD Edil Group con i dati del cliente, nei simulatori interni e infissi (richiesta di Eugenio); modalità di pagamento non inserite per ora
 - [x] 16/10/2026 – Ristrutturazioni interni: prezzi IVA inclusa sul sito, nel messaggio WhatsApp e nel PDF (Eugenio)
 - [x] 16/10/2026 – Modalità di pagamento **solo nel PDF delle ristrutturazioni interni** (mai sulle pagine del sito, Eugenio): rate 30% / 30% / 35% / saldo 5% calcolate sul totale, bonifico Intesa Sanpaolo, intestatario MD EDIL GROUP S.R.L.S. L'IBAN è in `js/ristrutturazione.js` scritto al contrario e codificato (come l'email): **non scriverlo in chiaro nei file, il repository è pubblico**
-- [x] 17/10/2026 – Avviso "Stima indicativa, non vincolante…" sul sito e nel PDF dei simulatori interni ed esterni (Eugenio)
+- [x] 17/10/2026 – Avviso "Stima indicativa, non vincolante…" sul sito e nel PDF dei simulatori interni, esterni e infissi e serramenti (Eugenio)
 - [x] 17/10/2026 – Titoli e descrizioni delle voci delle facciate riscritti; "Guida alle lavorazioni" per la SEO sotto i due simulatori (Eugenio)
 - [x] 17/10/2026 – Simulatore ristrutturazioni esterne e facciate con il listino Esterni 2026; paragrafi Sì/No e scelte uniche anche nel simulatore interni (motore comune)
 - [ ] Da chiarire con Eugenio (esterni): opzioni impermeabilizzazione "una guaina con primer" 23 €/m² e "doppia guaina con primer" 39 €/m² (somme fatte da Claude); modalità di pagamento anche nel PDF esterni?; tipo di edificio (villa/condominio) solo informativo, non cambia il prezzo
