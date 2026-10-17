@@ -1,7 +1,7 @@
 /* Simulatore delle ristrutturazioni esterne e facciate (pagina /ristrutturazioni-esterni), motore in js/simulatore.js.
    Prezzi dal listino "MD Edil Group Esterni 2026" del 17/10/2026, IVA esclusa (vedi progetto/listino-prezzi.md).
    Ogni paragrafo si apre con Sì. Le lavorazioni che si escludono (tipo di cappotto, rasatura, finitura,
-   metodo per i terrazzi, impermeabilizzazione) sono scelte alternative: se ne può scegliere una sola.
+   metodo per i terrazzi) sono scelte alternative: se ne può scegliere una sola.
    Regole del listino: il cappotto EPS comprende già la rasatura armata ma non la finitura, che si sceglie a parte (Eugenio, 17/10/2026); il rasante termoisolante
    va completato con finitura a calce o intonachino; l'intonachino è già colorato e non va pitturato.
    Oneri della sicurezza: 8% dei lavori scelti, calcolati da soli. Testi delle voci originali MD Edil Group. */
@@ -100,18 +100,20 @@
         x: 'Rimozione della guaina impermeabile esistente a doppio strato. Trasporto e smaltimento si indicano nella voce seguente.' },
       { id: 'guainaSmalt', um: 'kg', p: 1.49, se: function (c) { return metodo(c) === 'trad'; }, d: 'Trasporto e smaltimento della vecchia guaina',
         x: 'Conferimento della guaina rimossa a un impianto autorizzato, misurato in chilogrammi. Se non conosci il peso lascia vuoto: lo calcoliamo al sopralluogo.' },
-      { id: 'massetto', um: 'm²', p: 29.19, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Nuovo massetto per terrazzi e balconi',
-        x: 'Sottofondo in sabbia e cemento fino a 6 cm, con le giuste pendenze per lo scolo dell’acqua, pronto per l’impermeabilizzazione.' },
-      { id: 'imperm', tipo: 'scelta', q: 'area', um: 'm²', nessuno: 'Nessuna impermeabilizzazione', se: function (c) { return metodo(c) === 'trad'; }, d: 'Impermeabilizzazione del terrazzo',
-        x: 'Lo strato che impedisce all’acqua piovana di infiltrarsi sotto il pavimento e nelle case sottostanti. Si calcola sulla superficie dei terrazzi indicata sopra.',
-        opz: [
-          { v: 'guaina1', d: 'Guaina bituminosa da 4 mm con primer (primo strato)', x: 'Se vuoi, sotto puoi aggiungere il secondo strato', p: 23 },
-          { v: 'cementizia', d: 'Impermeabilizzazione cementizia elastica (tipo Mapelastic)', x: 'Sottile e flessibile, segue i movimenti del supporto', p: 30 }
-        ] },
-      { id: 'guaina2', tipo: 'si', se: function (c) { return metodo(c) === 'trad' && c.sel.imperm === 'guaina1'; }, d: 'Secondo strato di guaina bituminosa',
+      { id: 'guaina1', tipo: 'si', ridisegna: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Impermeabilizzazione sotto il massetto: guaina bituminosa con primer (primo strato)',
+        f: function (c) { return 23 * c.num(c.area.terrazzi); },
+        qPdf: function (c) { var n = c.num(c.area.terrazzi); return n ? String(n).replace('.', ',') + ' m²' : ''; },
+        x: 'Primer di aggrappaggio e guaina bituminosa da 4 mm posati sotto il nuovo massetto, per fermare l’acqua prima che arrivi al solaio e alle case sottostanti. Si calcola sulla superficie dei terrazzi indicata sopra.' },
+      { id: 'guaina2', tipo: 'si', se: function (c) { return metodo(c) === 'trad' && c.q.guaina1 === 'si'; }, d: 'Secondo strato di guaina bituminosa sotto il massetto',
         f: function (c) { return 16 * c.num(c.area.terrazzi); },
         qPdf: function (c) { var n = c.num(c.area.terrazzi); return n ? String(n).replace('.', ',') + ' m²' : ''; },
         x: 'Una seconda guaina da 4 mm posata sopra la prima: la protezione più robusta per i terrazzi, consigliata sopra ambienti abitati. Si calcola sulla superficie dei terrazzi indicata sopra.' },
+      { id: 'massetto', um: 'm²', p: 29.19, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Nuovo massetto per terrazzi e balconi',
+        x: 'Sottofondo in sabbia e cemento fino a 6 cm, con le giuste pendenze per lo scolo dell’acqua, pronto per l’impermeabilizzazione.' },
+      { id: 'mapelastic', tipo: 'si', se: function (c) { return metodo(c) === 'trad'; }, d: 'Impermeabilizzazione sopra il massetto: cementizia elastica (tipo Mapelastic)',
+        f: function (c) { return 30 * c.num(c.area.terrazzi); },
+        qPdf: function (c) { var n = c.num(c.area.terrazzi); return n ? String(n).replace('.', ',') + ' m²' : ''; },
+        x: 'Membrana cementizia sottile e flessibile stesa sul nuovo massetto, sotto le piastrelle: segue i movimenti del supporto e protegge dalle infiltrazioni. Si calcola sulla superficie dei terrazzi indicata sopra.' },
       { id: 'gres', um: 'm²', p: 32, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Posa del nuovo pavimento in gres da esterno',
         x: 'Posa con collante del gres porcellanato da esterno, resistente al gelo. Le piastrelle sono escluse: le scegli con noi.' },
       { id: 'battisc', um: 'm', p: 11, se: function (c) { return metodo(c) === 'trad'; }, d: 'Posa del battiscopa esterno', x: 'Posa del battiscopa lungo i muri del terrazzo, per proteggere l’attacco tra pavimento e parete. Piastrelle escluse; si misura in metri lineari.' },

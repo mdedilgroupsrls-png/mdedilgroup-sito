@@ -211,7 +211,10 @@
       if (d.apri) { st.open[d.apri] = d.v === 'si'; ridisegna = true; }
       else if (d.dom) { st.dom[d.dom] = d.v; ridisegna = true; }
       else if (d.sc) { st.sel[d.sc] = d.v; ridisegna = true; }
-      else if (d.k) { st.q[d.k] = d.v; b.parentNode.querySelectorAll('.pill').forEach(function (p) { p.setAttribute('aria-pressed', String(p === b)); }); }
+      else if (d.k) {
+        st.q[d.k] = d.v; b.parentNode.querySelectorAll('.pill').forEach(function (p) { p.setAttribute('aria-pressed', String(p === b)); });
+        var ik = trova(d.k); if (ik && ik.ridisegna) ridisegna = true; // la risposta mostra o nasconde altre voci
+      }
       else if (d.usa) {
         var it = trova(d.usa), s = null;
         cfg.sezioni.forEach(function (x) { if (x.id === d.sez) s = x; });
@@ -222,7 +225,7 @@
       } else return;
       usato();
       if (ridisegna) {
-        var y = b.getBoundingClientRect().top, sel = d.apri ? '[data-apri="' + d.apri + '"]' : d.sc ? '[data-sc="' + d.sc + '"][data-v="' + d.v + '"]' : d.dom ? '[data-dom="' + d.dom + '"][data-v="' + d.v + '"]' : null;
+        var y = b.getBoundingClientRect().top, sel = d.apri ? '[data-apri="' + d.apri + '"]' : d.sc ? '[data-sc="' + d.sc + '"][data-v="' + d.v + '"]' : d.dom ? '[data-dom="' + d.dom + '"][data-v="' + d.v + '"]' : d.k ? '[data-k="' + d.k + '"][data-v="' + d.v + '"]' : null;
         disegna();
         // il pulsante toccato resta nello stesso punto dello schermo
         var nb = sel && root.querySelector(sel);

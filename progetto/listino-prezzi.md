@@ -98,14 +98,14 @@ Listino di Eugenio "MD Edil Group Esterni 2026 – Cappotto 75/85" del 17/10/202
 | Terrazzi | Rimozione guaina doppio strato (smaltimento escluso) | m² | 6 |
 | Terrazzi | Trasporto e conferimento guaina | kg | 1,49 |
 | Terrazzi | Massetto fino a 6 cm | m² | 29,19 |
-| Terrazzi | Impermeabilizzazione (scelta): guaina con primer, primo strato (primer 4 + 1ª guaina 19) = **23**, oppure cementizia tipo Mapelastic **30**. Con la guaina si può aggiungere il **secondo strato +16** (voce Sì/No, sulla superficie dei terrazzi) – Eugenio 17/10/2026 | m² | |
+| Terrazzi | **Sotto il massetto** (voci prima del massetto): guaina con primer, primo strato (primer 4 + 1ª guaina 19) = **23**; secondo strato facoltativo **+16**. **Sopra il massetto** (voce dopo il massetto): impermeabilizzazione cementizia elastica tipo Mapelastic **30**. Voci Sì/No calcolate sulla superficie dei terrazzi, scelte indipendenti – Eugenio 17/10/2026 | m² | |
 | Terrazzi | Posa gres esterno (piastrelle escluse) 32 €/m²; battiscopa 11 €/ml; bocchettone 175 €/cad | | |
 | Terrazzi (metodo "senza demolizione") | Impermeabilizzazione armata su pavimento esistente, garanzia Unipol 10 anni | m² | 59 |
 | Terrazzi | Raccordi, angoli e risvolti 16 €/ml; pulizia e ripristino fughe 12 €/m² | | |
 | Rifiuti | Carico, trasporto e conferimento inerti non pericolosi | t | 60 |
 | Automatico | **Oneri della sicurezza: 8% dei lavori scelti** (stima commerciale, non percentuale di legge) | % | 8 |
 
-Regole del simulatore (17/10/2026): ogni paragrafo si apre con Sì; le alternative sono scelte uniche (isolamento, rasatura, finitura, soglie, mezzo di sollevamento, metodo terrazzi, impermeabilizzazione). Con cappotto EPS sparisce la rasatura (compresa) e resta da scegliere la finitura; con Econanosil la finitura è solo calce o intonachino. Impermeabilizzazione: primo strato di guaina con primer (23) e, a scelta, secondo strato aggiuntivo (16), confermato da Eugenio il 17/10/2026. La superficie delle facciate non è obbligatoria: si può simulare anche solo il terrazzo (Eugenio, 17/10/2026). Modalità di pagamento nel PDF esterni come per gli interni (30/30/35/5%, calcolate sul totale IVA esclusa). Superficie delle facciate in alto, usata da "= superficie" e dal paragrafo isolamento/finitura se non si indica un'altra superficie.
+Regole del simulatore (17/10/2026): ogni paragrafo si apre con Sì; le alternative sono scelte uniche (isolamento, rasatura, finitura, soglie, mezzo di sollevamento, metodo terrazzi). Con cappotto EPS sparisce la rasatura (compresa) e resta da scegliere la finitura; con Econanosil la finitura è solo calce o intonachino. Impermeabilizzazione terrazzi: guaina sotto il massetto (primo strato 23, secondo strato facoltativo 16) e cementizia tipo Mapelastic sopra il massetto (30), Eugenio 17/10/2026. La superficie delle facciate non è obbligatoria: si può simulare anche solo il terrazzo (Eugenio, 17/10/2026). Modalità di pagamento nel PDF esterni come per gli interni (30/30/35/5%, calcolate sul totale IVA esclusa). Superficie delle facciate in alto, usata da "= superficie" e dal paragrafo isolamento/finitura se non si indica un'altra superficie.
 
 ## Case in legno
 I prezzi delle case in legno sono **IVA inclusa**.
