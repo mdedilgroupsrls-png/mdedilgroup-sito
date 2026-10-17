@@ -450,7 +450,7 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
 
 <section id="cantieri" data-node>
   <div class="wrap">
-    <div class="head"><div><div class="eyebrow">I nostri cantieri</div><h2>Realizziamo lavori chiavi in mano.</h2><i class="tl"></i></div><span class="hint">Scorri →</span></div>
+    <div class="head"><div><div class="eyebrow">I nostri cantieri</div><h2>Realizziamo lavori chiavi in mano.</h2><i class="tl"></i></div><span class="hint">Scorrono da sole · tocca per fermare</span></div>
   </div>
   <div class="flow" data-flow>
     <figure><div class="frame"><img src="/img/lavoro-01.webp" alt="Corridoio con binari LED a soffitto, tende a tutta altezza e specchio ovale, Roma Olgiata" loading="lazy"></div><figcaption>Corridoio con binari LED e tende a tutta altezza<span class="zona"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Roma · Olgiata</span></figcaption></figure>
@@ -512,7 +512,7 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
 
 <section id="esterni" style="background:var(--bg2)" data-node>
   <div class="wrap">
-    <div class="head"><div><div class="eyebrow">I nostri lavori</div><h2>Esterni e facciate</h2><i class="tl"></i></div><span class="hint">Scorri →</span></div>
+    <div class="head"><div><div class="eyebrow">I nostri lavori</div><h2>Esterni e facciate</h2><i class="tl"></i></div><span class="hint">Scorrono da sole · tocca per fermare</span></div>
     <div class="est-intro">
       <p class="lead">Facciate, cappotti e coperture, dal rilievo al collaudo. Per condomini, ville e palazzine gestiamo l'intervento esterno in ogni sua parte: il nostro studio tecnico esegue il rilievo, prepara il computo e avvia le pratiche; le nostre squadre realizzano i lavori.</p>
       <ul class="est-list"><li>Facciate</li><li>Cappotto termico</li><li>Coperture e tetti</li><li>Terrazzi e lastrici solari</li><li>Balconi</li><li>Aree esterne</li></ul>
@@ -842,6 +842,24 @@ document.querySelectorAll('[data-flow]').forEach(f=>{
   f.addEventListener('pointermove',e=>{if(down)f.scrollLeft=sl-(e.clientX-sx)});
   // parte dalla seconda foto, così si vede subito l'effetto
   requestAnimationFrame(()=>{const g=figs[1];if(g)f.scrollLeft=g.offsetLeft-(f.clientWidth-g.offsetWidth)/2;upd()});
+  // scorrimento automatico: una foto ogni 3,5 s quando la galleria è sullo schermo; si ferma mentre la persona
+  // la tocca o ci passa sopra col mouse e riparte 5 s dopo; finite le foto torna alla prima
+  if(RM)return;
+  let vis=false,pausa=0,prima=-1;
+  new IntersectionObserver(e=>{vis=e[0].isIntersecting}).observe(f);
+  const ferma=()=>{pausa=Date.now()+5000;prima=-1};
+  ['pointerdown','touchstart','wheel','mouseenter','focusin'].forEach(ev=>f.addEventListener(ev,ferma,{passive:true}));
+  f.addEventListener('mousemove',ferma,{passive:true});
+  setInterval(()=>{
+    if(!vis||Date.now()<pausa||document.hidden)return;
+    // posizioni misurate sullo schermo: la foto più vicina al centro e quella dopo
+    const r=f.getBoundingClientRect(),mid=r.left+r.width/2,cen=g=>{const b=g.getBoundingClientRect();return b.left+b.width/2};
+    let c=0;figs.forEach((g,k)=>{if(Math.abs(cen(g)-mid)<Math.abs(cen(figs[c])-mid))c=k});
+    // finite le foto (o se la galleria non è più andata avanti) si torna alla prima
+    if(c>=figs.length-1||Math.abs(f.scrollLeft-prima)<2){prima=-1;f.scrollTo({left:0,behavior:'smooth'});return}
+    prima=f.scrollLeft;
+    f.scrollTo({left:f.scrollLeft+cen(figs[c+1])-mid,behavior:'smooth'});
+  },3500);
 });
 
 // anteprima foto che segue il cursore sui servizi

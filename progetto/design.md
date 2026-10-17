@@ -56,7 +56,8 @@ Sorgente: `progetto/sorgenti-design/home-cinema.html`. Stesso stile Nero & Oro, 
 - Render interior design: nastro continuo di foto **grandi** che scorre **da destra a sinistra**; dito fermo = si ferma, trascinare = accelera, nessun pulsante. Sta subito dopo i Servizi, sopra i simulatori.
 - Simulatori: fascia compatta (titolo piccolo + 3 pulsanti).
 - Catalogo case in legno: tutti i 19 modelli (Olivia aggiunta il 15/10/2026), **2 alla volta**, stesso nastro continuo dei render.
-- Cantieri ed esterni: gallerie con effetto 3D (coverflow). Esterni con descrizione sopra le foto e la zona di Roma sotto ogni foto.
+- Cantieri ed esterni: gallerie con effetto 3D (coverflow). Esterni con descrizione sopra le foto e la zona di Roma sotto ogni foto. Dal 17/10/2026 **avanzano da sole** (una foto ogni 3,5 s, finite le foto tornano alla prima; si fermano 5 s quando la persona le tocca o ci passa col mouse); scritta "Scorrono da sole · tocca per fermare".
+- **Nastri di foto nelle pagine interne** (`js/nastro.js`, attributo `data-nastro`): scorrono da soli da destra a sinistra come i render della Home (dito fermo = si ferma, trascinando accelera), scritta "Tieni fermo il dito per fermare · trascina per accelerare". Usati per i render (Interior design) e, **sotto i simulatori**, per i lavori realizzati (interni, facciate; infissi quando Eugenio manda le foto).
 - Reel Instagram: tra "Come lavoriamo" e "News e guide"; 2 alla volta, si scorrono col dito; visualizzazioni, mi piace e commenti sopra il video in basso, con numeri che contano da 1 al valore vero.
 - Ordine sezioni: Servizi, Render, Simulatori, Cantieri, Case in legno, Esterni, Chi siamo + garanzie, Come lavoriamo, Reel, News, Contatti.
 
