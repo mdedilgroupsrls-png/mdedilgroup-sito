@@ -21,6 +21,7 @@ Design scelto e approvato da Eugenio (proposta A, 13/10/2026). Il resto si compl
 - Etichette sopra i titoli: maiuscolo, 12px, spaziatura lettere 0.38em, colore oro.
 
 ## Header (uguale in tutte le pagine)
+- **Icona del sito** (quella che Google mostra nei risultati di ricerca accanto a mdedilgroup.it, e nelle schede del browser): logo d'oro su **fondo nero** come il logo originale, in `favicon-512.png`, `favicon-192.png` e `favicon.ico` (17/10/2026, richiesta di Eugenio: prima Google mostrava il logo su fondo bianco). `favicon.png` (trasparente) resta per le pagine 404/grazie e per l'anteprima dei link.
 - Logo a sinistra; la scritta **MD EDIL GROUP** sta sulla linea dorata che parte dal logo e prosegue verso destra.
 - **Nessun pulsante preventivo in alto a destra.**
 - Sotto, menu centrato: Studio tecnico · Interior design · Ristrutturazioni interni · Ristrutturazioni esterni · Infissi e serramenti · Case in legno · Chi siamo. La voce della pagina corrente è in oro.

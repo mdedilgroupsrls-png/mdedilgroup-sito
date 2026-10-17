@@ -43,3 +43,5 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 - Niente testi copiati da altri siti né parole chiave ripetute a forza: una frase deve suonare naturale a chi la legge.
 - Niente prezzi, numeri o recensioni inventati.
 - Una pagina = un argomento principale. Le pagine nuove vanno anche in `sitemap.xml`.
+
+- [x] 17/10/2026 – Icona del sito su fondo nero (`favicon-512.png`, `favicon.ico`) e logo dei dati strutturati aggiornato: Google la sostituisce nei risultati da solo, di solito in qualche giorno o settimana dopo la pubblicazione.
