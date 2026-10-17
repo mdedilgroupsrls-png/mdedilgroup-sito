@@ -199,7 +199,7 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 <div class="mm" id="sMq"></div>
 <ul id="sList"></ul>
 <div class="tot"><span>Totale indicativo</span><b id="sTot">–</b></div>
-<p class="note">Prezzi IVA inclusa. Stima indicativa: il preventivo definitivo viene confermato dopo il sopralluogo, la verifica del terreno e il progetto.</p>
+<p class="note">Prezzi IVA inclusa. <b>Stima indicativa, non vincolante.</b> Il preventivo definitivo si ottiene solo dopo il sopralluogo, la verifica del terreno e il progetto. Le lavorazioni non presenti nel simulatore saranno quotate a parte.</p>
 <a class="cta" id="sWa" href="https://wa.me/393282145266" target="_blank" rel="noopener">INVIA LA STIMA SU WHATSAPP</a>
 <a class="cta alt" href="/#contatti">RICHIEDI IL PREVENTIVO</a>
 </aside>
@@ -252,7 +252,7 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 <div style="max-width: 1320px; margin: 28px auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: #8A8478">
 <span>MD EDIL GROUP S.R.L.S. · P.IVA 17112431006</span>
 <span>Email: <span class="js-mail">scrivici dal modulo contatti</span></span>
-<span>Sede legale: Via Po 22, Roma · Sede operativa: Via Monti Lepini 9, 00015 Monterotondo (RM)</span>
+<span>Sede legale: Via Po 22, 00198 Roma · Sede operativa: Via Monti Lepini 9, 00015 Monterotondo (RM)</span>
 <a href="/privacy.html" style="color: #8A8478">Privacy · Cookie</a>
 </div>
 </footer>
@@ -456,6 +456,8 @@ function summary(){
  document.getElementById('sTot').textContent=eur(t);document.getElementById('mTot').textContent=eur(t);
  const txt=`Buongiorno, ho fatto una simulazione sul sito per ${st.n>1?st.n+' case in legno':'la casa in legno'} ${m.n}:\n`+r.map(([l,v])=>`- ${l}: ${ev(v)}`).join('\n')+`\nTotale indicativo: ${eur(t)} (IVA inclusa).`;
  document.getElementById('sWa').href='https://wa.me/393282145266?text='+encodeURIComponent(txt);
+ // dati per il preventivo PDF (js/preventivo-pdf.js)
+ window.MDCasaPdf={totale:t,modello:m.n,n:st.n,info:[['Modello',m.n],['Superficie',m.d]].concat(st.n>1?[['Numero di case',String(st.n)]]:[]).concat(st.prov?[['Provincia del cantiere',st.prov]]:[]),righe:r.map(([l,v])=>[l,'',v==null?'da concordare':v])};
 }
 lines.addEventListener('click',e=>{
  const b=e.target.closest('.nm');if(b){const d=document.getElementById(b.getAttribute('aria-controls'));
@@ -606,8 +608,14 @@ draw();
 })();
 </script>
 <script src="/js/schede.js"></script>
+<script src="/js/preventivo-pdf.js"></script>
 <script src="/js/invio-wa.js"></script>
-<script>MDInvio({ btn: 'sWa', togli: '#riepilogo .cta.alt', titolo: 'Sopralluogo e preventivo gratuiti', sotto: 'Inviaci la simulazione su WhatsApp: ti richiamiamo noi per verificare il terreno e prepararti il preventivo definitivo, senza impegno.', indirizzo: 'Luogo del terreno', esempio: 'Comune e indirizzo, se lo hai già', pulsante: 'INVIA LA SIMULAZIONE E RICHIEDI IL PREVENTIVO', dopo: 'Ti richiamiamo noi per il preventivo.', richiesta: 'Vorrei ricevere un preventivo: potete ricontattarmi?', pronta: function () { return /[1-9]/.test(document.getElementById('sTot').textContent) ? '' : 'il modello della casa'; } });</script>
+<script>MDInvio({ btn: 'sWa', togli: '#riepilogo .cta.alt', titolo: 'Sopralluogo e preventivo gratuiti', sotto: 'Inviaci la simulazione su WhatsApp: ti richiamiamo noi per verificare il terreno e prepararti il preventivo definitivo, senza impegno.', indirizzo: 'Luogo del terreno', esempio: 'Comune e indirizzo, se lo hai già', pulsante: 'INVIA LA SIMULAZIONE E RICHIEDI IL PREVENTIVO', dopo: 'Ti richiamiamo noi per il preventivo.', richiesta: 'Vorrei ricevere un preventivo: potete ricontattarmi?', pronta: function () { return /[1-9]/.test(document.getElementById('sTot').textContent) ? '' : 'il modello della casa'; },
+  breve: function () { var d = window.MDCasaPdf; return 'Buongiorno, ho fatto la simulazione per ' + (d.n > 1 ? d.n + ' case in legno ' : 'la casa in legno ') + d.modello + ' sul vostro sito.\nTotale indicativo: ' + document.getElementById('sTot').textContent + ' (IVA inclusa). Vi invio qui il preventivo in PDF.'; },
+  pdf: function () { var d = window.MDCasaPdf; return { tipo: 'Casa in legno prefabbricata', iva: 'IVA inclusa', info: d.info, sezioni: [{ t: 'Casa in legno e lavorazioni scelte', righe: d.righe }], totale: d.totale, note: [
+    'Preventivo indicativo calcolato con il listino MD Edil Group per le case in legno, in base al modello e alle lavorazioni scelte dal cliente. Prezzi IVA inclusa.',
+    'Il prezzo definitivo viene confermato dopo il sopralluogo, la verifica del terreno e il progetto, e con la firma del contratto. Sopralluogo e preventivo sono gratuiti.',
+    'Le voci indicate "da concordare" si definiscono insieme, in base al luogo del cantiere.'] }; } });</script>
 <script>if(location.hash==="#simulatore"){addEventListener("load",function(){var e=document.getElementById("simulatore");if(e)e.scrollIntoView()})}</script>
 <script src="/js/sicurezza.js" defer></script>
 </body>

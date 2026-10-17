@@ -104,12 +104,15 @@
       { id: 'massetto', um: 'm²', p: 29.19, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Nuovo massetto per terrazzi e balconi',
         x: 'Sottofondo in sabbia e cemento fino a 6 cm, con le giuste pendenze per lo scolo dell’acqua, pronto per l’impermeabilizzazione.' },
       { id: 'imperm', tipo: 'scelta', q: 'area', um: 'm²', nessuno: 'Nessuna impermeabilizzazione', se: function (c) { return metodo(c) === 'trad'; }, d: 'Impermeabilizzazione del terrazzo',
-        x: 'Lo strato che impedisce all’acqua piovana di infiltrarsi sotto il pavimento e nelle case sottostanti. Scegline una sola: si calcola sulla superficie dei terrazzi indicata sopra.',
+        x: 'Lo strato che impedisce all’acqua piovana di infiltrarsi sotto il pavimento e nelle case sottostanti. Si calcola sulla superficie dei terrazzi indicata sopra.',
         opz: [
-          { v: 'guaina1', d: 'Una guaina bituminosa da 4 mm, con primer', x: 'Per balconi e superfici piccole', p: 23 },
-          { v: 'guaina2', d: 'Doppia guaina bituminosa da 4 mm, con primer', x: 'La protezione più robusta per i terrazzi', p: 39 },
+          { v: 'guaina1', d: 'Guaina bituminosa da 4 mm con primer (primo strato)', x: 'Se vuoi, sotto puoi aggiungere il secondo strato', p: 23 },
           { v: 'cementizia', d: 'Impermeabilizzazione cementizia elastica (tipo Mapelastic)', x: 'Sottile e flessibile, segue i movimenti del supporto', p: 30 }
         ] },
+      { id: 'guaina2', tipo: 'si', se: function (c) { return metodo(c) === 'trad' && c.sel.imperm === 'guaina1'; }, d: 'Secondo strato di guaina bituminosa',
+        f: function (c) { return 16 * c.num(c.area.terrazzi); },
+        qPdf: function (c) { var n = c.num(c.area.terrazzi); return n ? String(n).replace('.', ',') + ' m²' : ''; },
+        x: 'Una seconda guaina da 4 mm posata sopra la prima: la protezione più robusta per i terrazzi, consigliata sopra ambienti abitati. Si calcola sulla superficie dei terrazzi indicata sopra.' },
       { id: 'gres', um: 'm²', p: 32, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Posa del nuovo pavimento in gres da esterno',
         x: 'Posa con collante del gres porcellanato da esterno, resistente al gelo. Le piastrelle sono escluse: le scegli con noi.' },
       { id: 'battisc', um: 'm', p: 11, se: function (c) { return metodo(c) === 'trad'; }, d: 'Posa del battiscopa esterno', x: 'Posa del battiscopa lungo i muri del terrazzo, per proteggere l’attacco tra pavimento e parete. Piastrelle escluse; si misura in metri lineari.' },
@@ -146,6 +149,11 @@
     pdf: {
       tipo: 'Ristrutturazione esterna e facciate',
       iva: 'IVA di legge esclusa',
+      // modalità di pagamento: solo nel PDF, mai sulle pagine del sito (stesse rate e stesso IBAN codificato degli interni)
+      pagamento: function () {
+        return { rate: [['Primo saldo', 30], ['Secondo saldo', 30], ['Terzo saldo', 35], ['Alla fine dei lavori', 5]], banca: 'Intesa Sanpaolo S.p.A.', intestatario: 'MD EDIL GROUP S.R.L.S.',
+          iban: atob('Mzc2NjEwMDAwMDAxMDQyOTM5NjAzMEk0M1RJ').split('').reverse().join('') };
+      },
       note: ['Preventivo indicativo calcolato con il listino MD Edil Group in base alle quantità indicate dal cliente. Prezzi IVA esclusa: l’IVA si applica con l’aliquota di legge.',
         'Il prezzo definitivo viene confermato dopo il sopralluogo e la verifica tecnica, con le misure prese dai nostri tecnici, e con la firma del contratto. Sopralluogo e preventivo sono gratuiti.',
         'Gli oneri della sicurezza sono stimati all’8% dei lavori: l’importo effettivo si definisce con il piano di sicurezza del cantiere.',

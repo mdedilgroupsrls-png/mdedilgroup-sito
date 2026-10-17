@@ -26,7 +26,7 @@
 
 ## Sedi
 Decisione di Eugenio del 16/10/2026 (sera), per non confondere i clienti:
-- **Sede legale:** Via Po 22, Roma (anche indirizzo del profilo Google Business)
+- **Sede legale:** Via Po 22, 00198 Roma (anche indirizzo del profilo Google Business)
 - **Sede operativa:** Via Monti Lepini 9, 00015 Monterotondo (RM)
 
 Scritte così nel fondo di tutte le pagine, nei contatti della Home, nell'informativa privacy e nell'intestazione del preventivo PDF. Nei dati strutturati (JSON-LD) restano tutti e due gli indirizzi, prima Via Po.
