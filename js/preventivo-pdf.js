@@ -76,6 +76,13 @@
       font('normal', 9); col(TESTO);
       doc.text('N. ' + numero, W - M, y - 1, { align: 'right' }); doc.text('Data: ' + data, W - M, y + 4.5, { align: 'right' });
       y += 14;
+      // avviso: preventivo non definitivo
+      if (d.avviso) {
+        font('normal', 8.5); var la = doc.splitTextToSize(d.avviso, W - 2 * M - 10);
+        doc.setFillColor(246, 242, 232); doc.rect(M, y - 4, W - 2 * M, la.length * 4 + 5, 'F');
+        doc.setFillColor(ORO[0], ORO[1], ORO[2]); doc.rect(M, y - 4, 1.2, la.length * 4 + 5, 'F');
+        col(TESTO); doc.text(la, M + 5, y + 0.5); y += la.length * 4 + 8;
+      }
 
       // cliente e immobile
       var bx = M, bw = (W - 2 * M - 6) / 2, top = y;

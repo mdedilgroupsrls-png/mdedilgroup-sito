@@ -182,7 +182,8 @@
       (cfg.domande || []).forEach(function (d) { d.opz.forEach(function (o) { if (o[0] === st.dom[d.k]) info.push([d.pdf || d.t, o[1]]); }); });
       var t = bPdf.textContent; bPdf.disabled = true; bPdf.textContent = 'PREPARAZIONE DEL PDF…';
       var dati = { tipo: cfg.pdf.tipo, cliente: { nome: val.rNome, tel: val.rTel, ind: val.rInd, indLabel: cfg.indirizzo }, info: info.length ? info : [['Lavori', cfg.pdf.tipo]],
-        sezioni: ultimo.sez, totale: ultimo.tot, iva: cfg.pdf.iva, note: cfg.pdf.note, file: val.rNome };
+        sezioni: ultimo.sez, totale: ultimo.tot, iva: cfg.pdf.iva, note: cfg.pdf.note, file: val.rNome,
+        avviso: 'Stima indicativa, non vincolante. Il preventivo definitivo si ottiene solo dopo il sopralluogo. Le lavorazioni non presenti nel simulatore saranno quotate a parte.' };
       if (cfg.pdf.pagamento) dati.pagamento = cfg.pdf.pagamento();
       window.MDPdf.crea(dati).then(function (p) { return window.MDPdf.consegna(p); })
         .catch(function () { $('rErr').textContent = 'Non è stato possibile creare il PDF: riprova o inviaci la simulazione su WhatsApp.'; $('rErr').hidden = false; })

@@ -68,3 +68,4 @@
 .guida dd{margin:4px 0 0;font-size:14.5px;line-height:1.6;color:#BDB6A8}
 .guida dd ul{margin:8px 0 0;padding-left:18px}.guida dd li{margin:4px 0}.guida dd b{color:#D8D2C6;font-weight:600}
 .guida-fine{margin:32px 0 0;font-size:15px}.guida-fine a{text-decoration:underline}
+.avviso{margin:0 0 22px;padding:10px 12px;border-left:2px solid #C9A24A;background:rgba(201,162,74,.07);font-size:12.5px;line-height:1.5;color:#D8D2C6}.avviso b{color:#E2C373;font-weight:600}
