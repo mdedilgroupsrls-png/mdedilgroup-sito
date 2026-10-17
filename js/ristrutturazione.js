@@ -1,13 +1,13 @@
-/* Simulatore della ristrutturazione di interni (pagina /ristrutturazioni-interni).
+/* Simulatore della ristrutturazione di interni (pagina /ristrutturazioni-interni), motore in js/simulatore.js.
    Prezzi dal listino MD Edil Group del 16/10/2026, IVA inclusa (decisione di Eugenio del 16/10/2026; vedi progetto/listino-prezzi.md).
-   Il cliente indica la quantità di ogni voce che gli serve: le voci lasciate vuote non si calcolano.
+   Ogni paragrafo si apre con Sì; il cliente indica la quantità di ogni voce che gli serve: le voci lasciate vuote non si calcolano.
    Sul sito non si mostrano i prezzi unitari, solo l'importo di ogni voce. */
 (function () {
   // tipo: 'q' = quantità (m², m, n°); 'si' = a corpo (sì / no); mq: true = pulsante "usa la superficie"
   // p30: prezzo a corpo fino a 70 m², poi + p30 € ogni 30 m² (o frazione) in più (Eugenio, 16/10/2026)
   // d = titolo della voce, x = descrizione che si apre passando sopra il titolo o toccandolo (testi originali MD Edil Group)
   var SEZ = [
-    { t: 'Demolizioni e rimozioni', s: 'Smontiamo e portiamo via ciò che va rifatto. Dove indicato, carico, trasporto e smaltimento in discarica autorizzata sono compresi.', v: [
+    { id: 'demol', t: 'Demolizioni e rimozioni', s: 'Smontiamo e portiamo via ciò che va rifatto. Dove indicato, carico, trasporto e smaltimento in discarica autorizzata sono compresi.', v: [
       { id: 'pavCer', d: 'Rimozione di pavimenti in ceramica', um: 'm²', p: 17.5, mq: true,
         x: 'Togliamo le piastrelle esistenti e lasciamo il massetto sottostante. Comprende carico, trasporto e smaltimento in discarica autorizzata.' },
       { id: 'pavMas', d: 'Rimozione di pavimenti in ceramica con il massetto (fino a 5 cm)', um: 'm²', p: 33.5, mq: true,
@@ -31,11 +31,11 @@
       { id: 'disId', d: 'Smontaggio dell’impianto idrico esistente', um: 'a corpo', p: 750, tipo: 'si', p30: 250,
         x: 'Rimozione delle vecchie tubazioni di carico e scarico in tutta la casa, prima di realizzare l’impianto nuovo.' }
     ] },
-    { t: 'Bagno chiavi in mano', s: 'Un solo importo per tutte le lavorazioni del bagno. Non indicare di nuovo queste lavorazioni nelle altre voci.', v: [
+    { id: 'bagno', t: 'Bagno chiavi in mano', s: 'Un solo importo per tutte le lavorazioni del bagno. Non indicare di nuovo queste lavorazioni nelle altre voci.', v: [
       { id: 'bagno', d: 'Rifacimento completo del bagno', um: 'n° bagni', p: 6500, extraMq: 350, bagno: true,
         x: 'Dal vecchio bagno al nuovo, senza pensieri: smontaggio dei sanitari, demolizione di pavimenti, rivestimenti e sottofondi con smaltimento, nuovo massetto, nuovi impianti idrico ed elettrico con le opere murarie, impermeabilizzazione della doccia, posa di pavimento e rivestimenti in gres, rasatura e pittura, montaggio di sanitari, rubinetteria, piatto e box doccia, scaldasalviette e accessori, collaudo con dichiarazioni di conformità e pulizia finale. Il prezzo vale per un bagno fino a 5 m²: per un bagno più grande indica la sua superficie. Restano esclusi gres, sanitari, rubinetteria, doccia e accessori, che sceglierai con noi.' }
     ] },
-    { t: 'Opere murarie', s: 'Nuove pareti, sottofondi e intonaci per ridisegnare gli spazi.', v: [
+    { id: 'murarie', t: 'Opere murarie', s: 'Nuove pareti, sottofondi e intonaci per ridisegnare gli spazi.', v: [
       { id: 'tramez', d: 'Costruzione di nuovi tramezzi', um: 'm²', p: 87.7,
         x: 'Nuove pareti divisorie in muratura per cambiare la distribuzione degli ambienti. Si misura la superficie della parete: lunghezza × altezza.' },
       { id: 'contel', d: 'Controtelaio per porta scorrevole a scomparsa', um: 'n°', p: 370,
@@ -45,17 +45,17 @@
       { id: 'massNu', d: 'Nuovo massetto in sabbia e cemento', um: 'm²', p: 34.5, mq: true,
         x: 'Sottofondo tradizionale steso e livellato, pronto per la posa del nuovo pavimento.' }
     ] },
-    { t: 'Climatizzazione', s: 'Impianti per rinfrescare e riscaldare con i condizionatori.', v: [
+    { id: 'clima', t: 'Climatizzazione', s: 'Impianti per rinfrescare e riscaldare con i condizionatori.', v: [
       { id: 'clima', d: 'Impianto di climatizzazione con un motore esterno e due split', um: 'n° impianti', p: 1170,
         x: 'Posa delle tubazioni tra il motore esterno e i due split interni, scarico della condensa, opere murarie e installazione. I condizionatori li scegliamo insieme: la fornitura è esclusa.' }
     ] },
-    { t: 'Impianto elettrico', s: 'Impianto nuovo, eseguito da tecnici abilitati e consegnato con dichiarazione di conformità.', v: [
+    { id: 'elettrico', t: 'Impianto elettrico', s: 'Impianto nuovo, eseguito da tecnici abilitati e consegnato con dichiarazione di conformità.', v: [
       { id: 'punti', d: 'Punti luce e prese', um: 'n° punti', p: 95,
         x: 'Ogni punto è un’uscita per una luce o una presa, a parete, a pavimento o a soffitto: comprende linee, scatole, frutti tipo BTicino e opere murarie. Per orientarti: circa un punto per ogni metro quadro di casa.' },
       { id: 'quadro', d: 'Nuovo quadro elettrico', um: 'a corpo', p: 750, tipo: 'si', quadro: true,
         x: 'Nuovo quadro con le protezioni dell’impianto, dimensionato sulla superficie della casa.' }
     ] },
-    { t: 'Impianto idrico e riscaldamento', s: 'Acqua, scarichi e termosifoni, con dichiarazione di conformità.', v: [
+    { id: 'idrico', t: 'Impianto idrico e riscaldamento', s: 'Acqua, scarichi e termosifoni, con dichiarazione di conformità.', v: [
       { id: 'centr', d: 'Collettore di distribuzione collegato alla caldaia', um: 'n°', p: 679,
         x: 'Predisposizione e montaggio della centralina da cui partono le tubazioni verso i termosifoni, con il collegamento alla caldaia.' },
       { id: 'radiat', d: 'Allaccio e posa di termosifoni', um: 'n°', p: 475,
@@ -65,13 +65,13 @@
       { id: 'pAcqua', d: 'Nuovo punto acqua con scarico', um: 'n°', p: 435,
         x: 'Un attacco completo di acqua e scarico per lavello, lavatrice, lavastoviglie, lavabo o altri apparecchi, con le opere murarie.' }
     ] },
-    { t: 'Impianto gas', s: 'Linee del gas realizzate secondo le norme di sicurezza.', v: [
+    { id: 'gas', t: 'Impianto gas', s: 'Linee del gas realizzate secondo le norme di sicurezza.', v: [
       { id: 'gasCuc', d: 'Linea del gas dal contatore alla cucina', um: 'n°', p: 750,
         x: 'Nuova tubazione dal contatore al piano cottura, con la valvola di chiusura prevista dalla normativa.' },
       { id: 'gasCal', d: 'Linea del gas per la caldaia', um: 'n°', p: 550,
         x: 'Tubazione che porta il gas fino alla caldaia, con il collegamento.' }
     ] },
-    { t: 'Pavimenti, rivestimenti e porte', s: 'Posa dei materiali che scegli con noi: la fornitura è esclusa.', v: [
+    { id: 'pavimenti', t: 'Pavimenti, rivestimenti e porte', s: 'Posa dei materiali che scegli con noi: la fornitura è esclusa.', v: [
       { id: 'posPav', d: 'Posa di pavimenti in ceramica o gres (fino a 60 × 60 cm)', um: 'm²', p: 44.5, mq: true,
         x: 'Posa a colla su sottofondo pronto, con tagli, stuccatura delle fughe e pulizia. Per le grandi lastre valutiamo insieme al sopralluogo.' },
       { id: 'posRiv', d: 'Posa di rivestimenti a parete (fino a 60 × 60 cm)', um: 'm²', p: 47.5,
@@ -85,7 +85,7 @@
       { id: 'porSco', d: 'Posa di porte scorrevoli', um: 'n°', p: 230,
         x: 'Montaggio della porta scorrevole, esterna al muro o a scomparsa. Per la porta a scomparsa il controtelaio si indica nelle opere murarie.' }
     ] },
-    { t: 'Opere in cartongesso', s: 'Controsoffitti, pareti leggere e dettagli per l’illuminazione.', v: [
+    { id: 'cartongesso', t: 'Opere in cartongesso', s: 'Controsoffitti, pareti leggere e dettagli per l’illuminazione.', v: [
       { id: 'ctrSof', d: 'Controsoffitto in cartongesso', um: 'm²', p: 55,
         x: 'Struttura metallica e lastre da 13 mm con giunti stuccati in due mani, pronto per rasatura e pittura. Serve per abbassare i soffitti, nascondere gli impianti e inserire i faretti.' },
       { id: 'divCar', d: 'Parete divisoria in cartongesso', um: 'm²', p: 75,
@@ -93,7 +93,7 @@
       { id: 'velette', d: 'Velette e mensole per luci LED', um: 'm', p: 85,
         x: 'Elementi in cartongesso sagomati che nascondono le strisce LED e creano luce indiretta su soffitti e pareti. Si misurano in metri lineari.' }
     ] },
-    { t: 'Rasature e tinteggiature', s: 'Si contano i m² di pareti e soffitti: in una stanza sono circa 4 volte la superficie del pavimento.', v: [
+    { id: 'tinte', t: 'Rasature e tinteggiature', s: 'Si contano i m² di pareti e soffitti: in una stanza sono circa 4 volte la superficie del pavimento.', v: [
       { id: 'raschi', d: 'Raschiatura delle vecchie pitture', um: 'm²', p: 3,
         x: 'Rimozione delle pitture che si staccano o sono rovinate, per partire da una base sana.' },
       { id: 'rasat', d: 'Rasatura di pareti e soffitti', um: 'm²', p: 27,
@@ -105,7 +105,7 @@
       { id: 'pitInt', d: 'Pittura lavabile in colori intensi', um: 'm²', p: 17.5,
         x: 'Pittura lavabile in tinte forti o scure, che richiedono più colore e una stesura più accurata.' }
     ] },
-    { t: 'Oneri di cantiere e pulizia', s: 'Voci da scegliere in base al tuo cantiere.', v: [
+    { id: 'oneri', t: 'Oneri di cantiere e pulizia', s: 'Voci da scegliere in base al tuo cantiere.', v: [
       { id: 'sicur', d: 'Sicurezza e allestimento del cantiere', um: 'a corpo', p: 1100, tipo: 'si', p30: 250,
         x: 'Montaggio e smontaggio del cantiere e misure di sicurezza previste dalla legge, per chi lavora e per chi abita.' },
       { id: 'tiro', d: 'Carico e scarico dei materiali (tiro in alto e calo in basso)', um: 'a corpo', p: 1400, tipo: 'si', p30: 250,
@@ -113,202 +113,57 @@
       { id: 'pulizia', d: 'Pulizia finale del cantiere', um: 'm²', p: 6, mq: true,
         x: 'Pulizia completa della casa a fine lavori, pronta da abitare. Si calcola sui m² della casa.' }
     ] },
-    { t: 'Progetto e pratiche', s: 'Il progetto e i permessi, seguiti dal nostro studio tecnico.', v: [
+    { id: 'progetto', t: 'Progetto e pratiche', fuoriLavori: true, s: 'Il progetto e i permessi, seguiti dal nostro studio tecnico.', v: [
       { id: 'proget', d: 'Progetto e pratiche edilizie (CILA / SCIA)', um: 'a corpo', p: 40, tipo: 'si', perMq: true,
         x: 'Rilievo della casa, progetto con le tavole esecutive e degli impianti e presentazione della pratica al Comune. L’importo si calcola sulla superficie.' }
     ] }
   ];
   var CENTRO = 0.05; // centro storico / ZTL: +5% sui lavori
-
-  var form = document.getElementById('simForm');
-  if (!form) return;
-  var root = form.parentNode;
-  var stato = { mq: '', piano: 'basso', centro: 'no' };
-  var q = {};
-
-  var num = function (v) { var x = parseFloat(String(v == null ? '' : v).replace(',', '.')); return isNaN(x) || x < 0 ? 0 : x; };
-  var eur = function (v) { return '€ ' + Math.round(v).toLocaleString('it-IT'); };
-  var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   // quadro elettrico: 750 € fino a 70 m², 1.000 € fino a 100 m², poi +250 € ogni 20 m²
   var quadro = function (mq) { return mq <= 70 ? 750 : mq <= 100 ? 1000 : 1000 + Math.ceil((mq - 100) / 20) * 250; };
 
-  function importo(it, mq) {
-    var val = q[it.id];
-    if (it.tipo === 'si') {
-      if (val !== 'si') return 0;
-      if (it.quadro) return quadro(mq);
-      if (it.perMq) return it.p * mq;
-      if (it.p30) return it.p + (mq > 70 ? Math.ceil((mq - 70) / 30) * it.p30 : 0);
-      return it.p;
-    }
-    if (it.bagno) return num(val) * (it.p + Math.max(0, (num(q.bagnoMq) || 5) - 5) * it.extraMq);
-    return num(val) * it.p;
-  }
-
-  function pills(nome, scelte, attuale) {
-    return '<div class="pills" role="group">' + scelte.map(function (s) {
-      return '<button type="button" class="pill" data-k="' + nome + '" data-v="' + s[0] + '" aria-pressed="' + (attuale === s[0]) + '">' + s[1] + '</button>';
-    }).join('') + '</div>';
-  }
-
-  // titolo della voce: passando sopra (o toccando) si apre la descrizione
-  function titolo(it) {
-    return '<div class="vd"><button type="button" class="vt" aria-expanded="false" aria-controls="x-' + it.id + '">' + esc(it.d) +
-      ' <span class="vi-i" aria-hidden="true">i</span></button><div class="vx" id="x-' + it.id + '" role="tooltip">' + esc(it.x) + '</div></div>';
-  }
-
-  function disegna() {
-    var h = '<fieldset class="grp"><legend class="lg"><span class="nr">01</span>L’immobile</legend>' +
-      '<label class="fld">Superficie interna (m²)<input class="inp" id="rMq" type="number" inputmode="decimal" min="1" placeholder="es. 70" value="' + esc(stato.mq) + '"></label>' +
-      '<div class="fld">A che piano si trova?' + pills('piano', [['basso', 'Villa, casa indipendente o fino al 1° piano'], ['alto', '2° piano o superiore']], stato.piano) + '</div>' +
-      '<div class="fld">È in centro storico o in ZTL?' + pills('centro', [['si', 'Sì'], ['no', 'No']], stato.centro) + '</div>' +
-      '</fieldset>';
-    SEZ.forEach(function (s, i) {
-      h += '<fieldset class="grp"><legend class="lg"><span class="nr">' + String(i + 2).padStart(2, '0') + '</span>' + esc(s.t) + '</legend>';
-      if (s.s) h += '<p class="hint" style="margin:0">' + esc(s.s) + '</p>';
-      s.v.forEach(function (it) {
-        h += '<div class="voce" data-id="' + it.id + '">' + titolo(it) + '<div class="vq">';
-        if (it.tipo === 'si') {
-          h += pills(it.id, [['si', 'Sì'], ['', 'No']], q[it.id] || '');
-        } else {
-          h += '<label class="qt"><input class="inp" type="number" inputmode="decimal" min="0" placeholder="0" data-q="' + it.id + '" value="' + esc(q[it.id] || '') + '" aria-label="' + esc(it.d) + ' (' + it.um + ')"><span>' + it.um + '</span></label>';
-          if (it.mq) h += '<button type="button" class="usaMq" data-usa="' + it.id + '">= superficie</button>';
-          if (it.bagno) h += '<label class="qt"><input class="inp" type="number" inputmode="decimal" min="1" placeholder="5" data-q="bagnoMq" value="' + esc(q.bagnoMq || '') + '" aria-label="Superficie di ogni bagno (m²)"><span>m² per bagno</span></label>';
-        }
-        h += '</div><b class="vi" data-imp="' + it.id + '"></b></div>';
-      });
-      h += '</fieldset>';
+  // regole di calcolo particolari
+  SEZ.forEach(function (s) {
+    s.v.forEach(function (it) {
+      if (it.p30) it.f = function (c) { return it.p + (c.mq > 70 ? Math.ceil((c.mq - 70) / 30) * it.p30 : 0); };
+      if (it.quadro) it.f = function (c) { return quadro(c.mq); };
+      if (it.perMq) { it.f = function (c) { return it.p * c.mq; }; it.qPdf = function (c) { return String(c.mq).replace('.', ',') + ' m²'; }; }
+      if (it.bagno) {
+        it.extra = { id: 'bagnoMq', um: 'm² per bagno', ph: '5' };
+        it.f = function (n, c) { return n * (it.p + Math.max(0, (c.num(c.q.bagnoMq) || 5) - 5) * it.extraMq); };
+        it.dPdf = function (c) { return ' (' + String(c.num(c.q.bagnoMq) > 5 ? c.q.bagnoMq : 5).replace('.', ',') + ' m² per bagno)'; };
+      }
     });
-    h += '<a class="rBar" href="#rRiepTop">La tua stima <b id="rBarTot">€ 0</b> IVA inclusa <span aria-hidden="true">↓</span></a>';
-    document.getElementById('simForm').innerHTML = h;
-    calcola();
-  }
+  });
 
-  function calcola() {
-    var mq = num(stato.mq), righe = [], lavori = 0, msg = [], pdf = [];
-    var setImp = function (id, v) { var el = root.querySelector('[data-imp="' + id + '"]'); if (el) el.textContent = v > 0 ? eur(v) : ''; };
-    SEZ.forEach(function (s) {
-      var sub = 0, pr = [];
-      s.v.forEach(function (it) {
-        var v = importo(it, mq); setImp(it.id, v);
-        if (v > 0) {
-          sub += v;
-          var qq = String(q[it.id]).replace('.', ',');
-          var dsc = it.d + (it.bagno ? ' (' + String(num(q.bagnoMq) > 5 ? q.bagnoMq : 5).replace('.', ',') + ' m² per bagno)' : '');
-          pr.push([dsc, it.tipo === 'si' ? (it.perMq ? String(mq).replace('.', ',') + ' m²' : 'a corpo') : (it.um === 'n°' ? qq : qq + ' ' + it.um.replace(/^n° /, '')), v]);
-          msg.push('- ' + it.d + (it.bagno && num(q.bagnoMq) > 5 ? ' (' + String(q.bagnoMq).replace('.', ',') + ' m²)' : '') + (it.tipo === 'si' ? '' : /^n°/.test(it.um) ? ' × ' + qq : ': ' + qq + ' ' + it.um) + ' = ' + eur(v));
-        }
-      });
-      if (pr.length) pdf.push({ t: s.t, righe: pr });
-      if (sub > 0 && s.t !== 'Progetto e pratiche') righe.push([s.t, sub]);
-      if (s.t !== 'Progetto e pratiche') lavori += sub;
-    });
-    var prog = importo(SEZ[SEZ.length - 1].v[0], mq);
-    var centro = stato.centro === 'si' ? lavori * CENTRO : 0;
-    if (centro > 0) righe.push(['Centro storico / ZTL', centro]);
-    if (prog > 0) righe.push(['Progetto e pratiche', prog]);
-    var tot = lavori + centro + prog;
-    document.getElementById('rRiep').innerHTML = righe.length ? righe.map(function (r) {
-      return '<li><span>' + esc(r[0]) + '</span><span class="e">' + eur(r[1]) + '</span></li>';
-    }).join('') : '<li><span>Indica la superficie e le lavorazioni che ti servono</span></li>';
-    document.getElementById('rTot').textContent = eur(tot);
-    document.getElementById('rBarTot').textContent = eur(tot);
-    document.getElementById('rMqTot').textContent = mq > 0 && tot > 0 ? 'circa ' + eur(tot / mq) + ' al m²' : '';
-    var testo = 'Buongiorno, ho fatto la simulazione della ristrutturazione sul vostro sito.\n' +
-      'Superficie: ' + (mq ? String(mq).replace('.', ',') + ' m²' : '-') + ' · ' + (stato.piano === 'alto' ? '2° piano o superiore' : 'villa, casa indipendente o fino al 1° piano') + (stato.centro === 'si' ? ' · centro storico / ZTL' : '') + '\n' +
-      msg.join('\n') + (centro ? '\n- Centro storico / ZTL = ' + eur(centro) : '') +
-      '\nTotale stimato: ' + eur(tot) + ' IVA inclusa';
-    ultimoTesto = testo;
-    if (centro > 0) pdf.splice(pdf.length - (prog > 0 ? 1 : 0), 0, { t: 'Maggiorazioni', righe: [['Lavori in centro storico o ZTL (+5% sui lavori)', '', centro]] });
-    ultimoPdf = { sez: pdf, tot: tot, mq: mq };
-  }
-
-  var ultimoTesto = '', ultimoPdf = null;
-  var segnato = false;
-  // dati del cliente: servono nome, telefono e indirizzo, più superficie e almeno una lavorazione
-  function controlla(azione) {
-    var campi = [['rNome', 'nome e cognome'], ['rTel', 'telefono'], ['rInd', 'indirizzo dell’immobile']];
-    var mancano = [], val = {};
-    campi.forEach(function (c) {
-      var el = document.getElementById(c[0]); val[c[0]] = el.value.trim();
-      var ok = c[0] === 'rTel' ? /\d{6,}/.test(val[c[0]].replace(/\D/g, '')) : val[c[0]].length > 1;
-      el.classList.toggle('no', !ok); if (!ok) mancano.push(c[1]);
-    });
-    var err = document.getElementById('rErr');
-    if (num(stato.mq) <= 0 || !/€ [1-9]/.test(document.getElementById('rTot').textContent)) mancano.unshift('la superficie e almeno una lavorazione');
-    if (mancano.length) {
-      err.textContent = 'Per ' + azione + ' indica: ' + mancano.join(', ') + '.'; err.hidden = false;
-      var primo = document.querySelector('.dati .inp.no'); if (primo) primo.focus();
-      return null;
-    }
-    err.hidden = true;
-    return val;
-  }
-  // invio su WhatsApp: il messaggio lo manda il cliente dal suo telefono
-  document.getElementById('rWa').addEventListener('click', function (e) {
-    var val = controlla('inviare la simulazione');
-    if (!val) { e.preventDefault(); e.stopImmediatePropagation(); return; }
-    // messaggio corto: il dettaglio delle voci è nel preventivo PDF (pulsante 2)
-    this.href = 'https://wa.me/393282145266?text=' + encodeURIComponent('Buongiorno, ho fatto la simulazione della ristrutturazione sul vostro sito.' +
-      '\nTotale stimato: ' + document.getElementById('rTot').textContent + ' IVA inclusa (' + String(num(stato.mq)).replace('.', ',') + ' m²). Vi invio qui il preventivo in PDF.' +
-      '\n\nNome e cognome: ' + val.rNome + '\nTelefono: ' + val.rTel + '\nIndirizzo dell’immobile: ' + val.rInd + '\n\nVorrei richiedere un sopralluogo: potete ricontattarmi?');
-    document.getElementById('rOk').hidden = false;
-  }, true);
-  // preventivo in PDF intestato MD Edil Group (js/preventivo-pdf.js)
-  var bPdf = document.getElementById('rPdf');
-  var hPdf = document.getElementById('rPdfH');
-  if (hPdf) hPdf.textContent = window.MDPdf && window.MDPdf.condivide()
-    ? 'Si apre la condivisione: scegli WhatsApp e la chat di MD Edil Group.'
-    : 'Il PDF si scarica sul computer: trascinalo nella chat di WhatsApp con MD Edil Group.';
-  if (bPdf) bPdf.addEventListener('click', function () {
-    var val = controlla('creare il preventivo in PDF');
-    if (!val || !window.MDPdf || !ultimoPdf) return;
-    var testo = bPdf.textContent; bPdf.disabled = true; bPdf.textContent = 'PREPARAZIONE DEL PDF…';
-    window.MDPdf.crea({
+  window.MDSimulatore({
+    id: 'ristrutturazioni-interni',
+    oggetto: 'della ristrutturazione',
+    iva: 'IVA inclusa',
+    perMq: 'al m²',
+    superficie: { label: 'Superficie interna (m²)', es: 'es. 70', pdf: 'Superficie interna', obbligatoria: true },
+    manca: 'la superficie e almeno una lavorazione',
+    vuoto: 'Indica la superficie e le lavorazioni che ti servono',
+    domande: [
+      { k: 'piano', t: 'A che piano si trova?', pdf: 'Piano', def: 'basso', opz: [['basso', 'Villa, casa indipendente o fino al 1° piano'], ['alto', '2° piano o superiore']] },
+      { k: 'centro', t: 'È in centro storico o in ZTL?', pdf: 'Centro storico o ZTL', def: 'no', opz: [['si', 'Sì'], ['no', 'No']] }
+    ],
+    sezioni: SEZ,
+    extra: function (c) {
+      return [{ label: 'Centro storico / ZTL', v: c.dom.centro === 'si' ? c.lavori * CENTRO : 0, pdfT: 'Maggiorazioni', pdfD: 'Lavori in centro storico o ZTL (+5% sui lavori)' }];
+    },
+    pdf: {
       tipo: 'Ristrutturazione di interni',
-      cliente: { nome: val.rNome, tel: val.rTel, ind: val.rInd },
-      info: [['Superficie interna', String(ultimoPdf.mq).replace('.', ',') + ' m²'],
-        ['Piano', stato.piano === 'alto' ? '2° piano o superiore' : 'Villa, casa indipendente o fino al 1° piano'],
-        ['Centro storico o ZTL', stato.centro === 'si' ? 'Sì' : 'No']],
-      sezioni: ultimoPdf.sez, totale: ultimoPdf.tot, iva: 'IVA inclusa',
+      iva: 'IVA inclusa',
       // modalità di pagamento: solo nel PDF, mai sulle pagine del sito; IBAN scritto al contrario e codificato, come l'email
-      pagamento: { rate: [['Primo saldo', 30], ['Secondo saldo', 30], ['Terzo saldo', 35], ['Alla fine dei lavori', 5]], banca: 'Intesa Sanpaolo S.p.A.', intestatario: 'MD EDIL GROUP S.R.L.S.',
-        iban: atob('Mzc2NjEwMDAwMDAxMDQyOTM5NjAzMEk0M1RJ').split('').reverse().join('') },
+      pagamento: function () {
+        return { rate: [['Primo saldo', 30], ['Secondo saldo', 30], ['Terzo saldo', 35], ['Alla fine dei lavori', 5]], banca: 'Intesa Sanpaolo S.p.A.', intestatario: 'MD EDIL GROUP S.R.L.S.',
+          iban: atob('Mzc2NjEwMDAwMDAxMDQyOTM5NjAzMEk0M1RJ').split('').reverse().join('') };
+      },
       note: ['Preventivo indicativo calcolato con il listino MD Edil Group in base alle quantità indicate dal cliente. Prezzi IVA inclusa.',
         'Il prezzo definitivo viene confermato dopo il sopralluogo, con le misure prese dai nostri tecnici, e con la firma del contratto. Sopralluogo e preventivo sono gratuiti.',
         'Esclusa la fornitura di pavimenti, rivestimenti, sanitari, rubinetteria, porte, termosifoni, caldaie, condizionatori e accessori, che sceglierai con noi. Infissi esclusi.',
-        'Tutti i lavori sono eseguiti dai nostri tecnici abilitati e gli impianti sono consegnati con dichiarazione di conformità.'],
-      file: val.rNome
-    }).then(function (p) { return window.MDPdf.consegna(p); })
-      .catch(function () { document.getElementById('rErr').textContent = 'Non è stato possibile creare il PDF: riprova o inviaci la simulazione su WhatsApp.'; document.getElementById('rErr').hidden = false; })
-      .then(function () { bPdf.disabled = false; bPdf.textContent = testo; });
-  });
-
-  function usato() { if (!segnato && window.MDStat) { segnato = true; window.MDStat('simulazione-ristrutturazioni-interni'); } }
-
-  root.addEventListener('input', function (e) {
-    var t = e.target;
-    if (t.id === 'rMq') stato.mq = t.value;
-    else if (t.dataset.q) q[t.dataset.q] = t.value;
-    else return;
-    usato(); calcola();
-  });
-  root.addEventListener('click', function (e) {
-    var b = e.target.closest('button');
-    var aperti = root.querySelectorAll('.vt[aria-expanded="true"]');
-    for (var k2 = 0; k2 < aperti.length; k2++) if (aperti[k2] !== b) aperti[k2].setAttribute('aria-expanded', 'false');
-    if (!b) return;
-    if (b.classList.contains('vt')) { b.setAttribute('aria-expanded', String(b.getAttribute('aria-expanded') !== 'true')); return; }
-    if (b.dataset.k) {
-      var k = b.dataset.k, v = b.dataset.v;
-      if (k === 'piano' || k === 'centro') stato[k] = v; else q[k] = v;
-      b.parentNode.querySelectorAll('.pill').forEach(function (p) { p.setAttribute('aria-pressed', String(p === b)); });
-      usato(); calcola();
-    } else if (b.dataset.usa) {
-      var inp = root.querySelector('[data-q="' + b.dataset.usa + '"]');
-      if (num(stato.mq) > 0 && inp) { inp.value = stato.mq; q[b.dataset.usa] = stato.mq; usato(); calcola(); }
-      else { var m = document.getElementById('rMq'); if (m) m.focus(); }
+        'Tutti i lavori sono eseguiti dai nostri tecnici abilitati e gli impianti sono consegnati con dichiarazione di conformità.']
     }
   });
-  disegna();
 })();

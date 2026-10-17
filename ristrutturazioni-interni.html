@@ -18,45 +18,8 @@
 <style>
 body{margin:0;background:#0E0D0B}
 a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
-.grp{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:22px}
-.lg{padding:0 0 14px;margin-bottom:6px;width:100%;border-bottom:1px solid #2A2722;font-family:'Urbanist',sans-serif;font-size:24px;font-weight:600;color:#F3EFE7}
-.nr{font-size:12px;letter-spacing:0.2em;color:#C9A24A;margin-right:14px;vertical-align:middle}
-.fld{display:flex;flex-direction:column;gap:10px;font-size:14px;font-weight:600;color:#D8D2C6}
-.row2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
-.inp{max-width:220px;background:#171512;border:1px solid #3A362F;color:#F3EFE7;padding:12px 14px;font:inherit;font-size:16px;font-weight:400}
-.inp:focus{outline:2px solid #C9A24A;outline-offset:1px}
-.hint{font-size:12px;font-weight:400;color:#8A8478}
-.pills{display:flex;flex-wrap:wrap;gap:10px}
-.pz{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding-top:8px;border-top:1px dashed #2A2722;font-size:12.5px;font-weight:400;color:#8A8478;max-width:560px}
-.pz b{font-family:'Urbanist',sans-serif;font-size:17px;font-weight:600;color:#E2C373;white-space:nowrap;font-variant-numeric:tabular-nums}
-.pill{min-height:44px;padding:10px 18px;background:transparent;border:1px solid #3A362F;color:#D8D2C6;font:inherit;font-size:14px;font-weight:500;cursor:pointer}
-.pill:hover{border-color:#C9A24A}
-.pill[aria-pressed="true"]{background:#C9A24A;border-color:#C9A24A;color:#0E0D0B;font-weight:600}
-.voce{display:grid;grid-template-columns:minmax(0,1fr) auto 96px;gap:8px 16px;align-items:center;padding:14px 0;border-bottom:1px dashed #2A2722;font-size:14.5px;color:#D8D2C6}
-.voce .vd{position:relative;display:flex;flex-direction:column;gap:4px}
-.vt{all:unset;cursor:help;color:#E8E2D6;font-size:14.5px;line-height:1.45;-webkit-tap-highlight-color:transparent}
-.vt:focus-visible{outline:2px solid #C9A24A;outline-offset:3px}
-.vi-i{display:inline-grid;place-items:center;width:17px;height:17px;margin-left:4px;border:1px solid #C9A24A;border-radius:50%;font:italic 600 11px/1 Georgia,serif;color:#C9A24A;vertical-align:1px}
-.vx{display:none;position:absolute;left:0;top:calc(100% + 8px);z-index:20;width:min(440px,calc(100vw - 48px));padding:14px 16px;background:#0E0D0B;border:1px solid #C9A24A;box-shadow:0 12px 30px rgba(0,0,0,.55);font-size:13.5px;line-height:1.55;color:#D8D2C6}
-.vt[aria-expanded="true"]+.vx{display:block}
-@media (hover:hover){.vt:hover+.vx,.vx:hover{display:block}}.voce .vq{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:flex-end}
-.voce .vi{text-align:right;font-family:'Urbanist',sans-serif;font-size:16px;font-weight:600;color:#E2C373;white-space:nowrap;font-variant-numeric:tabular-nums}
-.qt{display:flex;align-items:center;gap:8px;font-size:13px;color:#8A8478;white-space:nowrap}.qt .inp{width:96px;padding:10px 12px}
-.usaMq{background:none;border:0;color:#C9A24A;font:inherit;font-size:12px;text-decoration:underline;cursor:pointer;padding:4px}
-.voce .pill{min-height:40px;padding:8px 16px}
-.dati{display:flex;flex-direction:column;gap:12px;margin:0 0 16px;padding-top:20px;border-top:1px solid #2A2722}.dati .dt{margin:0;font-family:'Urbanist',sans-serif;font-size:18px;font-weight:600;color:#F3EFE7}
-.dati label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#D8D2C6}.dati .inp{max-width:none;width:100%;box-sizing:border-box}.dati .inp.no{border-color:#E07A5F}
-.err{margin:0;font-size:13px;color:#F0A58F}
-.bPdf{display:block;width:100%;margin-top:10px;padding:15px 20px;background:none;border:1px solid #C9A24A;color:#C9A24A;font:600 13px Manrope,sans-serif;letter-spacing:.14em;cursor:pointer}.bPdf:hover{background:rgba(201,162,74,.1)}.bPdf:disabled{opacity:.6;cursor:wait}
-.ok{margin:12px 0 0;padding:12px 14px;border:1px solid #3d6b4a;background:#13221a;font-size:13px;line-height:1.5;color:#D8EAD9}
-.alt{margin:14px 0 0;font-size:13px;line-height:1.5;color:#D8D2C6}.alt a{color:#E2C373;text-decoration:underline}
-.riep{list-style:none;margin:0 0 26px;padding:0;border-top:1px solid #2A2722;font-size:14px}.riep li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #2A2722;color:#D8D2C6}.riep li .e{white-space:nowrap;color:#F3EFE7}
-@media (min-width:901px){.rBar{display:none!important}}
-#rRiepTop{box-sizing:border-box;min-width:0;max-width:100%}@media (min-width:901px){#rRiepTop{max-height:calc(100vh - 48px);overflow:auto}}@media (max-width:640px){#rRiepTop{flex-basis:100%!important;padding:28px 20px!important}}
-.rBar{position:sticky;bottom:0;z-index:5;display:flex;gap:8px;align-items:baseline;justify-content:center;margin:0 -4px;padding:14px 84px calc(14px + env(safe-area-inset-bottom,0px)) 16px;background:#0E0D0B;border:1px solid #C9A24A;color:#D8D2C6;font-size:14px;text-decoration:none}.rBar b{font-family:'Urbanist',sans-serif;font-size:20px;color:#E2C373}
-@media (max-width:640px){.vx{width:auto;right:0}.voce{grid-template-columns:1fr auto}.voce .vd{grid-column:1/-1}.voce .vq{justify-content:flex-start}}
-
 </style>
+<link rel="stylesheet" href="/css/simulatore.css">
 <style>html{scroll-behavior:smooth}img{max-width:100%}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Ristrutturazione di interni chiavi in mano","serviceType":"Ristrutturazione di appartamenti, ville e locali commerciali","description":"Ristrutturazione di appartamenti, ville e locali a Roma, nel Lazio e a Milano: demolizioni, impianti certificati, bagni e cucine. Calcola subito il costo con il simulatore.","url":"https://mdedilgroup.it/ristrutturazioni-interni","provider":{"@type":"GeneralContractor","name":"MD Edil Group S.R.L.S.","url":"https://mdedilgroup.it","telephone":"+39 328 214 5266"},"areaServed":[{"@type":"Place","name":"Roma"},{"@type":"Place","name":"Lazio"},{"@type":"Place","name":"Milano"}]}</script>
 <style>@media (max-width:440px){footer a[aria-label][target=_blank]{width:42px!important;height:42px!important}footer div:has(> a[aria-label=Threads]){gap:6px!important}}</style>
@@ -184,6 +147,7 @@ renderVals() { return { headFont: this.props.headFont ?? 'Urbanist', nameJustify
 DCLite.mount(Component, document.getElementById("tpl"), document.getElementById("app"));
 </script>
 <script src="/js/preventivo-pdf.js"></script>
+<script src="/js/simulatore.js"></script>
 <script src="/js/ristrutturazione.js"></script>
 <script>if(location.hash==="#simulatore"){addEventListener("load",function(){var e=document.getElementById("simulatore");if(e)e.scrollIntoView()})}</script>
 <script src="/js/sicurezza.js" defer></script>
