@@ -48,6 +48,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 17/10/2026 – Titoli e descrizioni delle voci delle facciate riscritti; "Guida alle lavorazioni" per la SEO sotto i due simulatori (Eugenio)
 - [x] 17/10/2026 – Simulatore ristrutturazioni esterne e facciate con il listino Esterni 2026; paragrafi Sì/No e scelte uniche anche nel simulatore interni (motore comune)
 - [x] 17/10/2026 – Esterni: impermeabilizzazione con primo strato di guaina (23 €/m²) e secondo strato aggiuntivo a scelta (+16 €/m²); modalità di pagamento anche nel PDF esterni; superficie delle facciate non obbligatoria, si può simulare anche solo il terrazzo (Eugenio)
+- [x] 17/10/2026 – Esterni: tolta la voce "Spicconatura sotto balconi e tettoie" (Eugenio: non serve)
 - [x] 17/10/2026 – CAP della sede legale: Via Po 22, 00198 Roma (fondo pagine, Home, privacy, PDF, dati strutturati)
 - [x] 17/10/2026 – Case in legno: preventivo in PDF con invio in due passi, e avviso "Stima indicativa, non vincolante" sotto il totale (Eugenio)
 - [ ] Esterni: tipo di edificio (villa/condominio) solo informativo, non cambia il prezzo
