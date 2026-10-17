@@ -11,44 +11,44 @@
   var SICUREZZA = 0.08;
 
   var SEZ = [
-    { id: 'cantiere', t: 'Cantiere, ponteggio e trasporto dei materiali', s: 'L’organizzazione del cantiere: ponteggio a norma, servizi per gli operai e mezzi per portare i materiali ai piani.', v: [
+    { id: 'cantiere', t: 'Cantiere, ponteggi e sollevamento dei materiali', s: 'Tutto quello che serve per lavorare in sicurezza sulle facciate: ponteggio a norma, servizi per gli operai e mezzi per portare i materiali ai piani.', v: [
       { id: 'canAll', tipo: 'si', p: 1800, d: 'Allestimento e smontaggio del cantiere',
-        x: 'Bagno chimico, spogliatoio per gli operai e segnaletica di cantiere, dal primo giorno fino alla chiusura dei lavori.' },
-      { id: 'pon1', um: 'm²', p: 18, mq: true, d: 'Ponteggio: montaggio, smontaggio e primo mese',
-        x: 'Ponteggio a norma montato lungo le facciate, con lo smontaggio finale e i primi 30 giorni di noleggio compresi. Si misura in m² di facciata coperta.' },
+        x: 'Preparazione dell’area di lavoro prima di iniziare: bagno chimico e spogliatoio per gli operai, recinzioni e cartelli di cantiere. A fine lavori smontiamo tutto e lasciamo l’area pulita.' },
+      { id: 'pon1', um: 'm²', p: 18, mq: true, d: 'Ponteggio per facciate: montaggio, smontaggio e primo mese',
+        x: 'Ponteggio a norma di sicurezza montato lungo le facciate da ristrutturare. Il prezzo comprende montaggio, smontaggio finale e i primi 30 giorni di noleggio. Si misura in metri quadrati di facciata coperta dal ponteggio.' },
       { id: 'pon2', um: 'mesi in più', p: 2, d: 'Noleggio del ponteggio oltre il primo mese',
         f: function (n, c) { return n * 2 * c.num(c.q.pon1); },
         x: 'Per ogni periodo di 30 giorni oltre il primo, calcolato sui m² di ponteggio indicati nella voce precedente.' },
       { id: 'ponPrg', tipo: 'si', p: 550, d: 'Progetto del ponteggio',
-        x: 'Progetto del ponteggio firmato da un tecnico, quando la normativa lo richiede.' },
-      { id: 'acqua', tipo: 'si', p: 650, d: 'Acqua e luce di cantiere ai piani',
-        x: 'Impianto provvisorio che porta acqua e corrente elettrica lungo il ponteggio, per lavorare a ogni piano.' },
-      { id: 'solleva', tipo: 'scelta', um: 'mesi', nessuno: 'Nessun mezzo di sollevamento', d: 'Sollevamento dei materiali',
-        x: 'Mezzo per portare i materiali ai piani. Indica per quanti mesi serve: il prezzo comprende montaggio, smontaggio e noleggio.',
+        x: 'Progetto e calcolo del ponteggio firmati da un tecnico abilitato, necessari quando la normativa sulla sicurezza lo richiede.' },
+      { id: 'acqua', tipo: 'si', p: 650, d: 'Acqua e corrente di cantiere ai piani',
+        x: 'Impianto provvisorio che porta acqua e corrente elettrica lungo il ponteggio, così le squadre lavorano a ogni piano senza usare gli impianti di casa o del condominio.' },
+      { id: 'solleva', tipo: 'scelta', um: 'mesi', nessuno: 'Nessun mezzo di sollevamento', d: 'Sollevamento dei materiali ai piani',
+        x: 'Mezzo meccanico per portare in quota sacchi, pannelli e attrezzature. Scegli il mezzo adatto al cantiere e indica per quanti mesi serve: il prezzo comprende montaggio, smontaggio e noleggio.',
         opz: [
           { v: 'argano', d: 'Argano per materiali fino a 200 kg', x: 'Montaggio e smontaggio, più il noleggio mensile', um: 'mesi', f: function (n) { return 350 + 615 * n; } },
           { v: 'montacarichi', d: 'Montacarichi per materiali fino a 500 kg', x: 'Montaggio e smontaggio, più il noleggio mensile', um: 'mesi', f: function (n) { return 900 + 1300 * n; } }
         ] },
       { id: 'tiroSu', um: 'm³', p: 32.02, d: 'Tiro in alto dei materiali con elevatore',
-        x: 'Salita dei materiali ai piani con elevatore meccanico. Se non conosci i m³ lascia vuoto: li calcoliamo al sopralluogo.' },
-      { id: 'tiroGiu', um: 'm³', p: 32.02, d: 'Calo in basso di materiali e macerie con elevatore',
-        x: 'Discesa a terra di macerie e materiali con elevatore meccanico. Se non conosci i m³ lascia vuoto: li calcoliamo al sopralluogo.' }
+        x: 'Salita dei materiali ai piani con elevatore meccanico, misurata in metri cubi. Se non conosci il volume lascia vuoto: lo calcoliamo noi al sopralluogo.' },
+      { id: 'tiroGiu', um: 'm³', p: 32.02, d: 'Calo in basso di macerie e materiali',
+        x: 'Discesa a terra di macerie e materiali con elevatore meccanico, misurata in metri cubi. Se non conosci il volume lascia vuoto: lo calcoliamo noi al sopralluogo.' }
     ] },
-    { id: 'ripristini', t: 'Preparazione e ripristino delle facciate', s: 'Prima delle finiture si risanano le parti danneggiate: intonaco staccato, crepe, ferri scoperti, balconi.', v: [
-      { id: 'spicc', um: 'm²', p: 3.5, d: 'Spicconatura localizzata', x: 'Rimozione a mano dell’intonaco staccato o instabile nei punti da ripristinare.' },
-      { id: 'pitture', um: 'm²', p: 7.2, mq: true, d: 'Rimozione delle vecchie pitture', x: 'Asportazione delle pitture che si sfogliano, per preparare il fondo alle nuove finiture.' },
-      { id: 'demLoc', um: 'm²', p: 18.5, d: 'Demolizione delle parti di facciata ammalorate', x: 'Demolizione localizzata delle zone di facciata rovinate, prima di ricostruirle.' },
-      { id: 'intonaco', um: 'm²', p: 23.5, d: 'Ripristino dell’intonaco', x: 'Nuovo intonaco premiscelato dove è stato rimosso, fino a 2 cm per strato.' },
-      { id: 'crepe', um: 'm', p: 24, d: 'Riparazione delle crepe', x: 'Apertura, armatura con rete localizzata e chiusura delle crepe. Si misura in metri di crepa.' },
-      { id: 'ferri', um: 'm²', p: 18, d: 'Trattamento anticorrosivo dei ferri scoperti', x: 'Pulizia e protezione con prodotto anticorrosivo delle armature del cemento armato rimaste a vista.' },
-      { id: 'copriferro', um: 'm²', p: 68, d: 'Ricostruzione del copriferro con malta strutturale', x: 'Ricostruzione del calcestruzzo intorno ai ferri con malta tissotropica R4, spessore di circa 3 cm.' },
-      { id: 'balSpicc', um: 'm²', p: 8, d: 'Spicconatura sotto balconi e tettoie', x: 'Rimozione dell’intonaco staccato nella parte inferiore di balconi e tettoie.' },
-      { id: 'balDem', um: 'm²', p: 30, d: 'Demolizione di frontalini e sottobalconi ammalorati', x: 'Demolizione delle parti rovinate del bordo e della parte inferiore dei balconi, prima del ripristino.' }
+    { id: 'ripristini', t: 'Risanamento e ripristino delle facciate', s: 'Prima delle finiture si risanano le parti danneggiate: intonaco staccato, crepe, ferri d’armatura scoperti, frontalini e sottobalconi.', v: [
+      { id: 'spicc', um: 'm²', p: 3.5, d: 'Spicconatura dell’intonaco ammalorato', x: 'Rimozione a mano dell’intonaco staccato, rigonfio o instabile, solo nei punti da ripristinare. È il primo passo per una facciata sana.' },
+      { id: 'pitture', um: 'm²', p: 7.2, mq: true, d: 'Rimozione delle vecchie pitture', x: 'Asportazione delle pitture che si sfogliano o si polverizzano, per dare alle nuove finiture un fondo pulito e aderente.' },
+      { id: 'demLoc', um: 'm²', p: 18.5, d: 'Demolizione delle parti di facciata ammalorate', x: 'Demolizione mirata delle zone di facciata rovinate da umidità, gelo o infiltrazioni, prima della ricostruzione con materiali nuovi.' },
+      { id: 'intonaco', um: 'm²', p: 23.5, d: 'Ripristino dell’intonaco di facciata', x: 'Nuovo intonaco premiscelato steso dove quello vecchio è stato rimosso, fino a 2 cm per ogni strato, per ricostruire una superficie uniforme.' },
+      { id: 'crepe', um: 'm', p: 24, d: 'Riparazione delle crepe in facciata', x: 'Le crepe vengono aperte, armate con rete localizzata e richiuse, così non si riaprono sotto le nuove finiture. Si misura in metri lineari di crepa.' },
+      { id: 'ferri', um: 'm²', p: 18, d: 'Trattamento anticorrosivo dei ferri d’armatura', x: 'Pulizia dei ferri del cemento armato rimasti scoperti e protezione con prodotto anticorrosivo, per fermare la ruggine che gonfia e spacca il calcestruzzo.' },
+      { id: 'copriferro', um: 'm²', p: 68, d: 'Ripristino del calcestruzzo e del copriferro', x: 'Ricostruzione del calcestruzzo intorno ai ferri con malta strutturale tissotropica di classe R4, spessore di circa 3 cm. Si usa su pilastri, travi, frontalini e cornicioni.' },
+      { id: 'balSpicc', um: 'm²', p: 8, d: 'Spicconatura sotto balconi e tettoie', x: 'Rimozione dell’intonaco staccato nella parte inferiore di balconi e tettoie, il punto dove più spesso cadono frammenti.' },
+      { id: 'balDem', um: 'm²', p: 30, d: 'Demolizione di frontalini e sottobalconi ammalorati', x: 'Demolizione delle parti rovinate del bordo frontale e della parte inferiore dei balconi, prima del ripristino del calcestruzzo.' }
     ] },
-    { id: 'finiture', t: 'Isolamento, rasatura e finitura delle facciate', s: 'Scegli una sola soluzione per ogni passaggio: il simulatore ti mostra solo le combinazioni corrette.',
+    { id: 'finiture', t: 'Cappotto termico, rasatura e finitura', s: 'Scegli una sola soluzione per ogni passaggio: il simulatore ti mostra solo le combinazioni corrette, senza lavorazioni doppie.',
       area: { label: 'Superficie delle facciate da trattare (m²)', default: 'mq', hint: 'Se la lasci vuota vale la superficie delle facciate indicata in alto.' }, v: [
-      { id: 'sistema', tipo: 'scelta', q: 'area', um: 'm²', nessuno: 'Nessun isolamento termico', d: 'Isolamento termico',
-        x: 'Il cappotto riduce le dispersioni di calore della casa: meno freddo d’inverno, meno caldo d’estate.',
+      { id: 'sistema', tipo: 'scelta', q: 'area', um: 'm²', nessuno: 'Nessun isolamento termico', d: 'Isolamento termico della facciata (cappotto)',
+        x: 'Il cappotto termico isola le pareti dall’esterno: meno dispersioni di calore, case più calde d’inverno e più fresche d’estate, bollette più leggere. Scegli una sola soluzione: il cappotto in EPS comprende già rasatura e finitura.',
         opz: [
           { v: 'cap12', d: 'Cappotto in EPS grafitato da 12 cm', x: 'Rasatura armata e finitura standard già comprese', p: 75 },
           { v: 'cap14', d: 'Cappotto in EPS grafitato da 14 cm', x: 'Rasatura armata e finitura standard già comprese', p: 85 },
@@ -60,71 +60,71 @@
         se: function (c) { return !sistema(c); },
         x: 'Strato sottile che rende la facciata liscia e uniforme prima della finitura. Con la rete in fibra di vetro è più resistente alle microfessure.',
         opz: [
-          { v: 'fine', d: 'Rasatura fine, pronta per la pittura', p: 26 },
-          { v: 'armata', d: 'Rasatura armata in due mani con rete in fibra di vetro', p: 32 }
+          { v: 'fine', d: 'Rasatura fine, pronta per la pittura', x: 'Per facciate sane con piccole imperfezioni', p: 26 },
+          { v: 'armata', d: 'Rasatura armata in due mani con rete in fibra di vetro', x: 'Più resistente: consigliata con microfessure diffuse', p: 32 }
         ] },
-      { id: 'finitura', tipo: 'scelta', q: 'area', um: 'm²', nessuno: 'Nessuna finitura', d: 'Finitura delle facciate',
+      { id: 'finitura', tipo: 'scelta', q: 'area', um: 'm²', nessuno: 'Nessuna finitura', d: 'Finitura e colore della facciata',
         se: function (c) { return !/^cap/.test(sistema(c)); },
         x: 'L’ultimo strato, quello che si vede: protegge la facciata e le dà il colore.',
         opz: [
-          { v: 'calce', d: 'Finitura minerale a calce', x: 'Traspirante, adatta agli edifici storici', p: 19 },
+          { v: 'calce', d: 'Finitura minerale a calce', x: 'Molto traspirante, indicata per edifici storici e muri che devono respirare', p: 19 },
           { v: 'intonachino', d: 'Intonachino colorato, con fondo', x: 'Già colorato: non serve la pittura', p: 25 },
-          { v: 'silossanica', d: 'Pittura silossanica, con fissativo e due mani', x: 'Idrorepellente e traspirante', p: 13, se: function (c) { return sistema(c) !== 'eco'; } }
+          { v: 'silossanica', d: 'Pittura silossanica, con fissativo e due mani', x: 'Respinge l’acqua e lascia traspirare il muro', p: 13, se: function (c) { return sistema(c) !== 'eco'; } }
         ] }
     ] },
-    { id: 'lattonerie', t: 'Soglie, lattonerie e ringhiere', s: 'Gli elementi che proteggono la facciata dall’acqua e le ringhiere da rinnovare.', v: [
+    { id: 'lattonerie', t: 'Soglie, lattonerie e ringhiere', s: 'Gli elementi che proteggono la facciata dall’acqua piovana e le ringhiere da rinnovare.', v: [
       { id: 'soglie', tipo: 'scelta', um: 'm', nessuno: 'Nessun intervento', d: 'Soglie, davanzali e copertine in travertino',
-        x: 'Puoi pulire e carteggiare quelle esistenti oppure sostituirle con elementi nuovi.',
+        x: 'Puoi rinnovare le soglie esistenti con pulizia e carteggiatura (si misura in m²) oppure sostituirle con elementi nuovi in travertino (si misura in metri lineari).',
         opz: [
-          { v: 'pulizia', d: 'Pulizia e carteggiatura', um: 'm²', p: 18 },
-          { v: 'sostituzione', d: 'Rimozione e sostituzione', um: 'm', p: 115 }
+          { v: 'pulizia', d: 'Pulizia e carteggiatura', x: 'Si misura in metri quadrati', um: 'm²', p: 18 },
+          { v: 'sostituzione', d: 'Rimozione e sostituzione con travertino nuovo', x: 'Si misura in metri lineari', um: 'm', p: 115 }
         ] },
-      { id: 'scoss', um: 'm', p: 33, d: 'Scossaline in lamiera preverniciata', x: 'Fornitura e posa delle lamiere che proteggono dall’acqua i bordi di muretti, cornicioni e parapetti.' },
-      { id: 'gronde', um: 'm', p: 45, d: 'Grondaie in alluminio preverniciato', x: 'Fornitura e posa di nuove grondaie per raccogliere l’acqua del tetto.' },
-      { id: 'pluviali', um: 'm', p: 32, d: 'Pluviali in alluminio preverniciato', x: 'Fornitura e posa dei tubi che portano a terra l’acqua delle grondaie.' },
-      { id: 'ringhiere', um: 'm', p: 65, d: 'Ringhiere in ferro: sverniciatura e verniciatura', x: 'Ringhiere alte circa 1,10 m: preparazione del ferro, una mano di antiruggine e due mani di smalto. Si misura in metri lineari.' }
+      { id: 'scoss', um: 'm', p: 33, d: 'Scossaline in lamiera preverniciata', x: 'Fornitura e posa delle lamiere sagomate che proteggono dall’acqua piovana la sommità di muretti, cornicioni e parapetti. Si misurano in metri lineari.' },
+      { id: 'gronde', um: 'm', p: 45, d: 'Grondaie in alluminio preverniciato', x: 'Fornitura e posa di nuove grondaie per raccogliere l’acqua del tetto ed evitare che coli sulla facciata appena rifatta. Si misurano in metri lineari.' },
+      { id: 'pluviali', um: 'm', p: 32, d: 'Pluviali in alluminio preverniciato', x: 'Fornitura e posa dei tubi verticali che portano a terra l’acqua delle grondaie. Si misurano in metri lineari.' },
+      { id: 'ringhiere', um: 'm', p: 65, d: 'Verniciatura delle ringhiere in ferro', x: 'Ringhiere alte circa 1,10 m: sverniciatura e preparazione del ferro, una mano di antiruggine e due mani di smalto. Si misurano in metri lineari.' }
     ] },
-    { id: 'terrazzi', t: 'Terrazzi e balconi', s: 'Prima scegli come intervenire: rifacimento completo oppure impermeabilizzazione sopra il pavimento esistente.',
+    { id: 'terrazzi', t: 'Terrazzi e balconi: impermeabilizzazione e pavimenti', s: 'Prima scegli come intervenire: rifacimento completo oppure impermeabilizzazione sopra il pavimento esistente.',
       area: { label: 'Superficie di terrazzi e balconi (m²)', breve: 'superficie terrazzi' }, v: [
-      { id: 'metodo', tipo: 'scelta', q: 'nulla', nessuno: 'Non ancora scelto', d: 'Come vuoi intervenire?',
-        x: 'Il rifacimento completo rinnova tutto, dal sottofondo al pavimento. L’impermeabilizzazione senza demolizione è più rapida e lascia il pavimento esistente.',
+      { id: 'metodo', tipo: 'scelta', q: 'nulla', nessuno: 'Non ancora scelto', d: 'Come vuoi rifare terrazzi e balconi?',
+        x: 'Il rifacimento completo rinnova tutto, dal sottofondo al pavimento, ed è indicato quando ci sono infiltrazioni importanti. L’impermeabilizzazione senza demolizione è più rapida e lascia il pavimento esistente.',
         opz: [
           { v: 'trad', d: 'Rifacimento completo', x: 'Demolizione, nuovo massetto, impermeabilizzazione e nuovo pavimento', p: 0, fisso: true },
           { v: 'senza', d: 'Impermeabilizzazione senza demolire il pavimento', x: 'Telo armato applicato sopra le piastrelle esistenti', p: 0, fisso: true }
         ] },
-      { id: 'terDem', um: 'm²', p: 33.5, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Demolizione di pavimento e sottofondo fino a 5 cm',
-        x: 'Demolizione del vecchio pavimento in gres e del sottofondo fino a 5 cm, con trasporto e smaltimento in impianto autorizzato.' },
+      { id: 'terDem', um: 'm²', p: 33.5, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Demolizione di pavimento e sottofondo del terrazzo',
+        x: 'Demolizione del vecchio pavimento in gres e del sottofondo fino a 5 cm di spessore, con trasporto e smaltimento delle macerie in impianto autorizzato.' },
       { id: 'terDemX', um: 'cm in più', p: 7, se: function (c) { return metodo(c) === 'trad'; }, d: 'Sottofondo più spesso di 5 cm',
         f: function (n, c) { return n * 7 * c.num(c.q.terDem); },
         x: 'Per ogni centimetro di sottofondo da demolire oltre i 5 cm, calcolato sui m² della voce precedente.' },
       { id: 'guainaRim', um: 'm²', p: 6, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Rimozione della vecchia guaina bituminosa',
-        x: 'Rimozione della guaina esistente a doppio strato. Trasporto e smaltimento si indicano nella voce seguente.' },
+        x: 'Rimozione della guaina impermeabile esistente a doppio strato. Trasporto e smaltimento si indicano nella voce seguente.' },
       { id: 'guainaSmalt', um: 'kg', p: 1.49, se: function (c) { return metodo(c) === 'trad'; }, d: 'Trasporto e smaltimento della vecchia guaina',
-        x: 'Conferimento della guaina rimossa a un impianto autorizzato. Se non conosci il peso lascia vuoto: lo calcoliamo al sopralluogo.' },
-      { id: 'massetto', um: 'm²', p: 29.19, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Nuovo massetto fino a 6 cm',
-        x: 'Sottofondo in sabbia e cemento con le pendenze per lo scolo dell’acqua, pronto per l’impermeabilizzazione.' },
-      { id: 'imperm', tipo: 'scelta', q: 'area', um: 'm²', nessuno: 'Nessuna impermeabilizzazione', se: function (c) { return metodo(c) === 'trad'; }, d: 'Impermeabilizzazione',
-        x: 'Lo strato che impedisce all’acqua di passare sotto il pavimento. Si calcola sulla superficie dei terrazzi indicata sopra.',
+        x: 'Conferimento della guaina rimossa a un impianto autorizzato, misurato in chilogrammi. Se non conosci il peso lascia vuoto: lo calcoliamo al sopralluogo.' },
+      { id: 'massetto', um: 'm²', p: 29.19, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Nuovo massetto per terrazzi e balconi',
+        x: 'Sottofondo in sabbia e cemento fino a 6 cm, con le giuste pendenze per lo scolo dell’acqua, pronto per l’impermeabilizzazione.' },
+      { id: 'imperm', tipo: 'scelta', q: 'area', um: 'm²', nessuno: 'Nessuna impermeabilizzazione', se: function (c) { return metodo(c) === 'trad'; }, d: 'Impermeabilizzazione del terrazzo',
+        x: 'Lo strato che impedisce all’acqua piovana di infiltrarsi sotto il pavimento e nelle case sottostanti. Scegline una sola: si calcola sulla superficie dei terrazzi indicata sopra.',
         opz: [
-          { v: 'guaina1', d: 'Una guaina bituminosa da 4 mm, con primer', p: 23 },
-          { v: 'guaina2', d: 'Doppia guaina bituminosa da 4 mm, con primer', p: 39 },
-          { v: 'cementizia', d: 'Impermeabilizzazione cementizia elastica (tipo Mapelastic)', p: 30 }
+          { v: 'guaina1', d: 'Una guaina bituminosa da 4 mm, con primer', x: 'Per balconi e superfici piccole', p: 23 },
+          { v: 'guaina2', d: 'Doppia guaina bituminosa da 4 mm, con primer', x: 'La protezione più robusta per i terrazzi', p: 39 },
+          { v: 'cementizia', d: 'Impermeabilizzazione cementizia elastica (tipo Mapelastic)', x: 'Sottile e flessibile, segue i movimenti del supporto', p: 30 }
         ] },
-      { id: 'gres', um: 'm²', p: 32, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Posa del nuovo pavimento in gres',
-        x: 'Posa con collante del gres da esterno. Le piastrelle sono escluse: le scegli con noi.' },
-      { id: 'battisc', um: 'm', p: 11, se: function (c) { return metodo(c) === 'trad'; }, d: 'Posa del battiscopa esterno', x: 'Posa del battiscopa lungo i muri del terrazzo, piastrelle escluse. Si misura in metri lineari.' },
-      { id: 'bocch', um: 'n°', p: 175, se: function (c) { return metodo(c) === 'trad'; }, d: 'Bocchettoni di scarico',
-        x: 'Ripristino o sostituzione del bocchettone, con il raccordo impermeabile alla nuova impermeabilizzazione.' },
-      { id: 'ten1', um: 'm²', p: 59, mq: true, se: function (c) { return metodo(c) === 'senza'; }, d: 'Impermeabilizzazione armata sul pavimento esistente',
-        x: 'Ciclo completo con telo in fibra applicato sopra le piastrelle, senza demolizioni. Garanzia assicurativa decennale Unipol, secondo le condizioni della polizza.' },
+      { id: 'gres', um: 'm²', p: 32, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Posa del nuovo pavimento in gres da esterno',
+        x: 'Posa con collante del gres porcellanato da esterno, resistente al gelo. Le piastrelle sono escluse: le scegli con noi.' },
+      { id: 'battisc', um: 'm', p: 11, se: function (c) { return metodo(c) === 'trad'; }, d: 'Posa del battiscopa esterno', x: 'Posa del battiscopa lungo i muri del terrazzo, per proteggere l’attacco tra pavimento e parete. Piastrelle escluse; si misura in metri lineari.' },
+      { id: 'bocch', um: 'n°', p: 175, se: function (c) { return metodo(c) === 'trad'; }, d: 'Bocchettoni di scarico dell’acqua',
+        x: 'Ripristino o sostituzione dei bocchettoni da cui l’acqua esce dal terrazzo, con il raccordo impermeabile alla nuova impermeabilizzazione.' },
+      { id: 'ten1', um: 'm²', p: 59, mq: true, se: function (c) { return metodo(c) === 'senza'; }, d: 'Impermeabilizzazione armata senza demolire il pavimento',
+        x: 'Ciclo completo con telo in fibra applicato sopra le piastrelle esistenti: niente demolizioni, niente macerie, tempi ridotti. Garanzia assicurativa decennale Unipol, secondo le condizioni della polizza.' },
       { id: 'ten2', um: 'm', p: 16, se: function (c) { return metodo(c) === 'senza'; }, d: 'Raccordi, angoli e risvolti impermeabili',
-        x: 'Rinforzi impermeabili lungo angoli, muri e soglie, quando non sono già compresi nel ciclo principale.' },
+        x: 'Rinforzi impermeabili lungo angoli, pareti e soglie, i punti dove l’acqua passa più facilmente, quando non sono già compresi nel ciclo principale.' },
       { id: 'ten3', um: 'm²', p: 12, mq: true, se: function (c) { return metodo(c) === 'senza'; }, d: 'Pulizia e ripristino delle fughe',
-        x: 'Pulizia del pavimento esistente e ripristino delle fughe rovinate.' }
+        x: 'Pulizia profonda del pavimento esistente e ripristino delle fughe rovinate, per un terrazzo pulito e protetto.' }
     ] },
-    { id: 'rifiuti', t: 'Smaltimento dei rifiuti', s: 'Per le macerie non già comprese nelle demolizioni.', v: [
-      { id: 'rif', um: 't', p: 60, d: 'Carico, trasporto e smaltimento di macerie',
-        x: 'Rifiuti edili non pericolosi non compresi in altre voci. Si misura in tonnellate: se non lo sai lascia vuoto, lo calcoliamo al sopralluogo.' }
+    { id: 'rifiuti', t: 'Smaltimento dei rifiuti edili', s: 'Per le macerie non già comprese nelle demolizioni.', v: [
+      { id: 'rif', um: 't', p: 60, d: 'Smaltimento di macerie e rifiuti edili',
+        x: 'Carico, trasporto e conferimento in impianto autorizzato dei rifiuti edili non pericolosi non già compresi nelle demolizioni. Si misura in tonnellate: se non lo sai lascia vuoto, lo calcoliamo al sopralluogo.' }
     ] }
   ];
 

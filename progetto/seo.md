@@ -27,6 +27,8 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 
 - 17/10/2026: pagina facciate con simulatore di costo; descrizione per Google aggiornata ("Calcola subito il costo con il simulatore").
 
+- 17/10/2026: "Guida alle lavorazioni" sotto i simulatori di interni (12 paragrafi, 43 voci) ed esterni (6 paragrafi, 39 voci): testo leggibile da Google con titoli H3 e descrizioni originali (cosa comprende, quando serve, come si misura), parole come rifacimento facciate, cappotto termico, impermeabilizzazione terrazzo, ripristino copriferro, ponteggio. Titoli e descrizioni delle voci delle facciate riscritti in modo più completo.
+
 ## Da fare (in ordine di importanza)
 1. **Recensioni Google**: chiederle a ogni cliente con il link `https://g.page/r/CSlUfVvDiZqIEBM/review`. È il fattore più forte per "ristrutturazioni Roma" su Maps.
 2. **Scheda Google Business** (la fa Eugenio): categoria principale "Impresa edile", categorie secondarie (ristrutturazioni, installazione finestre, facciate…), elenco servizi con descrizione, foto dei cantieri ogni settimana, un post al mese, sito `https://mdedilgroup.it`.
