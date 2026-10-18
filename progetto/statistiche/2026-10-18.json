@@ -1,0 +1,571 @@
+{
+ "data": "2026-10-18",
+ "periodo": "ultime 24 ore fino al 18/10/2026 23:50 (Roma)",
+ "nota": "'totali_eventi' = conteggi completi per evento. 'eventi' = dettaglio per città di visite, simulazioni e WhatsApp (per modelli e schede solo i totali). Le visite comprendono quelle di Eugenio (Monterotondo). Nessun dato personale.",
+ "totali_eventi": {
+  "vista-case-in-legno": 65,
+  "vista-home": 54,
+  "vista-ristrutturazioni-interni": 3,
+  "vista-ristrutturazioni-esterni": 3,
+  "vista-studio-tecnico": 2,
+  "vista-interior-design": 2,
+  "vista-chi-siamo": 2,
+  "vista-infissi-serramenti": 1,
+  "vista-grazie": 1,
+  "arrivo-diretto": 29,
+  "arrivo-google": 22,
+  "arrivo-facebook": 1,
+  "simulazione-case-in-legno": 24,
+  "simulazione-ristrutturazioni-interni": 1,
+  "whatsapp-case-in-legno": 4,
+  "modulo-preventivo-inviato": 1,
+  "recensione-google": 1,
+  "modello-fjord": 14,
+  "modello-olivia": 10,
+  "modello-nord-house": 8,
+  "modello-flat-house-1-5": 8,
+  "modello-siver": 7,
+  "modello-flat-house": 7,
+  "modello-norway": 5,
+  "modello-flat-double": 5,
+  "modello-a-frame": 5,
+  "modello-sherwood": 4,
+  "modello-barn-mini": 4,
+  "modello-barn-double": 4,
+  "modello-mini-barn-boutique": 3,
+  "modello-barn-light": 3,
+  "modello-a-frame-l": 3,
+  "modello-montblanc": 2,
+  "modello-freya-smart": 2,
+  "modello-barn-max-height": 1,
+  "modello-barn-house": 1,
+  "scheda-casa-fjord": 14,
+  "scheda-casa-olivia": 9,
+  "scheda-casa-nord-house": 8,
+  "scheda-casa-flat-house-1-5": 8,
+  "scheda-casa-siver": 7,
+  "scheda-casa-flat-house": 7,
+  "scheda-casa-norway": 5,
+  "scheda-casa-flat-double": 5,
+  "scheda-casa-a-frame": 5,
+  "scheda-casa-sherwood": 4,
+  "scheda-casa-barn-mini": 4,
+  "scheda-casa-barn-double": 4,
+  "scheda-casa-mini-barn-boutique": 3,
+  "scheda-casa-barn-light": 3,
+  "scheda-casa-a-frame-l": 3,
+  "scheda-casa-montblanc": 2,
+  "scheda-casa-freya-smart": 2,
+  "scheda-casa-barn-max-height": 1,
+  "scheda-casa-barn-house": 1
+ },
+ "eventi": [
+  {
+   "e": "vista-home",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 14
+  },
+  {
+   "e": "vista-home",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 7
+  },
+  {
+   "e": "vista-home",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 7
+  },
+  {
+   "e": "vista-home",
+   "c": "Modena",
+   "r": "Emilia-Romagna",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-home",
+   "c": "Rivergaro",
+   "r": "Emilia-Romagna",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-home",
+   "c": "Canneto sull'Oglio",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-home",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-home",
+   "c": "Pescara",
+   "r": "Abruzzo",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-home",
+   "c": "Bologna",
+   "r": "Emilia-Romagna",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-home",
+   "c": "Borgo Maggiore",
+   "r": "Borgo Maggiore",
+   "n": "SM",
+   "count": 2
+  },
+  {
+   "e": "vista-home",
+   "c": "?",
+   "r": "Sicily",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-home",
+   "c": "Peia",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-home",
+   "c": "Naples",
+   "r": "Campania",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-home",
+   "c": "?",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-home",
+   "c": "Denver",
+   "r": "Colorado",
+   "n": "US",
+   "count": 1
+  },
+  {
+   "e": "vista-home",
+   "c": "?",
+   "r": "?",
+   "n": "US",
+   "count": 1
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 19
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Modena",
+   "r": "Emilia-Romagna",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Canneto sull'Oglio",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Rivergaro",
+   "r": "Emilia-Romagna",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Peia",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Taranto",
+   "r": "Apulia",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Pescara",
+   "r": "Abruzzo",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Bari",
+   "r": "Apulia",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "?",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Naples",
+   "r": "Campania",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Garbagnate Milanese",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Florence",
+   "r": "Tuscany",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Cassano Magnago",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Borgo Maggiore",
+   "r": "Borgo Maggiore",
+   "n": "SM",
+   "count": 1
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Bologna",
+   "r": "Emilia-Romagna",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Ancona",
+   "r": "The Marches",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "?",
+   "r": "Ticino",
+   "n": "CH",
+   "count": 1
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "?",
+   "r": "Sicily",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Perth",
+   "r": "Western Australia",
+   "n": "AU",
+   "count": 1
+  },
+  {
+   "e": "vista-ristrutturazioni-interni",
+   "c": "Canneto sull'Oglio",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-ristrutturazioni-interni",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-ristrutturazioni-esterni",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-ristrutturazioni-esterni",
+   "c": "Canneto sull'Oglio",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-ristrutturazioni-esterni",
+   "c": "Ancona",
+   "r": "The Marches",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-studio-tecnico",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-studio-tecnico",
+   "c": "Canneto sull'Oglio",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-interior-design",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-interior-design",
+   "c": "Canneto sull'Oglio",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-infissi-serramenti",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-chi-siamo",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-chi-siamo",
+   "c": "Canneto sull'Oglio",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "vista-grazie",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "simulazione-ristrutturazioni-interni",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Canneto sull'Oglio",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Rivergaro",
+   "r": "Emilia-Romagna",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Modena",
+   "r": "Emilia-Romagna",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Taranto",
+   "r": "Apulia",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Peia",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Naples",
+   "r": "Campania",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Florence",
+   "r": "Tuscany",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Ancona",
+   "r": "The Marches",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "?",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "whatsapp-case-in-legno",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "whatsapp-case-in-legno",
+   "c": "Rivergaro",
+   "r": "Emilia-Romagna",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "whatsapp-case-in-legno",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  },
+  {
+   "e": "whatsapp-case-in-legno",
+   "c": "Canneto sull'Oglio",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 1
+  }
+ ],
+ "pagine_viste_browser": {
+  "/": 55,
+  "/case-in-legno": 53,
+  "/chi-siamo": 4,
+  "/ristrutturazioni-esterni": 3,
+  "/ristrutturazioni-interni": 3,
+  "/interior-design": 3,
+  "/studio-tecnico": 3,
+  "/infissi-serramenti": 2,
+  "/privacy": 1,
+  "/grazie": 1
+ },
+ "paesi_browser": {
+  "IT": 103,
+  "US": 16,
+  "NL": 5,
+  "SM": 2,
+  "CH": 2,
+  "AU": 1,
+  "IE": 1,
+  "BE": 1
+ },
+ "altro": "Giornata del reel della casa Olivia (pubblicato alle 14:40): forte aumento di visite e simulazioni delle case in legno, molte dalla Lombardia (Milano).",
+ "sicurezza": "Molti tentativi automatici di leggere file riservati (.env, .git, credenziali): tutti senza risultato."
+}
