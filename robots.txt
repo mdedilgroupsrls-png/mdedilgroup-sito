@@ -1,4 +1,11 @@
-# Motori di ricerca: benvenuti (servono per farci trovare su Google, Bing e nelle ricerche con l'intelligenza artificiale)
+# MD Edil Group – mdedilgroup.it
+# Questo file dice ai programmi automatici quali pagine possono LEGGERE.
+# Non dà a nessuno il permesso di modificare il sito: il sito è fatto di pagine
+# statiche, non ha un pannello di amministrazione e si aggiorna solo da GitHub.
+
+# Motori di ricerca e assistenti con intelligenza artificiale (Google, Bing,
+# ChatGPT, Claude, Perplexity, Gemini, Apple, Copilot...): benvenuti.
+# Leggono il sito per far conoscere i nostri servizi a chi li cerca.
 User-agent: *
 Allow: /
 Disallow: /progetto/
@@ -8,32 +15,9 @@ Disallow: /s?
 Disallow: /s.txt
 Disallow: /n$
 
-# Programmi che copiano i siti per addestrare l'intelligenza artificiale: non autorizzati
-User-agent: GPTBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
+# Programmi che copiano interi siti in modo aggressivo o per rivenderne i
+# contenuti: non autorizzati.
 User-agent: Bytespider
-Disallow: /
-
-User-agent: Meta-ExternalAgent
-Disallow: /
-
-User-agent: Applebot-Extended
-Disallow: /
-
-User-agent: Amazonbot
 Disallow: /
 
 User-agent: Diffbot

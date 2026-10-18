@@ -50,3 +50,9 @@
   [headers.values]
     Cache-Control = "no-store"
     X-Robots-Tag = "noindex"
+
+# Descrizione del sito per gli assistenti AI: testo con accenti
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
