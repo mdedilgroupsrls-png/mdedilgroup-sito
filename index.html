@@ -747,7 +747,7 @@ document.getElementById('cbelt').addEventListener('click',e=>{
 });
 // reel: si leggono in diretta dal profilo Instagram tramite Behold (solo i reel visibili sul profilo, non quelli "di prova").
 // Se il feed non risponde restano i reel scritti nella pagina.
-const REEL_FEED='https://feeds.behold.so/XeqnT22RyeKLGX8Yhbbj',REEL_QUANTI=10;
+const REEL_FEED='https://feeds.behold.so/XeqnT22RyeKLGX8Yhbbj',REEL_QUANTI=10,REEL_MIN_LIKE=50,REEL_MIN_VISTE=5000;
 function reelDaInstagram(){
   const box=document.getElementById('reels');if(!box||!window.fetch)return Promise.resolve();
   const MESI=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
@@ -769,7 +769,10 @@ function reelDaInstagram(){
   };
   const ctl=new AbortController();setTimeout(()=>ctl.abort(),6000);
   return fetch(REEL_FEED,{signal:ctl.signal,credentials:'omit'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{
-    const reel=(d.posts||[]).filter(p=>/^https:\/\/www\.instagram\.com\//.test(p.permalink||'')).slice(0,REEL_QUANTI);
+    // solo i reel che piacciono: almeno 50 mi piace oppure 5.000 visualizzazioni (se Behold le fornisce); se nessuno
+    // supera il limite restano i reel scritti nella pagina
+    const vis=p=>+(p.viewCount||p.videoViewCount||p.playCount||p.plays||p.views||0);
+    const reel=(d.posts||[]).filter(p=>/^https:\/\/www\.instagram\.com\//.test(p.permalink||'')&&((+p.likeCount||0)>=REEL_MIN_LIKE||vis(p)>=REEL_MIN_VISTE)).slice(0,REEL_QUANTI);
     if(!reel.length)return;
     box.innerHTML=reel.map(p=>{
       const t=new Date(p.timestamp),[tit,resto]=testi(p.caption);

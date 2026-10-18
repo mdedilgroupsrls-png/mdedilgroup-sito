@@ -57,6 +57,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 17/10/2026 – Gallerie che scorrono da sole: Home (cantieri ed esterni), sotto il simulatore interni (25 foto chiavi in mano) e sotto il simulatore facciate (14 foto), file comune `js/nastro.js` (Eugenio)
 - [ ] Infissi e serramenti: nastro delle opere realizzate sotto il simulatore, **appena Eugenio manda le foto** (stesso `js/nastro.js`)
 - [x] 17/10/2026 – Icona del sito con il logo originale su fondo nero, per i risultati di Google (Eugenio)
+- [x] 18/10/2026 – Reel della Home: solo quelli con almeno 50 mi piace o 5.000 visualizzazioni (sempre da Behold, niente Metricool – Eugenio)
 - [x] 17/10/2026 – CAP della sede legale: Via Po 22, 00198 Roma (fondo pagine, Home, privacy, PDF, dati strutturati)
 - [x] 17/10/2026 – Case in legno: preventivo in PDF con invio in due passi, e avviso "Stima indicativa, non vincolante" sotto il totale (Eugenio)
 - [ ] Esterni: tipo di edificio (villa/condominio) solo informativo, non cambia il prezzo
