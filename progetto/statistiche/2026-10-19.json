@@ -1,0 +1,552 @@
+{
+ "data": "2026-10-19",
+ "periodo": "ultime 24 ore fino al 19/10/2026 23:51 (Roma)",
+ "nota": "'totali_eventi' = conteggi completi per evento. 'eventi' = dettaglio per città solo per le combinazioni contate almeno 2 volte (prima pagina dei registri). Le visite comprendono quelle di Eugenio (Monterotondo). Nessun dato personale.",
+ "totali_eventi": {
+  "vista-home": 81,
+  "vista-case-in-legno": 78,
+  "vista-ristrutturazioni-esterni": 10,
+  "vista-infissi-serramenti": 8,
+  "vista-chi-siamo": 6,
+  "vista-ristrutturazioni-interni": 5,
+  "vista-studio-tecnico": 4,
+  "vista-interior-design": 4,
+  "vista-grazie": 1,
+  "arrivo-diretto": 34,
+  "arrivo-google": 21,
+  "arrivo-facebook": 8,
+  "arrivo-instagram": 5,
+  "simulazione-case-in-legno": 22,
+  "whatsapp-case-in-legno": 3,
+  "modulo-preventivo-inviato": 1,
+  "social-instagram": 2,
+  "social-linkedin": 1,
+  "social-google": 1,
+  "modello-olivia": 17,
+  "modello-barn-house": 11,
+  "modello-flat-house-1-5": 10,
+  "modello-nord-house": 9,
+  "modello-flat-double": 8,
+  "modello-norway": 7,
+  "modello-montblanc": 6,
+  "modello-mini-barn-boutique": 6,
+  "modello-sherwood": 5,
+  "modello-freya-smart": 4,
+  "modello-flat-house": 4,
+  "modello-fjord": 4,
+  "modello-siver": 4,
+  "modello-barn-light": 3,
+  "modello-barn-mini": 3,
+  "modello-a-frame-l": 3,
+  "modello-a-frame": 2,
+  "modello-barn-double": 2,
+  "scheda-casa-olivia": 20,
+  "scheda-casa-barn-house": 11,
+  "scheda-casa-norway": 10,
+  "scheda-casa-flat-house-1-5": 10,
+  "scheda-casa-flat-double": 9,
+  "scheda-casa-nord-house": 9,
+  "scheda-casa-montblanc": 6,
+  "scheda-casa-mini-barn-boutique": 6,
+  "scheda-casa-sherwood": 5,
+  "scheda-casa-fjord": 5,
+  "scheda-casa-flat-house": 5,
+  "scheda-casa-siver": 4,
+  "scheda-casa-barn-mini": 4,
+  "scheda-casa-barn-double": 3,
+  "scheda-casa-freya-smart": 3,
+  "scheda-casa-a-frame-l": 3,
+  "scheda-casa-barn-light": 3,
+  "scheda-casa-a-frame": 2
+ },
+ "eventi": [
+  {
+   "e": "vista-case-in-legno",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 17
+  },
+  {
+   "e": "vista-home",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 14
+  },
+  {
+   "e": "modello-barn-house",
+   "c": "Cadoneghe",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 10
+  },
+  {
+   "e": "scheda-casa-barn-house",
+   "c": "Cadoneghe",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 10
+  },
+  {
+   "e": "vista-home",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 9
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 9
+  },
+  {
+   "e": "vista-home",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 9
+  },
+  {
+   "e": "vista-home",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 8
+  },
+  {
+   "e": "scheda-casa-olivia",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 7
+  },
+  {
+   "e": "modello-olivia",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 7
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Cadoneghe",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Lusciano",
+   "r": "Campania",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "scheda-casa-olivia",
+   "c": "Catania",
+   "r": "Sicily",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "vista-ristrutturazioni-esterni",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "scheda-casa-montblanc",
+   "c": "Naples",
+   "r": "Campania",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "Padua",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "?",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-home",
+   "c": "?",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Naples",
+   "r": "Campania",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Padua",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "modello-montblanc",
+   "c": "Naples",
+   "r": "Campania",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-interior-design",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "scheda-casa-flat-double",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-home",
+   "c": "Padua",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "arrivo-google",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "modello-nord-house",
+   "c": "Catania",
+   "r": "Sicily",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-home",
+   "c": "Lusciano",
+   "r": "Campania",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-home",
+   "c": "Catania",
+   "r": "Sicily",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-home",
+   "c": "Giarre",
+   "r": "Sicily",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-ristrutturazioni-esterni",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "arrivo-facebook",
+   "c": "Springfield",
+   "r": "Nebraska",
+   "n": "US",
+   "count": 3
+  },
+  {
+   "e": "modello-olivia",
+   "c": "Catania",
+   "r": "Sicily",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "scheda-casa-norway",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-chi-siamo",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Perugia",
+   "r": "Umbria",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "scheda-casa-freya-smart",
+   "c": "Cadoneghe",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "arrivo-google",
+   "c": "Giarre",
+   "r": "Sicily",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Catania",
+   "r": "Sicily",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-studio-tecnico",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "scheda-casa-nord-house",
+   "c": "Catania",
+   "r": "Sicily",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "modello-freya-smart",
+   "c": "Cadoneghe",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "Cadoneghe",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "Naples",
+   "r": "Campania",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "Verona",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-ristrutturazioni-interni",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "whatsapp-case-in-legno",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "arrivo-google",
+   "c": "Catania",
+   "r": "Sicily",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Verona",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "arrivo-google",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "arrivo-instagram",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "Fabriano",
+   "r": "The Marches",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-infissi-serramenti",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Lusciano",
+   "r": "Campania",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-home",
+   "c": "Fabriano",
+   "r": "The Marches",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-home",
+   "c": "Mira",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Naples",
+   "r": "Campania",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "arrivo-facebook",
+   "c": "Mira",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-infissi-serramenti",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 2
+  },
+  {
+   "e": "vista-home",
+   "c": "Cadoneghe",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 2
+  }
+ ],
+ "pagine_viste_browser": {
+  "/": 75,
+  "/case-in-legno": 56,
+  "/infissi-serramenti": 7,
+  "/ristrutturazioni-interni": 6,
+  "/chi-siamo": 6,
+  "/ristrutturazioni-esterni": 5,
+  "/interior-design": 4,
+  "/studio-tecnico": 4
+ },
+ "paesi_browser": {
+  "IT": 136,
+  "US": 30,
+  "SG": 8,
+  "NL": 4,
+  "BE": 4,
+  "IE": 2,
+  "BR": 2,
+  "PH": 1,
+  "UA": 1,
+  "CA": 1,
+  "FI": 1,
+  "MD": 1,
+  "DE (quasi tutti tentativi automatici bloccati)": 274
+ },
+ "sicurezza": "Molti tentativi automatici (soprattutto dalla Germania) di leggere file riservati (.env, phpinfo, wp-includes, credenziali): tutti senza risultato, il sito non ha questi file."
+}
