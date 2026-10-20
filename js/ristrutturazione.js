@@ -33,7 +33,7 @@
     ] },
     { id: 'bagno', t: 'Bagno chiavi in mano', s: 'Un solo importo per tutte le lavorazioni del bagno. Non indicare di nuovo queste lavorazioni nelle altre voci.', v: [
       { id: 'bagno', d: 'Rifacimento completo del bagno', um: 'n° bagni', p: 6500, extraMq: 350, bagno: true,
-        x: 'Dal vecchio bagno al nuovo, senza pensieri: smontaggio dei sanitari, demolizione di pavimenti, rivestimenti e sottofondi con smaltimento, nuovo massetto, nuovi impianti idrico ed elettrico con le opere murarie, impermeabilizzazione della doccia, posa di pavimento e rivestimenti in gres, rasatura e pittura, montaggio di sanitari, rubinetteria, piatto e box doccia, scaldasalviette e accessori, collaudo con dichiarazioni di conformità e pulizia finale. Il prezzo vale per un bagno fino a 5 m²: per un bagno più grande indica la sua superficie. Restano esclusi gres, sanitari, rubinetteria, doccia e accessori, che sceglierai con noi.' }
+        x: 'Dal vecchio bagno al nuovo, senza pensieri: smontaggio dei sanitari, demolizione di pavimenti, rivestimenti e sottofondi con smaltimento, nuovo massetto, nuovi impianti idrico ed elettrico con le opere murarie, impermeabilizzazione della doccia, posa di pavimento e rivestimenti, rasatura e pittura, montaggio di sanitari, rubinetteria, piatto e box doccia, scaldasalviette e accessori, collaudo con dichiarazioni di conformità e pulizia finale. Il prezzo vale per un bagno fino a 5 m²: per un bagno più grande indica la sua superficie. I materiali sono compresi; restano esclusi i rivestimenti e gli accessori del bagno, che sceglierai con noi.' }
     ] },
     { id: 'murarie', t: 'Opere murarie', s: 'Nuove pareti, sottofondi e intonaci per ridisegnare gli spazi.', v: [
       { id: 'tramez', d: 'Costruzione di nuovi tramezzi', um: 'm²', p: 87.7,
@@ -162,7 +162,7 @@
       },
       note: ['Preventivo indicativo calcolato con il listino MD Edil Group in base alle quantità indicate dal cliente. Prezzi IVA inclusa.',
         'Il prezzo definitivo viene confermato dopo il sopralluogo, con le misure prese dai nostri tecnici, e con la firma del contratto. Sopralluogo e preventivo sono gratuiti.',
-        'Esclusa la fornitura di pavimenti, rivestimenti, sanitari, rubinetteria, porte, termosifoni, caldaie, condizionatori e accessori, che sceglierai con noi. Infissi esclusi.',
+        'Esclusa la fornitura di pavimenti, rivestimenti, sanitari, rubinetteria, porte, termosifoni, caldaie, condizionatori e accessori, che sceglierai con noi (nel bagno chiavi in mano i materiali sono compresi, esclusi rivestimenti e accessori). Infissi esclusi.',
         'Tutti i lavori sono eseguiti dai nostri tecnici abilitati e gli impianti sono consegnati con dichiarazione di conformità.']
     }
   });
