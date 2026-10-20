@@ -66,6 +66,13 @@ Metodo: un passo alla volta. Claude spiega cosa fare e perché, mostra la situaz
 - **Mese 6 – consolidamento:** audit di confronto, contatti e contratti, piano successivo
 - **Report:** controllo settimanale breve (statistiche anonime) e report mensile (Search Console + statistiche + contatti/contratti che Eugenio comunica)
 
+## Pagine di approfondimento: ordine proposto (20/10/2026)
+Eugenio: finita una pagina si passa alla successiva; 2-3 pagine per ogni pagina principale, sulle ricerche più fatte su Google. Una alla volta, con foto e dati di Eugenio.
+- **Interni:** [x] Ristrutturazione bagno · [ ] Ristrutturazione cucina (2 foto vere + 3 render) · [ ] Strutture ricettive e hotel (materiale di Eugenio)
+- **Esterni:** [ ] Rifacimento facciata condominio (14 foto facciate) · [ ] Cappotto termico: costi e vantaggi · [ ] Impermeabilizzazione terrazzi e balconi (servono foto)
+- **Infissi:** [ ] Sostituzione finestre in PVC: costi e domande · [ ] Tapparelle e zanzariere (foto Pracal e Primed già sul sito)
+- **Case in legno:** [ ] Permessi e fondazioni per una casa in legno · [ ] Case A-frame: modelli e prezzi
+
 ## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**, ma **al massimo 3-4 domande per messaggio**, messaggi brevi)
 - Google Business: sembra verificato, da controllare insieme (schermate di categorie, servizi, zona) – Servizi Locali ancora in verifica
 - **Più avanti, li chiede Eugenio / da richiedere con calma (non a ogni messaggio):** foto prima/durante/dopo dei bagni con zona; materiale delle strutture ricettive e alberghi (foto, tipo di struttura, zona, lavori)
