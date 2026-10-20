@@ -1,6 +1,6 @@
 # Post social – articolo "Quanto costa ristrutturare un bagno a Roma" (20/10/2026)
 
-Da programmare su Metricool (brand 7377222, Europe/Rome) **subito dopo la pubblicazione del sito** (i file devono essere online), da martedì a sabato alle **19:00**.
+Da programmare su Metricool (brand 7377222, Europe/Rome) **subito dopo la pubblicazione del sito** (i file devono essere online), da martedì a sabato **tra le 10:30 e le 12:00**.
 - Reel (skill md-edil-reels: voce Rosa – la voce salvata –, sottotitoli karaoke, hook, base deep house originale, 45 s; voce aggiornata con 6.500 €): https://mdedilgroup.it/video/articolo-bagno-roma-reel.mp4 – copertina https://mdedilgroup.it/img/social-articolo-bagno-roma-copertina.jpg
 - Storia Instagram: https://mdedilgroup.it/img/social-articolo-bagno-roma-storia.jpg (sticker Link → articolo)
 - Link articolo: https://mdedilgroup.it/quanto-costa-ristrutturare-bagno-roma
