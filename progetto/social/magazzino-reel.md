@@ -1,10 +1,12 @@
-# Scorta dei reel (obiettivo: 26 pronti = 6 mesi a 1 reel a settimana)
+# Scorta dei contenuti social (obiettivo: 26 pronti = 6 mesi a 1 contenuto a settimana)
+
+Reel **o post** (foto/carosello), a rotazione (Eugenio, 20/10/2026).
 
 Regola di Eugenio (20/10/2026): sui social **1 reel a settimana**. Claude produce reel ogni settimana (articolo + contenuti nuovi) finché la scorta arriva a **26 reel pronti e non ancora pubblicati**. Raggiunta la scorta lo dice a Eugenio, che darà l'ordine di passare a 2 reel a settimana.
 
 Ogni lunedì: si programma su Metricool il primo reel "pronto" della lista in un giorno libero della settimana (martedì–sabato, 10:30–12:00, mai nel giorno di un reel già programmato) e qui si segna "programmato" con data e ora.
 
-**Reel pronti non programmati: 2 / 26**
+**Contenuti pronti non programmati: 2 / 26**
 
 | # | Reel | File | Stato |
 |---|---|---|---|
