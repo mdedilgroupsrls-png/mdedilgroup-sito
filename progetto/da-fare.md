@@ -4,6 +4,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
 - [ ] **Infissi Monte Sacro:** aggiungere il costo indicativo all'articolo quando Eugenio manda numero e misure degli infissi (calcolo con `js/infissi.js`, + IVA); reel o post del cantiere da montare più avanti (regola: prima articolo, reel dopo)
+- [x] 20/10/2026 – Pagina lavoro realizzato "Infissi scorrevoli antracite e vetrata ad angolo all'EUR" con la posa a regola d'arte
 - [x] 20/10/2026 – Pagina lavoro realizzato "Porta-finestra scorrevole e vetrata a timpano a Roma Nord" (infissi; in Home più avanti, a rotazione)
 - [x] 20/10/2026 – Articolo "Infissi in PVC a Monte Sacro" e sezione "I nostri lavori realizzati" nella pagina infissi (branch `lavori-in-corso`)
 - [ ] **Dopo la pubblicazione:** programmare su Metricool i reel dei 2 articoli uno a settimana in un giorno libero (i reel già programmati non contano) (regola del 20/10: 1 reel a settimana, scorta di 26 in `progetto/social/magazzino-reel.md`), tra le 10:30 e le 12:00 (testi e file in `progetto/social/2026-10-articolo-bagno.md` e `2026-10-articolo-detrazioni.md`; Instagram TRIAL_REEL; mai Google Business) e mandare a Eugenio le storie con il link
