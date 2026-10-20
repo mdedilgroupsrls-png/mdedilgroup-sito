@@ -6,3 +6,10 @@
 | Articolo detrazioni 2026 (20/10/2026) | video/articolo-detrazioni-2026-reel.mp4 | lavoro-02, lavoro-14, lavoro-22, lavoro-04, synego-cucina, lavoro-18, lavoro-21, facciata-03 (storia: lavoro-02) |
 
 Stili già usati: sottotitoli karaoke box oro + deep house (bagno); vetro sfocato con barra oro + card numeri grandi + tropical house (detrazioni). Il prossimo: stile elegante (linea oro) o righe che salgono, musica di un altro genere.
+
+## Post (foto o carosello)
+Regola (20/10/2026): un post può riusare foto già usate in un reel; mai due post con le stesse foto.
+
+| Post | File | Foto usate |
+|---|---|---|
+| Carosello bagno Piazza Fiume (20/10/2026) | img/social-post-bagno-piazza-fiume-1..7.jpg | bagno-piazza-fiume-finito, bagno-piazza-fiume-inizio, bagno-piazza-fiume-posa, dettaglio-jolly-1-onice-marmo, dettaglio-jolly-2-spalletta-finestra, dettaglio-collettore-4-sportello-chiuso |
