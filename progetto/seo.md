@@ -78,7 +78,7 @@ Eugenio: finita una pagina si passa alla successiva; 2-3 pagine per ogni pagina 
 ## Articoli (Eugenio, 20/10/2026)
 - **Un articolo ogni 3 settimane** (prima era uno al mese). Promemoria automatico che si riprogramma ogni 21 giorni.
 - **Non serve mostrare a Eugenio** testi, reel e storie prima di programmarli: Claude li prepara e li programma da solo dopo la pubblicazione del sito.
-- **Formato social:** meglio sempre un **reel** (video verticale), con descrizione adatta a ogni social. **Instagram sempre TRIAL_REEL ("in prova")**; gli altri social normali (Facebook reel, TikTok, YouTube short, LinkedIn, Threads, Google Business).
+- **Formato social:** meglio sempre un **reel** (video verticale), con descrizione adatta a ogni social, fatto **sempre con la skill md-edil-reels**: voce salvata (Speko, it-IT-Rosa – Eugenio la chiama "Carina"), sottotitoli professionali, hook nei primi 2 s, montaggio professionale; a volte solo musica allegra di sottofondo. Mai Google Business per i reel. **Instagram sempre TRIAL_REEL ("in prova")**; gli altri social normali (Facebook reel, TikTok, YouTube short, LinkedIn, Threads, Google Business).
 - **Posizione:** "📍 Roma, Lazio, Italia" per tutte le lavorazioni a Roma; per le **case in legno** "📍 Italia" (tutta Italia).
 - **Obiettivo di ogni post:** portare le persone sul sito a fare la simulazione giusta: interni → simulatore interni (Roma); esterni e facciate → simulatore esterni (Roma); infissi → simulatore infissi (Roma); case in legno → simulatore case in legno (tutta Italia). Link sempre alla pagina con il simulatore o all'articolo che lo linka.
 - Sezione **"Dal nostro taccuino"** di nuovo nella **Home** con gli ultimi 3 articoli: unica eccezione alla regola "niente pagine nuove in Home" (ok di Eugenio).
