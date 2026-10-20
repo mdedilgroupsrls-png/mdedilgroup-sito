@@ -16,6 +16,7 @@
   window.MDInvio = function (o) {
     var btn = document.getElementById(o.btn);
     if (!btn) return;
+    var pagina = location.pathname.replace(/^\/|\.html$|\/$/g, '') || 'home';
     var st = document.createElement('style'); st.textContent = CSS; document.head.appendChild(st);
     var box = document.createElement('div'); box.className = 'mdi';
     box.innerHTML = '<p class="t">' + o.titolo + '</p><p class="s">' + o.sotto + '</p>' +
@@ -68,6 +69,7 @@
       if (conPdf && o.breve) testo = o.breve(); // messaggio corto: il dettaglio è nel preventivo PDF (pulsante 2)
       btn.href = 'https://wa.me/393282145266?text=' + encodeURIComponent(testo + '\n\nNome e cognome: ' + v.nome + '\nTelefono: ' + v.tel + '\n' + o.indirizzo + ': ' + v.ind + '\n\n' + o.richiesta);
       ok.hidden = false;
+      if (window.MDStat) window.MDStat('stima-whatsapp-' + pagina, true);
     }, true);
 
     // preventivo in PDF intestato MD Edil Group (js/preventivo-pdf.js)
@@ -83,7 +85,7 @@
         var d = o.pdf(); d.cliente = { nome: v.nome, tel: v.tel, ind: v.ind, indLabel: o.indirizzo }; d.file = v.nome;
         d.avviso = d.avviso || 'Stima indicativa, non vincolante. Il preventivo definitivo si ottiene solo dopo il sopralluogo. Le lavorazioni non presenti nel simulatore saranno quotate a parte.';
         var t = bp.textContent; bp.disabled = true; bp.textContent = 'PREPARAZIONE DEL PDF…';
-        window.MDPdf.crea(d).then(function (p) { return window.MDPdf.consegna(p); })
+        window.MDPdf.crea(d).then(function (p) { if (window.MDStat) window.MDStat('stima-pdf-' + pagina, true); return window.MDPdf.consegna(p); })
           .catch(function () { var err = box.querySelector('.err'); err.textContent = 'Non è stato possibile creare il PDF: riprova o inviaci la simulazione su WhatsApp.'; err.hidden = false; })
           .then(function () { bp.disabled = false; bp.textContent = t; });
       });

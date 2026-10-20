@@ -50,13 +50,44 @@
     for (var i = 0; i < noti.length; i++) if (r.indexOf(noti[i]) >= 0) return noti[i];
     return 'altro';
   }
+  // canale di arrivo della visita: annunci Google (gclid o utm), poi sito di provenienza; resta valido per tutta la visita
+  function canale() {
+    var q = new URLSearchParams(location.search), u = (q.get('utm_source') || '').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 20);
+    if (q.get('gclid') || q.get('gbraid') || q.get('wbraid')) return 'google-annunci';
+    if (u) return u === 'google' && /cpc|ads|ppc/i.test(q.get('utm_medium') || '') ? 'google-annunci' : u;
+    return provenienza();
+  }
+  function leggi(k) { try { return sessionStorage.getItem(k) || ''; } catch (x) { return ''; } }
+  function scriviS(k, v) { try { sessionStorage.setItem(k, v); } catch (x) {} }
+  // modulo contatti: campi nascosti con pagina, tipo di richiesta e canale (mai dati personali)
+  var SERVIZIO = { 'ristrutturazioni-interni': 'Ristrutturazione interni', 'ristrutturazioni-esterni': 'Ristrutturazione esterni', 'infissi-serramenti': 'Infissi e serramenti', 'case-in-legno': 'Case in legno', 'interior-design': 'Progettazione', 'studio-tecnico': 'Progettazione' };
+  function tipoRichiesta(a) { var t = (a.textContent || '').toLowerCase(); return /sopralluogo/.test(t) ? 'sopralluogo' : /progett/.test(t) ? 'progetto' : 'preventivo'; }
+  function modulo() {
+    var f = document.querySelector('form[name="preventivo"]'); if (!f) return;
+    function metti(n, v) { var i = f.querySelector('input[name="' + n + '"]'); if (i && v) i.value = v; }
+    function aggiorna() {
+      var da = leggi('mdDaPagina') || pagina();
+      metti('pagina-provenienza', da); metti('tipo-richiesta', leggi('mdRichiesta') || 'modulo diretto'); metti('canale-arrivo', leggi('mdCanale') || 'diretto');
+      var sel = f.querySelector('select[name="intervento"]'); if (sel && SERVIZIO[da] && !f.dataset.scelto) sel.value = SERVIZIO[da];
+    }
+    var sel = f.querySelector('select[name="intervento"]'); if (sel) sel.addEventListener('change', function () { f.dataset.scelto = '1'; });
+    aggiorna(); f.addEventListener('focusin', aggiorna);
+    f.addEventListener('submit', function () {
+      aggiorna();
+      stat('modulo-preventivo-inviato', true);
+      stat('richiesta-' + (leggi('mdRichiesta') || 'modulo-diretto'), true);
+      stat('modulo-da-' + (leggi('mdDaPagina') || pagina()), true);
+    });
+  }
   function contatori() {
     stat('vista-' + pagina(), true);
     var giaQui = false; try { giaQui = sessionStorage.getItem('mdVisita'); sessionStorage.setItem('mdVisita', '1'); } catch (x) {}
-    var p = provenienza(); if (!giaQui && p) stat('arrivo-' + p);
+    var p = canale(); if (!giaQui && p) stat('arrivo-' + p);
+    if (!leggi('mdCanale') && p) scriviS('mdCanale', p);
     document.addEventListener('click', function (ev) {
       var a = ev.target.closest && ev.target.closest('a'); if (!a) return;
       var h = a.getAttribute('href') || '';
+      if (/(^|\/)#contatti$/.test(h)) { scriviS('mdDaPagina', pagina()); scriviS('mdRichiesta', tipoRichiesta(a)); stat('vai-al-modulo-' + pagina(), true); }
       if (a.id === 'waSim') stat('whatsapp-stima-infissi', true);
       else if (/wa\.me/.test(h)) stat('whatsapp-' + pagina(), true);
       else if (/^tel:/.test(h)) stat('chiama-' + pagina(), true);
@@ -66,7 +97,7 @@
     }, true);
     var sim = function (ev) { if (ev.target.closest && ev.target.closest('#simulatore, .sim, .models')) stat('simulazione-' + pagina()); };
     document.addEventListener('input', sim, true); document.addEventListener('change', sim, true);
-    var f = document.querySelector('form[name="preventivo"]'); if (f) f.addEventListener('submit', function () { stat('modulo-preventivo-inviato', true); });
+    modulo();
   }
 
   function avvia() { scrivi(); banner(); contatori(); }

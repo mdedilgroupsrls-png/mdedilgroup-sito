@@ -168,6 +168,7 @@
         '\nTotale stimato: ' + eur(ultimo.tot) + ' ' + cfg.iva + (mq ? ' (' + virgola(mq) + ' m²)' : '') + '. Vi invio qui il preventivo in PDF.' +
         '\n\nNome e cognome: ' + val.rNome + '\nTelefono: ' + val.rTel + '\n' + (cfg.indirizzo || 'Indirizzo dell’immobile') + ': ' + val.rInd + '\n\nVorrei richiedere un sopralluogo: potete ricontattarmi?');
       $('rOk').hidden = false;
+      if (window.MDStat) window.MDStat('stima-whatsapp-' + cfg.id, true);
     }, true);
     // 2 · preventivo in PDF intestato MD Edil Group (js/preventivo-pdf.js)
     var bPdf = $('rPdf'), hPdf = $('rPdfH');
@@ -185,7 +186,7 @@
         sezioni: ultimo.sez, totale: ultimo.tot, iva: cfg.pdf.iva, note: cfg.pdf.note, file: val.rNome,
         avviso: 'Stima indicativa, non vincolante. Il preventivo definitivo si ottiene solo dopo il sopralluogo. Le lavorazioni non presenti nel simulatore saranno quotate a parte.' };
       if (cfg.pdf.pagamento) dati.pagamento = cfg.pdf.pagamento();
-      window.MDPdf.crea(dati).then(function (p) { return window.MDPdf.consegna(p); })
+      window.MDPdf.crea(dati).then(function (p) { if (window.MDStat) window.MDStat('stima-pdf-' + cfg.id, true); return window.MDPdf.consegna(p); })
         .catch(function () { $('rErr').textContent = 'Non è stato possibile creare il PDF: riprova o inviaci la simulazione su WhatsApp.'; $('rErr').hidden = false; })
         .then(function () { bPdf.disabled = false; bPdf.textContent = t; });
     });

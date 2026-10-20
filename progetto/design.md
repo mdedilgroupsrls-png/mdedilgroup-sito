@@ -27,6 +27,7 @@ Design scelto e approvato da Eugenio (proposta A, 13/10/2026). Il resto si compl
 - Sotto, menu centrato: Studio tecnico · Interior design · Ristrutturazioni interni · Ristrutturazioni esterni · Infissi e serramenti · Case in legno · Chi siamo. La voce della pagina corrente è in oro.
 
 ## Home
+- **Titolo principale per Google (20/10/2026):** l'H1 della Home è la riga dorata piccola "Ristrutturazioni Roma · Milano · Case in legno in tutta Italia" (`h1.eyebrow.zones`); lo slogan "I dettagli fanno la differenza" è un `p.slogan#ttl` con lo stesso aspetto e la stessa scrittura lettera per lettera. A vista non cambia niente.
 - Frase approvata da Eugenio, centrata su due righe: "Ristrutturazioni di pregio / curate in ogni dettaglio". Nella versione online del 14/10 il titolo grande della hero è lo slogan "I dettagli fanno la differenza": chiedere a Eugenio quale tenere prima di cambiarlo.
 - Gallerie foto **da scorrere con il dito**:
   - Interior design = render di progetto
