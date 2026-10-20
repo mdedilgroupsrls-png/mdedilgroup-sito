@@ -1,7 +1,7 @@
 # Post social – articolo "Quanto costa ristrutturare un bagno a Roma" (20/10/2026)
 
 Da programmare su Metricool (brand 7377222, Europe/Rome) **subito dopo la pubblicazione del sito** (i file devono essere online), alle **19:00**.
-- Reel (skill md-edil-reels: voce Rosa – la voce salvata –, sottotitoli karaoke, hook, base deep house originale, 40 s): https://mdedilgroup.it/video/articolo-bagno-roma-reel.mp4 – copertina https://mdedilgroup.it/img/social-articolo-bagno-roma-copertina.jpg
+- Reel (skill md-edil-reels: voce Rosa – la voce salvata –, sottotitoli karaoke, hook, base deep house originale, 45 s; voce aggiornata con 6.500 €): https://mdedilgroup.it/video/articolo-bagno-roma-reel.mp4 – copertina https://mdedilgroup.it/img/social-articolo-bagno-roma-copertina.jpg
 - Storia Instagram: https://mdedilgroup.it/img/social-articolo-bagno-roma-storia.jpg (sticker Link → articolo)
 - Link articolo: https://mdedilgroup.it/quanto-costa-ristrutturare-bagno-roma
 - Reti: **Instagram TRIAL_REEL** (regola fissa), Facebook REEL, TikTok, YouTube short (madeForKids false), Threads, LinkedIn. **Mai Google Business per i reel** (regola della skill).
