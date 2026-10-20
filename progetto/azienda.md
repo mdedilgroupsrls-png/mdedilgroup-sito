@@ -32,7 +32,7 @@ Decisione di Eugenio del 16/10/2026 (sera), per non confondere i clienti:
 Scritte così nel fondo di tutte le pagine, nei contatti della Home, nell'informativa privacy e nell'intestazione del preventivo PDF. Nei dati strutturati (JSON-LD) restano tutti e due gli indirizzi, prima Via Po.
 
 ## Zone di lavoro
-- Ristrutturazioni: **Roma e Milano** (sul sito vanno citate entrambe), con Roma e Lazio come zona principale
+- Ristrutturazioni: **Roma e Milano** (sul sito vanno citate entrambe), con Roma e Lazio come zona principale. **Milano solo per ristrutturazioni complete** (cantieri interi), non per bagni o lavori piccoli (Eugenio, 20/10/2026)
 - Case in legno: **tutta Italia**
 
 ## Posizionamento
