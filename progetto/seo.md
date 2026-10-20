@@ -74,6 +74,13 @@ Eugenio: finita una pagina si passa alla successiva; 2-3 pagine per ogni pagina 
 - **Infissi:** [ ] Sostituzione finestre in PVC: costi e domande · [ ] Tapparelle e zanzariere (foto Pracal e Primed già sul sito)
 - **Case in legno:** [ ] Permessi e fondazioni per una casa in legno · [ ] Case A-frame: modelli e prezzi
 
+## Articoli del mese (Eugenio, 20/10/2026)
+- **Un articolo al mese** (non di più: i dettagli da raccontare sono pochi). Promemoria automatico il giorno 1 di ogni mese.
+- Sezione **"Dal nostro taccuino"** di nuovo nella **Home** con gli ultimi 3 articoli: unica eccezione alla regola "niente pagine nuove in Home" (ok di Eugenio).
+- Ogni articolo: pagina propria con parole chiave, solo foto e dati veri di Eugenio, link al simulatore e al modulo; in sitemap e `llms.txt`.
+- Per ogni articolo anche: **post per tutti i social tramite Metricool** (immagine 1080×1350 Nero & Oro, testo, link, hashtag, "📍 Roma, Lazio, Italia"), programmato **solo dopo l'ok di Eugenio**; **storia Instagram** 1080×1920 da pubblicare con lo sticker Link.
+- Primo argomento proposto: angoli a 45° a jolly (in attesa di conferma).
+
 ## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**, ma **al massimo 3-4 domande per messaggio**, messaggi brevi)
 - Google Business: sembra verificato, da controllare insieme (schermate di categorie, servizi, zona) – Servizi Locali ancora in verifica
 - Bagno: [x] lavoro raccontato con foto durante/dopo (villa all'Olgiata, 20/10/2026). Superficie (circa 4–5 m²) e durata (più di una settimana) inserite. Ancora utile: altri bagni con foto e zona quando ci sono. **Non usare per ora `img/bagno-lastre.webp` (bagno in cantiere) né `img/dettaglio-impianti.webp`**: Eugenio manderà più avanti le foto del bagno finito (20/10/2026)
