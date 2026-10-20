@@ -35,6 +35,13 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 .models{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;padding:4px 0 18px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
 .mdl{flex:0 0 min(62vw,230px);scroll-snap-align:start;background:var(--bg2);border:1px solid var(--line);color:var(--ink);text-align:left;padding:0;cursor:pointer;font:inherit;transition:border-color .25s,transform .3s}
 .mdl:hover{border-color:var(--gold)}
+/* frecce per scorrere il catalogo col mouse (dal computer) */
+.mwrap{position:relative}
+.mfr{position:absolute;top:calc(50% - 32px);z-index:3;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:rgba(14,13,11,.88);color:var(--gold2);font-size:22px;line-height:1;cursor:pointer;display:none;align-items:center;justify-content:center;transition:background .2s,color .2s,opacity .2s}
+.mfr:hover{background:var(--gold);color:#0E0D0B}
+.mfr:disabled{opacity:.25;cursor:default}
+.mfr.sx{left:-10px}.mfr.dx{right:-10px}
+@media (hover:hover) and (pointer:fine){.mfr{display:flex}.models{cursor:grab}.models.drag{cursor:grabbing;scroll-snap-type:none}}
 .mdl[aria-pressed="true"]{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
 .mdl img{aspect-ratio:16/10;object-fit:cover;width:100%}
 .mdl span{display:block;padding:10px 12px 12px}
@@ -184,7 +191,7 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 </div>
 
 <h2 id="simulatore" style="font-size: 22px; margin-bottom: 14px; scroll-margin-top: 16px">1. Scegli il modello</h2>
-<div class="models" id="models" role="group" aria-label="Modelli di casa in legno"></div>
+<div class="mwrap"><button type="button" class="mfr sx" id="mPrev" aria-label="Modelli precedenti">‹</button><div class="models" id="models" role="group" aria-label="Modelli di casa in legno"></div><button type="button" class="mfr dx" id="mNext" aria-label="Altri modelli">›</button></div>
 <p class="misura"><b>Non trovi il modello giusto?</b> Realizziamo anche case in legno su misura: modifichiamo un modello del catalogo o ne progettiamo uno nuovo. <a href="https://wa.me/393282145266?text=Buongiorno%2C%20vorrei%20una%20casa%20in%20legno%20su%20misura" target="_blank" rel="noopener">Parlaci del tuo progetto →</a></p>
 
 <section class="sim">
@@ -378,6 +385,24 @@ M.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.cla
   // scheda grande con foto e planimetria; "Simula il prezzo" porta alle voci
   if(window.MDScheda)MDScheda.open(m.img.replace(/^m-/,''),{simula:()=>setTimeout(()=>document.querySelector('.sim').scrollIntoView({block:'start'}),60)})};models.append(b)});
 
+// frecce e trascinamento col mouse per scorrere il catalogo dal computer
+(function(){
+ const pr=document.getElementById('mPrev'),nx=document.getElementById('mNext');
+ const passo=()=>Math.max(240,models.clientWidth*.8);
+ const agg=()=>{pr.disabled=models.scrollLeft<=4;nx.disabled=models.scrollLeft+models.clientWidth>=models.scrollWidth-4};
+ pr.onclick=()=>models.scrollBy({left:-passo(),behavior:'smooth'});
+ nx.onclick=()=>models.scrollBy({left:passo(),behavior:'smooth'});
+ models.addEventListener('scroll',agg,{passive:true});addEventListener('resize',agg);addEventListener('load',agg);agg();
+ // trascinando col mouse il catalogo scorre; un trascinamento non apre la scheda del modello
+ let giu=false,x0=0,s0=0,mosso=0;
+ models.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button!==0)return;giu=true;mosso=0;x0=e.clientX;s0=models.scrollLeft});
+ addEventListener('pointermove',e=>{if(!giu)return;const dx=e.clientX-x0;mosso=Math.max(mosso,Math.abs(dx));if(mosso>5){models.classList.add('drag');models.scrollLeft=s0-dx}});
+ addEventListener('pointerup',()=>{if(giu){giu=false;models.classList.remove('drag')}});
+ models.addEventListener('click',e=>{if(mosso>5){e.preventDefault();e.stopPropagation();mosso=0}},true);
+ models.addEventListener('dragstart',e=>e.preventDefault());
+ // rotella verticale del mouse sopra il catalogo: scorre in orizzontale
+ models.addEventListener('wheel',e=>{if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){const fine=models.scrollLeft+models.clientWidth>=models.scrollWidth-2,inizio=models.scrollLeft<=0;if((e.deltaY>0&&!fine)||(e.deltaY<0&&!inizio)){models.scrollLeft+=e.deltaY;e.preventDefault()}}},{passive:false});
+})();
 const btn=(k,label)=>`<button type="button" class="nm" aria-expanded="false" aria-controls="d-${k}" data-k="${k}"><span>${label}</span><span class="i" aria-hidden="true">+</span></button>`;
 function draw(){
  const m=M[st.m];if(!st.area)st.area=m.ut;let h='';
