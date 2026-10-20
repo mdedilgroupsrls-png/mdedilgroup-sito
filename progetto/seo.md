@@ -92,6 +92,13 @@ Eugenio: finita una pagina si passa alla successiva; 2-3 pagine per ogni pagina 
 - **Reel:** ogni articolo ha il **suo reel diverso** (mai lo stesso reel, mai la stessa foto in due reel: registro in `progetto/social/foto-usate-nei-reel.md`). Il reel si mette anche **dentro l'articolo** (video) e si salva sul sito in `video/`, così Metricool lo prende direttamente da mdedilgroup.it: niente Google Drive, niente lavoro per Eugenio.
 - **Registro articoli:** 1) 20/10/2026 – Interni – "Quanto costa ristrutturare un bagno a Roma"; 2) 20/10/2026 – Detrazioni – "Bonus ristrutturazione e infissi 2026" (prossimo: un'area diversa da interni, per esempio esterni o infissi).
 
+## Calendario contenuti (Eugenio, 20/10/2026)
+- **Sito aggiornato una volta a settimana** (giorno da confermare con Eugenio).
+- **Un articolo a settimana, alternando:** lavori (dettagli, bagno, esterni, infissi, case in legno… mai due di seguito della stessa pagina) → detrazioni fiscali → lavori → detrazioni…
+- **Un reel al giorno su Metricool, mai due nello stesso giorno**: prima di programmare leggere il calendario (getScheduledPosts) e riempire solo i giorni vuoti. I reel si programmano **solo dopo** l'aggiornamento del sito che mette online i loro video.
+- **Reel tutti diversi:** uno per ogni lavoro (ogni bagno separato), uno per ogni articolo, uno per ogni dettaglio, uno per ogni detrazione; formati e musiche a rotazione (skill md-edil-reels). Per avere 7 reel a settimana servono foto e video nuovi di Eugenio.
+- Calendario Metricool al 20/10/2026 (reel già programmati): 21/10, 24/10, 27/10, 3/11, 10/11, 17/11 (più foto Google Business 27/10, 3/11, 10/11, 17/11). Giorni liberi da riempire.
+
 ## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**, ma **al massimo 3-4 domande per messaggio**, messaggi brevi)
 - Google Business: sembra verificato, da controllare insieme (schermate di categorie, servizi, zona) – Servizi Locali ancora in verifica
 - Bagno: [x] lavoro raccontato con foto durante/dopo (villa all'Olgiata, 20/10/2026). Superficie (circa 4–5 m²) e durata (più di una settimana) inserite. Ancora utile: altri bagni con foto e zona quando ci sono. **Non usare per ora `img/bagno-lastre.webp` (bagno in cantiere) né `img/dettaglio-impianti.webp`**: Eugenio manderà più avanti le foto del bagno finito (20/10/2026)
