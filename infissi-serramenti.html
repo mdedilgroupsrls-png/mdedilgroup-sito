@@ -229,7 +229,7 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 <h3><span>1</span>Infissi in PVC Rehau Synego, doppio vetro</h3>
 <p class="hint">Per ogni infisso scegli se è a battente (finestra o porta-finestra) o scorrevole.</p>
 <p class="lab">Colore degli infissi <em id="colInfName"></em></p>
-<div class="strip" id="colInf" role="radiogroup" aria-label="Colore degli infissi"></div>
+<div class="strip" id="colInf" data-frecce role="radiogroup" aria-label="Colore degli infissi"></div>
 <div class="rows" id="rowsInf"></div>
 <button type="button" class="add" data-add="inf">+ Aggiungi altro infisso</button>
 <p class="sub">Totale infissi <b id="subInf">0,00 €</b></p>
@@ -257,7 +257,7 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 <h3><span>4</span>Tapparelle in alluminio coibentato</h3>
 <p class="hint">Scrivi le misure di ogni tapparella: il prezzo compare subito, uguale per tutti i colori.</p>
 <p class="lab">Colore delle tapparelle <em id="colTapName"></em></p>
-<div class="strip" id="colTap" role="radiogroup" aria-label="Colore delle tapparelle"></div>
+<div class="strip" id="colTap" data-frecce role="radiogroup" aria-label="Colore delle tapparelle"></div>
 <button type="button" class="copy" data-copy="tap">Riprendi le misure degli infissi indicati sopra</button>
 <div class="rows" id="rowsTap"></div>
 <button type="button" class="add" data-add="tap">+ Aggiungi una tapparella</button>
@@ -270,7 +270,7 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 <h3><span>5</span>Zanzariere in alluminio</h3>
 <p class="hint">Per ogni zanzariera scrivi le misure e scegli se è per una finestra o per una porta-finestra: il prezzo compare subito, uguale per tutti i modelli e i colori.</p>
 <p class="lab">Colore delle zanzariere <em id="colZanName"></em></p>
-<div class="strip" id="colZan" role="radiogroup" aria-label="Colore delle zanzariere"></div>
+<div class="strip" id="colZan" data-frecce role="radiogroup" aria-label="Colore delle zanzariere"></div>
 <button type="button" class="copy" data-copy="zan">Riprendi le misure degli infissi indicati sopra</button>
 <div class="rows" id="rowsZan"></div>
 <button type="button" class="add" data-add="zan">+ Aggiungi una zanzariera</button>
@@ -352,6 +352,7 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
     'Infissi Rehau Synego e Synego Slide con doppio vetro. Il prezzo definitivo viene confermato dopo il sopralluogo, con le misure prese dai nostri tecnici, e con la firma del contratto. Sopralluogo e preventivo sono gratuiti.',
     'Le voci indicate "al sopralluogo" riguardano pezzi fuori misura e si valutano in cantiere.'] }; } });</script>
 <script>if(location.hash==="#simulatore"){addEventListener("load",function(){var e=document.getElementById("simulatore");if(e)e.scrollIntoView()})}</script>
+<script src="/js/frecce.js"></script>
 <script src="/js/sicurezza.js" defer></script>
 </body>
 </html>

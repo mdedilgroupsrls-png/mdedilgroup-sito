@@ -42,6 +42,7 @@
     belt.addEventListener('pointerup', lascia); belt.addEventListener('pointercancel', lascia);
     belt.addEventListener('dragstart', function (e) { e.preventDefault(); });
     belt.addEventListener('wheel', function (e) { if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { x -= e.deltaX; e.preventDefault(); } }, { passive: false });
+    if (window.MDFrecce) MDFrecce.bottoni(belt, function () { boost += 1400; }, function () { boost -= 1400; }, belt.getAttribute('aria-label'));
     belt.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowRight') { boost -= 1400; e.preventDefault(); }
       if (e.key === 'ArrowLeft') { boost += 1400; e.preventDefault(); }

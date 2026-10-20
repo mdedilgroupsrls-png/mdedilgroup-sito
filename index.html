@@ -180,7 +180,7 @@ section{padding-block:clamp(70px,10vw,130px);position:relative;z-index:2}
 .flow.wide figure{flex-basis:min(84vw,580px)}
 .flow.wide::before,.flow.wide::after{flex-basis:calc(50% - min(42vw,290px) - 22px)}
 .flow.wide .frame{aspect-ratio:3/2}
-.flow img{width:100%;height:100%;object-fit:cover}
+.flow img{width:100%;height:100%;object-fit:cover;-webkit-user-drag:none;user-select:none}
 .flow figcaption{padding-top:12px;font-size:15px}
 
 /* esterni: descrizione e zona dei lavori */
@@ -452,7 +452,7 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
   <div class="wrap">
     <div class="head"><div><div class="eyebrow">I nostri cantieri</div><h2>Realizziamo lavori chiavi in mano.</h2><i class="tl"></i></div><span class="hint">Scorrono da sole · tocca per fermare</span></div>
   </div>
-  <div class="flow" data-flow>
+  <div class="flow" data-flow data-frecce="solo-frecce" aria-label="Lavori chiavi in mano">
     <figure><div class="frame"><img src="/img/lavoro-01.webp" alt="Corridoio con binari LED a soffitto, tende a tutta altezza e specchio ovale, Roma Olgiata" loading="lazy"></div><figcaption>Corridoio con binari LED e tende a tutta altezza<span class="zona"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Roma · Olgiata</span></figcaption></figure>
     <figure><div class="frame"><img src="/img/lavoro-02.webp" alt="Soggiorno con boiserie in rovere, parete TV integrata e controsoffitto luminoso, Roma Corso Francia" loading="lazy"></div><figcaption>Soggiorno con boiserie in rovere e parete TV<span class="zona"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Roma · Corso Francia</span></figcaption></figure>
     <figure><div class="frame"><img src="/img/lavoro-03.webp" alt="Bagno in gres effetto pietra scura con specchio retroilluminato, Roma Corso Francia" loading="lazy"></div><figcaption>Bagno in gres effetto pietra scura<span class="zona"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Roma · Corso Francia</span></figcaption></figure>
@@ -518,7 +518,7 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
       <ul class="est-list"><li>Facciate</li><li>Cappotto termico</li><li>Coperture e tetti</li><li>Terrazzi e lastrici solari</li><li>Balconi</li><li>Aree esterne</li></ul>
     </div>
   </div>
-  <div class="flow wide" data-flow>
+  <div class="flow wide" data-flow data-frecce="solo-frecce" aria-label="Esterni e facciate">
     <figure><div class="frame"><img src="/img/facciata-01.webp" alt="Facciata condominiale, cantiere in corso" loading="lazy"></div><figcaption>Facciata condominiale – cantiere in corso</figcaption></figure>
     <figure><div class="frame"><img src="/img/facciata-02.webp" alt="Facciata condominiale, ponteggio in opera" loading="lazy"></div><figcaption>Facciata condominiale – ponteggio in opera</figcaption></figure>
     <figure><div class="frame"><img src="/img/facciata-03.webp" alt="Facciata condominiale, lavoro finito" loading="lazy"></div><figcaption>Facciata condominiale – lavoro finito</figcaption></figure>
@@ -554,7 +554,7 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
   <div class="wrap">
     <div class="head"><div><div class="eyebrow">Dal nostro Instagram · @md_edil_group</div><h2>Gli ultimi reel</h2><i class="tl"></i></div><p>Gli ultimi reel pubblicati sul nostro profilo: scorri verso sinistra per vedere quelli precedenti.</p></div>
     <div class="reels-wrap">
-    <div class="reels" id="reels">
+    <div class="reels" id="reels" data-frecce="solo-frecce" aria-label="Reel di Instagram">
 <!-- REELS:INIZIO -->
       <a class="reel" href="https://www.instagram.com/reel/DdtC7kWumac/"><div class="v"><img src="https://hop.behold.pictures/eyJ1IjoiTGVmdGNvdXVwOFJ5cDV3S3BVZjFERUxDMFZoMiIsImYiOiJYZXFuVDIyUnllS0xHWDhZaGJiaiIsInAiOiIxODEyMTk5NTU4MDcxMDAzOSIsImgiOiIxaGgwdXBzIn0.jpg?class=squareLarge" alt="Copertina del reel: Da fuori colpisce. Dentro sorprende." loading="lazy"><span class="ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>Reel · 25 settembre 2026</span><span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span><span class="stats"><span title="Mi piace"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4 2.3h3.2C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"></path></svg><b class="cnt" data-n="421">421</b></span><span title="Commenti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg><b class="cnt" data-n="440">440</b></span></span></div><p class="cap"><b>Da fuori colpisce. Dentro sorprende.</b><em>Questa A-frame L personalizzata, alta 8 metri, ospita un soggiorno con angolo cottura di circa 40 m², un bagno moderno e un ampio soppalco con una comoda camera da letto. Il calore del legno…</em></p><span class="tags">#AFrame #CaseInLegno #CasePrefabbricate #CasaDeiSogni #MDEdilGroup</span></a>
       <a class="reel" href="https://www.instagram.com/reel/DdqnsqJuXCT/"><div class="v"><img src="https://hop.behold.pictures/eyJ1IjoiTGVmdGNvdXVwOFJ5cDV3S3BVZjFERUxDMFZoMiIsImYiOiJYZXFuVDIyUnllS0xHWDhZaGJiaiIsInAiOiIxNzk5NjI1NDc4MjA0Mjk3NyIsImgiOiIxaHJkZzhzIn0.jpg?class=squareLarge" alt="Copertina del reel: Vivresti in una casa così?" loading="lazy"><span class="ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>Reel · 24 settembre 2026</span><span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span><span class="stats"><span title="Mi piace"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4 2.3h3.2C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"></path></svg><b class="cnt" data-n="528">528</b></span><span title="Commenti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg><b class="cnt" data-n="692">692</b></span></span></div><p class="cap"><b>Vivresti in una casa così?</b><em>Immagina di svegliarti qui: la luce dalle grandi vetrate, il calore del legno e uno spazio tutto tuo. Guarda il video fino alla fine e scopri come prende forma Freya</em></p><span class="tags">#CaseInLegno #CasePrefabbricate #CasaDeiSogni #TinyHouseItalia #MDEdilGroup</span></a>
@@ -564,7 +564,7 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
       <a class="reel" href="https://www.instagram.com/reel/DbpttIaB7Qc/"><div class="v"><img src="https://hop.behold.pictures/eyJ1IjoiTGVmdGNvdXVwOFJ5cDV3S3BVZjFERUxDMFZoMiIsImYiOiJYZXFuVDIyUnllS0xHWDhZaGJiaiIsInAiOiIxODExMjQ2NTQ2Mjc2Njc4MCIsImgiOiIxM3NsNXpqIn0.jpg?class=squareLarge" alt="Copertina del reel: Hai un terreno immerso nella natura o possiedi già una struttura…" loading="lazy"><span class="ig"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>Reel · 5 agosto 2026</span><span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span><span class="stats"><span title="Mi piace"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4 2.3h3.2C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"></path></svg><b class="cnt" data-n="889">889</b></span><span title="Commenti"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg><b class="cnt" data-n="1254">1.254</b></span></span></div><p class="cap"><b>Hai un terreno immerso nella natura o possiedi già una struttura…</b><em>hai un terreno immerso nella natura o possiedi già una struttura ricettiva, la Mini Barnhouse Boutique da 21 m² potrebbe essere la soluzione ideale per valorizzare il tuo spazio. Una struttura…</em></p><span class="tags">#MiniBarnHouse #TinyHouse #TinyHouseItalia #Bioedilizia #CasaPrefabbricata</span></a>
     <!-- REELS:FINE -->
     </div>
-    <p class="hint" style="margin-top:6px">Scorri col dito ←</p>
+    <p class="hint" style="margin-top:6px">Scorri col dito o con le frecce ←</p>
     </div>
     <p class="note" id="reelNota" style="margin-top:18px;font-size:12.5px;color:var(--mute)">Reel e numeri presi dal nostro profilo Instagram. Tocca un reel per guardarlo.</p>
     <div class="cta" style="justify-content:flex-start;animation:none;margin-top:24px"><a class="btn" href="https://www.instagram.com/md_edil_group/">Seguici su Instagram</a><p class="igf"><b id="igFollower">47.824</b> persone ci seguono su Instagram</p></div>
@@ -633,6 +633,7 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
 <a class="wa" href="https://wa.me/393282145266?text=Buongiorno%2C%20vorrei%20informazioni%20per%20un%20progetto" aria-label="Scrivici su WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1z"/></svg></a>
 <nav class="mbar" aria-label="Contatti rapidi"><a href="tel:+393282145266">Chiama</a><a href="https://wa.me/393282145266">WhatsApp</a><a href="#contatti">Preventivo</a></nav>
 
+<script src="/js/frecce.js"></script>
 <script>
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -735,6 +736,7 @@ function makeBelt(belt,tr,speed){
   belt.addEventListener('dragstart',e=>e.preventDefault());
   belt.addEventListener('wheel',e=>{if(Math.abs(e.deltaX)>Math.abs(e.deltaY)){x-=e.deltaX;e.preventDefault()}},{passive:false});
   belt.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){boost-=1400;e.preventDefault()}if(e.key==='ArrowLeft'){boost+=1400;e.preventDefault()}});
+  if(window.MDFrecce)MDFrecce.bottoni(belt,()=>{boost+=1400},()=>{boost-=1400},belt.getAttribute('aria-label')); // frecce ‹ › dal computer
 }
 makeBelt(document.getElementById('belt'),document.getElementById('beltTr'),42);
 makeBelt(document.getElementById('cbelt'),document.getElementById('cbeltTr'),36);
@@ -829,9 +831,15 @@ document.querySelectorAll('[data-flow]').forEach(f=>{
   f.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
   // trascinamento col mouse
   let down=false,sx=0,sl=0;
-  f.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;sx=e.clientX;sl=f.scrollLeft;f.style.scrollSnapType='none'});
-  addEventListener('pointerup',()=>{if(down){down=false;f.style.scrollSnapType=''}});
-  f.addEventListener('pointermove',e=>{if(down)f.scrollLeft=sl-(e.clientX-sx)});
+  f.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button!==0)return;down=true;sx=e.clientX;sl=f.scrollLeft;f.style.scrollSnapType='none'});
+  addEventListener('pointerup',e=>{if(!down)return;down=false;const dx=e.clientX-sx;
+    // lasciando il mouse si passa alla foto successiva (o precedente) nella direzione del trascinamento
+    if(Math.abs(dx)>40){const r=f.getBoundingClientRect(),mid=r.left+r.width/2,c=g=>{const q=g.getBoundingClientRect();return q.left+q.width/2},dir=dx<0?1:-1;
+      let best=null;figs.forEach(g=>{const o=(c(g)-mid)*dir;if(o>5&&(!best||o<(c(best)-mid)*dir))best=g});
+      if(best){f.scrollTo({left:f.scrollLeft+c(best)-mid,behavior:'smooth'});setTimeout(()=>{f.style.scrollSnapType=''},600);return}}
+    f.style.scrollSnapType=''});
+  addEventListener('pointermove',e=>{if(down)f.scrollLeft=sl-(e.clientX-sx)});
+  f.addEventListener('dragstart',e=>e.preventDefault()); // senza questo il browser trascina la foto invece della galleria
   // parte dalla seconda foto, così si vede subito l'effetto
   requestAnimationFrame(()=>{const g=figs[1];if(g)f.scrollLeft=g.offsetLeft-(f.clientWidth-g.offsetWidth)/2;upd()});
   // scorrimento automatico: una foto ogni 3,5 s quando la galleria è sullo schermo; si ferma mentre la persona
@@ -842,6 +850,7 @@ document.querySelectorAll('[data-flow]').forEach(f=>{
   const ferma=()=>{pausa=Date.now()+5000;prima=-1};
   ['pointerdown','touchstart','wheel','mouseenter','focusin'].forEach(ev=>f.addEventListener(ev,ferma,{passive:true}));
   f.addEventListener('mousemove',ferma,{passive:true});
+  if(f.parentElement.classList.contains('fr-wrap'))f.parentElement.addEventListener('click',ferma,true); // anche le frecce ‹ › fermano lo scorrimento automatico
   setInterval(()=>{
     if(!vis||Date.now()<pausa||document.hidden)return;
     // posizioni misurate sullo schermo: la foto più vicina al centro e quella dopo
