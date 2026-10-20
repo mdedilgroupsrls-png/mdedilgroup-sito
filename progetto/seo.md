@@ -74,8 +74,12 @@ Eugenio: finita una pagina si passa alla successiva; 2-3 pagine per ogni pagina 
 - **Infissi:** [ ] Sostituzione finestre in PVC: costi e domande · [ ] Tapparelle e zanzariere (foto Pracal e Primed già sul sito)
 - **Case in legno:** [ ] Permessi e fondazioni per una casa in legno · [ ] Case A-frame: modelli e prezzi
 
-## Articoli del mese (Eugenio, 20/10/2026)
-- **Un articolo al mese** (non di più: i dettagli da raccontare sono pochi). Promemoria automatico il giorno 1 di ogni mese.
+## Articoli (Eugenio, 20/10/2026)
+- **Un articolo ogni 3 settimane** (prima era uno al mese). Promemoria automatico che si riprogramma ogni 21 giorni.
+- **Non serve mostrare a Eugenio** testi, reel e storie prima di programmarli: Claude li prepara e li programma da solo dopo la pubblicazione del sito.
+- **Formato social:** meglio sempre un **reel** (video verticale), con descrizione adatta a ogni social. **Instagram sempre TRIAL_REEL ("in prova")**; gli altri social normali (Facebook reel, TikTok, YouTube short, LinkedIn, Threads, Google Business).
+- **Posizione:** "📍 Roma, Lazio, Italia" per tutte le lavorazioni a Roma; per le **case in legno** "📍 Italia" (tutta Italia).
+- **Obiettivo di ogni post:** portare le persone sul sito a fare la simulazione giusta: interni → simulatore interni (Roma); esterni e facciate → simulatore esterni (Roma); infissi → simulatore infissi (Roma); case in legno → simulatore case in legno (tutta Italia). Link sempre alla pagina con il simulatore o all'articolo che lo linka.
 - Sezione **"Dal nostro taccuino"** di nuovo nella **Home** con gli ultimi 3 articoli: unica eccezione alla regola "niente pagine nuove in Home" (ok di Eugenio).
 - Ogni articolo: pagina propria con parole chiave, solo foto e dati veri di Eugenio, link al simulatore e al modulo; in sitemap e `llms.txt`.
 - **Pubblicazione social degli articoli (Eugenio, 20/10/2026):** Claude programma su Metricool (brand 7377222, Europe/Rome) il post di ogni articolo su **tutti i social**; **su Instagram sempre "in prova" (TRIAL_REEL)**, che richiede un **video**: Claude prepara un video verticale breve con le foto dell'articolo. Le immagini e il video devono avere un indirizzo pubblico, quindi si programma **dopo la pubblicazione del sito** e dopo l'ok di Eugenio sul testo.
