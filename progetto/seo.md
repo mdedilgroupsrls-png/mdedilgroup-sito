@@ -66,15 +66,21 @@ Metodo: un passo alla volta. Claude spiega cosa fare e perché, mostra la situaz
 - **Mese 6 – consolidamento:** audit di confronto, contatti e contratti, piano successivo
 - **Report:** controllo settimanale breve (statistiche anonime) e report mensile (Search Console + statistiche + contatti/contratti che Eugenio comunica)
 
-## Domande aperte per Eugenio (aggiornare quando risponde)
-- Pagina bagno: tempi medi di un bagno? Foto prima/durante/dopo di 1–2 bagni con zona? (Prezzo fisso: NO, deciso il 20/10/2026)
-- **Strutture ricettive / alberghiere** (Eugenio ha molto materiale, 20/10/2026): chiedergli foto (anche in lavorazione), zone, tipo di struttura e lavori fatti, per la pagina di approfondimento dentro /ristrutturazioni-interni
-- Pagine di approfondimento esterni (terrazzi e impermeabilizzazioni, facciate condominio…): foto anche **in fase di lavorazione**, dentro /ristrutturazioni-esterni
+## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**)
+- Bagno chiavi in mano: con "materiali compresi, esclusi rivestimenti e accessori" (20/10/2026) **sanitari, rubinetteria, piatto e box doccia sono compresi?** E il **pavimento** del bagno è compreso o escluso come i rivestimenti?
+- Pagina bagno: foto prima/durante/dopo di 1–2 bagni con zona
+- **Strutture ricettive / alberghiere** (Eugenio ha molto materiale): foto (anche in lavorazione), tipo di struttura, zona, lavori fatti
+- Pagine esterni (terrazzi e impermeabilizzazioni, facciate condominio…): foto anche in fase di lavorazione, con zona
 - Search Console: schermate Rendimento (28 giorni) e Pagine
-- Google Analytics 4: crea la proprietà e manda il codice G-…
-- Google Business e Servizi Locali: schermate di categorie, servizi, zona, stato della verifica
+- Google Analytics 4: creare la proprietà e mandare il codice G-…
+- Google Business e Servizi Locali: schermate di categorie, servizi, zona, stato della verifica (organizzazione e assicurazione)
 - Orari di apertura; Milano resta tra le zone servite?
+- Vecchie, ancora senza risposta: con il cappotto si può scegliere anche la finitura silossanica? Modalità di pagamento anche nel PDF delle case in legno? Infissi: limiti per demolizione e posa (oggi doppio prezzo oltre 3,22 m², sopralluogo oltre 6,44 m²) vanno bene? Azzerare il contatore dei preventivi PDF dopo le prove?
+- Risposte avute (20/10/2026): prezzo fisso del bagno NO; bagno finito di norma in una settimana; bagno: materiali compresi, esclusi rivestimenti e accessori
 
+## Regole
+- **Struttura del sito (Eugenio, 20/10/2026):** menu e Home restano con le pagine principali. Ogni nuova pagina SEO è un approfondimento **dentro** la pagina madre: lavori interni (bagno, strutture ricettive, alberghi, locali…) dentro /ristrutturazioni-interni; lavori esterni (terrazzi, facciate, coperture…) dentro /ristrutturazioni-esterni, con foto anche in fase di lavorazione. Collegamento solo dal riquadro "Approfondimenti" **in fondo** alla pagina madre, mai dal menu né dalla Home: nascoste alla vista ma visibili a Google (sitemap, link interno, `llms.txt`, richiesta di indicizzazione in Search Console).
+- **Prezzi:** niente prezzi "a partire da" o fissi nelle pagine di approfondimento senza l'ok di Eugenio: ogni lavoro ha un costo diverso.
 - Niente testi copiati da altri siti né parole chiave ripetute a forza: una frase deve suonare naturale a chi la legge.
 - Niente prezzi, numeri o recensioni inventati.
 - Una pagina = un argomento principale. Le pagine nuove vanno anche in `sitemap.xml`.
