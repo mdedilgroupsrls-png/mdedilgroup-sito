@@ -93,9 +93,9 @@ Eugenio: finita una pagina si passa alla successiva; 2-3 pagine per ogni pagina 
 - **Registro articoli:** 1) 20/10/2026 – Interni – "Quanto costa ristrutturare un bagno a Roma"; 2) 20/10/2026 – Detrazioni – "Bonus ristrutturazione e infissi 2026" (prossimo: un'area diversa da interni, per esempio esterni o infissi).
 
 ## Calendario contenuti (Eugenio, 20/10/2026)
-- **Sito aggiornato una volta a settimana** (giorno da confermare con Eugenio).
+- **Sito aggiornato ogni lunedì, in automatico** (Eugenio, 20/10/2026: il lunedì Claude pubblica senza aspettare "aggiorna il sito"; compito automatico "Aggiornamento settimanale del sito", lunedì 8:51). Negli altri giorni si pubblica solo se Eugenio scrive "aggiorna il sito".
 - **Un articolo a settimana, alternando:** lavori (dettagli, bagno, esterni, infissi, case in legno… mai due di seguito della stessa pagina) → detrazioni fiscali → lavori → detrazioni…
-- **Un reel al giorno su Metricool, mai due nello stesso giorno**: prima di programmare leggere il calendario (getScheduledPosts) e riempire solo i giorni vuoti. I reel si programmano **solo dopo** l'aggiornamento del sito che mette online i loro video.
+- **Un reel al giorno su Metricool, solo da martedì a sabato alle 19:00** (mai lunedì né domenica), **mai due nello stesso giorno**: prima di programmare leggere il calendario (getScheduledPosts) e riempire solo i giorni vuoti. I reel si programmano **solo dopo** l'aggiornamento del sito che mette online i loro video.
 - **Reel tutti diversi:** uno per ogni lavoro (ogni bagno separato), uno per ogni articolo, uno per ogni dettaglio, uno per ogni detrazione; formati e musiche a rotazione (skill md-edil-reels). Per avere 7 reel a settimana servono foto e video nuovi di Eugenio.
 - Calendario Metricool al 20/10/2026 (reel già programmati): 21/10, 24/10, 27/10, 3/11, 10/11, 17/11 (più foto Google Business 27/10, 3/11, 10/11, 17/11). Giorni liberi da riempire.
 
