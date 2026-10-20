@@ -96,9 +96,17 @@ Eugenio: finita una pagina si passa alla successiva; 2-3 pagine per ogni pagina 
 - **Sito aggiornato ogni lunedì, in automatico** (Eugenio, 20/10/2026: il lunedì Claude pubblica senza aspettare "aggiorna il sito"; compito automatico "Aggiornamento settimanale del sito", lunedì 8:51). Negli altri giorni si pubblica solo se Eugenio scrive "aggiorna il sito".
 - **Un articolo a settimana, alternando:** lavori (dettagli, bagno, esterni, infissi, case in legno… mai due di seguito della stessa pagina) → detrazioni fiscali → lavori → detrazioni…
 - **Un reel al giorno su Metricool, solo da martedì a sabato, in mattinata tra le 10:30 e le 12:00** (mai lunedì né domenica; se un giorno è già occupato si passa al primo giorno libero), **mai due nello stesso giorno**: prima di programmare leggere il calendario (getScheduledPosts) e riempire solo i giorni vuoti. I reel si programmano **solo dopo** l'aggiornamento del sito che mette online i loro video.
+- **Fabbrica dei reel (Eugenio, 20/10/2026):** da **ogni** contenuto nuovo (articolo, approfondimento, dettaglio, bagno, costi, detrazione, informazione) Claude genera almeno un reel. Ritmo della settimana: **giovedì** Claude prepara l'articolo della settimana e i reel dei contenuti nuovi (compito automatico "Articolo e reel della settimana") e li salva su `lavori-in-corso`; **lunedì** il sito si pubblica con i video; **martedì–sabato** un reel al giorno su Metricool nei giorni liberi. Eugenio fa anche reel suoi a parte: Claude controlla sempre il calendario e riempie solo i giorni vuoti. Prima di pubblicare il lunedì: se c'è un contenuto nuovo senza reel, il reel si fa prima.
 - **Reel tutti diversi:** uno per ogni lavoro (ogni bagno separato), uno per ogni articolo, uno per ogni dettaglio, uno per ogni detrazione; formati e musiche a rotazione (skill md-edil-reels). Per avere 7 reel a settimana servono foto e video nuovi di Eugenio.
 - **Spazio dei video (20/10/2026):** i reel si comprimono sempre a qualità web (H.264 crf 28, audio 96k: circa 4–5 MB per 40 s, qualità uguale a vista). Sul sito restano per sempre **solo i reel inseriti negli articoli**; i reel che servono solo ai social si caricano sul sito per farli prendere a Metricool (che ne salva una copia sua) e si **tolgono il lunedì dopo**. Limiti da tenere d'occhio: repository GitHub sotto 1 GB (oggi circa 60 MB), file sotto 100 MB, crediti di traffico Netlify (i video negli articoli partono solo se il visitatore preme play). Se in futuro lo spazio cresce troppo: spostare i reel su Google Drive collegato a Metricool.
 - Calendario Metricool al 20/10/2026 (reel già programmati): 21/10, 24/10, 27/10, 3/11, 10/11, 17/11 (più foto Google Business 27/10, 3/11, 10/11, 17/11). Giorni liberi da riempire.
+
+### Reel da fare (contenuti già sul sito ma senza reel, 20/10/2026)
+Foto non ancora usate in nessun reel, quindi pronte:
+- [ ] Dettaglio collettore Teco (Piazza Fiume) – `dettaglio-collettore-1..4`
+- [ ] Dettaglio angoli a 45° a jolly – `dettaglio-jolly-1..3`
+- [ ] Dettaglio tessuto in fibra di vetro (Piazza Fiume) – `dettaglio-fibra-1..4`
+- [ ] Bagni singoli (Olgiata, Piazza Fiume, Porta Pia) e luci LED: le foto sono già nel reel dell'articolo bagno → servono foto o video nuovi di Eugenio
 
 ## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**, ma **al massimo 3-4 domande per messaggio**, messaggi brevi)
 - Google Business: sembra verificato, da controllare insieme (schermate di categorie, servizi, zona) – Servizi Locali ancora in verifica
