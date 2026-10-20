@@ -57,7 +57,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 17/10/2026 – Gallerie che scorrono da sole: Home (cantieri ed esterni), sotto il simulatore interni (25 foto chiavi in mano) e sotto il simulatore facciate (14 foto), file comune `js/nastro.js` (Eugenio)
 - [ ] Infissi e serramenti: nastro delle opere realizzate sotto il simulatore, **appena Eugenio manda le foto** (stesso `js/nastro.js`)
 - [x] 17/10/2026 – Icona del sito con il logo originale su fondo nero, per i risultati di Google (Eugenio)
-- [x] 20/10/2026 – Infissi: prezzo al m² anche oltre 3,22 m² (i m² in più si aggiungono allo stesso prezzo, tolta la fascia a 300 €/m²); massimo **4 m² a pezzo** per battenti e scorrevoli: oltre, niente prezzo, "al sopralluogo" (Eugenio)
+- [x] 20/10/2026 – Infissi: prezzo al m² anche oltre 3,22 m² (i m² in più si aggiungono allo stesso prezzo, tolta la fascia a 300 €/m²); massimo **4 m² a pezzo per i battenti e 6 m² per gli scorrevoli**: oltre, niente prezzo, "al sopralluogo" (Eugenio)
 - [x] 20/10/2026 – Frecce ‹ › e trascinamento col mouse su **tutte** le file che scorrono di lato (Home, case in legno, infissi, interni, facciate, interior design), file comune `js/frecce.js`; sul telefono si scorre col dito come prima (Eugenio). Corretto anche il trascinamento delle gallerie lavori/esterni della Home, che col mouse non andava
 - [x] 18/10/2026 – Reel della Home: solo quelli con almeno 50 mi piace o 5.000 visualizzazioni (sempre da Behold, niente Metricool – Eugenio)
 - [x] 17/10/2026 – CAP della sede legale: Via Po 22, 00198 Roma (fondo pagine, Home, privacy, PDF, dati strutturati)
