@@ -188,3 +188,4 @@ Regole decise da Eugenio:
 
 - **Case in legno – modalità di pagamento:** non vanno nel PDF, perché variano da cliente a cliente (Eugenio, 20/10/2026).
 - **Infissi – demolizione e posa:** prezzo doppio oltre 3,22 m² a pezzo, sopralluogo oltre 6,44 m² confermati da Eugenio (20/10/2026).
+- **Esempio reale bagno (Eugenio, 20/10/2026):** struttura ricettiva a Piazza Fiume, 6–7 m²: circa 7.000 € il bagno (simulatore: 6.850 € a 6 m², 7.200 € a 7 m²) + soffitto teso con LED ≈ 7.500 € IVA inclusa. Mostrato nella pagina bagno.
