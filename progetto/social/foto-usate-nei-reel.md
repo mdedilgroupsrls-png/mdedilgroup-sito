@@ -4,9 +4,10 @@
 |---|---|---|
 | Articolo bagno (20/10/2026) | video/articolo-bagno-roma-reel.mp4 | bagno-porta-pia-cantiere, bagno-porta-pia-finito, bagno-piazza-fiume-finito, bagno-piazza-fiume-inizio, bagno-piazza-fiume-posa, bagno-villa-olgiata-finito, bagno-villa-olgiata-cantiere-doccia, bagno-villa-olgiata-posa-lastre |
 | Articolo detrazioni 2026 (20/10/2026) | video/articolo-detrazioni-2026-reel.mp4 | lavoro-02, lavoro-14, lavoro-22, lavoro-04, synego-cucina, lavoro-18, lavoro-21, facciata-03 (storia: lavoro-02) |
-| Reel posa onice Piazza Fiume (20/10/2026) | video/reel-bagno-piazza-fiume-posa-onice.mp4 | video IMG_2822 di Eugenio, spezzone 0–21,5 s (22–31 s, finestra, libero) |
+| Reel posa onice Piazza Fiume (20/10/2026) | video/reel-bagno-piazza-fiume-posa-onice.mp4 | video IMG_2822 di Eugenio, spezzone 0–21,5 s |
+| Reel infissi Schüco Piazza Fiume (20/10/2026) | video/reel-infissi-schuco-piazza-fiume.mp4 | video IMG_2822 di Eugenio, spezzone 22,4–31,3 s |
 
-Stili già usati: sottotitoli karaoke box oro + deep house (bagno); vetro sfocato con barra oro + card numeri grandi + tropical house (detrazioni). sottotitoli eleganti con linea oro + pillole etichetta + lounge (posa onice). Il prossimo: righe che salgono dal basso, musica nu-disco o afro house.
+Stili già usati: sottotitoli karaoke box oro + deep house (bagno); vetro sfocato con barra oro + card numeri grandi + tropical house (detrazioni). sottotitoli eleganti con linea oro + pillole etichetta + lounge (posa onice). righe che salgono dal basso + nu-disco (infissi Schüco). Il prossimo: karaoke o vetro sfocato con un genere nuovo (afro house, drum & bass, tech house, cinematica).
 
 ## Post (foto o carosello)
 Regola (20/10/2026): un post può riusare foto già usate in un reel; mai due post con le stesse foto.
