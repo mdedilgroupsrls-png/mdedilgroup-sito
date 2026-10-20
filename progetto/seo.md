@@ -67,7 +67,7 @@ Metodo: un passo alla volta. Claude spiega cosa fare e perché, mostra la situaz
 - **Report:** controllo settimanale breve (statistiche anonime) e report mensile (Search Console + statistiche + contatti/contratti che Eugenio comunica)
 
 ## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**)
-- Bagno chiavi in mano: con "materiali compresi, esclusi rivestimenti e accessori" (20/10/2026) **sanitari, rubinetteria, piatto e box doccia sono compresi?** E il **pavimento** del bagno è compreso o escluso come i rivestimenti?
+- Bagno: la fornitura delle **piastrelle del pavimento** è esclusa come i rivestimenti? (Regola di Eugenio: compreso tutto ciò che resta murato, escluso tutto il resto)
 - Pagina bagno: foto prima/durante/dopo di 1–2 bagni con zona
 - **Strutture ricettive / alberghiere** (Eugenio ha molto materiale): foto (anche in lavorazione), tipo di struttura, zona, lavori fatti
 - Pagine esterni (terrazzi e impermeabilizzazioni, facciate condominio…): foto anche in fase di lavorazione, con zona
@@ -76,10 +76,11 @@ Metodo: un passo alla volta. Claude spiega cosa fare e perché, mostra la situaz
 - Google Business e Servizi Locali: schermate di categorie, servizi, zona, stato della verifica (organizzazione e assicurazione)
 - Orari di apertura; Milano resta tra le zone servite?
 - Vecchie, ancora senza risposta: con il cappotto si può scegliere anche la finitura silossanica? Modalità di pagamento anche nel PDF delle case in legno? Infissi: limiti per demolizione e posa (oggi doppio prezzo oltre 3,22 m², sopralluogo oltre 6,44 m²) vanno bene? Azzerare il contatore dei preventivi PDF dopo le prove?
-- Risposte avute (20/10/2026): prezzo fisso del bagno NO; bagno finito di norma in una settimana; bagno: materiali compresi, esclusi rivestimenti e accessori
+- Risposte avute (20/10/2026): bagno "a partire da 6.500 €" sì (non prezzo fisso); finito di norma in una settimana; compreso tutto il materiale che resta murato, esclusi rivestimenti, sanitari, rubinetteria, piatto e box doccia, accessori e tutto il resto
 
 ## Regole
-- **Struttura del sito (Eugenio, 20/10/2026):** menu e Home restano con le pagine principali. Ogni nuova pagina SEO è un approfondimento **dentro** la pagina madre: lavori interni (bagno, strutture ricettive, alberghi, locali…) dentro /ristrutturazioni-interni; lavori esterni (terrazzi, facciate, coperture…) dentro /ristrutturazioni-esterni, con foto anche in fase di lavorazione. Le pagine **non sono nascoste**: si aprono dall'elenco "Approfondimenti" ben visibile nella pagina madre (subito sotto l'elenco delle lavorazioni); **mai dal menu né dalla Home** (Eugenio, 20/10/2026, ultima indicazione). Per Google: sitemap, link interno, `llms.txt`, richiesta di indicizzazione in Search Console.
+- **Foto di Eugenio:** le manda un po' alla volta dicendo cosa sono; Claude scrive per ognuna testo alternativo, didascalia e nome del file pensati per Google (lavoro + materiale + zona di Roma, frasi naturali, niente parole ripetute a forza), le converte in webp leggere e le mette nella pagina giusta.
+- **Struttura del sito (Eugenio, 20/10/2026):** menu e Home restano con le pagine principali. Ogni nuova pagina SEO è un approfondimento **dentro** la pagina madre del suo tipo di lavoro: interni (bagno, strutture ricettive, alberghi, locali…) dentro /ristrutturazioni-interni; esterni (terrazzi, facciate, coperture…) dentro /ristrutturazioni-esterni, con foto anche in fase di lavorazione; case in legno dentro /case-in-legno; infissi dentro /infissi-serramenti. Le pagine **non sono nascoste**: si aprono dall'elenco "Approfondimenti" ben visibile nella pagina madre (subito sotto l'elenco delle lavorazioni); **mai dal menu né dalla Home** (Eugenio, 20/10/2026, ultima indicazione). Per Google: sitemap, link interno, `llms.txt`, richiesta di indicizzazione in Search Console.
 - **Prezzi:** niente prezzi "a partire da" o fissi nelle pagine di approfondimento senza l'ok di Eugenio: ogni lavoro ha un costo diverso.
 - Niente testi copiati da altri siti né parole chiave ripetute a forza: una frase deve suonare naturale a chi la legge.
 - Niente prezzi, numeri o recensioni inventati.

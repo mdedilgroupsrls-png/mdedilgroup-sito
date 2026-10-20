@@ -22,7 +22,7 @@ Regole del documento: la posa della ceramica è in due sezioni (02.13 e 08.01) m
 | Demolizioni | Protezione pavimenti con cartone ondulato | m² | 5,25 |
 | Demolizioni | Dismissione impianto elettrico, fino a 70 m² | a corpo | 750,00 |
 | Demolizioni | Dismissione impianto idrico, fino a 70 m² | a corpo | 750,00 |
-| Bagni | Bagno completo fino a 5 m²: **materiali compresi, esclusi rivestimenti e accessori del bagno** (Eugenio, 20/10/2026; prima "tutto incluso tranne la fornitura"); di norma finito in una settimana | a corpo | 6.500,00 |
+| Bagni | Bagno completo fino a 5 m²: **compreso tutto il materiale che resta murato** (tubazioni, massetto, impermeabilizzazione…); **esclusi rivestimenti, sanitari, rubinetteria, piatto doccia, box doccia e accessori, e tutto il resto** (Eugenio, 20/10/2026; prima "tutto incluso tranne la fornitura"). Sulla pagina bagno si può scrivere **"a partire da 6.500 €"** (Eugenio, 20/10/2026); di norma finito in una settimana | a corpo | 6.500,00 |
 | Bagni | Ogni m² oltre i 5 m² (Eugenio, 16/10/2026) | m² | 350,00 |
 | Muratura | Nuovi divisori in tramezzi | m² | 87,70 |
 | Muratura | Controtelaio porta scorrevole a scomparsa, fornitura e posa | cad. | 370,00 |
