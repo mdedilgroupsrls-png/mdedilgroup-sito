@@ -3,6 +3,7 @@
   var P = {
     piccola: 200, // battente fino a 1 m²: prezzo fisso a pezzo (bianco)
     bat: 280, // battente bianco oltre 1 m², €/m²: il prezzo vale fino a 3,22 m² e ogni m² in più si aggiunge allo stesso prezzo (Eugenio, 20/10/2026)
+    maxInf: 4, // un infisso più grande di 4 m² non si simula: prezzo al sopralluogo (Eugenio, 20/10/2026)
     slideBianco: 320, slideColore: 400,
     demInf: 30, posInf: 140, tap: 49.5, demTap: 25, posTap: 60, zan: 52, posZan: 50,
     piano: 0.10, pianoDa: 4 // +10% su demolizioni e pose dal 4° piano
@@ -115,7 +116,8 @@
 
   function prezzoInfisso(r, a) {
     var k = COL_INF[st.colInf].k;
-    // prezzo al m² anche per i pezzi grandi: oltre 3,22 m² ogni m² in più costa come gli altri
+    // prezzo al m² anche oltre 3,22 m² (ogni m² in più costa come gli altri), ma solo fino a 4 m² a pezzo
+    if (a > P.maxInf) return null;
     if (r.t === 1) return a * (k === 'std' ? P.slideBianco : P.slideColore);
     if (a <= 1) return P.piccola * MULT[k];
     return a * P.bat * MULT[k];
@@ -157,7 +159,10 @@
     $('riep').innerHTML = html || '<p class="sm"><span>Scrivi le misure dei tuoi infissi per vedere la stima.</span></p>';
     $('totale').textContent = eur(T);
     $('fuori').hidden = !fuori;
-    $('fuori').textContent = fuori ? 'Alcuni pezzi superano 6,44 m²: per quelli il prezzo si calcola al sopralluogo (zanzariere, demolizione e posa).' : '';
+    var grandi = lists.inf.rows.some(function (r) { return area(r) > P.maxInf; });
+    $('fuori').textContent = !fuori ? '' : grandi
+      ? 'Un infisso più grande di 4 m² non si può simulare: per quel pezzo il prezzo si definisce al sopralluogo. Lo stesso vale per zanzariere, demolizione e posa oltre 6,44 m².'
+      : 'Alcuni pezzi superano 6,44 m²: per quelli il prezzo si calcola al sopralluogo (zanzariere, demolizione e posa).';
 
     var msg = 'Buongiorno, ho fatto la stima sul sito per infissi e serramenti:\n';
     voci.forEach(function (v) { if (v[1] > 0) msg += '- ' + v[0] + ': ' + eur(v[1]) + '\n'; });
