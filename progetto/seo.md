@@ -76,7 +76,7 @@ Eugenio: finita una pagina si passa alla successiva; 2-3 pagine per ogni pagina 
 - **Case in legno:** [ ] Permessi e fondazioni per una casa in legno · [ ] Case A-frame: modelli e prezzi
 
 ## Articoli (Eugenio, 20/10/2026)
-- **Un articolo ogni 3 settimane** (prima era uno al mese). Promemoria automatico che si riprogramma ogni 21 giorni.
+- **Un articolo a settimana** (Eugenio, 20/10/2026; prima ogni 3 settimane): compito automatico del giovedì. **Lavori realizzati:** ogni cantiere mandato da Eugenio diventa un articolo dentro la sua pagina madre (es. infissi → sezione "I nostri lavori realizzati" `#lavori-realizzati` della pagina infissi).
 - **Non serve mostrare a Eugenio** testi, reel e storie prima di programmarli: Claude li prepara e li programma da solo dopo la pubblicazione del sito.
 - **Formato social:** meglio sempre un **reel** (video verticale), con descrizione adatta a ogni social, fatto **sempre con la skill md-edil-reels**: voce salvata (Speko, it-IT-Rosa – Eugenio la chiama "Carina"), sottotitoli professionali, hook nei primi 2 s, montaggio professionale; a volte solo musica allegra di sottofondo. Mai Google Business per i reel. **Instagram sempre TRIAL_REEL ("in prova")**; gli altri social normali (Facebook reel, TikTok, YouTube short, LinkedIn, Threads, Google Business).
 - **Posizione:** "📍 Roma, Lazio, Italia" per tutte le lavorazioni a Roma; per le **case in legno** "📍 Italia" (tutta Italia).
@@ -90,7 +90,7 @@ Eugenio: finita una pagina si passa alla successiva; 2-3 pagine per ogni pagina 
 
 - **Articoli sulle detrazioni fiscali** (Eugenio, 20/10/2026): un articolo ogni 2-3 settimane su bonus ristrutturazione, infissi/ecobonus e altre detrazioni utili ai nostri lavori, **solo da fonti vere e verificate** (Agenzia delle Entrate, ENEA, Gazzetta Ufficiale; citate in fondo all'articolo), con data di aggiornamento e nota "non sostituisce il commercialista". Si alternano con gli articoli sui lavori.
 - **Reel:** ogni articolo ha il **suo reel diverso** (mai lo stesso reel, mai la stessa foto in due reel: registro in `progetto/social/foto-usate-nei-reel.md`). Il reel si mette anche **dentro l'articolo** (video) e si salva sul sito in `video/`, così Metricool lo prende direttamente da mdedilgroup.it: niente Google Drive, niente lavoro per Eugenio.
-- **Registro articoli:** 1) 20/10/2026 – Interni – "Quanto costa ristrutturare un bagno a Roma"; 2) 20/10/2026 – Detrazioni – "Bonus ristrutturazione e infissi 2026" (prossimo: un'area diversa da interni, per esempio esterni o infissi).
+- **Registro articoli:** 1) 20/10/2026 – Interni – "Quanto costa ristrutturare un bagno a Roma"; 2) 20/10/2026 – Detrazioni – "Bonus ristrutturazione e infissi 2026"; 3) 20/10/2026 – Infissi (lavori realizzati) – "Infissi in PVC a Monte Sacro" (`/infissi-pvc-monte-sacro-roma`, parole chiave: infissi PVC Roma, sostituzione infissi Roma, finestre PVC Monte Sacro; costo indicativo da aggiungere quando arrivano numero e misure). Prossimo: un'area diversa da infissi, deciso dal materiale che manda Eugenio.
 
 ## Calendario contenuti (Eugenio, 20/10/2026)
 - **Sito aggiornato ogni lunedì, in automatico** (Eugenio, 20/10/2026: il lunedì Claude pubblica senza aspettare "aggiorna il sito"; compito automatico "Aggiornamento settimanale del sito", lunedì 8:51). Negli altri giorni si pubblica solo se Eugenio scrive "aggiorna il sito".
@@ -108,6 +108,7 @@ Foto non ancora usate in nessun reel, quindi pronte:
 - [ ] Dettaglio collettore Teco (Piazza Fiume) – `dettaglio-collettore-1..4`
 - [ ] Dettaglio angoli a 45° a jolly – `dettaglio-jolly-1..3`
 - [ ] Dettaglio tessuto in fibra di vetro (Piazza Fiume) – `dettaglio-fibra-1..4`
+- [ ] Cantiere infissi Monte Sacro – 4 foto `infissi-pvc-monte-sacro-*` (mai usate)
 - [ ] Bagni singoli (Olgiata, Piazza Fiume, Porta Pia) e luci LED: le foto sono già nel reel dell'articolo bagno → servono foto o video nuovi di Eugenio
 
 ## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**, ma **al massimo 3-4 domande per messaggio**, messaggi brevi)
