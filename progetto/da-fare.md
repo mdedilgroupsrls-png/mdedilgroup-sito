@@ -38,6 +38,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [ ] Decidere quale sede indicare come ufficio
 
 ## Fatto
+- [x] 20/10/2026 – Nuova pagina **/finiture-di-pregio-roma** ("I dettagli dei nostri lavori") dentro la pagina interni: collettore a filo piastrella (4 foto di Eugenio), angoli a 45°, grandi lastre, luci LED; sitemap, llms.txt, elenco Approfondimenti. Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – Pagina bagno: scheda "Bagno piccolo a Porta Pia" (3 m², doccia separata, circa 6.000 € IVA inclusa) con 2 foto di Eugenio. Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – Pagina bagno: scheda "Bagno per una struttura ricettiva a Piazza Fiume" con 3 foto di Eugenio (prima, durante, dopo). Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – Pagina bagno: scheda "Bagno in villa all'Olgiata" con 3 foto di Eugenio (2 durante i lavori, 1 finito), testi alternativi e didascalie per Google. Sul branch `lavori-in-corso`

@@ -10,6 +10,7 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 | `/` Home | impresa edile Roma, ristrutturazioni Roma | ristrutturazione chiavi in mano Roma, impresa ristrutturazioni Lazio |
 | `/ristrutturazioni-interni` | ristrutturazione appartamento Roma | costo ristrutturazione casa Roma, ristrutturazione bagno/cucina Roma, ristrutturazione villa Roma |
 | `/ristrutturazione-bagno-roma` | ristrutturazione bagno Roma, rifacimento bagno Roma | quanto costa rifare un bagno, bagno chiavi in mano Roma, impermeabilizzazione doccia, ristrutturazione bagno prezzi |
+| `/finiture-di-pregio-roma` | finiture di pregio ristrutturazione Roma | collettore idrico sportello d'ispezione a filo, angoli a 45 gradi piastrelle (jolly), posa grandi lastre gres 120x280, tagli di luce LED soffitto |
 | `/ristrutturazioni-esterni` | rifacimento facciata Roma, ristrutturazione facciate condominio | cappotto termico Roma, impresa facciate Lazio |
 | `/infissi-serramenti` | infissi PVC Roma, sostituzione infissi Roma | finestre PVC prezzi, Rehau Synego prezzo, tapparelle alluminio coibentato, zanzariere Roma |
 | `/case-in-legno` | case in legno prefabbricate prezzi | casa in legno chiavi in mano, casa in legno Lazio/Italia, A-frame, Barn House |
@@ -68,7 +69,7 @@ Metodo: un passo alla volta. Claude spiega cosa fare e perché, mostra la situaz
 
 ## Pagine di approfondimento: ordine proposto (20/10/2026)
 Eugenio: finita una pagina si passa alla successiva; 2-3 pagine per ogni pagina principale, sulle ricerche più fatte su Google. Una alla volta, con foto e dati di Eugenio.
-- **Interni:** [x] Ristrutturazione bagno · [ ] Ristrutturazione cucina (2 foto vere + 3 render) · [ ] Strutture ricettive e hotel (materiale di Eugenio)
+- **Interni:** [x] Ristrutturazione bagno · [x] I dettagli dei nostri lavori / finiture di pregio (20/10/2026, si arricchisce con nuove foto) · [ ] Ristrutturazione cucina (2 foto vere + 3 render) · [ ] Strutture ricettive e hotel (materiale di Eugenio)
 - **Esterni:** [ ] Rifacimento facciata condominio (14 foto facciate) · [ ] Cappotto termico: costi e vantaggi · [ ] Impermeabilizzazione terrazzi e balconi (servono foto)
 - **Infissi:** [ ] Sostituzione finestre in PVC: costi e domande · [ ] Tapparelle e zanzariere (foto Pracal e Primed già sul sito)
 - **Case in legno:** [ ] Permessi e fondazioni per una casa in legno · [ ] Case A-frame: modelli e prezzi
@@ -77,6 +78,7 @@ Eugenio: finita una pagina si passa alla successiva; 2-3 pagine per ogni pagina 
 - Google Business: sembra verificato, da controllare insieme (schermate di categorie, servizi, zona) – Servizi Locali ancora in verifica
 - Bagno: [x] lavoro raccontato con foto durante/dopo (villa all'Olgiata, 20/10/2026). Superficie (circa 4–5 m²) e durata (più di una settimana) inserite. Ancora utile: altri bagni con foto e zona quando ci sono. **Non usare per ora `img/bagno-lastre.webp` (bagno in cantiere) né `img/dettaglio-impianti.webp`**: Eugenio manderà più avanti le foto del bagno finito (20/10/2026)
 - Simulatore bagno ancora a 6.500 € fino a 5 m² mentre la pagina dice "a partire da 5.500 €": cambiare il simulatore per i bagni piccoli? (chiesto il 20/10/2026)
+- Pagina dettagli: zona del cantiere del collettore? Marca del collettore (sulla foto si legge "FIR"; Eugenio ha detto "Teco")? Altri dettagli con foto
 - **Più avanti, li chiede Eugenio / da richiedere con calma (non a ogni messaggio):** foto prima/durante/dopo dei bagni con zona; materiale delle strutture ricettive e alberghi (foto, tipo di struttura, zona, lavori)
 - **Search Console:** schermate Rendimento (28 giorni) e Pagine → **richiederle il 3/11/2026** (Eugenio: tra 2 settimane; promemoria programmato)
 - Risposte avute (20/10/2026): bagno Piazza Fiume con costo indicativo circa 7.000 € IVA inclusa (in linea con il simulatore per 6–7 m²); piastrelle del pavimento del bagno escluse come i rivestimenti; orario ufficio lunedì–sabato 8–18 continuato (inserito nei dati per Google); bagno "a partire da 5.500 €" (prima 6.500, cambiato da Eugenio; non prezzo fisso); Milano solo per ristrutturazioni complete; niente modalità di pagamento nel PDF delle case in legno (variano); infissi: limiti di demolizione e posa confermati; contatore dei preventivi azzerato, non bagni o piccoli lavori; finitura silossanica ammessa con il cappotto (il simulatore la permette già con il cappotto EPS); finito di norma in una settimana; compreso tutto il materiale che resta murato, esclusi rivestimenti, sanitari, rubinetteria, piatto e box doccia, accessori e tutto il resto
