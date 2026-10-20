@@ -67,15 +67,12 @@ Metodo: un passo alla volta. Claude spiega cosa fare e perché, mostra la situaz
 - **Report:** controllo settimanale breve (statistiche anonime) e report mensile (Search Console + statistiche + contatti/contratti che Eugenio comunica)
 
 ## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**)
-- Bagno: la fornitura delle **piastrelle del pavimento** è esclusa come i rivestimenti? (Regola di Eugenio: compreso tutto ciò che resta murato, escluso tutto il resto)
-- Pagina bagno: foto prima/durante/dopo di 1–2 bagni con zona
-- **Strutture ricettive / alberghiere** (Eugenio ha molto materiale): foto (anche in lavorazione), tipo di struttura, zona, lavori fatti
-- Pagine esterni (terrazzi e impermeabilizzazioni, facciate condominio…): foto anche in fase di lavorazione, con zona
-- Search Console: schermate Rendimento (28 giorni) e Pagine
-- Google Analytics 4: spiegato a Eugenio dove trovare il codice G-… (20/10/2026); attendere il codice e l'ok al banner cookie con consenso
-- Google Business e Servizi Locali: schermate di categorie, servizi, zona, stato della verifica (organizzazione e assicurazione)
-- Orari di apertura
-- Risposte avute (20/10/2026): bagno "a partire da 6.500 €" sì (non prezzo fisso); Milano solo per ristrutturazioni complete; niente modalità di pagamento nel PDF delle case in legno (variano); infissi: limiti di demolizione e posa confermati; contatore dei preventivi azzerato, non bagni o piccoli lavori; finitura silossanica ammessa con il cappotto (il simulatore la permette già con il cappotto EPS); finito di norma in una settimana; compreso tutto il materiale che resta murato, esclusi rivestimenti, sanitari, rubinetteria, piatto e box doccia, accessori e tutto il resto
+- Orari 8–18 continuato: **in quali giorni** (lunedì–venerdì? sabato?) → poi `openingHours` nei dati strutturati
+- Google Analytics 4: Eugenio segue i passi e manda il codice G-… (poi avviso cookie con consenso e privacy)
+- Google Business: sembra verificato, da controllare insieme (schermate di categorie, servizi, zona) – Servizi Locali ancora in verifica
+- **Più avanti, li chiede Eugenio / da richiedere con calma (non a ogni messaggio):** foto prima/durante/dopo dei bagni con zona; materiale delle strutture ricettive e alberghi (foto, tipo di struttura, zona, lavori)
+- **Search Console:** schermate Rendimento (28 giorni) e Pagine → **richiederle il 3/11/2026** (Eugenio: tra 2 settimane; promemoria programmato)
+- Risposte avute (20/10/2026): piastrelle del pavimento del bagno escluse come i rivestimenti; orario ufficio 8–18 continuato; bagno "a partire da 6.500 €" sì (non prezzo fisso); Milano solo per ristrutturazioni complete; niente modalità di pagamento nel PDF delle case in legno (variano); infissi: limiti di demolizione e posa confermati; contatore dei preventivi azzerato, non bagni o piccoli lavori; finitura silossanica ammessa con il cappotto (il simulatore la permette già con il cappotto EPS); finito di norma in una settimana; compreso tutto il materiale che resta murato, esclusi rivestimenti, sanitari, rubinetteria, piatto e box doccia, accessori e tutto il resto
 
 ## Regole
 - **Foto di Eugenio:** le manda un po' alla volta dicendo cosa sono; Claude scrive per ognuna testo alternativo, didascalia e nome del file pensati per Google (lavoro + materiale + zona di Roma, frasi naturali, niente parole ripetute a forza), le converte in webp leggere e le mette nella pagina giusta.

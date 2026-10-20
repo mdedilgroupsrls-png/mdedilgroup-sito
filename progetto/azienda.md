@@ -58,3 +58,5 @@ MD Edil Group vende ristrutturazioni di classe **premium / lusso** e cerca clien
 
 ## Sopralluogo e preventivo
 - **Sopralluogo e preventivo sono gratuiti** (confermato da Eugenio il 16/10/2026). Sul sito: "Sopralluogo e preventivo gratuiti" sopra i campi di invio dei tre simulatori.
+- **Orari dell'ufficio:** dalle 8 alle 18, orario continuato (Eugenio, 20/10/2026). Giorni (lunedì–venerdì? sabato?) da confermare prima di inserirli nei dati per Google.
+- **Google Business:** sembra verificato (20/10/2026), da controllare insieme. **Servizi Locali:** ancora in verifica.
