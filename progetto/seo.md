@@ -9,6 +9,7 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 |---|---|---|
 | `/` Home | impresa edile Roma, ristrutturazioni Roma | ristrutturazione chiavi in mano Roma, impresa ristrutturazioni Lazio |
 | `/ristrutturazioni-interni` | ristrutturazione appartamento Roma | costo ristrutturazione casa Roma, ristrutturazione bagno/cucina Roma, ristrutturazione villa Roma |
+| `/ristrutturazione-bagno-roma` | ristrutturazione bagno Roma, rifacimento bagno Roma | quanto costa rifare un bagno, bagno chiavi in mano Roma, impermeabilizzazione doccia, ristrutturazione bagno prezzi |
 | `/ristrutturazioni-esterni` | rifacimento facciata Roma, ristrutturazione facciate condominio | cappotto termico Roma, impresa facciate Lazio |
 | `/infissi-serramenti` | infissi PVC Roma, sostituzione infissi Roma | finestre PVC prezzi, Rehau Synego prezzo, tapparelle alluminio coibentato, zanzariere Roma |
 | `/case-in-legno` | case in legno prefabbricate prezzi | casa in legno chiavi in mano, casa in legno Lazio/Italia, A-frame, Barn House |
@@ -37,7 +38,8 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
   - **velocità**: larghezza e altezza su 137 foto (niente "salti" durante il caricamento, Core Web Vitals) e caricamento ritardato su 68 foto lontane dall'inizio della pagina (Home, interni, esterni). Controllato con le misure prima/dopo di tutte le foto, da telefono e da computer: nessuna differenza;
   - **misura delle richieste**: vedi `da-fare.md` (simulazioni completate, provenienza nel modulo).
 
-## Audit del 20/10/2026 (fase 1)
+- 20/10/2026: **nuova pagina /ristrutturazione-bagno-roma** (title "Ristrutturazione bagno a Roma chiavi in mano", 59 caratteri; H1, 6 fasi H3, 7 FAQ con FAQPage, BreadcrumbList, foto vere con zona, link al simulatore e al modulo). Nel menu di tutte le pagine, in sitemap e in `llms.txt`. Dopo la pubblicazione: Search Console → Controllo URL → Richiedi indicizzazione.
+
 Verificato nei file del sito; ciò che sta negli account Google (Search Console, Business, Servizi Locali) va controllato con le schermate di Eugenio.
 - **Già a posto:** title, description e canonical propri su tutte le pagine; un H1 per pagina; testo alternativo su tutte le foto; dati strutturati GeneralContractor + Service (+ FAQPage infissi); sitemap e robots corretti; HTTPS e protezioni del browser; pagine statiche (Google legge tutto il testo senza script); nessun link interno rotto; Search Console verificata con sitemap letta (16/10).
 - **Mancano:** Google Analytics 4 (non installato); pagine dedicate a bagno, locali commerciali, terrazzi e impermeabilizzazioni; sezione cantieri realizzati; orari di apertura e coordinate nei dati strutturati (servono gli orari veri da Eugenio); recensioni nei dati strutturati (solo quando ci sono recensioni vere).
@@ -54,7 +56,23 @@ Verificato nei file del sito; ciò che sta negli account Google (Search Console,
 7. **Velocità del sito**: misure delle immagini fatte il 20/10/2026; controllare "Core Web Vitals" in Search Console.
 8. **Controllo mensile**: Eugenio manda le foto di Search Console (Rendimento, Pagine, Core Web Vitals); si correggono gli errori e si rafforzano le ricerche che stanno salendo.
 
-## Regole
+## Piano di 6 mesi (Eugenio, 20/10/2026) – promemoria per ogni sessione
+Metodo: un passo alla volta. Claude spiega cosa fare e perché, mostra la situazione, propone, aspetta l'ok di Eugenio, esegue, verifica, aggiorna questo file e indica il passo successivo. **Claude chiede a Eugenio foto, prezzi, zone e dati mancanti un po' alla volta; se un punto resta fermo per una settimana lo riprende e lo richiede** (promemoria settimanale automatico in chat, il martedì mattina). Mai posizioni o clienti garantiti, mai dati stimati presentati come misurati.
+- **Mese 1 (ott–nov 2026) – fondamenta:** [x] audit · [x] contatori delle conversioni · [x] H1 Home · [x] foto più veloci · [ ] Search Console: primo report (schermate da Eugenio) · [ ] Google Analytics 4 con consenso (codice G-… da Eugenio) · [ ] scheda Google Business controllata (schermate) · [ ] Servizi Locali: verifica organizzazione e assicurazione
+- **Mese 2 – commerciale:** [x] pagina bagno (20/10, da completare con le risposte di Eugenio) · [ ] pagina ristrutturazione casa chiavi in mano · [ ] FAQ con prezzi reali su interni · [ ] primi contatti da Servizi Locali
+- **Mese 3 – reputazione e contenuti:** [ ] procedura recensioni · [ ] schede cantieri (zona, immobile, lavori, materiali, foto prima/dopo, tempi veri) · [ ] foto settimanali su Google Business
+- **Mese 4 – espansione:** [ ] terrazzi e impermeabilizzazioni · [ ] facciate condominio · [ ] locali commerciali (solo con foto vere) · [ ] contenuti di zona solo con cantieri reali
+- **Mese 5 – ottimizzazione:** parole chiave che salgono, pagine deboli, conversioni
+- **Mese 6 – consolidamento:** audit di confronto, contatti e contratti, piano successivo
+- **Report:** controllo settimanale breve (statistiche anonime) e report mensile (Search Console + statistiche + contatti/contratti che Eugenio comunica)
+
+## Domande aperte per Eugenio (aggiornare quando risponde)
+- Pagina bagno: scrivere il prezzo "da 6.500 € IVA inclusa, fino a 5 m², fornitura esclusa"? Tempi medi di un bagno? Foto prima/durante/dopo di 1–2 bagni con zona?
+- Search Console: schermate Rendimento (28 giorni) e Pagine
+- Google Analytics 4: crea la proprietà e manda il codice G-…
+- Google Business e Servizi Locali: schermate di categorie, servizi, zona, stato della verifica
+- Orari di apertura; Milano resta tra le zone servite?
+
 - Niente testi copiati da altri siti né parole chiave ripetute a forza: una frase deve suonare naturale a chi la legge.
 - Niente prezzi, numeri o recensioni inventati.
 - Una pagina = un argomento principale. Le pagine nuove vanno anche in `sitemap.xml`.
