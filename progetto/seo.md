@@ -79,7 +79,8 @@ Eugenio: finita una pagina si passa alla successiva; 2-3 pagine per ogni pagina 
 - Sezione **"Dal nostro taccuino"** di nuovo nella **Home** con gli ultimi 3 articoli: unica eccezione alla regola "niente pagine nuove in Home" (ok di Eugenio).
 - Ogni articolo: pagina propria con parole chiave, solo foto e dati veri di Eugenio, link al simulatore e al modulo; in sitemap e `llms.txt`.
 - Per ogni articolo anche: **post per tutti i social tramite Metricool** (immagine 1080×1350 Nero & Oro, testo, link, hashtag, "📍 Roma, Lazio, Italia"), programmato **solo dopo l'ok di Eugenio**; **storia Instagram** 1080×1920 da pubblicare con lo sticker Link.
-- Primo argomento proposto: angoli a 45° a jolly (in attesa di conferma).
+- **Gli articoli nascono dalle pagine di approfondimento** (Eugenio, 20/10/2026): da ogni pagina creata dentro le pagine principali (bagno, dettagli, cucina, strutture ricettive, facciate, terrazzi, infissi, case in legno…) si ricava un articolo che la racconta e la linka, con il suo post social e la storia. Testo dell'articolo diverso da quello della pagina (mai copiato).
+- Primo argomento: da scegliere tra ristrutturazione bagno e angoli a 45° a jolly (chiesto a Eugenio).
 
 ## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**, ma **al massimo 3-4 domande per messaggio**, messaggi brevi)
 - Google Business: sembra verificato, da controllare insieme (schermate di categorie, servizi, zona) – Servizi Locali ancora in verifica
