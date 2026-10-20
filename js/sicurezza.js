@@ -13,8 +13,42 @@
     });
   }
 
-  // avviso cookie: il sito usa solo cookie tecnici; la scelta resta salvata in questo browser
-  var KEY = 'mdCookie';
+  // avviso cookie: cookie tecnici sempre; Google Analytics solo dopo ACCETTO. La scelta resta salvata in questo browser
+  // (chiave nuova dal 20/10/2026: l'avviso è cambiato, quindi si richiede la scelta a tutti)
+  var KEY = 'mdCookie2';
+  var GA = 'G-QQ9YF9PYJ2';
+  var gaAttivo = false;
+  function analytics() {
+    if (gaAttivo) return; gaAttivo = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+    gtag('js', new Date());
+    gtag('config', GA, { allow_google_signals: false, allow_ad_personalization_signals: false });
+    var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA;
+    document.head.appendChild(s);
+  }
+  // stessi eventi dei contatori anonimi, con nomi fissi per Analytics (pagina e simulatore come parametri, mai dati personali)
+  function gaEvento(e) {
+    if (!gaAttivo) return;
+    var m, nome, p = {};
+    if (/^(vista|arrivo|richiesta|modulo-da)-/.test(e)) return; // Analytics conta già pagine e provenienza; tipo e pagina vanno con generate_lead
+    if (e === 'modulo-preventivo-inviato') { nome = 'generate_lead'; p = { modulo: 'preventivo', tipo_richiesta: leggi('mdRichiesta') || 'modulo diretto', pagina_provenienza: leggi('mdDaPagina') || pagina() }; }
+    else if ((m = /^stima-(whatsapp|pdf)-(.+)$/.exec(e))) { nome = 'stima_' + m[1]; p = { simulatore: m[2] }; }
+    else if ((m = /^simulazione-(.+)$/.exec(e))) { nome = 'simulazione_iniziata'; p = { simulatore: m[1] }; }
+    else if ((m = /^(whatsapp|chiama|vai-al-modulo)-(.+)$/.exec(e))) { nome = { whatsapp: 'clic_whatsapp', chiama: 'clic_telefono', 'vai-al-modulo': 'vai_al_modulo' }[m[1]]; p = { pagina: m[2] }; }
+    else nome = e.replace(/-/g, '_').slice(0, 40);
+    gtag('event', nome, p);
+  }
+  // dalla pagina privacy: "Cambia la scelta sui cookie" cancella la scelta e i cookie di Analytics
+  function cambiaScelta() {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    document.cookie.split(';').forEach(function (c) {
+      var n = c.split('=')[0].trim(); if (!/^_ga/.test(n)) return;
+      ['', '; domain=' + location.hostname, '; domain=.' + location.hostname.replace(/^www\./, '')].forEach(function (d) { document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d; });
+    });
+    location.reload();
+  }
   function salvata() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function salva(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
   function banner() {
@@ -26,10 +60,10 @@
       '.ck .si{background:#C9A24A;color:#0E0D0B}.ck .no{background:none;color:#C9A24A}.ck button:focus-visible{outline:2px solid #E2C373;outline-offset:2px}';
     var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
     var d = document.createElement('div'); d.className = 'ck'; d.setAttribute('role', 'region'); d.setAttribute('aria-label', 'Avviso cookie');
-    d.innerHTML = '<div class="ck-in"><p>Questo sito usa solo cookie tecnici, necessari al suo funzionamento. Non usiamo cookie di profilazione né pubblicità. La mappa di Google si carica solo se la apri. <a href="/privacy.html">Informativa privacy e cookie</a></p>' +
+    d.innerHTML = '<div class="ck-in"><p>Usiamo cookie tecnici, necessari al sito. Solo se premi ACCETTO usiamo anche Google Analytics, per statistiche sulle visite: niente pubblicità né profilazione. La mappa di Google si carica solo se la apri. <a href="/privacy.html">Informativa privacy e cookie</a></p>' +
       '<div class="ck-b"><button type="button" class="no">RIFIUTO</button><button type="button" class="si">ACCETTO</button></div></div>';
     document.body.appendChild(d);
-    d.querySelector('.si').onclick = function () { salva('si'); d.remove(); };
+    d.querySelector('.si').onclick = function () { salva('si'); d.remove(); analytics(); };
     d.querySelector('.no').onclick = function () { salva('no'); d.remove(); };
   }
 
@@ -39,6 +73,7 @@
   function stat(e, sempre) {
     if (!sempre && fatti[e]) return; fatti[e] = 1;
     try { fetch('/s?e=' + encodeURIComponent(e), { cache: 'no-store', credentials: 'omit', keepalive: true }).catch(function () {}); } catch (x) {}
+    try { gaEvento(e); } catch (x) {}
   }
   window.MDStat = stat;
   function pagina() { var p = location.pathname.replace(/^\/|\.html$|\/$/g, ''); return p || 'home'; }
@@ -100,6 +135,10 @@
     modulo();
   }
 
-  function avvia() { scrivi(); banner(); contatori(); }
+  function avvia() {
+    if (salvata() === 'si') analytics();
+    scrivi(); banner(); contatori();
+    var b = document.getElementById('ckCambia'); if (b) b.onclick = cambiaScelta;
+  }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', avvia); else avvia();
 })();

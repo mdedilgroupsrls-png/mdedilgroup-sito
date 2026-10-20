@@ -58,7 +58,7 @@ Verificato nei file del sito; ciò che sta negli account Google (Search Console,
 
 ## Piano di 6 mesi (Eugenio, 20/10/2026) – promemoria per ogni sessione
 Metodo: un passo alla volta. Claude spiega cosa fare e perché, mostra la situazione, propone, aspetta l'ok di Eugenio, esegue, verifica, aggiorna questo file e indica il passo successivo. **Claude chiede a Eugenio foto, prezzi, zone e dati mancanti un po' alla volta; se un punto resta fermo per una settimana lo riprende e lo richiede** (promemoria settimanale automatico in chat, il martedì mattina). Mai posizioni o clienti garantiti, mai dati stimati presentati come misurati.
-- **Mese 1 (ott–nov 2026) – fondamenta:** [x] audit · [x] contatori delle conversioni · [x] H1 Home · [x] foto più veloci · [ ] Search Console: primo report (schermate da Eugenio) · [ ] Google Analytics 4 con consenso (codice G-… da Eugenio) · [ ] scheda Google Business controllata (schermate) · [ ] Servizi Locali: verifica organizzazione e assicurazione
+- **Mese 1 (ott–nov 2026) – fondamenta:** [x] audit · [x] contatori delle conversioni · [x] H1 Home · [x] foto più veloci · [ ] Search Console: primo report (schermate da Eugenio) · [x] Google Analytics 4 con consenso (G-QQ9YF9PYJ2, 20/10/2026; eventi chiave da segnare dopo la pubblicazione) · [ ] scheda Google Business controllata (schermate) · [ ] Servizi Locali: verifica organizzazione e assicurazione
 - **Mese 2 – commerciale:** [x] pagina bagno (20/10, da completare con le risposte di Eugenio) · [ ] pagina strutture ricettive e alberghiere (materiale di Eugenio) · [ ] pagina ristrutturazione casa chiavi in mano · [ ] FAQ con prezzi reali su interni · [ ] primi contatti da Servizi Locali
 - **Mese 3 – reputazione e contenuti:** [ ] procedura recensioni · [ ] schede cantieri (zona, immobile, lavori, materiali, foto prima/dopo, tempi veri) · [ ] foto settimanali su Google Business
 - **Mese 4 – espansione:** [ ] terrazzi e impermeabilizzazioni · [ ] facciate condominio · [ ] locali commerciali (solo con foto vere, dentro interni) · [ ] contenuti di zona solo con cantieri reali
@@ -67,7 +67,6 @@ Metodo: un passo alla volta. Claude spiega cosa fare e perché, mostra la situaz
 - **Report:** controllo settimanale breve (statistiche anonime) e report mensile (Search Console + statistiche + contatti/contratti che Eugenio comunica)
 
 ## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**, ma **al massimo 3-4 domande per messaggio**, messaggi brevi)
-- Google Analytics 4: Eugenio segue i passi e manda il codice G-… (poi avviso cookie con consenso e privacy)
 - Google Business: sembra verificato, da controllare insieme (schermate di categorie, servizi, zona) – Servizi Locali ancora in verifica
 - **Più avanti, li chiede Eugenio / da richiedere con calma (non a ogni messaggio):** foto prima/durante/dopo dei bagni con zona; materiale delle strutture ricettive e alberghi (foto, tipo di struttura, zona, lavori)
 - **Search Console:** schermate Rendimento (28 giorni) e Pagine → **richiederle il 3/11/2026** (Eugenio: tra 2 settimane; promemoria programmato)

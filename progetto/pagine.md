@@ -32,3 +32,5 @@
 - **Guida alle lavorazioni** (dal 17/10/2026, per la SEO): sotto i simulatori di interni ed esterni c'è una sezione di testo vero con i paragrafi a fisarmonica (`<details>`), con titolo e descrizione di ogni voce. Si genera dalle voci dei simulatori con `node progetto/strumenti/guida_lavorazioni.js` (blocco tra `<!-- GUIDA:INIZIO -->` e `<!-- GUIDA:FINE -->`): **rilanciarlo ogni volta che si cambiano titoli o descrizioni delle voci**.
 
 - `llms.txt` (dal 18/10/2026): descrizione in testo semplice dell'azienda per gli assistenti AI; va aggiornato quando cambiano servizi, zone, prezzi delle case in legno o contatti.
+
+- **Avviso cookie e Google Analytics (20/10/2026):** l'avviso dice "Usiamo cookie tecnici… Solo se premi ACCETTO usiamo anche Google Analytics, per statistiche sulle visite: niente pubblicità né profilazione". `/privacy.html` ha il paragrafo su Google Analytics (cookie `_ga`, `_ga_QQ9YF9PYJ2`, fino a 2 anni, consenso revocabile) e il pulsante "Cambia la scelta sui cookie".
