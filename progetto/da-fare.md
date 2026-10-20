@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
+- [ ] **Dopo la pubblicazione:** programmare su Metricool i post dell'articolo bagno (testi e file in `progetto/social/2026-10-articolo-bagno.md`; Instagram TRIAL_REEL) e mandare a Eugenio la storia con il link
 - [ ] **Dopo la pubblicazione, Google Analytics:** 1) Eugenio apre il sito, preme ACCETTO e controlla in Analytics → Rapporti → Tempo reale che compaia 1 utente; 2) quando gli eventi sono comparsi (24–48 ore) segnarli come **eventi chiave**: Amministrazione → Visualizzazione dati → Eventi → stella su `generate_lead`, `stima_whatsapp`, `stima_pdf`, `clic_telefono`, `clic_whatsapp`; 3) più avanti collegare Analytics a Search Console (Amministrazione → Link ai prodotti)
 - [ ] **Alla prossima pubblicazione ("aggiorna il sito") ricordare a Eugenio Search Console** (sua richiesta, 20/10/2026): https://search.google.com/search-console?resource_id=https%3A%2F%2Fmdedilgroup.it%2F → in alto "Controlla qualsiasi URL" → incollare `https://mdedilgroup.it/ristrutturazione-bagno-roma` → "Richiedi indicizzazione"; poi lo stesso per `https://mdedilgroup.it/` e `https://mdedilgroup.it/ristrutturazioni-interni` (cambiate). Fare lo stesso per ogni pagina nuova o cambiata molto.
 - [ ] **Piano SEO e acquisizione clienti, 6 mesi (dal 20/10/2026)**: fase 1 audit fatta (vedi `seo.md`). In attesa da Eugenio: ok per pagina bagno e Google Analytics 4 (codice G-…), schermate di Search Console (Rendimento, Pagine), di Servizi Locali (verifica organizzazione e assicurazione in corso) e della scheda Google Business; orari di apertura; se Milano resta tra le zone servite
@@ -38,6 +39,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [ ] Decidere quale sede indicare come ufficio
 
 ## Fatto
+- [x] 20/10/2026 – Primo articolo "Quanto costa ristrutturare un bagno a Roma", sezione "Dal nostro taccuino" di nuovo in Home, reel e storia per i social. Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – Pagina dettagli: dettaglio 02 "Angoli a 45° a jolly" riscritto con 3 nuove foto di Eugenio in posa. Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – Pagina dettagli: dettaglio 05 "Tessuto in fibra di vetro" con 4 foto di Eugenio e nuova domanda frequente. Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – Nuova pagina **/finiture-di-pregio-roma** ("I dettagli dei nostri lavori") dentro la pagina interni: collettore a filo piastrella (4 foto di Eugenio), angoli a 45°, grandi lastre, luci LED; sitemap, llms.txt, elenco Approfondimenti. Sul branch `lavori-in-corso`

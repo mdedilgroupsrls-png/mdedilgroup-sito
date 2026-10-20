@@ -274,6 +274,13 @@ section{padding-block:clamp(70px,10vw,130px);position:relative;z-index:2}
 .news{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .news article{border:1px dashed var(--dash);padding:24px;min-height:170px;display:flex;flex-direction:column;gap:10px}
 .news h3{font-size:22px;color:var(--mute)}
+.news a.art{display:flex;flex-direction:column;gap:10px;color:var(--ink);border:1px solid var(--line,#2A2722);text-decoration:none}
+.news a.art img{width:100%;height:220px;object-fit:cover;display:block}
+.news a.art .eyebrow,.news a.art h3,.news a.art p,.news a.art .more{margin:0 22px}
+.news a.art h3{color:var(--ink);font-size:21px;line-height:1.25}
+.news a.art p{color:var(--mute);font-size:14px}
+.news a.art .more{color:var(--gold);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:22px}
+.news a.art:hover h3{color:var(--gold2)}
 
 /* scheda Google Maps nei contatti */
 .gmap{margin-top:30px;border:1px solid var(--line);padding:20px;display:grid;gap:16px}
@@ -569,6 +576,15 @@ footer{border-top:1px solid var(--line);padding-block:50px 110px;background:var(
     </div>
     <p class="note" id="reelNota" style="margin-top:18px;font-size:12.5px;color:var(--mute)">Reel e numeri presi dal nostro profilo Instagram. Tocca un reel per guardarlo.</p>
     <div class="cta" style="justify-content:flex-start;animation:none;margin-top:24px"><a class="btn" href="https://www.instagram.com/md_edil_group/">Seguici su Instagram</a><p class="igf"><b id="igFollower">47.824</b> persone ci seguono su Instagram</p></div>
+  </div>
+</section>
+
+<section id="taccuino" data-node>
+  <div class="wrap">
+    <div class="head"><div><div class="eyebrow">Articoli e guide</div><h2>Dal nostro taccuino</h2><i class="tl"></i></div></div>
+    <div class="news">
+      <a class="art" href="/quanto-costa-ristrutturare-bagno-roma"><img loading="lazy" decoding="async" width="1059" height="1400" src="/img/bagno-piazza-fiume-finito.webp" alt="Bagno ristrutturato a Roma Piazza Fiume, foto dell'articolo sul costo di un bagno"><span class="eyebrow">Ristrutturazioni interni</span><h3>Quanto costa ristrutturare un bagno a Roma? Tre lavori veri, dai 3 ai 7 m²</h3><p>Porta Pia, Piazza Fiume e Olgiata: metri quadri, costi indicativi e tempi.</p><span class="more">Leggi l’articolo →</span></a>
+    </div>
   </div>
 </section>
 

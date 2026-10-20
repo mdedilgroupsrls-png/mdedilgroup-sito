@@ -11,6 +11,7 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 | `/ristrutturazioni-interni` | ristrutturazione appartamento Roma | costo ristrutturazione casa Roma, ristrutturazione bagno/cucina Roma, ristrutturazione villa Roma |
 | `/ristrutturazione-bagno-roma` | ristrutturazione bagno Roma, rifacimento bagno Roma | quanto costa rifare un bagno, bagno chiavi in mano Roma, impermeabilizzazione doccia, ristrutturazione bagno prezzi |
 | `/finiture-di-pregio-roma` | finiture di pregio ristrutturazione Roma | collettore idrico sportello d'ispezione a filo, angoli a 45 gradi piastrelle (jolly), posa grandi lastre gres 120x280, tagli di luce LED soffitto, tessuto in fibra di vetro antifessure / rasatura armata pareti |
+| `/quanto-costa-ristrutturare-bagno-roma` (articolo) | quanto costa ristrutturare un bagno a Roma | costo rifacimento bagno, prezzo bagno chiavi in mano Roma, bagno piccolo 3 mq costo |
 | `/ristrutturazioni-esterni` | rifacimento facciata Roma, ristrutturazione facciate condominio | cappotto termico Roma, impresa facciate Lazio |
 | `/infissi-serramenti` | infissi PVC Roma, sostituzione infissi Roma | finestre PVC prezzi, Rehau Synego prezzo, tapparelle alluminio coibentato, zanzariere Roma |
 | `/case-in-legno` | case in legno prefabbricate prezzi | casa in legno chiavi in mano, casa in legno Lazio/Italia, A-frame, Barn House |
@@ -86,6 +87,8 @@ Eugenio: finita una pagina si passa alla successiva; 2-3 pagine per ogni pagina 
 - Per ogni articolo anche: **post per tutti i social tramite Metricool** (immagine 1080×1350 Nero & Oro, testo, link, hashtag, "📍 Roma, Lazio, Italia"), programmato **solo dopo l'ok di Eugenio**; **storia Instagram** 1080×1920 da pubblicare con lo sticker Link.
 - **Gli articoli nascono dalle pagine di approfondimento** (Eugenio, 20/10/2026): da ogni pagina creata dentro le pagine principali (bagno, dettagli, cucina, strutture ricettive, facciate, terrazzi, infissi, case in legno…) si ricava un articolo che la racconta e la linka, con il suo post social e la storia. Testo dell'articolo diverso da quello della pagina (mai copiato).
 - **A rotazione tra le pagine principali della Home** (Eugenio, 20/10/2026): l'ordine **non è fisso** (se un'area non ha niente di nuovo si salta); l'unica regola è che **due articoli di seguito non siano mai della stessa pagina principale**. Ordine indicativo: 1 Ristrutturazioni interni (primo articolo: bagno) → 2 Ristrutturazioni esterni → 3 Infissi e serramenti → 4 Case in legno → 5 Interior design → 6 Studio tecnico → si ricomincia. Se un'area non ha ancora una pagina di approfondimento, l'articolo parte dalla pagina principale e servono foto vere di Eugenio.
+
+- **Registro articoli:** 1) 20/10/2026 – Interni – "Quanto costa ristrutturare un bagno a Roma" (prossimo: NON interni).
 
 ## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**, ma **al massimo 3-4 domande per messaggio**, messaggi brevi)
 - Google Business: sembra verificato, da controllare insieme (schermate di categorie, servizi, zona) – Servizi Locali ancora in verifica

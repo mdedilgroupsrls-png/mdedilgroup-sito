@@ -95,7 +95,7 @@
   function leggi(k) { try { return sessionStorage.getItem(k) || ''; } catch (x) { return ''; } }
   function scriviS(k, v) { try { sessionStorage.setItem(k, v); } catch (x) {} }
   // modulo contatti: campi nascosti con pagina, tipo di richiesta e canale (mai dati personali)
-  var SERVIZIO = { 'ristrutturazioni-interni': 'Ristrutturazione interni', 'ristrutturazione-bagno-roma': 'Ristrutturazione interni', 'finiture-di-pregio-roma': 'Ristrutturazione interni', 'ristrutturazioni-esterni': 'Ristrutturazione esterni', 'infissi-serramenti': 'Infissi e serramenti', 'case-in-legno': 'Case in legno', 'interior-design': 'Progettazione', 'studio-tecnico': 'Progettazione' };
+  var SERVIZIO = { 'ristrutturazioni-interni': 'Ristrutturazione interni', 'ristrutturazione-bagno-roma': 'Ristrutturazione interni', 'finiture-di-pregio-roma': 'Ristrutturazione interni', 'quanto-costa-ristrutturare-bagno-roma': 'Ristrutturazione interni', 'ristrutturazioni-esterni': 'Ristrutturazione esterni', 'infissi-serramenti': 'Infissi e serramenti', 'case-in-legno': 'Case in legno', 'interior-design': 'Progettazione', 'studio-tecnico': 'Progettazione' };
   function tipoRichiesta(a) { var t = (a.textContent || '').toLowerCase(); return /sopralluogo/.test(t) ? 'sopralluogo' : /progett/.test(t) ? 'progetto' : 'preventivo'; }
   function modulo() {
     var f = document.querySelector('form[name="preventivo"]'); if (!f) return;
