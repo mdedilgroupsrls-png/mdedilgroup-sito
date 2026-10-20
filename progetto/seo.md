@@ -75,8 +75,7 @@ Metodo: un passo alla volta. Claude spiega cosa fare e perché, mostra la situaz
 - Google Analytics 4: spiegato a Eugenio dove trovare il codice G-… (20/10/2026); attendere il codice e l'ok al banner cookie con consenso
 - Google Business e Servizi Locali: schermate di categorie, servizi, zona, stato della verifica (organizzazione e assicurazione)
 - Orari di apertura
-- Vecchie, ancora senza risposta: modalità di pagamento anche nel PDF delle case in legno? Infissi: limiti per demolizione e posa (oggi doppio prezzo oltre 3,22 m², sopralluogo oltre 6,44 m²) vanno bene? Azzerare il contatore dei preventivi PDF dopo le prove?
-- Risposte avute (20/10/2026): bagno "a partire da 6.500 €" sì (non prezzo fisso); Milano solo per ristrutturazioni complete, non bagni o piccoli lavori; finitura silossanica ammessa con il cappotto (il simulatore la permette già con il cappotto EPS); finito di norma in una settimana; compreso tutto il materiale che resta murato, esclusi rivestimenti, sanitari, rubinetteria, piatto e box doccia, accessori e tutto il resto
+- Risposte avute (20/10/2026): bagno "a partire da 6.500 €" sì (non prezzo fisso); Milano solo per ristrutturazioni complete; niente modalità di pagamento nel PDF delle case in legno (variano); infissi: limiti di demolizione e posa confermati; contatore dei preventivi azzerato, non bagni o piccoli lavori; finitura silossanica ammessa con il cappotto (il simulatore la permette già con il cappotto EPS); finito di norma in una settimana; compreso tutto il materiale che resta murato, esclusi rivestimenti, sanitari, rubinetteria, piatto e box doccia, accessori e tutto il resto
 
 ## Regole
 - **Foto di Eugenio:** le manda un po' alla volta dicendo cosa sono; Claude scrive per ognuna testo alternativo, didascalia e nome del file pensati per Google (lavoro + materiale + zona di Roma, frasi naturali, niente parole ripetute a forza), le converte in webp leggere e le mette nella pagina giusta.
