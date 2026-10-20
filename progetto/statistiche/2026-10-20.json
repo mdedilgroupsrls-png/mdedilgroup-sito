@@ -1,0 +1,258 @@
+{
+ "data": "2026-10-20",
+ "finestra": "ultime 24 ore fino al 20/10/2026 23:52 (Roma)",
+ "eventi": {
+  "vista-case-in-legno": 89,
+  "vista-home": 76,
+  "arrivo-diretto": 66,
+  "simulazione-case-in-legno": 30,
+  "arrivo-google": 16,
+  "scheda-casa-olivia": 16,
+  "modello-olivia": 15,
+  "modello-nord-house": 13,
+  "scheda-casa-nord-house": 12,
+  "scheda-casa-flat-double": 12,
+  "scheda-casa-flat-house-1-5": 12,
+  "modello-flat-house-1-5": 12,
+  "modello-flat-double": 11,
+  "arrivo-facebook": 11,
+  "modello-norway": 8,
+  "scheda-casa-norway": 8,
+  "scheda-casa-fjord": 7,
+  "modello-fjord": 6,
+  "vista-studio-tecnico": 5,
+  "modello-montblanc": 5,
+  "arrivo-instagram": 5,
+  "scheda-casa-montblanc": 5,
+  "scheda-casa-a-frame-l": 4,
+  "scheda-casa-a-frame": 4,
+  "scheda-casa-flat-house": 4,
+  "modello-sherwood": 4,
+  "modello-flat-house": 4,
+  "scheda-casa-sherwood": 4,
+  "modello-a-frame": 4,
+  "modello-a-frame-l": 4,
+  "vista-chi-siamo": 3,
+  "vista-ristrutturazioni-interni": 3,
+  "modello-barn-house": 3,
+  "scheda-casa-barn-house": 3,
+  "vista-infissi-serramenti": 3,
+  "scheda-casa-barn-double": 2,
+  "vista-interior-design": 2,
+  "scheda-casa-siver": 2,
+  "modello-barn-double": 2,
+  "simulazione-infissi-serramenti": 2,
+  "modello-siver": 2,
+  "simulazione-ristrutturazioni-interni": 2,
+  "vista-ristrutturazioni-esterni": 1,
+  "scheda-casa-mini-barn-boutique": 1,
+  "scheda-casa-barn-max-height": 1,
+  "modello-freya-smart": 1,
+  "scheda-casa-barn-mini": 1,
+  "arrivo-threads": 1,
+  "scheda-casa-barn-light": 1,
+  "modello-mini-barn-boutique": 1,
+  "modello-barn-mini": 1,
+  "modello-barn-max-height": 1,
+  "scheda-casa-freya-smart": 1
+ },
+ "eventi_per_citta": [
+  {
+   "e": "vista-case-in-legno",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 11
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 10
+  },
+  {
+   "e": "vista-home",
+   "c": "City of London",
+   "r": "England",
+   "n": "GB",
+   "count": 9
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 9
+  },
+  {
+   "e": "arrivo-facebook",
+   "c": "City of London",
+   "r": "England",
+   "n": "GB",
+   "count": 9
+  },
+  {
+   "e": "vista-home",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 9
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "?",
+   "r": "Campania",
+   "n": "IT",
+   "count": 8
+  },
+  {
+   "e": "vista-home",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 8
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 8
+  },
+  {
+   "e": "vista-home",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 8
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "?",
+   "r": "Campania",
+   "n": "IT",
+   "count": 7
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "?",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 7
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 6
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "modello-flat-double",
+   "c": "?",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "scheda-casa-flat-double",
+   "c": "?",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-home",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Vicenza",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "?",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "arrivo-google",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Vicenza",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-home",
+   "c": "Brasov",
+   "r": "Brașov County",
+   "n": "RO",
+   "count": 3
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Busto Arsizio",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 3
+  }
+ ],
+ "nota_citta": "righe principali (count>=3) dei dati s.txt; l'elenco completo è più lungo (pagine Netlify oltre la 2)",
+ "pagine_html_browser": {
+  "/": 66,
+  "/case-in-legno": 54,
+  "/chi-siamo": 6,
+  "/studio-tecnico": 4,
+  "/infissi-serramenti": 3,
+  "/ristrutturazioni-interni": 2,
+  "/privacy": 1,
+  "/interior-design": 1,
+  "/ristrutturazioni-esterni": 1
+ },
+ "paesi_html_browser": {
+  "IT": 106,
+  "US": 20,
+  "RO": 5,
+  "IE": 3,
+  "GB": 3,
+  "DK": 2,
+  "BE": 2,
+  "BG": 2,
+  "SG": 2,
+  "SM": 2,
+  "PH": 1,
+  "UA": 1,
+  "CH": 1,
+  "IQ": 1,
+  "DE": 1
+ }
+}
