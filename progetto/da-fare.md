@@ -4,6 +4,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
 - [x] 20/10/2026 – Infissi Monte Sacro: costo indicativo circa 2.400 € + IVA nell'articolo (altezza 2,20 m da Eugenio). Reel o post del cantiere da montare più avanti
+- [x] 21/10/2026 – Guida "Quanto costano 5 infissi in PVC Rehau Synego? Un preventivo vero" con PDF impaginato (in Home dal 27/10)
 - [x] 21/10/2026 – Home: taccuino in 3 colonne con uscite programmate (`js/taccuino.js`, calendario in `seo.md`); pagina lavoro realizzato villa Trigoria
 - [ ] Articoli detrazioni per il 3/11, 17/11, 1/12, 15/12, 29/12 (compito del giovedì)
 - [x] 21/10/2026 – Pagina lavoro realizzato "Infissi in tutti gli appartamenti di una palazzina con il Superbonus 110% a L'Aquila"

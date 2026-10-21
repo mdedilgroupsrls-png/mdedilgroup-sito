@@ -108,6 +108,7 @@ Foto non ancora usate in nessun reel, quindi pronte:
 - [ ] Dettaglio collettore Teco (Piazza Fiume) – `dettaglio-collettore-1..4`
 - [ ] Dettaglio angoli a 45° a jolly – `dettaglio-jolly-1..3`
 - [ ] Dettaglio tessuto in fibra di vetro (Piazza Fiume) – `dettaglio-fibra-1..4`
+- [ ] Guida preventivo 5 infissi Rehau Synego – anteprime PDF `preventivo-infissi-esempio-*` (ideale come carosello)
 - [ ] Cantiere infissi villa Trigoria – 4 foto `infissi-villa-trigoria-*` (mai usate)
 - [ ] Cantiere infissi palazzina L'Aquila (Superbonus 110%) – 3 foto `infissi-palazzina-l-aquila-*` (mai usate)
 - [ ] Cantiere infissi Corso Trieste (finto legno, monoblocco coibentato) – 4 foto `infissi-corso-trieste-*` (mai usate)
@@ -120,7 +121,7 @@ Foto non ancora usate in nessun reel, quindi pronte:
 Il taccuino della Home ha 3 colonne; ogni scheda compare dal giorno in `data-dal` (gestito da `js/taccuino.js`, 3 schede per colonna: la più recente con foto, le altre solo titolo).
 - **I nostri lavori – uno ogni martedì:** 20/10 Monte Sacro (infissi) · 27/10 Roma Nord (infissi) · 3/11 EUR (infissi) · 10/11 Corso Trieste (infissi) · 17/11 palazzina L'Aquila (infissi) · 24/11 villa Trigoria (infissi) · dal 1/12: prossimi cantieri. Per ora sono tutti di infissi perché è il materiale arrivato: appena arrivano cantieri di interni, esterni o case in legno, si inseriscono **in mezzo** (spostando le date) per alternare le pagine principali.
 - **Detrazioni e bonus – almeno uno ogni due settimane, di martedì:** 20/10 bonus ristrutturazione e infissi 2026 · **3/11, 17/11, 1/12, 15/12, 29/12 da scrivere** (compito del giovedì, solo fonti ufficiali con data; temi possibili: scadenze di fine 2026 e come non perdere il 50%, ecobonus e ENEA per gli infissi, bonus mobili, documenti e bonifico parlante, cosa cambia nel 2027).
-- **Guide e costi:** 20/10 quanto costa ristrutturare un bagno a Roma. Terza colonna proposta da Claude (Eugenio non ricordava la terza voce): da confermare.
+- **Guide e costi:** 20/10 quanto costa ristrutturare un bagno a Roma · 27/10 preventivo vero di 5 infissi Rehau Synego (`/preventivo-infissi-pvc-rehau-synego`, parole chiave: preventivo infissi PVC, quanto costano gli infissi in PVC, costo posa infissi, prezzo Rehau Synego). Terza colonna proposta da Claude (Eugenio non ricordava la terza voce): da confermare.
 
 ## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**, ma **al massimo 3-4 domande per messaggio**, messaggi brevi)
 - Google Business: sembra verificato, da controllare insieme (schermate di categorie, servizi, zona) – Servizi Locali ancora in verifica
