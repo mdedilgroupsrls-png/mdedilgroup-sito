@@ -119,9 +119,29 @@ Foto non ancora usate in nessun reel, quindi pronte:
 
 ## Calendario uscite in Home (Eugenio, 21/10/2026)
 Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer (Eugenio, 21/10/2026); i testi delle schede sono scritti per la SEO (lavorazione + parola chiave + zona). Il taccuino è un nastro di schede che scorre da solo da destra a sinistra (Eugenio, 21/10/2026), dal più recente; ogni scheda compare dal giorno in `data-dal` (gestito da `js/taccuino.js`) e ha `data-cat` = I nostri lavori / Detrazioni e bonus / Guide e costi.
-- **I nostri lavori – uno ogni martedì:** 20/10 Monte Sacro (infissi) · 27/10 Roma Nord (infissi) · 3/11 EUR (infissi) · 10/11 Corso Trieste (infissi) · 17/11 palazzina L'Aquila (infissi) · 24/11 villa Trigoria (infissi) · dal 1/12: prossimi cantieri. Per ora sono tutti di infissi perché è il materiale arrivato: appena arrivano cantieri di interni, esterni o case in legno, si inseriscono **in mezzo** (spostando le date) per alternare le pagine principali.
-- **Detrazioni e bonus – almeno uno ogni due settimane, di martedì:** 20/10 bonus ristrutturazione e infissi 2026 · **3/11, 17/11, 1/12, 15/12, 29/12 da scrivere** (compito del giovedì, solo fonti ufficiali con data; temi possibili: scadenze di fine 2026 e come non perdere il 50%, ecobonus e ENEA per gli infissi, bonus mobili, documenti e bonifico parlante, cosa cambia nel 2027).
-- **Guide e costi:** 20/10 quanto costa ristrutturare un bagno a Roma · 27/10 preventivo vero di 5 infissi Rehau Synego (`/preventivo-infissi-pvc-rehau-synego`, parole chiave: preventivo infissi PVC, quanto costano gli infissi in PVC, costo posa infissi, prezzo Rehau Synego). Tre tipi di articoli "I nostri lavori", "Detrazioni e bonus", "Guide e costi" confermati da Eugenio (21/10/2026).
+- **Regola (Eugenio, 21/10/2026, ribadita):** in Home esce **un solo articolo a settimana, il martedì**, ogni volta da una **pagina diversa** (infissi, interni, esterni, case in legno, detrazioni; mai due di seguito dalla stessa). Si prepara una **scorta di articoli per 6 mesi (26 martedì) da oggi**: quando è completa, dirlo a Eugenio. Le pagine dei cantieri vanno online subito (sezione lavori realizzati, sitemap); in Home compaiono alla loro data.
+- 20/10 (già usciti insieme): Monte Sacro (infissi), detrazioni 2026, costo del bagno (interni).
+
+| Martedì | Pagina | Articolo | Stato |
+|---|---|---|---|
+| 27/10/2026 | Detrazioni | da scrivere (es. scadenze di fine 2026 e come non perdere il 50%) | da scrivere giovedì 22/10 |
+| 3/11 | Infissi | Roma Nord – scorrevole e vetrata a timpano | pronto |
+| 10/11 | Interni | da scrivere (es. dalla pagina dettagli: collettore, angoli a 45°, fibra di vetro) | da scrivere |
+| 17/11 | Detrazioni | da scrivere (es. ecobonus infissi: trasmittanza e ENEA) | da scrivere |
+| 24/11 | Infissi | EUR – scorrevoli antracite e vetrata ad angolo | pronto |
+| 1/12 | Esterni | da scrivere (serve materiale di Eugenio; in mancanza, dalla pagina esterni) | da scrivere |
+| 8/12 | Detrazioni | da scrivere (es. bonus mobili, documenti e bonifico parlante) | da scrivere |
+| 15/12 | Infissi | Corso Trieste – finto legno con monoblocco | pronto |
+| 22/12 | Case in legno | da scrivere | da scrivere |
+| 29/12 | Detrazioni | da scrivere (cosa cambia nel 2027) | da scrivere |
+| 5/1/2027 | Infissi (Guide e costi) | preventivo vero di 5 infissi Rehau Synego | pronto |
+| 12/1 | Interni | da scrivere | da scrivere |
+| 19/1 | Infissi | palazzina con il Superbonus a L'Aquila | pronto |
+| 26/1 | Detrazioni | da scrivere | da scrivere |
+| 2/2 | Infissi | villa bifamiliare a Trigoria | pronto |
+| 9/2 – 20/4/2027 (11 martedì) | a rotazione | da scrivere con il materiale nuovo | da scrivere |
+
+**Scorta articoli: 6 pronti su 26** (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
 
 ## Idee di articoli da proporre (ricordarle a Eugenio quando chiede "che articolo si può fare")
 - **Guida ai costi di tapparelle e zanzariere** (Eugenio, 21/10/2026): un altro preventivo di esempio, separato da quello degli infissi, con tapparelle in alluminio coibentato e zanzariere (misure dal foglio di Eugenio del 21/10: tapparelle 110×155 ×2, 106,5×155, 150×240 ×2, oppure un esempio nuovo che manderà lui). Da fare più avanti, quando lo chiede.
