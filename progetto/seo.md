@@ -141,6 +141,8 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 | 2/2 | Infissi | villa bifamiliare a Trigoria | pronto |
 | 9/2 – 20/4/2027 (11 martedì) | a rotazione | da scrivere con il materiale nuovo | da scrivere |
 
+**Ogni articolo ha il suo reel** (voce Carina, sottotitoli, logo), montato quando si prepara l'articolo e programmato su Metricool per il suo martedì appena il video è online (vedi CLAUDE.md). Reel degli articoli già pronti: bagno e detrazioni 2026 (articoli del 20/10); da montare: Roma Nord, EUR, Corso Trieste, preventivo infissi, L'Aquila, Trigoria e tutti i nuovi.
+
 **Scorta articoli: 6 pronti su 26** (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
 
 ## Idee di articoli da proporre (ricordarle a Eugenio quando chiede "che articolo si può fare")
