@@ -123,6 +123,9 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 - **Detrazioni e bonus – almeno uno ogni due settimane, di martedì:** 20/10 bonus ristrutturazione e infissi 2026 · **3/11, 17/11, 1/12, 15/12, 29/12 da scrivere** (compito del giovedì, solo fonti ufficiali con data; temi possibili: scadenze di fine 2026 e come non perdere il 50%, ecobonus e ENEA per gli infissi, bonus mobili, documenti e bonifico parlante, cosa cambia nel 2027).
 - **Guide e costi:** 20/10 quanto costa ristrutturare un bagno a Roma · 27/10 preventivo vero di 5 infissi Rehau Synego (`/preventivo-infissi-pvc-rehau-synego`, parole chiave: preventivo infissi PVC, quanto costano gli infissi in PVC, costo posa infissi, prezzo Rehau Synego). Terza colonna proposta da Claude (Eugenio non ricordava la terza voce): da confermare.
 
+## Idee di articoli da proporre (ricordarle a Eugenio quando chiede "che articolo si può fare")
+- **Guida ai costi di tapparelle e zanzariere** (Eugenio, 21/10/2026): un altro preventivo di esempio, separato da quello degli infissi, con tapparelle in alluminio coibentato e zanzariere (misure dal foglio di Eugenio del 21/10: tapparelle 110×155 ×2, 106,5×155, 150×240 ×2, oppure un esempio nuovo che manderà lui). Da fare più avanti, quando lo chiede.
+
 ## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**, ma **al massimo 3-4 domande per messaggio**, messaggi brevi)
 - Google Business: sembra verificato, da controllare insieme (schermate di categorie, servizi, zona) – Servizi Locali ancora in verifica
 - Bagno: [x] lavoro raccontato con foto durante/dopo (villa all'Olgiata, 20/10/2026). Superficie (circa 4–5 m²) e durata (più di una settimana) inserite. Ancora utile: altri bagni con foto e zona quando ci sono. **Non usare per ora `img/bagno-lastre.webp` (bagno in cantiere) né `img/dettaglio-impianti.webp`**: Eugenio manderà più avanti le foto del bagno finito (20/10/2026)
