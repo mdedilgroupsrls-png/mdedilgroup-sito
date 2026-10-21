@@ -4,6 +4,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
 - [x] 20/10/2026 – Infissi Monte Sacro: costo indicativo circa 2.400 € + IVA nell'articolo (altezza 2,20 m da Eugenio). Reel o post del cantiere da montare più avanti
+- [x] 21/10/2026 – Pagina lavoro realizzato "Infissi in PVC finto legno con monoblocco coibentato a Corso Trieste"
 - [x] 20/10/2026 – Pagina lavoro realizzato "Infissi scorrevoli antracite e vetrata ad angolo all'EUR" con la posa a regola d'arte
 - [x] 20/10/2026 – Pagina lavoro realizzato "Porta-finestra scorrevole e vetrata a timpano a Roma Nord" (infissi; in Home più avanti, a rotazione)
 - [x] 20/10/2026 – Articolo "Infissi in PVC a Monte Sacro" e sezione "I nostri lavori realizzati" nella pagina infissi (branch `lavori-in-corso`)
