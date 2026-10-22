@@ -16,6 +16,7 @@
 - **Google Business (scheda Google Maps):** https://share.google/yn3A7I7LeApokmdvk
 - **Servizi locali di Google (annunci "Verificata da Google"):** https://ads.google.com/localservices – **verificato al 100%** il 22/10/2026 (profilo Google collegato, offerte e budget, fatturazione, licenza commerciale completi). Si paga per contatto ricevuto.
   - Stato al 22/10/2026: servizi attivi 8/11 (consigliato da Claude spegnere "Fondamenta e cemento" e "Pedane e patii"); area coperta = Roma dentro e poco fuori il GRA (fuori: Olgiata, Monterotondo, Trigoria, Ostia, Castelli – consigliato di aggiungerli); offerte automatiche, budget medio 224 €/settimana (circa 970 €/mese); descrizione con "Prezzo migliore o equivalente" (consigliato toglierlo: stona con il posizionamento di pregio).
+  - 22/10/2026: tolto "Prezzo migliore o equivalente"; caratteristiche = servizio professionale, preventivo gratuito, garanzia sulla lavorazione, garanzia di puntualità (+ consigliati preventivi gratuiti a domicilio e referenze). Budget: la consulente Google ha suggerito circa 150–160 € (settimanali); prova di 3–4 settimane, poi valutare costo per contatto e richieste utili.
 - **Link per lasciare una recensione Google:** https://g.page/r/CSlUfVvDiZqIEBM/review (pulsante "Lascia una recensione" nella Home, sezione contatti)
 - **Facebook:** https://www.facebook.com/share/1CC9LcgweN/
 - **TikTok:** https://www.tiktok.com/@md_edil_group
