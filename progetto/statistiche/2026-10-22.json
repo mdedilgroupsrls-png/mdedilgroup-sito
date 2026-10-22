@@ -1,0 +1,296 @@
+{
+ "data": "2026-10-22",
+ "finestra": "ultime 24 ore fino al 22/10/2026 23:51 (Roma)",
+ "eventi": {
+  "vista-home": 94,
+  "vista-case-in-legno": 92,
+  "arrivo-diretto": 58,
+  "arrivo-instagram": 30,
+  "simulazione-case-in-legno": 28,
+  "arrivo-google": 17,
+  "scheda-casa-fjord": 13,
+  "scheda-casa-nord-house": 13,
+  "scheda-casa-siver": 12,
+  "scheda-casa-olivia": 12,
+  "modello-nord-house": 12,
+  "modello-fjord": 12,
+  "modello-olivia": 11,
+  "scheda-casa-flat-house-1-5": 11,
+  "modello-flat-house-1-5": 11,
+  "modello-siver": 11,
+  "arrivo-facebook": 10,
+  "modello-norway": 10,
+  "scheda-casa-norway": 10,
+  "vista-chi-siamo": 8,
+  "scheda-casa-flat-house": 8,
+  "modello-flat-house": 8,
+  "scheda-casa-sherwood": 5,
+  "scheda-casa-mini-barn-boutique": 5,
+  "modello-mini-barn-boutique": 5,
+  "scheda-casa-barn-double": 5,
+  "scheda-casa-flat-double": 5,
+  "modello-flat-double": 4,
+  "scheda-casa-a-frame": 4,
+  "modello-barn-double": 4,
+  "modello-montblanc": 4,
+  "scheda-casa-montblanc": 4,
+  "modello-a-frame": 4,
+  "vista-ristrutturazioni-esterni": 4,
+  "modello-sherwood": 4,
+  "whatsapp-home": 3,
+  "vista-studio-tecnico": 3,
+  "scheda-casa-barn-mini": 3,
+  "scheda-casa-a-frame-l": 3,
+  "vista-interior-design": 3,
+  "modello-a-frame-l": 3,
+  "modello-barn-mini": 3,
+  "vista-ristrutturazioni-interni": 3,
+  "vista-infissi-serramenti": 2,
+  "vista-grazie": 2,
+  "arrivo-altro": 2,
+  "modulo-preventivo-inviato": 2,
+  "simulazione-ristrutturazioni-esterni": 1,
+  "modello-barn-house": 1,
+  "email": 1,
+  "social-facebook": 1,
+  "social-instagram": 1,
+  "scheda-casa-barn-house": 1,
+  "simulazione-ristrutturazioni-interni": 1
+ },
+ "eventi_per_citta": [
+  {
+   "e": "vista-case-in-legno",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 17
+  },
+  {
+   "e": "vista-home",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 16
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 13
+  },
+  {
+   "e": "vista-home",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 12
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 10
+  },
+  {
+   "e": "vista-home",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 9
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 9
+  },
+  {
+   "e": "scheda-casa-fjord",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 8
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 8
+  },
+  {
+   "e": "modello-fjord",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 7
+  },
+  {
+   "e": "arrivo-instagram",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 6
+  },
+  {
+   "e": "modello-siver",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "scheda-casa-siver",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "arrivo-instagram",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Turin",
+   "r": "Piedmont",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "scheda-casa-flat-house-1-5",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "arrivo-google",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-home",
+   "c": "Pescara",
+   "r": "Abruzzo",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Quarto",
+   "r": "Campania",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "modello-flat-house-1-5",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Sassari",
+   "r": "Sardinia",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "?",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 4
+  },
+  {
+   "e": "scheda-casa-siver",
+   "c": "Vittuone",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "modello-olivia",
+   "c": "Turin",
+   "r": "Piedmont",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "scheda-casa-norway",
+   "c": "Vittuone",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "scheda-casa-a-frame-l",
+   "c": "?",
+   "r": "Sicily",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "vista-home",
+   "c": "Parma",
+   "r": "Emilia-Romagna",
+   "n": "IT",
+   "count": 3
+  },
+  {
+   "e": "modello-norway",
+   "c": "Vittuone",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 3
+  }
+ ],
+ "nota_citta": "righe principali (count>=3) dei dati s.txt dalle pagine 1-2 di Netlify (solo mdedilgroup.it, escluse le prove automatiche da Ashburn/US con errore); l'elenco completo è più lungo",
+ "pagine_html_browser": {
+  "/": 86,
+  "/case-in-legno": 50,
+  "/chi-siamo": 7,
+  "/ristrutturazioni-esterni": 3,
+  "/grazie": 2
+ },
+ "paesi_html_browser": {
+  "IT": 109,
+  "US": 41,
+  "NL": 4,
+  "CA": 5,
+  "DE": 5,
+  "CN": 2,
+  "AE": 2,
+  "IN": 1,
+  "RU": 1,
+  "FI": 1,
+  "JP": 1,
+  "IE": 1,
+  "AU": 1,
+  "ES": 1
+ }
+}
