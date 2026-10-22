@@ -124,7 +124,7 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 
 | Martedì | Pagina | Articolo | Stato |
 |---|---|---|---|
-| 27/10/2026 | Detrazioni | da scrivere (es. scadenze di fine 2026 e come non perdere il 50%) | da scrivere giovedì 22/10 |
+| 27/10/2026 | Detrazioni | Bonus casa al 50%: perché pagare entro il 31 dicembre 2026 (`/bonus-casa-50-pagare-entro-31-dicembre-2026`, parole chiave: bonus ristrutturazione 2026, detrazione 50% prima casa, bonus casa 2027 36%) + reel | pronto (22/10) |
 | 3/11 | Infissi | Roma Nord – scorrevole e vetrata a timpano | pronto |
 | 10/11 | Interni | da scrivere (es. dalla pagina dettagli: collettore, angoli a 45°, fibra di vetro) | da scrivere |
 | 17/11 | Detrazioni | da scrivere (es. ecobonus infissi: trasmittanza e ENEA) | da scrivere |
@@ -143,7 +143,7 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 
 **Ogni articolo ha il suo reel** (voce Carina, sottotitoli, logo), montato quando si prepara l'articolo e programmato su Metricool per il suo martedì appena il video è online (vedi CLAUDE.md). **Tranne infissi e serramenti: mai sui social** (Eugenio, 21/10/2026): niente reel per gli articoli di infissi; in quelle settimane esce un contenuto della scorta di un altro settore (es. reel posa onice, carosello bagno Piazza Fiume). Reel degli articoli già pronti: bagno e detrazioni 2026 (articoli del 20/10); da montare: tutti gli articoli nuovi non di infissi.
 
-**Scorta articoli: 6 pronti su 26** (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
+**Scorta articoli: 7 pronti su 26** (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
 
 ## Idee di articoli da proporre (ricordarle a Eugenio quando chiede "che articolo si può fare")
 - **Guida ai costi di tapparelle e zanzariere** (Eugenio, 21/10/2026): un altro preventivo di esempio, separato da quello degli infissi, con tapparelle in alluminio coibentato e zanzariere (misure dal foglio di Eugenio del 21/10: tapparelle 110×155 ×2, 106,5×155, 150×240 ×2, oppure un esempio nuovo che manderà lui). Da fare più avanti, quando lo chiede.
