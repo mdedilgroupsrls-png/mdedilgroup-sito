@@ -115,7 +115,7 @@ Fonte: PDF di Eugenio "Md Listino case legno chiavi in mano" (Prosto House Europ
 
 Regole decise da Eugenio:
 - **Kit di montaggio = prezzo della struttura del catalogo** (non si somma due volte).
-- **Fondazione:** platea in cemento armato alta 30 cm, **230 €/m² × m² coperti** del catalogo (non si usa la fondazione del listino).
+- **Fondazione:** platea in cemento armato alta 30 cm, **230 €/m² × m² coperti** del catalogo (non si usa la fondazione del listino). Nel simulatore la voce **parte spenta**: la spunta il cliente se gli serve (Eugenio, 22/10/2026).
 - **Piastrelle:** posa 39 €/m² (piastrelle del cliente) + **massetto 40 €/m²**, solo se si scelgono le piastrelle; m² proposti = m² utili del catalogo, modificabili. Laminato = prezzo del listino (fornitura e posa).
 - Descrizioni modificate: posa piastrelle in bagno inclusa nelle pareti divisorie, altrove 39 €/m² (non 25), tinteggiatura 10 €/m²; elettrico con interruttori e prese tipo BTicino inclusi, corpi illuminanti esclusi; porte: installazione da 90 € (non 60); clima: "per riscaldamento e raffrescamento: motore con due split, solo predisposizione".
 - **Esclusi dal sito:** finestra da tetto, finestre laterali (vasistas e fisse), pergola, porte d'ingresso in metallo e PVC, cucina, dotazione bagno. Esclusi anche i modelli del listino che non sono nel catalogo (Mobile 8x3, Double Barn Plus, Flat Small, Freya 68 m²).
