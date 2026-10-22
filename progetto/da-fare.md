@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
+- [ ] **Servizi locali di Google** (verificati il 22/10/2026): controllare con Eugenio servizi attivi, zona (Roma e Lazio) e budget; ogni settimana guardare i contatti arrivati e contestare quelli non pertinenti
 - [x] 22/10/2026 – Articolo detrazioni "Bonus casa al 50% entro il 31 dicembre 2026" con reel (esce il 27/10)
 - [x] 20/10/2026 – Infissi Monte Sacro: costo indicativo circa 2.400 € + IVA nell'articolo (altezza 2,20 m da Eugenio). Reel o post del cantiere da montare più avanti
 - [x] 21/10/2026 – Guida "Quanto costano 5 infissi in PVC Rehau Synego? Un preventivo vero" con PDF impaginato (in Home dal 5/1/2027)

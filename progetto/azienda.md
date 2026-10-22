@@ -14,6 +14,7 @@
 - **Email:** mdedilgroupsrls@gmail.com
 - **Instagram:** https://www.instagram.com/md_edil_group/
 - **Google Business (scheda Google Maps):** https://share.google/yn3A7I7LeApokmdvk
+- **Servizi locali di Google (annunci "Verificata da Google"):** https://ads.google.com/localservices – **verificato al 100%** il 22/10/2026 (profilo Google collegato, offerte e budget, fatturazione, licenza commerciale completi). Si paga per contatto ricevuto.
 - **Link per lasciare una recensione Google:** https://g.page/r/CSlUfVvDiZqIEBM/review (pulsante "Lascia una recensione" nella Home, sezione contatti)
 - **Facebook:** https://www.facebook.com/share/1CC9LcgweN/
 - **TikTok:** https://www.tiktok.com/@md_edil_group
