@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da ricordare a Eugenio quando chiede "cosa abbiamo da fare"
+- [x] 23/10/2026 – "Dove lavoriamo a Roma": tutte le zone di Roma per area (Nord, Centro, Est, Sud e Ovest, Litorale), link ai lavori realizzati – Eugenio
 - [x] 23/10/2026 – Interni: "Cosa ristrutturiamo" a titoli che si aprono, ognuno con il suo link; "Dove lavoriamo a Roma" (zone dei cantieri veri); link diretti a ogni paragrafo di guide e listino infissi; D.M. 37/08 negli impianti; guida costi con ristrutturazione parziale e sezioni a scomparsa – Eugenio
 - [ ] ISO 9001: spiegare a Eugenio cosa serve (chiesto il 23/10/2026; spiegazione breve data in chat, approfondire quando lo chiede)
 - [x] 23/10/2026 – Ristrutturazione completa casa: prezzo da 600 € a 1.000 € al m² (prima 650) nella scheda di /ristrutturazioni-interni, nella guida costi, nella Home e in llms.txt – Eugenio

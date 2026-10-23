@@ -37,7 +37,7 @@ Scritte così nel fondo di tutte le pagine, nei contatti della Home e nell'infor
 - **Preventivi PDF** (Eugenio, 23/10/2026): nell'intestazione **solo l'indirizzo "Via Monti Lepini 9, 00015 Monterotondo (RM)"**, senza scritte "sede legale" o "sede operativa" e mai Via Po (sia il PDF creato dai simulatori, `js/preventivo-pdf.js`, sia i PDF di esempio in `preventivi/`). Nei dati strutturati (JSON-LD) restano tutti e due gli indirizzi, prima Via Po.
 
 ## Zone di lavoro
-- Zone dei cantieri veri, scritte nel riquadro "Dove lavoriamo a Roma" di /ristrutturazioni-interni (23/10/2026): interni Porta Pia, Piazza Fiume, Olgiata, Prati, Manzoni, San Giovanni, Corso Francia, Via Cassia; infissi Monte Sacro, EUR, Roma Nord, Corso Trieste, Trigoria. Aggiungere solo zone di cantieri reali.
+- Riquadro "Dove lavoriamo a Roma" di /ristrutturazioni-interni (Eugenio, 23/10/2026: "puoi aggiungere tutte le zone di Roma"): zone di Roma divise in Roma Nord, Centro, Roma Est, Roma Sud e Ovest, Litorale; le zone dei cantieri veri hanno il link al lavoro (Porta Pia, Piazza Fiume, Olgiata, Monte Sacro, EUR, Corso Trieste, Trigoria). Cantieri di interni anche a Prati, Manzoni, San Giovanni, Corso Francia, Via Cassia.
 - Ristrutturazioni: **Roma e Milano** (sul sito vanno citate entrambe), con Roma e Lazio come zona principale. **Milano solo per ristrutturazioni complete** (cantieri interi), non per bagni o lavori piccoli (Eugenio, 20/10/2026)
 - Case in legno: **tutta Italia**
 
