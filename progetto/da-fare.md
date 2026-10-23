@@ -103,6 +103,8 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 14/10/2026 – Tolti dalla galleria della Home i 2 render precedenti (soggiorno con camino, camera con anello luminoso); nella sezione metodo della Home la camera è sostituita da `id-camera-noce`
 - [x] 14/10/2026 – Didascalia dei render cambiata in "RENDER DI PROGETTO BY ARCHITETTO ADRIANA SCLIFOS" su tutte le foto (Home e Interior design)
 
+- [x] 23/10/2026 – Pagine Studio tecnico e Interior design aggiornate con i testi dei capitoli 1 e 2 inviati da Eugenio (PDF), migliorati per la SEO
+
 ## Gestione continua
 - Aggiornamenti settimanali del sito con nuove informazioni e foto dei lavori
 - Articoli per il blog e lavoro SEO, obiettivo: primi risultati su Google per ristrutturazioni di pregio a Roma e Milano
