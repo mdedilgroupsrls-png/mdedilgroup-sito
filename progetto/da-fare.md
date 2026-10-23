@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
+- [x] 23/10/2026 – Interni, cucina: aggiunta demolizione del vecchio rivestimento di 4 m² (70 €, prezzo della rimozione ceramica) → da 2.880 € IVA inclusa – Eugenio
 - [x] 23/10/2026 – Interni, cucina: aggiunte rasatura e pittura di 10 m² (485 €) → da 2.810 € IVA inclusa – Eugenio
 - [x] 23/10/2026 – Interni, cucina: ricalcolata con 10 punti luce e prese e rivestimento sulla fascia di circa 4 m² → da 2.325 € IVA inclusa – Eugenio
 - [x] 23/10/2026 – Interni, scheda cucina e zona giorno: il prezzo della zona giorno è indicato come "ristrutturazione parziale"; confermati cucina (6 punti, senza caldaia), villa senza IVA indicata, bagno 6.500 € nel simulatore – Eugenio
