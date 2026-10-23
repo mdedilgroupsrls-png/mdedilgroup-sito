@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
+- [x] 23/10/2026 – Prezzi di ogni voce anche per esterni (Guida alle lavorazioni, + IVA) e infissi (nuova sezione "Listino prezzi" dopo il simulatore, + IVA, imballaggio e trasporto inclusi) – Eugenio
 - [x] 23/10/2026 – Ristrutturazioni interni: nella Guida alle lavorazioni sotto ogni voce il prezzo del simulatore (IVA inclusa, es. "17,50 € al m²"), con nota sul +5% centro storico/ZTL – Eugenio
 - [x] 23/10/2026 – Infissi: scritto che i prezzi del simulatore comprendono imballaggio e trasporto (sotto il totale, testo iniziale, domanda frequente, WhatsApp, PDF) – Eugenio
 - [x] 23/10/2026 – Simulatore infissi: battente fino a 5 m² a pezzo (prima 4), sempre al prezzo al m²; oltre 5 m² al sopralluogo – Eugenio

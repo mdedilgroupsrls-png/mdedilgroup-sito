@@ -21,6 +21,28 @@ body{margin:0;background:#0E0D0B}
 a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 </style>
 <style>.tac-belt{position:relative;overflow:hidden;touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none}.tac-belt:active{cursor:grabbing}.tac-belt:focus-visible{outline:2px solid #C9A24A;outline-offset:4px}.tac-tr{display:flex;gap:24px;width:max-content;will-change:transform}.tac-tr a.cant{flex:0 0 clamp(270px,78vw,340px)}.tac-tr a.cant img{pointer-events:none}.tac-tr a.cant:hover{border-color:#C9A24A!important}.tac-belt::before,.tac-belt::after{content:"";position:absolute;top:0;bottom:0;width:clamp(16px,5vw,70px);z-index:2;pointer-events:none}.tac-belt::before{left:0;background:linear-gradient(90deg,#0E0D0B,transparent)}.tac-belt::after{right:0;background:linear-gradient(270deg,#0E0D0B,transparent)}</style>
+<style>/* listino prezzi: stesse regole della guida alle lavorazioni (css/simulatore.css) */
+.guida{background:#0E0D0B;padding:96px clamp(20px,5vw,72px);color:#D8D2C6;font-family:'Manrope',sans-serif}
+.guida-in{max-width:980px;margin:0 auto}
+.guida-ey{margin:0 0 14px;font-size:12px;letter-spacing:.38em;color:#C9A24A;font-weight:600}
+.guida h2{margin:0 0 16px;font-family:'Urbanist',sans-serif;font-weight:400;font-size:clamp(28px,3vw,42px);line-height:1.12;color:#F3EFE7}
+.guida-intro{margin:0 0 36px;max-width:720px;font-size:16px;line-height:1.6}
+.guida details{border-top:1px solid #2A2722}.guida details:last-of-type{border-bottom:1px solid #2A2722}
+.guida summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0}
+.guida summary::-webkit-details-marker{display:none}
+.guida summary::after{content:"+";flex:0 0 auto;width:32px;height:32px;display:grid;place-items:center;border:1px solid #C9A24A;border-radius:50%;color:#C9A24A;font-size:20px;line-height:1;transition:transform .3s}
+.guida details[open] summary::after{transform:rotate(45deg)}
+.guida summary:focus-visible{outline:2px solid #C9A24A;outline-offset:4px}
+.guida h3{margin:0;font-family:'Urbanist',sans-serif;font-weight:600;font-size:clamp(19px,2vw,23px);color:#F3EFE7}
+.guida details > p{margin:0 0 18px;color:#8A8478;font-size:14px}
+.guida dl{margin:0 0 26px;display:grid;gap:18px}
+.guida dt{font-weight:600;color:#E8E2D6;font-size:15px}
+.guida dd{margin:4px 0 0;font-size:14.5px;line-height:1.6;color:#BDB6A8}
+.guida-nota{margin:-20px 0 36px;max-width:720px;font-size:13.5px;line-height:1.6;color:#8A8478}
+.guida-prezzo{display:block;margin-top:6px;color:#C9A24A;font-size:13.5px;font-weight:600;letter-spacing:.02em}
+.guida dd ul{margin:8px 0 0;padding-left:18px}.guida dd li{margin:4px 0}.guida dd b{color:#D8D2C6;font-weight:600}
+.guida-fine{margin:32px 0 0;font-size:15px}.guida-fine a{text-decoration:underline}
+</style>
 <style>html{scroll-behavior:smooth}img{max-width:100%}</style>
 <style>
 .inf-prod{max-width:1320px;margin:24px auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
@@ -318,6 +340,79 @@ a{color:#C9A24A;text-decoration:none}a:hover{color:#E2C373}
 </div>
 </div>
 </section>
+
+<!-- LISTINO:INIZIO -->
+<section class="guida" id="listino-infissi" aria-labelledby="listino-t">
+<div class="guida-in">
+<p class="guida-ey">LISTINO PREZZI</p>
+<h2 id="listino-t">Prezzi di infissi in PVC, tapparelle e zanzariere a Roma</h2>
+<p class="guida-intro">I prezzi del nostro simulatore, voce per voce: infissi Rehau Synego e Synego Slide con doppio vetro, demolizione dei vecchi infissi, posa, tapparelle e zanzariere. Montiamo a Roma e in tutto il Lazio.</p>
+<p class="guida-nota">Tutti i prezzi sono IVA esclusa e comprendono imballaggio e trasporto. Il prezzo di ogni infisso si calcola dalle misure: larghezza × altezza. Dal 4° piano demolizioni e pose costano il 10% in più. Il prezzo definitivo si conferma dopo il sopralluogo gratuito.</p>
+<details>
+<summary><h3>Infissi in PVC Rehau Synego, doppio vetro</h3></summary>
+<p>Finestre e porte-finestre a battente e scorrevoli. Il simulatore calcola i battenti fino a 5 m² e gli scorrevoli fino a 6 m² a pezzo; per pezzi più grandi il prezzo si definisce al sopralluogo.</p>
+<dl>
+<dt>Battente bianco</dt>
+<dd>Finestra o porta-finestra a battente in PVC Rehau Synego bianco: i m² oltre il primo costano tutti allo stesso prezzo.
+<span class="guida-prezzo">Fino a 1 m²: 200 € a pezzo + IVA</span>
+<span class="guida-prezzo">Oltre 1 m²: 280 € al m² + IVA</span></dd>
+<dt>Battente nei colori Rehau</dt>
+<dd>Mooreiche 2, Rovere dorato, Noce, Grigio antracite e Braun: 25% in più rispetto al bianco.
+<span class="guida-prezzo">Fino a 1 m²: 250 € a pezzo + IVA</span>
+<span class="guida-prezzo">Oltre 1 m²: 350 € al m² + IVA</span></dd>
+<dt>Battente in colore speciale</dt>
+<dd>Un colore a scelta dalla gamma Rehau: 30% in più rispetto al bianco.
+<span class="guida-prezzo">Fino a 1 m²: 260 € a pezzo + IVA</span>
+<span class="guida-prezzo">Oltre 1 m²: 364 € al m² + IVA</span></dd>
+<dt>Scorrevole Synego Slide</dt>
+<dd>Porta-finestra scorrevole con soglia ribassata, per aperture grandi.
+<span class="guida-prezzo">Bianco: 320 € al m² + IVA</span>
+<span class="guida-prezzo">Colori: 400 € al m² + IVA</span></dd>
+</dl>
+</details>
+<details>
+<summary><h3>Demolizione e posa</h3></summary>
+<p>Il prezzo è a pezzo e raddoppia per gli infissi più grandi di 3,22 m²; oltre 6,44 m² si valuta al sopralluogo.</p>
+<dl>
+<dt>Demolizione dei vecchi infissi</dt>
+<dd>Smontaggio dei vecchi infissi, con smaltimento.
+<span class="guida-prezzo">30 € a pezzo fino a 3,22 m², 60 € fino a 6,44 m² + IVA</span></dd>
+<dt>Posa dei nuovi infissi</dt>
+<dd>Posa in opera a regola d’arte dei nuovi infissi.
+<span class="guida-prezzo">140 € a pezzo fino a 3,22 m², 280 € fino a 6,44 m² + IVA</span></dd>
+</dl>
+</details>
+<details>
+<summary><h3>Tapparelle in alluminio coibentato</h3></summary>
+<p>Il prezzo è uguale per tutti i colori.</p>
+<dl>
+<dt>Tapparella in alluminio coibentato</dt>
+<dd>Si misura larghezza × altezza della tapparella.
+<span class="guida-prezzo">49,50 € al m² + IVA</span></dd>
+<dt>Smontaggio delle vecchie tapparelle</dt>
+<dd>Da aggiungere solo se ci sono tapparelle da togliere.
+<span class="guida-prezzo">25 € a pezzo fino a 3,22 m², 50 € fino a 6,44 m² + IVA</span></dd>
+<dt>Posa delle nuove tapparelle</dt>
+<dd>Montaggio della tapparella nuova.
+<span class="guida-prezzo">60 € a pezzo fino a 3,22 m², 120 € fino a 6,44 m² + IVA</span></dd>
+</dl>
+</details>
+<details>
+<summary><h3>Zanzariere in alluminio</h3></summary>
+<p>Avvolgenti per le finestre e plissettate per le porte-finestre, stesso prezzo per tutti i modelli e i colori; oltre 6,44 m² si valuta al sopralluogo.</p>
+<dl>
+<dt>Zanzariera in alluminio</dt>
+<dd>Si misura larghezza × altezza della zanzariera.
+<span class="guida-prezzo">52 € al m² + IVA</span></dd>
+<dt>Posa delle zanzariere</dt>
+<dd>Montaggio della zanzariera sulla finestra o sulla porta-finestra.
+<span class="guida-prezzo">50 € a pezzo fino a 3,22 m², 100 € fino a 6,44 m² + IVA</span></dd>
+</dl>
+</details>
+<p class="guida-fine">Vuoi il prezzo dei tuoi infissi? <a href="#simulatore">Usa il simulatore</a> con le tue misure oppure <a href="/#contatti">richiedi il sopralluogo</a>: sopralluogo e preventivo sono gratuiti.</p>
+</div>
+</section>
+<!-- LISTINO:FINE -->
 
 <section id="domande" style="padding: 96px clamp(20px, 5vw, 72px)">
 <div class="inf-faq">

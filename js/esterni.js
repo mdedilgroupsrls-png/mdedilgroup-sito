@@ -4,7 +4,8 @@
    metodo per i terrazzi) sono scelte alternative: se ne può scegliere una sola.
    Regole del listino: il cappotto EPS comprende già la rasatura armata ma non la finitura, che si sceglie a parte (Eugenio, 17/10/2026); il rasante termoisolante
    va completato con finitura a calce o intonachino; l'intonachino è già colorato e non va pitturato.
-   Oneri della sicurezza: 8% dei lavori scelti, calcolati da soli. Testi delle voci originali MD Edil Group. */
+   Oneri della sicurezza: 8% dei lavori scelti, calcolati da soli. Testi delle voci originali MD Edil Group.
+   pg = testo del prezzo nella Guida alle lavorazioni, per le voci con un calcolo particolare (Eugenio, 23/10/2026). */
 (function () {
   var sistema = function (c) { return c.sel.sistema || ''; };
   var metodo = function (c) { return c.sel.metodo || ''; };
@@ -12,22 +13,22 @@
 
   var SEZ = [
     { id: 'cantiere', t: 'Cantiere, ponteggi e sollevamento dei materiali', s: 'Tutto quello che serve per lavorare in sicurezza sulle facciate: ponteggio a norma, servizi per gli operai e mezzi per portare i materiali ai piani.', v: [
-      { id: 'canAll', tipo: 'si', p: 1800, d: 'Allestimento e smontaggio del cantiere',
+      { id: 'canAll', pg: '1.800 € a corpo', tipo: 'si', p: 1800, d: 'Allestimento e smontaggio del cantiere',
         x: 'Preparazione dell’area di lavoro prima di iniziare: bagno chimico e spogliatoio per gli operai, recinzioni e cartelli di cantiere. A fine lavori smontiamo tutto e lasciamo l’area pulita.' },
       { id: 'pon1', um: 'm²', p: 18, mq: true, d: 'Ponteggio per facciate: montaggio, smontaggio e primo mese',
         x: 'Ponteggio a norma di sicurezza montato lungo le facciate da ristrutturare. Il prezzo comprende montaggio, smontaggio finale e i primi 30 giorni di noleggio. Si misura in metri quadrati di facciata coperta dal ponteggio.' },
-      { id: 'pon2', um: 'mesi in più', p: 2, d: 'Noleggio del ponteggio oltre il primo mese',
+      { id: 'pon2', pg: '2 € al m² di ponteggio per ogni mese in più', um: 'mesi in più', p: 2, d: 'Noleggio del ponteggio oltre il primo mese',
         f: function (n, c) { return n * 2 * c.num(c.q.pon1); },
         x: 'Per ogni periodo di 30 giorni oltre il primo, calcolato sui m² di ponteggio indicati nella voce precedente.' },
-      { id: 'ponPrg', tipo: 'si', p: 550, d: 'Progetto del ponteggio',
+      { id: 'ponPrg', pg: '550 € a corpo', tipo: 'si', p: 550, d: 'Progetto del ponteggio',
         x: 'Progetto e calcolo del ponteggio firmati da un tecnico abilitato, necessari quando la normativa sulla sicurezza lo richiede.' },
-      { id: 'acqua', tipo: 'si', p: 650, d: 'Acqua e corrente di cantiere ai piani',
+      { id: 'acqua', pg: '650 € a corpo', tipo: 'si', p: 650, d: 'Acqua e corrente di cantiere ai piani',
         x: 'Impianto provvisorio che porta acqua e corrente elettrica lungo il ponteggio, così le squadre lavorano a ogni piano senza usare gli impianti di casa o del condominio.' },
       { id: 'solleva', tipo: 'scelta', um: 'mesi', nessuno: 'Nessun mezzo di sollevamento', d: 'Sollevamento dei materiali ai piani',
         x: 'Mezzo meccanico per portare in quota sacchi, pannelli e attrezzature. Scegli il mezzo adatto al cantiere e indica per quanti mesi serve: il prezzo comprende montaggio, smontaggio e noleggio.',
         opz: [
-          { v: 'argano', d: 'Argano per materiali fino a 200 kg', x: 'Montaggio e smontaggio, più il noleggio mensile', um: 'mesi', f: function (n) { return 350 + 615 * n; } },
-          { v: 'montacarichi', d: 'Montacarichi per materiali fino a 500 kg', x: 'Montaggio e smontaggio, più il noleggio mensile', um: 'mesi', f: function (n) { return 900 + 1300 * n; } }
+          { v: 'argano', pg: '350 € per montaggio e smontaggio, più 615 € al mese', d: 'Argano per materiali fino a 200 kg', x: 'Montaggio e smontaggio, più il noleggio mensile', um: 'mesi', f: function (n) { return 350 + 615 * n; } },
+          { v: 'montacarichi', pg: '900 € per montaggio e smontaggio, più 1.300 € al mese', d: 'Montacarichi per materiali fino a 500 kg', x: 'Montaggio e smontaggio, più il noleggio mensile', um: 'mesi', f: function (n) { return 900 + 1300 * n; } }
         ] },
       { id: 'tiroSu', um: 'm³', p: 32.02, d: 'Tiro in alto dei materiali con elevatore',
         x: 'Salita dei materiali ai piani con elevatore meccanico, misurata in metri cubi. Se non conosci il volume lascia vuoto: lo calcoliamo noi al sopralluogo.' },
@@ -93,24 +94,24 @@
         ] },
       { id: 'terDem', um: 'm²', p: 33.5, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Demolizione di pavimento e sottofondo del terrazzo',
         x: 'Demolizione del vecchio pavimento in gres e del sottofondo fino a 5 cm di spessore, con trasporto e smaltimento delle macerie in impianto autorizzato.' },
-      { id: 'terDemX', um: 'cm in più', p: 7, se: function (c) { return metodo(c) === 'trad'; }, d: 'Sottofondo più spesso di 5 cm',
+      { id: 'terDemX', pg: '7 € al m² per ogni cm in più', um: 'cm in più', p: 7, se: function (c) { return metodo(c) === 'trad'; }, d: 'Sottofondo più spesso di 5 cm',
         f: function (n, c) { return n * 7 * c.num(c.q.terDem); },
         x: 'Per ogni centimetro di sottofondo da demolire oltre i 5 cm, calcolato sui m² della voce precedente.' },
       { id: 'guainaRim', um: 'm²', p: 6, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Rimozione della vecchia guaina bituminosa',
         x: 'Rimozione della guaina impermeabile esistente a doppio strato. Trasporto e smaltimento si indicano nella voce seguente.' },
       { id: 'guainaSmalt', um: 'kg', p: 1.49, se: function (c) { return metodo(c) === 'trad'; }, d: 'Trasporto e smaltimento della vecchia guaina',
         x: 'Conferimento della guaina rimossa a un impianto autorizzato, misurato in chilogrammi. Se non conosci il peso lascia vuoto: lo calcoliamo al sopralluogo.' },
-      { id: 'guaina1', tipo: 'si', ridisegna: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Impermeabilizzazione sotto il massetto: guaina bituminosa con primer (primo strato)',
+      { id: 'guaina1', pg: '23 € al m² di terrazzo', tipo: 'si', ridisegna: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Impermeabilizzazione sotto il massetto: guaina bituminosa con primer (primo strato)',
         f: function (c) { return 23 * c.num(c.area.terrazzi); },
         qPdf: function (c) { var n = c.num(c.area.terrazzi); return n ? String(n).replace('.', ',') + ' m²' : ''; },
         x: 'Primer di aggrappaggio e guaina bituminosa da 4 mm posati sotto il nuovo massetto, per fermare l’acqua prima che arrivi al solaio e alle case sottostanti. Si calcola sulla superficie dei terrazzi indicata sopra.' },
-      { id: 'guaina2', tipo: 'si', se: function (c) { return metodo(c) === 'trad' && c.q.guaina1 === 'si'; }, d: 'Secondo strato di guaina bituminosa sotto il massetto',
+      { id: 'guaina2', pg: '16 € al m² di terrazzo', tipo: 'si', se: function (c) { return metodo(c) === 'trad' && c.q.guaina1 === 'si'; }, d: 'Secondo strato di guaina bituminosa sotto il massetto',
         f: function (c) { return 16 * c.num(c.area.terrazzi); },
         qPdf: function (c) { var n = c.num(c.area.terrazzi); return n ? String(n).replace('.', ',') + ' m²' : ''; },
         x: 'Una seconda guaina da 4 mm posata sopra la prima: la protezione più robusta per i terrazzi, consigliata sopra ambienti abitati. Si calcola sulla superficie dei terrazzi indicata sopra.' },
       { id: 'massetto', um: 'm²', p: 29.19, mq: true, se: function (c) { return metodo(c) === 'trad'; }, d: 'Nuovo massetto per terrazzi e balconi',
         x: 'Sottofondo in sabbia e cemento fino a 6 cm, con le giuste pendenze per lo scolo dell’acqua, pronto per l’impermeabilizzazione.' },
-      { id: 'mapelastic', tipo: 'si', se: function (c) { return metodo(c) === 'trad'; }, d: 'Impermeabilizzazione sopra il massetto: cementizia elastica (tipo Mapelastic)',
+      { id: 'mapelastic', pg: '30 € al m² di terrazzo', tipo: 'si', se: function (c) { return metodo(c) === 'trad'; }, d: 'Impermeabilizzazione sopra il massetto: cementizia elastica (tipo Mapelastic)',
         f: function (c) { return 30 * c.num(c.area.terrazzi); },
         qPdf: function (c) { var n = c.num(c.area.terrazzi); return n ? String(n).replace('.', ',') + ' m²' : ''; },
         x: 'Membrana cementizia sottile e flessibile stesa sul nuovo massetto, sotto le piastrelle: segue i movimenti del supporto e protegge dalle infiltrazioni. Si calcola sulla superficie dei terrazzi indicata sopra.' },
