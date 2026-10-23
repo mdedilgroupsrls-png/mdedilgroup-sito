@@ -1,7 +1,8 @@
 /* Simulatore della ristrutturazione di interni (pagina /ristrutturazioni-interni), motore in js/simulatore.js.
    Prezzi dal listino MD Edil Group del 16/10/2026, IVA inclusa (decisione di Eugenio del 16/10/2026; vedi progetto/listino-prezzi.md).
    Ogni paragrafo si apre con Sì; il cliente indica la quantità di ogni voce che gli serve: le voci lasciate vuote non si calcolano.
-   Sul sito non si mostrano i prezzi unitari, solo l'importo di ogni voce. */
+   Nel simulatore si vede l'importo di ogni voce; i prezzi unitari compaiono nella Guida alle lavorazioni sotto il simulatore
+   (Eugenio, 23/10/2026), scritta da progetto/strumenti/guida_lavorazioni.js: dopo ogni cambio di prezzo rilanciare lo script. */
 (function () {
   // tipo: 'q' = quantità (m², m, n°); 'si' = a corpo (sì / no); mq: true = pulsante "usa la superficie"
   // p30: prezzo a corpo fino a 70 m², poi + p30 € ogni 30 m² (o frazione) in più (Eugenio, 16/10/2026)
