@@ -191,3 +191,11 @@ Regole decise da Eugenio:
 - **Infissi – demolizione e posa:** prezzo doppio oltre 3,22 m² a pezzo, sopralluogo oltre 6,44 m² confermati da Eugenio (20/10/2026).
 - **Esempio reale bagno (Eugenio, 20/10/2026):** struttura ricettiva a Piazza Fiume, 6–7 m²: costo indicativo **circa 7.000 € IVA inclusa** mostrato nella pagina bagno (simulatore: 6.850 € a 6 m², 7.200 € a 7 m²). Eugenio aveva detto 7.500 € con il soffitto teso LED, poi ha chiesto di scrivere 7.000 €.
 - **Esempio reale bagno (Eugenio, 20/10/2026):** Porta Pia, circa 3 m² con doccia separata: costo indicativo **circa 6.500 € IVA inclusa**. **Regola definitiva di Eugenio (20/10/2026): "i nostri bagni completi partono da 6.500 €"**: sulla pagina bagno e negli articoli si scrive "a partire da 6.500 € IVA inclusa" e nessun esempio va sotto questa cifra.
+
+### Prezzi "da" nella sezione "Cosa ristrutturiamo" di /ristrutturazioni-interni (Eugenio, 23/10/2026)
+- Ristrutturazione completa della casa: **da 650 € a 1.000 € al m², IVA inclusa** (dati da Eugenio).
+- Ville e case indipendenti: **da 1.000 € al m², interni ed esterni** (dato da Eugenio; IVA non indicata, da chiarire con Eugenio).
+- Bagno chiavi in mano: **da 5.500 €, IVA inclusa, esclusa la fornitura di accessori e rivestimenti** (dato da Eugenio; nel simulatore il bagno resta 6.500 € fino a 5 m²).
+- Cucina completa: **da 2.230 €, IVA inclusa**, calcolata con il simulatore interni: 6 punti luce e prese × 95 € = 570 € + punto acqua con scarico 435 € + linea del gas dal contatore alla cucina 750 € + posa rivestimento su parete di circa 10 m² × 47,50 € = 475 €. Fornitura di mobili, elettrodomestici e piastrelle esclusa.
+- Zona giorno, rasatura e pittura: **da 48,50 € al m² di pareti e soffitti, IVA inclusa** = raschiatura 3 € + rasatura 27 € + carteggiatura e fondo isolante 5 € + pittura lavabile chiara 13,50 €.
+- Se cambiano i prezzi del simulatore, ricalcolare cucina e zona giorno a mano (non sono scritti dallo script).
