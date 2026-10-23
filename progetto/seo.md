@@ -9,6 +9,7 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 |---|---|---|
 | `/` Home | impresa edile Roma, ristrutturazioni Roma | ristrutturazione chiavi in mano Roma, impresa ristrutturazioni Lazio |
 | `/ristrutturazioni-interni` | ristrutturazione casa Roma, ristrutturazione appartamento Roma | ristrutturazione villa Roma, ristrutturazione bagno Roma, ristrutturazione cucina Roma, costo ristrutturazione casa Roma |
+| `/quanto-costa-ristrutturare-casa-roma` (guida costi) | quanto costa ristrutturare casa Roma, costo ristrutturazione appartamento Roma | prezzo ristrutturazione al mq Roma 2026, ristrutturazione 70 mq costo, ristrutturazione 100 mq costo, cosa è incluso |
 | `/simulatore-online-costi-ristrutturazioni-interni` | simulatore costi ristrutturazione, calcolo costo ristrutturazione casa | quanto costa ristrutturare casa Roma, preventivo ristrutturazione online, costo ristrutturazione appartamento al m² |
 | `/simulatore-online-costi-ristrutturazioni-esterni` | simulatore costo rifacimento facciata, calcolo costo cappotto termico | quanto costa rifare la facciata condominio Roma, costo impermeabilizzazione terrazzo, preventivo facciata online |
 | `/simulatore-online-costi-infissi-tapparelle-zanzariere` | simulatore prezzi infissi, calcolo prezzo finestre PVC | quanto costano infissi PVC Roma, prezzo tapparelle alluminio coibentato, prezzo zanzariere |
@@ -133,7 +134,7 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 |---|---|---|---|
 | 27/10/2026 | Detrazioni | Bonus casa al 50%: perché pagare entro il 31 dicembre 2026 (`/bonus-casa-50-pagare-entro-31-dicembre-2026`, parole chiave: bonus ristrutturazione 2026, detrazione 50% prima casa, bonus casa 2027 36%) + reel | pronto (22/10) |
 | 3/11 | Infissi | Roma Nord – scorrevole e vetrata a timpano | pronto |
-| 10/11 | Interni | da scrivere (es. dalla pagina dettagli: collettore, angoli a 45°, fibra di vetro) | da scrivere |
+| 10/11 | Interni | **Quanto costa ristrutturare casa a Roma nel 2026? Prezzi ed esempi** (`/quanto-costa-ristrutturare-casa-roma`, Guide e costi; esempi 50/70/100 m² dal simulatore) – reel da fare | ✓ |
 | 17/11 | Detrazioni | da scrivere (es. ecobonus infissi: trasmittanza e ENEA) | da scrivere |
 | 24/11 | Infissi | EUR – scorrevoli antracite e vetrata ad angolo | pronto |
 | 1/12 | Esterni | da scrivere (serve materiale di Eugenio; in mancanza, dalla pagina esterni) | da scrivere |
@@ -150,7 +151,13 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 
 **Ogni articolo ha il suo reel** (voce Carina, sottotitoli, logo), montato quando si prepara l'articolo e programmato su Metricool per il suo martedì appena il video è online (vedi CLAUDE.md). **Tranne infissi e serramenti: mai sui social** (Eugenio, 21/10/2026): niente reel per gli articoli di infissi; in quelle settimane esce un contenuto della scorta di un altro settore (es. reel posa onice, carosello bagno Piazza Fiume). Reel degli articoli già pronti: bagno e detrazioni 2026 (articoli del 20/10); da montare: tutti gli articoli nuovi non di infissi.
 
-**Scorta articoli: 7 pronti su 26** (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
+**Scorta articoli: 8 pronti su 26** (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
+
+## Google AI e ricerche da controllare (Eugenio, 23/10/2026)
+Eugenio ha cercato "ristrutturazione casa a Roma": la risposta AI di Google cita costi medi (700–1.100 €/m², esempi 40/70/100 m², bagno 3.900–10.000 €) e alcune imprese (Edil Petrozzi, Suroma, GM Tecnoedil), non MD Edil Group. Obiettivo: essere citati con contenuti originali e verificabili (Google conferma che non c'è un'iscrizione per entrare nelle risposte AI: contano contenuti utili, SEO tecnica, citazioni autentiche). Fatto il 23/10/2026: pagine proprie dei simulatori (title con "gratuito" e "Roma"), guida `/quanto-costa-ristrutturare-casa-roma` con esempi 50/70/100 m² calcolati dal simulatore, prezzi "da" in "Cosa ristrutturiamo" e prezzi di ogni voce nelle guide.
+- **Ricerche da controllare ogni mese** (Google, risposta AI e Search Console; annotare se compare MD Edil Group): ristrutturazione casa a Roma · quanto costa ristrutturare casa a Roma · simulatore ristrutturazione casa Roma · calcolo preventivo ristrutturazione online · preventivo ristrutturazione appartamento 70 mq Roma · simulatore gratuito lavori edili · rifacimento facciata condominio Roma costo · prezzo infissi PVC Roma · case in legno prezzi chiavi in mano.
+- Per ogni lavorazione principale fare la stessa verifica (cosa risponde l'AI di Google, quali prezzi e quali imprese cita) e scrivere una pagina o un articolo che risponda meglio, con i nostri prezzi veri. Eugenio può mandare le schermate delle sue ricerche: si aggiungono qui.
+- Citazioni fuori dal sito, solo autentiche: profili aziendali (Google Business, elenchi in `schede-elenchi.md`), social, eventuali portali di settore, sempre con il link al simulatore; mai citazioni comprate.
 
 ## Pagine delle voci (Eugenio, 23/10/2026)
 Ogni voce che si apre con la descrizione (interni: "Cosa ristrutturiamo" e Guida alle lavorazioni; esterni: Guida; infissi) avrà una **pagina sua**. Le pagine madri restano **identiche**, simulatori e guide **completi, senza nascondere nessuna voce**: si aggiunge solo "Scopri di più →" in fondo alla descrizione. Ogni pagina: testo originale lungo (mai la descrizione copiata), prezzo "da" dal listino del suo simulatore, domande frequenti, foto vere (o segnaposto `[FOTO …]`), link al simulatore, sitemap, llms.txt, Approfondimenti della pagina madre. Ritmo: **2 pagine a settimana** (compito del giovedì, dopo l'articolo della settimana).

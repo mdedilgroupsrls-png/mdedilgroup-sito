@@ -3,6 +3,8 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da ricordare a Eugenio quando chiede "cosa abbiamo da fare"
+- [x] 23/10/2026 – Guida "Quanto costa ristrutturare casa a Roma nel 2026" con esempi 50/70/100 m² dal simulatore (articolo interni del 10/11, scorta 8/26); title dei simulatori con "gratuito" e "Roma"; sezione "Google AI e ricerche da controllare" in seo.md – Eugenio
+- [ ] Reel della guida costi casa (esce il 10/11): da montare nel compito del giovedì
 Elenco del materiale e delle informazioni che mancano per completare bene pagine e informazioni del sito (Eugenio, 23/10/2026: "mano a mano dobbiamo riempire tutto"). Quando chiede cosa c'è da fare, ricordare queste richieste (al massimo 3-4 per messaggio), togliere quelle fatte e aggiungere le nuove man mano che servono.
 - [ ] **Foto di cucine, ville, impianti elettrici e facciate** (Eugenio le ha, 23/10/2026): da caricare su Drive "Md edil group → Materiale per articoli e reel" (Interni / Esterni e facciate), con zona di Roma e cosa mostrano. Servono per le pagine delle voci (seo.md → "Pagine delle voci").
 - [ ] Video IMG_2822 e foto originali dei cantieri già usati (ora solo in chat) da caricare su Drive (vedi `materiale.md`).

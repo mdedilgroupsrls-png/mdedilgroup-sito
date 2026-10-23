@@ -12,7 +12,7 @@ PAGINE = [
     dict(
         madre='ristrutturazioni-interni', nome_madre='Ristrutturazioni interni', file='simulatore-online-costi-ristrutturazioni-interni',
         sezioni=2,  # il simulatore degli interni sta in due sezioni (titolo + modulo)
-        title='Simulatore online costi ristrutturazione interni | MD Edil Group',
+        title='Simulatore online gratuito costi ristrutturazione casa Roma | MD Edil Group',
         desc='Calcola online quanto costa ristrutturare casa a Roma: scegli le lavorazioni, dalle demolizioni agli impianti, e vedi subito la stima IVA inclusa con il preventivo in PDF.',
         ey='SIMULATORE ONLINE · INTERNI', h1='Simulatore online dei costi di ristrutturazione interni',
         intro=['Quanto costa ristrutturare un appartamento a Roma? Scrivi la superficie della casa e scegli solo le lavorazioni che ti servono: demolizioni, opere murarie, impianti elettrico, idrico e gas, pavimenti, cartongesso, rasature e pitture, oppure il bagno chiavi in mano. Il totale si aggiorna a ogni voce, con i prezzi del nostro listino IVA inclusa.',
@@ -25,7 +25,7 @@ PAGINE = [
     dict(
         madre='ristrutturazioni-esterni', nome_madre='Ristrutturazioni esterni', file='simulatore-online-costi-ristrutturazioni-esterni',
         sezioni=2,
-        title='Simulatore online costi ristrutturazioni esterne | MD Edil Group',
+        title='Simulatore online gratuito costi facciate ed esterni Roma | MD Edil Group',
         desc='Calcola online il costo del rifacimento della facciata, del cappotto termico e dei terrazzi a Roma: ponteggio, ripristini, finiture e impermeabilizzazioni, prezzi + IVA.',
         ey='SIMULATORE ONLINE · ESTERNI', h1='Simulatore online dei costi di ristrutturazioni esterne e facciate',
         intro=['Quanto costa rifare la facciata di un condominio o di una villa a Roma? Indica i metri quadri di facciata e scegli le lavorazioni: ponteggio, risanamento di intonaco e calcestruzzo, cappotto termico, rasatura e finitura, grondaie e ringhiere, terrazzi e balconi da impermeabilizzare.',
@@ -38,7 +38,7 @@ PAGINE = [
     dict(
         madre='infissi-serramenti', nome_madre='Infissi e serramenti', file='simulatore-online-costi-infissi-tapparelle-zanzariere',
         sezioni=1,
-        title='Simulatore online costi infissi, tapparelle e zanzariere | MD Edil Group',
+        title='Simulatore online prezzi infissi, tapparelle e zanzariere Roma | MD Edil Group',
         desc='Calcola online il prezzo dei tuoi infissi in PVC Rehau, tapparelle e zanzariere a Roma: scrivi le misure in cm e vedi subito il costo di ogni pezzo, posa compresa.',
         ey='SIMULATORE ONLINE · INFISSI', h1='Simulatore online dei costi di infissi, tapparelle e zanzariere',
         intro=['Quanto costano nuovi infissi in PVC a Roma? Scrivi larghezza e altezza di ogni finestra o porta-finestra, scegli battente o scorrevole e il colore Rehau: il prezzo di ogni pezzo compare subito. Aggiungi la demolizione dei vecchi infissi, la posa, le tapparelle in alluminio coibentato e le zanzariere.',
