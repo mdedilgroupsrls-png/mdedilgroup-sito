@@ -152,6 +152,14 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 
 **Scorta articoli: 7 pronti su 26** (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
 
+## Pagine delle voci (Eugenio, 23/10/2026)
+Ogni voce che si apre con la descrizione (interni: "Cosa ristrutturiamo" e Guida alle lavorazioni; esterni: Guida; infissi) avrà una **pagina sua**. Le pagine madri restano **identiche**, simulatori e guide **completi, senza nascondere nessuna voce**: si aggiunge solo "Scopri di più →" in fondo alla descrizione. Ogni pagina: testo originale lungo (mai la descrizione copiata), prezzo "da" dal listino del suo simulatore, domande frequenti, foto vere (o segnaposto `[FOTO …]`), link al simulatore, sitemap, llms.txt, Approfondimenti della pagina madre. Ritmo: **2 pagine a settimana** (compito del giovedì, dopo l'articolo della settimana).
+- **Principali, con reel** (sì di Eugenio, 23/10/2026): [ ] Ristrutturazione completa casa/appartamento · [ ] Ristrutturazione ville e case indipendenti · [ ] Ristrutturazione cucina · [ ] Rifacimento facciata · [ ] Cappotto termico · [ ] Impermeabilizzazione terrazzi e balconi · [ ] Impianto elettrico. (Bagno: pagina già fatta.)
+- **Secondarie, senza reel:** [ ] Demolizioni e rimozioni · [ ] Opere murarie · [ ] Cartongesso · [ ] Rasature e tinteggiature · [ ] Impianto idrico e riscaldamento · [ ] Impianto gas · [ ] Climatizzazione · [ ] Progetto e pratiche CILA/SCIA · [ ] Ponteggi e cantiere facciate · [ ] Lattonerie, grondaie e ringhiere · [ ] Risanamento facciate (intonaco e calcestruzzo).
+- **Infissi, senza reel e mai sui social:** [ ] Infissi in PVC Rehau Synego · [ ] Scorrevoli Synego Slide · [ ] Tapparelle in alluminio coibentato · [ ] Zanzariere.
+- **Niente pagina:** oneri di cantiere, smaltimento rifiuti (nessuno li cerca, pagina troppo povera).
+- Ordine: prima le principali (cucina, villa, facciata, cappotto, terrazzi, casa completa, impianto elettrico), alternate a una secondaria o di infissi.
+
 ## Scheda Google Business: cosa pubblicare (Eugenio, 22/10/2026)
 - Soprattutto **ristrutturazioni interni ed esterni** (post con foto + testo con quartiere/zona di Roma + link all'articolo o alla pagina), nel giorno di uscita dell'articolo.
 - **Infissi solo ogni tanto**, non sempre (circa uno ogni tre articoli di infissi).
