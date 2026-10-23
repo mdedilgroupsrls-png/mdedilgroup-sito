@@ -2,6 +2,13 @@
 
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
+## Da ricordare a Eugenio quando chiede "cosa abbiamo da fare"
+Elenco del materiale e delle informazioni che mancano per completare bene pagine e informazioni del sito (Eugenio, 23/10/2026: "mano a mano dobbiamo riempire tutto"). Quando chiede cosa c'è da fare, ricordare queste richieste (al massimo 3-4 per messaggio), togliere quelle fatte e aggiungere le nuove man mano che servono.
+- [ ] **Foto di cucine, ville, impianti elettrici e facciate** (Eugenio le ha, 23/10/2026): da caricare su Drive "Md edil group → Materiale per articoli e reel" (Interni / Esterni e facciate), con zona di Roma e cosa mostrano. Servono per le pagine delle voci (seo.md → "Pagine delle voci").
+- [ ] Video IMG_2822 e foto originali dei cantieri già usati (ora solo in chat) da caricare su Drive (vedi `materiale.md`).
+- [ ] Materiale di esterni e case in legno per i prossimi articoli.
+- [ ] Search Console: schermate Rendimento e Pagine (dal 3/11/2026).
+
 ## Da completare
 - [x] 23/10/2026 – Ogni simulatore ha la sua pagina (interni, esterni, infissi/tapparelle/zanzariere) con link sotto il titolo del simulatore nella pagina madre; sitemap, llms.txt e seo.md aggiornati – Eugenio
 - [ ] Pagine proprie per ogni voce (elenco e regole in `seo.md` → "Pagine delle voci"): 2 a settimana nel compito del giovedì; reel solo per le 7 principali (Eugenio, 23/10/2026). In attesa: foto vere di cucine, ville, impianti, facciate.
