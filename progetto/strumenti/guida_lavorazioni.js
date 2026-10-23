@@ -3,7 +3,7 @@
 //   node progetto/strumenti/guida_lavorazioni.js
 // Riscrive il blocco tra <!-- GUIDA:INIZIO --> e <!-- GUIDA:FINE --> delle pagine indicate qui sotto.
 // prezzi: true = sotto ogni voce il prezzo del listino dello stesso simulatore (Eugenio, 23/10/2026): interni IVA inclusa,
-// esterni + IVA. Per infissi e serramenti il listino si scrive da js/infissi.js con listinoInfissi().
+// esterni + IVA. Per infissi e serramenti solo i prezzi "da" con listinoInfissi(); case in legno: nessun prezzo nella pagina.
 const fs = require('fs');
 const path = require('path');
 const radice = path.resolve(__dirname, '..', '..');
@@ -89,40 +89,21 @@ PAGINE.forEach(p => {
   console.log('Guida aggiornata:', p.html);
 });
 
-// Listino della pagina infissi e serramenti, con i prezzi di js/infissi.js (+ IVA, imballaggio e trasporto inclusi)
+// Listino della pagina infissi e serramenti: solo i prezzi "da" di infissi, tapparelle e zanzariere, presi da js/infissi.js,
+// senza scrivere che sono al m² (Eugenio, 23/10/2026). + IVA, imballaggio e trasporto inclusi.
 function listinoInfissi() {
   const src = fs.readFileSync(path.join(radice, 'js/infissi.js'), 'utf8');
   const P = new Function('return ' + src.match(/var P = (\{[\s\S]*?\n  \});/)[1])();
-  const MULT = new Function('return ' + src.match(/var MULT = (\{[^}]*\})/)[1])();
-  const iva = ' + IVA';
-  const v = (dt, dd, prezzi) => '<dt>' + esc(dt) + '</dt>\n<dd>' + esc(dd) + prezzi.map(x => '\n<span class="guida-prezzo">' + esc(x) + iva + '</span>').join('') + '</dd>\n';
-  const blocco = (titolo, sotto, voci) => '<details>\n<summary><h3>' + esc(titolo) + '</h3></summary>\n<p>' + esc(sotto) + '</p>\n<dl>\n' + voci.join('') + '</dl>\n</details>\n';
-  const bat = k => ['Fino a 1 m²: ' + euro(P.piccola * MULT[k]) + ' a pezzo', 'Oltre 1 m²: ' + euro(P.bat * MULT[k]) + ' al m²'];
-  const doppio = x => euro(x) + ' a pezzo fino a 3,22 m², ' + euro(2 * x) + ' fino a 6,44 m²';
-  let h = '<section class="guida" id="listino-infissi" aria-labelledby="listino-t">\n<div class="guida-in">\n' +
+  const v = (dt, dd, da) => '<dt>' + esc(dt) + '</dt>\n<dd>' + esc(dd) + '\n<span class="guida-prezzo">Prezzo da ' + esc(euro(da)) + ' + IVA</span></dd>\n';
+  return '<section class="guida" id="listino-infissi" aria-labelledby="listino-t">\n<div class="guida-in">\n' +
     '<p class="guida-ey">LISTINO PREZZI</p>\n<h2 id="listino-t">Prezzi di infissi in PVC, tapparelle e zanzariere a Roma</h2>\n' +
-    '<p class="guida-intro">I prezzi del nostro simulatore, voce per voce: infissi Rehau Synego e Synego Slide con doppio vetro, demolizione dei vecchi infissi, posa, tapparelle e zanzariere. Montiamo a Roma e in tutto il Lazio.</p>\n' +
-    '<p class="guida-nota">Tutti i prezzi sono IVA esclusa e comprendono imballaggio e trasporto. Il prezzo di ogni infisso si calcola dalle misure: larghezza × altezza. Dal ' + P.pianoDa + '° piano demolizioni e pose costano il ' + Math.round(P.piano * 100) + '% in più. Il prezzo definitivo si conferma dopo il sopralluogo gratuito.</p>\n';
-  h += blocco('Infissi in PVC Rehau Synego, doppio vetro', 'Finestre e porte-finestre a battente e scorrevoli. Il simulatore calcola i battenti fino a ' + P.maxInf + ' m² e gli scorrevoli fino a ' + P.maxSlide + ' m² a pezzo; per pezzi più grandi il prezzo si definisce al sopralluogo.', [
-    v('Battente bianco', 'Finestra o porta-finestra a battente in PVC Rehau Synego bianco: i m² oltre il primo costano tutti allo stesso prezzo.', bat('std')),
-    v('Battente nei colori Rehau', 'Mooreiche 2, Rovere dorato, Noce, Grigio antracite e Braun: ' + Math.round((MULT.base - 1) * 100) + '% in più rispetto al bianco.', bat('base')),
-    v('Battente in colore speciale', 'Un colore a scelta dalla gamma Rehau: ' + Math.round((MULT.part - 1) * 100) + '% in più rispetto al bianco.', bat('part')),
-    v('Scorrevole Synego Slide', 'Porta-finestra scorrevole con soglia ribassata, per aperture grandi.', ['Bianco: ' + euro(P.slideBianco) + ' al m²', 'Colori: ' + euro(P.slideColore) + ' al m²'])
-  ]);
-  h += blocco('Demolizione e posa', 'Il prezzo è a pezzo e raddoppia per gli infissi più grandi di 3,22 m²; oltre 6,44 m² si valuta al sopralluogo.', [
-    v('Demolizione dei vecchi infissi', 'Smontaggio dei vecchi infissi, con smaltimento.', [doppio(P.demInf)]),
-    v('Posa dei nuovi infissi', 'Posa in opera a regola d’arte dei nuovi infissi.', [doppio(P.posInf)])
-  ]);
-  h += blocco('Tapparelle in alluminio coibentato', 'Il prezzo è uguale per tutti i colori.', [
-    v('Tapparella in alluminio coibentato', 'Si misura larghezza × altezza della tapparella.', [euro(P.tap) + ' al m²']),
-    v('Smontaggio delle vecchie tapparelle', 'Da aggiungere solo se ci sono tapparelle da togliere.', [doppio(P.demTap)]),
-    v('Posa delle nuove tapparelle', 'Montaggio della tapparella nuova.', [doppio(P.posTap)])
-  ]);
-  h += blocco('Zanzariere in alluminio', 'Avvolgenti per le finestre e plissettate per le porte-finestre, stesso prezzo per tutti i modelli e i colori; oltre 6,44 m² si valuta al sopralluogo.', [
-    v('Zanzariera in alluminio', 'Si misura larghezza × altezza della zanzariera.', [euro(P.zan) + ' al m²']),
-    v('Posa delle zanzariere', 'Montaggio della zanzariera sulla finestra o sulla porta-finestra.', [doppio(P.posZan)])
-  ]);
-  return h + '<p class="guida-fine">Vuoi il prezzo dei tuoi infissi? <a href="#simulatore">Usa il simulatore</a> con le tue misure oppure <a href="/#contatti">richiedi il sopralluogo</a>: sopralluogo e preventivo sono gratuiti.</p>\n</div>\n</section>';
+    '<p class="guida-intro">Quanto costano infissi Rehau Synego con doppio vetro, tapparelle e zanzariere: i prezzi di partenza del nostro listino. Montiamo a Roma e in tutto il Lazio.</p>\n' +
+    '<p class="guida-nota">Prezzi IVA esclusa, imballaggio e trasporto inclusi. Il prezzo esatto dipende dalle misure, dal tipo di apertura e dal colore: calcolalo con il simulatore qui sopra. Il prezzo definitivo si conferma dopo il sopralluogo gratuito.</p>\n' +
+    '<dl>\n' +
+    v('Infissi in PVC Rehau Synego, doppio vetro', 'Finestre e porte-finestre a battente e scorrevoli, in bianco, nei colori Rehau o in un colore speciale.', P.piccola) +
+    v('Tapparelle in alluminio coibentato', 'Tapparelle nuove, stesso prezzo per tutti i colori.', P.tap) +
+    v('Zanzariere in alluminio', 'Avvolgenti per le finestre e plissettate per le porte-finestre, stesso prezzo per tutti i modelli e i colori.', P.zan) +
+    '</dl>\n<p class="guida-fine">Vuoi il prezzo dei tuoi infissi? <a href="#simulatore">Usa il simulatore</a> con le tue misure oppure <a href="/#contatti">richiedi il sopralluogo</a>: sopralluogo e preventivo sono gratuiti.</p>\n</div>\n</section>';
 }
 
 {
