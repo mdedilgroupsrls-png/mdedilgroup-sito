@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
+- [x] 23/10/2026 – Preventivi PDF: tolta Via Po dall'intestazione, resta solo Via Monti Lepini 9, Monterotondo (PDF dei simulatori e PDF di esempio infissi con le anteprime) – Eugenio
 - [x] 23/10/2026 – Sito pubblicato su richiesta di Eugenio ("aggiorna il sito"): uniti i lavori di lavori-in-corso (articoli infissi, bonus casa, taccuino della Home a nastro, simulatore case in legno) con quelli già su main (studio tecnico, interior design, interni, video villaggi)
 - [x] 22/10/2026 – Simulatore case in legno: la fondazione non è più spuntata in partenza, la sceglie il cliente
 - [ ] **Servizi locali di Google** (verificati il 22/10/2026): controllare con Eugenio servizi attivi, zona (Roma e Lazio) e budget; ogni settimana guardare i contatti arrivati e contestare quelli non pertinenti
