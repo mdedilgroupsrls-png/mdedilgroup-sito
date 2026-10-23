@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
+- [x] 23/10/2026 – Ristrutturazioni interni: sezione "Approfondimenti" spostata in fondo alla pagina (ultima, prima del footer) – Eugenio
 - [x] 23/10/2026 – Infissi: listino ridotto a tre prezzi "da" (infissi 200 €, tapparelle 49,50 €, zanzariere 52 €) senza "al m²"; case in legno senza prezzi unitari – Eugenio
 - [x] 23/10/2026 – Prezzi di ogni voce anche per esterni (Guida alle lavorazioni, + IVA) e infissi (nuova sezione "Listino prezzi" dopo il simulatore, + IVA, imballaggio e trasporto inclusi) – Eugenio
 - [x] 23/10/2026 – Ristrutturazioni interni: nella Guida alle lavorazioni sotto ogni voce il prezzo del simulatore (IVA inclusa, es. "17,50 € al m²"), con nota sul +5% centro storico/ZTL – Eugenio
