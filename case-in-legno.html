@@ -102,6 +102,14 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 .info-grid b{color:var(--ink);font-weight:600}
 .ic{fill:none;stroke:var(--gold);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .info-note{margin:40px 0 0;padding:16px 20px;border:1px solid var(--gold);color:var(--ink2);font-size:15px;max-width:820px}
+.vid{padding:72px 0 96px;border-top:1px solid var(--line)}
+.vid-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 64px;margin-bottom:34px}
+.vid-head p{flex:1 1 340px;max-width:520px;margin:0;color:var(--ink2);font-size:15px;line-height:1.65}
+.vid-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,340px));gap:32px 40px}
+.vid-grid figure{margin:0;display:flex;flex-direction:column;gap:12px}
+.vid-grid video{width:100%;aspect-ratio:9/16;height:auto;display:block;background:#000;border:1px solid var(--line)}
+.vid-grid figcaption{color:var(--ink2);font-size:14px;line-height:1.55}
+.vid-grid figcaption b{display:block;color:var(--ink);font-size:16px;font-weight:600;margin-bottom:4px}
 .m3d{margin-top:72px}
 .m3d-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 32px;margin-bottom:18px}
 #m3dHint{transition:opacity .6s}
@@ -129,6 +137,7 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Case in legno prefabbricate chiavi in mano","serviceType":"Case in legno","description":"Case in legno prefabbricate in tutta Italia: 19 modelli, coibentazione in lana di roccia, montaggio e consegna chiavi in mano. Calcola il prezzo voce per voce.","url":"https://mdedilgroup.it/case-in-legno","provider":{"@type":"GeneralContractor","name":"MD Edil Group S.R.L.S.","url":"https://mdedilgroup.it","telephone":"+39 328 214 5266"},"areaServed":[{"@type":"Place","name":"Italia"}]}</script>
 <style>@media (max-width:440px){footer a[aria-label][target=_blank]{width:42px!important;height:42px!important}footer div:has(> a[aria-label=Threads]){gap:6px!important}}</style>
 <style>@media (max-width:480px){header nav[aria-label="Menu principale"]{gap:6px 16px!important;letter-spacing:.04em!important}}@media (max-width:340px){header nav[aria-label="Menu principale"]{gap:6px 12px!important;font-size:12px!important;letter-spacing:0!important}}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "VideoObject", "name": "Dal terreno al villaggio di case in legno", "description": "Come un terreno di almeno un ettaro diventa un campeggio, un agri-camping o un villaggio turistico con case in legno prefabbricate in bioedilizia di MD Edil Group.", "thumbnailUrl": "https://mdedilgroup.it/video/villaggio-case-legno-poster.webp", "contentUrl": "https://mdedilgroup.it/video/villaggio-case-legno.mp4", "uploadDate": "2026-10-23", "duration": "PT61S", "inLanguage": "it", "publisher": {"@type": "Organization", "name": "MD Edil Group", "url": "https://mdedilgroup.it/"}}, {"@type": "VideoObject", "name": "Villaggio turistico di case A-frame in bioedilizia", "description": "Case A-frame in bioedilizia per villaggi turistici e glamping, dalla progettazione alla consegna chiavi in mano con MD Edil Group.", "thumbnailUrl": "https://mdedilgroup.it/video/villaggio-a-frame-poster.webp", "contentUrl": "https://mdedilgroup.it/video/villaggio-a-frame.mp4", "uploadDate": "2026-10-23", "duration": "PT47S", "inLanguage": "it", "publisher": {"@type": "Organization", "name": "MD Edil Group", "url": "https://mdedilgroup.it/"}}]}</script>
 </head>
 <body>
 
@@ -158,7 +167,7 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 <p class="eyebrow">Simulatore case in legno</p>
 <h1>Case in legno prefabbricate: componi la tua, voce per voce</h1>
 </div>
-<p>Scegli il modello e guarda la sua planimetria, poi aggiungi o togli gli optional. Tocca il nome di ogni voce per leggere cosa comprende. Il totale si aggiorna subito; il preventivo definitivo arriva dopo il sopralluogo. <a href="#la-casa">Scopri come sono fatte le nostre case ↓</a></p>
+<p>Scegli il modello e guarda la sua planimetria, poi aggiungi o togli gli optional. Tocca il nome di ogni voce per leggere cosa comprende. Il totale si aggiorna subito; il preventivo definitivo arriva dopo il sopralluogo. <a href="#la-casa">Scopri come sono fatte le nostre case ↓</a> · <a href="#villaggi">Campeggi e villaggi in legno: guarda i video ↓</a></p>
 </section>
 
 <div class="m3d" style="margin-top: 8px; margin-bottom: 56px">
@@ -234,6 +243,30 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 <p class="info-note">I materiali di rivestimento possono variare e vengono quotati a parte. Anche all’interno possiamo realizzare diversi tipi di finiture e di impianti, quotati separatamente.</p>
 
 
+</section>
+
+<section class="vid" id="villaggi" aria-labelledby="villaggi-t">
+<div class="vid-head">
+<div>
+<p class="eyebrow">Campeggi, glamping e villaggi turistici</p>
+<h2 id="villaggi-t">Il tuo terreno può diventare un villaggio in legno</h2>
+</div>
+<p>Un terreno immerso nella natura può diventare un campeggio, un agri-camping o un villaggio turistico con case in legno prefabbricate in bioedilizia. Ci occupiamo di tutto: studio del terreno, progettazione, render, fondazioni, montaggio e consegna chiavi in mano. Realizziamo case in legno in tutta Italia. Le immagini delle strutture finite sono render di progetto.</p>
+</div>
+<div class="vid-grid">
+<figure>
+<video controls playsinline preload="none" poster="/video/villaggio-case-legno-poster.webp" aria-label="Video: dal terreno al villaggio di case in legno">
+<source src="/video/villaggio-case-legno.mp4" type="video/mp4">
+</video>
+<figcaption><b>Dal terreno al villaggio di case in legno</b>Campeggio, agri-camping o villaggio turistico: case in bioedilizia, strutture A-frame, aree relax, laghetti, percorsi e aree comuni.</figcaption>
+</figure>
+<figure>
+<video controls playsinline preload="none" poster="/video/villaggio-a-frame-poster.webp" aria-label="Video: villaggio turistico di case A-frame">
+<source src="/video/villaggio-a-frame.mp4" type="video/mp4">
+</video>
+<figcaption><b>Un villaggio di case A-frame</b>Case A-frame isolate in lana di roccia, con infissi ad alte prestazioni e finiture di qualità, seguite dai nostri tecnici in ogni fase.</figcaption>
+</figure>
+</div>
 </section>
 </main>
 <a class="mtot" href="#riepilogo"><span>Totale indicativo<br><span style="color:var(--mute)">Vedi il riepilogo</span></span><b id="mTot">–</b></a>

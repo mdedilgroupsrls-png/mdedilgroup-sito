@@ -8,7 +8,7 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 | Pagina | Ricerche principali | Ricerche secondarie |
 |---|---|---|
 | `/` Home | impresa edile Roma, ristrutturazioni Roma | ristrutturazione chiavi in mano Roma, impresa ristrutturazioni Lazio |
-| `/ristrutturazioni-interni` | ristrutturazione appartamento Roma | costo ristrutturazione casa Roma, ristrutturazione bagno/cucina Roma, ristrutturazione villa Roma |
+| `/ristrutturazioni-interni` | ristrutturazione casa Roma, ristrutturazione appartamento Roma | ristrutturazione villa Roma, ristrutturazione bagno Roma, ristrutturazione cucina Roma, costo ristrutturazione casa Roma |
 | `/ristrutturazione-bagno-roma` | ristrutturazione bagno Roma, rifacimento bagno Roma | quanto costa rifare un bagno, bagno chiavi in mano Roma, impermeabilizzazione doccia, ristrutturazione bagno prezzi |
 | `/finiture-di-pregio-roma` | finiture di pregio ristrutturazione Roma | collettore idrico sportello d'ispezione a filo, angoli a 45 gradi piastrelle (jolly), posa grandi lastre gres 120x280, tagli di luce LED soffitto, tessuto in fibra di vetro antifessure / rasatura armata pareti |
 | `/quanto-costa-ristrutturare-bagno-roma` (articolo) | quanto costa ristrutturare un bagno a Roma | costo rifacimento bagno, prezzo bagno chiavi in mano Roma, bagno piccolo 3 mq costo |
@@ -46,6 +46,10 @@ Verificato nei file del sito; ciò che sta negli account Google (Search Console,
 - **Già a posto:** title, description e canonical propri su tutte le pagine; un H1 per pagina; testo alternativo su tutte le foto; dati strutturati GeneralContractor + Service (+ FAQPage infissi); sitemap e robots corretti; HTTPS e protezioni del browser; pagine statiche (Google legge tutto il testo senza script); nessun link interno rotto; Search Console verificata con sitemap letta (16/10).
 - **Mancano:** Google Analytics 4 (non installato); pagine dedicate a bagno, locali commerciali, terrazzi e impermeabilizzazioni; sezione cantieri realizzati; orari di apertura e coordinate nei dati strutturati (servono gli orari veri da Eugenio); recensioni nei dati strutturati (solo quando ci sono recensioni vere).
 - **Minori:** 3 titoli oltre 60 caratteri (interni, interior design, case in legno: Google taglia "| MD Edil Group", le parole importanti restano); "Milano" tra le zone servite da confermare; immagine di condivisione (og:image) è il logo.
+
+- 23/10/2026: riscritte /studio-tecnico e /interior-design con i testi di Eugenio (concetto invariato, parole chiave aggiunte): nuovi title e description; studio tecnico con FAQPage (CILA/SCIA/Permesso di costruire, muro portante, pre-rogito, zone). Parole chiave in più: architetto Roma, ingegnere strutturista, sanatoria, DOCFA, APE, CSP/CSE, arredi su misura, illuminotecnica.
+
+- 23/10/2026: /ristrutturazioni-interni rafforzata per "ristrutturazione casa / villa / bagno / cucina" (richiesta di Eugenio): nuovo title e H1, sezione "Cosa ristrutturiamo" con 4 schede (`#ristrutturazione-casa`, `#ristrutturazione-villa`, `#ristrutturazione-bagno`, `#ristrutturazione-cucina`), 5 domande frequenti (FAQPage, senza prezzi), catalogo dei 4 servizi nei dati strutturati, `llms.txt` aggiornato. Idea futura: pagine dedicate solo se ci saranno foto e testi veri per bagno e cucina.
 
 ## Da fare (in ordine di importanza)
 0. **Prossimi interventi proposti dopo l'audit del 20/10/2026** (in attesa dell'ok di Eugenio): pagina **/ristrutturazione-bagno-roma**; Google Analytics 4 che parte solo dopo "ACCETTO" nell'avviso cookie (serve il codice G-… da Eugenio, poi CSP e privacy); report mensile da Search Console (schermate di Rendimento e Pagine).
@@ -173,3 +177,4 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 - Una pagina = un argomento principale. Le pagine nuove vanno anche in `sitemap.xml`.
 
 - [x] 17/10/2026 – Icona del sito su fondo nero (`favicon-512.png`, `favicon.ico`) e logo dei dati strutturati aggiornato: Google la sostituisce nei risultati da solo, di solito in qualche giorno o settimana dopo la pubblicazione.
+- 23/10/2026: `/case-in-legno` ha 2 video su campeggi e villaggi in legno (sezione `#villaggi`) con dati strutturati VideoObject: parole chiave campeggio, agri-camping, glamping, villaggio turistico, case A-frame in bioedilizia

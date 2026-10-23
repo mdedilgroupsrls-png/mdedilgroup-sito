@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
+- [x] 23/10/2026 – Sito pubblicato su richiesta di Eugenio ("aggiorna il sito"): uniti i lavori di lavori-in-corso (articoli infissi, bonus casa, taccuino della Home a nastro, simulatore case in legno) con quelli già su main (studio tecnico, interior design, interni, video villaggi)
 - [x] 22/10/2026 – Simulatore case in legno: la fondazione non è più spuntata in partenza, la sceglie il cliente
 - [ ] **Servizi locali di Google** (verificati il 22/10/2026): controllare con Eugenio servizi attivi, zona (Roma e Lazio) e budget; ogni settimana guardare i contatti arrivati e contestare quelli non pertinenti
 - [x] 22/10/2026 – Articolo detrazioni "Bonus casa al 50% entro il 31 dicembre 2026" con reel (esce il 27/10)
@@ -64,6 +65,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 20/10/2026 – Nuova pagina **/ristrutturazione-bagno-roma** (approfondimento dentro la pagina interni, riquadro "Approfondimenti"; non nel menu per regola di Eugenio; sitemap, llms.txt, modulo che preseleziona "Ristrutturazione interni"; nessun prezzo fisso del bagno); menu più compatto sui telefoni piccoli (prima "Chi siamo" finiva sopra il percorso HOME / … a 360 px). Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – **Audit SEO e tecnico** (fase 1 del piano di 6 mesi, risultato in `seo.md`) e primi miglioramenti: H1 della Home con "Ristrutturazioni Roma", misure e caricamento ritardato delle foto, nuovi contatori. **Nuovi contatori anonimi:** `stima-whatsapp-<pagina>` e `stima-pdf-<pagina>` = simulazione **completata** (dati del cliente compilati e controllati; prima si contava solo l'inizio della simulazione); `vai-al-modulo-<pagina>` = tocco su "Richiedi il sopralluogo/preventivo/progetto"; all'invio del modulo, oltre a `modulo-preventivo-inviato`, anche `richiesta-sopralluogo|preventivo|progetto|modulo-diretto` e `modulo-da-<pagina>`; `arrivo-google-annunci` per chi arriva dagli annunci Google (gclid o utm). Nota: `whatsapp-<pagina>` conta anche i tocchi sul pulsante del simulatore senza i dati compilati, quindi per le simulazioni vale `stima-whatsapp-…`. Sul branch `lavori-in-corso`
 - [x] 18/10/2026 – Sito leggibile da ChatGPT e dagli altri assistenti AI: `robots.txt` aperto agli assistenti, nuovo `llms.txt`, catalogo servizi nei dati strutturati, `/chi-siamo` con dati strutturati; tolta dalla Home la sezione news vuota (Eugenio)
+- [x] 23/10/2026 – Pagina case in legno: aggiunti i 2 video completi di Eugenio su campeggi e villaggi in legno (sezione `#villaggi`, richiesta di Eugenio). Un primo tentativo con 2 Reel brevi è stato tolto su sua richiesta
 - [ ] Sezione **News e guide** nella Home: rimetterla quando ci sono i primi articoli veri (idee in `seo.md`)
 - [x] 15/10/2026 – Schede grandi con foto e planimetria per tutti i 19 modelli (dalle schede del catalogo; Olivia senza la fascia in fondo con l'indirizzo web sbagliato), aperte toccando un modello nella Home o nel simulatore; modello 3D spostato in alto nella pagina case in legno. Sul branch `lavori-in-corso`
 - [x] 15/10/2026 – Nuovo modello **Olivia** (54.000 €, 90 m²) nel catalogo della Home (`img/m-olivia.webp`, ritagliato dalla scheda) e nel simulatore con gli optional della Nord House. Sul branch `lavori-in-corso`
@@ -129,6 +131,8 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 14/10/2026 – Aggiunti 12 render nella pagina Interior design (galleria scorrevole) e 4 nella galleria della Home, al posto del segnaposto
 - [x] 14/10/2026 – Tolti dalla galleria della Home i 2 render precedenti (soggiorno con camino, camera con anello luminoso); nella sezione metodo della Home la camera è sostituita da `id-camera-noce`
 - [x] 14/10/2026 – Didascalia dei render cambiata in "RENDER DI PROGETTO BY ARCHITETTO ADRIANA SCLIFOS" su tutte le foto (Home e Interior design)
+
+- [x] 23/10/2026 – Pagine Studio tecnico e Interior design aggiornate con i testi dei capitoli 1 e 2 inviati da Eugenio (PDF), migliorati per la SEO
 
 ## Gestione continua
 - Aggiornamenti settimanali del sito con nuove informazioni e foto dei lavori
