@@ -30,7 +30,7 @@ def testata():
     c.setFillColor(C(243,239,231)); c.setFont("Helvetica-Bold",17); c.drawString(M+34*mm,H-16*mm,"MD EDIL GROUP")
     c.setFillColor(ORO); c.setFont("Helvetica",8.5); c.drawString(M+34*mm,H-22*mm,"I dettagli fanno la differenza")
     c.setFillColor(C(216,210,198)); c.setFont("Helvetica",7.5)
-    for i,r in enumerate(["Sede operativa: Via Monti Lepini 9, 00015 Monterotondo (RM)","P.IVA 17112431006","Tel. e WhatsApp +39 328 214 5266","mdedilgroup.it"]):
+    for i,r in enumerate(["Via Monti Lepini 9, 00015 Monterotondo (RM)","P.IVA 17112431006","Tel. e WhatsApp +39 328 214 5266","mdedilgroup.it"]):
         c.drawRightString(W-M,H-(10+i*4.4)*mm,r)
     c.setStrokeColor(ORO); c.setLineWidth(0.8*mm/ (mm/1)) ; c.setLineWidth(2.2); c.line(0,H-34*mm,W,H-34*mm)
 def piede(p,n):

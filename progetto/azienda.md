@@ -33,7 +33,7 @@ Decisione di Eugenio del 16/10/2026 (sera), per non confondere i clienti:
 - **Sede operativa:** Via Monti Lepini 9, 00015 Monterotondo (RM)
 
 Scritte così nel fondo di tutte le pagine, nei contatti della Home e nell'informativa privacy.
-- **Preventivi PDF** (Eugenio, 23/10/2026): nell'intestazione **solo la sede operativa Via Monti Lepini 9, 00015 Monterotondo (RM)**, mai Via Po (sia il PDF creato dai simulatori, `js/preventivo-pdf.js`, sia i PDF di esempio in `preventivi/`). Nei dati strutturati (JSON-LD) restano tutti e due gli indirizzi, prima Via Po.
+- **Preventivi PDF** (Eugenio, 23/10/2026): nell'intestazione **solo l'indirizzo "Via Monti Lepini 9, 00015 Monterotondo (RM)"**, senza scritte "sede legale" o "sede operativa" e mai Via Po (sia il PDF creato dai simulatori, `js/preventivo-pdf.js`, sia i PDF di esempio in `preventivi/`). Nei dati strutturati (JSON-LD) restano tutti e due gli indirizzi, prima Via Po.
 
 ## Zone di lavoro
 - Ristrutturazioni: **Roma e Milano** (sul sito vanno citate entrambe), con Roma e Lazio come zona principale. **Milano solo per ristrutturazioni complete** (cantieri interi), non per bagni o lavori piccoli (Eugenio, 20/10/2026)
