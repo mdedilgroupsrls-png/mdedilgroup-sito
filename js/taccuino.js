@@ -1,8 +1,9 @@
-// Taccuino della Home: nastro di articoli che scorre da solo da destra a sinistra.
+// Nastri di schede che scorrono da soli da destra a sinistra (.tac-belt > .tac-tr): taccuino della Home
+// e cantieri realizzati della pagina infissi.
 // Ogni scheda compare dal giorno scritto in data-dal (AAAA-MM-GG, ora di Roma); le schede sono in ordine dal più recente.
 // Mouse sopra o dito appoggiato = si ferma; trascinando segue il dito; un clic senza trascinare apre l'articolo.
-(function () {
-  var belt = document.querySelector('#taccuino .tac-belt'), tr = belt && belt.querySelector('.tac-tr');
+Array.prototype.forEach.call(document.querySelectorAll('.tac-belt'), function (belt) {
+  var tr = belt.querySelector('.tac-tr');
   if (!tr) return;
   var oggi;
   try { oggi = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Rome' }).format(new Date()); }
@@ -53,4 +54,4 @@
     if (e.key === 'ArrowRight') { boost -= 1200; e.preventDefault(); }
     if (e.key === 'ArrowLeft') { boost += 1200; e.preventDefault(); }
   });
-})();
+});
