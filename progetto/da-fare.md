@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da completare
+- [x] 23/10/2026 – Case in legno: i video dei villaggi/campeggi in legno scorrono da soli da destra a sinistra (fermi mentre un video va) – Eugenio
 - [x] 23/10/2026 – Infissi e serramenti: i cantieri realizzati ora scorrono da soli da destra a sinistra (si trascinano col mouse o col dito), stesso nastro del taccuino della Home – Eugenio
 - [x] 23/10/2026 – Preventivi PDF: tolta Via Po dall'intestazione, resta solo l'indirizzo Via Monti Lepini 9, Monterotondo, senza la scritta "sede operativa" (PDF dei simulatori e PDF di esempio infissi con le anteprime) – Eugenio
 - [x] 23/10/2026 – Sito pubblicato su richiesta di Eugenio ("aggiorna il sito"): uniti i lavori di lavori-in-corso (articoli infissi, bonus casa, taccuino della Home a nastro, simulatore case in legno) con quelli già su main (studio tecnico, interior design, interni, video villaggi)

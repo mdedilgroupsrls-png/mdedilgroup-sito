@@ -105,7 +105,8 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 .vid{padding:72px 0 96px;border-top:1px solid var(--line)}
 .vid-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 64px;margin-bottom:34px}
 .vid-head p{flex:1 1 340px;max-width:520px;margin:0;color:var(--ink2);font-size:15px;line-height:1.65}
-.vid-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,340px));gap:32px 40px}
+.vid-grid{display:flex;gap:40px;width:max-content;will-change:transform}.vid-grid figure{flex:0 0 clamp(240px,70vw,320px)}
+.vid .tac-belt{position:relative;overflow:hidden;touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none}.vid .tac-belt:focus-visible{outline:2px solid var(--gold,#C9A24A);outline-offset:4px}.vid .tac-belt::before,.vid .tac-belt::after{content:"";position:absolute;top:0;bottom:0;width:clamp(16px,5vw,70px);z-index:2;pointer-events:none}.vid .tac-belt::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}.vid .tac-belt::after{right:0;background:linear-gradient(270deg,var(--bg),transparent)}
 .vid-grid figure{margin:0;display:flex;flex-direction:column;gap:12px}
 .vid-grid video{width:100%;aspect-ratio:9/16;height:auto;display:block;background:#000;border:1px solid var(--line)}
 .vid-grid figcaption{color:var(--ink2);font-size:14px;line-height:1.55}
@@ -253,7 +254,8 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 </div>
 <p>Un terreno immerso nella natura può diventare un campeggio, un agri-camping o un villaggio turistico con case in legno prefabbricate in bioedilizia. Ci occupiamo di tutto: studio del terreno, progettazione, render, fondazioni, montaggio e consegna chiavi in mano. Realizziamo case in legno in tutta Italia. Le immagini delle strutture finite sono render di progetto.</p>
 </div>
-<div class="vid-grid">
+<div class="tac-belt" data-min="2" aria-label="Video dei villaggi in legno: scorrono da soli, trascina col mouse o col dito, oppure usa le frecce della tastiera">
+<div class="tac-tr vid-grid">
 <figure>
 <video controls playsinline preload="none" poster="/video/villaggio-case-legno-poster.webp" aria-label="Video: dal terreno al villaggio di case in legno">
 <source src="/video/villaggio-case-legno.mp4" type="video/mp4">
@@ -266,6 +268,7 @@ h2{font-size:clamp(26px,2.6vw,38px);line-height:1.12}
 </video>
 <figcaption><b>Un villaggio di case A-frame</b>Case A-frame isolate in lana di roccia, con infissi ad alte prestazioni e finiture di qualità, seguite dai nostri tecnici in ogni fase.</figcaption>
 </figure>
+</div>
 </div>
 </section>
 </main>
@@ -643,6 +646,7 @@ draw();
 })();
 </script>
 <script src="/js/frecce.js"></script>
+<script src="/js/taccuino.js"></script>
 <script src="/js/schede.js"></script>
 <script src="/js/preventivo-pdf.js"></script>
 <script src="/js/invio-wa.js"></script>
