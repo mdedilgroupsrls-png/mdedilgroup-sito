@@ -40,6 +40,7 @@ Design scelto e approvato da Eugenio (proposta A, 13/10/2026). Il resto si compl
 - Pulsante WhatsApp fisso in basso a destra.
 
 ## Regole
+- **Titoli che si aprono (Eugenio, 23/10/2026):** il sito deve restare pulito e chiaro, poco testo da leggere: le sezioni lunghe sono **titoli che si aprono cliccando** (`<details>`, cerchio oro con "+" che ruota) oppure portano a una pagina a parte (come il bagno). **Ogni titolo con dei prezzi ha il suo link** (id sul `<details>`, es. `/ristrutturazioni-interni#ristrutturazione-casa`): aprendo il link la voce si apre da sola (`apriDaLink` in `js/sicurezza.js`). Simulatori e guide restano completi, mai voci nascoste.
 - Layout fluido, contenitore max 1320px, margini laterali `clamp(20px, 5vw, 72px)`.
 - Deve funzionare a larghezza telefono (390px) senza scorrimento orizzontale.
 - Niente emoji, niente gradienti decorativi.

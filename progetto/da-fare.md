@@ -3,6 +3,8 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da ricordare a Eugenio quando chiede "cosa abbiamo da fare"
+- [x] 23/10/2026 – Interni: "Cosa ristrutturiamo" a titoli che si aprono, ognuno con il suo link; "Dove lavoriamo a Roma" (zone dei cantieri veri); link diretti a ogni paragrafo di guide e listino infissi; D.M. 37/08 negli impianti; guida costi con ristrutturazione parziale e sezioni a scomparsa – Eugenio
+- [ ] ISO 9001: spiegare a Eugenio cosa serve (chiesto il 23/10/2026; spiegazione breve data in chat, approfondire quando lo chiede)
 - [x] 23/10/2026 – Ristrutturazione completa casa: prezzo da 600 € a 1.000 € al m² (prima 650) nella scheda di /ristrutturazioni-interni, nella guida costi, nella Home e in llms.txt – Eugenio
 - [x] 23/10/2026 – Guida costi casa: esempi rifatti senza demolizione del massetto (e senza nuovo massetto) e senza tiro dei materiali: 50 m² 34.313 €, 70 m² 44.109 €, 100 m² 64.173 € – Eugenio
 - [x] 23/10/2026 – Guida "Quanto costa ristrutturare casa a Roma nel 2026" con esempi 50/70/100 m² dal simulatore (articolo interni del 10/11, scorta 8/26); title dei simulatori con "gratuito" e "Roma"; sezione "Google AI e ricerche da controllare" in seo.md – Eugenio

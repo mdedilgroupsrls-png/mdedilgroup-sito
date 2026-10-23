@@ -50,13 +50,13 @@
       { id: 'clima', d: 'Impianto di climatizzazione con un motore esterno e due split', um: 'n° impianti', p: 1170,
         x: 'Posa delle tubazioni tra il motore esterno e i due split interni, scarico della condensa, opere murarie e installazione. I condizionatori li scegliamo insieme: la fornitura è esclusa.' }
     ] },
-    { id: 'elettrico', t: 'Impianto elettrico', s: 'Impianto nuovo, eseguito da tecnici abilitati e consegnato con dichiarazione di conformità.', v: [
+    { id: 'elettrico', t: 'Impianto elettrico', s: 'Impianto nuovo, eseguito da tecnici abilitati e consegnato con la dichiarazione di conformità prevista dal D.M. 37/08 (Decreto Ministeriale 22 gennaio 2008, n. 37).', v: [
       { id: 'punti', d: 'Punti luce e prese', um: 'n° punti', p: 95,
         x: 'Ogni punto è un’uscita per una luce o una presa, a parete, a pavimento o a soffitto: comprende linee, scatole, frutti tipo BTicino e opere murarie. Per orientarti: circa un punto per ogni metro quadro di casa.' },
       { id: 'quadro', d: 'Nuovo quadro elettrico', um: 'a corpo', p: 750, tipo: 'si', quadro: true,
         x: 'Nuovo quadro con le protezioni dell’impianto, dimensionato sulla superficie della casa.' }
     ] },
-    { id: 'idrico', t: 'Impianto idrico e riscaldamento', s: 'Acqua, scarichi e termosifoni, con dichiarazione di conformità.', v: [
+    { id: 'idrico', t: 'Impianto idrico e riscaldamento', s: 'Acqua, scarichi e termosifoni, con la dichiarazione di conformità prevista dal D.M. 37/08.', v: [
       { id: 'centr', d: 'Collettore di distribuzione collegato alla caldaia', um: 'n°', p: 679,
         x: 'Predisposizione e montaggio della centralina da cui partono le tubazioni verso i termosifoni, con il collegamento alla caldaia.' },
       { id: 'radiat', d: 'Allaccio e posa di termosifoni', um: 'n°', p: 475,
@@ -66,7 +66,7 @@
       { id: 'pAcqua', d: 'Nuovo punto acqua con scarico', um: 'n°', p: 435,
         x: 'Un attacco completo di acqua e scarico per lavello, lavatrice, lavastoviglie, lavabo o altri apparecchi, con le opere murarie.' }
     ] },
-    { id: 'gas', t: 'Impianto gas', s: 'Linee del gas realizzate secondo le norme di sicurezza.', v: [
+    { id: 'gas', t: 'Impianto gas', s: 'Linee del gas realizzate secondo le norme di sicurezza, con la dichiarazione di conformità prevista dal D.M. 37/08.', v: [
       { id: 'gasCuc', d: 'Linea del gas dal contatore alla cucina', um: 'n°', p: 750,
         x: 'Nuova tubazione dal contatore al piano cottura, con la valvola di chiusura prevista dalla normativa.' },
       { id: 'gasCal', d: 'Linea del gas per la caldaia', um: 'n°', p: 550,
@@ -164,7 +164,7 @@
       note: ['Preventivo indicativo calcolato con il listino MD Edil Group in base alle quantità indicate dal cliente. Prezzi IVA inclusa.',
         'Il prezzo definitivo viene confermato dopo il sopralluogo, con le misure prese dai nostri tecnici, e con la firma del contratto. Sopralluogo e preventivo sono gratuiti.',
         'Esclusa la fornitura di pavimenti, rivestimenti, sanitari, rubinetteria, porte, termosifoni, caldaie, condizionatori e accessori, che sceglierai con noi (nel bagno chiavi in mano sono compresi i materiali che restano murati). Infissi esclusi.',
-        'Tutti i lavori sono eseguiti dai nostri tecnici abilitati e gli impianti sono consegnati con dichiarazione di conformità.']
+        'Tutti i lavori sono eseguiti dai nostri tecnici abilitati e gli impianti sono consegnati con la dichiarazione di conformità prevista dal D.M. 37/08.']
     }
   });
 })();

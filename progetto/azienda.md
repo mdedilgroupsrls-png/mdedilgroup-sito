@@ -1,6 +1,7 @@
 # MD Edil Group – dati dell'azienda
 
 ## Identità
+- **Esperienza (Eugenio, 23/10/2026):** "più di 10 anni" di lavoro; **non scrivere l'anno di nascita dell'impresa**. **Certificazioni:** nessuna (niente ISO 9001 né SOA): non scriverle mai. Eugenio vuole sapere in futuro cosa serve per la ISO 9001.
 - **Ragione sociale:** MD EDIL GROUP S.R.L.S.
 - **P.IVA:** 17112431006
 - **Codice univoco (fatturazione elettronica SDI):** M5UXCR1 (dato da Eugenio il 16/10/2026)
@@ -36,6 +37,7 @@ Scritte così nel fondo di tutte le pagine, nei contatti della Home e nell'infor
 - **Preventivi PDF** (Eugenio, 23/10/2026): nell'intestazione **solo l'indirizzo "Via Monti Lepini 9, 00015 Monterotondo (RM)"**, senza scritte "sede legale" o "sede operativa" e mai Via Po (sia il PDF creato dai simulatori, `js/preventivo-pdf.js`, sia i PDF di esempio in `preventivi/`). Nei dati strutturati (JSON-LD) restano tutti e due gli indirizzi, prima Via Po.
 
 ## Zone di lavoro
+- Zone dei cantieri veri, scritte nel riquadro "Dove lavoriamo a Roma" di /ristrutturazioni-interni (23/10/2026): interni Porta Pia, Piazza Fiume, Olgiata, Prati, Manzoni, San Giovanni, Corso Francia, Via Cassia; infissi Monte Sacro, EUR, Roma Nord, Corso Trieste, Trigoria. Aggiungere solo zone di cantieri reali.
 - Ristrutturazioni: **Roma e Milano** (sul sito vanno citate entrambe), con Roma e Lazio come zona principale. **Milano solo per ristrutturazioni complete** (cantieri interi), non per bagni o lavori piccoli (Eugenio, 20/10/2026)
 - Case in legno: **tutta Italia**
 

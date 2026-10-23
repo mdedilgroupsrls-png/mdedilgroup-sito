@@ -135,7 +135,21 @@
     modulo();
   }
 
+  // link diretto a una voce che si apre cliccando il titolo (es. /ristrutturazioni-interni#ristrutturazione-casa):
+  // apre la voce e ci porta sopra (Eugenio, 23/10/2026)
+  function apriDaLink() {
+    var id = decodeURIComponent(location.hash.slice(1)), el = id && document.getElementById(id);
+    if (!el) return;
+    var d = el.tagName === 'DETAILS' ? el : el.closest && el.closest('details');
+    if (!d) return;
+    while (d) { d.open = true; d = d.parentElement && d.parentElement.closest('details'); }
+    var vai = function () { el.scrollIntoView(); };
+    setTimeout(vai, 60);
+    if (document.readyState !== 'complete') addEventListener('load', function () { setTimeout(vai, 150); });
+  }
+
   function avvia() {
+    apriDaLink(); window.addEventListener('hashchange', apriDaLink);
     if (salvata() === 'si') analytics();
     scrivi(); banner(); contatori();
     var b = document.getElementById('ckCambia'); if (b) b.onclick = cambiaScelta;
