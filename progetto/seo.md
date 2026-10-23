@@ -8,7 +8,7 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 | Pagina | Ricerche principali | Ricerche secondarie |
 |---|---|---|
 | `/` Home | impresa edile Roma, ristrutturazioni Roma | ristrutturazione chiavi in mano Roma, impresa ristrutturazioni Lazio |
-| `/ristrutturazioni-interni` | ristrutturazione appartamento Roma | costo ristrutturazione casa Roma, ristrutturazione bagno/cucina Roma, ristrutturazione villa Roma |
+| `/ristrutturazioni-interni` | ristrutturazione casa Roma, ristrutturazione appartamento Roma | ristrutturazione villa Roma, ristrutturazione bagno Roma, ristrutturazione cucina Roma, costo ristrutturazione casa Roma |
 | `/ristrutturazioni-esterni` | rifacimento facciata Roma, ristrutturazione facciate condominio | cappotto termico Roma, impresa facciate Lazio |
 | `/infissi-serramenti` | infissi PVC Roma, sostituzione infissi Roma | finestre PVC prezzi, Rehau Synego prezzo, tapparelle alluminio coibentato, zanzariere Roma |
 | `/case-in-legno` | case in legno prefabbricate prezzi | casa in legno chiavi in mano, casa in legno Lazio/Italia, A-frame, Barn House |
@@ -33,6 +33,8 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 - Controllo da fare a metà novembre 2026: chiedere a ChatGPT/Claude/Perplexity "impresa edile Roma", "case in legno prefabbricate prezzi", "rifacimento facciata Roma" e annotare se e come compare MD Edil Group.
 
 - 23/10/2026: riscritte /studio-tecnico e /interior-design con i testi di Eugenio (concetto invariato, parole chiave aggiunte): nuovi title e description; studio tecnico con FAQPage (CILA/SCIA/Permesso di costruire, muro portante, pre-rogito, zone). Parole chiave in più: architetto Roma, ingegnere strutturista, sanatoria, DOCFA, APE, CSP/CSE, arredi su misura, illuminotecnica.
+
+- 23/10/2026: /ristrutturazioni-interni rafforzata per "ristrutturazione casa / villa / bagno / cucina" (richiesta di Eugenio): nuovo title e H1, sezione "Cosa ristrutturiamo" con 4 schede (`#ristrutturazione-casa`, `#ristrutturazione-villa`, `#ristrutturazione-bagno`, `#ristrutturazione-cucina`), 5 domande frequenti (FAQPage, senza prezzi), catalogo dei 4 servizi nei dati strutturati, `llms.txt` aggiornato. Idea futura: pagine dedicate solo se ci saranno foto e testi veri per bagno e cucina.
 
 ## Da fare (in ordine di importanza)
 1. **Recensioni Google**: chiederle a ogni cliente con il link `https://g.page/r/CSlUfVvDiZqIEBM/review`. È il fattore più forte per "ristrutturazioni Roma" su Maps.
