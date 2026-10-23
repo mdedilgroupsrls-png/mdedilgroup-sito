@@ -194,8 +194,8 @@ Regole decise da Eugenio:
 
 ### Prezzi "da" nella sezione "Cosa ristrutturiamo" di /ristrutturazioni-interni (Eugenio, 23/10/2026)
 - Ristrutturazione completa della casa: **da 650 € a 1.000 € al m², IVA inclusa** (dati da Eugenio).
-- Ville e case indipendenti: **da 1.000 € al m², interni ed esterni** (dato da Eugenio; IVA non indicata, da chiarire con Eugenio).
-- Bagno chiavi in mano: **da 5.500 €, IVA inclusa, esclusa la fornitura di accessori e rivestimenti** (dato da Eugenio; nel simulatore il bagno resta 6.500 € fino a 5 m²).
+- Ville e case indipendenti: **da 1.000 € al m², interni ed esterni** (dato da Eugenio; IVA non indicata: confermato da Eugenio il 23/10/2026, si lascia così).
+- Bagno chiavi in mano: **da 5.500 €, IVA inclusa, esclusa la fornitura di accessori e rivestimenti** (dato da Eugenio; nel simulatore il bagno resta 6.500 € fino a 5 m²: confermato da Eugenio il 23/10/2026).
 - Cucina completa: **da 2.230 €, IVA inclusa**, calcolata con il simulatore interni: 6 punti luce e prese × 95 € = 570 € + punto acqua con scarico 435 € + linea del gas dal contatore alla cucina 750 € + posa rivestimento su parete di circa 10 m² × 47,50 € = 475 €. Fornitura di mobili, elettrodomestici e piastrelle esclusa.
-- Zona giorno, rasatura e pittura: **da 48,50 € al m² di pareti e soffitti, IVA inclusa** = raschiatura 3 € + rasatura 27 € + carteggiatura e fondo isolante 5 € + pittura lavabile chiara 13,50 €.
+- Zona giorno, **ristrutturazione parziale** (così scritto sul sito, Eugenio 23/10/2026): **da 48,50 € al m² di pareti e soffitti, IVA inclusa** = raschiatura 3 € + rasatura 27 € + carteggiatura e fondo isolante 5 € + pittura lavabile chiara 13,50 €.
 - Se cambiano i prezzi del simulatore, ricalcolare cucina e zona giorno a mano (non sono scritti dallo script).
