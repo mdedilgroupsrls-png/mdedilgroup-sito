@@ -53,4 +53,5 @@ Sul sito mdedilgroup.it trovi i lavori realizzati a Roma (Monte Sacro, EUR, Piaz
 - [ ] PagineGialle
 - [ ] Houzz
 - [ ] Instapro
+- [ ] **Ristrutturazioni.com** (citata dalla risposta AI di Google per "ristrutturazioni roma", 23/10/2026): profilo impresa con gli stessi dati e testi; valutare prima i costi
 - [ ] Altri elenchi utili per Roma: Virgilio/Tuttocittà, Yelp, Bing Places (stesso testo)
