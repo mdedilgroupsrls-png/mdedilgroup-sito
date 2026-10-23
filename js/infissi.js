@@ -166,7 +166,7 @@
 
     var msg = 'Buongiorno, ho fatto la stima sul sito per infissi e serramenti:\n';
     voci.forEach(function (v) { if (v[1] > 0) msg += '- ' + v[0] + ': ' + eur(v[1]) + '\n'; });
-    msg += 'Totale stimato: ' + eur(T) + ' + IVA' + '\nPiano: ' + $('piano').selectedOptions[0].text;
+    msg += 'Totale stimato: ' + eur(T) + ' + IVA (imballaggio e trasporto inclusi)' + '\nPiano: ' + $('piano').selectedOptions[0].text;
     $('waSim').href = 'https://wa.me/393282145266?text=' + encodeURIComponent(msg);
 
     // dati per il preventivo in PDF (js/preventivo-pdf.js)
