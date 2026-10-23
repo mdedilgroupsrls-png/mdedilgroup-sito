@@ -9,6 +9,9 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 |---|---|---|
 | `/` Home | impresa edile Roma, ristrutturazioni Roma | ristrutturazione chiavi in mano Roma, impresa ristrutturazioni Lazio |
 | `/ristrutturazioni-interni` | ristrutturazione casa Roma, ristrutturazione appartamento Roma | ristrutturazione villa Roma, ristrutturazione bagno Roma, ristrutturazione cucina Roma, costo ristrutturazione casa Roma |
+| `/simulatore-online-costi-ristrutturazioni-interni` | simulatore costi ristrutturazione, calcolo costo ristrutturazione casa | quanto costa ristrutturare casa Roma, preventivo ristrutturazione online, costo ristrutturazione appartamento al m² |
+| `/simulatore-online-costi-ristrutturazioni-esterni` | simulatore costo rifacimento facciata, calcolo costo cappotto termico | quanto costa rifare la facciata condominio Roma, costo impermeabilizzazione terrazzo, preventivo facciata online |
+| `/simulatore-online-costi-infissi-tapparelle-zanzariere` | simulatore prezzi infissi, calcolo prezzo finestre PVC | quanto costano infissi PVC Roma, prezzo tapparelle alluminio coibentato, prezzo zanzariere |
 | `/ristrutturazione-bagno-roma` | ristrutturazione bagno Roma, rifacimento bagno Roma | quanto costa rifare un bagno, bagno chiavi in mano Roma, impermeabilizzazione doccia, ristrutturazione bagno prezzi |
 | `/finiture-di-pregio-roma` | finiture di pregio ristrutturazione Roma | collettore idrico sportello d'ispezione a filo, angoli a 45 gradi piastrelle (jolly), posa grandi lastre gres 120x280, tagli di luce LED soffitto, tessuto in fibra di vetro antifessure / rasatura armata pareti |
 | `/quanto-costa-ristrutturare-bagno-roma` (articolo) | quanto costa ristrutturare un bagno a Roma | costo rifacimento bagno, prezzo bagno chiavi in mano Roma, bagno piccolo 3 mq costo |
