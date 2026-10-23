@@ -48,3 +48,4 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 - Una pagina = un argomento principale. Le pagine nuove vanno anche in `sitemap.xml`.
 
 - [x] 17/10/2026 – Icona del sito su fondo nero (`favicon-512.png`, `favicon.ico`) e logo dei dati strutturati aggiornato: Google la sostituisce nei risultati da solo, di solito in qualche giorno o settimana dopo la pubblicazione.
+- 23/10/2026: `/case-in-legno` ha 2 video su campeggi e villaggi in legno (sezione `#villaggi`) con dati strutturati VideoObject: parole chiave campeggio, agri-camping, glamping, villaggio turistico, case A-frame in bioedilizia
