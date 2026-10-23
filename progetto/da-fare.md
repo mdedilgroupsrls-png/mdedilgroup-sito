@@ -36,6 +36,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Fatto
 - [x] 18/10/2026 – Sito leggibile da ChatGPT e dagli altri assistenti AI: `robots.txt` aperto agli assistenti, nuovo `llms.txt`, catalogo servizi nei dati strutturati, `/chi-siamo` con dati strutturati; tolta dalla Home la sezione news vuota (Eugenio)
+- [x] 23/10/2026 – Pagina case in legno: aggiunti 2 video dei Reel case in legno (il migliore di ciascun gruppo: R01 agri-camping e C01 villaggio A-frame), richiesta di Eugenio
 - [ ] Sezione **News e guide** nella Home: rimetterla quando ci sono i primi articoli veri (idee in `seo.md`)
 - [x] 15/10/2026 – Schede grandi con foto e planimetria per tutti i 19 modelli (dalle schede del catalogo; Olivia senza la fascia in fondo con l'indirizzo web sbagliato), aperte toccando un modello nella Home o nel simulatore; modello 3D spostato in alto nella pagina case in legno. Sul branch `lavori-in-corso`
 - [x] 15/10/2026 – Nuovo modello **Olivia** (54.000 €, 90 m²) nel catalogo della Home (`img/m-olivia.webp`, ritagliato dalla scheda) e nel simulatore con gli optional della Nord House. Sul branch `lavori-in-corso`
