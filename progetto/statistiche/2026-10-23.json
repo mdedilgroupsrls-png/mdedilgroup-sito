@@ -1,0 +1,315 @@
+{
+ "data": "2026-10-23",
+ "finestra": "ultime 24 ore fino al 23/10/2026 23:50 (Roma)",
+ "eventi": {
+  "vista-case-in-legno": 155,
+  "vista-home": 137,
+  "arrivo-diretto": 73,
+  "simulazione-case-in-legno": 43,
+  "arrivo-instagram": 27,
+  "arrivo-google": 26,
+  "scheda-casa-fjord": 24,
+  "arrivo-facebook": 24,
+  "scheda-casa-siver": 22,
+  "modello-fjord": 22,
+  "vista-infissi-serramenti": 20,
+  "scheda-casa-montblanc": 18,
+  "scheda-casa-olivia": 18,
+  "modello-montblanc": 17,
+  "modello-olivia": 17,
+  "modello-sherwood": 15,
+  "scheda-casa-sherwood": 15,
+  "modello-siver": 15,
+  "scheda-casa-nord-house": 15,
+  "modello-nord-house": 14,
+  "scheda-casa-flat-house-1-5": 14,
+  "scheda-casa-a-frame-l": 14,
+  "modello-flat-house-1-5": 12,
+  "modello-a-frame-l": 11,
+  "simulazione-infissi-serramenti": 11,
+  "scheda-casa-flat-double": 10,
+  "vista-ristrutturazioni-interni": 10,
+  "scheda-casa-flat-house": 10,
+  "whatsapp-case-in-legno": 9,
+  "modello-flat-house": 9,
+  "modello-norway": 8,
+  "scheda-casa-norway": 8,
+  "modello-flat-double": 7,
+  "modello-mini-barn-boutique": 6,
+  "vista-chi-siamo": 6,
+  "scheda-casa-a-frame": 6,
+  "scheda-casa-barn-house": 6,
+  "modello-a-frame": 6,
+  "scheda-casa-barn-double": 6,
+  "scheda-casa-mini-barn-boutique": 6,
+  "vista-interior-design": 5,
+  "scheda-casa-barn-mini": 5,
+  "arrivo-chatgptcom": 5,
+  "modello-barn-house": 5,
+  "modello-barn-mini": 5,
+  "vai-al-modulo-home": 4,
+  "scheda-casa-freya-smart": 4,
+  "modello-barn-double": 4,
+  "scheda-casa-barn-max-height": 4,
+  "vista-ristrutturazioni-esterni": 4,
+  "vista-studio-tecnico": 3,
+  "modello-barn-max-height": 3,
+  "modello-freya-smart": 3,
+  "arrivo-altro": 2,
+  "vista-infissi-pvc-monte-sacro-roma": 2,
+  "vista-preventivo-infissi-pvc-rehau-synego": 2,
+  "arrivo-ig": 2,
+  "chiama-home": 2,
+  "scheda-casa-barn-light": 1,
+  "vista-ristrutturazione-bagno-roma": 1,
+  "stima-pdf-case-in-legno": 1,
+  "vista-quanto-costa-ristrutturare-bagno-roma": 1,
+  "vai-al-modulo-case-in-legno": 1,
+  "simulazione-ristrutturazioni-interni": 1
+ },
+ "eventi_per_citta": [
+  {
+   "e": "vista-home",
+   "c": "Pregassona",
+   "r": "Ticino",
+   "n": "CH",
+   "count": 14
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 14
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 11
+  },
+  {
+   "e": "vista-home",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 10
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "?",
+   "r": "?",
+   "n": "CH",
+   "count": 9
+  },
+  {
+   "e": "vista-home",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 9
+  },
+  {
+   "e": "simulazione-infissi-serramenti",
+   "c": "San Jose",
+   "r": "California",
+   "n": "US",
+   "count": 8
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "San Jose",
+   "r": "California",
+   "n": "US",
+   "count": 8
+  },
+  {
+   "e": "vista-infissi-serramenti",
+   "c": "San Jose",
+   "r": "California",
+   "n": "US",
+   "count": 8
+  },
+  {
+   "e": "vista-home",
+   "c": "Padua",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 7
+  },
+  {
+   "e": "vista-home",
+   "c": "Saint-Priest-Taurion",
+   "r": "New Aquitaine",
+   "n": "FR",
+   "count": 7
+  },
+  {
+   "e": "modello-sherwood",
+   "c": "Turin",
+   "r": "Piedmont",
+   "n": "IT",
+   "count": 7
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Turin",
+   "r": "Piedmont",
+   "n": "IT",
+   "count": 7
+  },
+  {
+   "e": "scheda-casa-sherwood",
+   "c": "Turin",
+   "r": "Piedmont",
+   "n": "IT",
+   "count": 7
+  },
+  {
+   "e": "scheda-casa-siver",
+   "c": "Pregassona",
+   "r": "Ticino",
+   "n": "CH",
+   "count": 7
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Florence",
+   "r": "Tuscany",
+   "n": "IT",
+   "count": 7
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Vicenza",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 6
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 6
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "?",
+   "r": "?",
+   "n": "CH",
+   "count": 6
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 6
+  },
+  {
+   "e": "vista-home",
+   "c": "Vicenza",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 6
+  },
+  {
+   "e": "vista-ristrutturazioni-interni",
+   "c": "Monterotondo",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 6
+  },
+  {
+   "e": "simulazione-case-in-legno",
+   "c": "Rome",
+   "r": "Lazio",
+   "n": "IT",
+   "count": 6
+  },
+  {
+   "e": "vista-home",
+   "c": "?",
+   "r": "?",
+   "n": "CH",
+   "count": 6
+  },
+  {
+   "e": "scheda-casa-siver",
+   "c": "?",
+   "r": "?",
+   "n": "CH",
+   "count": 6
+  },
+  {
+   "e": "modello-norway",
+   "c": "Turin",
+   "r": "Piedmont",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "vista-home",
+   "c": "Milan",
+   "r": "Lombardy",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "arrivo-diretto",
+   "c": "Turin",
+   "r": "Piedmont",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "arrivo-facebook",
+   "c": "?",
+   "r": "?",
+   "n": "IT",
+   "count": 5
+  },
+  {
+   "e": "vista-case-in-legno",
+   "c": "Padua",
+   "r": "Veneto",
+   "n": "IT",
+   "count": 5
+  }
+ ],
+ "nota_citta": "righe con count da 5 a 14 dei dati s.txt dalla pagina 2 di Netlify (solo mdedilgroup.it); le righe più alte della pagina 1 non sono state lette, quindi l'elenco è parziale. Le righe San Jose/US sono probabilmente controlli automatici. Le visite di oggi comprendono le prove di Eugenio e di Claude dopo le modifiche al sito.",
+ "pagine_html_browser": {
+  "/case-in-legno": 110,
+  "/": 108,
+  "/infissi-serramenti": 20,
+  "/chi-siamo": 11,
+  "/ristrutturazioni-interni": 10,
+  "/interior-design": 7,
+  "/studio-tecnico": 4,
+  "/ristrutturazioni-esterni": 4,
+  "/infissi-pvc-monte-sacro-roma": 2,
+  "/preventivo-infissi-pvc-rehau-synego": 2,
+  "/quanto-costa-ristrutturare-bagno-roma": 1,
+  "/privacy": 1,
+  "/infissi-scorrevoli-vetrata-roma-nord": 1,
+  "/ristrutturazione-bagno-roma": 1
+ },
+ "paesi_html_browser": {
+  "IT": 186,
+  "US": 32,
+  "CH": 26,
+  "SG": 16,
+  "FR": 8,
+  "BE": 8,
+  "PT": 5,
+  "GG": 2,
+  "DE": 2,
+  "AR": 1,
+  "NL": 1,
+  "ES": 1,
+  "HR": 1,
+  "AU": 1
+ }
+}
