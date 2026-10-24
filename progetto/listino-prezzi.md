@@ -200,3 +200,12 @@ Regole decise da Eugenio:
 - Zona giorno, **ristrutturazione parziale** (così scritto sul sito, Eugenio 23/10/2026): **da 48,50 € al m² di pareti e soffitti, IVA inclusa** = raschiatura 3 € + rasatura 27 € + carteggiatura e fondo isolante 5 € + pittura lavabile chiara 13,50 €.
 - Ristrutturazione parziale (Eugenio, 23/10/2026: solo rasatura e pittura, senza impianti): 48,50 €/m² di pareti e soffitti (pareti ≈ 3,5 × pavimento): salone 25 m² ≈ 88 m² → 4.268 €; appartamento 70 m² (bagno escluso, 228 m²) → 11.058 €, circa 158 € per m² di casa. Nella guida costi e nella tabella di confronto.
 - Se cambiano i prezzi del simulatore, ricalcolare cucina, zona giorno e ristrutturazione parziale a mano (non sono scritti dallo script).
+
+### Prezzi "da" delle facciate in /ristrutturazioni-esterni#prezzi-facciate (Eugenio, 24/10/2026)
+Calcolati con i prezzi del simulatore esterni, + IVA, per m² di facciata; ponteggio e oneri della sicurezza a parte.
+- Ristrutturazione parziale (ripristino e pittura): spicconatura 3,50 + rasatura armata in due mani con rete e collante 32 + pittura silossanica 13 = **48,50 €/m²**.
+- Intonaco e pittura: + intonaco su tutta la facciata 23,50 = **72 €/m²**.
+- Cappotto termico EPS grafitato con rasatura armata + intonachino con fondo: 12 cm 75 + 25 = **100 €/m²**; 14 cm 85 + 25 = **110 €/m²**.
+- Ponteggio 18 €/m² (montaggio, smontaggio, primo mese), 2 €/m² per mese in più; oneri della sicurezza 8% dei lavori.
+- Esempio condominio 700 m² (con ponteggio primo mese e oneri 8%): parziale (33.950 + 12.600) × 1,08 = **50.274 €** + IVA; cappotto 12 cm con intonachino (70.000 + 12.600) × 1,08 = **89.208 €** + IVA.
+- Se cambiano i prezzi del simulatore esterni, ricalcolare a mano.

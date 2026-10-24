@@ -3,6 +3,7 @@
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
 ## Da ricordare a Eugenio quando chiede "cosa abbiamo da fare"
+- [x] 24/10/2026 – Pagine dei simulatori rifatte (titolo, una riga, simulatore, poi titoli che si aprono con FAQ); nuova pagina simulatore case in legno; pulsanti Home → pagine dei simulatori; esterni: "Quanto costa rifare la facciata a Roma" (parziale 48,50, intonaco 72, cappotto 100–110 €/m², ponteggio, esempio 700 m²); link propri ai titoli con prezzi dell'articolo bagno – Eugenio
 - [x] 23/10/2026 – "Dove lavoriamo a Roma": tutte le zone di Roma per area (Nord, Centro, Est, Sud e Ovest, Litorale), link ai lavori realizzati – Eugenio
 - [x] 23/10/2026 – Interni: "Cosa ristrutturiamo" a titoli che si aprono, ognuno con il suo link; "Dove lavoriamo a Roma" (zone dei cantieri veri); link diretti a ogni paragrafo di guide e listino infissi; D.M. 37/08 negli impianti; guida costi con ristrutturazione parziale e sezioni a scomparsa – Eugenio
 - [ ] ISO 9001: spiegare a Eugenio cosa serve (chiesto il 23/10/2026; spiegazione breve data in chat, approfondire quando lo chiede)
