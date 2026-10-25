@@ -17,7 +17,8 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 - [ ] Materiale di esterni e case in legno per i prossimi articoli.
 - [ ] Search Console: schermate Rendimento e Pagine (dal 3/11/2026).
 - [x] 25/10/2026 – Foto di un terrazzo (vista San Pietro) arrivate: articolo /rifacimento-terrazzo-roma-vista-san-pietro e sezione nella pagina terrazzi.
-- [ ] **Terrazzo San Pietro: zona di Roma e m²** per completare l'articolo; foto di facciate con la zona (25/10/2026).
+- [x] 25/10/2026 – Terrazzo: via Gregorio VII (San Pietro), 700 m², da 180 €/m² (Eugenio). Gli articoli escono solo nel loro giorno: strumento `progetto/strumenti/uscite.py` (pagina rimanda alla Home, fuori da sitemap/llms, link nascosti).
+- [ ] Foto di facciate con la zona (25/10/2026).
 
 ## Da completare
 - [x] 25/10/2026 – Simulatori: "calcola il costo" nei titoli di interni ed esterni, "configuratore" per infissi e case in legno (indirizzi invariati) – Eugenio

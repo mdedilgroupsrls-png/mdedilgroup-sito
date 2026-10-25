@@ -131,7 +131,7 @@ Foto non ancora usate in nessun reel, quindi pronte:
 
 ## Calendario uscite in Home (Eugenio, 21/10/2026)
 Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer (Eugenio, 21/10/2026); i testi delle schede sono scritti per la SEO (lavorazione + parola chiave + zona). Il taccuino è un nastro di schede che scorre da solo da destra a sinistra (Eugenio, 21/10/2026), dal più recente; ogni scheda compare dal giorno in `data-dal` (gestito da `js/taccuino.js`) e ha `data-cat` = I nostri lavori / Detrazioni e bonus / Guide e costi.
-- **Regola (Eugenio, 21/10/2026, ribadita):** in Home esce **un solo articolo a settimana, il martedì**, ogni volta da una **pagina diversa** (infissi, interni, esterni, case in legno, detrazioni; mai due di seguito dalla stessa). Si prepara una **scorta di articoli per 6 mesi (26 martedì) da oggi**: quando è completa, dirlo a Eugenio. Le pagine dei cantieri vanno online subito (sezione lavori realizzati, sitemap); in Home compaiono alla loro data.
+- **Regola (Eugenio, 21/10/2026, ribadita):** in Home esce **un solo articolo a settimana, il martedì**, ogni volta da una **pagina diversa** (infissi, interni, esterni, case in legno, detrazioni; mai due di seguito dalla stessa). Si prepara una **scorta di articoli per 6 mesi (26 martedì) da oggi**: quando è completa, dirlo a Eugenio. **Gli articoli escono solo nel loro giorno (Eugenio, 25/10/2026):** prima di quel giorno la pagina rimanda alla Home, non è in sitemap né in llms.txt e i link nelle altre pagine non si vedono (`progetto/strumenti/uscite.py`, da lanciare dopo ogni articolo nuovo). Google le trova dal giorno di uscita.
 - 20/10 (già usciti insieme): Monte Sacro (infissi), detrazioni 2026, costo del bagno (interni).
 
 | Martedì | Pagina | Articolo | Stato |
@@ -141,7 +141,7 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 | 10/11 | Interni | **Quanto costa ristrutturare casa a Roma nel 2026? Prezzi ed esempi** (`/quanto-costa-ristrutturare-casa-roma`, Guide e costi; esempi 50/70/100 m² dal simulatore) – reel da fare | ✓ |
 | 17/11 | Detrazioni | da scrivere (es. ecobonus infissi: trasmittanza e ENEA) | da scrivere |
 | 24/11 | Infissi | EUR – scorrevoli antracite e vetrata ad angolo | pronto |
-| 1/12 | Esterni | I nostri lavori: Rifacimento terrazzo a Roma con vista su San Pietro (/rifacimento-terrazzo-roma-vista-san-pietro) | pronto (25/10/2026) |
+| 1/12 | Esterni | I nostri lavori: Rifacimento 700 m² di terrazzo a Roma San Pietro, via Gregorio VII (/rifacimento-terrazzo-roma-vista-san-pietro) | pronto (25/10/2026) |
 | 8/12 | Detrazioni | da scrivere (es. bonus mobili, documenti e bonifico parlante) | da scrivere |
 | 15/12 | Infissi | Corso Trieste – finto legno con monoblocco | pronto |
 | 22/12 | Case in legno | da scrivere | da scrivere |

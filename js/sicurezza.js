@@ -13,6 +13,25 @@
     });
   }
 
+  // USCITE: scritto da progetto/strumenti/uscite.py (articoli programmati e giorno di uscita)
+  var USCITE = {"/bonus-casa-50-pagare-entro-31-dicembre-2026": "2026-10-27", "/infissi-scorrevoli-vetrata-roma-nord": "2026-11-03", "/quanto-costa-ristrutturare-casa-roma": "2026-11-10", "/infissi-scorrevoli-angolo-roma-eur": "2026-11-24", "/rifacimento-terrazzo-roma-vista-san-pietro": "2026-12-01", "/infissi-pvc-finto-legno-corso-trieste": "2026-12-15", "/preventivo-infissi-pvc-rehau-synego": "2027-01-05", "/infissi-palazzina-superbonus-l-aquila": "2027-01-19", "/infissi-villa-bifamiliare-trigoria": "2027-02-02"};
+  // prima del giorno di uscita (ora di Roma) i link all'articolo non si vedono: le schede si tolgono,
+  // i link dentro il testo restano come testo semplice; i nastri .tac-tr li gestisce js/taccuino.js
+  function nascondiUscite() {
+    var oggi;
+    try { oggi = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Rome' }).format(new Date()); }
+    catch (e) { oggi = new Date().toISOString().slice(0, 10); }
+    [].forEach.call(document.querySelectorAll('a[href^="/"]'), function (a) {
+      var p = a.getAttribute('href').split('#')[0].replace(/\.html$/, '');
+      if (!USCITE[p] || USCITE[p] <= oggi || a.closest('.tac-tr')) return;
+      var li = a.closest('li'), su = a.parentElement;
+      if (li && li.querySelectorAll('a').length === 1) li.remove();
+      else if (a.querySelector('img')) a.remove();
+      else if (su.tagName === 'P' && su.textContent.trim() === a.textContent.trim()) su.remove();
+      else a.replaceWith(document.createTextNode(a.textContent));
+    });
+  }
+
   // avviso cookie: cookie tecnici sempre; Google Analytics solo dopo ACCETTO. La scelta resta salvata in questo browser
   // (chiave nuova dal 20/10/2026: l'avviso è cambiato, quindi si richiede la scelta a tutti)
   var KEY = 'mdCookie2';
@@ -149,6 +168,7 @@
   }
 
   function avvia() {
+    nascondiUscite();
     apriDaLink(); window.addEventListener('hashchange', apriDaLink);
     if (salvata() === 'si') analytics();
     scrivi(); banner(); contatori();

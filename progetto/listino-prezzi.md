@@ -209,3 +209,7 @@ Calcolati con i prezzi del simulatore esterni, + IVA, per m² di facciata; ponte
 - Ponteggio 18 €/m² (montaggio, smontaggio, primo mese), 2 €/m² per mese in più; oneri della sicurezza 8% dei lavori.
 - Esempio condominio 700 m² (con ponteggio primo mese e oneri 8%): parziale (33.950 + 12.600) × 1,08 = **50.274 €** + IVA; cappotto 12 cm con intonachino (70.000 + 12.600) × 1,08 = **89.208 €** + IVA.
 - Se cambiano i prezzi del simulatore esterni, ricalcolare a mano.
+
+### Prezzi dei lavori realizzati (Eugenio, 25/10/2026)
+
+- Terrazzo in via Gregorio VII, zona San Pietro, Roma: rifacimento completo di 700 m² (demolizione, guaina bituminosa, pavimento in gres) **da 180 € al m² + IVA**. Prezzo del lavoro, scritto solo nell'articolo `/rifacimento-terrazzo-roma-vista-san-pietro` e nella sezione "Un nostro lavoro" di `/impermeabilizzazione-terrazzo-roma`; il simulatore esterni resta con il suo listino.
