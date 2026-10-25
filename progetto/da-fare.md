@@ -19,6 +19,7 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 - [ ] **Foto vere di terrazzi e balconi** (prima/dopo, con zona di Roma) per la pagina /impermeabilizzazione-terrazzo-roma, e foto di facciate con la zona (25/10/2026).
 
 ## Da completare
+- [x] 25/10/2026 – Simulatori: "calcola il costo" nei titoli di interni ed esterni, "configuratore" per infissi e case in legno (indirizzi invariati) – Eugenio
 - [x] 25/10/2026 – Pagine nuove /rifacimento-facciata-roma e /impermeabilizzazione-terrazzo-roma (prezzi dal simulatore esterni, esempi, zone, domande, titoli con link); Approfondimenti in /ristrutturazioni-esterni; "Scopri di più" nella guida; strumento pagine_voci.py – Eugenio
 - [x] 23/10/2026 – Ogni simulatore ha la sua pagina (interni, esterni, infissi/tapparelle/zanzariere) con link sotto il titolo del simulatore nella pagina madre; sitemap, llms.txt e seo.md aggiornati – Eugenio
 - [ ] Pagine proprie per ogni voce (elenco e regole in `seo.md` → "Pagine delle voci"): 2 a settimana nel compito del giovedì; reel solo per le 7 principali (Eugenio, 23/10/2026). In attesa: foto vere di cucine, ville, impianti, facciate.
