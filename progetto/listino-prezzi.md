@@ -212,4 +212,4 @@ Calcolati con i prezzi del simulatore esterni, + IVA, per m² di facciata; ponte
 
 ### Prezzi dei lavori realizzati (Eugenio, 25/10/2026)
 
-- Terrazzo in via Gregorio VII, zona San Pietro, Roma: rifacimento completo di 700 m² (demolizione, guaina bituminosa, pavimento in gres) **da 180 € al m² + IVA**. Prezzo del lavoro, scritto solo nell'articolo `/rifacimento-terrazzo-roma-vista-san-pietro` e nella sezione "Un nostro lavoro" di `/impermeabilizzazione-terrazzo-roma`; il simulatore esterni resta con il suo listino.
+- Terrazzo in via Gregorio VII, zona San Pietro, Roma: rifacimento completo di 700 m² (demolizione massetto e piastrelle, due strati di guaina, prova di allagamento, massetto 6 cm con pendenze, piastrelle con giunti di dilatazione) **180 € al m²**: scrivere solo così, senza "da" e senza parlare di IVA (Eugenio, 25/10/2026). Prezzo del lavoro, scritto solo nell'articolo `/rifacimento-terrazzo-roma-vista-san-pietro` e nella sezione "Un nostro lavoro" di `/impermeabilizzazione-terrazzo-roma`; il simulatore esterni resta con il suo listino.

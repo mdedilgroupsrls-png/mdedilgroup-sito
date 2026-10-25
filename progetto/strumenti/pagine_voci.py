@@ -140,7 +140,7 @@ VOCI = [
         foto=('/img/terrazzo-roma-san-pietro-pavimento-finito.webp', 'Terrazzo rifatto a Roma con nuovo pavimento in gres effetto cotto e vista sulla cupola di San Pietro', 'Un nostro terrazzo a Roma, rifatto da zero, con vista su San Pietro.'),
         sezioni=[
             ('lavoro-realizzato-terrazzo-san-pietro', 'Un nostro lavoro: 700 m² di terrazzo a San Pietro, via Gregorio VII',
-             P('Rifacimento completo di 700 m² di terrazzo in via Gregorio VII, zona San Pietro: demolizione del vecchio pavimento, nuova impermeabilizzazione con guaina bituminosa e nuovo pavimento in gres da esterno. Prezzo di questo lavoro: da 180 € al m² + IVA.') +
+             P('Ristrutturazione completa di 700 m² di terrazzo in via Gregorio VII, zona San Pietro: demolizione del massetto con le vecchie piastrelle, due strati di guaina, prova di allagamento (nessuna perdita), nuovo massetto di circa 6 cm con le pendenze, nuove piastrelle con giunti di dilatazione. Prezzo di questo lavoro: 180 € al m².') +
              FIG('/img/terrazzo-roma-san-pietro-demolizione-pavimento.webp', 'Demolizione del vecchio pavimento del terrazzo prima dell’impermeabilizzazione, Roma', 'Prima: il vecchio pavimento demolito fino al sottofondo.') +
              FIG('/img/terrazzo-roma-san-pietro-guaina-bituminosa.webp', 'Rotoli di guaina bituminosa pronti per l’impermeabilizzazione del terrazzo a Roma', 'Durante: i rotoli di guaina bituminosa pronti per la posa.') +
              P('<a href="/rifacimento-terrazzo-roma-vista-san-pietro">Il lavoro passo per passo, con tutte le foto →</a>')),
