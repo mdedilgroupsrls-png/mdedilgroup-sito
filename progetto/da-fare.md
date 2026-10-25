@@ -16,10 +16,12 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 - [ ] Video IMG_2822 e foto originali dei cantieri già usati (ora solo in chat) da caricare su Drive (vedi `materiale.md`).
 - [ ] Materiale di esterni e case in legno per i prossimi articoli.
 - [ ] Search Console: schermate Rendimento e Pagine (dal 3/11/2026).
-- [ ] **Foto vere di terrazzi e balconi** (prima/dopo, con zona di Roma) per la pagina /impermeabilizzazione-terrazzo-roma, e foto di facciate con la zona (25/10/2026).
+- [x] 25/10/2026 – Foto di un terrazzo (vista San Pietro) arrivate: articolo /rifacimento-terrazzo-roma-vista-san-pietro e sezione nella pagina terrazzi.
+- [ ] **Terrazzo San Pietro: zona di Roma e m²** per completare l'articolo; foto di facciate con la zona (25/10/2026).
 
 ## Da completare
 - [x] 25/10/2026 – Simulatori: "calcola il costo" nei titoli di interni ed esterni, "configuratore" per infissi e case in legno (indirizzi invariati) – Eugenio
+- [x] 25/10/2026 – Articolo "I nostri lavori" terrazzo con vista su San Pietro (in Home dal 1/12/2026, Approfondimenti esterni, sezione nella pagina terrazzi); reel nel compito del giovedì; post foto su Google Business il 1/12 – Eugenio
 - [x] 25/10/2026 – Pagine nuove /rifacimento-facciata-roma e /impermeabilizzazione-terrazzo-roma (prezzi dal simulatore esterni, esempi, zone, domande, titoli con link); Approfondimenti in /ristrutturazioni-esterni; "Scopri di più" nella guida; strumento pagine_voci.py – Eugenio
 - [x] 23/10/2026 – Ogni simulatore ha la sua pagina (interni, esterni, infissi/tapparelle/zanzariere) con link sotto il titolo del simulatore nella pagina madre; sitemap, llms.txt e seo.md aggiornati – Eugenio
 - [ ] Pagine proprie per ogni voce (elenco e regole in `seo.md` → "Pagine delle voci"): 2 a settimana nel compito del giovedì; reel solo per le 7 principali (Eugenio, 23/10/2026). In attesa: foto vere di cucine, ville, impianti, facciate.

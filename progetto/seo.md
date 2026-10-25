@@ -141,7 +141,7 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 | 10/11 | Interni | **Quanto costa ristrutturare casa a Roma nel 2026? Prezzi ed esempi** (`/quanto-costa-ristrutturare-casa-roma`, Guide e costi; esempi 50/70/100 m² dal simulatore) – reel da fare | ✓ |
 | 17/11 | Detrazioni | da scrivere (es. ecobonus infissi: trasmittanza e ENEA) | da scrivere |
 | 24/11 | Infissi | EUR – scorrevoli antracite e vetrata ad angolo | pronto |
-| 1/12 | Esterni | da scrivere (serve materiale di Eugenio; in mancanza, dalla pagina esterni) | da scrivere |
+| 1/12 | Esterni | I nostri lavori: Rifacimento terrazzo a Roma con vista su San Pietro (/rifacimento-terrazzo-roma-vista-san-pietro) | pronto (25/10/2026) |
 | 8/12 | Detrazioni | da scrivere (es. bonus mobili, documenti e bonifico parlante) | da scrivere |
 | 15/12 | Infissi | Corso Trieste – finto legno con monoblocco | pronto |
 | 22/12 | Case in legno | da scrivere | da scrivere |

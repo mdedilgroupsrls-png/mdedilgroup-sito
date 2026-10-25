@@ -4,6 +4,7 @@
 #   python3 progetto/strumenti/pagine_voci.py
 # I testi delle pagine sono in VOCI qui sotto; i calcoli usano i prezzi di js/esterni.js (+ IVA).
 import html, json, os, re
+from PIL import Image
 
 RADICE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 SITO = 'https://mdedilgroup.it'
@@ -31,6 +32,12 @@ TAB = lambda righe: ('<div style="overflow-x: auto; margin: 0 0 18px"><table sty
                      ''.join('<tr><td style="padding: 10px 8px; border-bottom: 1px solid #2A2722">' + a + '</td><td style="padding: 10px 8px; border-bottom: 1px solid #2A2722; text-align: right; white-space: nowrap">' + b + '</td></tr>' for a, b in righe) +
                      '</table></div>')
 P = lambda t: '<p>' + t + '</p>'
+
+
+def FIG(src, alt, cap):
+    w, h = Image.open(os.path.join(RADICE, src.lstrip('/'))).size
+    return ('<figure style="margin: 18px 0 8px"><img loading="lazy" decoding="async" width="%d" height="%d" src="%s" alt="%s" style="display: block; width: 100%%; height: auto">'
+            '<figcaption style="margin-top: 8px; font-size: 13px; color: #8A8478">%s</figcaption></figure>' % (w, h, src, html.escape(alt, quote=True), html.escape(cap, quote=False)))
 
 # --- facciata ---
 parz = X['spicc'] + X['armata'] + X['silossanica']
@@ -130,8 +137,13 @@ VOCI = [
         breve=('Per fermare le infiltrazioni di un terrazzo ci sono due strade: <b style="color: #E2C373">impermeabilizzare sopra il pavimento esistente, da %s al m²</b>, oppure il <b style="color: #E2C373">rifacimento completo, da circa %s al m²</b>, + IVA. '
                'Per un terrazzo di 30 m²: circa %s oppure circa %s + IVA, oneri della sicurezza compresi.') % (eur(senza_mq), eur(round(completo_mq)), eur(round(T_SENZA, -1)), eur(round(T_COMPL, -1))),
         intro='Macchie sul soffitto sotto il terrazzo, intonaco che si gonfia, piastrelle che si staccano: sono i segnali di un’impermeabilizzazione da rifare. A Roma rifacciamo terrazzi e balconi di appartamenti, attici e condomini, scegliendo con te il metodo giusto dopo il sopralluogo.',
-        foto=None,
+        foto=('/img/terrazzo-roma-san-pietro-pavimento-finito.webp', 'Terrazzo rifatto a Roma con nuovo pavimento in gres effetto cotto e vista sulla cupola di San Pietro', 'Un nostro terrazzo a Roma, rifatto da zero, con vista su San Pietro.'),
         sezioni=[
+            ('lavoro-realizzato-terrazzo-san-pietro', 'Un nostro lavoro: il terrazzo con vista su San Pietro',
+             P('Rifacimento completo di un terrazzo all’ultimo piano a Roma: demolizione del vecchio pavimento, nuova impermeabilizzazione con guaina bituminosa e nuovo pavimento in gres da esterno.') +
+             FIG('/img/terrazzo-roma-san-pietro-demolizione-pavimento.webp', 'Demolizione del vecchio pavimento del terrazzo prima dell’impermeabilizzazione, Roma', 'Prima: il vecchio pavimento demolito fino al sottofondo.') +
+             FIG('/img/terrazzo-roma-san-pietro-guaina-bituminosa.webp', 'Rotoli di guaina bituminosa pronti per l’impermeabilizzazione del terrazzo a Roma', 'Durante: i rotoli di guaina bituminosa pronti per la posa.') +
+             P('<a href="/rifacimento-terrazzo-roma-vista-san-pietro">Il lavoro passo per passo, con tutte le foto →</a>')),
             ('due-metodi-impermeabilizzazione', 'Due metodi: senza demolire o rifacimento completo',
              P('<b>Senza demolire</b>: si applica un telo armato impermeabile sopra le piastrelle esistenti. È più veloce e costa meno, va bene se il pavimento è stabile e ben inclinato verso gli scarichi.') +
              P('<b>Rifacimento completo</b>: si toglie il pavimento con il sottofondo, si stende la guaina, il nuovo massetto, l’impermeabilizzazione cementizia elastica e il nuovo pavimento in gres. È la soluzione definitiva quando il pavimento è rovinato o l’acqua ristagna.')),
@@ -199,8 +211,7 @@ def costruisci(v):
     t = t.replace('<style>.faq details', ''.join('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False) + '</script>\n' for x in ld) + CSS + '<style>.faq details', 1)
     foto = ''
     if v['foto']:
-        foto = ('<figure style="margin: 24px 0 8px"><img loading="lazy" decoding="async" src="%s" alt="%s" style="display: block; width: 100%%; height: auto"><figcaption style="margin-top: 8px; font-size: 13px; color: #8A8478">%s</figcaption></figure>\n'
-                % (v['foto'][0], attr(v['foto'][1]), e(v['foto'][2])))
+        foto = FIG(*v['foto']) + '\n'
     sezioni = ''.join('<details id="%s" class="voce"><summary><h2 %s>%s</h2></summary>\n%s\n</details>\n' % (i, H2, e(ti), body) for i, ti, body in v['sezioni'])
     faq = ''.join('<details><summary><h3>%s</h3></summary><p>%s</p></details>' % (e(q), e(a)) for q, a in v['faq'])
     art = ('<section style="padding: 230px clamp(20px, 5vw, 72px) 0; max-width: 1320px; margin: 0 auto">\n'
