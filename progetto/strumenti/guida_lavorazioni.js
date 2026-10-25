@@ -19,7 +19,7 @@ const PAGINE = [
     // paragrafi della guida con una pagina propria: in fondo "Scopri di più →" (Eugenio, 25/10/2026)
     pagine: { 'risanamento-e-ripristino-delle-facciate': ['/rifacimento-facciata-roma', 'Rifacimento della facciata a Roma: prezzi ed esempi'],
       'cappotto-termico-rasatura-e-finitura': ['/rifacimento-facciata-roma#cappotto-termico-facciata-roma', 'Cappotto termico e facciate a Roma: prezzi ed esempi'],
-      'terrazzi-e-balconi-impermeabilizzazione-e-pavimenti': ['/impermeabilizzazione-terrazzo-roma', 'Impermeabilizzazione di terrazzi e balconi a Roma: prezzi ed esempi'] },
+      'terrazzi-e-balconi-impermeabilizzazione-e-pavimenti': ['/impermeabilizzazione-terrazzo-roma', 'Ristrutturazione e impermeabilizzazione di terrazzi e balconi a Roma: fasi e prezzi'] },
     notaPrezzi: 'Prezzi del nostro listino per facciate e terrazzi, IVA esclusa. A questi importi si aggiungono gli oneri della sicurezza, calcolati all’8% dei lavori. Il prezzo definitivo si conferma dopo il sopralluogo gratuito e la verifica tecnica.' }
 ];
 

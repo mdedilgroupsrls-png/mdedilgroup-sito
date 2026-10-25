@@ -17,6 +17,7 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 - [ ] Materiale di esterni e case in legno per i prossimi articoli.
 - [ ] Search Console: schermate Rendimento e Pagine (dal 3/11/2026).
 - [x] 25/10/2026 – Foto di un terrazzo (vista San Pietro) arrivate: articolo /rifacimento-terrazzo-roma-vista-san-pietro e sezione nella pagina terrazzi.
+- [x] 25/10/2026 – Pagina terrazzi per "ristrutturazione terrazzo Roma" (dalle schermate di Google AI): title/H1, sezione "Le fasi" con prova di allagamento, domanda nuova, foto vera nella scheda degli Approfondimenti esterni – Eugenio
 - [x] 25/10/2026 – Terrazzo: via Gregorio VII (San Pietro), 700 m², 180 €/m² senza parlare di IVA; fasi con prova di allagamento (Eugenio). Gli articoli escono solo nel loro giorno: strumento `progetto/strumenti/uscite.py` (pagina rimanda alla Home, fuori da sitemap/llms, link nascosti).
 - [ ] Foto di facciate con la zona (25/10/2026).
 

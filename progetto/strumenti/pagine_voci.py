@@ -130,10 +130,10 @@ VOCI = [
     ),
     dict(
         file='impermeabilizzazione-terrazzo-roma', madre='ristrutturazioni-esterni', nome_madre='Ristrutturazioni esterni', briciola='TERRAZZI E BALCONI',
-        title='Impermeabilizzazione terrazzo a Roma: prezzi al m² | MD Edil Group',
-        desc='Impermeabilizzazione di terrazzi e balconi a Roma: senza demolire da %s al m², rifacimento completo da circa %s al m² + IVA. Esempio di 30 m² calcolato dal simulatore.' % (eur(senza_mq), eur(round(completo_mq))),
+        title='Ristrutturazione e impermeabilizzazione terrazzo a Roma: prezzi | MD Edil Group',
+        desc='Ristrutturazione e impermeabilizzazione di terrazzi e balconi a Roma: fasi del lavoro con prova di allagamento. Senza demolire da %s al m², rifacimento completo da circa %s al m² + IVA. Esempio di 30 m² calcolato dal simulatore.' % (eur(senza_mq), eur(round(completo_mq))),
         ey='RISTRUTTURAZIONI ESTERNI · TERRAZZI',
-        h1='Impermeabilizzazione di terrazzi e balconi a Roma: due metodi, prezzi ed esempi',
+        h1='Ristrutturazione e impermeabilizzazione di terrazzi e balconi a Roma: fasi, prezzi ed esempi',
         breve=('Per fermare le infiltrazioni di un terrazzo ci sono due strade: <b style="color: #E2C373">impermeabilizzare sopra il pavimento esistente, da %s al m²</b>, oppure il <b style="color: #E2C373">rifacimento completo, da circa %s al m²</b>, + IVA. '
                'Per un terrazzo di 30 m²: circa %s oppure circa %s + IVA, oneri della sicurezza compresi.') % (eur(senza_mq), eur(round(completo_mq)), eur(round(T_SENZA, -1)), eur(round(T_COMPL, -1))),
         intro='Macchie sul soffitto sotto il terrazzo, intonaco che si gonfia, piastrelle che si staccano: sono i segnali di un’impermeabilizzazione da rifare. A Roma rifacciamo terrazzi e balconi di appartamenti, attici e condomini, scegliendo con te il metodo giusto dopo il sopralluogo.',
@@ -147,6 +147,14 @@ VOCI = [
             ('due-metodi-impermeabilizzazione', 'Due metodi: senza demolire o rifacimento completo',
              P('<b>Senza demolire</b>: si applica un telo armato impermeabile sopra le piastrelle esistenti. È più veloce e costa meno, va bene se il pavimento è stabile e ben inclinato verso gli scarichi.') +
              P('<b>Rifacimento completo</b>: si toglie il pavimento con il sottofondo, si stende la guaina, il nuovo massetto, l’impermeabilizzazione cementizia elastica e il nuovo pavimento in gres. È la soluzione definitiva quando il pavimento è rovinato o l’acqua ristagna.')),
+            ('fasi-ristrutturazione-terrazzo', 'Le fasi della ristrutturazione di un terrazzo',
+             P('Come lavoriamo quando un terrazzo si rifà da zero, come in via Gregorio VII a San Pietro:') +
+             '<ol style="margin: 0 0 16px; padding-left: 22px">'
+             '<li style="margin-bottom: 8px"><b>Demolizione</b> del vecchio massetto insieme alle piastrelle, fino al solaio.</li>'
+             '<li style="margin-bottom: 8px"><b>Impermeabilizzazione</b> con due strati di guaina bituminosa, risvoltata sui muretti.</li>'
+             '<li style="margin-bottom: 8px"><b>Prova di allagamento</b>: prima del massetto si allaga il terrazzo e si controlla che non ci siano perdite. Si va avanti solo se la guaina tiene.</li>'
+             '<li style="margin-bottom: 8px"><b>Nuovo massetto</b> di circa 6 cm con le pendenze verso gli scarichi, così l’acqua non ristagna.</li>'
+             '<li style="margin-bottom: 8px"><b>Nuove piastrelle</b> per esterni con i <b>giunti di dilatazione</b>, che lasciano muovere il pavimento con il caldo e il freddo.</li></ol>'),
             ('impermeabilizzazione-senza-demolire', 'Impermeabilizzazione senza demolire: i prezzi',
              TAB([('Impermeabilizzazione armata sopra il pavimento esistente', eur(X['ten1']) + ' al m²'),
                   ('Pulizia e ripristino delle fughe', eur(X['ten3']) + ' al m²'),
@@ -173,6 +181,7 @@ VOCI = [
         faq=[('Quanto costa impermeabilizzare un terrazzo a Roma?', 'Con i nostri prezzi: senza demolire da %s al m², rifacimento completo da circa %s al m², + IVA. Per 30 m²: circa %s oppure circa %s + IVA.' % (eur(senza_mq), eur(round(completo_mq)), eur(round(T_SENZA, -1)), eur(round(T_COMPL, -1)))),
              ('Si può impermeabilizzare senza togliere le piastrelle?', 'Sì, con un telo armato impermeabile applicato sopra il pavimento esistente, se le piastrelle sono stabili e l’acqua scorre verso gli scarichi. Lo verifichiamo al sopralluogo.'),
              ('Quando conviene rifare tutto il terrazzo?', 'Quando il pavimento è rovinato, l’acqua ristagna o le infiltrazioni continuano: con il rifacimento completo si rifanno sottofondo, guaina, massetto e pavimento.'),
+             ('Cos’è la prova di allagamento e perché si fa?', 'Dopo la guaina e prima del nuovo massetto si allaga il terrazzo per controllare che l’acqua non passi. Se c’è un punto debole si ripara subito, invece di scoprirlo dopo, con il pavimento già posato.'),
              ('Lavorate anche su balconi e terrazzi condominiali?', 'Sì: rifacciamo terrazzi di appartamenti, attici e condomini, e i balconi insieme alla facciata con il restauro di frontalini e sottobalconi.')],
         sim=('/simulatore-online-costi-ristrutturazioni-esterni', 'CALCOLA IL COSTO DEL TUO TERRAZZO'),
     ),
