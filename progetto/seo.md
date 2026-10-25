@@ -21,7 +21,7 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 | `/impermeabilizzazione-terrazzo-roma` | ristrutturazione terrazzo Roma, impermeabilizzazione terrazzo Roma, rifacimento terrazzo Roma | costo impermeabilizzazione terrazzo al mq, impermeabilizzare senza demolire, infiltrazioni terrazzo |
 | `/ristrutturazioni-esterni#prezzi-facciate` | rifacimento facciata condominio Roma costo | costo cappotto termico al mq Roma, prezzo tinteggiatura facciata, ponteggio facciata costo |
 | `/ristrutturazioni-esterni` | rifacimento facciata Roma, ristrutturazione facciate condominio | cappotto termico Roma, impresa facciate Lazio |
-| `/infissi-serramenti` | sostituzione infissi Roma (title e H1 dal 25/10/2026), infissi PVC Roma | finestre PVC prezzi, Rehau Synego prezzo, tapparelle alluminio coibentato, zanzariere Roma |
+| `/infissi-serramenti` | sostituzione infissi Roma (title e H1 dal 25/10/2026), infissi PVC Roma, infissi certificati Roma, finestre classe 4 aria Rehau | finestre PVC prezzi, Rehau Synego prezzo, tapparelle alluminio coibentato, zanzariere Roma |
 | `/case-in-legno` | case in legno prefabbricate prezzi | casa in legno chiavi in mano, casa in legno Lazio/Italia, A-frame, Barn House |
 | `/interior-design` | interior designer Roma | progetto interior design, render 3D casa |
 | `/chi-siamo` | impresa edile Roma (rafforza la Home) | impresa ristrutturazioni affidabile Roma |
