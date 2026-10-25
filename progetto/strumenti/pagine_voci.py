@@ -253,3 +253,5 @@ if __name__ == '__main__':
         costruisci(v)
     print('facciata: parziale %.2f intonaco %.2f cappotto %.2f–%.2f; condominio 700 %.0f / %.0f; villa 250 %.0f / %.0f' % (parz, into, cap12, cap14, *F_COND, *F_VILLA))
     print('terrazzo: senza %.2f/m², completo %.2f/m²; 30 m² %.0f / %.0f' % (senza_mq, completo_mq, T_SENZA, T_COMPL))
+    # ogni titolo con il suo link
+    import subprocess; subprocess.run(['python3', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'link_titoli.py')], check=True, stdout=subprocess.DEVNULL)

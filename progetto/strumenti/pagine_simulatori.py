@@ -171,3 +171,5 @@ def costruisci(p):
 
 for p in PAGINE:
     costruisci(p)
+# ogni titolo con il suo link
+import subprocess; subprocess.run(['python3', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'link_titoli.py')], check=True, stdout=subprocess.DEVNULL)

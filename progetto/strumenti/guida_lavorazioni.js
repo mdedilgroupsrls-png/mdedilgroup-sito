@@ -131,3 +131,6 @@ function listinoInfissi() {
   fs.writeFileSync(file, html);
   console.log('Listino aggiornato: infissi-serramenti.html');
 }
+
+// ogni titolo con il suo link
+require('child_process').execFileSync('python3', [path.join(__dirname, 'link_titoli.py')], { stdio: 'ignore' });
