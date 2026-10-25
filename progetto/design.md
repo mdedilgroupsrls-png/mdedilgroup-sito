@@ -75,3 +75,5 @@ Sorgente: `progetto/sorgenti-design/home-cinema.html`. Stesso stile Nero & Oro, 
 ## Link dei titoli (Eugenio, 25/10/2026)
 
 Ogni `h2`, `h3` e titolo che si apre (`<details>`) di ogni pagina ha un id ricavato dal suo testo (es. `/chi-siamo#contratto-tempi-e-garanzia`, `/infissi-serramenti#si-possono-sostituire-gli-infissi-senza-opere-murarie`): si può linkare da Google, dai social e da WhatsApp. Lo aggiunge `progetto/strumenti/link_titoli.py`; non si toccano gli id già esistenti; niente id nei titoli dentro le schede-link `<a>` dei nastri (vengono copiate).
+
+Ogni voce con prezzo (titolo che si apre) mostra in fondo il link visibile **"🔗 Link a questa voce: [titolo]"** (grigio, 13px) e le sezioni con 3-14 voci con prezzo hanno sotto il titolo l'indice **"Vai a: …"** con i link alle voci in oro (Eugenio, 26/10/2026). Li scrive `link_titoli.py`.

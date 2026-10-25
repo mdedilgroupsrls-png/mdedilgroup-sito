@@ -3,6 +3,8 @@
 # (<details>) prendono l'id sul <details>, così js/sicurezza.js li apre da soli dal link.
 # Gli id già presenti non si toccano. Si saltano script, stili, le schede dei nastri (.tac-tr) e i titoli dentro
 # le schede-link <a>, che i nastri copiano (taccuino, catalogo).
+# Ogni voce con un prezzo ha anche un link visibile (🔗 Link a questa voce) e le sezioni con 3-14 voci un indice
+# "Vai a" con i link alle voci (Eugenio, 26/10/2026): Google li legge e può mostrarli come collegamenti alla sezione.
 # Lanciare dopo ogni modifica alle pagine (lo lanciano già guida_lavorazioni.js, pagine_simulatori.py e pagine_voci.py):
 #   python3 progetto/strumenti/link_titoli.py
 import glob, html, os, re, unicodedata
@@ -62,11 +64,57 @@ def sistema(t):
     return ''.join(out)
 
 
+def testo(h):
+    return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', h))).strip()
+
+
+def voci_con_prezzo(t):
+    """Titoli che si aprono (<details id>) con un prezzo e senza altri <details> dentro: (inizio, fine, id, titolo, classe)."""
+    salta = zone_saltate(t)
+    pila, voci = [], []
+    for m in re.finditer(r'<details\b([^>]*)>|</details>', t):
+        if any(a <= m.start() < b for a, b in salta): continue
+        if m.group(0).startswith('<details'):
+            if pila: pila[-1][3] = True
+            pila.append([m.start(), m.group(1), m.end(), False])
+        elif pila:
+            ini, attr, dopo, ha_figli = pila.pop()
+            corpo = t[dopo:m.start()]
+            i = re.search(r'\bid="([^"]+)"', attr)
+            if ha_figli or not i or '€' not in corpo or 'faq' in attr: continue
+            s = re.search(r'<summary[^>]*>(.*?)</summary>', corpo, re.S)
+            h = s and re.search(r'<h3[^>]*>(.*?)</h3>', s.group(1), re.S)
+            voci.append((ini, m.start(), i.group(1), testo((h or s).group(1)) if s else i.group(1)))
+    return voci
+
+
+def link_voci(t):
+    """Link visibile in ogni voce con prezzo e indice "Vai a" in cima alle sezioni con 3-14 voci (Eugenio, 26/10/2026)."""
+    c = re.search(r'<link rel="canonical" href="https://mdedilgroup\.it([^"]*)"', t)
+    if not c: return t
+    pagina = c.group(1) or '/'
+    voci = voci_con_prezzo(t)
+    for ini, fine, vid, tit in sorted(voci, reverse=True):
+        if 'class="voce-link"' in t[ini:fine]: continue
+        t = t[:fine] + ('<p class="voce-link" style="margin: 14px 0 0; font-size: 13px"><a href="%s#%s" style="color: #8A8478">🔗 Link a questa voce: %s</a></p>\n'
+                        % (pagina, vid, html.escape(tit, quote=False))) + t[fine:]
+    voci = voci_con_prezzo(t)
+    for sm in reversed(list(re.finditer(r'<section\b[^>]*>.*?</section>', t, re.S))):
+        dentro = [v for v in voci if sm.start() <= v[0] < sm.end()]
+        blocco = sm.group(0)
+        if not 3 <= len(dentro) <= 14 or 'class="indice-voci"' in blocco or '</h2>' not in blocco: continue
+        nav = ('<nav class="indice-voci" aria-label="Voci di questa sezione" style="margin: 0 0 28px; font-size: 14px; line-height: 1.9; color: #8A8478">Vai a: '
+               + ' · '.join('<a href="#%s" style="color: #C9A24A">%s</a>' % (v[2], html.escape(v[3], quote=False)) for v in dentro) + '</nav>\n')
+        p = sm.start() + blocco.index('</h2>') + len('</h2>')
+        t = t[:p] + '\n' + nav + t[p:]
+    return t
+
+
 if __name__ == '__main__':
     tot = 0
     for f in sorted(glob.glob('*.html')):
         t = open(f, encoding='utf-8').read()
-        n = sistema(t)
+        n = link_voci(sistema(t))
         if n != t:
             k = n.count(' id="') - t.count(' id="')
             tot += k
