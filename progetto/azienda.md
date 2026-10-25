@@ -32,6 +32,7 @@
 Decisione di Eugenio del 16/10/2026 (sera), per non confondere i clienti:
 - **Sede legale:** Via Po 22, 00198 Roma (anche indirizzo del profilo Google Business)
 - **Sede operativa:** Via Monti Lepini 9, 00015 Monterotondo (RM)
+- **Assicurazione:** responsabilità civile verso terzi, sempre attiva (Eugenio, 26/10/2026). In Chi siamo: "Assicurazione di responsabilità civile verso terzi, sempre attiva".
 
 Scritte così nel fondo di tutte le pagine, nei contatti della Home e nell'informativa privacy.
 - **Preventivi PDF** (Eugenio, 23/10/2026): nell'intestazione **solo l'indirizzo "Via Monti Lepini 9, 00015 Monterotondo (RM)"**, senza scritte "sede legale" o "sede operativa" e mai Via Po (sia il PDF creato dai simulatori, `js/preventivo-pdf.js`, sia i PDF di esempio in `preventivi/`). Nei dati strutturati (JSON-LD) restano tutti e due gli indirizzi, prima Via Po.
