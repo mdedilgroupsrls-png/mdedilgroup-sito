@@ -16,6 +16,10 @@ const PAGINE = [
   { js: 'js/esterni.js', html: 'ristrutturazioni-esterni.html', titolo: 'Guida alle lavorazioni su facciate, cappotti e terrazzi',
     intro: 'Le lavorazioni del simulatore per facciate, cappotto termico, terrazzi e balconi, spiegate una per una: cosa comprendono, quando servono, come si misurano e quanto costano. Lavoriamo a Roma e nel Lazio per condomini e case private.',
     prezzi: true, iva: ' + IVA',
+    // paragrafi della guida con una pagina propria: in fondo "Scopri di più →" (Eugenio, 25/10/2026)
+    pagine: { 'risanamento-e-ripristino-delle-facciate': ['/rifacimento-facciata-roma', 'Rifacimento della facciata a Roma: prezzi ed esempi'],
+      'cappotto-termico-rasatura-e-finitura': ['/rifacimento-facciata-roma#cappotto-termico-facciata-roma', 'Cappotto termico e facciate a Roma: prezzi ed esempi'],
+      'terrazzi-e-balconi-impermeabilizzazione-e-pavimenti': ['/impermeabilizzazione-terrazzo-roma', 'Impermeabilizzazione di terrazzi e balconi a Roma: prezzi ed esempi'] },
     notaPrezzi: 'Prezzi del nostro listino per facciate e terrazzi, IVA esclusa. A questi importi si aggiungono gli oneri della sicurezza, calcolati all’8% dei lavori. Il prezzo definitivo si conferma dopo il sopralluogo gratuito e la verifica tecnica.' }
 ];
 
@@ -73,7 +77,10 @@ function guida(cfg, p) {
       if (pr) h += '\n<span class="guida-prezzo">Prezzo: ' + esc(pr) + esc(p.iva) + '</span>';
       h += '</dd>\n';
     });
-    h += '</dl>\n</details>\n';
+    h += '</dl>\n';
+    const pg = p.pagine && p.pagine[slug(s.t)];
+    if (pg) h += '<p class="guida-link"><a href="' + pg[0] + '">' + esc(pg[1]) + ' →</a></p>\n';
+    h += '</details>\n';
   });
   return h + '<p class="guida-fine">Vuoi sapere quanto costa il tuo intervento? <a href="#simulatore">Usa il simulatore</a> oppure <a href="/#contatti">richiedi il sopralluogo</a>: sopralluogo e preventivo sono gratuiti.</p>\n</div>\n</section>';
 }

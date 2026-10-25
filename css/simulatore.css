@@ -67,6 +67,7 @@
 .guida dt{font-weight:600;color:#E8E2D6;font-size:15px}
 .guida dd{margin:4px 0 0;font-size:14.5px;line-height:1.6;color:#BDB6A8}
 .guida-nota{margin:-20px 0 36px;max-width:720px;font-size:13.5px;line-height:1.6;color:#8A8478}
+.guida-link{margin:-12px 0 24px;font-size:14px}
 .guida-prezzo{display:block;margin-top:6px;color:#C9A24A;font-size:13.5px;font-weight:600;letter-spacing:.02em}
 .guida dd ul{margin:8px 0 0;padding-left:18px}.guida dd li{margin:4px 0}.guida dd b{color:#D8D2C6;font-weight:600}
 .guida-fine{margin:32px 0 0;font-size:15px}.guida-fine a{text-decoration:underline}
