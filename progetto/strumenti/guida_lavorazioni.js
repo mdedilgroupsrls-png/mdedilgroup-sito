@@ -101,6 +101,8 @@ PAGINE.forEach(p => {
 
 // Listino della pagina infissi e serramenti: solo i prezzi "da" di infissi, tapparelle e zanzariere, presi da js/infissi.js,
 // senza scrivere che sono al m² (Eugenio, 23/10/2026). + IVA, imballaggio e trasporto inclusi.
+// prezzo "da" degli infissi scritto nel listino e nelle pagine: 149 € + IVA (Eugenio, 25/10/2026)
+const DA_INFISSI = 149;
 function listinoInfissi() {
   const src = fs.readFileSync(path.join(radice, 'js/infissi.js'), 'utf8');
   const P = new Function('return ' + src.match(/var P = (\{[\s\S]*?\n  \});/)[1])();
@@ -110,7 +112,7 @@ function listinoInfissi() {
     '<p class="guida-ey">LISTINO PREZZI</p>\n<h2 id="listino-t">Prezzi di infissi in PVC, tapparelle e zanzariere a Roma</h2>\n' +
     '<p class="guida-intro">Quanto costano infissi Rehau Synego con doppio vetro, tapparelle e zanzariere: i prezzi di partenza del nostro listino. Montiamo a Roma e in tutto il Lazio.</p>\n' +
     '<p class="guida-nota">Prezzi IVA esclusa, imballaggio e trasporto inclusi. Il prezzo esatto dipende dalle misure, dal tipo di apertura e dal colore: calcolalo con il simulatore qui sopra. Il prezzo definitivo si conferma dopo il sopralluogo gratuito.</p>\n' +
-    v('prezzo-infissi-pvc', 'Infissi in PVC Rehau Synego, doppio vetro', 'Finestre e porte-finestre a battente e scorrevoli, in bianco, nei colori Rehau o in un colore speciale.', P.piccola) +
+    v('prezzo-infissi-pvc', 'Infissi in PVC Rehau Synego, doppio vetro', 'Finestre e porte-finestre a battente e scorrevoli, in bianco, nei colori Rehau o in un colore speciale.', DA_INFISSI) +
     v('prezzo-tapparelle', 'Tapparelle in alluminio coibentato', 'Tapparelle nuove, stesso prezzo per tutti i colori.', P.tap) +
     v('prezzo-zanzariere', 'Zanzariere in alluminio', 'Avvolgenti per le finestre e plissettate per le porte-finestre, stesso prezzo per tutti i modelli e i colori.', P.zan) +
     '<p class="guida-fine">Vuoi il prezzo dei tuoi infissi? <a href="#simulatore">Usa il simulatore</a> con le tue misure oppure <a href="/#contatti">richiedi il sopralluogo</a>: sopralluogo e preventivo sono gratuiti.</p>\n</div>\n</section>';

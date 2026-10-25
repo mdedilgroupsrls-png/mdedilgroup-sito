@@ -6,6 +6,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 24/10/2026 – Pagine dei simulatori rifatte (titolo, una riga, simulatore, poi titoli che si aprono con FAQ); nuova pagina simulatore case in legno; pulsanti Home → pagine dei simulatori; esterni: "Quanto costa rifare la facciata a Roma" (parziale 48,50, intonaco 72, cappotto 100–110 €/m², ponteggio, esempio 700 m²); link propri ai titoli con prezzi dell'articolo bagno – Eugenio
 - [x] 23/10/2026 – "Dove lavoriamo a Roma": tutte le zone di Roma per area (Nord, Centro, Est, Sud e Ovest, Litorale), link ai lavori realizzati – Eugenio
 - [x] 23/10/2026 – Interni: "Cosa ristrutturiamo" a titoli che si aprono, ognuno con il suo link; "Dove lavoriamo a Roma" (zone dei cantieri veri); link diretti a ogni paragrafo di guide e listino infissi; D.M. 37/08 negli impianti; guida costi con ristrutturazione parziale e sezioni a scomparsa – Eugenio
+- [ ] Infissi: il simulatore parte da 200 € (finestra fino a 1 m²), sul sito ora "da 149 € + IVA": chiedere a Eugenio se cambiare anche il simulatore e per quale infisso vale 149 € (25/10/2026).
 - [ ] **Foto di impermeabilizzazione senza demolire** (Eugenio, 25/10/2026: le manderà più avanti). Quando arrivano: articolo "I nostri lavori" esterni e sezione con foto nella pagina /impermeabilizzazione-terrazzo-roma (metodo senza demolire). Fino ad allora quella parte resta com'è.
 - [ ] ISO 9001: spiegare a Eugenio cosa serve (chiesto il 23/10/2026; spiegazione breve data in chat, approfondire quando lo chiede)
 - [x] 23/10/2026 – Ristrutturazione completa casa: prezzo da 600 € a 1.000 € al m² (prima 650) nella scheda di /ristrutturazioni-interni, nella guida costi, nella Home e in llms.txt – Eugenio
@@ -18,6 +19,7 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 - [ ] Materiale di esterni e case in legno per i prossimi articoli.
 - [ ] Search Console: schermate Rendimento e Pagine (dal 3/11/2026).
 - [x] 25/10/2026 – Foto di un terrazzo (vista San Pietro) arrivate: articolo /rifacimento-terrazzo-roma-vista-san-pietro e sezione nella pagina terrazzi.
+- [x] 25/10/2026 – Infissi per "sostituzione infissi Roma" (schermate Google AI): title/H1, da 149 € + IVA, 3 domande nuove (materiali, detrazioni 2026 senza sconto in fattura, preventivo); nota sconto in fattura nell'articolo detrazioni – Eugenio
 - [x] 25/10/2026 – Pagina terrazzi per "ristrutturazione terrazzo Roma" (dalle schermate di Google AI): title/H1, sezione "Le fasi" con prova di allagamento, domanda nuova, foto vera nella scheda degli Approfondimenti esterni – Eugenio
 - [x] 25/10/2026 – Terrazzo: via Gregorio VII (San Pietro), 700 m², 180 €/m² senza parlare di IVA; fasi con prova di allagamento (Eugenio). Gli articoli escono solo nel loro giorno: strumento `progetto/strumenti/uscite.py` (pagina rimanda alla Home, fuori da sitemap/llms, link nascosti).
 - [ ] Foto di facciate con la zona (25/10/2026).
