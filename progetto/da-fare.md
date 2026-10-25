@@ -10,7 +10,9 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 26/10/2026 – Home, scheda infissi: tolto "alluminio" (oggi solo PVC Rehau; alluminio in futuro, vedi azienda.md).
 - [x] 26/10/2026 – Bagno: "da 5.500 €" nelle pagine (/ristrutturazione-bagno-roma, articolo costi bagno), simulatore a 6.500 € invariato; Chi siamo: "Assicurazione di responsabilità civile verso terzi, sempre attiva" – Eugenio
 - [x] 25/10/2026 – Sitemap inviata in Search Console da Eugenio.
-- [ ] Domande dall'audit per Eugenio: controllare in Search Console le 2 pagine non indicizzate; segnare `generate_lead` come evento chiave in Analytics.
+- [x] 25/10/2026 – Richiesta indicizzazione (Controllo URL) fatta da Eugenio per: ristrutturazioni-esterni, quanto-costa-ristrutturare-casa-roma, simulatore interni, ristrutturazione-bagno-roma, rifacimento-facciata-roma, impermeabilizzazione-terrazzo-roma, simulatore esterni, quanto-costa-ristrutturare-bagno-roma, simulatore infissi, rifacimento-terrazzo-roma-vista-san-pietro.
+- [ ] Seconda serie da richiedere (26/10): simulatore case in legno, bonus-casa-50, preventivo-infissi-pvc-rehau-synego, infissi-scorrevoli-vetrata-roma-nord, infissi-scorrevoli-angolo-roma-eur, infissi-pvc-finto-legno-corso-trieste, infissi-villa-bifamiliare-trigoria, infissi-palazzina-superbonus-l-aquila, detrazioni-ristrutturazione-infissi-2026, finiture-di-pregio-roma.
+- [ ] Domande dall'audit per Eugenio: segnare `generate_lead` come evento chiave in Analytics.
 - [ ] Possibili lavori futuri dall'audit: pagine dei modelli principali di case in legno (servono planimetrie e dotazioni verificate); caratteri self-hosted per velocizzare la prima visualizzazione senza spostamenti.
 - [x] 25/10/2026 – Tutti i titoli del sito con il loro link: 224 id nuovi su 29 pagine, strumento `progetto/strumenti/link_titoli.py` collegato ai generatori – Eugenio
 - [x] 25/10/2026 – Infissi: "da 149 €" senza IVA né misure; simulatore invariato (200 €); coprifili e imbotti compresi; nuova domanda "senza opere murarie" (solo: senza rompere muri o piastrelle) – Eugenio
