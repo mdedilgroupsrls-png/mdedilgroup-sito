@@ -32,7 +32,7 @@
     var alt = document.createElement('p'); alt.className = 'mdi-alt';
     alt.innerHTML = 'Non usi WhatsApp? Chiamaci al <a href="tel:+393282145266">328 214 5266</a> oppure scrivici dal <a href="/#contatti">modulo contatti</a>.';
     var pr = document.createElement('p'); pr.className = 'mdi-pr';
-    pr.innerHTML = 'I tuoi dati arrivano solo a noi, nel messaggio WhatsApp che invii tu, e servono per ricontattarti (<a href="/privacy.html">informativa privacy</a>).';
+    pr.innerHTML = 'I tuoi dati arrivano solo a noi, nel messaggio WhatsApp che invii tu, e servono per ricontattarti (<a href="/privacy">informativa privacy</a>).';
     // il pulsante secondario (vecchio "richiedi") viene sostituito dalle alternative
     var vecchio = o.togli ? document.querySelector(o.togli) : null;
     var dopo = vecchio || btn;

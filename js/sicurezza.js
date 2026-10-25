@@ -13,25 +13,6 @@
     });
   }
 
-  // USCITE: scritto da progetto/strumenti/uscite.py (articoli programmati e giorno di uscita)
-  var USCITE = {"/bonus-casa-50-pagare-entro-31-dicembre-2026": "2026-10-27", "/infissi-scorrevoli-vetrata-roma-nord": "2026-11-03", "/quanto-costa-ristrutturare-casa-roma": "2026-11-10", "/infissi-scorrevoli-angolo-roma-eur": "2026-11-24", "/rifacimento-terrazzo-roma-vista-san-pietro": "2026-12-01", "/infissi-pvc-finto-legno-corso-trieste": "2026-12-15", "/preventivo-infissi-pvc-rehau-synego": "2027-01-05", "/infissi-palazzina-superbonus-l-aquila": "2027-01-19", "/infissi-villa-bifamiliare-trigoria": "2027-02-02"};
-  // prima del giorno di uscita (ora di Roma) i link all'articolo non si vedono: le schede si tolgono,
-  // i link dentro il testo restano come testo semplice; i nastri .tac-tr li gestisce js/taccuino.js
-  function nascondiUscite() {
-    var oggi;
-    try { oggi = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Rome' }).format(new Date()); }
-    catch (e) { oggi = new Date().toISOString().slice(0, 10); }
-    [].forEach.call(document.querySelectorAll('a[href^="/"]'), function (a) {
-      var p = a.getAttribute('href').split('#')[0].replace(/\.html$/, '');
-      if (!USCITE[p] || USCITE[p] <= oggi || a.closest('.tac-tr')) return;
-      var li = a.closest('li'), su = a.parentElement;
-      if (li && li.querySelectorAll('a').length === 1) li.remove();
-      else if (a.querySelector('img')) a.remove();
-      else if (su.tagName === 'P' && su.textContent.trim() === a.textContent.trim()) su.remove();
-      else a.replaceWith(document.createTextNode(a.textContent));
-    });
-  }
-
   // avviso cookie: cookie tecnici sempre; Google Analytics solo dopo ACCETTO. La scelta resta salvata in questo browser
   // (chiave nuova dal 20/10/2026: l'avviso è cambiato, quindi si richiede la scelta a tutti)
   var KEY = 'mdCookie2';
@@ -79,7 +60,7 @@
       '.ck .si{background:#C9A24A;color:#0E0D0B}.ck .no{background:none;color:#C9A24A}.ck button:focus-visible{outline:2px solid #E2C373;outline-offset:2px}';
     var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
     var d = document.createElement('div'); d.className = 'ck'; d.setAttribute('role', 'region'); d.setAttribute('aria-label', 'Avviso cookie');
-    d.innerHTML = '<div class="ck-in"><p>Usiamo cookie tecnici, necessari al sito. Solo se premi ACCETTO usiamo anche Google Analytics, per statistiche sulle visite: niente pubblicità né profilazione. La mappa di Google si carica solo se la apri. <a href="/privacy.html">Informativa privacy e cookie</a></p>' +
+    d.innerHTML = '<div class="ck-in"><p>Usiamo cookie tecnici, necessari al sito. Solo se premi ACCETTO usiamo anche Google Analytics, per statistiche sulle visite: niente pubblicità né profilazione. La mappa di Google si carica solo se la apri. <a href="/privacy">Informativa privacy e cookie</a></p>' +
       '<div class="ck-b"><button type="button" class="no">RIFIUTO</button><button type="button" class="si">ACCETTO</button></div></div>';
     document.body.appendChild(d);
     d.querySelector('.si').onclick = function () { salva('si'); d.remove(); analytics(); };
@@ -168,10 +149,12 @@
   }
 
   function avvia() {
-    nascondiUscite();
     apriDaLink(); window.addEventListener('hashchange', apriDaLink);
     if (salvata() === 'si') analytics();
-    scrivi(); banner(); contatori();
+    scrivi(); contatori();
+    // l'avviso cookie compare quando i caratteri sono caricati: così non si sposta mentre cambia il carattere
+    var fatto = false, mostra = function () { if (!fatto) { fatto = true; banner(); } };
+    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(mostra); setTimeout(mostra, 1500); } else mostra();
     var b = document.getElementById('ckCambia'); if (b) b.onclick = cambiaScelta;
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', avvia); else avvia();
