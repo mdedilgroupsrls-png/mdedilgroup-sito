@@ -5,9 +5,10 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 ## Crediti Netlify (registro, aggiornare a ogni foto di Eugenio)
 - **Decisione di Eugenio (26/10/2026): si resta sul piano Personal (9 $ al mese, 1.000 crediti), non si torna al Free; i crediti devono bastare ogni mese e il sito deve funzionare sempre.** Promemoria "torna al Free" del 9 e 12/11 disattivati.
 - Piano Personal: 1.000 crediti al mese, periodo dal 15 al 14. Pubblicazione = 15 crediti; banda 20 crediti/GB; 2 crediti ogni 10.000 richieste.
-- 26/10/2026: **485 crediti disponibili** fino al 14/11. Piano fino al 14/11: pubblicazioni solo lunedì 2/11 e 9/11 (30 crediti) se ci sono modifiche; il resto resta per le visite (~10 crediti al giorno, stima).
+- 26/10/2026: **485 crediti disponibili** fino al 14/11. Piano fino al 14/11: una sola pubblicazione, lunedì 9/11 (15 crediti) se ci sono modifiche; il resto resta per le visite (~10 crediti al giorno, stima).
+- **Pubblicazioni ogni due settimane** (Eugenio, 26/10/2026): ultima pubblicazione **26/10/2026**; prossime lunedì 9/11, 23/11, 7/12, 21/12… Aggiornare qui la data a ogni pubblicazione.
 - Regola: mai pubblicare se i crediti rimasti sono sotto 200; dato più vecchio di 7 giorni → chiedere la foto di Usage & billing prima di pubblicare.
-- Da fare: alleggerire le foto della Home (pesa ~3,9 MB scorrendo tutta la pagina da telefono) per consumare meno banda – in attesa del sì di Eugenio.
+- [x] 26/10/2026 – Foto della Home alleggerite (sì di Eugenio, "l'aspetto non si cambia"): 19 modelli di casa con versione -560 per i telefoni (sizes giusto: 43vw), 16 foto ricompresse con somiglianza SSIM ≥ 0,985 (a vista uguali). Home scorsa tutta da telefono: 5,3 → 4,45 MB. Va online con la prossima pubblicazione (9/11).
 
 ## Da ricordare a Eugenio quando chiede "cosa abbiamo da fare"
 - [x] 24/10/2026 – Pagine dei simulatori rifatte (titolo, una riga, simulatore, poi titoli che si aprono con FAQ); nuova pagina simulatore case in legno; pulsanti Home → pagine dei simulatori; esterni: "Quanto costa rifare la facciata a Roma" (parziale 48,50, intonaco 72, cappotto 100–110 €/m², ponteggio, esempio 700 m²); link propri ai titoli con prezzi dell'articolo bagno – Eugenio
