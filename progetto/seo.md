@@ -155,7 +155,7 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 
 **Ogni articolo ha il suo reel** (voce Carina, sottotitoli, logo), montato quando si prepara l'articolo e programmato su Metricool per il suo martedì appena il video è online (vedi CLAUDE.md). **Tranne infissi e serramenti: mai sui social** (Eugenio, 21/10/2026): niente reel per gli articoli di infissi; in quelle settimane esce un contenuto della scorta di un altro settore (es. reel posa onice, carosello bagno Piazza Fiume). Reel degli articoli già pronti: bagno e detrazioni 2026 (articoli del 20/10); da montare: tutti gli articoli nuovi non di infissi.
 
-**Scorta articoli: 8 pronti su 26** (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
+**Scorta articoli: 9 pronti su 26** (26/10/2026) (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
 
 ## Google AI e ricerche da controllare (Eugenio, 23/10/2026)
 **Regola (Eugenio, 24/10/2026):** le modifiche SEO fatte il 23/10/2026 (simulatori con pagina propria, guida costi, prezzi nelle guide e in "Cosa ristrutturiamo", titoli che si aprono con link, D.M. 37/08, Dove lavoriamo a Roma) **restano come sono**: non si cambiano, si possono solo migliorare aggiungendo quando porta un vantaggio misurabile o chiaro.

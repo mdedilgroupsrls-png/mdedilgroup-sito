@@ -1,6 +1,6 @@
 # Reel – Articolo "Bonus casa al 50%: perché pagare i lavori entro il 31 dicembre 2026"
 
-Stato: **da programmare – martedì 27/10/2026** (10:30–12:00; se il giorno è occupato, primo giorno libero della settimana)
+Stato: **programmato – mercoledì 28/10/2026 alle 11:12** (Metricool id 406315311; il 27/10 c'era già un reel programmato prima del 20/10)
 Video: https://mdedilgroup.it/video/articolo-bonus-casa-31-dicembre-reel.mp4 (26 s, resta sul sito: è dentro l'articolo)
 Reti: Instagram TRIAL_REEL, Facebook reel, TikTok, YouTube short, Threads, LinkedIn. Mai Google Business.
 Posizione: 📍 Roma, Lazio, Italia
