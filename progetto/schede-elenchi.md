@@ -50,7 +50,7 @@ Sul sito mdedilgroup.it trovi i lavori realizzati a Roma (Monte Sacro, EUR, Piaz
 - **Instapro:** sito per ricevere richieste di lavoro; la registrazione è gratuita, ma i contatti dei clienti di solito sono a pagamento: valuta prima i costi.
 
 ## Stato
-- [ ] PagineGialle – c'è solo l'account utente (26/10/2026), manca la scheda dell'impresa: "Sei un'azienda?" → "Registra Azienda Gratis"
+- [x] PagineGialle – scheda impresa creata nell'area clienti Italiaonline (26/10/2026, contratto B34724531); al 26/10 non ancora visibile nelle ricerche: tra qualche giorno cercare il link pubblico e metterlo in sameAs. Nella scheda gratuita i link social non si possono aggiungere (massimo 0).
 - [x] Houzz – già registrato (Eugenio, 26/10/2026): https://www.houzz.it/hznb/professionisti/imprese-edili/md-edil-group-pfvwit-pf~1867816412 (aggiunto in sameAs della Home)
 - [x] Instapro – registrato da Eugenio il 26/10/2026: https://www.instapro.it/ditta/md-edil-group-s-r-l-s (aggiunto anche in sameAs dei dati strutturati della Home)
 - [ ] **Ristrutturazioni.com** (citata dalla risposta AI di Google per "ristrutturazioni roma", 23/10/2026): profilo impresa con gli stessi dati e testi; valutare prima i costi
