@@ -45,8 +45,8 @@ Sul sito mdedilgroup.it trovi i lavori realizzati a Roma (Monte Sacro, EUR, Piaz
 - https://mdedilgroup.it/img/facciata-01.webp – facciata
 
 ## Dove registrarsi
-- **PagineGialle:** cerca "PagineGialle registra la tua attività" (scheda base gratuita; rifiuta le offerte a pagamento se non ti interessano).
-- **Houzz Italia:** houzz.it → "Sei un professionista?" → profilo gratuito; carica i progetti come "Progetti" con 5–10 foto ciascuno.
+- **PagineGialle:** https://www.paginegialle.it/inserisci_attivita ("Registra Azienda Gratis", verificato il 26/10/2026; scheda base gratuita; rifiuta le offerte a pagamento).
+- **Houzz Italia:** https://pro.houzz.it/pro ("Unisciti a milioni di professionisti" su houzz.it). Al 26/10/2026 Houzz spinge soprattutto Houzz Pro, software a pagamento con prova di 30 giorni: fare solo il profilo gratuito; se chiede carta o abbonamento, fermarsi. Caricare i progetti con 5–10 foto ciascuno.
 - **Instapro:** sito per ricevere richieste di lavoro; la registrazione è gratuita, ma i contatti dei clienti di solito sono a pagamento: valuta prima i costi.
 
 ## Stato
