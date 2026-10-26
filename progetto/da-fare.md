@@ -2,6 +2,12 @@
 
 Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 
+## Crediti Netlify (registro, aggiornare a ogni foto di Eugenio)
+- Piano Personal: 1.000 crediti al mese, periodo dal 15 al 14. Pubblicazione = 15 crediti; banda 20 crediti/GB; 2 crediti ogni 10.000 richieste.
+- 26/10/2026: **485 crediti disponibili** fino al 14/11. Piano fino al 14/11: pubblicazioni solo lunedì 2/11 e 9/11 (30 crediti) se ci sono modifiche; il resto resta per le visite (~10 crediti al giorno, stima).
+- Regola: mai pubblicare se i crediti rimasti sono sotto 200; dato più vecchio di 7 giorni → chiedere la foto di Usage & billing prima di pubblicare.
+- Da fare: alleggerire le foto della Home (pesa ~3,9 MB scorrendo tutta la pagina da telefono) per consumare meno banda – in attesa del sì di Eugenio.
+
 ## Da ricordare a Eugenio quando chiede "cosa abbiamo da fare"
 - [x] 24/10/2026 – Pagine dei simulatori rifatte (titolo, una riga, simulatore, poi titoli che si aprono con FAQ); nuova pagina simulatore case in legno; pulsanti Home → pagine dei simulatori; esterni: "Quanto costa rifare la facciata a Roma" (parziale 48,50, intonaco 72, cappotto 100–110 €/m², ponteggio, esempio 700 m²); link propri ai titoli con prezzi dell'articolo bagno – Eugenio
 - [x] 23/10/2026 – "Dove lavoriamo a Roma": tutte le zone di Roma per area (Nord, Centro, Est, Sud e Ovest, Litorale), link ai lavori realizzati – Eugenio
