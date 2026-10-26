@@ -24,7 +24,7 @@
 - **YouTube:** https://www.youtube.com/@md_edil_group
 - **LinkedIn:** https://www.linkedin.com/in/md-edil-group-345b263b6
 - **Threads:** https://www.threads.com/@md_edil_group (aggiunto il 16/10/2026)
-- Tutti i link social sono nelle icone in fondo a ogni pagina e nei dati strutturati della Home (`sameAs`), aggiornati il 15/10/2026.
+- Tutti i link social sono nelle icone in fondo a ogni pagina e nei dati strutturati della Home (`sameAs`), aggiornati il 15/10/2026. Profilo Instapro (26/10/2026): https://www.instapro.it/ditta/md-edil-group-s-r-l-s (solo nei dati strutturati, non tra le icone).
 
 - **Richieste dal modulo `preventivo`:** salvate su Netlify (progetto mdedilgroup → Forms) e inviate per email a mdedilgroupsrls@gmail.com, oggetto "Nuova richiesta di preventivo dal sito – MD Edil Group" (impostato da Eugenio il 16/10/2026 in Forms → Submission notifications).
 

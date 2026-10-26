@@ -52,6 +52,6 @@ Sul sito mdedilgroup.it trovi i lavori realizzati a Roma (Monte Sacro, EUR, Piaz
 ## Stato
 - [ ] PagineGialle
 - [ ] Houzz
-- [x] Instapro – registrato da Eugenio il 26/10/2026 (manca il link pubblico del profilo, da chiedere)
+- [x] Instapro – registrato da Eugenio il 26/10/2026: https://www.instapro.it/ditta/md-edil-group-s-r-l-s (aggiunto anche in sameAs dei dati strutturati della Home)
 - [ ] **Ristrutturazioni.com** (citata dalla risposta AI di Google per "ristrutturazioni roma", 23/10/2026): profilo impresa con gli stessi dati e testi; valutare prima i costi
 - [ ] Altri elenchi utili per Roma: Virgilio/Tuttocittà, Yelp, Bing Places (stesso testo)
