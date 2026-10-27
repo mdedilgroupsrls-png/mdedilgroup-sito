@@ -80,3 +80,5 @@ Ogni voce con prezzo (titolo che si apre) mostra in fondo il link visibile **"ðŸ
 
 ## Foto leggere (26/10/2026)
 - Le foto dei modelli di casa in Home hanno tre misure (-480, -560, piena) con `sizes="(max-width: 700px) 43vw, 625px"`: il telefono scarica solo quella che serve. Ogni nuova foto: WebP, larghezza massima circa 2 volte quella a schermo, ricompressione solo se a vista resta uguale (SSIM â‰¥ 0,985).
+
+- **Niente pulsante "Lascia una recensione" sul sito** (Eugenio, 27/10/2026): il link per le recensioni Google lo manda Eugenio ai clienti dopo ogni lavoro.
