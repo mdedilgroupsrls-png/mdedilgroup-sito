@@ -651,11 +651,11 @@ draw();
 <script src="/js/schede.js"></script>
 <script src="/js/preventivo-pdf.js"></script>
 <script src="/js/invio-wa.js"></script>
-<script>MDInvio({ btn: 'sWa', togli: '#riepilogo .cta.alt', titolo: 'Sopralluogo e preventivo gratuiti', sotto: 'Inviaci la simulazione su WhatsApp: ti richiamiamo noi per verificare il terreno e prepararti il preventivo definitivo, senza impegno.', indirizzo: 'Luogo del terreno', esempio: 'Comune e indirizzo, se lo hai già', pulsante: 'INVIA LA SIMULAZIONE E RICHIEDI IL PREVENTIVO', dopo: 'Ti richiamiamo noi per il preventivo.', richiesta: 'Vorrei ricevere un preventivo: potete ricontattarmi?', pronta: function () { return /[1-9]/.test(document.getElementById('sTot').textContent) ? '' : 'il modello della casa'; },
+<script>MDInvio({ btn: 'sWa', togli: '#riepilogo .cta.alt', titolo: 'Preventivo gratuito', sotto: 'Inviaci la simulazione su WhatsApp: ti richiamiamo noi per verificare il terreno e prepararti il preventivo definitivo, senza impegno.', indirizzo: 'Luogo del terreno', esempio: 'Comune e indirizzo, se lo hai già', pulsante: 'INVIA LA SIMULAZIONE E RICHIEDI IL PREVENTIVO', dopo: 'Ti richiamiamo noi per il preventivo.', richiesta: 'Vorrei ricevere un preventivo: potete ricontattarmi?', pronta: function () { return /[1-9]/.test(document.getElementById('sTot').textContent) ? '' : 'il modello della casa'; },
   breve: function () { var d = window.MDCasaPdf; return 'Buongiorno, ho fatto la simulazione per ' + (d.n > 1 ? d.n + ' case in legno ' : 'la casa in legno ') + d.modello + ' sul vostro sito.\nTotale indicativo: ' + document.getElementById('sTot').textContent + ' (IVA inclusa). Vi invio qui il preventivo in PDF.'; },
   pdf: function () { var d = window.MDCasaPdf; return { tipo: 'Casa in legno prefabbricata', iva: 'IVA inclusa', info: d.info, sezioni: [{ t: 'Casa in legno e lavorazioni scelte', righe: d.righe }], totale: d.totale, note: [
     'Preventivo indicativo calcolato con il listino MD Edil Group per le case in legno, in base al modello e alle lavorazioni scelte dal cliente. Prezzi IVA inclusa.',
-    'Il prezzo definitivo viene confermato dopo il sopralluogo, la verifica del terreno e il progetto, e con la firma del contratto. Sopralluogo e preventivo sono gratuiti.',
+    'Il prezzo definitivo viene confermato dopo il sopralluogo, la verifica del terreno e il progetto, e con la firma del contratto. Il preventivo è gratuito.',
     'Le voci indicate "da concordare" si definiscono insieme, in base al luogo del cantiere.'] }; } });</script>
 <script>if(location.hash==="#simulatore"){addEventListener("load",function(){var e=document.getElementById("simulatore");if(e)e.scrollIntoView()})}</script>
 <script src="/js/sicurezza.js" defer></script>
