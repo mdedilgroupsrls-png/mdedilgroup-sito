@@ -53,3 +53,5 @@
 - `llms.txt` (dal 18/10/2026): descrizione in testo semplice dell'azienda per gli assistenti AI; va aggiornato quando cambiano servizi, zone, prezzi delle case in legno o contatti.
 
 - **Avviso cookie e Google Analytics (20/10/2026):** l'avviso dice "Usiamo cookie tecnici… Solo se premi ACCETTO usiamo anche Google Analytics, per statistiche sulle visite: niente pubblicità né profilazione". `/privacy.html` ha il paragrafo su Google Analytics (cookie `_ga`, `_ga_QQ9YF9PYJ2`, fino a 2 anni, consenso revocabile) e il pulsante "Cambia la scelta sui cookie".
+
+- 28/10/2026 – `/case-in-legno`: ogni casa ha il suo link `#casa-<modello>` (19 modelli) che apre la scheda con foto e planimetria; nella scheda link visibile e pulsante "Copia il link".

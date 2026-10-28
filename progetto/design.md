@@ -82,3 +82,5 @@ Ogni voce con prezzo (titolo che si apre) mostra in fondo il link visibile **"�
 - Le foto dei modelli di casa in Home hanno tre misure (-480, -560, piena) con `sizes="(max-width: 700px) 43vw, 625px"`: il telefono scarica solo quella che serve. Ogni nuova foto: WebP, larghezza massima circa 2 volte quella a schermo, ricompressione solo se a vista resta uguale (SSIM ≥ 0,985).
 
 - **Niente pulsante "Lascia una recensione" sul sito** (Eugenio, 27/10/2026): il link per le recensioni Google lo manda Eugenio ai clienti dopo ogni lavoro.
+
+- **Link di ogni casa in legno** (Eugenio, 28/10/2026): ogni modello ha il suo indirizzo `/case-in-legno#casa-<modello>` (es. `#casa-olivia`): apre la pagina, sceglie il modello e apre la sua scheda grande. Nella scheda (anche dalla Home) ci sono "🔗 Link a questa casa" e "Copia il link". Codice: `js/schede.js` e lo script dei modelli in `case-in-legno.html` (poi `pagine_simulatori.py`).
