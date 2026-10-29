@@ -220,3 +220,5 @@ Ogni voce che si apre con la descrizione (interni: "Cosa ristrutturiamo" e Guida
 
 - [x] 17/10/2026 – Icona del sito su fondo nero (`favicon-512.png`, `favicon.ico`) e logo dei dati strutturati aggiornato: Google la sostituisce nei risultati da solo, di solito in qualche giorno o settimana dopo la pubblicazione.
 - 23/10/2026: `/case-in-legno` ha 2 video su campeggi e villaggi in legno (sezione `#villaggi`) con dati strutturati VideoObject: parole chiave campeggio, agri-camping, glamping, villaggio turistico, case A-frame in bioedilizia
+
+- 29/10/2026 – Nuova pagina `/case-in-legno-prefabbricate-come-sono-fatte` (catalogo tecnico di Eugenio). Parole chiave: case in legno prefabbricate come sono fatte, stratigrafia parete casa in legno, isolamento lana di roccia casa in legno, copertura casa in legno, fondazioni casa in legno costo, tempi costruzione casa in legno. Da segnalare in Search Console dopo la pubblicazione del 9/11.
