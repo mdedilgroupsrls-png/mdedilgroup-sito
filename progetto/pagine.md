@@ -55,3 +55,5 @@
 - **Avviso cookie e Google Analytics (20/10/2026):** l'avviso dice "Usiamo cookie tecnici… Solo se premi ACCETTO usiamo anche Google Analytics, per statistiche sulle visite: niente pubblicità né profilazione". `/privacy.html` ha il paragrafo su Google Analytics (cookie `_ga`, `_ga_QQ9YF9PYJ2`, fino a 2 anni, consenso revocabile) e il pulsante "Cambia la scelta sui cookie".
 
 - 28/10/2026 – `/case-in-legno`: ogni casa ha il suo link `#casa-<modello>` (19 modelli) che apre la scheda con foto e planimetria; nella scheda link visibile e pulsante "Copia il link".
+
+| `/bonus-mobili-elettrodomestici-2026` | `bonus-mobili-elettrodomestici-2026.html` | **Articolo detrazioni** (29/10/2026, online dalla pubblicazione del 9/11, in Home dal 17/11): bonus mobili ed elettrodomestici 2026, 50% su 5.000 €, lavori che danno diritto, beni ammessi, classi energetiche, pagamenti, FAQ, fonti Agenzia delle Entrate; reel `video/articolo-bonus-mobili-2026-reel.mp4`. Link da bonus casa 31/12 e costo ristrutturazione casa. |
