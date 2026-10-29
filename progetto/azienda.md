@@ -70,3 +70,4 @@ MD Edil Group vende ristrutturazioni di classe **premium / lusso** e cerca clien
 
 - **Case in legno – sopralluogo** (Eugenio, 27/10/2026): per le case in legno il preventivo (simulato e definitivo) è gratuito, il **sopralluogo non è gratuito**. Mai scrivere "sopralluogo gratuito" per le case in legno.
 - **Case in legno – materiali e norme** (Eugenio, 29/10/2026): tutti i materiali usati hanno la marcatura CE europea; le strutture sono progettate come abitazioni residenziali secondo le norme europee e italiane (NTC 2018, Eurocodici) per essere presentate al Genio Civile. Non è una certificazione dell'impresa (niente ISO/SOA).
+- **Case in legno – tutela decennale** (Eugenio, 29/10/2026): per le abitazioni in legno a uso permanente vale la responsabilità decennale del costruttore (art. 1669 Codice Civile); garanzie di materiali, impianti e finiture nel contratto. Testo approvato nella sezione `#tutela-decennale-casa-in-legno`.
