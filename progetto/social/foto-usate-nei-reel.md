@@ -7,8 +7,10 @@
 | Reel posa onice Piazza Fiume (20/10/2026) | video/reel-bagno-piazza-fiume-posa-onice.mp4 | video IMG_2822 di Eugenio, spezzone 0–21,5 s |
 | Reel infissi Schüco Piazza Fiume (20/10/2026) | video/reel-infissi-schuco-piazza-fiume.mp4 | video IMG_2822 di Eugenio, spezzone 22,4–31,3 s |
 | Articolo bonus casa 31 dicembre (22/10/2026) | video/articolo-bonus-casa-31-dicembre-reel.mp4 | lavoro-15, lavoro-19, lavoro-23, lavoro-12, lavoro-24, lavoro-01 |
+| Articolo bonus mobili 2026 (29/10/2026) | video/articolo-bonus-mobili-2026-reel.mp4 | lavoro-08, lavoro-06, lavoro-10, lavoro-20, lavoro-16 |
+| Articolo costo ristrutturazione casa (29/10/2026) | video/articolo-costo-ristrutturazione-casa-reel.mp4 | lavoro-03, camera-cantiere, dettaglio-impianti, lavoro-13, dettaglio-fibra-2-stesura |
 
-Stili già usati: sottotitoli karaoke box oro + deep house (bagno); vetro sfocato con barra oro + card numeri grandi + tropical house (detrazioni). sottotitoli eleganti con linea oro + pillole etichetta + lounge (posa onice). righe che salgono dal basso + nu-disco (infissi Schüco). karaoke parola per parola + card numeri grandi + cinematica (bonus casa). Il prossimo: vetro sfocato o elegante con afro house, drum & bass o tech house.
+Stili già usati: sottotitoli karaoke box oro + deep house (bagno); vetro sfocato con barra oro + card numeri grandi + tropical house (detrazioni). sottotitoli eleganti con linea oro + pillole etichetta + lounge (posa onice). righe che salgono dal basso + nu-disco (infissi Schüco). karaoke parola per parola + card numeri grandi + cinematica (bonus casa). vetro sfocato con barra oro + tech house (bonus mobili, 29/10); eleganti con linea oro che avanza + afro house (costo casa, 29/10). Il prossimo: righe che salgono o karaoke con drum & bass o lounge.
 
 ## Post (foto o carosello)
 Regola (20/10/2026): un post può riusare foto già usate in un reel; mai due post con le stesse foto.

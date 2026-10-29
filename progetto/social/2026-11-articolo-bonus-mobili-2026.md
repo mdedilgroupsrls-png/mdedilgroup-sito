@@ -1,7 +1,7 @@
 # Reel – Articolo "Bonus mobili ed elettrodomestici 2026: come funziona dopo la ristrutturazione"
 
 Stato: **da programmare – martedì 17/11/2026** (10:30–12:00; se occupato, primo giorno libero della settimana)
-Video: https://mdedilgroup.it/video/articolo-bonus-mobili-2026-reel.mp4 (online dalla pubblicazione del 9/11; copia su Drive: [LINK DRIVE])
+Video: https://mdedilgroup.it/video/articolo-bonus-mobili-2026-reel.mp4 (online dalla pubblicazione del 9/11; su Drive non caricato: troppo pesante per il collegamento di Claude; Metricool lo prende dal sito, online dal 9/11)
 Reti: Instagram TRIAL_REEL, Facebook reel, TikTok, YouTube short, Threads, LinkedIn. Mai Google Business (detrazioni: mai sulla scheda Google).
 Posizione: 📍 Roma, Lazio, Italia
 Link: https://mdedilgroup.it/bonus-mobili-elettrodomestici-2026
