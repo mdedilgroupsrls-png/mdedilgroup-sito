@@ -88,7 +88,7 @@ VOCI = [
                   ('Oneri della sicurezza', '8% dei lavori')]) +
              P('Prezzi al m² di facciata, IVA esclusa, dal listino del nostro simulatore per gli esterni.')),
             ('lavoro-realizzato-facciata-mosaico-aventino', 'Un nostro lavoro: facciata in mosaico all’Aventino, 1.600 m²',
-             P('Rifacimento della facciata di un condominio all’Aventino, a Roma: ponteggio, demolizione di 1.600 m² di vecchio mosaico e posa del mosaico nuovo su tutta la superficie, con il mosaico a rilievo sulle fasce verticali. La posa del mosaico in facciata parte da 50 € al m².') +
+             P('Rifacimento della facciata di un condominio all’Aventino, a Roma: ponteggio, demolizione di 1.600 m² di vecchio mosaico e posa del mosaico nuovo su tutta la superficie, con il mosaico a rilievo sulle fasce verticali. La posa del mosaico in facciata parte da 50 € al m² + IVA.') +
              FIG('/img/facciata-mosaico-aventino-prima.webp', 'Facciata condominiale in mosaico all’Aventino, Roma, prima del rifacimento', 'Prima: la facciata con il vecchio mosaico.') +
              FIG('/img/facciata-mosaico-aventino-dopo.webp', 'Facciata condominiale all’Aventino, Roma, dopo la posa del mosaico nuovo', 'Dopo: la stessa facciata con il mosaico nuovo.') +
              P('<a href="/rifacimento-facciata-mosaico-roma-aventino">Il lavoro passo per passo, con prima e dopo e il video →</a>')),

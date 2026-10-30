@@ -11,7 +11,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 26/10/2026 – Foto della Home alleggerite (sì di Eugenio, "l'aspetto non si cambia"): 19 modelli di casa con versione -560 per i telefoni (sizes giusto: 43vw), 16 foto ricompresse con somiglianza SSIM ≥ 0,985 (a vista uguali). Home scorsa tutta da telefono: 5,3 → 4,45 MB. Va online con la prossima pubblicazione (9/11).
 
 ## Da ricordare a Eugenio quando chiede "cosa abbiamo da fare"
-- [ ] 30/10/2026 – Facciata in mosaico: confermare la zona (Aventino?), se i 50 €/m² della posa sono + IVA, durata dei lavori, e caricare foto e video originali su Drive (`Esterni e facciate`).
+- [ ] 30/10/2026 – Facciata in mosaico: durata dei lavori (facoltativa) e caricare foto e video originali su Drive (`Esterni e facciate`).
 - [x] 29/10/2026 – Modulo preventivo in Home: aggiunto il campo **Email obbligatorio** (prima solo nome e telefono); privacy aggiornata. Online il 9/11.
 - [x] 29/10/2026 – Case in legno: pagina "Come sono fatte" dal catalogo tecnico (stratigrafie, 18 foto/schemi ritagliati dal PDF, fondazioni, tempi, FAQ) + Approfondimenti e riga Fondazioni in /case-in-legno. Online il 9/11.
 - [x] 29/10/2026 – Risposte di Eugenio (case in legno): la parete da 250 mm **non è di serie**, è con l'optional isolamento aggiuntivo (scritto così). Parete interna: tolto dalla pagina il valore acustico "18 dB" del catalogo (non verificabile, molto basso per una parete con lana di roccia e doppia lastra); restano U 0,376 W/m²K e fuoco 80 min. [ ] Chiedere al fornitore il **rapporto di prova acustico** (Rw) della parete interna per scriverlo.
@@ -124,7 +124,7 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 - [ ] Decidere quale sede indicare come ufficio
 
 ## Fatto
-- [x] 30/10/2026 – Materiale di Eugenio (facciata in mosaico, 1.600 m², zona "Avilino" = Aventino da confermare): articolo `/rifacimento-facciata-mosaico-roma-aventino` con cursori prima/dopo e video, scheda in Home dal 22/12, Approfondimenti esterni, sezione "Un nostro lavoro" nella pagina facciata, sitemap, llms.txt. Reel montato (voce Cosmo, sottotitoli 3D, finale con simulazione su mdedilgroup.it, senza logo come chiesto da Eugenio). Sul branch `lavori-in-corso`, online con la prossima pubblicazione.
+- [x] 30/10/2026 – Materiale di Eugenio (facciata in mosaico, 1.600 m², zona Aventino, confermata): articolo `/rifacimento-facciata-mosaico-roma-aventino` con cursori prima/dopo e video, scheda in Home dal 22/12, Approfondimenti esterni, sezione "Un nostro lavoro" nella pagina facciata, sitemap, llms.txt. Reel montato (voce Cosmo, sottotitoli 3D, finale con simulazione su mdedilgroup.it, senza logo come chiesto da Eugenio). Sul branch `lavori-in-corso`, online con la prossima pubblicazione.
 - [x] 20/10/2026 – Primo articolo "Quanto costa ristrutturare un bagno a Roma", sezione "Dal nostro taccuino" di nuovo in Home, reel e storia per i social. Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – Pagina dettagli: dettaglio 02 "Angoli a 45° a jolly" riscritto con 3 nuove foto di Eugenio in posa. Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – Pagina dettagli: dettaglio 05 "Tessuto in fibra di vetro" con 4 foto di Eugenio e nuova domanda frequente. Sul branch `lavori-in-corso`
