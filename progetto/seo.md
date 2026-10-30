@@ -145,7 +145,7 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 | 1/12 | Esterni | I nostri lavori: Rifacimento 700 m² di terrazzo a Roma San Pietro, via Gregorio VII (/rifacimento-terrazzo-roma-vista-san-pietro) | pronto (25/10/2026) |
 | 8/12 | Detrazioni | da scrivere (es. IVA agevolata al 10% sui lavori di ristrutturazione; il bonus mobili è uscito il 17/11) | da scrivere |
 | 15/12 | Infissi | Corso Trieste – finto legno con monoblocco | pronto |
-| 22/12 | Esterni | I nostri lavori: facciata in mosaico all'Aventino, 1.600 m² (`/rifacimento-facciata-mosaico-roma-aventino`, parole chiave: rifacimento facciata condominio Roma, facciata in mosaico, sostituzione mosaico facciata, restauro facciata mosaico Roma) + reel (voce Cosmo) | pronto (30/10/2026) – case in legno spostato al primo martedì libero |
+| 22/12 | Esterni | I nostri lavori: facciata in mosaico all'Aventino, 1.600 m² (`/rifacimento-facciata-mosaico-roma-aventino`, parole chiave: rifacimento facciata condominio Roma, facciata in mosaico, sostituzione mosaico facciata, restauro facciata mosaico Roma) + reel (voce maschile) | pronto (30/10/2026) – case in legno spostato al primo martedì libero |
 | 29/12 | Detrazioni | da scrivere (cosa cambia nel 2027) | da scrivere |
 | 5/1/2027 | Infissi (Guide e costi) | preventivo vero di 5 infissi Rehau Synego | pronto |
 | 12/1 | Interni | da scrivere | da scrivere |

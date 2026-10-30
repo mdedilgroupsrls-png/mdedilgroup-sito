@@ -124,7 +124,7 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 - [ ] Decidere quale sede indicare come ufficio
 
 ## Fatto
-- [x] 30/10/2026 – Materiale di Eugenio (facciata in mosaico, 1.600 m², zona Aventino, confermata): articolo `/rifacimento-facciata-mosaico-roma-aventino` con cursori prima/dopo e video, scheda in Home dal 22/12, Approfondimenti esterni, sezione "Un nostro lavoro" nella pagina facciata, sitemap, llms.txt. Reel montato (voce Cosmo, sottotitoli 3D, finale con simulazione su mdedilgroup.it, senza logo come chiesto da Eugenio). Sul branch `lavori-in-corso`, online con la prossima pubblicazione.
+- [x] 30/10/2026 – Materiale di Eugenio (facciata in mosaico, 1.600 m², zona Aventino, confermata): articolo `/rifacimento-facciata-mosaico-roma-aventino` con cursori prima/dopo e video, scheda in Home dal 22/12, Approfondimenti esterni, sezione "Un nostro lavoro" nella pagina facciata, sitemap, llms.txt. Reel montato (voce maschile italiana, sottotitoli bianchi su vetro, logo MD Edil Group solo nel finale come chiesto da Eugenio, finale con simulazione su mdedilgroup.it). Sul branch `lavori-in-corso`, online con la prossima pubblicazione.
 - [x] 20/10/2026 – Primo articolo "Quanto costa ristrutturare un bagno a Roma", sezione "Dal nostro taccuino" di nuovo in Home, reel e storia per i social. Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – Pagina dettagli: dettaglio 02 "Angoli a 45° a jolly" riscritto con 3 nuove foto di Eugenio in posa. Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – Pagina dettagli: dettaglio 05 "Tessuto in fibra di vetro" con 4 foto di Eugenio e nuova domanda frequente. Sul branch `lavori-in-corso`
