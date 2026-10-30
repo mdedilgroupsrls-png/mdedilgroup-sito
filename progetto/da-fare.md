@@ -11,7 +11,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 26/10/2026 – Foto della Home alleggerite (sì di Eugenio, "l'aspetto non si cambia"): 19 modelli di casa con versione -560 per i telefoni (sizes giusto: 43vw), 16 foto ricompresse con somiglianza SSIM ≥ 0,985 (a vista uguali). Home scorsa tutta da telefono: 5,3 → 4,45 MB. Va online con la prossima pubblicazione (9/11).
 
 ## Da ricordare a Eugenio quando chiede "cosa abbiamo da fare"
-- [ ] 30/10/2026 – Facciata in mosaico: confermare la zona (Aventino?), se possibile prezzo al m² o durata dei lavori, e caricare foto e video originali su Drive (`Esterni e facciate`).
+- [ ] 30/10/2026 – Facciata in mosaico: confermare la zona (Aventino?), se i 50 €/m² della posa sono + IVA, durata dei lavori, e caricare foto e video originali su Drive (`Esterni e facciate`).
 - [x] 29/10/2026 – Modulo preventivo in Home: aggiunto il campo **Email obbligatorio** (prima solo nome e telefono); privacy aggiornata. Online il 9/11.
 - [x] 29/10/2026 – Case in legno: pagina "Come sono fatte" dal catalogo tecnico (stratigrafie, 18 foto/schemi ritagliati dal PDF, fondazioni, tempi, FAQ) + Approfondimenti e riga Fondazioni in /case-in-legno. Online il 9/11.
 - [x] 29/10/2026 – Risposte di Eugenio (case in legno): la parete da 250 mm **non è di serie**, è con l'optional isolamento aggiuntivo (scritto così). Parete interna: tolto dalla pagina il valore acustico "18 dB" del catalogo (non verificabile, molto basso per una parete con lana di roccia e doppia lastra); restano U 0,376 W/m²K e fuoco 80 min. [ ] Chiedere al fornitore il **rapporto di prova acustico** (Rw) della parete interna per scriverlo.
