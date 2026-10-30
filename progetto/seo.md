@@ -18,6 +18,7 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 | `/finiture-di-pregio-roma` | finiture di pregio ristrutturazione Roma | collettore idrico sportello d'ispezione a filo, angoli a 45 gradi piastrelle (jolly), posa grandi lastre gres 120x280, tagli di luce LED soffitto, tessuto in fibra di vetro antifessure / rasatura armata pareti |
 | `/quanto-costa-ristrutturare-bagno-roma` (articolo) | quanto costa ristrutturare un bagno a Roma | costo rifacimento bagno, prezzo bagno chiavi in mano Roma, bagno piccolo 3 mq costo |
 | `/rifacimento-facciata-roma` | ristrutturazione facciata Roma, rifacimento facciata condominio Roma | costo rifacimento facciata al mq, restauro balconi frontalini Roma, cappotto termico prezzo Roma, ripristino intonaco facciata |
+| `/rifacimento-facciata-mosaico-roma-aventino` | rifacimento facciata in mosaico Roma, facciata condominio mosaico Aventino | sostituzione mosaico facciata, restauro facciata mosaico Roma, rifacimento facciata condominio Roma |
 | `/impermeabilizzazione-terrazzo-roma` | ristrutturazione terrazzo Roma, impermeabilizzazione terrazzo Roma, rifacimento terrazzo Roma | costo impermeabilizzazione terrazzo al mq, impermeabilizzare senza demolire, infiltrazioni terrazzo |
 | `/ristrutturazioni-esterni#prezzi-facciate` | rifacimento facciata condominio Roma costo | costo cappotto termico al mq Roma, prezzo tinteggiatura facciata, ponteggio facciata costo |
 | `/ristrutturazioni-esterni` | rifacimento facciata Roma, ristrutturazione facciate condominio | cappotto termico Roma, impresa facciate Lazio |
@@ -144,7 +145,7 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 | 1/12 | Esterni | I nostri lavori: Rifacimento 700 m² di terrazzo a Roma San Pietro, via Gregorio VII (/rifacimento-terrazzo-roma-vista-san-pietro) | pronto (25/10/2026) |
 | 8/12 | Detrazioni | da scrivere (es. IVA agevolata al 10% sui lavori di ristrutturazione; il bonus mobili è uscito il 17/11) | da scrivere |
 | 15/12 | Infissi | Corso Trieste – finto legno con monoblocco | pronto |
-| 22/12 | Case in legno | da scrivere | da scrivere |
+| 22/12 | Esterni | I nostri lavori: facciata in mosaico all'Aventino, 1.600 m² (`/rifacimento-facciata-mosaico-roma-aventino`, parole chiave: rifacimento facciata condominio Roma, facciata in mosaico, sostituzione mosaico facciata, restauro facciata mosaico Roma) + reel (voce Cosmo) | pronto (30/10/2026) – case in legno spostato al primo martedì libero |
 | 29/12 | Detrazioni | da scrivere (cosa cambia nel 2027) | da scrivere |
 | 5/1/2027 | Infissi (Guide e costi) | preventivo vero di 5 infissi Rehau Synego | pronto |
 | 12/1 | Interni | da scrivere | da scrivere |
@@ -155,7 +156,7 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 
 **Ogni articolo ha il suo reel** (voce Carina, sottotitoli, logo), montato quando si prepara l'articolo e programmato su Metricool per il suo martedì appena il video è online (vedi CLAUDE.md). **Tranne infissi e serramenti: mai sui social** (Eugenio, 21/10/2026): niente reel per gli articoli di infissi; in quelle settimane esce un contenuto della scorta di un altro settore (es. reel posa onice, carosello bagno Piazza Fiume). Reel degli articoli già pronti: bagno e detrazioni 2026 (articoli del 20/10); da montare: tutti gli articoli nuovi non di infissi.
 
-**Scorta articoli: 10 pronti su 26** (29/10/2026) (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
+**Scorta articoli: 11 pronti su 26** (30/10/2026) (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
 
 ## Google AI e ricerche da controllare (Eugenio, 23/10/2026)
 **Regola (Eugenio, 24/10/2026):** le modifiche SEO fatte il 23/10/2026 (simulatori con pagina propria, guida costi, prezzi nelle guide e in "Cosa ristrutturiamo", titoli che si aprono con link, D.M. 37/08, Dove lavoriamo a Roma) **restano come sono**: non si cambiano, si possono solo migliorare aggiungendo quando porta un vantaggio misurabile o chiaro.
