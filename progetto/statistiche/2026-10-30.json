@@ -1,0 +1,59 @@
+{
+ "data": "2026-10-30",
+ "finestra": "ultime 24 ore fino al 30/10/2026 23:52 (Roma)",
+ "nota": "eventi dalle prime 40 righe di urls_with_query; città approssimative; comprendono anche le visite di Eugenio e i controlli di Claude",
+ "eventi": {
+  "vista-home": 52,
+  "vista-case-in-legno": 49,
+  "arrivo-diretto": 16,
+  "modello-olivia": 10,
+  "scheda-casa-olivia": 10,
+  "simulazione-case-in-legno": 8,
+  "arrivo-chatgptcom": 6,
+  "modello-nord-house": 6,
+  "scheda-casa-nord-house": 6,
+  "scheda-casa-norway": 6,
+  "modello-norway": 6,
+  "scheda-casa-barn-double": 3,
+  "vista-simulatore-online-costi-case-in-legno": 3,
+  "scheda-casa-fjord": 3,
+  "scheda-casa-flat-double": 3,
+  "modello-barn-double": 3
+ },
+ "citta_principali": {
+  "Milano (Lombardia)": 49,
+  "? (?)": 41,
+  "? (Campania)": 24,
+  "Roma (Lazio)": 22,
+  "? (Lombardia)": 18,
+  "Firenze (Toscana)": 10,
+  "Messina (Sicilia)": 7,
+  "Hagen (DE)": 4,
+  "Macedo de Cavaleiros (PT)": 3,
+  "San Giorgio delle Pertiche (Veneto)": 3,
+  "Torino (Piemonte)": 3,
+  "Camaiore (Toscana)": 3,
+  "Phuket (TH)": 3
+ },
+ "pagine_html_browser": {
+  "/": 70,
+  "/case-in-legno": 57,
+  "/simulatore-online-costi-case-in-legno": 6,
+  "/chi-siamo": 4,
+  "/ristrutturazioni-esterni": 2,
+  "/infissi-serramenti": 2,
+  "/ristrutturazioni-interni": 2,
+  "/interior-design": 2,
+  "/simulatore-online-costi-infissi-tapparelle-zanzariere": 1,
+  "/simulatore-online-costi-ristrutturazioni-interni": 1,
+  "/studio-tecnico": 1
+ },
+ "paesi_html_browser": {
+  "US": "279 (274 errori: tentativi automatici su file inesistenti, bloccati)",
+  "IT": 110,
+  "PT": 11,
+  "DE": 8,
+  "CZ": 4,
+  "TH": 2
+ }
+}
