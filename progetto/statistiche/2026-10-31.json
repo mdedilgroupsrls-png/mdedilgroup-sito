@@ -1,0 +1,67 @@
+{
+ "data": "2026-10-31",
+ "finestra": "ultime 24 ore fino al 31/10/2026 23:51 (Roma)",
+ "nota": "eventi dalle prime 40 righe di urls_with_query; città approssimative; comprendono anche le visite di Eugenio",
+ "eventi": {
+  "vista-case-in-legno": 29,
+  "vista-home": 28,
+  "arrivo-chatgptcom": 8,
+  "arrivo-google": 7,
+  "arrivo-diretto": 7,
+  "arrivo-ig": 5,
+  "simulazione-case-in-legno": 5,
+  "modello-nord-house": 5,
+  "scheda-casa-sherwood": 4,
+  "modello-sherwood": 4,
+  "modello-montblanc": 3,
+  "whatsapp-case-in-legno": 3,
+  "arrivo-instagram": 3,
+  "modello-fjord": 2,
+  "scheda-casa-nord-house": 2,
+  "modello-flat-house": 2,
+  "scheda-casa-flat-house": 2,
+  "vai-al-modulo-home": 2,
+  "scheda-casa-a-frame-l": 2,
+  "modello-a-frame-l": 2
+ },
+ "citta_principali": {
+  "Roma (Lazio)": 30,
+  "Brescia (Lombardia)": 17,
+  "? (?)": 15,
+  "Bari (Puglia)": 12,
+  "? (Lombardia)": 11,
+  "Milano (Lombardia)": 11,
+  "Venezia (Veneto)": 10,
+  "Palermo (Sicilia)": 5,
+  "Gargnano (Lombardia)": 4,
+  "Taranto (Puglia)": 3,
+  "Sarno (Campania)": 3,
+  "Monterotondo (Lazio)": 2,
+  "Genova (Liguria)": 2
+ },
+ "pagine_html_browser": {
+  "/": 52,
+  "/case-in-legno": 33,
+  "mdedilgroup.netlify.app/": 30,
+  "/chi-siamo": 5,
+  "/privacy": 5,
+  "/simulatore-online-costi-case-in-legno": 3,
+  "mdedilgroup.netlify.app/ristrutturazioni-esterni": 2,
+  "/simulatore-online-costi-infissi-tapparelle-zanzariere": 1,
+  "/detrazioni-ristrutturazione-infissi-2026": 1,
+  "/simulatore-online-costi-ristrutturazioni-interni": 1,
+  "/studio-tecnico": 1
+ },
+ "paesi_html_browser": {
+  "IT": 77,
+  "BG": "74 (44 errori, visite automatiche)",
+  "NL": "55 (42 errori, visite automatiche)",
+  "US": 26,
+  "PL": 6,
+  "BE": 2
+ },
+ "contatti": {
+  "whatsapp-case-in-legno": 3,
+  "vai-al-modulo-home": 2
+ }
+}
