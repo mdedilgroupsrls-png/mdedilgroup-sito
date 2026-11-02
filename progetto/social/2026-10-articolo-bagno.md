@@ -6,7 +6,7 @@ Da programmare su Metricool (brand 7377222, Europe/Rome) **subito dopo la pubbli
 - Link articolo: https://mdedilgroup.it/quanto-costa-ristrutturare-bagno-roma
 - Reti: **Instagram TRIAL_REEL** (regola fissa), Facebook REEL, TikTok, YouTube short (madeForKids false), Threads, LinkedIn. **Mai Google Business per i reel** (regola della skill).
 - Prezzo di partenza: bagni completi da 6.500 € IVA inclusa (Eugenio, 20/10/2026); Olgiata senza prezzo.
-- Stato: [ ] da programmare (dopo la pubblicazione del lunedì)
+- Stato: [x] **programmato giovedì 17/12/2026 ore 11:18** (Metricool 414617427; video caricato da mdedilgroup.it)
 
 ## Instagram – Facebook – TikTok – Threads
 Quanto costa DAVVERO rifare un bagno a Roma? 🛁

@@ -2,57 +2,77 @@
 
 Reel **o post** (foto/carosello), a rotazione (Eugenio, 20/10/2026).
 
-Regola di Eugenio (2/11/2026, sostituisce "1 reel a settimana"): sui social **3 contenuti a settimana: martedì, giovedì e sabato**, 10:30–12:00. Mai lunedì, mercoledì, venerdì; mai due reel in giorni di fila; i contenuti di domenica già messi su richiesta di Eugenio restano. Claude produce reel ogni settimana finché la scorta arriva a **26 contenuti pronti e non ancora programmati**.
+Regola di Eugenio (2/11/2026, sostituisce "1 reel a settimana"): sui social **3 contenuti a settimana: martedì, giovedì e sabato**, 10:30–12:00. Mai lunedì, mercoledì, venerdì; mai due reel in giorni di fila; **mai due contenuti dello stesso tipo uno dopo l'altro, sempre mischiare** (Eugenio, 2/11/2026); i contenuti di domenica già messi su richiesta di Eugenio restano. Claude produce reel ogni settimana finché la scorta arriva a **26 contenuti pronti e non ancora programmati**.
 
 Ogni lunedì: i contenuti "pronti" della lista (con il video online) si programmano su Metricool nei **primi martedì/giovedì/sabato liberi** in avanti, senza spostare quelli già programmati, e qui si segna "programmato" con data e ora.
 
-**Calendario riordinato il 2/11/2026:** tutti i reel che erano di lunedì o sparsi nel 2027 sono stati spostati su martedì/giovedì/sabato (38 post Metricool, 19 reel). Calendario pieno fino a **sabato 9/1/2027**; posti tenuti liberi: **sabato 21/11** → reel bonus mobili (#8), **giovedì 26/11** → reel costo ristrutturazione casa (#7). Primo posto libero dopo: **martedì 12/1/2027**.
+**Calendario riordinato il 2/11/2026 (seconda versione, Eugenio: "mai lo stesso tipo uno dopo l'altro, sempre mischiare"):** case in legno al massimo **una ogni due uscite**; nei giorni in mezzo interni, esterni, detrazioni (mai infissi). Posti tenuti: **sab 21/11** reel bonus mobili (#8), **gio 26/11** reel costo casa (#7). I giorni **LIBERO** vanno riempiti con contenuti NON di case in legno (interni, esterni, detrazioni) appena pronti; mai mettere lì una casa in legno.
 
-| Giorno | Contenuto |
-|---|---|
-| mar 3/11 | giardini e pavimentazione esterna (+ GBP) |
-| gio 5/11 | agri-camping, terreno di un ettaro |
-| sab 7/11 | terreno con vista → villaggio A-frame |
-| dom 8/11 | simulatore costi ristrutturazione casa (+ GBP) |
-| mar 10/11 | tour villa in costruzione (+ GBP) |
-| gio 12/11 | catalogo / ettaro fermo |
-| sab 14/11 | facciata mosaico Aventino (+ GBP) |
-| dom 15/11 | simulatore infissi (+ GBP) |
-| mar 17/11 | 3 dettagli che fanno la differenza (+ GBP) |
-| gio 19/11 | Olivia, la più richiesta |
-| sab 21/11 | **libero per reel bonus mobili** |
-| dom 22/11 | simulatore facciata (+ GBP) |
-| mar 24/11 | ristrutturazione completa (+ GBP) |
-| gio 26/11 | **libero per reel costo ristrutturazione casa** |
-| sab 28/11 | case prefabbricate alta efficienza |
-| dom 29/11 | simulatore case in legno (+ GBP) |
-| mar 1/12 | POV futura casa (+ GBP) |
-| gio 3/12 | camera da letto chiavi in mano |
-| sab 5/12 | terreno → struttura ricettiva |
-| mar 8/12 | progettazione → consegna chiavi in mano |
-| gio 10/12 | A-frame 58 m² a 29.000 € |
-| sab 12/12 | Olivia 90 m² come nasce |
-| mar 15/12 | terreno nella natura → villaggio A-frame |
-| gio 17/12 | villaggio intero da vivere |
-| sab 19/12 | villaggio A-Frame L con piscina (CATALOGO) |
-| mar 22/12 | cosa c'è dentro una casa in legno |
-| gio 24/12 | come si costruisce un'A-frame |
-| sab 26/12 | dal terreno alla struttura finita |
-| mar 29/12 | A-Frame L strato dopo strato |
-| gio 31/12 | villaggio unico, meta ricercata |
-| sab 2/1 | A-Frame L casa vacanze |
-| mar 5/1 | A-frame più fotografate |
-| gio 7/1 | terreno di un ettaro, cosa può diventare |
-| sab 9/1 | Vivresti in una casa così? A-Frame L |
+| Giorno | Tipo | Contenuto |
+|---|---|---|
+| mar 3/11 | esterni | giardini e pavimentazione esterna (+ GBP) |
+| gio 5/11 | detrazioni | reel detrazioni 2026 (#2, Metricool 414616897) |
+| sab 7/11 | legno | agri-camping, terreno di un ettaro |
+| dom 8/11 | interni | simulatore costi ristrutturazione casa (+ GBP) |
+| mar 10/11 | interni | tour villa in costruzione (+ GBP) |
+| gio 12/11 | legno | catalogo / ettaro fermo |
+| sab 14/11 | esterni | facciata mosaico Aventino (+ GBP) |
+| dom 15/11 | infissi | simulatore infissi (di Eugenio, + GBP) |
+| mar 17/11 | interni | 3 dettagli che fanno la differenza (+ GBP) |
+| gio 19/11 | legno | Olivia, la più richiesta |
+| sab 21/11 | detrazioni | **tenuto per reel bonus mobili** |
+| dom 22/11 | esterni | simulatore facciata (+ GBP) |
+| mar 24/11 | interni | ristrutturazione completa (+ GBP) |
+| gio 26/11 | interni | **tenuto per reel costo ristrutturazione casa** (+ post GBP) |
+| sab 28/11 | interni (post) | carosello bagno Piazza Fiume (#3, 414617115 + GBP 414617154) |
+| dom 29/11 | legno | simulatore case in legno (+ GBP) |
+| mar 1/12 | interni | POV futura casa (+ GBP) |
+| gio 3/12 | legno | terreno con vista → villaggio A-frame |
+| sab 5/12 | interni | camera da letto chiavi in mano |
+| mar 8/12 | — | **LIBERO** (esterni o detrazioni) |
+| gio 10/12 | legno | A-frame 58 m² a 29.000 € |
+| sab 12/12 | interni | reel posa onice Piazza Fiume (#4, 414617403) |
+| mar 15/12 | legno | case prefabbricate alta efficienza |
+| gio 17/12 | interni | reel articolo bagno Roma (#1, 414617427) |
+| sab 19/12 | — | **LIBERO** |
+| mar 22/12 | legno | Olivia 90 m² come nasce |
+| gio 24/12 | — | **LIBERO** |
+| sab 26/12 | legno | progettazione → consegna chiavi in mano |
+| mar 29/12 | — | **LIBERO** |
+| gio 31/12 | legno | terreno → struttura ricettiva |
+| sab 2/1 | — | **LIBERO** |
+| mar 5/1 | legno | A-Frame L casa vacanze |
+| gio 7/1 | — | **LIBERO** |
+| sab 9/1 | legno | villaggio intero da vivere |
+| mar 12/1 | — | **LIBERO** |
+| gio 14/1 | legno | cosa c'è dentro una casa in legno |
+| sab 16/1 | — | **LIBERO** |
+| mar 19/1 | legno | villaggio A-Frame L con piscina |
+| gio 21/1 | — | **LIBERO** |
+| sab 23/1 | legno | dal terreno alla struttura finita |
+| mar 26/1 | — | **LIBERO** |
+| gio 28/1 | legno | come si costruisce un'A-frame |
+| sab 30/1 | — | **LIBERO** |
+| mar 2/2 | legno | terreno di un ettaro, cosa può diventare |
+| gio 4/2 | — | **LIBERO** |
+| sab 6/2 | legno | terreno nella natura → villaggio A-frame |
+| mar 9/2 | — | **LIBERO** |
+| gio 11/2 | legno | A-Frame L strato dopo strato |
+| sab 13/2 | — | **LIBERO** |
+| mar 16/2 | legno | A-frame più fotografate |
+| gio 18/2 | — | **LIBERO** |
+| sab 20/2 | legno | villaggio unico, meta ricercata |
+| mar 23/2 | — | **LIBERO** |
+| gio 25/2 | legno | Vivresti in una casa così? A-Frame L |
 
-**Contenuti pronti non programmati: 6 / 26** (30/10/2026) (escluso il reel infissi, sospeso)
+**Contenuti pronti non programmati: 2 / 26** (2/11/2026: restano solo #7 e #8, con il loro giorno già tenuto) (escluso il reel infissi, sospeso)
 
 | # | Reel | File | Stato |
 |---|---|---|---|
-| 1 | Articolo bagno Roma | video/articolo-bagno-roma-reel.mp4 | pronto, online sul sito |
-| 2 | Articolo detrazioni 2026 | video/articolo-detrazioni-2026-reel.mp4 | pronto, online sul sito |
-| 3 | Post carosello bagno Piazza Fiume (7 foto) | img/social-post-bagno-piazza-fiume-1..7.jpg | pronto, online sul sito |
-| 4 | Reel posa lastre onice, bagno Piazza Fiume (video IMG_2822, 0–21,5 s) | video/reel-bagno-piazza-fiume-posa-onice.mp4 | pronto, online sul sito |
+| 1 | Articolo bagno Roma | video/articolo-bagno-roma-reel.mp4 | **programmato giovedì 17/12 ore 11:18** (Metricool 414617427) |
+| 2 | Articolo detrazioni 2026 | video/articolo-detrazioni-2026-reel.mp4 | **programmato giovedì 5/11 ore 11:12** (Metricool 414616897) |
+| 3 | Post carosello bagno Piazza Fiume (7 foto) | img/social-post-bagno-piazza-fiume-1..7.jpg | **programmato sabato 28/11 ore 11:09** (Metricool 414617115 + GBP 414617154) |
+| 4 | Reel posa lastre onice, bagno Piazza Fiume (video IMG_2822, 0–21,5 s) | video/reel-bagno-piazza-fiume-posa-onice.mp4 | **programmato sabato 12/12 ore 10:41** (Metricool 414617403) |
 | 6 | Reel articolo bonus casa 50% entro il 31/12 (detrazioni) | video/articolo-bonus-casa-31-dicembre-reel.mp4 | programmato mercoledì 28/10 ore 11:12 (Metricool 406315311) |
 | 7 | Reel articolo costo ristrutturazione casa (interni) | video/articolo-costo-ristrutturazione-casa-reel.mp4 | pronto, da programmare **giovedì 26/11** (posto tenuto libero; online con la pubblicazione del 9/11) |
 | 8 | Reel articolo bonus mobili 2026 (detrazioni) | video/articolo-bonus-mobili-2026-reel.mp4 | pronto, da programmare **sabato 21/11** (posto tenuto libero; online con la pubblicazione del 9/11) |

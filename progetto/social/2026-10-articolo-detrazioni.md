@@ -5,7 +5,7 @@ Da programmare su Metricool (brand 7377222, Europe/Rome) dopo la pubblicazione d
 - Storia: https://mdedilgroup.it/img/social-articolo-detrazioni-2026-storia.jpg (sticker Link → articolo)
 - Link: https://mdedilgroup.it/detrazioni-ristrutturazione-infissi-2026
 - Reti: Instagram **TRIAL_REEL**, Facebook REEL, TikTok, YouTube short (madeForKids false), Threads, LinkedIn. Mai Google Business.
-- Stato: [ ] da programmare (dopo la pubblicazione del lunedì)
+- Stato: [x] **programmato giovedì 5/11/2026 ore 11:12** (Metricool 414616897)
 
 ## Instagram – Facebook – TikTok – Threads
 Ristrutturi casa nel 2026? Puoi recuperare fino alla metà della spesa 💶

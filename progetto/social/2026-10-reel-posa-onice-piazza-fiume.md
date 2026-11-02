@@ -1,6 +1,6 @@
 # Reel – Posa delle lastre effetto onice, bagno Piazza Fiume
 
-Stato: **da programmare** (contenuto della scorta; video IMG_2822 mandato da Eugenio il 20/10/2026)
+Stato: **programmato sabato 12/12/2026 ore 10:41** (Metricool 414617403)
 Tipo: reel 30 s. Video solo-social: https://mdedilgroup.it/video/reel-bagno-piazza-fiume-posa-onice.mp4 (si toglie dal sito il lunedì dopo l'uscita)
 Reti: Instagram TRIAL_REEL, Facebook reel, TikTok, YouTube short, Threads, LinkedIn. Mai Google Business.
 Posizione: 📍 Roma, Lazio, Italia
