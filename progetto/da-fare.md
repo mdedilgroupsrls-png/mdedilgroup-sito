@@ -106,6 +106,8 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 - [ ] Decidere quale sede indicare come ufficio
 
 ## Fatto
+
+- [x] 02/11/2026 – Modulo contatti: aggiunto il campo Email obbligatorio (`name="email"`), così le notifiche Netlify hanno "Rispondi a" = email del cliente; privacy aggiornata.
 - [x] 20/10/2026 – Primo articolo "Quanto costa ristrutturare un bagno a Roma", sezione "Dal nostro taccuino" di nuovo in Home, reel e storia per i social. Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – Pagina dettagli: dettaglio 02 "Angoli a 45° a jolly" riscritto con 3 nuove foto di Eugenio in posa. Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – Pagina dettagli: dettaglio 05 "Tessuto in fibra di vetro" con 4 foto di Eugenio e nuova domanda frequente. Sul branch `lavori-in-corso`

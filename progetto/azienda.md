@@ -26,7 +26,7 @@
 - **Threads:** https://www.threads.com/@md_edil_group (aggiunto il 16/10/2026)
 - Tutti i link social sono nelle icone in fondo a ogni pagina e nei dati strutturati della Home (`sameAs`), aggiornati il 15/10/2026. Profilo Instapro (26/10/2026): https://www.instapro.it/ditta/md-edil-group-s-r-l-s (solo nei dati strutturati, non tra le icone). Profilo Houzz: https://www.houzz.it/hznb/professionisti/imprese-edili/md-edil-group-pfvwit-pf~1867816412.
 
-- **Richieste dal modulo `preventivo`:** salvate su Netlify (progetto mdedilgroup → Forms) e inviate per email a mdedilgroupsrls@gmail.com, oggetto "Nuova richiesta di preventivo dal sito – MD Edil Group" (impostato da Eugenio il 16/10/2026 in Forms → Submission notifications).
+- **Richieste dal modulo `preventivo`:** salvate su Netlify (progetto mdedilgroup → Forms) e inviate per email a mdedilgroupsrls@gmail.com, oggetto "Nuova richiesta di preventivo dal sito – MD Edil Group" (impostato da Eugenio il 16/10/2026 in Forms → Submission notifications). Dal 02/11/2026 il campo **Email** (`name="email"`) è obbligatorio: Netlify lo usa come "Rispondi a", quindi premendo Rispondi su Gmail la risposta va direttamente al cliente (Eugenio, 02/11/2026). Non rinominare il campo.
 
 ## Sedi
 Decisione di Eugenio del 16/10/2026 (sera), per non confondere i clienti:
