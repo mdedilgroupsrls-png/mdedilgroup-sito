@@ -1,6 +1,6 @@
 # Reel – Articolo "Quanto costa ristrutturare casa a Roma nel 2026? Prezzi ed esempi da 50, 70 e 100 m²"
 
-Stato: **da programmare – martedì 10/11/2026** (10:30–12:00; se occupato, primo giorno libero della settimana)
+Stato: **da programmare – giovedì 26/11/2026** (10:30–12:00; settimana del 10/11 già piena, posto tenuto libero nel riordino del 2/11)
 Video: https://mdedilgroup.it/video/articolo-costo-ristrutturazione-casa-reel.mp4 (online dalla pubblicazione del 9/11; su Drive non caricato: troppo pesante per il collegamento di Claude; Metricool lo prende dal sito, online dal 9/11)
 Reti: Instagram TRIAL_REEL, Facebook reel, TikTok, YouTube short, Threads, LinkedIn. Mai Google Business (sulla scheda Google: post con foto, vedi sotto).
 Posizione: 📍 Roma, Lazio, Italia
@@ -23,6 +23,6 @@ Quanti metri quadri ha la casa che vuoi ristrutturare? 👇
 
 #ristrutturazioneroma #ristrutturazionecasa #costiristrutturazione #impresaedileroma #mdedilgroup
 
-## Post scheda Google Business (stesso giorno, martedì 10/11)
+## Post scheda Google Business (stesso giorno, giovedì 26/11)
 Foto: img/lavoro-15.webp (quella dell'articolo).
 Testo: Quanto costa ristrutturare un appartamento a Roma nel 2026? Abbiamo calcolato tre esempi voce per voce con il nostro simulatore: 50 m² circa 34.300 €, 70 m² circa 44.100 €, 100 m² circa 64.200 €, IVA inclusa con progetto e CILA. Leggi l'articolo e calcola il costo della tua casa. Pulsante: "Scopri di più" → https://mdedilgroup.it/quanto-costa-ristrutturare-casa-roma
