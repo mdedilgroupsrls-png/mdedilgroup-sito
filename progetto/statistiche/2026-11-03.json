@@ -1,0 +1,59 @@
+{
+ "data": "2026-11-03",
+ "finestra": "ultime 24 ore fino al 3/11/2026 23:51 (Roma)",
+ "nota": "eventi dalle prime 100 righe di urls_with_query (contatori s?e= e s.txt); città approssimative; comprendono anche le visite di Eugenio. Dagli USA circa 180 richieste di un programma automatico che cercava file .env/phpinfo (tutte 404, nessun rischio per un sito statico).",
+ "eventi": {
+  "vista-case-in-legno": 100,
+  "vista-home": 49,
+  "simulazione-case-in-legno": 34,
+  "arrivo-diretto": 31,
+  "arrivo-google": 29,
+  "modello-fjord": 17,
+  "scheda-casa-nord-house": 17,
+  "scheda-casa-fjord": 16,
+  "scheda-casa-olivia": 15,
+  "modello-olivia": 14,
+  "arrivo-chatgptcom": 14,
+  "scheda-casa-flat-double": 13,
+  "modello-nord-house": 13,
+  "modello-norway": 13,
+  "modello-a-frame-l": 13,
+  "scheda-casa-montblanc": 12,
+  "scheda-casa-norway": 12,
+  "scheda-casa-a-frame-l": 11,
+  "modello-flat-double": 11,
+  "arrivo-instagram": 11,
+  "vista-simulatore-online-costi-case-in-legno": 11,
+  "modello-montblanc": 10,
+  "arrivo-facebook": 9,
+  "scheda-casa-sherwood": 9
+ },
+ "citta_principali": {
+  "? (?)": 18,
+  "Roma (Lazio)": 11
+ },
+ "pagine_html_browser": {
+  "/case-in-legno": 50,
+  "/": 50,
+  "/chi-siamo": 9,
+  "/simulatore-online-costi-case-in-legno": 8,
+  "/infissi-serramenti": 6,
+  "/interior-design": 4,
+  "/studio-tecnico": 3,
+  "/ristrutturazioni-interni": 3,
+  "/ristrutturazioni-esterni": 2,
+  "/simulatore-online-costi-infissi-tapparelle-zanzariere": 1,
+  "/bonus-casa-50-pagare-entro-31-dicembre-2026": 1
+ },
+ "paesi_html_browser": {
+  "IT": 96,
+  "US": "194 (182 errori: programma automatico)",
+  "CH": 16,
+  "FR": 7,
+  "DE": 2,
+  "AL": 2,
+  "SG": 2,
+  "TR": 2,
+  "IE": 1
+ }
+}
