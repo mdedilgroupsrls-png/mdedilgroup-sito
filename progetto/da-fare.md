@@ -24,6 +24,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - [x] 23/10/2026 – Guida costi casa: esempi rifatti senza demolizione del massetto (e senza nuovo massetto) e senza tiro dei materiali: 50 m² 34.313 €, 70 m² 44.109 €, 100 m² 64.173 € – Eugenio
 - [x] 23/10/2026 – Guida "Quanto costa ristrutturare casa a Roma nel 2026" con esempi 50/70/100 m² dal simulatore (articolo interni del 10/11, scorta 8/26); title dei simulatori con "gratuito" e "Roma"; sezione "Google AI e ricerche da controllare" in seo.md – Eugenio
 - [ ] Reel della guida costi casa (esce il 10/11): da montare nel compito del giovedì
+- [ ] **3–5 reel di riferimento** (4/11/2026): chiedere a Eugenio i link dei reel di cui gli piace il montaggio, per ricavare il suo stile (`progetto/social/stile-montaggio.md`, sezione 2; ispirarsi, mai copiare)
 Elenco del materiale e delle informazioni che mancano per completare bene pagine e informazioni del sito (Eugenio, 23/10/2026: "mano a mano dobbiamo riempire tutto"). Quando chiede cosa c'è da fare, ricordare queste richieste (al massimo 3-4 per messaggio), togliere quelle fatte e aggiungere le nuove man mano che servono.
 - [ ] **Foto di cucine, ville, impianti elettrici e facciate** (Eugenio le ha, 23/10/2026): da caricare su Drive "Md edil group → Materiale per articoli e reel" (Interni / Esterni e facciate), con zona di Roma e cosa mostrano. Servono per le pagine delle voci (seo.md → "Pagine delle voci").
 - [ ] Video IMG_2822 e foto originali dei cantieri già usati (ora solo in chat) da caricare su Drive (vedi `materiale.md`).
@@ -107,6 +108,7 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 
 ## Fatto
 
+- [x] 04/11/2026 – Montaggio reel: nuovo `progetto/strumenti/taglia_pause.py` (toglie le pause dai video parlati, esce 1080x1920 a -14 LUFS, provato) e `progetto/social/stile-montaggio.md` (cartelle sorgenti/riferimenti/pronti, stile ricavato da 3–5 reel di riferimento "ispirati, non copiare", strumenti verificati).
 - [x] 02/11/2026 – Modulo contatti: aggiunto il campo Email obbligatorio (`name="email"`), così le notifiche Netlify hanno "Rispondi a" = email del cliente; privacy aggiornata.
 - [x] 20/10/2026 – Primo articolo "Quanto costa ristrutturare un bagno a Roma", sezione "Dal nostro taccuino" di nuovo in Home, reel e storia per i social. Sul branch `lavori-in-corso`
 - [x] 20/10/2026 – Pagina dettagli: dettaglio 02 "Angoli a 45° a jolly" riscritto con 3 nuove foto di Eugenio in posa. Sul branch `lavori-in-corso`
