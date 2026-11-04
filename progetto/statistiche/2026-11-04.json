@@ -1,0 +1,22 @@
+{
+ "data": "2026-11-04",
+ "finestra": "ultime 24 ore fino al 4/11/2026 23:50 (Roma)",
+ "nota": "eventi dai contatori s?e= (funzione stat, prime 60 righe); città non raccolte stasera; comprendono anche le visite di Eugenio",
+ "eventi": {
+  "vista-case-in-legno": 84, "vista-home": 52, "arrivo-diretto": 43, "simulazione-case-in-legno": 23,
+  "arrivo-google": 15, "arrivo-chatgptcom": 13, "modello-a-frame-l": 11, "scheda-casa-a-frame-l": 11,
+  "vista-simulatore-online-costi-case-in-legno": 10, "modello-flat-house": 9, "scheda-casa-flat-house": 9,
+  "modello-flat-house-1-5": 8, "scheda-casa-a-frame": 8, "modello-a-frame": 8, "scheda-casa-olivia": 8,
+  "modello-nord-house": 8, "modello-barn-mini": 8, "scheda-casa-nord-house": 8, "scheda-casa-barn-mini": 8,
+  "modello-olivia": 8, "vista-chi-siamo": 8, "arrivo-ig": 8, "simulazione-simulatore-online-costi-case-in-legno": 4,
+  "arrivo-instagram": 4, "arrivo-facebook": 4, "vista-studio-tecnico": 4, "vai-al-modulo-home": 3,
+  "vista-ristrutturazioni-interni": 3, "vista-infissi-serramenti": 2, "social-instagram": 2, "arrivo-tiktok": 2,
+  "social-youtube": 1, "simulazione-ristrutturazioni-interni": 1, "arrivo-bing": 1, "whatsapp-case-in-legno": 1
+ },
+ "pagine_html_browser": {
+  "/case-in-legno": 45, "/": 41, "/chi-siamo": 9, "/simulatore-online-costi-case-in-legno": 6, "/studio-tecnico": 5,
+  "/ristrutturazioni-esterni": 3, "/ristrutturazioni-interni": 3, "/privacy": 2, "/infissi-scorrevoli-vetrata-roma-nord": 1,
+  "/impermeabilizzazione-terrazzo-roma": 1, "/interior-design": 1, "/rifacimento-facciata-roma": 1, "/infissi-serramenti": 1
+ },
+ "paesi_html_browser": {"IT": 92, "US": 23, "CH": 5, "HU": 3, "BE": 2, "SC": 1, "AL": 1, "MV": 1, "IL": 1, "TH": 1}
+}
