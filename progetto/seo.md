@@ -143,7 +143,7 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 | 17/11 | Detrazioni | **Bonus mobili ed elettrodomestici 2026: come funziona dopo la ristrutturazione** (`/bonus-mobili-elettrodomestici-2026`, parole chiave: bonus mobili 2026, bonus elettrodomestici 2026, bonus mobili ristrutturazione, detrazione mobili 50%; fonti Agenzia delle Entrate) + reel | pronto (29/10/2026, online dal 9/11) |
 | 24/11 | Infissi | EUR – scorrevoli antracite e vetrata ad angolo | pronto |
 | 1/12 | Esterni | I nostri lavori: Rifacimento 700 m² di terrazzo a Roma San Pietro, via Gregorio VII (/rifacimento-terrazzo-roma-vista-san-pietro) | pronto (25/10/2026) |
-| 8/12 | Detrazioni | da scrivere (es. IVA agevolata al 10% sui lavori di ristrutturazione; il bonus mobili è uscito il 17/11) | da scrivere |
+| 8/12 | Detrazioni | **IVA al 10% sui lavori di ristrutturazione: come funziona e quando spetta** (`/iva-agevolata-10-ristrutturazione`, parole chiave: IVA agevolata ristrutturazione, IVA 10% ristrutturazione, beni significativi IVA, IVA manutenzione straordinaria, IVA infissi 10%; fonti Agenzia delle Entrate) | ✓ (5/11, online il 23/11) |
 | 15/12 | Infissi | Corso Trieste – finto legno con monoblocco | pronto |
 | 22/12 | Esterni | I nostri lavori: facciata in mosaico all'Aventino, 1.600 m² (`/rifacimento-facciata-mosaico-roma-aventino`, parole chiave: rifacimento facciata condominio Roma, facciata in mosaico, sostituzione mosaico facciata, restauro facciata mosaico Roma) + reel (voce maschile) | pronto (30/10/2026) – case in legno spostato al primo martedì libero |
 | 29/12 | Detrazioni | da scrivere (cosa cambia nel 2027) | da scrivere |
@@ -156,7 +156,7 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 
 **Ogni articolo ha il suo reel** (voce Carina, sottotitoli, logo), montato quando si prepara l'articolo e programmato su Metricool per il suo martedì appena il video è online (vedi CLAUDE.md). **Tranne infissi e serramenti: mai sui social** (Eugenio, 21/10/2026): niente reel per gli articoli di infissi; in quelle settimane esce un contenuto della scorta di un altro settore (es. reel posa onice, carosello bagno Piazza Fiume). Reel degli articoli già pronti: bagno e detrazioni 2026 (articoli del 20/10); da montare: tutti gli articoli nuovi non di infissi.
 
-**Scorta articoli: 11 pronti su 26** (30/10/2026) (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
+**Scorta articoli: 12 pronti su 26** (5/11/2026) (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
 
 ## Google AI e ricerche da controllare (Eugenio, 23/10/2026)
 **Regola (Eugenio, 24/10/2026):** le modifiche SEO fatte il 23/10/2026 (simulatori con pagina propria, guida costi, prezzi nelle guide e in "Cosa ristrutturiamo", titoli che si aprono con link, D.M. 37/08, Dove lavoriamo a Roma) **restano come sono**: non si cambiano, si possono solo migliorare aggiungendo quando porta un vantaggio misurabile o chiaro.
