@@ -1,0 +1,20 @@
+{
+ "data": "2026-11-05",
+ "finestra": "ultime 24 ore fino al 5/11/2026 23:50 (Roma)",
+ "nota": "eventi dai contatori s?e= (funzione stat, prime 50 righe); città non raccolte; comprendono anche le visite di Eugenio",
+ "eventi": {
+  "vista-case-in-legno": 70, "arrivo-diretto": 34, "vista-home": 28, "arrivo-chatgptcom": 24, "simulazione-case-in-legno": 17,
+  "vista-chi-siamo": 16, "modello-siver": 9, "arrivo-google": 8, "scheda-casa-siver": 8, "vista-detrazioni-ristrutturazione-infissi-2026": 8,
+  "arrivo-ig": 7, "arrivo-instagram": 7, "modello-montblanc": 7, "scheda-casa-montblanc": 7, "scheda-casa-flat-house-1-5": 6,
+  "modello-flat-house-1-5": 6, "scheda-casa-a-frame": 6, "modello-a-frame": 6, "scheda-casa-flat-house": 5, "modello-flat-house": 5,
+  "modello-flat-double": 5, "modello-olivia": 5, "modello-nord-house": 5, "scheda-casa-flat-double": 5, "scheda-casa-olivia": 5,
+  "arrivo-facebook": 4, "arrivo-altro": 4, "modello-a-frame-l": 4, "whatsapp-case-in-legno": 3, "vista-simulatore-online-costi-case-in-legno": 3,
+  "arrivo-whatsapp": 2, "stima-whatsapp-case-in-legno": 2
+ },
+ "pagine_html_browser": {
+  "/case-in-legno": 32, "/": 24, "/chi-siamo": 7, "/detrazioni-ristrutturazione-infissi-2026": 6, "/studio-tecnico": 2,
+  "/simulatore-online-costi-case-in-legno": 2, "/simulatore-online-costi-infissi-tapparelle-zanzariere": 1, "/interior-design": 1,
+  "/quanto-costa-ristrutturare-bagno-roma": 1, "/privacy": 1, "/ristrutturazioni-interni": 1, "/preventivo-infissi-pvc-rehau-synego": 1
+ },
+ "paesi_html_browser": {"IT": 58, "US": 13, "NL": 13, "IE": 2, "DE": 2, "CY": 2, "GB": 1, "BR": 1, "SG": 1}
+}
