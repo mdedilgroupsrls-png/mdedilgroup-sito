@@ -110,7 +110,7 @@ Regole del simulatore (17/10/2026): ogni paragrafo si apre con Sì; le alternati
 ## Case in legno
 I prezzi delle case in legno sono **IVA inclusa**.
 
-**Progetto strutturale della casa in legno: 60 € al m²** di superficie (Eugenio, 8/11/2026). È l'unico prezzo unitario scritto nella pagina /case-in-legno (titolo `#progettazione-case-in-legno-su-misura`). IVA inclusa o esclusa: da confermare con Eugenio.
+**Progetto strutturale della casa in legno: 60 € al m²** di superficie (Eugenio, 8/11/2026). Scritto solo nella pagina `/progettazione-case-in-legno-su-misura` (in /case-in-legno c'è solo il titolo che porta lì). IVA inclusa o esclusa: da confermare con Eugenio.
 
 ### Simulatore casa in legno (pagina `/case-in-legno`, dal 15/10/2026)
 Fonte: PDF di Eugenio "Md Listino case legno chiavi in mano" (Prosto House Europe, 01.02.2026). Importi in euro, **IVA inclusa** come il catalogo. Ogni modello ha i suoi prezzi: non mescolarli.
