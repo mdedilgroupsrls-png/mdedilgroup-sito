@@ -66,9 +66,9 @@ PAGINE = [
         servizio='Simulatore dei prezzi di infissi in PVC Rehau, tapparelle e zanzariere a Roma e nel Lazio'),
     dict(
         madre='case-in-legno', nome_madre='Case in legno', file='simulatore-online-costi-case-in-legno', legno=True,
-        title='Configuratore case in legno prefabbricate: prezzo online | MD Edil Group',
+        title='Configuratore case prefabbricate in legno: prezzo online | MD Edil Group',
         desc='Configuratore online della tua casa in legno prefabbricata: scegli il modello, aggiungi gli optional e vedi subito il totale IVA inclusa. Consegna in tutta Italia.',
-        ey='CONFIGURATORE ONLINE · CASE IN LEGNO', h1='Configuratore online delle case in legno: componi la tua e vedi il prezzo',
+        ey='CONFIGURATORE ONLINE · CASE IN LEGNO', h1='Configuratore online delle case in legno e case prefabbricate: componi la tua e vedi il prezzo',
         intro=['Quanto costa una casa in legno prefabbricata chiavi in mano? Scegli il modello dal nostro catalogo, guarda la planimetria, poi aggiungi o togli gli optional: il totale si aggiorna subito, IVA inclusa.',
                'Quando hai finito scarichi la stima in PDF o ce la mandi su WhatsApp: verifichiamo il terreno e prepariamo il preventivo definitivo. Realizziamo case in legno in tutta Italia.'],
         passi=[('Il modello', 'Scegli la casa dal catalogo: per ognuna vedi metri quadri, planimetria e prezzo di partenza.'),
