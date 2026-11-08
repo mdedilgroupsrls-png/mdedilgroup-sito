@@ -114,7 +114,8 @@ I prezzi delle case in legno sono **IVA inclusa**.
 
 **Stima al m² per la pagina `/case-in-legno-difetti-costi-permessi-durata`** (chiesta da Eugenio l'8/11/2026, calcolata da Claude con i prezzi del simulatore, IVA inclusa, sui m² utili del catalogo):
 - **Al grezzo avanzato (finita all'esterno, Eugenio 8/11/2026) = kit + lavori di montaggio**: da circa **600 €/m²** (Norway 605, Siver 640, Fjord 649, Montblanc 653) fino a circa **1.300 €/m²** (Barn Max Height 1.291, Barn Mini 1.218). Esempi: Barn Mini 25.938 €, Nord House 69.780 €, Montblanc 108.465 €.
-- **Completa = kit + montaggio + laminazione, Solar, pareti e finiture, elettrico, idrico, laminato, porte** (senza clima, isolamento aggiuntivo, aumento lunghezza): da circa **1.200 €/m²** (Norway 1.209, Siver e Montblanc 1.212) a circa **2.100 €/m²** (Barn Max Height 2.087). Esempi: Barn Mini 43.334 €, Nord House 137.102 €, Montblanc 201.262 €.
+- **Chiavi in mano (sul sito, Eugenio 8/11/2026) = kit + montaggio + laminazione, Solar, pareti e finiture, elettrico, idrico, laminato, porte** (senza clima, isolamento aggiuntivo, aumento lunghezza): da circa **1.200 €/m²** (Norway 1.209, Siver e Montblanc 1.212) a circa **2.100 €/m²** (Barn Max Height 2.087). Esempi: Barn Mini 43.334 €, Nord House 137.102 €, Montblanc 201.262 €.
+- Nella pagina anche **la casa chiavi in mano più economica: Mini Barn Boutique 29.900 €** IVA inclusa (Eugenio, 8/11/2026: "prendi una delle strutture nostre… il prezzo minore").
 - A parte: fondazione 230 €/m² coperto, trasporto, progetto strutturale (da 60 €/m² + IVA), alloggio montatori, pratiche. Se cambiano i prezzi del simulatore, ricalcolare.
 
 ### Simulatore casa in legno (pagina `/case-in-legno`, dal 15/10/2026)
