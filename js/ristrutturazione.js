@@ -42,7 +42,7 @@
       { id: 'contel', d: 'Controtelaio per porta scorrevole a scomparsa', um: 'n°', p: 370,
         x: 'Fornitura e montaggio del controtelaio metallico che si inserisce nella parete e accoglie l’anta scorrevole. La posa della porta si indica a parte, nella sezione delle porte.' },
       { id: 'intona', d: 'Intonaco grezzo', um: 'm²', p: 26.5,
-        x: 'Primo strato di intonaco su pareti nuove o da ripristinare: è la base per rasatura e pittura.' },
+        x: 'Primo strato di intonaco su pareti nuove o da ripristinare: è la base per rasatura e pittura. Il prezzo di 26,50 € al m² è per una mano.' },
       { id: 'massNu', d: 'Nuovo massetto in sabbia e cemento', um: 'm²', p: 34.5, mq: true,
         x: 'Sottofondo tradizionale steso e livellato, pronto per la posa del nuovo pavimento.' }
     ] },
@@ -87,7 +87,7 @@
         x: 'Montaggio della porta scorrevole, esterna al muro o a scomparsa. Per la porta a scomparsa il controtelaio si indica nelle opere murarie.' }
     ] },
     { id: 'cartongesso', t: 'Opere in cartongesso', s: 'Controsoffitti, pareti leggere e dettagli per l’illuminazione.', v: [
-      { id: 'ctrSof', d: 'Controsoffitto in cartongesso', um: 'm²', p: 55,
+      { id: 'ctrSof', d: 'Controsoffitto in cartongesso', um: 'm²', p: 65,
         x: 'Struttura metallica e lastre da 13 mm con giunti stuccati in due mani, pronto per rasatura e pittura. Serve per abbassare i soffitti, nascondere gli impianti e inserire i faretti.' },
       { id: 'divCar', d: 'Parete divisoria in cartongesso', um: 'm²', p: 75,
         x: 'Parete leggera spessa 10 cm, con struttura metallica e lastre sui due lati: si monta in poco tempo e si può attrezzare con impianti e nicchie.' },

@@ -26,7 +26,7 @@ Regole del documento: la posa della ceramica è in due sezioni (02.13 e 08.01) m
 | Bagni | Ogni m² oltre i 5 m² (Eugenio, 16/10/2026) | m² | 350,00 |
 | Muratura | Nuovi divisori in tramezzi | m² | 87,70 |
 | Muratura | Controtelaio porta scorrevole a scomparsa, fornitura e posa | cad. | 370,00 |
-| Muratura | Intonacatura grezza | m² | 26,50 |
+| Muratura | Intonacatura grezza – prezzo per **una mano**, scritto nella descrizione della voce (Eugenio, 9/11/2026) | m² | 26,50 |
 | Muratura | Massetto tradizionale sabbia-cemento | m² | 34,50 |
 | Muratura | (Posa ceramica fino a 60×60: uguale a "Pavimenti", non si conta due volte) | m² | 44,50 |
 | Aria condizionata | Predisposizione e installazione 1 motore + 2 split, fornitura esclusa | a corpo | 1.170,00 |
@@ -44,7 +44,7 @@ Regole del documento: la posa della ceramica è in due sezioni (02.13 e 08.01) m
 | Pavimenti | Posa parquet | m² | 55,00 |
 | Pavimenti | Porta battente: posa | cad. | 130,00 |
 | Pavimenti | Porta scorrevole: posa | cad. | 230,00 |
-| Cartongesso | Controsoffitto (orditura metallica, lastre 13 mm, giunti in due mani) | m² | 55,00 |
+| Cartongesso | Controsoffitto (orditura metallica, lastre 13 mm, giunti in due mani) – 65 € dal 9/11/2026 (Eugenio), prima 55 | m² | 65,00 |
 | Cartongesso | Divisorio piano, spessore 10 cm | m² | 75,00 |
 | Cartongesso | Velette e ripiani per LED | m | 85,00 |
 | Tinteggiature | Raschiatura pitture esistenti | m² | 3,00 |
