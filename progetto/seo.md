@@ -18,11 +18,12 @@ Ogni pagina punta a un gruppo di ricerche, così le pagine non si fanno concorre
 | `/finiture-di-pregio-roma` | finiture di pregio ristrutturazione Roma | collettore idrico sportello d'ispezione a filo, angoli a 45 gradi piastrelle (jolly), posa grandi lastre gres 120x280, tagli di luce LED soffitto, tessuto in fibra di vetro antifessure / rasatura armata pareti |
 | `/quanto-costa-ristrutturare-bagno-roma` (articolo) | quanto costa ristrutturare un bagno a Roma | costo rifacimento bagno, prezzo bagno chiavi in mano Roma, bagno piccolo 3 mq costo |
 | `/rifacimento-facciata-roma` | ristrutturazione facciata Roma, rifacimento facciata condominio Roma | costo rifacimento facciata al mq, restauro balconi frontalini Roma, cappotto termico prezzo Roma, ripristino intonaco facciata |
+| `/rifacimento-facciata-mosaico-roma-aventino` | rifacimento facciata in mosaico Roma, facciata condominio mosaico Aventino | sostituzione mosaico facciata, restauro facciata mosaico Roma, rifacimento facciata condominio Roma |
 | `/impermeabilizzazione-terrazzo-roma` | ristrutturazione terrazzo Roma, impermeabilizzazione terrazzo Roma, rifacimento terrazzo Roma | costo impermeabilizzazione terrazzo al mq, impermeabilizzare senza demolire, infiltrazioni terrazzo |
 | `/ristrutturazioni-esterni#prezzi-facciate` | rifacimento facciata condominio Roma costo | costo cappotto termico al mq Roma, prezzo tinteggiatura facciata, ponteggio facciata costo |
 | `/ristrutturazioni-esterni` | rifacimento facciata Roma, ristrutturazione facciate condominio | cappotto termico Roma, impresa facciate Lazio |
 | `/infissi-serramenti` | sostituzione infissi Roma (title e H1 dal 25/10/2026), infissi PVC Roma, infissi certificati Roma, finestre classe 4 aria Rehau | finestre PVC prezzi, Rehau Synego prezzo, tapparelle alluminio coibentato, zanzariere Roma |
-| `/case-in-legno` | case in legno prefabbricate prezzi | casa in legno chiavi in mano, casa in legno Lazio/Italia, A-frame, Barn House |
+| `/case-in-legno` | case in legno prefabbricate prezzi, **case prefabbricate** (Eugenio, 8/11/2026: le pagine delle case in legno devono uscire anche come "case prefabbricate"; title, description e H1 aggiornati in /case-in-legno, configuratore, progettazione e difetti) | casa in legno chiavi in mano, casa in legno Lazio/Italia, A-frame, Barn House, progettazione case in legno, casa in legno su misura, casa in legno in montagna, casa in legno al mare (titolo #progettazione-case-in-legno-su-misura che porta alla pagina a parte, 8/11/2026; su Google compare il concorrente MD Building Group) |
 | `/interior-design` | interior designer Roma | progetto interior design, render 3D casa |
 | `/chi-siamo` | impresa edile Roma (rafforza la Home) | impresa ristrutturazioni affidabile Roma |
 | `/studio-tecnico` | pratiche edilizie Roma, CILA Roma, SCIA Roma | studio tecnico ristrutturazioni Roma |
@@ -138,13 +139,13 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 |---|---|---|---|
 | 27/10/2026 | Detrazioni | Bonus casa al 50%: perché pagare entro il 31 dicembre 2026 (`/bonus-casa-50-pagare-entro-31-dicembre-2026`, parole chiave: bonus ristrutturazione 2026, detrazione 50% prima casa, bonus casa 2027 36%) + reel | pronto (22/10) |
 | 3/11 | Infissi | Roma Nord – scorrevole e vetrata a timpano | pronto |
-| 10/11 | Interni | **Quanto costa ristrutturare casa a Roma nel 2026? Prezzi ed esempi** (`/quanto-costa-ristrutturare-casa-roma`, Guide e costi; esempi 50/70/100 m² dal simulatore) – reel da fare | ✓ |
-| 17/11 | Detrazioni | da scrivere (es. ecobonus infissi: trasmittanza e ENEA) | da scrivere |
+| 10/11 | Interni | **Quanto costa ristrutturare casa a Roma nel 2026? Prezzi ed esempi** (`/quanto-costa-ristrutturare-casa-roma`, Guide e costi; esempi 50/70/100 m² dal simulatore) + reel (29/10) | ✓ |
+| 17/11 | Detrazioni | **Bonus mobili ed elettrodomestici 2026: come funziona dopo la ristrutturazione** (`/bonus-mobili-elettrodomestici-2026`, parole chiave: bonus mobili 2026, bonus elettrodomestici 2026, bonus mobili ristrutturazione, detrazione mobili 50%; fonti Agenzia delle Entrate) + reel | pronto (29/10/2026, online dal 9/11) |
 | 24/11 | Infissi | EUR – scorrevoli antracite e vetrata ad angolo | pronto |
-| 1/12 | Esterni | I nostri lavori: Rifacimento 700 m² di terrazzo a Roma San Pietro, via Gregorio VII (/rifacimento-terrazzo-roma-vista-san-pietro) | pronto (25/10/2026) |
-| 8/12 | Detrazioni | da scrivere (es. bonus mobili, documenti e bonifico parlante) | da scrivere |
+| 1/12 | Esterni | I nostri lavori: Rifacimento 700 m² di terrazzo a Roma San Pietro, via Gregorio VII (/rifacimento-terrazzo-roma-vista-san-pietro) + reel (5/11) | pronto (25/10/2026) |
+| 8/12 | Detrazioni | **IVA al 10% sui lavori di ristrutturazione: come funziona e quando spetta** (`/iva-agevolata-10-ristrutturazione`, parole chiave: IVA agevolata ristrutturazione, IVA 10% ristrutturazione, beni significativi IVA, IVA manutenzione straordinaria, IVA infissi 10%; fonti Agenzia delle Entrate) + reel (5/11) | ✓ (5/11, online il 23/11) |
 | 15/12 | Infissi | Corso Trieste – finto legno con monoblocco | pronto |
-| 22/12 | Case in legno | da scrivere | da scrivere |
+| 22/12 | Esterni | I nostri lavori: facciata in mosaico all'Aventino, 1.600 m² (`/rifacimento-facciata-mosaico-roma-aventino`, parole chiave: rifacimento facciata condominio Roma, facciata in mosaico, sostituzione mosaico facciata, restauro facciata mosaico Roma) + reel (voce maschile) | pronto (30/10/2026) – case in legno spostato al primo martedì libero |
 | 29/12 | Detrazioni | da scrivere (cosa cambia nel 2027) | da scrivere |
 | 5/1/2027 | Infissi (Guide e costi) | preventivo vero di 5 infissi Rehau Synego | pronto |
 | 12/1 | Interni | da scrivere | da scrivere |
@@ -155,7 +156,7 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 
 **Ogni articolo ha il suo reel** (voce Carina, sottotitoli, logo), montato quando si prepara l'articolo e programmato su Metricool per il suo martedì appena il video è online (vedi CLAUDE.md). **Tranne infissi e serramenti: mai sui social** (Eugenio, 21/10/2026): niente reel per gli articoli di infissi; in quelle settimane esce un contenuto della scorta di un altro settore (es. reel posa onice, carosello bagno Piazza Fiume). Reel degli articoli già pronti: bagno e detrazioni 2026 (articoli del 20/10); da montare: tutti gli articoli nuovi non di infissi.
 
-**Scorta articoli: 9 pronti su 26** (26/10/2026) (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
+**Scorta articoli: 12 pronti su 26** (5/11/2026) (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
 
 ## Google AI e ricerche da controllare (Eugenio, 23/10/2026)
 **Regola (Eugenio, 24/10/2026):** le modifiche SEO fatte il 23/10/2026 (simulatori con pagina propria, guida costi, prezzi nelle guide e in "Cosa ristrutturiamo", titoli che si aprono con link, D.M. 37/08, Dove lavoriamo a Roma) **restano come sono**: non si cambiano, si possono solo migliorare aggiungendo quando porta un vantaggio misurabile o chiaro.
@@ -220,3 +221,9 @@ Ogni voce che si apre con la descrizione (interni: "Cosa ristrutturiamo" e Guida
 
 - [x] 17/10/2026 – Icona del sito su fondo nero (`favicon-512.png`, `favicon.ico`) e logo dei dati strutturati aggiornato: Google la sostituisce nei risultati da solo, di solito in qualche giorno o settimana dopo la pubblicazione.
 - 23/10/2026: `/case-in-legno` ha 2 video su campeggi e villaggi in legno (sezione `#villaggi`) con dati strutturati VideoObject: parole chiave campeggio, agri-camping, glamping, villaggio turistico, case A-frame in bioedilizia
+
+- 8/11/2026 – Nuova pagina `/case-in-legno-difetti-costi-permessi-durata` dalle domande di Google "Le persone hanno chiesto anche" (screenshot di Eugenio). Parole chiave: case prefabbricate, difetti case prefabbricate in legno, progettazione tecnica casa prefabbricata, quanto costa una casa in legno al metro quadro, case in legno prezzi al grezzo, casa in legno grezzo avanzato, permessi casa in legno, quanti anni dura una casa in legno. Da segnalare in Search Console dopo la pubblicazione del 23/11.
+- 8/11/2026 – Nuova pagina `/progettazione-case-in-legno-su-misura`. Title "Progettazione case in legno su misura: clima e calcolo". Parole chiave: progettazione case in legno, casa in legno su misura, casa in legno in montagna, casa in legno al mare, progetto strutturale casa in legno costo, casa in legno carico neve, casa in legno zona sismica. Da segnalare in Search Console dopo la pubblicazione del 23/11.
+- 29/10/2026 – Nuova pagina `/case-in-legno-prefabbricate-come-sono-fatte` (catalogo tecnico di Eugenio). Parole chiave: case in legno prefabbricate come sono fatte, stratigrafia parete casa in legno, isolamento lana di roccia casa in legno, copertura casa in legno, fondazioni casa in legno costo, tempi costruzione casa in legno, case in legno marcatura CE, casa in legno abitazione residenziale, casa in legno genio civile NTC 2018, garanzia decennale casa in legno. Da segnalare in Search Console dopo la pubblicazione del 9/11.
+
+- 30/10/2026 – Search Console (email): "Dati strutturati Video", uploadDate senza fuso orario nei 2 VideoObject di `/case-in-legno` → corretto in `2026-10-23T12:00:00+02:00`. Dopo la pubblicazione del 9/11: in Search Console → Miglioramenti → Video → "Convalida correzione". Regola: date dei video sempre con ora e fuso (AAAA-MM-GGThh:mm:ss+01:00/+02:00).

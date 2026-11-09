@@ -18,7 +18,7 @@
 - **Servizi locali di Google (annunci "Verificata da Google"):** https://ads.google.com/localservices – **verificato al 100%** il 22/10/2026 (profilo Google collegato, offerte e budget, fatturazione, licenza commerciale completi). Si paga per contatto ricevuto.
   - Stato al 22/10/2026: servizi attivi 8/11 (consigliato da Claude spegnere "Fondamenta e cemento" e "Pedane e patii"); area coperta = Roma dentro e poco fuori il GRA (fuori: Olgiata, Monterotondo, Trigoria, Ostia, Castelli – consigliato di aggiungerli); offerte automatiche, budget medio 224 €/settimana (circa 970 €/mese); descrizione con "Prezzo migliore o equivalente" (consigliato toglierlo: stona con il posizionamento di pregio).
   - 22/10/2026: tolto "Prezzo migliore o equivalente"; caratteristiche = servizio professionale, preventivo gratuito, garanzia sulla lavorazione, garanzia di puntualità (+ consigliati preventivi gratuiti a domicilio e referenze). Budget: la consulente Google ha suggerito circa 150–160 € (settimanali); prova di 3–4 settimane, poi valutare costo per contatto e richieste utili.
-- **Link per lasciare una recensione Google:** https://g.page/r/CSlUfVvDiZqIEBM/review (pulsante "Lascia una recensione" nella Home, sezione contatti)
+- **Link per lasciare una recensione Google:** https://g.page/r/CSlUfVvDiZqIEBM/review (Eugenio la manda lui ai clienti dopo ogni lavoro; il pulsante "Lascia una recensione" della Home è stato **tolto il 27/10/2026** su sua richiesta: niente recensioni "a caso" dal sito)
 - **Facebook:** https://www.facebook.com/share/1CC9LcgweN/
 - **TikTok:** https://www.tiktok.com/@md_edil_group
 - **YouTube:** https://www.youtube.com/@md_edil_group
@@ -67,3 +67,7 @@ MD Edil Group vende ristrutturazioni di classe **premium / lusso** e cerca clien
 - **Sopralluogo e preventivo sono gratuiti** (confermato da Eugenio il 16/10/2026). Sul sito: "Sopralluogo e preventivo gratuiti" sopra i campi di invio dei tre simulatori.
 - **Orari dell'ufficio:** dal lunedì al sabato, dalle 8 alle 18, orario continuato (Eugenio, 20/10/2026). Inseriti nei dati per Google della Home (`openingHoursSpecification`) e in `llms.txt`. Devono coincidere con gli orari della scheda Google Business.
 - **Google Business:** sembra verificato (20/10/2026), da controllare insieme. **Servizi Locali:** ancora in verifica.
+
+- **Case in legno – sopralluogo** (Eugenio, 27/10/2026): per le case in legno il preventivo (simulato e definitivo) è gratuito, il **sopralluogo non è gratuito**. Mai scrivere "sopralluogo gratuito" per le case in legno.
+- **Case in legno – materiali e norme** (Eugenio, 29/10/2026): tutti i materiali usati hanno la marcatura CE europea; le strutture sono progettate come abitazioni residenziali secondo le norme europee e italiane (NTC 2018, Eurocodici) per essere presentate al Genio Civile. Non è una certificazione dell'impresa (niente ISO/SOA).
+- **Case in legno – tutela decennale** (Eugenio, 29/10/2026): per le abitazioni in legno a uso permanente vale la responsabilità decennale del costruttore (art. 1669 Codice Civile); garanzie di materiali, impianti e finiture nel contratto. Testo approvato nella sezione `#tutela-decennale-casa-in-legno`.

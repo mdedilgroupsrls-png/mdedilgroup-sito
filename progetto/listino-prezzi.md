@@ -26,7 +26,7 @@ Regole del documento: la posa della ceramica è in due sezioni (02.13 e 08.01) m
 | Bagni | Ogni m² oltre i 5 m² (Eugenio, 16/10/2026) | m² | 350,00 |
 | Muratura | Nuovi divisori in tramezzi | m² | 87,70 |
 | Muratura | Controtelaio porta scorrevole a scomparsa, fornitura e posa | cad. | 370,00 |
-| Muratura | Intonacatura grezza | m² | 26,50 |
+| Muratura | Intonacatura grezza – prezzo per **una mano**, scritto nella descrizione della voce (Eugenio, 9/11/2026) | m² | 26,50 |
 | Muratura | Massetto tradizionale sabbia-cemento | m² | 34,50 |
 | Muratura | (Posa ceramica fino a 60×60: uguale a "Pavimenti", non si conta due volte) | m² | 44,50 |
 | Aria condizionata | Predisposizione e installazione 1 motore + 2 split, fornitura esclusa | a corpo | 1.170,00 |
@@ -44,7 +44,7 @@ Regole del documento: la posa della ceramica è in due sezioni (02.13 e 08.01) m
 | Pavimenti | Posa parquet | m² | 55,00 |
 | Pavimenti | Porta battente: posa | cad. | 130,00 |
 | Pavimenti | Porta scorrevole: posa | cad. | 230,00 |
-| Cartongesso | Controsoffitto (orditura metallica, lastre 13 mm, giunti in due mani) | m² | 55,00 |
+| Cartongesso | Controsoffitto (orditura metallica, lastre 13 mm, giunti in due mani) – 65 € dal 9/11/2026 (Eugenio), prima 55 | m² | 65,00 |
 | Cartongesso | Divisorio piano, spessore 10 cm | m² | 75,00 |
 | Cartongesso | Velette e ripiani per LED | m | 85,00 |
 | Tinteggiature | Raschiatura pitture esistenti | m² | 3,00 |
@@ -109,6 +109,14 @@ Regole del simulatore (17/10/2026): ogni paragrafo si apre con Sì; le alternati
 
 ## Case in legno
 I prezzi delle case in legno sono **IVA inclusa**.
+
+**Progetto strutturale della casa in legno: da 60 € al m² + IVA** di superficie (Eugenio, 8/11/2026; "+ IVA" confermato da Eugenio l'8/11, diversamente dal simulatore case in legno che è IVA inclusa). Scritto solo nella pagina `/progettazione-case-in-legno-su-misura` (in /case-in-legno c'è solo il titolo che porta lì).
+
+**Stima al m² per la pagina `/case-in-legno-difetti-costi-permessi-durata`** (chiesta da Eugenio l'8/11/2026, calcolata da Claude con i prezzi del simulatore, IVA inclusa, sui m² utili del catalogo):
+- **Al grezzo avanzato (finita all'esterno, Eugenio 8/11/2026) = kit + lavori di montaggio**: da circa **600 €/m²** (Norway 605, Siver 640, Fjord 649, Montblanc 653) fino a circa **1.300 €/m²** (Barn Max Height 1.291, Barn Mini 1.218). Esempi: Barn Mini 25.938 €, Nord House 69.780 €, Montblanc 108.465 €.
+- **Chiavi in mano (sul sito, Eugenio 8/11/2026) = kit + montaggio + laminazione, Solar, pareti e finiture, elettrico, idrico, laminato, porte** (senza clima, isolamento aggiuntivo, aumento lunghezza): da circa **1.200 €/m²** (Norway 1.209, Siver e Montblanc 1.212) a circa **2.100 €/m²** (Barn Max Height 2.087). Esempi: Barn Mini 43.334 €, Nord House 137.102 €, Montblanc 201.262 €.
+- Nella pagina anche **la casa chiavi in mano più economica: Mini Barn Boutique 29.900 €** IVA inclusa (Eugenio, 8/11/2026: "prendi una delle strutture nostre… il prezzo minore").
+- A parte: fondazione 230 €/m² coperto, trasporto, progetto strutturale (da 60 €/m² + IVA), alloggio montatori, pratiche. Se cambiano i prezzi del simulatore, ricalcolare.
 
 ### Simulatore casa in legno (pagina `/case-in-legno`, dal 15/10/2026)
 Fonte: PDF di Eugenio "Md Listino case legno chiavi in mano" (Prosto House Europe, 01.02.2026). Importi in euro, **IVA inclusa** come il catalogo. Ogni modello ha i suoi prezzi: non mescolarli.
@@ -212,6 +220,7 @@ Calcolati con i prezzi del simulatore esterni, + IVA, per m² di facciata; ponte
 
 ### Prezzi dei lavori realizzati (Eugenio, 25/10/2026)
 
+- Posa del mosaico in facciata: **da 50 € al m²** + IVA (Eugenio, 30/10/2026). Scritto nell'articolo /rifacimento-facciata-mosaico-roma-aventino e nella sezione del lavoro in /rifacimento-facciata-roma. Non è una voce del simulatore esterni.
 - Terrazzo in via Gregorio VII, zona San Pietro, Roma: rifacimento completo di 700 m² (demolizione massetto e piastrelle, due strati di guaina, prova di allagamento, massetto 6 cm con pendenze, piastrelle con giunti di dilatazione) **180 € al m²**: scrivere solo così, senza "da" e senza parlare di IVA (Eugenio, 25/10/2026). Prezzo del lavoro, scritto solo nell'articolo `/rifacimento-terrazzo-roma-vista-san-pietro` e nella sezione "Un nostro lavoro" di `/impermeabilizzazione-terrazzo-roma`; il simulatore esterni resta con il suo listino.
 - **Infissi: si scrive solo "da 149 €"** (Eugenio, 25/10/2026): senza IVA, senza "a pezzo", senza misure (mai "fino a 1 m²"). Nel listino della pagina infissi, nel title, nella descrizione per Google e nella domanda sul costo (`DA_INFISSI` in `progetto/strumenti/guida_lavorazioni.js`). Il simulatore **non si cambia**: la finestra più piccola resta 200 € (Eugenio). Coprifili e imbotti sono compresi nel prezzo.
 - **Bagno** (Eugenio, 26/10/2026): nei testi e nelle descrizioni delle pagine si scrive "da 5.500 € IVA inclusa"; il simulatore resta a 6.500 € a bagno fino a 5 m² (non cambiarlo). I costi dei lavori veri (es. Porta Pia circa 6.500 €) restano quelli reali.

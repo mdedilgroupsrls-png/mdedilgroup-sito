@@ -87,6 +87,11 @@ VOCI = [
                   ('Ponteggio: ogni mese in più', eur(X['pon2'])),
                   ('Oneri della sicurezza', '8% dei lavori')]) +
              P('Prezzi al m² di facciata, IVA esclusa, dal listino del nostro simulatore per gli esterni.')),
+            ('lavoro-realizzato-facciata-mosaico-aventino', 'Un nostro lavoro: facciata in mosaico all’Aventino, 1.600 m²',
+             P('Rifacimento della facciata di un condominio all’Aventino, a Roma: ponteggio, demolizione di 1.600 m² di vecchio mosaico e posa del mosaico nuovo su tutta la superficie, con il mosaico a rilievo sulle fasce verticali. La posa del mosaico in facciata parte da 50 € al m² + IVA.') +
+             FIG('/img/facciata-mosaico-aventino-prima.webp', 'Facciata condominiale in mosaico all’Aventino, Roma, prima del rifacimento', 'Prima: la facciata con il vecchio mosaico.') +
+             FIG('/img/facciata-mosaico-aventino-dopo.webp', 'Facciata condominiale all’Aventino, Roma, dopo la posa del mosaico nuovo', 'Dopo: la stessa facciata con il mosaico nuovo.') +
+             P('<a href="/rifacimento-facciata-mosaico-roma-aventino">Il lavoro passo per passo, con prima e dopo e il video →</a>')),
             ('risanamento-pareti-facciata', 'Risanamento delle pareti: intonaco, crepe e infiltrazioni',
              P('Prima di ogni finitura si rimuove ciò che è rovinato e si ricostruisce una superficie sana, così crepe e infiltrazioni non tornano.') +
              TAB([('Spicconatura dell’intonaco che si stacca', eur(X['spicc']) + ' al m²'),
@@ -140,7 +145,7 @@ VOCI = [
         foto=('/img/terrazzo-roma-san-pietro-pavimento-finito.webp', 'Terrazzo rifatto a Roma con nuovo pavimento in gres effetto cotto e vista sulla cupola di San Pietro', 'Un nostro terrazzo a Roma, rifatto da zero, con vista su San Pietro.'),
         sezioni=[
             ('lavoro-realizzato-terrazzo-san-pietro', 'Un nostro lavoro: 700 m² di terrazzo a San Pietro, via Gregorio VII',
-             P('Ristrutturazione completa di 700 m² di terrazzo in via Gregorio VII, zona San Pietro: demolizione del massetto con le vecchie piastrelle, due strati di guaina, prova di allagamento (nessuna perdita), nuovo massetto di circa 6 cm con le pendenze, nuove piastrelle con giunti di dilatazione. Prezzo di questo lavoro: 180 € al m².') +
+             P('Ristrutturazione completa di 700 m² di terrazzo in via Gregorio VII, zona San Pietro: demolizione del massetto con le vecchie piastrelle, due strati di guaina, prova di allagamento (nessuna perdita), nuovo massetto di circa 6 cm con le pendenze, nuove piastrelle con giunti di dilatazione. Prezzo di questo lavoro: 180 € al m² + IVA.') +
              FIG('/img/terrazzo-roma-san-pietro-demolizione-pavimento.webp', 'Demolizione del vecchio pavimento del terrazzo prima dell’impermeabilizzazione, Roma', 'Prima: il vecchio pavimento demolito fino al sottofondo.') +
              FIG('/img/terrazzo-roma-san-pietro-guaina-bituminosa.webp', 'Rotoli di guaina bituminosa pronti per l’impermeabilizzazione del terrazzo a Roma', 'Durante: i rotoli di guaina bituminosa pronti per la posa.') +
              P('<a href="/rifacimento-terrazzo-roma-vista-san-pietro">Il lavoro passo per passo, con tutte le foto →</a>')),

@@ -1,6 +1,6 @@
 # Post carosello – Bagno struttura ricettiva Piazza Fiume
 
-Stato: **da programmare** (contenuto della scorta; foto mandate da Eugenio il 20/10/2026)
+Stato: **programmato sabato 28/11/2026 ore 11:09** (Metricool 414617115; scheda Google post con foto 414617154 ore 11:12)
 Tipo: post carosello 7 foto 1080×1350 (non reel). Instagram post normale, Facebook, LinkedIn, Threads, Google Business. Niente YouTube.
 Posizione: 📍 Roma, Lazio, Italia
 Link: https://mdedilgroup.it/ristrutturazione-bagno-roma#bagno-piazza-fiume (simulatore interni)

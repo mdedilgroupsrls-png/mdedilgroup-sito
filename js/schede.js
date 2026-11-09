@@ -21,19 +21,27 @@
     '.sk-hint{margin:0;padding:8px 14px 0;font:400 12px Manrope,sans-serif;color:#8A8478;text-align:center}' +
     '.sk-bot{flex:0 0 auto;display:flex;flex-wrap:wrap;gap:8px;padding:10px 12px 12px;border-top:1px solid #2A2722}' +
     '.sk-go{flex:1 1 160px;text-align:center;background:#C9A24A;color:#0E0D0B;padding:12px 14px;font:600 12px Manrope,sans-serif;letter-spacing:.14em;text-decoration:none;border:0;cursor:pointer}' +
+    '.sk-link{margin:0;padding:6px 14px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;font:400 12.5px Manrope,sans-serif}.sk-link a,.sk-link button{color:#C9A24A;background:none;border:0;padding:4px 0;font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px}' +
     '.sk-go.alt{background:none;border:1px solid #C9A24A;color:#C9A24A}' +
     '@media (min-width:900px){.sk-box{max-width:min(100%,700px)}.sk-img{max-height:calc(100dvh - 230px)}}@media (prefers-reduced-motion:reduce){.sk,.sk-box{transition:none}}';
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
-  var el, img, title, go, last;
+  var el, img, title, go, lk, last, aperta;
   function build() {
     el = document.createElement('div'); el.className = 'sk'; el.hidden = true;
     el.setAttribute('role', 'dialog'); el.setAttribute('aria-modal', 'true'); el.setAttribute('aria-labelledby', 'skT');
     el.innerHTML = '<div class="sk-box"><div class="sk-top"><h2 id="skT"></h2><button type="button" class="sk-x" aria-label="Chiudi la scheda">×</button></div>' +
-      '<div class="sk-body"><img class="sk-img" alt=""><p class="sk-hint">Foto e planimetria. Allarga con due dita per leggere le misure.</p></div>' +
+      '<div class="sk-body"><img class="sk-img" alt=""><p class="sk-hint">Foto e planimetria. Allarga con due dita per leggere le misure.</p>' +
+      '<p class="sk-link"><a class="sk-lk" href="#">🔗 Link a questa casa</a><button type="button" class="sk-cp">Copia il link</button></p></div>' +
       '<div class="sk-bot"><a class="sk-go" href="#">SIMULA IL PREZZO →</a><button type="button" class="sk-go alt">TORNA AL CATALOGO</button></div></div>';
     document.body.appendChild(el);
-    img = el.querySelector('.sk-img'); title = el.querySelector('#skT'); go = el.querySelector('a.sk-go');
+    img = el.querySelector('.sk-img'); title = el.querySelector('#skT'); go = el.querySelector('a.sk-go'); lk = el.querySelector('.sk-lk');
+    // "Copia il link": l'indirizzo della casa da mandare su WhatsApp o per email (Eugenio, 28/10/2026)
+    el.querySelector('.sk-cp').addEventListener('click', function () {
+      var b = this, u = lk.href, ok = function () { b.textContent = 'Link copiato ✓'; setTimeout(function () { b.textContent = 'Copia il link'; }, 2000); };
+      if (navigator.clipboard) navigator.clipboard.writeText(u).then(ok, function () { prompt('Copia il link:', u); });
+      else prompt('Copia il link:', u);
+    });
     el.addEventListener('click', function (e) { if (e.target === el || e.target.closest('.sk-x') || e.target.closest('button.alt')) close(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !el.hidden) close(); });
   }
@@ -45,6 +53,8 @@
     title.textContent = NOMI[slug];
     if (window.MDStat) MDStat('scheda-casa-' + slug, true);
     img.src = '/img/scheda-' + slug + '.webp';
+    aperta = slug;
+    lk.href = 'https://mdedilgroup.it/case-in-legno#casa-' + slug;
     img.alt = 'Scheda del modello ' + NOMI[slug] + ': foto della casa e planimetria';
     go.onclick = null;
     if (typeof opt.simula === 'function') { go.href = '#'; go.onclick = function (e) { e.preventDefault(); close(); opt.simula(); }; }
@@ -55,6 +65,7 @@
   }
   function close() {
     el.classList.remove('on'); document.documentElement.style.overflow = '';
+    if (location.hash === '#casa-' + aperta) history.replaceState(null, '', location.pathname + location.search);
     setTimeout(function () { el.hidden = true; if (last && last.focus) last.focus(); }, 250);
   }
   window.MDScheda = { open: open, close: close };
