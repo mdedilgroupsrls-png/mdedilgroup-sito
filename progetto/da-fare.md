@@ -7,6 +7,7 @@ Aggiornato al 14/10/2026, giorno in cui il sito Nero & Oro è andato online.
 - Piano Personal: 1.000 crediti al mese, periodo dal 15 al 14. Pubblicazione = 15 crediti; banda 20 crediti/GB; 2 crediti ogni 10.000 richieste.
 - 26/10/2026: **485 crediti disponibili** fino al 14/11. Piano fino al 14/11: una sola pubblicazione, lunedì 9/11 (15 crediti) se ci sono modifiche; il resto resta per le visite (~10 crediti al giorno, stima).
 - **Pubblicazioni ogni due settimane** (Eugenio, 26/10/2026): ultima pubblicazione **26/10/2026**; prossime lunedì 9/11, 23/11, 7/12, 21/12… Aggiornare qui la data a ogni pubblicazione.
+- 9/11/2026 (lunedì): **pubblicazione NON fatta**, l'ultimo dato dei crediti è del 26/10 (più di 7 giorni). Stima: 485 − 14 giorni × 10 ≈ 345 crediti. Chiesta a Eugenio la foto di Usage & billing: si pubblica appena la manda (42 commit pronti su lavori-in-corso). Reel #7 (gio 26/11) e #8 (sab 21/11) si programmano dopo la pubblicazione: i video non sono ancora online né su Drive.
 - Regola: mai pubblicare se i crediti rimasti sono sotto 200; dato più vecchio di 7 giorni → chiedere la foto di Usage & billing prima di pubblicare.
 - [x] 26/10/2026 – Foto della Home alleggerite (sì di Eugenio, "l'aspetto non si cambia"): 19 modelli di casa con versione -560 per i telefoni (sizes giusto: 43vw), 16 foto ricompresse con somiglianza SSIM ≥ 0,985 (a vista uguali). Home scorsa tutta da telefono: 5,3 → 4,45 MB. Va online con la prossima pubblicazione (9/11).
 
