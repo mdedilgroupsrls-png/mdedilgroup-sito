@@ -198,6 +198,7 @@ Ogni voce che si apre con la descrizione (interni: "Cosa ristrutturiamo" e Guida
 - **Mai detrazioni e bonus.** Mai reel.
 
 ## Idee di articoli da proporre (ricordarle a Eugenio quando chiede "che articolo si può fare")
+- **Bonus casa 2027** (10/11/2026, segnalazione di Eugenio): il Ddl di Bilancio 2027 approvato in CdM il 28/10/2026 conferma 50% prima casa / 36% altri immobili, tetto 96.000 €, bonus mobili 50% su 5.000 €, niente ecobonus al 65%; **non ancora legge** (approvazione del Parlamento entro fine dicembre; senza proroga 36% / 30%). Scrivere l'articolo **solo dopo la pubblicazione in Gazzetta Ufficiale** (gennaio 2027), con le fonti ufficiali.
 - **Guida ai costi di tapparelle e zanzariere** (Eugenio, 21/10/2026): un altro preventivo di esempio, separato da quello degli infissi, con tapparelle in alluminio coibentato e zanzariere (misure dal foglio di Eugenio del 21/10: tapparelle 110×155 ×2, 106,5×155, 150×240 ×2, oppure un esempio nuovo che manderà lui). Da fare più avanti, quando lo chiede.
 
 ## Domande aperte per Eugenio (aggiornare quando risponde; **richiedere quelle senza risposta**, ma **al massimo 3-4 domande per messaggio**, messaggi brevi)
