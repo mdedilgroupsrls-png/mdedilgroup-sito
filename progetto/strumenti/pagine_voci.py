@@ -28,6 +28,18 @@ def prezzi_esterni():
 
 
 X = prezzi_esterni()
+
+
+# prezzi del simulatore interni (js/ristrutturazione.js), IVA inclusa
+def prezzi_interni():
+    src = open(os.path.join(RADICE, 'js/ristrutturazione.js'), encoding='utf-8').read()
+    return {m.group(1): float(m.group(2)) for m in re.finditer(r"id: '(\w+)'[^{}]*?\bp: ([\d.]+)", src)}
+
+
+I = prezzi_interni()
+quadro_el = lambda mq: 750 if mq <= 70 else 1000 if mq <= 100 else 1000 + -(-(mq - 100) // 20) * 250
+smont_el = lambda mq: I['disEl'] + (0 if mq <= 70 else -(-(mq - 70) // 30) * 250)
+EL = {mq: (mq * I['punti'], quadro_el(mq), smont_el(mq)) for mq in (50, 70, 100)}
 TAB = lambda righe: ('<div style="overflow-x: auto; margin: 0 0 18px"><table style="width: 100%; border-collapse: collapse; font-size: 15px">' +
                      ''.join('<tr><td style="padding: 10px 8px; border-bottom: 1px solid #2A2722">' + a + '</td><td style="padding: 10px 8px; border-bottom: 1px solid #2A2722; text-align: right; white-space: nowrap">' + b + '</td></tr>' for a, b in righe) +
                      '</table></div>')
@@ -67,6 +79,49 @@ ZONE = ('Lavoriamo in tutte le zone di Roma e in provincia: a Roma Nord (Parioli
         'Il sopralluogo è gratuito, la sede operativa è a Monterotondo.')
 
 VOCI = [
+    dict(
+        file='rifacimento-impianto-elettrico-roma', madre='ristrutturazioni-interni', nome_madre='Ristrutturazioni interni', briciola='IMPIANTO ELETTRICO',
+        title='Rifacimento impianto elettrico a Roma: costi e segnali | MD Edil Group',
+        desc='Rifacimento dell’impianto elettrico di casa a Roma: %s a punto luce, quadro da %s, esempi per 50, 70 e 100 m² IVA inclusa e i segnali che l’impianto va rifatto.' % (eur(I['punti']), eur(750)),
+        ey='RISTRUTTURAZIONI INTERNI · IMPIANTO ELETTRICO',
+        h1='Rifacimento dell’impianto elettrico a Roma: quando serve e quanto costa',
+        breve=('Con i prezzi del nostro simulatore, rifare l’impianto elettrico di un appartamento a Roma costa <b style="color: #E2C373">%s per ogni punto luce o presa</b>, più il nuovo quadro (da %s) e lo smontaggio del vecchio impianto (da %s), <b>IVA inclusa</b>. '
+               'Per una casa di 70 m² si arriva a circa <b>%s</b>.') % (eur(I['punti']), eur(750), eur(I['disEl']), eur(sum(EL[70]))),
+        intro='Un impianto elettrico vecchio non si vede, ma si sente: il salvavita che scatta, le prese che non bastano mai, le ciabatte ovunque. Quando si ristruttura casa è il momento giusto per rifarlo, perché le tracce nei muri si chiudono insieme alle altre opere. Lo realizziamo con tecnici abilitati e lo consegniamo con la dichiarazione di conformità.',
+        foto=('/img/soggiorno-cantiere.webp', 'Cantiere di ristrutturazione di un appartamento a Roma con impianto elettrico in corso', 'Un nostro cantiere: impianti in corso prima dei controsoffitti.'),
+        sezioni=[
+            ('segnali-impianto-elettrico-da-rifare', 'Cinque segnali che l’impianto elettrico va rifatto',
+             '<ul style="margin: 0 0 16px; padding-left: 22px">'
+             '<li><b>Il salvavita scatta spesso</b> o, peggio, non c’è un interruttore differenziale nel quadro.</li>'
+             '<li><b>Prese senza messa a terra</b>, con due soli fori, o prese bruciacchiate e calde al tatto.</li>'
+             '<li><b>Fili in stoffa o tubi esterni</b> sui muri: sono segni di un impianto di molti decenni fa.</li>'
+             '<li><b>Prese e punti luce che non bastano</b>: ciabatte e prolunghe fisse in ogni stanza.</li>'
+             '<li><b>Nessuna dichiarazione di conformità</b>: senza, l’impianto non è documentato e può servire per vendere, affittare o allacciare nuove utenze.</li></ul>' +
+             P('Se riconosci uno di questi segnali, conviene farlo controllare: durante il sopralluogo gratuito verifichiamo quadro, prese e linee e ti diciamo se basta adeguarlo o se va rifatto.')),
+            ('prezzi-rifacimento-impianto-elettrico', 'Quanto costa rifare l’impianto elettrico: i prezzi',
+             TAB([('Punto luce o presa (linee, scatole, frutti tipo BTicino e opere murarie)', eur(I['punti']) + ' a punto'),
+                  ('Nuovo quadro elettrico fino a 70 m² di casa', eur(750)),
+                  ('Nuovo quadro elettrico fino a 100 m², poi 250 € ogni 20 m² in più', eur(1000)),
+                  ('Smontaggio del vecchio impianto fino a 70 m², poi 250 € ogni 30 m² in più', eur(I['disEl']))]) +
+             P('Prezzi IVA inclusa dal listino del nostro simulatore per gli interni. Per orientarti, in una casa serve circa un punto luce o presa per ogni metro quadro.')),
+            ('esempi-costo-impianto-elettrico', 'Esempi: casa da 50, 70 e 100 m²',
+             TAB([('%d m² · %d punti, quadro e smontaggio' % (mq, mq), eur(sum(EL[mq]))) for mq in (50, 70, 100)]) +
+             P('Calcolo con un punto per ogni m² di casa, il quadro e lo smontaggio del vecchio impianto. Non comprende rasature e pitture dopo le tracce, che trovi a parte nel simulatore, né lampadari e corpi illuminanti.')),
+            ('dichiarazione-di-conformita-impianto-elettrico', 'Norme e dichiarazione di conformità',
+             P('L’impianto viene realizzato da tecnici abilitati e consegnato con la <b>dichiarazione di conformità</b> prevista dal D.M. 37/2008: è il documento che attesta che l’impianto è fatto a regola d’arte, e serve anche per le pratiche e per i bonus.') +
+             P('Il rifacimento dell’impianto elettrico, dentro una ristrutturazione, rientra nelle spese del bonus ristrutturazioni: trovi le regole nella nostra <a href="/detrazioni-ristrutturazione-infissi-2026">guida alle detrazioni 2026</a>.')),
+            ('impianto-elettrico-e-ristrutturazione', 'Rifarlo durante la ristrutturazione',
+             P('Il momento migliore per rifare l’impianto è durante una ristrutturazione: le tracce nei muri si aprono e si chiudono insieme alle altre opere, e con i controsoffitti in cartongesso si possono aggiungere faretti e strisce LED senza rompere i soffitti.') +
+             P('Nel <a href="/simulatore-online-costi-ristrutturazioni-interni">simulatore della ristrutturazione</a> trovi l’impianto elettrico insieme a tutte le altre voci, con il totale della tua casa.')),
+            ('zone-roma-impianto-elettrico', 'Dove lavoriamo a Roma', P(ZONE)),
+        ],
+        faq=[('Quanto costa rifare l’impianto elettrico di una casa di 70 m²?', 'Con i prezzi del nostro simulatore, circa %s IVA inclusa: 70 punti luce e prese a %s l’uno, il nuovo quadro e lo smontaggio del vecchio impianto. Rasature e pitture a parte.' % (eur(sum(EL[70])), eur(I['punti']))),
+             ('Come capisco se l’impianto elettrico va rifatto?', 'I segnali più comuni sono il salvavita che scatta spesso o assente, prese senza messa a terra, fili in stoffa o tubi esterni, poche prese e nessuna dichiarazione di conformità. Con il sopralluogo gratuito lo verifichiamo noi.'),
+             ('Il nuovo impianto ha la dichiarazione di conformità?', 'Sì: lo realizzano tecnici abilitati e lo consegniamo con la dichiarazione di conformità prevista dal D.M. 37/2008.'),
+             ('Si può rifare l’impianto senza rifare tutta la casa?', 'Sì, ma le tracce nei muri vanno poi chiuse, rasate e pitturate: per questo conviene farlo insieme agli altri lavori di ristrutturazione.')],
+        sim=('/simulatore-online-costi-ristrutturazioni-interni', 'CALCOLA IL COSTO DELLA TUA CASA'),
+        nota='Prezzi del listino MD Edil Group per gli interni, IVA inclusa, aggiornati al 12/11/2026: stime indicative, il prezzo definitivo si conferma dopo il sopralluogo gratuito. Tutti i lavori interni nella pagina <a href="/ristrutturazioni-interni">ristrutturazione di appartamenti a Roma</a>.',
+    ),
     dict(
         file='rifacimento-facciata-roma', madre='ristrutturazioni-esterni', nome_madre='Ristrutturazioni esterni', briciola='FACCIATE',
         title='Rifacimento facciata a Roma: prezzi al m² e condomini | MD Edil Group',
@@ -241,14 +296,13 @@ def costruisci(v):
            '<a href="/#contatti" style="border: 1px solid #C9A24A; color: #C9A24A; padding: 16px 26px; font-weight: 600; font-size: 13px; letter-spacing: 0.14em">RICHIEDI IL SOPRALLUOGO</a>\n</div>\n'
            '<h2 style="margin: 48px 0 16px; font-family: \'Urbanist\', sans-serif; font-weight: 400; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.15">Domande frequenti</h2>\n'
            '<div class="faq">%s</div>\n'
-           '<p style="margin: 24px 0 0; font-size: 14px; color: #8A8478">Prezzi del listino MD Edil Group per gli esterni, IVA esclusa, aggiornati al 25/10/2026: stime indicative, il prezzo definitivo si conferma dopo il sopralluogo gratuito. '
-           'Tutti i lavori esterni nella pagina <a href="/%s">ristrutturazione di facciate e terrazzi a Roma</a>.</p>\n'
+           '<p style="margin: 24px 0 0; font-size: 14px; color: #8A8478">%s</p>\n'
            '</div>\n</article>') % (v['madre'], e(v['nome_madre'].upper()), e(v['briciola']), e(v['ey']), e(v['h1']), v['breve'], e(v['intro']), foto,
-                                    sezioni, v['sim'][0], e(v['sim'][1]), faq, v['madre'])
+                                    sezioni, v['sim'][0], e(v['sim'][1]), faq, v.get('nota', 'Prezzi del listino MD Edil Group per gli esterni, IVA esclusa, aggiornati al 25/10/2026: stime indicative, il prezzo definitivo si conferma dopo il sopralluogo gratuito. Tutti i lavori esterni nella pagina <a href="/%s">ristrutturazione di facciate e terrazzi a Roma</a>.' % v['madre']))
     i = t.index('<section style="padding: 230px')
     j = t.index('</article>') + len('</article>')
     t = t[:i] + art + t[j:]
-    t = t.replace('<a href="/ristrutturazioni-esterni" style="color: #F3EFE7">', '<a href="/ristrutturazioni-esterni" style="color: #C9A24A">', 1)
+    t = t.replace('<a href="/%s" style="color: #F3EFE7">' % v['madre'], '<a href="/%s" style="color: #C9A24A">' % v['madre'], 1)
     open(os.path.join(RADICE, v['file'] + '.html'), 'w', encoding='utf-8').write(t)
     print('Pagina:', v['file'] + '.html')
 

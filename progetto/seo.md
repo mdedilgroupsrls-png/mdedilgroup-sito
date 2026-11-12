@@ -146,9 +146,9 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 | 8/12 | Detrazioni | **IVA al 10% sui lavori di ristrutturazione: come funziona e quando spetta** (`/iva-agevolata-10-ristrutturazione`, parole chiave: IVA agevolata ristrutturazione, IVA 10% ristrutturazione, beni significativi IVA, IVA manutenzione straordinaria, IVA infissi 10%; fonti Agenzia delle Entrate) + reel (5/11) | ✓ (5/11, online il 23/11) |
 | 15/12 | Infissi | Corso Trieste – finto legno con monoblocco | pronto |
 | 22/12 | Esterni | I nostri lavori: facciata in mosaico all'Aventino, 1.600 m² (`/rifacimento-facciata-mosaico-roma-aventino`, parole chiave: rifacimento facciata condominio Roma, facciata in mosaico, sostituzione mosaico facciata, restauro facciata mosaico Roma) + reel (voce maschile) | pronto (30/10/2026) – case in legno spostato al primo martedì libero |
-| 29/12 | Detrazioni | da scrivere (cosa cambia nel 2027) | da scrivere |
+| 29/12 | Interni | **Rifacimento dell’impianto elettrico a Roma: quando serve e quanto costa** (`/rifacimento-impianto-elettrico-roma`, pagina della voce usata come articolo, Guide e costi; parole chiave: rifacimento impianto elettrico Roma, costo impianto elettrico casa, impianto elettrico da rifare, prezzo punto luce, dichiarazione di conformità impianto elettrico) + reel | pronto (12/11/2026) – scambiato con detrazioni: l'articolo 2027 aspetta la legge in Gazzetta |
 | 5/1/2027 | Infissi (Guide e costi) | preventivo vero di 5 infissi Rehau Synego | pronto |
-| 12/1 | Interni | da scrivere | da scrivere |
+| 12/1 | Detrazioni | **Bonus casa 2027: cosa cambia** – da scrivere solo dopo la pubblicazione della legge di Bilancio 2027 in Gazzetta Ufficiale (fine dicembre), in tempo per la pubblicazione del 4/1 | da scrivere |
 | 19/1 | Infissi | palazzina con il Superbonus a L'Aquila | pronto |
 | 26/1 | Detrazioni | da scrivere | da scrivere |
 | 2/2 | Infissi | villa bifamiliare a Trigoria | pronto |
@@ -156,7 +156,7 @@ Il taccuino è l'**ultima sezione della Home**, dopo Contatti e prima del footer
 
 **Ogni articolo ha il suo reel** (voce Carina, sottotitoli, logo), montato quando si prepara l'articolo e programmato su Metricool per il suo martedì appena il video è online (vedi CLAUDE.md). **Tranne infissi e serramenti: mai sui social** (Eugenio, 21/10/2026): niente reel per gli articoli di infissi; in quelle settimane esce un contenuto della scorta di un altro settore (es. reel posa onice, carosello bagno Piazza Fiume). Reel degli articoli già pronti: bagno e detrazioni 2026 (articoli del 20/10); da montare: tutti gli articoli nuovi non di infissi.
 
-**Scorta articoli: 12 pronti su 26** (5/11/2026) (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
+**Scorta articoli: 13 pronti su 26** (12/11/2026) (aggiornare a ogni articolo nuovo). Il materiale nuovo di Eugenio prende il primo martedì libero della sua pagina, rispettando l'alternanza.
 
 ## Google AI e ricerche da controllare (Eugenio, 23/10/2026)
 **Regola (Eugenio, 24/10/2026):** le modifiche SEO fatte il 23/10/2026 (simulatori con pagina propria, guida costi, prezzi nelle guide e in "Cosa ristrutturiamo", titoli che si aprono con link, D.M. 37/08, Dove lavoriamo a Roma) **restano come sono**: non si cambiano, si possono solo migliorare aggiungendo quando porta un vantaggio misurabile o chiaro.
@@ -186,7 +186,7 @@ Eugenio ha cercato "ristrutturazione casa a Roma": la risposta AI di Google cita
 
 ## Pagine delle voci (Eugenio, 23/10/2026)
 Ogni voce che si apre con la descrizione (interni: "Cosa ristrutturiamo" e Guida alle lavorazioni; esterni: Guida; infissi) avrà una **pagina sua**. Le pagine madri restano **identiche**, simulatori e guide **completi, senza nascondere nessuna voce**: si aggiunge solo "Scopri di più →" in fondo alla descrizione. Ogni pagina: testo originale lungo (mai la descrizione copiata), prezzo "da" dal listino del suo simulatore, domande frequenti, foto vere (o segnaposto `[FOTO …]`), link al simulatore, sitemap, llms.txt, Approfondimenti della pagina madre. Strumento: `progetto/strumenti/pagine_voci.py` (testi in `VOCI`, prezzi letti dal simulatore). Ritmo: **2 pagine a settimana** (compito del giovedì, dopo l'articolo della settimana).
-- **Principali, con reel** (sì di Eugenio, 23/10/2026): [ ] Ristrutturazione completa casa/appartamento · [ ] Ristrutturazione ville e case indipendenti · [ ] Ristrutturazione cucina · [x] Rifacimento facciata (25/10/2026, `/rifacimento-facciata-roma`, reel da fare) · [ ] Cappotto termico · [x] Impermeabilizzazione terrazzi e balconi (25/10/2026, `/impermeabilizzazione-terrazzo-roma`, reel da fare) · [ ] Impianto elettrico. (Bagno: pagina già fatta.)
+- **Principali, con reel** (sì di Eugenio, 23/10/2026): [x] Impianto elettrico (`/rifacimento-impianto-elettrico-roma`, 12/11/2026, anche articolo del 29/12) · [ ] Ristrutturazione completa casa/appartamento · [ ] Ristrutturazione ville e case indipendenti · [ ] Ristrutturazione cucina · [x] Rifacimento facciata (25/10/2026, `/rifacimento-facciata-roma`, reel da fare) · [ ] Cappotto termico · [x] Impermeabilizzazione terrazzi e balconi (25/10/2026, `/impermeabilizzazione-terrazzo-roma`, reel da fare) · [ ] Impianto elettrico. (Bagno: pagina già fatta.)
 - **Secondarie, senza reel:** [ ] Demolizioni e rimozioni · [ ] Opere murarie · [ ] Cartongesso · [ ] Rasature e tinteggiature · [ ] Impianto idrico e riscaldamento · [ ] Impianto gas · [ ] Climatizzazione · [ ] Progetto e pratiche CILA/SCIA · [ ] Ponteggi e cantiere facciate · [ ] Lattonerie, grondaie e ringhiere · [ ] Risanamento facciate (intonaco e calcestruzzo).
 - **Infissi, senza reel e mai sui social:** [ ] Infissi in PVC Rehau Synego · [ ] Scorrevoli Synego Slide · [ ] Tapparelle in alluminio coibentato · [ ] Zanzariere.
 - **Niente pagina:** oneri di cantiere, smaltimento rifiuti (nessuno li cerca, pagina troppo povera).

@@ -12,6 +12,7 @@ const PAGINE = [
   { js: 'js/ristrutturazione.js', html: 'ristrutturazioni-interni.html', titolo: 'Guida alle lavorazioni di ristrutturazione',
     intro: 'Tutte le lavorazioni del nostro simulatore, spiegate una per una: cosa comprendono, quando servono, come si misurano e quanto costano. Le eseguiamo a Roma e in tutto il Lazio, con tecnici abilitati e impianti certificati.',
     prezzi: true, iva: ', IVA inclusa',
+    pagine: { 'impianto-elettrico': ['/rifacimento-impianto-elettrico-roma', 'Rifacimento dell’impianto elettrico a Roma: quando serve e quanto costa'] },
     notaPrezzi: 'Prezzi del nostro listino, IVA inclusa, per la sola manodopera dove la fornitura dei materiali è esclusa (lo trovi scritto in ogni paragrafo). Per i lavori in centro storico o in ZTL si aggiunge il 5%. Il prezzo definitivo si conferma dopo il sopralluogo gratuito.' },
   { js: 'js/esterni.js', html: 'ristrutturazioni-esterni.html', titolo: 'Guida alle lavorazioni su facciate, cappotti e terrazzi',
     intro: 'Le lavorazioni del simulatore per facciate, cappotto termico, terrazzi e balconi, spiegate una per una: cosa comprendono, quando servono, come si misurano e quanto costano. Lavoriamo a Roma e nel Lazio per condomini e case private.',
