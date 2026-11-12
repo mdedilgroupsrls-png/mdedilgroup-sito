@@ -80,6 +80,40 @@ ZONE = ('Lavoriamo in tutte le zone di Roma e in provincia: a Roma Nord (Parioli
 
 VOCI = [
     dict(
+        file='controsoffitti-cartongesso-roma', madre='ristrutturazioni-interni', nome_madre='Ristrutturazioni interni', briciola='CARTONGESSO',
+        title='Controsoffitti e pareti in cartongesso a Roma: prezzi | MD Edil Group',
+        desc='Controsoffitto in cartongesso a Roma a %s al m², pareti divisorie a %s al m² e velette per luci LED a %s al metro, IVA inclusa. Esempi e domande.' % (eur(I['ctrSof']), eur(I['divCar']), eur(I['velette'])),
+        ey='RISTRUTTURAZIONI INTERNI · CARTONGESSO',
+        h1='Controsoffitti e pareti in cartongesso a Roma: prezzi, usi ed esempi',
+        breve=('Con i prezzi del nostro simulatore, a Roma il <b style="color: #E2C373">controsoffitto in cartongesso costa %s al m²</b>, la parete divisoria %s al m² e le velette per le luci LED %s al metro lineare, <b>IVA inclusa</b>. Rasatura e pittura a parte.') % (eur(I['ctrSof']), eur(I['divCar']), eur(I['velette'])),
+        intro='Il cartongesso è il modo più rapido per cambiare un ambiente senza opere pesanti: abbassa un soffitto per nascondere impianti e tubazioni, crea luce indiretta con strisce LED, divide una stanza in due in pochi giorni. Lo usiamo in quasi tutte le nostre ristrutturazioni di appartamenti e ville a Roma.',
+        foto=('/img/dettaglio-led.webp', 'Corridoio con controsoffitto in cartongesso e profili LED a scomparsa in un appartamento a Roma', 'Controsoffitto in cartongesso con profili LED a scomparsa, in un nostro cantiere.'),
+        sezioni=[
+            ('prezzi-cartongesso', 'I prezzi del cartongesso',
+             TAB([('Controsoffitto: struttura metallica, lastre da 13 mm, giunti stuccati in due mani', eur(I['ctrSof']) + ' al m²'),
+                  ('Parete divisoria spessa 10 cm, lastre sui due lati', eur(I['divCar']) + ' al m²'),
+                  ('Velette e mensole sagomate per strisce LED', eur(I['velette']) + ' al metro')]) +
+             P('Prezzi IVA inclusa dal listino del nostro simulatore per gli interni. Rasatura e pittura si aggiungono a parte, come per le altre pareti.')),
+            ('controsoffitto-cartongesso-a-cosa-serve', 'Controsoffitto: a cosa serve',
+             P('Il controsoffitto abbassa il soffitto di qualche centimetro e crea uno spazio dove passano impianti elettrici, tubazioni del clima e ventilazione. Permette di inserire faretti incassati e profili LED senza tracce nel solaio, e migliora l’acustica degli ambienti.') +
+             P('Si usa spesso in corridoi, bagni e cucine, dove nasconde le tubazioni, e nei soggiorni per disegnare la luce.')),
+            ('parete-divisoria-cartongesso', 'Pareti divisorie: una stanza in più in pochi giorni',
+             P('Una parete in cartongesso spessa 10 cm si monta in poco tempo, senza macerie e senza caricare il solaio come una parete in muratura. Dentro passano prese, interruttori e tubazioni, e si possono ricavare nicchie e librerie.')),
+            ('esempi-costo-cartongesso', 'Esempi di costo',
+             TAB([('Soggiorno di 30 m²: controsoffitto e 12 m di velette LED', eur(30 * I['ctrSof'] + 12 * I['velette'])),
+                  ('Parete divisoria lunga 3 m e alta 2,70 m (8,1 m²)', eur(8.1 * I['divCar'])),
+                  ('Corridoio di 8 m²: controsoffitto', eur(8 * I['ctrSof']))]) +
+             P('Esempi calcolati con i prezzi del simulatore, IVA inclusa. Non comprendono rasatura, pittura, faretti e strisce LED.')),
+            ('zone-roma-cartongesso', 'Dove lavoriamo a Roma', P(ZONE)),
+        ],
+        faq=[('Quanto costa un controsoffitto in cartongesso al m²?', 'Con i prezzi del nostro simulatore, %s al m² IVA inclusa: struttura metallica, lastre da 13 mm e giunti stuccati in due mani. Rasatura e pittura a parte.' % eur(I['ctrSof'])),
+             ('Quanto costa una parete in cartongesso?', '%s al m² IVA inclusa: una parete lunga 3 m e alta 2,70 m costa circa %s.' % (eur(I['divCar']), eur(8.1 * I['divCar']))),
+             ('Il controsoffitto abbassa molto il soffitto?', 'Di solito di pochi centimetri, quanto basta per far passare impianti e faretti: l’altezza si decide insieme durante il sopralluogo.'),
+             ('Si possono mettere le luci LED nel cartongesso?', 'Sì: con velette e mensole sagomate le strisce LED restano nascoste e danno luce indiretta su soffitti e pareti, a %s al metro lineare.' % eur(I['velette']))],
+        sim=('/simulatore-online-costi-ristrutturazioni-interni', 'CALCOLA IL COSTO DELLA TUA CASA'),
+        nota='Prezzi del listino MD Edil Group per gli interni, IVA inclusa, aggiornati al 12/11/2026: stime indicative, il prezzo definitivo si conferma dopo il sopralluogo gratuito. Tutti i lavori interni nella pagina <a href="/ristrutturazioni-interni">ristrutturazione di appartamenti a Roma</a>.',
+    ),
+    dict(
         file='rifacimento-impianto-elettrico-roma', madre='ristrutturazioni-interni', nome_madre='Ristrutturazioni interni', briciola='IMPIANTO ELETTRICO',
         title='Rifacimento impianto elettrico a Roma: costi e segnali | MD Edil Group',
         desc='Rifacimento dell’impianto elettrico di casa a Roma: %s a punto luce, quadro da %s, esempi per 50, 70 e 100 m² IVA inclusa e i segnali che l’impianto va rifatto.' % (eur(I['punti']), eur(750)),
