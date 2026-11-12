@@ -11,6 +11,7 @@
 | Articolo costo ristrutturazione casa (29/10/2026) | video/articolo-costo-ristrutturazione-casa-reel.mp4 | lavoro-03, camera-cantiere, dettaglio-impianti, lavoro-13, dettaglio-fibra-2-stesura |
 | Articolo terrazzo San Pietro (5/11/2026) | video/articolo-terrazzo-san-pietro-reel.mp4 | terrazzo-roma-san-pietro-pavimento-finito, terrazzo-roma-san-pietro-demolizione-pavimento, terrazzo-roma-san-pietro-guaina-bituminosa, terrazzo-roma-pavimento-gres-finito |
 | Articolo IVA al 10% (5/11/2026) | video/articolo-iva-10-reel.mp4 | lavoro-05, lavoro-07, infissi-pvc-monte-sacro-portafinestra, lavoro-09, lavoro-11 |
+| Articolo impianto elettrico (12/11/2026) | video/rifacimento-impianto-elettrico-roma-reel.mp4 | dettaglio-fibra-3-spigolo, dettaglio-fibra-4-cassetta, soggiorno-cantiere, dettaglio-led, camera-progetto (render, con etichetta) |
 
 Stili già usati: sottotitoli karaoke box oro + deep house (bagno); vetro sfocato con barra oro + card numeri grandi + tropical house (detrazioni). sottotitoli eleganti con linea oro + pillole etichetta + lounge (posa onice). righe che salgono dal basso + nu-disco (infissi Schüco). karaoke parola per parola + card numeri grandi + cinematica (bonus casa). vetro sfocato con barra oro + tech house (bonus mobili, 29/10); eleganti con linea oro che avanza + afro house (costo casa, 29/10). karaoke con box oro + drum & bass leggera (terrazzo, 5/11); vetro sfocato + lounge (IVA 10%, 5/11). Il prossimo: righe che salgono dal basso o eleganti con linea oro, con nu-disco o afro house.
 

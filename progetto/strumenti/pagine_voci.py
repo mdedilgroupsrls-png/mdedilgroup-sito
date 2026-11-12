@@ -113,6 +113,8 @@ VOCI = [
             ('impianto-elettrico-e-ristrutturazione', 'Rifarlo durante la ristrutturazione',
              P('Il momento migliore per rifare l’impianto è durante una ristrutturazione: le tracce nei muri si aprono e si chiudono insieme alle altre opere, e con i controsoffitti in cartongesso si possono aggiungere faretti e strisce LED senza rompere i soffitti.') +
              P('Nel <a href="/simulatore-online-costi-ristrutturazioni-interni">simulatore della ristrutturazione</a> trovi l’impianto elettrico insieme a tutte le altre voci, con il totale della tua casa.')),
+            ('video-impianto-elettrico', 'Il video: impianto elettrico da rifare in 30 secondi',
+             '<video controls playsinline preload="none" poster="/img/social-impianto-elettrico-copertina.jpg" width="1080" height="1920" aria-label="Video: impianto elettrico da rifare, segnali e costi a Roma" style="display: block; width: 100%; max-width: 420px; height: auto; margin: 0 0 18px; background: #000"><source src="/video/rifacimento-impianto-elettrico-roma-reel.mp4" type="video/mp4">Il tuo browser non riproduce il video.</video>'),
             ('zone-roma-impianto-elettrico', 'Dove lavoriamo a Roma', P(ZONE)),
         ],
         faq=[('Quanto costa rifare l’impianto elettrico di una casa di 70 m²?', 'Con i prezzi del nostro simulatore, circa %s IVA inclusa: 70 punti luce e prese a %s l’uno, il nuovo quadro e lo smontaggio del vecchio impianto. Rasature e pitture a parte.' % (eur(sum(EL[70])), eur(I['punti']))),

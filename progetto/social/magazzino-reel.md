@@ -38,7 +38,7 @@ Ogni lunedì: i contenuti "pronti" della lista (con il video online) si programm
 | mar 22/12 | legno | Olivia 90 m² come nasce |
 | gio 24/12 | — | **LIBERO** |
 | sab 26/12 | legno | progettazione → consegna chiavi in mano |
-| mar 29/12 | — | **LIBERO** |
+| mar 29/12 | interni | **reel articolo impianto elettrico** (#12, pronto, online con la pubblicazione del 23/11; + post con foto sulla scheda Google) |
 | gio 31/12 | legno | terreno → struttura ricettiva |
 | sab 2/1 | — | **LIBERO** |
 | mar 5/1 | legno | A-Frame L casa vacanze |
@@ -65,7 +65,7 @@ Ogni lunedì: i contenuti "pronti" della lista (con il video online) si programm
 | mar 23/2 | — | **LIBERO** |
 | gio 25/2 | legno | Vivresti in una casa così? A-Frame L |
 
-**Contenuti pronti non programmati: 2 / 26** (9/11/2026: #10, #11, da programmare dopo il 23/11; #7 e #8 programmati il 9/11)
+**Contenuti pronti non programmati: 3 / 26** (12/11/2026: #10, #11, #12, da programmare dopo il 23/11; #7 e #8 programmati il 9/11)
 
 | # | Reel | File | Stato |
 |---|---|---|---|
@@ -79,6 +79,7 @@ Ogni lunedì: i contenuti "pronti" della lista (con il video online) si programm
 | 9 | Reel facciata in mosaico Aventino, 1.600 m² (esterni; voce maschile italiana Nicola (Kokoro, generata in locale perché il file di Speko non si scaricava), sottotitoli bianchi su vetro, logo solo nel finale) | video/facciata-mosaico-aventino-reel.mp4 | **programmato sabato 14/11 ore 11:14** (Metricool 411745033 + Threads 411745100 + Google Business galleria 411745134 ore 11:17; scelta di Eugenio di metterlo anche su GBP); video da Drive MD Edil Reels |
 | 10 | Reel articolo terrazzo 700 m² San Pietro (esterni; karaoke box oro, drum & bass leggera) | video/articolo-terrazzo-san-pietro-reel.mp4 | pronto (5/11), online con la pubblicazione del 23/11, da programmare **sabato 19/12** (+ post Google Business con foto) |
 | 11 | Reel articolo IVA al 10% (detrazioni; vetro sfocato, lounge) | video/articolo-iva-10-reel.mp4 | pronto (5/11), online con la pubblicazione del 23/11, da programmare **martedì 8/12** (mai Google Business) |
+| 12 | Reel articolo impianto elettrico (interni; vetro sfocato con barra oro, card numeri, nu-disco 116 bpm) | video/rifacimento-impianto-elettrico-roma-reel.mp4 | pronto (12/11), online con la pubblicazione del 23/11, da programmare **martedì 29/12** (+ post Google Business con foto soggiorno-cantiere) |
 | 5 | Reel infissi Schüco montati da noi, Piazza Fiume (video IMG_2822, 22,4–31,3 s) | video/reel-infissi-schuco-piazza-fiume.mp4 | **sospeso: infissi non vanno sui social** (Eugenio, 21/10/2026) |
 
 Calendario Metricool al 20/10/2026: reel già programmati il 21/10, 24/10, 27/10, 3/11, 10/11, 17/11. **Restano lì e non contano** (Eugenio, 20/10/2026): il reel della settimana si mette in un altro giorno libero della stessa settimana (martedì–sabato). Primo: settimana 26–31/10, non il 27.
