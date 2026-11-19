@@ -348,14 +348,19 @@ VOCI = [
     ),
     dict(
         file='cappotto-termico-roma', madre='ristrutturazioni-esterni', nome_madre='Ristrutturazioni esterni', briciola='CAPPOTTO TERMICO',
-        title='Cappotto termico a Roma: prezzo al m² ed esempi | MD Edil Group',
-        desc='Cappotto termico a Roma in EPS grafitato da 12 o 14 cm con intonachino: da %s al m² + IVA, esempi per villa e condominio e cosa cambia in bolletta e in casa.' % eur(cap12f),
+        title='Cappotto termico a Roma: prezzi, facciata ventilata e rasante | MD Edil Group',
+        desc='Cappotto termico a Roma: EPS grafitato da %s al m² + IVA, facciata ventilata in gres porcellanato su lana di roccia e rasante termoisolante da pochi millimetri, con esempi e foto dei nostri cantieri.' % eur(cap12f),
         ey='RISTRUTTURAZIONI ESTERNI · CAPPOTTO TERMICO',
-        h1='Cappotto termico a Roma: prezzi, spessori ed esempi',
+        h1='Cappotto termico a Roma: classico, facciata ventilata e rasante a basso spessore',
         breve=('Con il nostro simulatore il cappotto termico in EPS grafitato con rasatura armata e intonachino colorato costa <b style="color: #E2C373">%s al m² con 12 cm</b> e <b>%s al m² con 14 cm</b>, <b>+ IVA</b>; a parte il ponteggio (da %s al m²) e gli oneri della sicurezza.') % (eur(cap12f), eur(cap14f), eur(X['pon1'])),
         intro='Il cappotto termico è il lavoro sulla facciata che si sente di più dentro casa: le pareti esterne smettono di essere fredde d’inverno, d’estate la casa si scalda meno e l’impianto lavora meno ore. Lo realizziamo su ville, villini e condomini di Roma e del Lazio, insieme al rifacimento della facciata e dei balconi, con un solo cantiere e un solo ponteggio.',
-        foto=None,
+        foto=('/img/facciata-ventilata-gres-porcellanato-condominio-ponteggi.webp', 'Condominio a torre con facciata ventilata in lastre di gres porcellanato in corso di posa, ponteggi e montacarichi', 'Un nostro cantiere: facciata ventilata in gres porcellanato su un condominio a torre.'),
         sezioni=[
+            ('tre-soluzioni-isolamento-facciata', 'Tre modi di isolare la facciata',
+             TAB([('Cappotto in EPS grafitato con intonachino', 'il più diffuso, da %s al m²' % eur(cap12f)),
+                  ('Facciata ventilata in gres porcellanato su lana di roccia', 'per edifici di pregio, su preventivo'),
+                  ('Rasante termoisolante nanotecnologico da pochi millimetri', 'dove lo spessore non c’è, %s al m²' % eur(X['eco']))]) +
+             P('Prezzi + IVA, finitura compresa dove indicato; ponteggio e oneri della sicurezza a parte. Qui sotto trovi come si posa ognuna, con le foto dei nostri cantieri.')),
             ('come-si-fa-cappotto-termico', 'Come si fa il cappotto termico, strato dopo strato',
              '<ol style="margin: 0 0 16px; padding-left: 22px">'
              '<li><b>Preparazione</b> della facciata: si risanano le parti di intonaco staccate e si controllano i ferri di balconi e cornicioni.</li>'
@@ -376,6 +381,19 @@ VOCI = [
                   ('Condominio, 700 m² di facciata, cappotto 12 cm con intonachino', eur(C_COND[0])),
                   ('Condominio, 700 m² di facciata, cappotto 14 cm con intonachino', eur(C_COND[1]))]) +
              P('Calcolo con il ponteggio del primo mese e gli oneri della sicurezza, + IVA. Restano a parte soglie, lattonerie, ringhiere e i ripristini dell’intonaco, che trovi nel simulatore.')),
+            ('facciata-ventilata-gres-porcellanato', 'Facciata ventilata in gres porcellanato',
+             P('La facciata ventilata è un cappotto “a secco”: sul muro si fissano con tasselli i pannelli in <b>lana di roccia</b>, protetti da un velo nero, poi una struttura di profili verticali in alluminio regge con ganci in acciaio le <b>lastre di gres porcellanato</b>. Tra isolante e lastre resta una camera d’aria aperta in basso e in alto: l’aria che sale porta via umidità e d’estate il calore del sole.') +
+             FIG('/img/facciata-ventilata-gres-porcellanato-lana-di-roccia-dettaglio.webp', 'Facciata ventilata in costruzione: pannelli in lana di roccia con tasselli, profili in alluminio e ganci che reggono la lastra di gres porcellanato', 'Lo strato sotto le lastre: lana di roccia con velo nero e tasselli, profili in alluminio e ganci in acciaio.') +
+             FIG('/img/facciata-ventilata-gres-porcellanato-posa-lastre-condominio.webp', 'Posa delle lastre di gres porcellanato su facciata ventilata di un condominio, vista dal basso lungo la parete', 'Le lastre salgono lungo la facciata, piano dopo piano, con i giunti allineati.') +
+             P('Rispetto al cappotto classico costa di più, ma la facciata non si sporca e non teme gli urti, le lastre non si pitturano mai e una lastra rovinata si sostituisce da sola. La lana di roccia non brucia, è un vantaggio importante sui palazzi alti. Il prezzo dipende da lastre, altezza e struttura: lo calcoliamo dopo il sopralluogo.')),
+            ('rasante-termoisolante-nanotecnologico', 'Rasante termoisolante: isolare con pochi millimetri',
+             P('Dove il cappotto non entra, su balconi stretti, logge, sotto i davanzali o su facciate dove non si possono spostare soglie e pluviali, usiamo un <b>rasante termoisolante nanotecnologico</b> (Econanosil Eco 2): una pasta che si stende a spatola in pochi millimetri, con la rete di armatura, e poi si rifinisce con il colore.') +
+             FIG('/img/rasante-termoisolante-nanotecnologico-rete-di-armatura.webp', 'Rasante termoisolante nanotecnologico steso a spatola con rete di armatura su una parete di loggia', 'Prima mano di rasante termoisolante con la rete di armatura annegata.') +
+             FIG('/img/rasante-termoisolante-nanotecnologico-balcone-rasato.webp', 'Loggia con pareti rasate con rasante termoisolante attorno a finestre e porte protette', 'La loggia rasata: gli spessori attorno a finestre e caldaia restano quasi gli stessi.') +
+             FIG('/img/rasante-termoisolante-finitura-colorata-balcone.webp', 'Finitura colorata applicata sopra il rasante termoisolante sulle pareti di una loggia', 'La finitura colorata sopra il rasante.') +
+             FIG('/img/isolamento-termico-basso-spessore-balcone-finito.webp', 'Loggia finita dopo l’isolamento termico a basso spessore, con pareti colorate e nuovo pavimento', 'Il lavoro finito.') +
+             P('Quanto isola? Nella sua Dichiarazione di Prestazione (n. ECO 2-202412, norma UNI EN 998-1) il fabbricante dichiara una conducibilità termica di <b>0,0019 W/mK</b>. Con questo valore 5 mm di rasante hanno una resistenza termica simile a circa 10 cm di polistirolo EPS tradizionale, e 1 cm supera quella di un cappotto da 12 cm. È però un valore dichiarato dal fabbricante: nei calcoli per la pratica e per le detrazioni il tecnico verifica sempre il pacchetto completo della parete.') +
+             P('Nel nostro simulatore il rasante termoisolante da circa 1 cm costa %s al m² + IVA, finitura a parte.' % eur(X['eco']))),
             ('12-o-14-cm-cappotto', '12 o 14 cm: quale spessore scegliere',
              P('Lo spessore si decide con il tecnico in base al muro esistente, all’esposizione e all’obiettivo di risparmio. Con 14 cm la facciata isola di più, ma cresce anche lo spessore attorno a finestre e balconi: per questo lo scegliamo dopo il sopralluogo, non a catalogo.') +
              P('Dove il cappotto non si può posare, per esempio su facciate vincolate o troppo vicine al confine, si può usare un rasante termoisolante da circa 1 cm, meno efficace ma quasi invisibile.')),
@@ -386,6 +404,8 @@ VOCI = [
         ],
         faq=[('Quanto costa il cappotto termico al m² a Roma?', 'Con i prezzi del nostro simulatore il cappotto in EPS grafitato con rasatura armata e intonachino costa %s al m² con 12 cm e %s con 14 cm, + IVA, più ponteggio e oneri della sicurezza.' % (eur(cap12f), eur(cap14f))),
              ('Quanto costa il cappotto per una villa?', 'Per una villa con 250 m² di facciata, con il cappotto da 12 cm, l’intonachino, il ponteggio del primo mese e gli oneri della sicurezza, il nostro simulatore calcola circa %s + IVA.' % eur(C_VILLA[0])),
+             ('Cos’è la facciata ventilata?', 'È un cappotto a secco: pannelli di lana di roccia fissati al muro, una struttura in alluminio e lastre di gres porcellanato agganciate davanti, con una camera d’aria che lascia passare l’aria e porta via umidità e calore.'),
+             ('Un rasante di 1 cm isola come un cappotto?', 'Secondo il valore dichiarato dal fabbricante (0,0019 W/mK), 5 mm di rasante Econanosil Eco 2 hanno una resistenza termica simile a 10 cm di polistirolo tradizionale. È un dato del fabbricante: il tecnico lo verifica nel calcolo della parete.'),
              ('Il cappotto va pitturato?', 'No: con l’intonachino colorato la facciata è già finita. Si può scegliere anche un’altra finitura, che trovi nel simulatore.'),
              ('Si può fare il cappotto solo su una parte del condominio?', 'Di solito si fa su tutta la facciata e si decide in assemblea: un cappotto a pezzi lascia ponti termici e cambia l’aspetto dell’edificio.')],
         sim=('/simulatore-online-costi-ristrutturazioni-esterni', 'CALCOLA IL COSTO DEL TUO CAPPOTTO'),

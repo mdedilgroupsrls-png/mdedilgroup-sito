@@ -74,7 +74,8 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 
 ## Da completare
 - [ ] Reel della cucina (articolo del 9/2/2027) e del cappotto termico: da montare (il 19/11 la cartella di lavoro dei reel era stata cancellata dal riavvio del container); video online al più tardi con la pubblicazione del 25/1/2027.
-- [ ] Foto vera di un cappotto termico (cantiere o finito) per `/cappotto-termico-roma`; zona delle cucine del 30/10 per `/ristrutturazione-cucina-roma`.
+- [x] 19/11/2026 – Foto di Eugenio nella pagina del cappotto: facciata ventilata in gres e rasante termoisolante (Econanosil Eco 2, dati verificati sulla DoP del fabbricante).
+- [ ] Zona del condominio con la facciata ventilata e della loggia; quale prodotto è il "termoriflettente"; prezzo della facciata ventilata (ora "su preventivo"); zona delle cucine del 30/10 per `/ristrutturazione-cucina-roma`.
 - [x] 25/10/2026 – Simulatori: "calcola il costo" nei titoli di interni ed esterni, "configuratore" per infissi e case in legno (indirizzi invariati) – Eugenio
 - [x] 25/10/2026 – Articolo "I nostri lavori" terrazzo con vista su San Pietro (in Home dal 1/12/2026, Approfondimenti esterni, sezione nella pagina terrazzi); reel nel compito del giovedì; post foto su Google Business il 1/12 – Eugenio
 - [x] 25/10/2026 – Pagine nuove /rifacimento-facciata-roma e /impermeabilizzazione-terrazzo-roma (prezzi dal simulatore esterni, esempi, zone, domande, titoli con link); Approfondimenti in /ristrutturazioni-esterni; "Scopri di più" nella guida; strumento pagine_voci.py – Eugenio
