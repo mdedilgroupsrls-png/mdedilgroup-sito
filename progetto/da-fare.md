@@ -73,6 +73,8 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 - [ ] Foto di facciate con la zona (25/10/2026).
 
 ## Da completare
+- [ ] Reel della cucina (articolo del 9/2/2027) e del cappotto termico: da montare (il 19/11 la cartella di lavoro dei reel era stata cancellata dal riavvio del container); video online al più tardi con la pubblicazione del 25/1/2027.
+- [ ] Foto vera di un cappotto termico (cantiere o finito) per `/cappotto-termico-roma`; zona delle cucine del 30/10 per `/ristrutturazione-cucina-roma`.
 - [x] 25/10/2026 – Simulatori: "calcola il costo" nei titoli di interni ed esterni, "configuratore" per infissi e case in legno (indirizzi invariati) – Eugenio
 - [x] 25/10/2026 – Articolo "I nostri lavori" terrazzo con vista su San Pietro (in Home dal 1/12/2026, Approfondimenti esterni, sezione nella pagina terrazzi); reel nel compito del giovedì; post foto su Google Business il 1/12 – Eugenio
 - [x] 25/10/2026 – Pagine nuove /rifacimento-facciata-roma e /impermeabilizzazione-terrazzo-roma (prezzi dal simulatore esterni, esempi, zone, domande, titoli con link); Approfondimenti in /ristrutturazioni-esterni; "Scopri di più" nella guida; strumento pagine_voci.py – Eugenio
@@ -141,6 +143,7 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 - [ ] Decidere quale sede indicare come ufficio
 
 ## Fatto
+- [x] 19/11/2026 – Pagine delle voci **cucina** (`/ristrutturazione-cucina-roma`, anche articolo in Home del 9/2/2027) e **cappotto termico** (`/cappotto-termico-roma`), con schede negli Approfondimenti e "Scopri di più →" nelle pagine madri; online con la pubblicazione del 23/11. Scorta articoli 14/26.
 - [x] 02/11/2026 – Modulo contatti: aggiunto il campo Email obbligatorio (`name="email"`), così le notifiche Netlify hanno "Rispondi a" = email del cliente; privacy aggiornata.
 - [x] 30/10/2026 – Materiale di Eugenio (facciata in mosaico, 1.600 m², zona Aventino, confermata): articolo `/rifacimento-facciata-mosaico-roma-aventino` con cursori prima/dopo e video, scheda in Home dal 22/12, Approfondimenti esterni, sezione "Un nostro lavoro" nella pagina facciata, sitemap, llms.txt. Reel montato (voce maschile italiana, sottotitoli bianchi su vetro, logo MD Edil Group solo nel finale come chiesto da Eugenio, finale con simulazione su mdedilgroup.it). Sul branch `lavori-in-corso`, online con la prossima pubblicazione.
 - [x] 20/10/2026 – Primo articolo "Quanto costa ristrutturare un bagno a Roma", sezione "Dal nostro taccuino" di nuovo in Home, reel e storia per i social. Sul branch `lavori-in-corso`

@@ -74,6 +74,18 @@ T_MQ, T_PER = 30, 22
 T_SENZA = (T_MQ * senza_mq + T_PER * X['ten2']) * (1 + X['sicurezza'])
 T_COMPL = (T_MQ * completo_mq + T_PER * X['battisc'] + X['bocch']) * (1 + X['sicurezza'])
 
+# --- cucina (interni, IVA inclusa) ---
+RAS = I['raschi'] + I['rasat'] + I['levig'] + I['pitChi']  # rasatura e pittura chiara al m²
+CUC_BASE = 4 * I['pavCer'] + 10 * I['punti'] + I['pAcqua'] + I['gasCuc'] + 4 * I['posRiv'] + 10 * RAS
+CUC_PAV = CUC_BASE + 12 * (I['pavCer'] + I['posPav'])
+CUC_LED = CUC_PAV + 12 * I['ctrSof'] + 4 * I['punti']
+
+# --- cappotto termico (esterni, + IVA) ---
+cap12f = X['cap12'] + X['intonachino']
+cap14f = X['cap14'] + X['intonachino']
+C_VILLA = (esempio(250, cap12f), esempio(250, cap14f))
+C_COND = (esempio(700, cap12f), esempio(700, cap14f))
+
 ZONE = ('Lavoriamo in tutte le zone di Roma e in provincia: a Roma Nord (Parioli, Salario, Trieste, Nomentana, Monte Sacro, Talenti, Vigna Clara, Cassia, Balduina), '
         'nel Centro e a Prati, a Roma Est (Tiburtino, Prenestino, Tuscolano, Appio Latino), a Roma Sud e Ovest (EUR, Ostiense, Monteverde, Aurelio) e sul litorale (Ostia, Infernetto, Casal Palocco). '
         'Il sopralluogo è gratuito, la sede operativa è a Monterotondo.')
@@ -280,6 +292,104 @@ VOCI = [
              ('Cos’è la prova di allagamento e perché si fa?', 'Dopo la guaina e prima del nuovo massetto si allaga il terrazzo per controllare che l’acqua non passi. Se c’è un punto debole si ripara subito, invece di scoprirlo dopo, con il pavimento già posato.'),
              ('Lavorate anche su balconi e terrazzi condominiali?', 'Sì: rifacciamo terrazzi di appartamenti, attici e condomini, e i balconi insieme alla facciata con il restauro di frontalini e sottobalconi.')],
         sim=('/simulatore-online-costi-ristrutturazioni-esterni', 'CALCOLA IL COSTO DEL TUO TERRAZZO'),
+    ),
+    dict(
+        file='ristrutturazione-cucina-roma', madre='ristrutturazioni-interni', nome_madre='Ristrutturazioni interni', briciola='CUCINA',
+        title='Ristrutturazione cucina a Roma: costi di impianti e opere | MD Edil Group',
+        desc='Quanto costa ristrutturare la cucina a Roma: impianti, gas, punto acqua e posa da %s IVA inclusa, con tre esempi calcolati dal nostro simulatore e le cucine che abbiamo fatto.' % eur(CUC_BASE),
+        ey='RISTRUTTURAZIONI INTERNI · CUCINA',
+        h1='Ristrutturazione della cucina a Roma: impianti, opere e costi',
+        breve=('Con i prezzi del nostro simulatore, le opere per rifare una cucina a Roma partono da <b style="color: #E2C373">%s IVA inclusa</b>: impianto elettrico con prese dedicate, punto acqua con scarico, linea del gas, posa del rivestimento tra base e pensili, rasatura e pittura. '
+               'Mobili, elettrodomestici e piastrelle si scelgono a parte.') % eur(CUC_BASE),
+        intro='Una cucina su misura dura vent’anni, ma funziona bene solo se sotto ci sono gli impianti giusti: prese dove servono gli elettrodomestici, l’acqua e lo scarico nel punto esatto del lavello, il gas o la linea per il piano a induzione. Per questo la progettiamo insieme all’impianto, prima che arrivi il mobiliere, e consegniamo le pareti pronte per il montaggio.',
+        foto=('/img/lavoro-14.webp', 'Cucina a U con colonne a filo e mensole in rovere ristrutturata a Roma Corso Francia', 'Ristrutturazione di una cucina a U a Corso Francia, Roma.'),
+        sezioni=[
+            ('cosa-comprende-ristrutturazione-cucina', 'Cosa comprende la ristrutturazione della cucina',
+             '<ul style="margin: 0 0 16px; padding-left: 22px">'
+             '<li><b>Demolizione</b> del vecchio rivestimento e, se serve, del pavimento, con smaltimento.</li>'
+             '<li><b>Impianto elettrico</b> con linee e prese dedicate a forno, piano cottura, lavastoviglie e frigorifero, più l’illuminazione sotto pensile.</li>'
+             '<li><b>Punto acqua con scarico</b> per il lavello e l’attacco della lavastoviglie.</li>'
+             '<li><b>Linea del gas</b> dal contatore alla cucina, oppure solo l’elettrico se scegli il piano a induzione.</li>'
+             '<li><b>Posa</b> del rivestimento sulla fascia tra base e pensili e, se lo rifai, del pavimento.</li>'
+             '<li><b>Rasatura e pittura</b> delle pareti, pronte per il montaggio dei mobili.</li></ul>' +
+             P('Gli impianti sono realizzati da tecnici abilitati e consegnati con la dichiarazione di conformità prevista dal D.M. 37/2008.')),
+            ('prezzi-ristrutturazione-cucina', 'I prezzi delle opere per la cucina',
+             TAB([('Punto luce o presa', eur(I['punti']) + ' a punto'),
+                  ('Nuovo punto acqua con scarico', eur(I['pAcqua'])),
+                  ('Linea del gas dal contatore alla cucina', eur(I['gasCuc'])),
+                  ('Rimozione di rivestimenti o pavimenti in ceramica', eur(I['pavCer']) + ' al m²'),
+                  ('Posa del rivestimento a parete (fino a 60 × 60 cm)', eur(I['posRiv']) + ' al m²'),
+                  ('Posa del pavimento in ceramica o gres', eur(I['posPav']) + ' al m²'),
+                  ('Controsoffitto in cartongesso', eur(I['ctrSof']) + ' al m²'),
+                  ('Raschiatura, rasatura, fondo e pittura chiara', eur(RAS) + ' al m²')]) +
+             P('Prezzi IVA inclusa dal listino del nostro simulatore per gli interni, solo manodopera e materiali di posa: piastrelle, mobili ed elettrodomestici sono esclusi.')),
+            ('esempi-costo-ristrutturazione-cucina', 'Tre esempi: dalla cucina base a quella con faretti',
+             TAB([('Cucina completa: 10 prese e punti luce, acqua, gas, 4 m² di rivestimento, 10 m² di pareti', eur(CUC_BASE)),
+                  ('La stessa, con il pavimento di 12 m² rimosso e posato di nuovo', eur(CUC_PAV)),
+                  ('La stessa, con controsoffitto in cartongesso di 12 m² e 4 faretti in più', eur(CUC_LED))]) +
+             P('Calcoli fatti con i prezzi del simulatore, IVA inclusa. Servono come ordine di grandezza: il prezzo vero si conferma dopo il sopralluogo gratuito, quando misuriamo la tua cucina.')),
+            ('cucina-aperta-sul-soggiorno', 'Aprire la cucina sul soggiorno',
+             P('Molte delle cucine che rifacciamo a Roma diventano una zona giorno unica con il soggiorno. Se il muro da togliere è un tramezzo, si demolisce e si sistemano pavimento e impianti; se è un muro portante serve una <b>cerchiatura</b> calcolata dal nostro ingegnere e una pratica edilizia, che prepariamo noi.') +
+             P('In questi casi il costo dipende dal muro e dal progetto: per questo non lo trovi nel simulatore e lo calcoliamo dopo il sopralluogo.')),
+            ('cucine-ristrutturate-roma', 'Le cucine che abbiamo ristrutturato',
+             FIG('/img/lavoro-19.webp', 'Cucina lineare in legno con top effetto marmo nero e luce LED ristrutturata a Roma Porta Pia', 'Cucina lineare con top effetto marmo nero e taglio di luce LED a Porta Pia, Roma.') +
+             P('Altre cucine e ambienti finiti sono nella galleria della pagina <a href="/ristrutturazioni-interni">ristrutturazione casa a Roma</a>.')),
+            ('pratiche-e-bonus-cucina', 'Pratiche e bonus',
+             P('Rifare impianti, rivestimenti e pitture senza toccare le pareti è di solito manutenzione; se sposti muri o cambi in modo importante gli impianti serve la CILA, e la SCIA quando si tocca la struttura. Il nostro studio tecnico verifica il tuo caso.') +
+             P('Dentro una ristrutturazione, le opere della cucina rientrano nel bonus ristrutturazioni e possono aprire la strada al bonus mobili: trovi le regole nella <a href="/bonus-mobili-elettrodomestici-2026">guida al bonus mobili 2026</a>.')),
+            ('zone-roma-ristrutturazione-cucina', 'Dove lavoriamo a Roma', P(ZONE)),
+        ],
+        faq=[('Quanto costa ristrutturare una cucina a Roma?', 'Con i prezzi del nostro simulatore le opere per una cucina completa (prese dedicate, punto acqua, gas, rivestimento e pareti) partono da circa %s IVA inclusa. Mobili, elettrodomestici e piastrelle sono a parte.' % eur(CUC_BASE)),
+             ('Conviene il piano a induzione o il gas?', 'Con il piano a induzione non serve la linea del gas, ma una linea elettrica dedicata e una potenza del contatore adeguata. Lo valutiamo insieme durante il sopralluogo.'),
+             ('Montate anche i mobili della cucina?', 'Prepariamo impianti e pareti secondo il progetto del mobiliere, così il montaggio della cucina su misura avviene senza modifiche dell’ultimo minuto.'),
+             ('Si può aprire la cucina sul soggiorno?', 'Sì: un tramezzo si demolisce, un muro portante richiede una cerchiatura calcolata dal nostro ingegnere e una pratica edilizia, che prepariamo noi.')],
+        sim=('/simulatore-online-costi-ristrutturazioni-interni', 'CALCOLA IL COSTO DELLA TUA CUCINA'),
+        nota='Prezzi del listino MD Edil Group per gli interni, IVA inclusa, aggiornati al 19/11/2026: stime indicative, il prezzo definitivo si conferma dopo il sopralluogo gratuito. Tutti i lavori interni nella pagina <a href="/ristrutturazioni-interni">ristrutturazione di appartamenti a Roma</a>.',
+    ),
+    dict(
+        file='cappotto-termico-roma', madre='ristrutturazioni-esterni', nome_madre='Ristrutturazioni esterni', briciola='CAPPOTTO TERMICO',
+        title='Cappotto termico a Roma: prezzo al m² ed esempi | MD Edil Group',
+        desc='Cappotto termico a Roma in EPS grafitato da 12 o 14 cm con intonachino: da %s al m² + IVA, esempi per villa e condominio e cosa cambia in bolletta e in casa.' % eur(cap12f),
+        ey='RISTRUTTURAZIONI ESTERNI · CAPPOTTO TERMICO',
+        h1='Cappotto termico a Roma: prezzi, spessori ed esempi',
+        breve=('Con il nostro simulatore il cappotto termico in EPS grafitato con rasatura armata e intonachino colorato costa <b style="color: #E2C373">%s al m² con 12 cm</b> e <b>%s al m² con 14 cm</b>, <b>+ IVA</b>; a parte il ponteggio (da %s al m²) e gli oneri della sicurezza.') % (eur(cap12f), eur(cap14f), eur(X['pon1'])),
+        intro='Il cappotto termico è il lavoro sulla facciata che si sente di più dentro casa: le pareti esterne smettono di essere fredde d’inverno, d’estate la casa si scalda meno e l’impianto lavora meno ore. Lo realizziamo su ville, villini e condomini di Roma e del Lazio, insieme al rifacimento della facciata e dei balconi, con un solo cantiere e un solo ponteggio.',
+        foto=None,
+        sezioni=[
+            ('come-si-fa-cappotto-termico', 'Come si fa il cappotto termico, strato dopo strato',
+             '<ol style="margin: 0 0 16px; padding-left: 22px">'
+             '<li><b>Preparazione</b> della facciata: si risanano le parti di intonaco staccate e si controllano i ferri di balconi e cornicioni.</li>'
+             '<li><b>Pannelli in EPS grafitato</b> incollati e fissati con tasselli: il grafite li rende più isolanti a parità di spessore.</li>'
+             '<li><b>Rasatura armata</b> con rete in fibra di vetro, che tiene insieme i pannelli e protegge dagli urti.</li>'
+             '<li><b>Finitura</b> in intonachino colorato con fondo: è già colorato, non va pitturato.</li></ol>' +
+             P('Attorno a finestre e balconi si curano i punti dove il calore scappa di più, i cosiddetti ponti termici, con soglie e davanzali adattati al nuovo spessore.')),
+            ('prezzi-cappotto-termico', 'Quanto costa il cappotto termico al m²',
+             TAB([('Cappotto EPS grafitato 12 cm con rasatura armata', eur(X['cap12']) + ' al m²'),
+                  ('Cappotto EPS grafitato 14 cm con rasatura armata', eur(X['cap14']) + ' al m²'),
+                  ('Intonachino colorato con fondo', eur(X['intonachino']) + ' al m²'),
+                  ('Rasante termoisolante da circa 1 cm, dove il cappotto non si può fare', eur(X['eco']) + ' al m²'),
+                  ('Ponteggio: montaggio, smontaggio e primo mese', eur(X['pon1']) + ' al m²')]) +
+             P('Prezzi + IVA dal listino del nostro simulatore per gli esterni. Agli importi si aggiungono gli oneri della sicurezza, all’8% dei lavori.')),
+            ('esempi-costo-cappotto-termico', 'Esempi: villa da 250 m² e condominio da 700 m²',
+             TAB([('Villa, 250 m² di facciata, cappotto 12 cm con intonachino', eur(C_VILLA[0])),
+                  ('Villa, 250 m² di facciata, cappotto 14 cm con intonachino', eur(C_VILLA[1])),
+                  ('Condominio, 700 m² di facciata, cappotto 12 cm con intonachino', eur(C_COND[0])),
+                  ('Condominio, 700 m² di facciata, cappotto 14 cm con intonachino', eur(C_COND[1]))]) +
+             P('Calcolo con il ponteggio del primo mese e gli oneri della sicurezza, + IVA. Restano a parte soglie, lattonerie, ringhiere e i ripristini dell’intonaco, che trovi nel simulatore.')),
+            ('12-o-14-cm-cappotto', '12 o 14 cm: quale spessore scegliere',
+             P('Lo spessore si decide con il tecnico in base al muro esistente, all’esposizione e all’obiettivo di risparmio. Con 14 cm la facciata isola di più, ma cresce anche lo spessore attorno a finestre e balconi: per questo lo scegliamo dopo il sopralluogo, non a catalogo.') +
+             P('Dove il cappotto non si può posare, per esempio su facciate vincolate o troppo vicine al confine, si può usare un rasante termoisolante da circa 1 cm, meno efficace ma quasi invisibile.')),
+            ('cappotto-termico-condominio', 'Cappotto termico in condominio',
+             P('In condominio il cappotto si decide in assemblea e si fa su tutta la facciata, insieme al rifacimento di intonaci, balconi e frontalini, così il ponteggio si monta una volta sola. Prepariamo noi il computo e il preventivo da portare in assemblea.') +
+             P('Le detrazioni per l’efficienza energetica cambiano di anno in anno: trovi le regole aggiornate nella nostra <a href="/detrazioni-ristrutturazione-infissi-2026">guida alle detrazioni 2026</a>.')),
+            ('zone-roma-cappotto-termico', 'Dove lavoriamo a Roma', P(ZONE)),
+        ],
+        faq=[('Quanto costa il cappotto termico al m² a Roma?', 'Con i prezzi del nostro simulatore il cappotto in EPS grafitato con rasatura armata e intonachino costa %s al m² con 12 cm e %s con 14 cm, + IVA, più ponteggio e oneri della sicurezza.' % (eur(cap12f), eur(cap14f))),
+             ('Quanto costa il cappotto per una villa?', 'Per una villa con 250 m² di facciata, con il cappotto da 12 cm, l’intonachino, il ponteggio del primo mese e gli oneri della sicurezza, il nostro simulatore calcola circa %s + IVA.' % eur(C_VILLA[0])),
+             ('Il cappotto va pitturato?', 'No: con l’intonachino colorato la facciata è già finita. Si può scegliere anche un’altra finitura, che trovi nel simulatore.'),
+             ('Si può fare il cappotto solo su una parte del condominio?', 'Di solito si fa su tutta la facciata e si decide in assemblea: un cappotto a pezzi lascia ponti termici e cambia l’aspetto dell’edificio.')],
+        sim=('/simulatore-online-costi-ristrutturazioni-esterni', 'CALCOLA IL COSTO DEL TUO CAPPOTTO'),
+        nota='Prezzi del listino MD Edil Group per gli esterni, IVA esclusa, aggiornati al 19/11/2026: stime indicative, il prezzo definitivo si conferma dopo il sopralluogo gratuito. Tutti i lavori esterni nella pagina <a href="/ristrutturazioni-esterni">ristrutturazione di facciate e terrazzi a Roma</a>.',
     ),
 ]
 
