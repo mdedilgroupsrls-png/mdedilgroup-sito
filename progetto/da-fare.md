@@ -136,6 +136,7 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 - [ ] Decidere quale sede indicare come ufficio
 
 ## Fatto
+- [x] 22/11/2026 – Installati gli strumenti di montaggio per reel più vari e professionali (HyperFrames di HeyGen, Remotion, skill di animazione di Emil Kowalski, Taste Skill, Impeccable, Frontend Design di Anthropic, UI/UX Pro Max) come skill in `.claude/skills/`; `.claude/` bloccata sul sito in `netlify.toml`. Tipi di montaggio a rotazione in `progetto/social/stili-montaggio.md`. HyperFrames provato con un render 1080×1920; Remotion da provare al primo reel.
 - [x] 02/11/2026 – Modulo contatti: aggiunto il campo Email obbligatorio (`name="email"`), così le notifiche Netlify hanno "Rispondi a" = email del cliente; privacy aggiornata.
 - [x] 30/10/2026 – Materiale di Eugenio (facciata in mosaico, 1.600 m², zona Aventino, confermata): articolo `/rifacimento-facciata-mosaico-roma-aventino` con cursori prima/dopo e video, scheda in Home dal 22/12, Approfondimenti esterni, sezione "Un nostro lavoro" nella pagina facciata, sitemap, llms.txt. Reel montato (voce maschile italiana, sottotitoli bianchi su vetro, logo MD Edil Group solo nel finale come chiesto da Eugenio, finale con simulazione su mdedilgroup.it). Sul branch `lavori-in-corso`, online con la prossima pubblicazione.
 - [x] 20/10/2026 – Primo articolo "Quanto costa ristrutturare un bagno a Roma", sezione "Dal nostro taccuino" di nuovo in Home, reel e storia per i social. Sul branch `lavori-in-corso`
