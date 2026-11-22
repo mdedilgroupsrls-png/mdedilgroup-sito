@@ -88,6 +88,7 @@ Listino di Eugenio "MD Edil Group Esterni 2026 – Cappotto 75/85" del 17/10/202
 | Ripristini | Demolizione frontalini e intradossi ammalorati | m² | 30 |
 | Isolamento (scelta) | Cappotto EPS grafitato 12 cm, rasatura armata inclusa, **finitura esclusa** (si sceglie a parte, Eugenio 17/10/2026) | m² | 75 |
 | Isolamento (scelta) | Cappotto EPS grafitato 14 cm, idem | m² | 85 |
+| Solo pagina (non nel simulatore) | Facciata ventilata in gres porcellanato su struttura in alluminio, ganci a vista; isolante, grande formato, ponteggio e oneri a parte (prezzo "da" confermato da Eugenio il 22/11/2026, rif. prezzario Regione Lazio 2023 A 18.01.13 = 143,41 €/m²) | m² | da 145 |
 | Isolamento (scelta) | Rasante termoisolante Econanosil Eco 2 circa 10 mm con rete, finitura esclusa (prezzo aziendale, da confermare col produttore) | m² | 95 |
 | Rasatura (scelta, solo senza isolamento) | Rasatura fine pronta alla pittura / rasatura armata con rete | m² | 26 / 32 |
 | Finitura (scelta, anche con cappotto EPS) | Minerale a calce / intonachino colorato con fondo / pittura silossanica (non con Econanosil) | m² | 19 / 25 / 13 |
