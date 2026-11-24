@@ -74,6 +74,7 @@ Elenco del materiale e delle informazioni che mancano per completare bene pagine
 - [ ] Foto di facciate con la zona (25/10/2026).
 
 ## Da completare
+- [x] 24/11/2026 – Prezzo e link proprio per ogni lavorazione dei simulatori interni ed esterni (guida + descrizione nel simulatore). Da fare dopo: le pagine dei simulatori a parte non contengono la guida, lì la descrizione resta senza prezzo.
 - [ ] Reel della cucina (articolo del 9/2/2027) e del cappotto termico: da montare (il 19/11 la cartella di lavoro dei reel era stata cancellata dal riavvio del container); video online al più tardi con la pubblicazione del 25/1/2027.
 - [x] 19/11/2026 – Foto di Eugenio nella pagina del cappotto: facciata ventilata in gres e rasante termoisolante (Econanosil Eco 2, dati verificati sulla DoP del fabbricante).
 - [x] 19/11/2026 – Zone: facciata ventilata zona Laurentina, loggia con Nanosil EUR (scritte nella pagina).

@@ -64,19 +64,24 @@ function prezzoOpz(o, it) {
 // indirizzo di ogni paragrafo (es. #impianto-elettrico): ogni titolo con i prezzi ha il suo link (Eugenio, 23/10/2026)
 const slug = t => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[’']/g, ' ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-function guida(cfg, p) {
+// ogni voce della guida ha il suo link (#id sul <dt>) con il prezzo sotto: Google può citare la voce e il suo prezzo (Eugenio, 24/11/2026)
+function guida(cfg, p, idUsati) {
+  const usati = new Set(idUsati || []);
+  const idVoce = t => { let b = 'prezzo-' + slug(t), id = b, k = 2; while (usati.has(id)) id = b + '-' + k++; usati.add(id); return id; };
   let h = '<section class="guida" id="guida-lavorazioni" aria-labelledby="guida-t">\n<div class="guida-in">\n' +
     '<p class="guida-ey">GUIDA ALLE LAVORAZIONI</p>\n<h2 id="guida-t">' + esc(p.titolo) + '</h2>\n<p class="guida-intro">' + esc(p.intro) + '</p>\n' +
     (p.notaPrezzi ? '<p class="guida-nota">' + esc(p.notaPrezzi) + '</p>\n' : '');
   cfg.sezioni.forEach(s => {
-    h += '<details id="' + slug(s.t) + '">\n<summary><h3>' + esc(s.t) + '</h3></summary>\n' + (s.s ? '<p>' + esc(s.s) + '</p>\n' : '') + '<dl>\n';
-    s.v.forEach(it => {
-      if (it.tipo === 'nota' || !it.x) return;
-      h += '<dt>' + esc(it.d) + '</dt>\n<dd>' + esc(it.x);
+    const voci = s.v.filter(it => it.tipo !== 'nota' && it.x).map(it => [it, idVoce(it.d)]);
+    h += '<details id="' + slug(s.t) + '">\n<summary><h3>' + esc(s.t) + '</h3></summary>\n' + (s.s ? '<p>' + esc(s.s) + '</p>\n' : '') +
+      (p.prezzi && voci.length > 2 ? '<p class="guida-indice">Prezzi: ' + voci.map(([it, id]) => '<a href="#' + id + '">' + esc(it.d) + '</a>').join(' · ') + '</p>\n' : '') + '<dl>\n';
+    voci.forEach(([it, idv]) => {
+      h += '<dt id="' + idv + '">' + esc(it.d) + '</dt>\n<dd>' + esc(it.x);
       if (it.tipo === 'scelta') h += '\n<ul>' + it.opz.map(o => '<li><b>' + esc(o.d) + '</b>' + (o.x ? ': ' + esc(o.x.charAt(0).toLowerCase() + o.x.slice(1)) : '') +
         (p.prezzi && prezzoOpz(o, it) ? '<span class="guida-prezzo">Prezzo: ' + esc(prezzoOpz(o, it)) + esc(p.iva) + '</span>' : '') + '</li>').join('') + '</ul>';
       const pr = p.prezzi && prezzo(it);
       if (pr) h += '\n<span class="guida-prezzo">Prezzo: ' + esc(pr) + esc(p.iva) + '</span>';
+      if (p.prezzi) h += '\n<a class="guida-voce-link" href="/' + p.html.replace(/\.html$/, '') + '#' + idv + '">🔗 Link a questa voce: ' + esc(it.d) + '</a>';
       h += '</dd>\n';
     });
     h += '</dl>\n';
@@ -90,7 +95,9 @@ function guida(cfg, p) {
 PAGINE.forEach(p => {
   const file = path.join(radice, p.html);
   let html = fs.readFileSync(file, 'utf8');
-  const blocco = '<!-- GUIDA:INIZIO -->\n' + guida(leggiConfigurazione(p.js), p) + '\n<!-- GUIDA:FINE -->';
+  const fuori = html.replace(/<!-- GUIDA:INIZIO -->[\s\S]*?<!-- GUIDA:FINE -->/, '');
+  const idUsati = [...fuori.matchAll(/\sid="([^"]+)"/g)].map(m => m[1]);
+  const blocco = '<!-- GUIDA:INIZIO -->\n' + guida(leggiConfigurazione(p.js), p, idUsati) + '\n<!-- GUIDA:FINE -->';
   if (html.includes('<!-- GUIDA:INIZIO -->')) html = html.replace(/<!-- GUIDA:INIZIO -->[\s\S]*?<!-- GUIDA:FINE -->/, blocco);
   else {
     // la prima volta: subito dopo il simulatore

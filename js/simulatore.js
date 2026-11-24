@@ -62,7 +62,18 @@
     // titolo della voce: passando sopra (o toccando) si apre la descrizione
     function titolo(it) {
       return '<div class="vd"><button type="button" class="vt" aria-expanded="false" aria-controls="x-' + it.id + '">' + esc(it.d) +
-        (it.x ? ' <span class="vi-i" aria-hidden="true">i</span>' : '') + '</button>' + (it.x ? '<div class="vx" id="x-' + it.id + '" role="tooltip">' + esc(it.x) + '</div>' : '') + '</div>';
+        (it.x ? ' <span class="vi-i" aria-hidden="true">i</span>' : '') + '</button>' + (it.x ? '<div class="vx" id="x-' + it.id + '" role="tooltip" data-pz="' + idPrezzo(it.d) + '">' + esc(it.x) + '</div>' : '') + '</div>';
+    }
+    // nella descrizione di ogni voce: il prezzo e il link alla stessa voce nella guida della pagina (Eugenio, 24/11/2026)
+    function idPrezzo(t) {
+      return 'prezzo-' + String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[’']/g, ' ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    }
+    function prezziGuida(box) {
+      Array.prototype.forEach.call(box.querySelectorAll('.vx[data-pz]'), function (v) {
+        var dt = document.getElementById(v.getAttribute('data-pz')), dd = dt && dt.nextElementSibling, pz = dd && dd.querySelector('.guida-prezzo');
+        if (!pz) return;
+        v.insertAdjacentHTML('beforeend', '<span class="vx-pz">' + esc(pz.textContent) + '</span><a class="vx-link" href="#' + dt.id + '">Vedi la voce e il prezzo nella guida →</a>');
+      });
     }
     function bottoneUsa(it, s) {
       if (!it.mq) return '';
@@ -110,7 +121,7 @@
         h += '</div></fieldset>';
       });
       h += '<a class="rBar" href="#rRiepTop">La tua stima <b id="rBarTot">€ 0</b> ' + esc(cfg.iva) + ' <span aria-hidden="true">↓</span></a>';
-      form.innerHTML = h;
+      form.innerHTML = h; prezziGuida(form);
       calcola();
     }
 
