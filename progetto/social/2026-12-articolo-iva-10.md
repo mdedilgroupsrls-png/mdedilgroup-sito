@@ -1,6 +1,6 @@
 # Reel – articolo "IVA al 10% sui lavori di ristrutturazione" (detrazioni)
 
-Stato: **da programmare – martedì 8/12/2026** (10:30–12:00), giorno di uscita dell'articolo in Home (era LIBERO; tra interni il 5/12 e case in legno il 10/12). Video online con la pubblicazione del 23/11.
+Stato: **programmato martedì 8/12/2026 ore 11:12** (24/11; IG/FB/TikTok/YouTube 440893396, LinkedIn 440893463, Threads 440893500) – prima: da programmare martedì 8/12/2026 (10:30–12:00), giorno di uscita dell'articolo in Home (era LIBERO; tra interni il 5/12 e case in legno il 10/12). Video online con la pubblicazione del 23/11.
 - Reel (skill md-edil-reels: voce Rosa, sottotitoli su vetro sfocato con parola oro, card con numeri grandi, base lounge originale, 36 s): https://mdedilgroup.it/video/articolo-iva-10-reel.mp4 – copertina https://mdedilgroup.it/img/social-articolo-iva-10-copertina.jpg
 - Link articolo: https://mdedilgroup.it/iva-agevolata-10-ristrutturazione
 - Reti: Instagram **TRIAL_REEL**, Facebook REEL, TikTok, YouTube short (madeForKids false), Threads, LinkedIn. **Mai Google Business** (detrazioni).

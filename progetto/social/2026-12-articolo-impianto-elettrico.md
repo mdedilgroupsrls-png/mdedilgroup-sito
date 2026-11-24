@@ -1,6 +1,6 @@
 # Reel – Articolo "Rifacimento dell’impianto elettrico a Roma: quando serve e quanto costa"
 
-Stato: **da programmare – martedì 29/12/2026** (10:30–12:00), dopo la pubblicazione del 23/11
+Stato: **programmato martedì 29/12/2026 ore 11:08** (24/11; IG/FB/TikTok/YouTube/LinkedIn 440894056, Threads 440894105, scheda Google 11:11 440894145) – prima: da programmare martedì 29/12/2026 (10:30–12:00), dopo la pubblicazione del 23/11
 Video: https://mdedilgroup.it/video/rifacimento-impianto-elettrico-roma-reel.mp4 (online dal 23/11; non caricato su Drive)
 Reti: Instagram TRIAL_REEL, Facebook reel, TikTok, YouTube short, Threads, LinkedIn. Mai Google Business (sulla scheda Google: post con foto, vedi sotto).
 Posizione: 📍 Roma, Lazio, Italia

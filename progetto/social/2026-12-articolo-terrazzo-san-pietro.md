@@ -1,6 +1,6 @@
 # Reel – articolo "Rifacimento di 700 m² di terrazzo a Roma San Pietro" (esterni)
 
-Stato: **da programmare – sabato 19/12/2026** (10:30–12:00). Il martedì dell'articolo (1/12) e i giorni dopo sono già occupati; il 19/12 è un giorno LIBERO tra un contenuto di interni (17/12) e uno di case in legno (22/12). Video online con la pubblicazione del 23/11.
+Stato: **programmato giovedì 24/12/2026 ore 11:24** (24/11; il 19/12 è stato preso da un reel di Eugenio; IG/FB/TikTok/YouTube 440893675, LinkedIn 440893740, Threads 440893799, scheda Google 11:27 440893857) – prima: da programmare sabato 19/12/2026 (10:30–12:00). Il martedì dell'articolo (1/12) e i giorni dopo sono già occupati; il 19/12 è un giorno LIBERO tra un contenuto di interni (17/12) e uno di case in legno (22/12). Video online con la pubblicazione del 23/11.
 - Reel (skill md-edil-reels: voce Rosa, sottotitoli karaoke con box oro, card con numeri grandi, base drum & bass leggera originale, 31 s): https://mdedilgroup.it/video/articolo-terrazzo-san-pietro-reel.mp4 – copertina https://mdedilgroup.it/img/social-articolo-terrazzo-san-pietro-copertina.jpg
 - Link articolo: https://mdedilgroup.it/rifacimento-terrazzo-roma-vista-san-pietro
 - Reti: Instagram **TRIAL_REEL**, Facebook REEL, TikTok, YouTube short (madeForKids false), Threads, LinkedIn. Mai Google Business per il reel.
