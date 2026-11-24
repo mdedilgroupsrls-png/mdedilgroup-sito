@@ -124,6 +124,12 @@ function listinoInfissi() {
     v('prezzo-infissi-pvc', 'Infissi in PVC Rehau Synego, doppio vetro', 'Finestre e porte-finestre a battente e scorrevoli, in bianco, nei colori Rehau o in un colore speciale. Coprifili e imbotti compresi.', DA_INFISSI, false) +
     v('prezzo-tapparelle', 'Tapparelle in alluminio coibentato', 'Tapparelle nuove, stesso prezzo per tutti i colori.', P.tap) +
     v('prezzo-zanzariere', 'Zanzariere in alluminio', 'Avvolgenti per le finestre e plissettate per le porte-finestre, stesso prezzo per tutti i modelli e i colori.', P.zan) +
+    // lavorazioni separate, con il loro link (Eugenio, 24/11/2026): solo prezzi "da", senza misure
+    v('prezzo-demolizione-vecchi-infissi', 'Smontaggio e smaltimento dei vecchi infissi', 'Togliamo il vecchio infisso, telaio compreso, e lo portiamo a smaltire.', P.demInf) +
+    v('prezzo-posa-infissi', 'Posa dei nuovi infissi', 'Montaggio in bolla e in squadra, fissaggio alla muratura e sigillatura del giunto tra telaio e muro.', P.posInf) +
+    v('prezzo-smontaggio-tapparelle', 'Smontaggio delle vecchie tapparelle', 'Togliamo la vecchia tapparella e la portiamo a smaltire.', P.demTap) +
+    v('prezzo-posa-tapparelle', 'Posa delle nuove tapparelle', 'Montaggio della tapparella nuova nel cassonetto, con prova di salita e discesa.', P.posTap) +
+    v('prezzo-posa-zanzariere', 'Posa delle zanzariere', 'Montaggio della zanzariera avvolgente o plissettata sul vano della finestra o della porta-finestra.', P.posZan) +
     '<p class="guida-fine">Vuoi il prezzo dei tuoi infissi? <a href="#simulatore">Usa il simulatore</a> con le tue misure oppure <a href="/#contatti">richiedi il sopralluogo</a>: sopralluogo e preventivo sono gratuiti.</p>\n</div>\n</section>';
 }
 
